@@ -1,0 +1,10 @@
+---
+layout: projects
+category: projects
+title: Badges
+image: badges.png
+url: http://badges.p2pu.org
+---
+
+Something great about Badges, bcs it rocks!
+and not to mention that it rules

@@ -1,0 +1,36 @@
+---
+layout: page
+title: This is us
+permalink: /projects/
+---
+<div class="col-lg-8 col-sm-6">
+	<h3>What are we working on:</h3>
+	{% for project in site.projects | sort:'date' reversed %}
+
+		<div class="p2pu-project horizontal-thumbnail clearfix">
+			<img class="project-img" src=
+					{% if project.image %}
+						"{{ "images/projects/" |append: project.image |prepend: site.baseurl }}"
+					{% else %}
+						"{{ "images/projects/default_project.jpg" |prepend: site.baseurl }}"
+					{% endif %}
+						alt="{{ project.name }} Image">
+			<div class="cotent-wrap">
+				<h3 class="title">{{ project.title }}</h3>
+
+				<p>{{ project.output }}</p>
+				{{ project.date }}
+				<a href="{{ project.url }}" class="btn btn-primary">See it here!</a>
+			</div>
+
+		</div>
+	{% endfor %}
+</div>
+<aside class="col-md-4">
+	<h3>Featured</h3>
+
+	<p>
+
+	</p>
+</aside>
+

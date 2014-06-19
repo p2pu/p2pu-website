@@ -1,0 +1,23 @@
+---
+layout: page
+title: Meet the people of p2pu
+permalink: /people/
+---
+
+{% for person in site.people %}
+
+	<div class="p2pu-person col-lg-4 col-sm-6">
+		<img class="img-circle pull-right people-img" src=
+				"{{ "images/people/" |append: person.image |prepend: site.baseurl }}"
+		     alt="{{ person.name }} Image">
+
+		<h3>{{ person.name }} <br>
+			<small>{{ person.role }}</small>
+		</h3>
+		<p>{{ person.output }}</p>
+	</div>
+
+{% endfor %}
+
+
+
