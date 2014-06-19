@@ -5271,27 +5271,24 @@ h1, h2, h3, h4, h5 {
       left: 50%;
       font-size: 1.4em;
       color: white; }
-  .navbar-p2pu .social-icons-wrap {
+  .navbar-p2pu .donate-btn-wrap {
     float: right;
-    margin-top: 20px; }
-    .navbar-p2pu .social-icons-wrap a {
-      width: 2.5em;
-      height: 2.5em;
-      line-height: 2.5em;
-      text-align: center;
+    line-height: 4.5;
+    padding: 0.4em 0; }
+    .navbar-p2pu .donate-btn-wrap a {
+      text-align: right;
       background-color: #707782;
-      border-radius: 50%;
+      border-radius: 0;
       color: #fcfcfc;
       display: inline-block;
       margin-left: 0.5em;
+      padding: 0.2em 1em 0.3em 2.5em;
+      line-height: 2;
       transition: background-color 0.3s linear; }
-      .navbar-p2pu .social-icons-wrap a .fa {
-        font-size: 1.5em;
-        line-height: 1.8em; }
-      .navbar-p2pu .social-icons-wrap a:hover {
-        background-color: #fcfcfc; }
-        .navbar-p2pu .social-icons-wrap a:hover .fa {
-          color: #515665; }
+      .navbar-p2pu .donate-btn-wrap a:hover {
+        background-color: #fcfcfc;
+        color: #707782;
+        text-decoration: none; }
   .navbar-p2pu .has-subnav {
     position: static; }
   .navbar-p2pu .subnav {
