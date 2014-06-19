@@ -23,7 +23,7 @@ navigation:
   - text: Our people
     url: /people/
   - text: Our philopsophy
-    url: http://info.p2pu.org/about/how-we-learn/
+    url: /philosophy/
   - text: Credits
     url: /credits/
   - text: Terms
