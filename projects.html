@@ -10,9 +10,9 @@ permalink: /projects/
 		<div class="p2pu-project horizontal-thumbnail clearfix">
 			<img class="project-img" src=
 					{% if project.image %}
-						"{{ "images/projects/" |append: project.image |prepend: site.baseurl }}"
+						"{{ "/images/projects/" |append: project.image |prepend: site.baseurl }}"
 					{% else %}
-						"{{ "images/projects/default_project.jpg" |prepend: site.baseurl }}"
+						"{{ "/images/projects/default_project.jpg" |prepend: site.baseurl }}"
 					{% endif %}
 						alt="{{ project.name }} Image">
 			<div class="cotent-wrap">

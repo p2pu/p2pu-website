@@ -10,7 +10,7 @@
 				<i class="fa fa-bars"></i>
 			</a>
 			<a class="navbar-logo" href="{{ site.baseurl }}">
-				<img src="{{ "images/p2pu-logo.png" | prepend: site.baseurl }}" alt="P2PU Logo" />
+				<img src="{{ "/images/p2pu-logo.png" | prepend: site.baseurl }}" alt="P2PU Logo" />
 			</a>
 		</div>
 
@@ -32,12 +32,12 @@
 					{% endif %}
 
 					<li class="{{ active }} {% if link.submenu %}has-subnav{% endif %}">
-						<a href="{{ link.url }}">{{ link.text }}</a>
+						<a href="{{ link.url|prepend:site.baseurl }}">{{ link.text }}</a>
 						{% if link.submenu %}
 							<ul class="nav navbar-nav subnav">
 								{% for sublink in link.submenu %}
 									<li {% if page.url == sublink.url %}class="active"{% endif %}>
-										<a href="{{ sublink.url }}">{{ sublink.text }}</a>
+										<a href="{{ sublink.url|prepend:site.baseurl }}">{{ sublink.text }}</a>
 									</li>
 								{% endfor %}
 							</ul>
