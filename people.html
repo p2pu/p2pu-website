@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Meet the people of p2pu
+category: people
 ---
 
-{% for person in site.people %}
+{% for person in site.categories.people %}
 
 	<div class="p2pu-person col-lg-4 col-sm-6">
 		<img class="img-circle pull-right people-img" src=
@@ -13,7 +14,8 @@ title: Meet the people of p2pu
 		<h3>{{ person.name }} <br>
 			<small>{{ person.role }}</small>
 		</h3>
-		<p>{{ person.output }}</p>
+		<p>{{ person.content }}</p>
+
 	</div>
 
 {% endfor %}

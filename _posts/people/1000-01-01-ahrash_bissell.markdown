@@ -1,6 +1,6 @@
 ---
 layout: people
-category: people
+categories: [people]
 name: Ahrash Bissell
 image: ahrash_bissell.jpg
 role: Board member
