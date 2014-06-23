@@ -10,12 +10,6 @@ url: "http://p2pu.org"
 markdown: kramdown
 permalink: pretty
 
-collections:
-  people:
-    output: true
-  projects:
-    output: true
-
 navigation:
 - text: About
   url: /about/
