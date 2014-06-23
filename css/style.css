@@ -1,5 +1,4 @@
 ---
-
 ---
 .p2pu-person {
     height: 295px;
@@ -14,15 +13,11 @@
 
 .donate-btn-wrap a.donate {
     background-image: url("../images/donate.png");
-    background-position: 9px 7px;
+    background-position: 12px 7px;
     background-repeat: no-repeat;
     border-radius: 50px;
 }
 
 .donate-btn-wrap a.donate:hover {
     background-position: 6px -27px
-}
-
-.page-header {
-    background-image: url("{{ site.baseurl}}/images/divider-logo.png"), none;
 }
