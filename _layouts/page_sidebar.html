@@ -1,0 +1,18 @@
+---
+layout: base
+---
+<div class="post">
+
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  <article class="post-content col-md-7">
+		  {{ content }}
+  </article>
+	{% if page.sidebar %}
+
+		{% include right_sidebar.html param=page.sidebar %}
+	{% endif %}
+
+</div>

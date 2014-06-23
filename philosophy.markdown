@@ -1,7 +1,7 @@
 ---
-layout: base
-category:
-
+layout: page
+category: page
+title: What we're all about
 ---
 
 # How We Learn

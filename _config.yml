@@ -11,17 +11,6 @@ markdown: kramdown
 permalink: pretty
 
 navigation:
-- text: About
-  url: /about/
-  submenu:
-  - text: Our people
-    url: /people/
-  - text: Our philopsophy
-    url: /philosophy/
-  - text: Credits
-    url: /credits/
-  - text: Terms
-    url: /terms/
 - text: Our work
   url: /work/
   submenu:
@@ -33,6 +22,15 @@ navigation:
     url: work_with_us
   - text: Workflow and strategic plan
     url: /workflow/
+- text: About
+  url: /about/
+  submenu:
+  - text: Our people
+    url: /people/
+  - text: Our philopsophy
+    url: /philosophy/
+  - text: Credits
+    url: /credits/
 - text: Publications
   url: /publications/
 - text: Connect with us
