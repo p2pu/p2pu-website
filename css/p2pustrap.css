@@ -5206,11 +5206,11 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: 'Arvo', Arial, serif; }
 
-img {
-  width: 100%; }
-
 .first {
   padding-left: 0; }
+
+.align-center {
+  text-align: center; }
 
 .page-content {
   margin-top: 2em; }

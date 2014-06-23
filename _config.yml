@@ -14,14 +14,14 @@ navigation:
 - text: Our work
   url: /work/
   submenu:
+  - text: P2PU Courses
+    url: /schools/
   - text: P2PU Schools
     url: /schools/
   - text: Current and past projects
     url: /projects/
   - text: Want to work with us?
     url: work_with_us
-  - text: Workflow and strategic plan
-    url: /workflow/
 - text: About
   url: /about/
   submenu:
