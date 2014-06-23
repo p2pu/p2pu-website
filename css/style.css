@@ -1,5 +1,4 @@
----
----
+
 .p2pu-person {
     height: 295px;
     line-height: 1.5;
@@ -9,15 +8,4 @@
 .people-img {
     max-width: 150px;
     margin-left: 1em;
-}
-
-.donate-btn-wrap a.donate {
-    background-image: url("../images/donate.png");
-    background-position: 12px 7px;
-    background-repeat: no-repeat;
-    border-radius: 50px;
-}
-
-.donate-btn-wrap a.donate:hover {
-    background-position: 6px -27px
 }
