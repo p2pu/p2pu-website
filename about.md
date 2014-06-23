@@ -1,5 +1,5 @@
 ---
-layout: page_sidebar
+layout: page_about
 title: About Peer 2 Peer University
 permalink: /about/
 sidebar: about_gallery.html
