@@ -3,7 +3,7 @@ title: Peer 2 Peer University
 email: admin@p2pu.org
 description: "A University for the Web. Built by an open community.
 LEARNING BY EVERYONE. FOR EVERYONE. ABOUT ALMOST ANYTHING. COMPLETELY FREE."
-baseurl: "/p2pu-website"
+baseurl: "/p2pu-website/"
 url: "http://p2pu.org"
 
 # Build settings
@@ -12,29 +12,29 @@ permalink: pretty
 
 navigation:
 - text: Our work
-  url: /work/
+  url: work/
   submenu:
   - text: P2PU Courses
-    url: /schools/
+    url: schools/
   - text: P2PU Schools
-    url: /schools/
+    url: schools/
   - text: Current and past projects
-    url: /projects/
+    url: projects/
   - text: Want to work with us?
     url: work_with_us
 - text: About
-  url: /about/
+  url: about/
   submenu:
   - text: Our people
-    url: /people/
+    url: people/
   - text: Our philopsophy
-    url: /philosophy/
+    url: philosophy/
   - text: Credits
-    url: /credits/
+    url: credits/
 - text: Publications
-  url: /publications/
+  url: publications/
 - text: Connect with us
-  url: /connect/
+  url: connect/
 
 
 
