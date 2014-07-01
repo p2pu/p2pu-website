@@ -22,21 +22,24 @@
 					{% assign active = nil %}
 
 					{% for sublink in link.submenu %}
-						{% if sublink.url == page.url %}
+						{% if page.url contains sublink.url %}
 							{% assign active = 'active' %}
 						{% endif %}
 					{% endfor %}
 
-					{% if page.url == link.url %}
+					{% if page.url contains link.url %}
 						{% assign active = 'active' %}
 					{% endif %}
 
-					<li class="{{ active }} {% if link.submenu %}has-subnav{% endif %}">
+					<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
 						<a href="{{ link.url|prepend:site.baseurl }}">{{ link.text }}</a>
+
 						{% if link.submenu %}
-							<ul class="nav navbar-nav subnav">
+							<span class="fa fa-caret-down dropdown-toggle visible-xs-block visible-sm-block"
+							      data-toggle="dropdown"></span>
+							<ul class="dropdown-menu nav navbar-nav subnav" role="menu">
 								{% for sublink in link.submenu %}
-									<li {% if page.url == sublink.url %}class="active"{% endif %}>
+									<li {% if page.url contains sublink.url %}class="active"{% endif %}>
 										<a href="{{ sublink.url|prepend:site.baseurl }}">{{ sublink.text }}</a>
 									</li>
 								{% endfor %}
