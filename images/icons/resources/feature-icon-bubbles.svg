@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg10049"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="feature-icon-bubbles.svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     inkscape:document-units="mm"
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="509.47597"
+     inkscape:cy="596.74898"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:snap-grids="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid10068" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="circle"
+     id="g10100"
+     inkscape:groupmode="layer"
+     style="display:none">
+    <path
+       inkscape:export-ydpi="16.440001"
+       inkscape:export-xdpi="16.440001"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/bubbles.png"
+       sodipodi:type="arc"
+       style="fill:none;stroke:none"
+       id="path10102"
+       sodipodi:cx="8.7328768"
+       sodipodi:cy="0.11750381"
+       sodipodi:rx="54.109589"
+       sodipodi:ry="54.109589"
+       d="m 62.842465,0.11750381 a 54.109589,54.109589 0 1 1 -108.219177,0 54.109589,54.109589 0 1 1 108.219177,0 z"
+       transform="matrix(5.0573856,0,0,5.0573856,292.18142,350.96744)" />
+    <path
+       transform="matrix(5.0573856,0,0,5.0573856,292.18142,350.96744)"
+       d="m 62.842465,0.11750381 a 54.109589,54.109589 0 1 1 -108.219177,0 54.109589,54.109589 0 1 1 108.219177,0 z"
+       sodipodi:ry="54.109589"
+       sodipodi:rx="54.109589"
+       sodipodi:cy="0.11750381"
+       sodipodi:cx="8.7328768"
+       id="path9991-5"
+       style="fill:#ff0000;fill-opacity:1;stroke:none;display:inline"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/bubbles.png"
+       inkscape:export-xdpi="16.440001"
+       inkscape:export-ydpi="16.440001" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="circle transparent"
+     style="display:inline">
+    <path
+       transform="matrix(5.0573856,0,0,5.0573856,292.18142,350.96744)"
+       d="m 62.842465,0.11750381 a 54.109589,54.109589 0 1 1 -108.219177,0 54.109589,54.109589 0 1 1 108.219177,0 z"
+       sodipodi:ry="54.109589"
+       sodipodi:rx="54.109589"
+       sodipodi:cy="0.11750381"
+       sodipodi:cx="8.7328768"
+       id="path9991"
+       style="fill:none;stroke:none"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/bubbles.png"
+       inkscape:export-xdpi="16.440001"
+       inkscape:export-ydpi="16.440001" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <path
+       d="m 420.20044,285.87843 c -6.43776,-0.71429 -15.44128,3.01603 -17.55758,3.12661 5,10 11.74762,23.4253 13.53333,35.80057 5.64612,39.12847 -22.4359,80.47223 -71.39048,98.128 0,0 22.50511,19.05883 62.90523,20.28307 l 27.2443,38.51778 5.94897,-33.37047 c 45.70745,-7.69659 76.80458,-39.86978 76.80458,-79.75743 0,-45.59303 -42.07899,-82.72805 -97.48835,-82.72805 z"
+       id="path9437"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:nodetypes="ccsccccssc"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/bubbles.png"
+       inkscape:export-xdpi="16.440001"
+       inkscape:export-ydpi="16.440001" />
+    <path
+       id="_x3C_Path_x3E_"
+       d="m 284.79647,246.33411 c -50.49809,-1.64701 -92.38773,36.02819 -92.38773,80.64936 0,39.04466 32.67721,70.73612 74.35737,78.27009 l 3.96598,27.4051 27.23486,-24.17841 c 55.55726,4.42311 93.6867,-35.58016 93.68899,-75.738 0.003,-52.59366 -53.73844,-84.67562 -106.85947,-86.40814 z"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:nodetypes="sscccss"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/bubbles.png"
+       inkscape:export-xdpi="16.440001"
+       inkscape:export-ydpi="16.440001" />
+  </g>
+</svg>

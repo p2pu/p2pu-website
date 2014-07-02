@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="feature-icon-users.svg">
+  <defs
+     id="defs4">
+    <path
+       id="path-1"
+       d="M12.7146894,7.02392123 C12.9463445,6.88822481 13.1859305,6.76460272 13.4325836,6.65391876 L13.4295772,6.64967577 C14.3862597,6.18585327 15.456692,5.92628597 16.5866055,5.92628597 C19.4252151,5.92628597 21.8884183,7.5645007 23.1157587,9.96392666 L23.1157587,9.96392666 C23.6800173,11.0174106 24,12.2213373 24,13.5 C24,17.6421356 20.6421356,21 16.5,21 C13.3363936,21 10.6302782,19.0412481 9.52825996,16.2703507 L0.0795836567,16.2703507 C0.00765838569,16.2703507 -0.0213767672,16.2196317 0.0170005675,16.1531355 L8.9325973,0.705149613 C8.9699589,0.640413482 9.02951827,0.6386535 9.0678956,0.705149613 L12.7146894,7.02392123 L12.7146894,7.02392123 Z M13.2146426,7.89018635 C14.1786531,7.32439933 15.3014428,7 16.5,7 C20.0898509,7 23,9.91014913 23,13.5 C23,17.0898509 20.0898509,20 16.5,20 C13.9010184,20 11.6583008,18.4746524 10.6182409,16.2703507 L17.9209092,16.2703507 C17.9925979,16.2703507 18.0208539,16.2178717 17.9834923,16.1531355 L13.2146426,7.89018635 L13.2146426,7.89018635 Z M16.1379105,15.1260171 L1.79998779,15.1260171 L8.96894917,2.7265548 L16.1379105,15.1260171 Z" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="570.56222"
+     inkscape:cy="593.76002"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3042" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Circle"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <path
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:4.37858534;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3817"
+       sodipodi:cx="308.60159"
+       sodipodi:cy="123.52692"
+       sodipodi:rx="115.66247"
+       sodipodi:ry="115.66247"
+       d="m 424.26406,123.52692 a 115.66247,115.66247 0 1 1 -231.32493,0 115.66247,115.66247 0 1 1 231.32493,0 z"
+       transform="matrix(2.2838429,0,0,2.2838429,-332.55631,75.763701)"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/community.png"
+       inkscape:export-xdpi="16.717916"
+       inkscape:export-ydpi="16.717916" />
+  </g>
+  <g
+     inkscape:label="Circle transparent"
+     id="g3819"
+     inkscape:groupmode="layer"
+     style="display:inline">
+    <path
+       transform="matrix(2.39738,0,0,2.39738,-367.59405,61.738811)"
+       d="m 424.26406,123.52692 a 115.66247,115.66247 0 1 1 -231.32493,0 115.66247,115.66247 0 1 1 231.32493,0 z"
+       sodipodi:ry="115.66247"
+       sodipodi:rx="115.66247"
+       sodipodi:cy="123.52692"
+       sodipodi:cx="308.60159"
+       id="path3821"
+       style="fill:none;stroke:none"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/community.png"
+       inkscape:export-xdpi="16.23"
+       inkscape:export-ydpi="16.23" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:none;stroke:#ffffff;stroke-width:9.53588104;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="m 442.85248,271.03725 c -23.66702,0 -60.56971,10.80898 -63.6085,20.13642 l 69.78622,121.17387 c 0.28758,-0.82369 -112.14514,1.05628 -112.14514,1.05628 14.71913,47.57627 55.9724,78.85821 105.96742,78.85821 61.03568,0 110.64076,-49.5997 110.64076,-110.62878 0,-61.02907 -49.60508,-110.596 -110.64076,-110.596 z"
+       id="path3940"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sccssss" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 207.5,412.71932 330,205.57647 450.35714,414.50504 z"
+       id="path3942"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

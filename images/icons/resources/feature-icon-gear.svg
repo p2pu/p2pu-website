@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg7038"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="feature-icon-gear.svg"
+   inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/credentials.png"
+   inkscape:export-xdpi="16.315147"
+   inkscape:export-ydpi="16.315147">
+  <defs
+     id="defs3">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective7044" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:document-units="mm"
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="172.13818"
+     inkscape:cy="661.91767"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-grids="false"
+     inkscape:snap-to-guides="false"
+     showguides="false"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid7635" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     style="display:none"
+     inkscape:label="circle copy"
+     id="g7753"
+     inkscape:groupmode="layer"
+     sodipodi:insensitive="true">
+    <path
+       inkscape:export-ydpi="16.026625"
+       inkscape:export-xdpi="16.026625"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/megaphone.png"
+       transform="matrix(1.2411147,0,0,1.2411147,213.13731,185.91054)"
+       d="m 335.37064,226.0574 a 222.23357,222.23357 0 1 1 -444.46713,0 222.23357,222.23357 0 1 1 444.46713,0 z"
+       sodipodi:ry="222.23357"
+       sodipodi:rx="222.23357"
+       sodipodi:cy="226.0574"
+       sodipodi:cx="113.13708"
+       id="path7755"
+       style="fill:#055800;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       sodipodi:type="arc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="circle"
+     style="display:inline">
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:none"
+       id="path7675"
+       sodipodi:cx="113.13708"
+       sodipodi:cy="226.0574"
+       sodipodi:rx="222.23357"
+       sodipodi:ry="222.23357"
+       d="m 335.37064,226.0574 a 222.23357,222.23357 0 1 1 -444.46713,0 222.23357,222.23357 0 1 1 444.46713,0 z"
+       transform="matrix(1.2411147,0,0,1.2411147,213.13731,185.91054)"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/gear.png"
+       inkscape:export-xdpi="16.315147"
+       inkscape:export-ydpi="16.315147" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-miterlimit:3;stroke-opacity:1;stroke-dasharray:none"
+       id="path8839"
+       sodipodi:sides="5"
+       sodipodi:cx="213.1422"
+       sodipodi:cy="369.49905"
+       sodipodi:r1="139.40472"
+       sodipodi:r2="90.465717"
+       sodipodi:arg1="0.87815448"
+       sodipodi:arg2="1.4781002"
+       inkscape:flatsided="false"
+       inkscape:rounded="0.92028521"
+       inkscape:randomized="0"
+       d="m 302.16222,476.77959 c -56.99975,50.09906 -4.91569,-22.07923 -80.64621,-17.20321 -80.27813,5.16882 -13.71512,68.79141 -82.89497,27.73725 -65.260921,-38.72851 19.47956,-11.49795 -8.55982,-82.01518 -29.72315,-74.75178 -69.66273,8.21386 -51.995648,-70.26652 16.666272,-74.03459 16.954719,14.9731 75.355938,-33.48496 61.90822,-51.36796 -29.3388,-63.71497 50.75989,-71.16435 75.56125,-7.02738 -9.00096,20.75184 55.13236,61.32034 67.98453,43.00464 51.53035,-47.59187 83.36699,26.28453 30.03314,69.69144 -22.51763,-2.14775 -41.28227,71.38301 -19.89147,77.9463 61.18631,34.30158 0.76374,87.40909 z"
+       inkscape:transform-center-x="6.50986"
+       inkscape:transform-center-y="7.4256945"
+       transform="translate(142.43151,92.934034)"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/gear.png"
+       inkscape:export-xdpi="16.315147"
+       inkscape:export-ydpi="16.315147" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#ffffff;stroke-width:12.78688512;stroke-linecap:round;stroke-miterlimit:3;stroke-opacity:1;stroke-dasharray:none"
+       id="path8841"
+       sodipodi:cx="304.05591"
+       sodipodi:cy="398.79349"
+       sodipodi:rx="78.791901"
+       sodipodi:ry="78.791901"
+       d="m 382.84781,398.79349 a 78.791901,78.791901 0 1 1 -0.0789,-3.52446"
+       transform="matrix(0.78205129,0,0,0.78205129,118.79653,152.57644)"
+       sodipodi:start="0"
+       sodipodi:end="6.2384391"
+       sodipodi:open="true"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/gear.png"
+       inkscape:export-xdpi="16.315147"
+       inkscape:export-ydpi="16.315147" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:15.00000015;stroke-miterlimit:3;stroke-dasharray:none"
+       id="path8843"
+       sodipodi:cx="331.33005"
+       sodipodi:cy="443.2402"
+       sodipodi:rx="27.274118"
+       sodipodi:ry="27.274118"
+       d="m 358.60417,443.2402 a 27.274118,27.274118 0 1 1 -54.54824,0 27.274118,27.274118 0 1 1 54.54824,0 z"
+       transform="matrix(0.66666666,0,0,0.66666666,135.69716,165.92948)"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/gear.png"
+       inkscape:export-xdpi="16.315147"
+       inkscape:export-ydpi="16.315147" />
+  </g>
+</svg>

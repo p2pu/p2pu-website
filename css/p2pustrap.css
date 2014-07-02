@@ -5420,13 +5420,20 @@ h1, h2, h3, h4, h5 {
       border-bottom: none;
       text-decoration: none; }
 
-.footer-social ul {
-  list-style-type: none; }
-.footer-social a {
-  font-size: 2em;
-  border-bottom: none; }
-  .footer-social a:hover {
-    color: #ff7300; }
+.footer-social {
+  list-style-type: none;
+  padding: 0; }
+  .footer-social li {
+    display: inline-block; }
+  .footer-social a {
+    display: inline-block;
+    font-size: 2em;
+    border-bottom: none;
+    padding: 0.2em 0.4em;
+    transition: all 0.3s linear; }
+    .footer-social a:hover {
+      background-color: #f3f4f8;
+      color: #ff7300 !important; }
 
 .cc-by-sa img {
   margin: 1em 0; }

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg7038"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="feature-icon-megaphone.svg">
+  <defs
+     id="defs3">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective7044" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:document-units="mm"
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="435.04437"
+     inkscape:cy="570.32872"
+     inkscape:current-layer="layer2"
+     showgrid="true"
+     inkscape:snap-grids="false"
+     inkscape:snap-to-guides="false"
+     showguides="false"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid7635" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="circle"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <path
+       sodipodi:type="arc"
+       style="fill:#eb0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:8;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path7675"
+       sodipodi:cx="113.13708"
+       sodipodi:cy="226.0574"
+       sodipodi:rx="222.23357"
+       sodipodi:ry="222.23357"
+       d="m 335.37064,226.0574 a 222.23357,222.23357 0 1 1 -444.46713,0 222.23357,222.23357 0 1 1 444.46713,0 z"
+       transform="matrix(1.2411147,0,0,1.2411147,213.13731,185.91054)" />
+  </g>
+  <g
+     style="display:inline"
+     inkscape:label="circle copy"
+     id="g8176"
+     inkscape:groupmode="layer">
+    <path
+       transform="matrix(1.2411147,0,0,1.2411147,213.13731,185.91054)"
+       d="m 335.37064,226.0574 a 222.23357,222.23357 0 1 1 -444.46713,0 222.23357,222.23357 0 1 1 444.46713,0 z"
+       sodipodi:ry="222.23357"
+       sodipodi:rx="222.23357"
+       sodipodi:cy="226.0574"
+       sodipodi:cx="113.13708"
+       id="path8178"
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10.47445494;stroke-miterlimit:23.89999962;stroke-opacity:1;stroke-dasharray:none"
+       sodipodi:type="arc"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/megaphone.png"
+       inkscape:export-xdpi="16.32"
+       inkscape:export-ydpi="16.32" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:23.89999962;stroke-opacity:1;stroke-dasharray:none"
+       d="m 200.85358,413.82867 c 0.58858,-0.69517 0.48759,98.90263 0.48759,98.90263 l 57.23575,-0.24326 132.90739,66.43143 -0.34478,-224.16062 -133.05021,58.72582 z"
+       id="path7633"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/megaphone.png"
+       inkscape:export-xdpi="16.32"
+       inkscape:export-ydpi="16.32" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:23.89999962;stroke-opacity:1;stroke-dasharray:none"
+       d="m 449.3286,364.89784 c 58.05946,49.03853 57.2819,147.63899 -0.10532,204.89666"
+       id="path7637"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/megaphone.png"
+       inkscape:export-xdpi="16.32"
+       inkscape:export-ydpi="16.32" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:23.89999962;stroke-opacity:1;stroke-dasharray:none"
+       d="m 431.73634,382.92118 c 46.44634,39.22979 45.82431,118.10807 -0.0843,163.913"
+       id="path7637-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/megaphone.png"
+       inkscape:export-xdpi="16.32"
+       inkscape:export-ydpi="16.32" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:23.89999962;stroke-opacity:1;stroke-dasharray:none"
+       d="m 415.83226,406.89496 c 33.33061,28.15189 32.88424,84.75614 -0.0605,117.62646"
+       id="path7637-4-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/erika/DEV/p2pu/p2pu-website/images/icons/megaphone.png"
+       inkscape:export-xdpi="16.32"
+       inkscape:export-ydpi="16.32" />
+  </g>
+</svg>

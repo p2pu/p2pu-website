@@ -1,9 +1,163 @@
 ---
-layout: base
 ---
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 
-<div class="home">
+{% include head.html %}
 
-  Here be drangons!
+<body>
 
+<section class="splash">
+	<div class="background"></div>
+	<video autoplay muted loop id="video"
+	       poster="{{ "images/p2pu-video-poster.png"|prepend:site.baseurl }}" preload="auto">
+		<source src="{{ "images/philipp-p2pu-video.mp4"|prepend:site.baseurl }}" type="video/mp4">
+	</video>
+
+	<nav class="navbar" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-toggle" data-toggle="collapse"
+				   data-target="#nav-links-collapse">
+					<i class="fa fa-bars"></i>
+				</a>
+				<a class="navbar-logo" href="{{ site.baseurl }}">
+					<img src="{{ "/images/p2pu-logo.png" | prepend: site.baseurl }}" alt="P2PU Logo" />
+				</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="nav-links-collapse">
+
+				<ul class="nav navbar-nav navbar-right">
+					{% for link in site.navigation %}
+						<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
+							<a href="{{ link.url|prepend:site.baseurl }}">{{ link.text }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<div class="container">
+		<div class="banner clearfix">
+			<header class="col-md-6">
+				<h1>A University for the Web. <br> Built by an open community.</h1>
+			</header>
+			<img src="{{ "images/splash-img.png"|prepend:site.baseurl }}" alt="Splash Image" />
+
+			<p class="col-md-6">
+				LEARNING BY EVERYONE. <br> FOR EVERYONE. <br> ABOUT ALMOST ANYTHING. <br> COMPLETELY FREE.
+			</p>
+			<footer>
+
+			</footer>
+		</div>
+	</div>
+
+</section>
+<div class="p2pu-color-divider-wrap">
+	<div class="p2pu-color-divider"></div>
 </div>
+
+<section class="page-content container">
+	<section class="row">
+		<div class="col-md-6">
+			<h1>Playful, networked learning experiences that last</h1>
+
+			<p>
+				Instead of lonely, anonymous online courses, our communities sustain interest and
+				engagement
+				because folks build them together. We are open and welcoming in everything we do, and help
+				folks generally feel comfy on the internet
+			</p>
+		</div>
+		<div class="col-md-6">
+			<img src="{{ "images/workers.png"|prepend:site.baseurl }}" alt="Study group experience" />
+		</div>
+	</section>
+	<hr>
+
+	<section class="services row">
+		<h1>Here’s what we can do with you</h1>
+
+		<div class="service col-md-4">
+			<div class="feature-icon">
+					<img src="{{ "images/icons/build.png"|prepend:site.baseurl }}" alt="Megaphone Icon" >
+			</div>
+			<p>
+				Learning Design and Content Development
+			</p>
+		</div>
+		<div class="service col-md-4">
+			<div class="feature-icon">
+					<img src="{{ "images/icons/community.png"|prepend:site.baseurl }}" alt="Badges Icon" >
+			</div>
+			<p>
+				Design and Build your Learning Community
+			</p>
+		</div>
+		<div class="service col-md-4">
+			<div class="feature-icon">
+					<img src="{{ "images/icons/credentials.png"|prepend:site.baseurl }}" alt="Badges Icon" >
+			</div>
+			<p>
+				Craft Robust Peer Assessments
+			</p>
+		</div>
+		<div class="service col-md-4">
+			<div class="feature-icon">
+					<img src="{{ "images/icons/bubbles.png"|prepend:site.baseurl }}" alt="Bubbles Icon" >
+			</div>
+			<p>
+				Advise on Social Learning Design
+			</p>
+		</div>
+		<div class="service col-md-4">
+			<div class="feature-icon">
+					<img src="{{ "images/icons/gear.png"|prepend:site.baseurl }}" alt="Gear Icon" >
+			</div>
+			<p>
+				Discourse, Mailgun and Badge System Development
+			</p>
+		</div>
+		<div class="service col-md-4">
+			<div class="feature-icon">
+					<img src="{{ "images/icons/megaphone.png"|prepend:site.baseurl }}" alt="Megaphone Icon" >
+			</div>
+			<p>
+				Promotion Plans and Outreach
+			</p>
+		</div>
+
+
+	</section>
+
+	<a href="http://community.p2pu.org" class="call-to-action">
+		<h2>Connect with us</h2>
+	</a>
+</section>
+
+<section class="partners">
+	<div class="container">
+		<h1>We are working with</h1>
+	</div>
+</section>
+
+{% include footer.html %}
+
+{% include scripts.html %}
+
+{% include ga.html %}
+
+</body>
+</html>
