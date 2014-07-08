@@ -2,22 +2,28 @@
 layout: page
 title: Meet the people of p2pu
 category: people
+staff:
+ - name: Dirk Uys
+   image: dirk_uys.jpg
+   role: Developer
+   bio: "While you’re surfing the web Dirk is probably surfing a crazy wave just off the coast of Durban South Africa. He is a software developer stoked to engage with the community and get the stuff the community thinks up implemented on p2pu.org. Any email to Dirk has to start with the words “Shot bru!”"
+ - name: Vanessa Gennarelli
+   image: vanessa_gennarelli.jpg
+   role: Mad Learning Scientist
+   bio: "How people learn stuff and in online peer-based structures is one of the greatest enigmas of our time. You need one badass researcher who works on the fringe of technology and learning to deliver actionable results. Enter Vanessa, who makes delightful learning experiences with an (over)dose of charm."
+
 ---
 
-{% for person in site.categories.people %}
-
+{% for person in page.staff %}
 	<div class="p2pu-person col-lg-4 col-sm-6">
 		<img class="img-circle pull-right people-img" src=
 				"{{ "/images/people/" |append: person.image |prepend: site.baseurl }}"
 		     alt="{{ person.name }} Image">
-
 		<h3>{{ person.name }} <br>
 			<small>{{ person.role }}</small>
 		</h3>
-		<p>{{ person.content }}</p>
-
+		<p>{{ person.bio }}</p>
 	</div>
-
 {% endfor %}
 
 
