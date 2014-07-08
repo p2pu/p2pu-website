@@ -120,5 +120,32 @@ board:
 	</div>
 {% endfor %}
 
+{% for person in page.board %}
+	<div class="p2pu-person col-lg-4 col-sm-6">
+		<img class="img-circle pull-right people-img" src=
+				"{{ "/images/people/" |append: person.image |prepend: site.baseurl }}"
+		     alt="{{ person.name }} Image">
+		<h3>{{ person.name }} <br>
+			<small>{{ person.role }}</small>
+		</h3>
+		<p>{{ person.bio }}</p>
+		<p><a href="https://twitter.com/{{person.twitter}}"><i class="fa fa-twitter"></i>{{person.twitter}}</a></p>
+		<p><a href="{{person.url}}">{{person.url}}</a></p>
+	</div>
+{% endfor %}
+
+{% for person in page.collaborators %}
+	<div class="p2pu-person col-lg-4 col-sm-6">
+		<img class="img-circle pull-right people-img" src=
+				"{{ "/images/people/" |append: person.image |prepend: site.baseurl }}"
+		     alt="{{ person.name }} Image">
+		<h3>{{ person.name }} <br>
+			<small>{{ person.role }}</small>
+		</h3>
+		<p>{{ person.bio }}</p>
+		<p><a href="https://twitter.com/{{person.twitter}}"><i class="fa fa-twitter"></i>{{person.twitter}}</a></p>
+		<p><a href="{{person.url}}">{{person.url}}</a></p>
+	</div>
+{% endfor %}
 
 
