@@ -27,11 +27,10 @@ staff:
    twitter: riskycud
    url: "http://thebacklog.net/"
 
- - name: Carl Ruppin
-   image: carl.jpg
+ - name: Philipp Schmidt
+   image: philipp_schmidt.jpg
    role: Master of the Custodial Arts
-   bio: "An Aussie by birth and an attorney by training, Carl has heaps of experience in the open community as the National Copyright Manager for the New South Wales Department of Education and Training in Sydney. He keeps P2PU organized, optimized, spreadsheeted and focused."
-   twitter: ender_78
+   bio: "Not just a pretty face, Philipp is the executive director of P2PU answering only to the board,the community and Delia (uhm, so, everyone.) How he still manages to get any work done is a mystery."
 
 collaborators:
  - name: Karen Fasimpaur
@@ -44,7 +43,7 @@ collaborators:
    role: Openness Lead
    bio: "Another founding volunteer who loves p2pu so much she made it her day job — almost. Jane worksfor Creative Commons and devotes 60% of her time to co-creating the ‘School of Open’ with openadvocates from around the world."
 
-- name: June Ahn
+ - name: June Ahn
    image: june_ahn.jpg
    role: Research Partner
    bio: "June is a human computer interaction researcher at University of Maryland.He was brave enough to get involved with this crowdand is helping us make all our data available to everyone."
@@ -58,7 +57,7 @@ board:
  
  - name: Cathy Casserly
    image: cathy_casserly.jpg
-   role: Advisory Council Creative Commons
+   role: Board member, Advisory Council Creative Commons
    bio: "One of the original pioneers of opening education,Cathy gave P2PU its very first grant when she was at the Hewlett Foundation. She currentlypromotes open and collaborative practices to culture, education,and science as ED of creative commons."
  
  - name: Neeru Paharia
@@ -80,20 +79,15 @@ board:
    image: stian_haklev.jpg
    role: Co-founder
    bio: "Recently hailed as one of the ‘Fantastic 5′ in open education where he was portrayed as Ben Grimm,Stian has been destroying old institutionalstructures as a rock solid board member since p2pu’s inception."
-   
- - name: Philipp Schmidt
-   image: philipp_schmidt.jpg
-   role: Co-founder, Director's Fellow MIT Media Lab
-   bio: "Not just a pretty face, Philipp is the executive director of P2PU answering only to the board,the community and Delia (uhm, so, everyone.) How he still manages to get any work done is a mystery."
 
  - name: Mark Surman
    image: mark_surman.jpg
-   role: Executive Director Mozilla Foundation
+   role: Board member, Executive Director Mozilla Foundation
    bio: "Mark loves all things open, including wine bars in San Francisco that are still open at 2am. AsMozilla Foundation ED he is leading an army of webmakers to keep the web open. As board member of P2PU he helps Philipp get more done."
 
  - name: Joel Thierstein
    image: joel_thierstein.jpg
-   role: Co-founder 
+   role: Co-founder and Board Member
    bio: "Possibly the hippest provost in the history of US academia, P2PU co-founder Joel has been uppingthe cool-level of p2pu since the early days as a co-founder. He currently sits on the board ofP2PU and works for Rice University and the US Department of Education as a senior adviser andcounsel."
 
  - name: Lila Bailey
@@ -105,13 +99,9 @@ board:
    image: karen_gabriels.jpg
    role: National Treasur(er)
    bio: "Keeps our finances tidy. And our monies safe. And us out of jail."
-
-
- 
-
-
 ---
-
+<h2>Our Staff</h2>
+<div class="row">
 {% for person in page.staff %}
 	<div class="p2pu-person col-lg-4 col-sm-6">
 		<img class="img-circle pull-right people-img" src=
@@ -125,9 +115,10 @@ board:
 		<p><a href="{{person.url}}">{{person.url}}</a></p>
 	</div>
 {% endfor %}
+</div>
 
----
-
+<h2>Our Board</h2>
+<div class="row">
 {% for person in page.board %}
 	<div class="p2pu-person col-lg-4 col-sm-6">
 		<img class="img-circle pull-right people-img" src=
@@ -141,9 +132,10 @@ board:
 		<p><a href="{{person.url}}">{{person.url}}</a></p>
 	</div>
 {% endfor %}
+</div>
 
----
-
+<h2>Our Collaborators</h2>
+<div class="row">
 {% for person in page.collaborators %}
 	<div class="p2pu-person col-lg-4 col-sm-6">
 		<img class="img-circle pull-right people-img" src=
@@ -157,5 +149,4 @@ board:
 		<p><a href="{{person.url}}">{{person.url}}</a></p>
 	</div>
 {% endfor %}
-
-
+</div>
