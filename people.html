@@ -124,7 +124,9 @@ board:
 			<small>{{ person.role }}</small>
 		</h3>
 		<p>{{ person.bio }}</p>
+		{% if person.twitter %} 
 		<p><a href="https://twitter.com/{{person.twitter}}"><i class="fa fa-twitter"></i>{{person.twitter}}</a></p>
+		{% endif %}
 		<p><a href="{{person.url}}">{{person.url}}</a></p>
 	</div>
 {% endfor %}
@@ -141,7 +143,9 @@ board:
 			<small>{{ person.role }}</small>
 		</h3>
 		<p>{{ person.bio }}</p>
+		{% if person.twitter %} 
 		<p><a href="https://twitter.com/{{person.twitter}}"><i class="fa fa-twitter"></i>{{person.twitter}}</a></p>
+		{% endif %}
 		<p><a href="{{person.url}}">{{person.url}}</a></p>
 	</div>
 {% endfor %}
@@ -158,7 +162,9 @@ board:
 			<small>{{ person.role }}</small>
 		</h3>
 		<p>{{ person.bio }}</p>
+		{% if person.twitter %} 
 		<p><a href="https://twitter.com/{{person.twitter}}"><i class="fa fa-twitter"></i>{{person.twitter}}</a></p>
+		{% endif %}
 		<p><a href="{{person.url}}">{{person.url}}</a></p>
 	</div>
 {% endfor %}
