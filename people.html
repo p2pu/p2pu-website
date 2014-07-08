@@ -22,8 +22,8 @@ staff:
    image: dirk_uys.jpg
    role: Developer
    bio: "While you’re surfing the web Dirk is probably surfing a crazy wave just off the coast of DurbanSouth Africa. He is a software developer stoked to engage with the community and get the stuff thecommunity thinks up implemented on p2pu.org. Any email to Dirk has to start with the words “Shotbru!”"
-   twitter: <a href="https://twitter.com/riskycud>@riskycud</a>
-   website: <a href="http://thebacklog.net/">thebacklog.net</a>
+   twitter: riskycud
+   website: thebacklog.net
 
  - name: Philipp Schmidt
    image: philipp_schmidt.jpg
@@ -230,8 +230,7 @@ community:
 			<small>{{ person.role }}</small>
 		</h3>
 		<p>{{ person.bio }}</p>
-		<p>{{ person.twitter }}</p>
-		<p>{{ person.website}}</p>
+		<p><a href="https://twitter.com/{{user.twitter}}"></p>
 	</div>
 {% endfor %}
 
