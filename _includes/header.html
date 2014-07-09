@@ -9,8 +9,8 @@
 			        data-target="#nav-links-collapse">
 				<i class="fa fa-bars"></i>
 			</a>
-			<a class="navbar-logo" href="{{ site.baseurl }}">
-				<img src="{{ "/images/p2pu-logo.png" | prepend: site.baseurl }}" alt="P2PU Logo" />
+			<a class="navbar-logo" href="{{ site.baseurl }}/">
+				<img src="{{ site.baseurl }}/images/p2pu-logo.png" alt="P2PU Logo" />
 			</a>
 		</div>
 
@@ -32,7 +32,7 @@
 					{% endif %}
 
 					<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
-						<a href="{{ link.url|prepend:site.baseurl }}">{{ link.text }}</a>
+						<a href="{{ site.baseurl }}/{{ link.url }}">{{ link.text }}</a>
 
 						{% if link.submenu %}
 							<span class="fa fa-caret-down dropdown-toggle visible-xs-block visible-sm-block"
@@ -40,7 +40,7 @@
 							<ul class="dropdown-menu nav navbar-nav subnav" role="menu">
 								{% for sublink in link.submenu %}
 									<li {% if page.url contains sublink.url %}class="active"{% endif %}>
-										<a href="{{ sublink.url|prepend:site.baseurl }}">{{ sublink.text }}</a>
+										<a href="{{ site.baseurl }}/{{ sublink.url }}">{{ sublink.text }}</a>
 									</li>
 								{% endfor %}
 							</ul>
@@ -49,7 +49,7 @@
 				{% endfor %}
 				<li>
 					<div class="donate-btn-wrap">
-						<a href="" target="_blank" class="donate">Donate</a>
+						<a href="{{ site.baseurl }}/donate/" class="donate">Donate</a>
 					</div>
 				</li>
 			</ul>
