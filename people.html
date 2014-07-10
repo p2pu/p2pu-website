@@ -37,35 +37,6 @@ staff:
    url: "http://thebacklog.net/"
 
 collaborators:
- - name: June Ahn
-   image: june_ahn.jpg
-   role: Assistant Professor, University of Maryland
-   bio: "June is a human-computer interaction researcher at University of Maryland. He bravely collaborates with P2PU on research projects about engagement, motivation and cohorts."
-   twitter: ahnjune
-   url: "http://ahnjune.com/"
- 
- - name: Karen Fasimpaur
-   image: karen_fasimpaur.jpg
-   role: Dean School of Ed
-   bio: "Karen Fasimpaur is owner and manager of K-12 handhelds, an educational technology company focused on mobile learning. She founded the School of Ed at P2PU and is currently building her off-the-grid house in Arizona. From scratch."
-   twitter: kfasimpaur
-   url: k12opened.com/blog"
- 
- - name: Jane Park
-   image: jane_park.jpg
-   role: Project Manager, Creative Commons
-   bio: "Another founding volunteer who loves P2PU so much she made it her day job — almost. Jane works for Creative Commons and devotes 60% of her time to co-creating the ‘School of Open’ with open advocates from around the world."
-   twitter: janedaily
-
- - name: Alex Ruthmann
-   image: alex_ruthmann.jpg
-   role: Associate Professor, New York University
-   bio: "Alex empowers music teachers to build tools and become entrepreneurs at the NYU MusEd Lab, and he's brought that tinkerability over to P2PU. Alex and P2PU collaborate and research how to produce creative experiences online."
-   twitter: alexruthmann
-   url: "http://about.me/alexruthmann"
-
-
-board:
  - name: Delia Browne
    image: delia_browne.jpg
    role: Chair of the Board
@@ -122,6 +93,35 @@ board:
    image: karen_gabriels.jpg
    role: National Treasur(er)
    bio: "Keeps our finances tidy. And our monies safe. And us out of jail."
+   
+ - name: June Ahn
+   image: june_ahn.jpg
+   role: Assistant Professor, University of Maryland
+   bio: "June is a human-computer interaction researcher at University of Maryland. He bravely collaborates with P2PU on research projects about engagement, motivation and cohorts."
+   twitter: ahnjune
+   url: "http://ahnjune.com/"
+ 
+ - name: Karen Fasimpaur
+   image: karen_fasimpaur.jpg
+   role: Dean School of Ed
+   bio: "Karen Fasimpaur is owner and manager of K-12 handhelds, an educational technology company focused on mobile learning. She founded the School of Ed at P2PU and is currently building her off-the-grid house in Arizona. From scratch."
+   twitter: kfasimpaur
+   url: k12opened.com/blog"
+ 
+ - name: Jane Park
+   image: jane_park.jpg
+   role: Project Manager, Creative Commons
+   bio: "Another founding volunteer who loves P2PU so much she made it her day job — almost. Jane works for Creative Commons and devotes 60% of her time to co-creating the ‘School of Open’ with open advocates from around the world."
+   twitter: janedaily
+
+ - name: Alex Ruthmann
+   image: alex_ruthmann.jpg
+   role: Associate Professor, New York University
+   bio: "Alex empowers music teachers to build tools and become entrepreneurs at the NYU MusEd Lab, and he's brought that tinkerability over to P2PU. Alex and P2PU collaborate and research how to produce creative experiences online."
+   twitter: alexruthmann
+   url: "http://about.me/alexruthmann"
+   
+   
 ---
 <h2>Our Staff</h2>
 <div class="row">
@@ -142,26 +142,8 @@ board:
 {% endfor %}
 </div>
 
-<h2>Our Board</h2>
-<div class="row">
-{% for person in page.board %}
-	<div class="p2pu-person col-lg-4 col-sm-6">
-		<img class="img-circle pull-right people-img" src=
-				"{{ "/images/people/" |append: person.image |prepend: site.baseurl }}"
-		     alt="{{ person.name }} Image">
-		<h3>{{ person.name }} <br>
-			<small>{{ person.role }}</small>
-		</h3>
-		<p>{{ person.bio }}</p>
-		{% if person.twitter %} 
-		<p><a href="https://twitter.com/{{person.twitter}}"><i class="fa fa-twitter"></i>{{person.twitter}}</a></p>
-		{% endif %}
-		<p><a href="{{person.url}}">{{person.url}}</a></p>
-	</div>
-{% endfor %}
-</div>
 
-<h2>Our Collaborators</h2>
+<h2>Our Extended Family</h2>
 <div class="row">
 {% for person in page.collaborators %}
 	<div class="p2pu-person col-lg-4 col-sm-6">
