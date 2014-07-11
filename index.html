@@ -15,7 +15,7 @@
 	<div class="background"></div>
 	<video autoplay muted loop id="video"
 	       poster="{{ "images/p2pu-video-poster.png"|prepend:site.baseurl }}" preload="auto">
-		<source src="{{ "images/philipp-p2pu-video.mp4"|prepend:site.baseurl }}" type="video/mp4">
+		<source src="{{ "images/p2pu-video.mp4"|prepend:site.baseurl }}" type="video/mp4">
 	</video>
 
 	<nav class="navbar" role="navigation">
@@ -27,7 +27,8 @@
 					<i class="fa fa-bars"></i>
 				</a>
 				<a class="navbar-logo" href="{{ site.baseurl }}">
-					<img src="{{ "/images/p2pu-logo.png" | prepend: site.baseurl }}" alt="P2PU Logo" />
+					<img src="{{ "/assets/images/p2pu-logo.png" | prepend: site.baseurl }}" alt="P2PU Logo"
+							/>
 				</a>
 			</div>
 
@@ -35,7 +36,7 @@
 			<div class="collapse navbar-collapse" id="nav-links-collapse">
 
 				<ul class="nav navbar-nav navbar-right">
-					{% for link in site.navigation %}
+					{% for link in site.data.navigation %}
 						<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
 							<a href="{{ link.url|prepend:site.baseurl }}">{{ link.text }}</a>
 						</li>
@@ -53,7 +54,7 @@
 			<header class="col-md-6">
 				<h1>A University for the Web. <br> Built by an open community.</h1>
 			</header>
-			<img src="{{ "images/splash-img.png"|prepend:site.baseurl }}" alt="Splash Image" />
+			<img src="{{ "/assets/images/splash-img.png"|prepend:site.baseurl }}" alt="Splash Image" />
 
 			<p class="col-md-6">
 				LEARNING BY EVERYONE. <br> FOR EVERYONE. <br> ABOUT ALMOST ANYTHING. <br> COMPLETELY FREE.

@@ -10,7 +10,7 @@
 				<i class="fa fa-bars"></i>
 			</a>
 			<a class="navbar-logo" href="{{ site.baseurl }}/">
-				<img src="{{ site.baseurl }}/images/p2pu-logo.png" alt="P2PU Logo" />
+				<img src="{{ site.baseurl }}/assets/images/p2pu-logo.png" alt="P2PU Logo" />
 			</a>
 		</div>
 
@@ -18,7 +18,7 @@
 		<div class="collapse navbar-collapse" id="nav-links-collapse">
 
 			<ul class="nav navbar-nav navbar-right">
-				{% for link in site.navigation %}
+				{% for link in site.data.navigation %}
 					{% assign active = nil %}
 
 					{% for sublink in link.submenu %}

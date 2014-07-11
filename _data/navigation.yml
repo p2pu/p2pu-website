@@ -1,0 +1,24 @@
+- text: Our work
+  url: work/
+  submenu:
+  - text: P2PU Courses
+    url: schools/
+  - text: P2PU Schools
+    url: schools/
+  - text: Current and past projects
+    url: projects/
+  - text: Want to work with us?
+    url: work_with_us
+- text: About
+  url: about/
+  submenu:
+  - text: Our people
+    url: people/
+  - text: Our philopsophy
+    url: philosophy/
+  - text: Credits
+    url: credits/
+- text: Publications
+  url: publications/
+- text: Connect with us
+  url: connect/
