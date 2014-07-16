@@ -1,4 +1,4 @@
-/*global jQuery, console */
+/*global jQuery, window, console */
 
 
 var P2PU = window.P2PU || {};
@@ -7,27 +7,50 @@ var P2PU = window.P2PU || {};
 
 	'use strict';
 
+	function fitRows($container, options) {
+
+		var cols = options.numColumns,
+			$els = $container.children(),
+			maxH = 0, j,
+			doSize;
+
+		doSize = ( $container.width() !== $els.outerWidth(true) );
+
+		$els.each(function (i, p) {
+
+			var $p = $(p), h;
+
+			$p.css('min-height', '');
+			if (!doSize) {
+				return;
+			}
+
+			maxH = Math.max($p.outerHeight(true), maxH);
+			//if (i % cols === cols - 1 || i === cols - 1) {
+			if (i % (cols)) {
+				//for (j = cols; j; j--) {
+				for (j = 0; j < cols - 1; j=j+1) {
+					$p.css('min-height', maxH);
+					$p = $p.prev();
+				}
+				maxH = 0;
+			}
+
+		});
+	}
+
 	var init = function () {
 		$(function () {
-			var header = $('.navbar-p2pu');
 
-			$('.navbar-toggle').sidr({
-				name: 'sidr-right',
-				side: 'right',
-				source: '.nav'
+			var opts = {
+				numColumns: 3
+			};
+
+			fitRows($('.tiles'), opts);
+
+			$(window).on('resize', function () {
+				fitRows($('.tiles'), opts);
 			});
-			/*
-			$(window).scroll(function () {
-				var scroll = $(window).scrollTop();
-
-				if (scroll >= 1) {
-					//header.addClass('sticky-nav');
-				} else {
-					//header.removeClass('sticky-nav');
-				}
-			});*/
-
-
 		});
 	};
 

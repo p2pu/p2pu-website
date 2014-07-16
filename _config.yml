@@ -10,9 +10,6 @@ url: "http://p2pu.org"
 markdown: kramdown
 permalink: pretty
 
-sass:
-    sass_dir: assets/_sass
-    style: :compressed
 
 
 

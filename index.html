@@ -7,15 +7,31 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js"> <!--<![endif]-->
 
-{% include head.html %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/assets/css/p2pustrap.css" | prepend: site.baseurl }}">
+		<link rel="stylesheet" href="{{ "/assets/css/index.css" | prepend: site.baseurl }}">
+		<link href='http://fonts.googleapis.com/css?family=Arvo:400,700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{{ "/assets/css/font-awesome.min.css" | prepend: site.baseurl }}" >
+
+		<script src="{{ "/assets/js/vendor/modernizr-2.6.2.min.js" | prepend: site.baseurl }}"></script>
+</head>
 
 <body>
 
 <section class="splash">
 	<div class="background"></div>
 	<video autoplay muted loop id="video"
-	       poster="{{ "images/p2pu-video-poster.png"|prepend:site.baseurl }}" preload="auto">
-		<source src="{{ "images/p2pu-video.mp4"|prepend:site.baseurl }}" type="video/mp4">
+	       poster="{{ "assets/images/p2pu-video-poster.png"|prepend:site.baseurl }}" preload="auto">
+		<source src="{{ "assets/images/p2pu-video.mp4"|prepend:site.baseurl }}" type="video/mp4">
 	</video>
 
 	<nav class="navbar" role="navigation">
@@ -27,7 +43,7 @@
 					<i class="fa fa-bars"></i>
 				</a>
 				<a class="navbar-logo" href="{{ site.baseurl }}">
-					<img src="{{ "/assets/images/p2pu-logo.png" | prepend: site.baseurl }}" alt="P2PU Logo"
+					<img src="{{ "assets/images/p2pu-logo.png" | prepend: site.baseurl }}" alt="P2PU Logo"
 							/>
 				</a>
 			</div>
@@ -54,7 +70,7 @@
 			<header class="col-md-6">
 				<h1>A University for the Web. <br> Built by an open community.</h1>
 			</header>
-			<img src="{{ "/assets/images/splash-img.png"|prepend:site.baseurl }}" alt="Splash Image" />
+			<img src="{{ "assets/images/splash-img.png"|prepend:site.baseurl }}" alt="Splash Image" />
 
 			<p class="col-md-6">
 				LEARNING BY EVERYONE. <br> FOR EVERYONE. <br> ABOUT ALMOST ANYTHING. <br> COMPLETELY FREE.
@@ -83,7 +99,8 @@
 			</p>
 		</div>
 		<div class="col-md-6">
-			<img src="{{ "images/workers.png"|prepend:site.baseurl }}" alt="Study group experience" />
+			<img src="{{ "assets/images/workers.png"|prepend:site.baseurl }}" alt="Study group
+			experience"	/>
 		</div>
 	</section>
 	<hr>
@@ -93,7 +110,7 @@
 
 		<div class="service col-md-4">
 			<div class="feature-icon">
-					<img src="{{ "images/icons/build.png"|prepend:site.baseurl }}" alt="Megaphone Icon" >
+					<img src="{{ "assets/images/icons/build.png"|prepend:site.baseurl }}" alt="Megaphone Icon" >
 			</div>
 			<p>
 				Learning Design and Content Development
@@ -101,7 +118,7 @@
 		</div>
 		<div class="service col-md-4">
 			<div class="feature-icon">
-					<img src="{{ "images/icons/community.png"|prepend:site.baseurl }}" alt="Badges Icon" >
+					<img src="{{ "assets/images/icons/community.png"|prepend:site.baseurl }}" alt="Badges Icon" >
 			</div>
 			<p>
 				Design and Build your Learning Community
@@ -109,7 +126,7 @@
 		</div>
 		<div class="service col-md-4">
 			<div class="feature-icon">
-					<img src="{{ "images/icons/credentials.png"|prepend:site.baseurl }}" alt="Badges Icon" >
+					<img src="{{ "assets/images/icons/credentials.png"|prepend:site.baseurl }}" alt="Badges Icon" >
 			</div>
 			<p>
 				Craft Robust Peer Assessments
@@ -117,7 +134,7 @@
 		</div>
 		<div class="service col-md-4">
 			<div class="feature-icon">
-					<img src="{{ "images/icons/bubbles.png"|prepend:site.baseurl }}" alt="Bubbles Icon" >
+					<img src="{{ "assets/images/icons/bubbles.png"|prepend:site.baseurl }}" alt="Bubbles Icon" >
 			</div>
 			<p>
 				Advise on Social Learning Design
@@ -125,7 +142,7 @@
 		</div>
 		<div class="service col-md-4">
 			<div class="feature-icon">
-					<img src="{{ "images/icons/gear.png"|prepend:site.baseurl }}" alt="Gear Icon" >
+					<img src="{{ "assets/images/icons/gear.png"|prepend:site.baseurl }}" alt="Gear Icon" >
 			</div>
 			<p>
 				Discourse, Mailgun and Badge System Development
@@ -133,7 +150,7 @@
 		</div>
 		<div class="service col-md-4">
 			<div class="feature-icon">
-					<img src="{{ "images/icons/megaphone.png"|prepend:site.baseurl }}" alt="Megaphone Icon" >
+					<img src="{{ "assets/images/icons/megaphone.png"|prepend:site.baseurl }}" alt="Megaphone Icon" >
 			</div>
 			<p>
 				Promotion Plans and Outreach

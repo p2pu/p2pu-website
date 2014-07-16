@@ -269,11 +269,11 @@ collaborators:
    
 ---
 <h2>Our Staff</h2>
-<div class="row">
+<div class="row tiles">
 {% for person in page.staff %}
 	<div class="p2pu-person col-lg-4 col-sm-6">
 		<img class="img-circle pull-right people-img" src=
-				"{{ "/images/people/" |append: person.image |prepend: site.baseurl }}"
+				"{{ "assets/images/people/" |append: person.image |prepend: site.baseurl }}"
 		     alt="{{ person.name }} Image">
 		<h3>{{ person.name }} <br>
 			<small>{{ person.role }}</small>
@@ -289,11 +289,11 @@ collaborators:
 
 
 <h2>Our Extended Family</h2>
-<div class="row">
+<div class="row tiles">
 {% for person in page.collaborators %}
 	<div class="p2pu-person col-lg-4 col-sm-6">
 		<img class="img-circle pull-right people-img" src=
-				"{{ "/images/people/" |append: person.image |prepend: site.baseurl }}"
+				"{{ "assets/images/people/" |append: person.image |prepend: site.baseurl }}"
 		     alt="{{ person.name }} Image">
 		<h3>{{ person.name }} <br>
 			<small>{{ person.role }}</small>

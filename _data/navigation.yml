@@ -1,10 +1,6 @@
 - text: Our work
   url: work/
   submenu:
-  - text: P2PU Courses
-    url: schools/
-  - text: P2PU Schools
-    url: schools/
   - text: Current and past projects
     url: projects/
   - text: Want to work with us?
@@ -12,7 +8,7 @@
 - text: About
   url: about/
   submenu:
-  - text: Our people
+  - text: people
     url: people/
   - text: Our philopsophy
     url: philosophy/
@@ -22,3 +18,10 @@
   url: publications/
 - text: Connect with us
   url: connect/
+  submenu:
+  - text: Get involved
+    url: get-involved/
+  - text: Forums
+    url: http://community.p2pu.org
+  - text: Contact Us
+    url: contact-us/
