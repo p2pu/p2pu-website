@@ -7,6 +7,30 @@ title: Check this out
 	<h2>Our youtube channel</h2>
 
 	<div id="youmax"></div>
+	<script>
+      function appendResults(text) {
+        var results = document.getElementById('youmax');
+        results.appendChild(document.createElement('P'));
+        results.appendChild(document.createTextNode(text));
+      }
+
+      function makeRequest() {
+	      console.log(gapi.client);
+        var request = gapi.client.youtube.playlists.list({
+          'part': 'contentDetails',
+	        'channelId': 'UCJH3nTAgEAGljjTB5B8PjFw'
+        });
+        request.execute(function(response) {
+	        console.log(response);
+          appendResults(response);
+        });
+      }
+
+      function load() {
+        gapi.client.setApiKey('AIzaSyDsSZBSpnj_wgkOU2cybxkDC-BPqoE8un8');
+        gapi.client.load('youtube', 'v3', makeRequest);
+      }
+    </script>
 </div>
 <div class="col-md-6">
 	<h2>Our conversations</h2>

@@ -40,7 +40,15 @@
 							<ul class="dropdown-menu nav navbar-nav subnav" role="menu">
 								{% for sublink in link.submenu %}
 									<li {% if page.url contains sublink.url %}class="active"{% endif %}>
-										<a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.text }}</a>
+										{% if sublink.url contains 'http://' %}
+											<a href="{{ sublink.url }}">
+												{{ sublink.text }}
+											</a>
+									{% else %}
+											<a href="{{ site.baseurl }}{{ sublink.url }}">
+												{{ sublink.text }}
+											</a>
+									{% endif %}
 									</li>
 								{% endfor %}
 							</ul>

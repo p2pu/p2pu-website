@@ -16,6 +16,15 @@
     url: credits/
 - text: Publications
   url: publications/
+  submenu:
+  - text: reports
+    url: http://reports.p2pu.org/
+  - text: blog
+    url: http://info.p2pu.org/
+  - text: data
+    url: data/
+  - text: Presentations and Talks
+    url: talks
 - text: Connect with us
   url: connect/
   submenu:
