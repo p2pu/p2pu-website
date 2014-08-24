@@ -1,0 +1,17 @@
+
+.strech-banner {
+	height: 350px;
+	width: 100%;
+	background-position: 0 70%;
+	background-repeat: no-repeat;
+	margin: 50px 0;
+
+	&.about {
+		background-image: url(../images/about/whiteboard-brainfuck.jpg);
+	}
+	
+	&.people{
+		background-image: url(../images/about/people-banner.jpg);
+		background-position: 0 25%;
+	}
+}

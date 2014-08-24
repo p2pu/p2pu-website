@@ -1,0 +1,12 @@
+past:
+ - title: Badges
+   image: badges.png
+   short-description: "This is short description about Badges"
+   date: 2013-09-01
+
+ - title: Play With Your Music
+   image: playwithyourmusic.png
+   short-description: "This is short description about PWYM"
+   date: 2012-01-12
+
+featured:
