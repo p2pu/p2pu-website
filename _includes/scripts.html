@@ -6,10 +6,23 @@
 <script src="{{ "/assets/js/vendor/bootstrap/dropdown.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/vendor/bootstrap/affix.js" | prepend: site.baseurl }}"></script>
 <script src="https://apis.google.com/js/client.js?onload=load"></script>
-<script type="text/javascript" src="http://rawgithub.com/p2pu/p2pu_navigation_widget/master/p2pu_menu_slider.js"></script>
+<script type="text/javascript"
+        src="http://rawgithub.com/p2pu/p2pu_navigation_widget/master/p2pu_menu_slider.js"></script>
 <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 
 <script>
 	P2PU.Splash.init();
+</script>
+
+<script>
+	!function (d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+		if (!d.getElementById(id)) {
+			js = d.createElement(s);
+			js.id = id;
+			js.src = p + "://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}
+	}(document, "script", "twitter-wjs");
 </script>
 

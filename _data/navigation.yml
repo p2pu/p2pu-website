@@ -1,5 +1,6 @@
 - text: Our work
   url: work/
+
 - text: About
   url: about/
   submenu:
@@ -9,17 +10,19 @@
     url: "#people"
   - text: Credits and thanks
     url: "#credits"
+
 - text: Publications
-  url: publications/
+  url: publications
   submenu:
+  - text: Presentations and Talks
+    url: publications
   - text: reports
     url: http://reports.p2pu.org/
   - text: blog
     url: http://info.p2pu.org/
   - text: data
-    url: data/
-  - text: Presentations and Talks
-    url: talks
+    url: http://data.p2pu.org/
+
 - text: Connect with us
   url: connect/
   submenu:

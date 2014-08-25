@@ -1,9 +1,54 @@
 ---
-layout: base
+layout: page
+title: What we have to say
 ---
+<div class="container">
+	<div class="home">
 
-<div class="home">
+		<div class="col-md-8">
+			<h2>Talks and Presentations</h2>
+			{% for talk in site.data.presentations %}
+				{% assign multi_three=forloop.index0|modulo:3 %}
+				{% if multi_three == 0 %}<div class="row">{% endif %}
+				<div class="col-md-4">
 
-  Here be drangons!
+					<a class="talk" href="{{ talk.url }}" target="_blank">
+						<div class="talk-image text-center">
+							<img class="img-rounded" src="{{ site.baseurl }}assets/images/talks/{{ talk.image }}"
+							     alt="Presentation cover image" />
+						</div>
+						<div class="talk-overlay text-center">
+							<div class="talk-presenter">
+								<h4>
+									{% for presentor in talk.presentors %}
+										{{ presentor }}
+									{% endfor %}
+								</h4>
+							</div>
+							<p>{{ talk.event }}<br /><small>{{ talk.date| date: "%B %Y" }}</small></p>
+						</div>
+					</a>
+				</div>
+				{% if multi_three == 2 or forloop.last %}</div>{% endif %}
+			{% endfor %}
+	</div>
+	<div class="col-md-3 col-md-offset-1">
 
+		<h2>Quick Updates</h2>
+
+		<a class="twitter-timeline" href="https://twitter.com/p2pu"
+		   data-widget-id="503992131787030528" data-link-color="#05c6b4"
+		   data-chrome="noheader nofooter noborders transparent noscrollbar"
+		   data-tweet-limit="6"
+		   data-aria-polite="assertive"
+		   lang="EN">Tweets by @p2pu </a>
+		<div>
+			<a class="btn btn-info"
+				href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fp2pu.org%2Fpublications%2F&region=follow_link&screen_name=p2pu&tw_p=followbutton&variant=2.0">
+					<i class="fa fa-twitter"></i> Follow P2PU
+				</a>
+		</div>
+	</div>
+
+</div>
 </div>

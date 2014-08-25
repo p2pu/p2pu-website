@@ -2,6 +2,10 @@ body {
 	line-height: 2;
 }
 
+.navbar-default .navbar-nav .dropdown-menu > li.active a {
+	background-color: $gray-dark;
+}
+
 .p2pu-tab {
 	float: none;
 }
@@ -52,6 +56,19 @@ body {
 	}
 }
 
-.to-top{
+.to-top {
 	margin: 50px 0;
+}
+
+.talk {
+	color: $brand-primary;
+	&:hover {
+		text-decoration: none;
+	}
+
+	.talk-image {
+		img {
+			border-radius: 10px;
+		}
+	}
 }

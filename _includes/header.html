@@ -41,7 +41,8 @@
 								{% for sublink in link.submenu %}
 									<li {% if page.url contains sublink.url %}class="active"{% endif %}>
 										{% if sublink.url contains 'http://' or sublink.url contains '#' %}
-											<a href="{{ sublink.url }}">
+											<a href="{{ sublink.url }}"
+													{% if sublink.url contains 'http://'%}target="_blank"{% endif %}>
 												{{ sublink.text }}
 											</a>
 										{% else %}
