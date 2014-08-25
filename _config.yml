@@ -1,14 +1,19 @@
 # Site settings
 title: Peer 2 Peer University
 email: admin@p2pu.org
-description: "A University for the Web. Built by an open community.
-LEARNING BY EVERYONE. FOR EVERYONE. ABOUT ALMOST ANYTHING. COMPLETELY FREE."
-baseurl: "/p2pu-website/"
+description: "A University for the Web. Built by an open community. LEARNING BY EVERYONE. FOR
+EVERYONE. ABOUT ALMOST ANYTHING. COMPLETELY FREE."
+baseurl: "/p2pu-website"
 url: "http://p2pu.org"
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+#SASS settings
+sass:
+  sass_dir: _sass
+  style: :compressed
 
 
 
