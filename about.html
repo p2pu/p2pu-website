@@ -45,6 +45,7 @@ title: About Peer 2 Peer University
 
 	</div>
 </div>
+{% include home-button.html %}
 <figure class="strech-banner about"></figure>
 <div class="container" id="philosophy">
 
@@ -60,7 +61,7 @@ title: About Peer 2 Peer University
 	<div class="row">
 
 		<div class="col-md-4 ">
-			<h2>Expertise</h2>
+			<h2>Expertise <i class="fa fa-star fa-2x pull-right"></i></h2>
 			<h4>everyone has it:</h4>
 
 			<p>
@@ -75,7 +76,7 @@ title: About Peer 2 Peer University
 
 
 		<div class="col-md-4">
-			<h2>Sharing</h2>
+			<h2>Sharing <i class="fa fa-share-alt fa-2x pull-right"></i></h2>
 			<h4>and connecting is how we learn:</h4>
 
 			<p>
@@ -93,7 +94,7 @@ title: About Peer 2 Peer University
 
 
 		<div class="col-md-4">
-			<h2>Feedback</h2>
+			<h2>Feedback <i class="fa fa-volume-up fa-2x pull-right"></i></h2>
 			<h4>is necessary in order to improve:</h4>
 
 			<p>
@@ -117,11 +118,13 @@ title: About Peer 2 Peer University
 	<h3>How will you peer learn today?</h3>
 
 	<div class="bottom-link">
-		<a href="{{ '/about/' | prepend: site.baseurl }}" class=""> <img
-				src="{{ 'assets/images/connect-with-us.jpg'|prepend: site.baseurl }}" alt="" /> </a>
+		<a href="http://community.p2pu.org" class="btn btn-success btn-lg">
+			Yes, I Want To Join <i class="fa fa-angle-double-right"></i>
+		</a>
 
 	</div>
 </div>
+{% include home-button.html %}
 <figure class="strech-banner people"></figure>
 <div class="container" id="people">
 	<h2>Meet the People of P2PU</h2>
@@ -149,7 +152,7 @@ title: About Peer 2 Peer University
 					<span><a href="{{ person.url }}">{{ person.url }}</a></span>
 				{% endif %}
 			</div>
-			{% if multi_three == 2 %}</div>{% endif %}
+			{% if multi_three == 2 or forloop.last %}</div>{% endif %}
 		{% endfor %}
 	</div>
 	<hr />
@@ -177,12 +180,11 @@ title: About Peer 2 Peer University
 					<span><a href="{{ person.url }}">{{ person.url }}</a></span>
 				{% endif %}
 			</div>
-			{% if multiply == 2 %}</div>{% endif %}
+			{% if multiply == 2 or forloop.last %}</div>{% endif %}
 		{% endfor %}
 	</div>
 </div>
-</div>
-</div>
+{% include home-button.html %}
 <figure class="strech-banner credits"></figure>
 <div class="container" id="credits">
 	<h2>Credits and thanks</h2>
