@@ -2,6 +2,13 @@
   url: work/
 - text: About
   url: about/
+  submenu:
+  - text: Philosophy
+    url: "#philosophy"
+  - text: People
+    url: "#people"
+  - text: Credits and thanks
+    url: "#credits"
 - text: Publications
   url: publications/
   submenu:

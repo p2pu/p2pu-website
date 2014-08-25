@@ -1,12 +1,43 @@
 past:
- - title: Badges
-   image: badges.png
-   short-description: "This is short description about Badges"
-   date: 2013-09-01
+  - title: Community Design 101
+    image: community101.png
+    short-description: "develop your course using the methodologies we use at P2PU to build
+    learning communities on the web."
+    url: http://howto.p2pu.org/
 
- - title: Play With Your Music
-   image: playwithyourmusic.png
-   short-description: "This is short description about PWYM"
-   date: 2012-01-12
+  - title: Writing For Change
+    image: w4c.png
+    short-description: "A free course to help you enact social change. Learn how
+    to write grant proposals, applications and op-eds from the community."
+    url: http://writing4change.p2pu.org/
+
+  - title: Webmaker Training
+    image: ttw.png
+    short-description: "Helping one another teach web literacy, digital skills and open practices.
+    Learning how to Teach The Web."
+    url: https://training.webmakerprototypes.org/en/
+
+  - title: Learning Creative Learning
+    image: lclmooc.png
+    short-description: "Like-minded educators and learners from around the world can share their
+    ideas about creative learning."
+    url: http://learn.media.mit.edu/lcl/
+
+  - title: Play With Your Music
+    image: playwithyourmusic.png
+    short-description: "Learn to mix your own songs using the newest tools on the web,
+    you can now do so as part of “Play With Your Music” ."
+    url: http://playwithyourmusic.org
+
+  - title: Deeper Learning MOOC
+    image: dlmooc.png
+    short-description: "DLMOOC is aimed at teachers, school leaders, and other educators who are
+    interested in encouraging deeper learning in their schools and classrooms."
+    url: http://dlmooc.deeper-learning.org/
+
+  - title: Badges
+    image: badges.png
+    short-description: "This is short description about Badges"
+    url: http://badges.p2pu.org
 
 featured:
