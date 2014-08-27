@@ -11,13 +11,12 @@
 	.thumbnail-side {
 		position: relative;
 		text-align: center;
-		background: $brand-success;
+		background: $brand-primary;
 		color: $white;
 		padding: 15px 0;
 		margin-bottom: 0.5em;
 		font-family: $headings-font-family;
 		font-size: 1em;
-		font-weight: bold;
 	}
 
 	.cotent-wrap {
@@ -32,7 +31,7 @@
 
 .csstransforms .thumbnail {
 	border: 0;
-	border-left: 60px solid $brand-success;
+	border-left: 60px solid $brand-primary;
 
 	/* Make a little room */
 	padding-left: 10px;
@@ -41,7 +40,7 @@
 
 		/* Abs positioning makes it not take up vert space */
 		position: absolute;
-		top: 98%;
+		top: 95%;
 		left: -19%;
 
 		/* Border is the new background */

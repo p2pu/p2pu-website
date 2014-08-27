@@ -3,10 +3,12 @@ layout: page
 title: Check this out
 ---
 <div class="container">
-	<div class="col-md-6 first">
+	<div class="col-md-8 first">
 		<h2>Our youtube channel</h2>
 
-		<div id="youmax"></div>
+		<div id="youmax">
+
+		</div>
 		<script>
 			function appendResults(text) {
 				var results = document.getElementById('youmax');
@@ -14,29 +16,38 @@ title: Check this out
 				results.appendChild(document.createTextNode(text));
 			}
 
-			function makeRequest() {
-				console.log(gapi.client);
-				var request = gapi.client.youtube.playlists.list({
-					'part': 'contentDetails',
-					'channelId': 'UCJH3nTAgEAGljjTB5B8PjFw'
-				});
-				request.execute(function (response) {
-					console.log(response);
-					appendResults(response);
-				});
-			}
+			function list() {
+        var request = gapi.client.youtube.playlistItems.list({
+          part: 'snippet',
+          playlistId: 'PLtywLmgP0F55FHsO3n93YLw_sGLzp9-5X'
+        });
+
+        request.execute(function(response) {
+
+          response.items.forEach(function(item) {
+            console.log(
+              item.snippet.title,
+              item.snippet.resourceId.videoId,
+              item.snippet.thumbnails.default.url,
+		          item.snippet.publishedAt,
+		          item.snippet
+            );
+          });
+        });
+      }
 
 			function load() {
-				gapi.client.setApiKey('AIzaSyDsSZBSpnj_wgkOU2cybxkDC-BPqoE8un8');
-				gapi.client.load('youtube', 'v3', makeRequest);
+				gapi.client.setApiKey('AIzaSyCZ7J2JSVFVSY2rpp6cKhJkgxehP1nudHo');
+				gapi.client.load('youtube', 'v3', list);
 			}
 		</script>
+		<script src="https://apis.google.com/js/client.js?onload=load"></script>
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-4">
 		<h2>Our conversations</h2>
 
 		<div id="discourse-comments"></div>
-
+		{% comment %}
 		<script type="text/javascript">
 			var discourseUrl = "http://community.p2pu.org/",
 					discourseEmbedUrl = 'http://ercchy.github.io/p2pu-website/connect/';
@@ -49,5 +60,6 @@ title: Check this out
 				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
 			})();
 		</script>
+		{% endcomment %}
 	</div>
 </div>

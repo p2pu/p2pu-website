@@ -13,6 +13,9 @@
 		position: absolute;
 		top: 0px;
 		left: 0px;
+		background-image: url(../images/overlay.png);
+		background-position: top left;
+		background-repeat: repeat;
 	}
 
 	#video {
@@ -36,24 +39,17 @@
 		height: 664px;
 
 		header {
-			color: #FFFFFF;
-			text-align: center;
+			color: $white;
 			float: none;
 			padding: 50px 0;
-			h1 {
-				font-weight: 700;
-			}
-		}
-
-		img {
-			width: 700px;
-			float: right;
+			font-size: 75px;
+			line-height: 1.2;
+			font-family: $headings-font-family;
 		}
 
 		p {
-			position: absolute;
-			color: #FFFFFF;
-			font-family: 'Open Sans' helvetica sans-serif;
+			color: $white;
+			font-family: $font-family-base;
 			text-transform: uppercase;
 			font-size: 24px;
 			bottom: 11%;
@@ -84,7 +80,7 @@ nav {
 .page-content {
 
 	section {
-		padding: 1.5em;
+		padding: 3em 1.5em;
 	}
 
 	p {
@@ -105,19 +101,52 @@ nav {
 
 	}
 
+	.text-center {
+
+		h1 {
+			&:before {
+				left: 50%;
+				margin-left: -20%;
+			}
+		}
+
+	}
+	.featured-headline {
+		background-color: $brand-primary;
+		color: $white;
+	}
 	.services {
 		.service {
 			text-align: center;
 			margin: 20px 0;
 
-			p{
+			p {
 				height: 70px;
 			}
 		}
 	}
 }
 
-.feature-icon{
+.divider-center {
+	margin-top: 35%;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -23em;
+		left: 50%;
+		height: 21em;
+		border-left: solid 1px #eee;
+	}
+}
+
+.know-believe {
+	.title {
+		margin-bottom: 2.5em;
+	}
+}
+
+.feature-icon {
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
@@ -171,7 +200,7 @@ nav {
 	background-color: #F3F4F8;
 }
 
-.p2pu-footer{
+.p2pu-footer {
 	margin-top: 0;
 }
 
