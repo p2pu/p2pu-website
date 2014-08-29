@@ -60,7 +60,10 @@
 }
 
 nav {
-	padding-top: 20px;
+
+	& > .container {
+		padding-top: 20px;
+	}
 
 	.nav > li {
 		& > a {
@@ -202,6 +205,46 @@ nav {
 
 .p2pu-footer {
 	margin-top: 0;
+}
+
+.who{
+	background: url(../images/index/community.png) top right no-repeat;
+	background-color: #F3F4F8;
+}
+
+.feature {
+	position: relative;
+
+	.content {
+		display: inline-block;
+		padding: 2.8em;
+		vertical-align: middle;
+		width: 48%;
+	}
+
+	&.left {
+		text-align: left;
+
+		.image {
+			float: left;
+			padding-right: 0;
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&.right {
+		text-align: right;
+
+		.image {
+			float: right;
+			padding-left: 0;
+			img{
+				max-width: 100%;
+			}
+		}
+	}
 }
 
 
