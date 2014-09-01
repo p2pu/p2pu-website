@@ -10,6 +10,9 @@ var P2PU = window.P2PU || {};
 
 	var init = function () {
 		$(function () {
+			// Index calculation height
+			//$('.splash').css('height', $( window ).height());
+
 			// p2pu tab
 			$(".p2pu-tab").p2puSlider({
 				navbarContainer: '.navbar',

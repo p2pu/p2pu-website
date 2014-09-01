@@ -13,7 +13,14 @@ permalink: pretty
 #SASS settings
 sass:
   sass_dir: _sass
-  style: :compressed
+  #style: :compressed
+
+env: prod
+
+exclude: [Guardfile, Gemfile, Gemfile.lock]
+
+
+
 
 
 

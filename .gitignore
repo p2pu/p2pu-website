@@ -1,3 +1,6 @@
 _site
 .sass-cache
 .idea/
+
+# Development configuration
+_config-dev.yml

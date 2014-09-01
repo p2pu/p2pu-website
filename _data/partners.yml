@@ -1,0 +1,14 @@
+- name: Creative Commons
+  image: cc-logo.png
+
+- name: GovLab
+  image: govlab-logo.png
+
+- name: NYU Steinhardt
+  image: nyusteinhardt-logo.png
+
+- name: MIT Medi Lab
+  image: medialab-logo.png
+
+- name: Open Knowledge Foundation
+  image: okfn-logo.png

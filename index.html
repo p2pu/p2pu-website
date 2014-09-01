@@ -27,22 +27,29 @@
 
 <section class="splash">
 	<div class="background"></div>
+	{% comment %}
 	<video autoplay muted loop id="video"
 	       poster="{{ "assets/images/p2pu-video-poster.png"|prepend:site.baseurl }}" preload="auto">
 		<source src="{{ "assets/images/ashokaPhilipp.mp4"|prepend:site.baseurl }}" type="video/mp4">
 	</video>
-
+	{% endcomment %}
 	<nav class="navbar" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<a class="navbar-toggle" data-toggle="collapse"
-				   data-target="#nav-links-collapse"> <i class="fa fa-bars"></i> </a> <a class="navbar-logo"
-				                                                                         href="{{ site.baseurl }}">
-				<img src="{{ "assets/images/p2pu-logo.png" | prepend: site.baseurl }}" alt="P2PU Logo"
-						/> </a>
+				   data-target="#nav-links-collapse">
+					<i class="fa fa-bars"></i>
+				</a>
+				<a class="navbar-logo pull-left" href="{{ site.baseurl }}/">
+					<img src="{{ "assets/images/p2pu-logo-2x.png" | prepend: site.baseurl }}"
+						alt="P2PU Logo" width="122" />
+				</a>
+				<a class="p2pu-tab" href="#">
+					<i class="fa fa-chevron-down p2pu-tab-icon"></i>
+				</a>
 			</div>
-			<a class="p2pu-tab" href="#"> <i class="fa fa-chevron-down p2pu-tab-icon"></i> </a>
+
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="nav-links-collapse">
 
@@ -60,40 +67,40 @@
 		<!-- /.container-fluid -->
 	</nav>
 
-	<div class="container">
-		<div class="banner clearfix">
-			<div class="row">
-				<header class="col-md-12">
-					We build learning communities on the web.
-				</header>
+	<div>
+		<div class="banner">
+			<div class="container">
+				<div class="row">
+					<header class="col-md-12">
+						We build learning communities <br />on the web
+					</header>
+					<p class="col-md-12 subheader">Open tools + Community + Design + Support</p>
+				</div>
+			</div>
+			<div class="featured-headline">
+				<div class="container">
+					<div class="text-center">
+						<header class="title">Playful, networked learning experiences that last</header>
 
-				<p class="col-md-12">Open tools + Community + Design + Support</p>
-				<footer>
-
-				</footer>
+						<p class="col-md-8 col-md-offset-2 body">
+							Instead of lonely, anonymous online courses, our communities sustain interest and
+							engagement because folks build them together. We are open and welcoming in everything
+							we do, and help folks generally feel comfy on the internet
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
+
 	</div>
 
 </section>
 
 <section class="page-content">
-<section class="clearfix featured-headline">
-	<div class="container">
-		<div class="col-md-12 text-center">
-			<h1>Playful, networked learning experiences that last</h1>
 
-			<p class="col-md-8 col-md-offset-2">
-				Instead of lonely, anonymous online courses, our communities sustain interest and engagement
-				because folks build them together. We are open and welcoming in everything we do, and help
-				folks generally feel comfy on the internet
-			</p>
-		</div>
-	</div>
-</section>
 <div class="container">
 	<section class="know-believe row">
-		<div class="col-md-5">
+		<div class="col-md-5 left">
 			<div class="text-center divider-left">
 				<span><i class="fa fa-heart fa-3x"></i></span>
 				<hr />
@@ -122,7 +129,7 @@
 					class="fa fa-adjust fa-1x fa-rotate-90"></i></span>
 			</div>
 		</div>
-		<div class="col-md-5">
+		<div class="col-md-5 right">
 			<div class="text-center"><span><i class="fa fa-check-square-o fa-3x"></i></span>
 				<hr />
 			</div>
@@ -159,7 +166,7 @@
 				Here we will have something about our great community.
 			</p>
 
-			<a class="" href="#">Meet the community</a>
+			<a class="people-link" href="{{ site.baseurl }}/about/#people">Meet the community</a>
 		</div>
 	</div>
 </section>
@@ -167,14 +174,14 @@
 <section>
 	<div class="container">
 		<h3>How we do stuff?</h3>
+
 		<div class="row feature left">
 			<a href="#" class="image col-md-6"> <img
-						src="{{ "assets/images/index/community.jpg"|prepend:site.baseurl }}"
-						alt="Community support image">
-			</a>
+					src="{{ "assets/images/index/community.jpg"|prepend:site.baseurl }}"
+					alt="Community support image"> </a>
 
 			<div class="content col-md-6">
-				<h3>Community support</h3>
+				<h3 class="header">Community support</h3>
 
 				<p>
 					Our crew of eduthinkers come together in our space, to give each other feedback, develop
@@ -188,7 +195,7 @@
 					alt="Roundtables image"> </a>
 
 			<div class="content col-md-6">
-				<h3>Social Learning Roundtables</h3>
+				<h3 class="header">Social Learning Roundtables</h3>
 
 				<p>
 					Once a month we come together to discuss important ideas in the future of learning. Some
@@ -203,7 +210,7 @@
 					alt="Reports image"> </a>
 
 			<div class="content">
-				<h3>Reports and documentation</h3>
+				<h3 class="header">Reports and documentation</h3>
 
 				<p>
 					We produce glossy digital reports on all of our lessions learned, so folks can take our
@@ -216,7 +223,7 @@
 					src="{{ "assets/images/index/talks.jpg"|prepend:site.baseurl }}" alt=""> </a>
 
 			<div class="content col-md-6">
-				<h3>Talks, conferences, Workshops and Consulting</h3>
+				<h3 class="header">Talks, conferences, Workshops and Consulting</h3>
 
 				<p>
 					We are always down to talk about what we've learned about online learning and how can we
@@ -228,73 +235,12 @@
 	</div>
 </section>
 
-{% comment %}
-		<section class="services row">
-			<h1>Here’s what we can do with you</h1>
-
-			<div class="service col-md-4">
-				<div class="feature-icon">
-					<img src="{{ "assets/images/icons/build.png"|prepend:site.baseurl }}"
-					     alt="Megaphone Icon">
-				</div>
-				<p>
-					Learning Design and Content Development
-				</p>
-			</div>
-			<div class="service col-md-4">
-				<div class="feature-icon">
-					<img src="{{ "assets/images/icons/community.png"|prepend:site.baseurl }}"
-					     alt="Badges Icon">
-				</div>
-				<p>
-					Design and Build your Learning Community
-				</p>
-			</div>
-			<div class="service col-md-4">
-				<div class="feature-icon">
-					<img src="{{ "assets/images/icons/credentials.png"|prepend:site.baseurl }}"
-					     alt="Badges Icon">
-				</div>
-				<p>
-					Craft Robust Peer Assessments
-				</p>
-			</div>
-			<div class="service col-md-4">
-				<div class="feature-icon">
-					<img src="{{ "assets/images/icons/bubbles.png"|prepend:site.baseurl }}"
-					     alt="Bubbles Icon">
-				</div>
-				<p>
-					Advise on Social Learning Design
-				</p>
-			</div>
-			<div class="service col-md-4">
-				<div class="feature-icon">
-					<img src="{{ "assets/images/icons/gear.png"|prepend:site.baseurl }}" alt="Gear Icon">
-				</div>
-				<p>
-					Discourse, Mailgun and Badge System Development
-				</p>
-			</div>
-			<div class="service col-md-4">
-				<div class="feature-icon">
-					<img src="{{ "assets/images/icons/megaphone.png"|prepend:site.baseurl }}"
-					     alt="Megaphone Icon">
-				</div>
-				<p>
-					Promotion Plans and Outreach
-				</p>
-			</div>
-		</section>
-		<section>
-			<a href="http://community.p2pu.org" class="call-to-action">
-				<h2>Connect with us</h2>
-			</a>
-		</section>
-		{% endcomment %}</div>
 <section class="partners">
 	<div class="container">
-		<h3>We are working with</h3>
+		{% for partner in site.data.partners %}
+				<img src="{{ '/assets/images/index/partners' | prepend: site.baseurl }}/{{ partner.image }}"
+			         alt="{{ partner.name }} Logo" />
+		{% endfor %}
 	</div>
 </section>
 
