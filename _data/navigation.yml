@@ -14,6 +14,8 @@
 - text: Publications
   url: publications
   submenu:
+  - text: P2PU Roundtables
+    url: roundtables
   - text: Presentations and Talks
     url: publications
   - text: reports
