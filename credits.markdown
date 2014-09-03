@@ -1,13 +1,11 @@
 ---
-layout: base
-category:
+layout: page
+title: Credits and Thanks
 ---
+We would'nt be anywhere without people like this:
 
-# Org
+* Someone who we want to thank
+* another we want to thank
 
-P2PU is registered as a 501(c)(3) nonprofit organisation in California.
-But that’s just the legal side of things. We are a community –
-check out the [About]({{ '/about/' | prepend: site.baseurl }}) page to find out [how we work] and
-the
-[People] page about who we
-are.
+<figure class="strech-banner credits"></figure>
+

@@ -17,7 +17,7 @@ sass:
 
 env: prod
 
-exclude: [Guardfile, Gemfile, Gemfile.lock]
+exclude: [Guardfile, Gemfile, Gemfile.lock, README]
 
 
 

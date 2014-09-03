@@ -5,11 +5,11 @@
   url: about/
   submenu:
   - text: Philosophy
-    url: "#philosophy"
+    url: philosophy
   - text: People
-    url: "#people"
+    url: people
   - text: Credits and thanks
-    url: "#credits"
+    url: credits
 
 - text: Publications
   url: publications
