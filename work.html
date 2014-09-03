@@ -12,9 +12,9 @@ title: Projects that we are involved with
 					<aside class="thumbnail-side">{{ project.title }}</aside>
 					<img class="project-img" src=
 						{% if project.image %}
-							"{{ "assets/images/projects/" |append: project.image |prepend: site.baseurl }}"
+							"{{ "/assets/images/projects/" |append: project.image |prepend: site.baseurl }}"
 						{% else %}
-							"{{ "assets/images/projects/default_project.jpg" |prepend: site.baseurl }}"
+							"{{ "/assets/images/projects/default_project.jpg" |prepend: site.baseurl }}"
 						{% endif %} alt="{{ project.name }} Image">
 					<div class="cotent-wrap">
 						<p>{{ project.short-description }}</p>

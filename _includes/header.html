@@ -32,7 +32,7 @@
 					{% endif %}
 
 					<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
-						<a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
+						<a href="{{ site.baseurl }}/{{ link.url }}">{{ link.text }}</a>
 
 						{% if link.submenu %}
 							<span class="fa fa-caret-down dropdown-toggle visible-xs-block visible-sm-block"
@@ -46,7 +46,7 @@
 												{{ sublink.text }}
 											</a>
 										{% else %}
-												<a href="{{ site.baseurl }}{{ sublink.url }}">
+												<a href="{{ site.baseurl }}/{{ sublink.url }}">
 													{{ sublink.text }}
 												</a>
 										{% endif %}
@@ -58,7 +58,7 @@
 				{% endfor %}
 				<li>
 					<div class="donate-btn-wrap">
-						<a href="{{ site.baseurl }}donate/" class="donate">Donate</a>
+						<a href="{{ site.baseurl }}/donate/" class="donate">Donate</a>
 					</div>
 				</li>
 			</ul>

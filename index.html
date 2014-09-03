@@ -29,8 +29,8 @@
 	<div class="background"></div>
 	{% comment %}
 	<video autoplay muted loop id="video"
-	       poster="{{ "assets/images/p2pu-video-poster.png"|prepend:site.baseurl }}" preload="auto">
-		<source src="{{ "assets/images/ashokaPhilipp.mp4"|prepend:site.baseurl }}" type="video/mp4">
+	       poster="{{ "/assets/images/p2pu-video-poster.png"|prepend:site.baseurl }}" preload="auto">
+		<source src="{{ "/assets/images/ashokaPhilipp.mp4"|prepend:site.baseurl }}" type="video/mp4">
 	</video>
 	{% endcomment %}
 	<nav class="navbar" role="navigation">
@@ -42,7 +42,7 @@
 					<i class="fa fa-bars"></i>
 				</a>
 				<a class="navbar-logo pull-left" href="{{ site.baseurl }}/">
-					<img src="{{ "assets/images/p2pu-logo-2x.png" | prepend: site.baseurl }}"
+					<img src="{{ "/assets/images/p2pu-logo-2x.png" | prepend: site.baseurl }}"
 						alt="P2PU Logo" width="122" />
 				</a>
 				<a class="p2pu-tab" href="#">
@@ -56,7 +56,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					{% for link in site.data.navigation %}
 						<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
-							<a href="{{ link.url|prepend:site.baseurl }}">{{ link.text }}</a>
+							<a href="{{ site.baseurl }}/{{ link.url }}">{{ link.text }}</a>
 						</li>
 					{% endfor %}
 				</ul>
@@ -179,7 +179,7 @@
 
 		<div class="row feature left">
 			<a href="#" class="image col-md-6"> <img
-					src="{{ "assets/images/index/community.jpg"|prepend:site.baseurl }}"
+					src="{{ "/assets/images/index/community.jpg"|prepend:site.baseurl }}"
 					alt="Community support image"> </a>
 
 			<div class="content col-md-6">
@@ -193,7 +193,7 @@
 		</div>
 		<div class="row feature right">
 			<a href="#" class="image col-md-6"> <img
-					src="{{ "assets/images/index/roundtables.jpg"|prepend:site.baseurl }}"
+					src="{{ "/assets/images/index/roundtables.jpg"|prepend:site.baseurl }}"
 					alt="Roundtables image"> </a>
 
 			<div class="content col-md-6">
@@ -208,7 +208,7 @@
 		</div>
 		<div class="row feature left">
 			<a href="#" class="image col-md-6"> <img
-					src="{{ "assets/images/index/reports.jpg"|prepend:site.baseurl }}"
+					src="{{ "/assets/images/index/reports.jpg"|prepend:site.baseurl }}"
 					alt="Reports image"> </a>
 
 			<div class="content">
@@ -222,7 +222,7 @@
 		</div>
 		<div class="row feature right">
 			<a href="#" class="image col-md-6"> <img
-					src="{{ "assets/images/index/talks.jpg"|prepend:site.baseurl }}" alt=""> </a>
+					src="{{ "/assets/images/index/talks.jpg"|prepend:site.baseurl }}" alt=""> </a>
 
 			<div class="content col-md-6">
 				<h3 class="header">Talks, conferences, workshops and consulting</h3>
