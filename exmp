@@ -1,0 +1,7 @@
+<script>epos("dirkcuys","gmail.com")</script></p>
+function epos(mail, domain)
+ {
+  var epos = mail + '@' + domain;
+  document.write('<a href="mailto:' + epos + '">');
+  document.write(epos + '</a>');
+ }

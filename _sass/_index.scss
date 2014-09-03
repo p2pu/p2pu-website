@@ -255,13 +255,13 @@ nav {
 				margin-top: 10px;
 				@media (min-width: $screen-md-min) {
 					margin-top: 21px;
-					font-size: 26px;
+					font-size: 19px;
 				}
 				@media (min-width: $screen-sm-min) {
 					font-size: 1.5em;
 				}
 				@media (min-width: $screen-md-min) {
-					font-size: 26px;
+					font-size: 19px;
 				}
 			}
 
@@ -374,12 +374,14 @@ nav {
 }
 
 .partners {
-	padding: 50px 0;
 	background-color: #F3F4F8;
-	text-align: center;
-	img {
-		margin: 10px;
-		vertical-align: middle;
+	padding: 50px 0;
+	.partners-inner {
+		text-align: center;
+		img {
+			margin: 20px;
+			vertical-align: middle;
+		}
 	}
 }
 

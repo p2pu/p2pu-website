@@ -74,7 +74,16 @@
 					<header class="col-md-12">
 						We build learning communities <br />on the web
 					</header>
-					<p class="col-md-12 subheader">Open tools + Community + Design + Support</p>
+					<p class="col-md-12 subheader">
+						Open tools + Community + Design + Support
+					</p>
+
+					<p class="text-center">
+						<a class="btn btn-warning btn-lg" href="http://community.p2pu.org" target="_blank">
+							I Want To Build Community
+						</a>
+					</p>
+
 				</div>
 			</div>
 			<div class="featured-headline">
@@ -173,7 +182,7 @@
 
 <section>
 	<div class="container">
-		<h3>How we do stuff?</h3>
+		<h3>How do we spread the knowledge?</h3>
 
 		<div class="row feature left">
 			<a href="#" class="image col-md-6"> <img
@@ -181,7 +190,7 @@
 					alt="Community support image"> </a>
 
 			<div class="content col-md-6">
-				<h3 class="header">Community support</h3>
+				<h4 class="header">Community support</h4>
 
 				<p>
 					Our crew of eduthinkers come together in our space, to give each other feedback, develop
@@ -195,7 +204,7 @@
 					alt="Roundtables image"> </a>
 
 			<div class="content col-md-6">
-				<h3 class="header">Social Learning Roundtables</h3>
+				<h4 class="header">Social Learning Roundtables</h4>
 
 				<p>
 					Once a month we come together to discuss important ideas in the future of learning. Some
@@ -210,7 +219,7 @@
 					alt="Reports image"> </a>
 
 			<div class="content">
-				<h3 class="header">Reports and documentation</h3>
+				<h4 class="header">Reports and documentation</h4>
 
 				<p>
 					We produce glossy digital reports on all of our lessions learned, so folks can take our
@@ -223,7 +232,7 @@
 					src="{{ "assets/images/index/talks.jpg"|prepend:site.baseurl }}" alt=""> </a>
 
 			<div class="content col-md-6">
-				<h3 class="header">Talks, conferences, Workshops and Consulting</h3>
+				<h4 class="header">Talks, conferences, Workshops and Consulting</h4>
 
 				<p>
 					We are always down to talk about what we've learned about online learning and how can we
@@ -237,10 +246,13 @@
 
 <section class="partners">
 	<div class="container">
-		{% for partner in site.data.partners %}
-				<img src="{{ '/assets/images/index/partners' | prepend: site.baseurl }}/{{ partner.image }}"
-			         alt="{{ partner.name }} Logo" width="150" />
-		{% endfor %}
+		<h4>Some folks we've worked with</h4>
+		<div class="partners-inner">
+			{% for partner in site.data.partners %}
+					<img src="{{ '/assets/images/index/partners' | prepend: site.baseurl }}/{{ partner.image }}"
+				         alt="{{ partner.name }} Logo" width="150" class="col-md-3" />
+			{% endfor %}
+		</div>
 	</div>
 </section>
 
