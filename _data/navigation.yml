@@ -27,10 +27,3 @@
 
 - text: Connect with us
   url: connect/
-  submenu:
-  - text: Get involved
-    url: /get-involved/
-  - text: Forums
-    url: http://community.p2pu.org
-  - text: Contact Us
-    url: /contact-us/
