@@ -2,46 +2,26 @@
 layout: page
 title: Check this out
 ---
-<div class="container">
+<div class="container push-footer">
 	<div class="col-md-8 first">
-		<h2>Our youtube channel</h2>
 
-		<div id="youmax">
+	</div>
+	<div class="col-md-3 col-md-offset-1">
 
+		<h2>Quick Updates</h2>
+
+		<a class="twitter-timeline" href="https://twitter.com/p2pu"
+		   data-widget-id="503992131787030528" data-link-color="#05c6b4"
+		   data-chrome="noheader nofooter noborders transparent noscrollbar"
+		   data-tweet-limit="6"
+		   data-aria-polite="assertive"
+		   lang="EN">Tweets by @p2pu </a>
+		<div>
+			<a class="btn btn-info"
+				href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fp2pu.org%2Fpublications%2F&region=follow_link&screen_name=p2pu&tw_p=followbutton&variant=2.0">
+					<i class="fa fa-twitter"></i> Follow P2PU
+				</a>
 		</div>
-		<script>
-			function appendResults(text) {
-				var results = document.getElementById('youmax');
-				results.appendChild(document.createElement('P'));
-				results.appendChild(document.createTextNode(text));
-			}
-
-			function list() {
-        var request = gapi.client.youtube.playlistItems.list({
-          part: 'snippet',
-          playlistId: 'PLtywLmgP0F55FHsO3n93YLw_sGLzp9-5X'
-        });
-
-        request.execute(function(response) {
-
-          response.items.forEach(function(item) {
-            console.log(
-              item.snippet.title,
-              item.snippet.resourceId.videoId,
-              item.snippet.thumbnails.default.url,
-		          item.snippet.publishedAt,
-		          item.snippet
-            );
-          });
-        });
-      }
-
-			function load() {
-				gapi.client.setApiKey('AIzaSyCZ7J2JSVFVSY2rpp6cKhJkgxehP1nudHo');
-				gapi.client.load('youtube', 'v3', list);
-			}
-		</script>
-		<script src="https://apis.google.com/js/client.js?onload=load"></script>
 	</div>
 
 </div>
