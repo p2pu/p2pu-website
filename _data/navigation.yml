@@ -1,25 +1,25 @@
 - text: Our work
-  url: /work
+  url: /our-work
 
 - text: About
   url: /about
   submenu:
   - text: Philosophy
-    url: /philosophy
+    url: /about/philosophy
   - text: People
-    url: /people
+    url: /about/people
   - text: Credits and thanks
-    url: /credits
+    url: /about/credits
 
 - text: Publications
-  url: /publications
+  url: /publications/roundtables
   submenu:
   - text: P2PU Roundtables
-    url: /roundtables
+    url: /publications/roundtables
   - text: Presentations and Talks
-    url: /publications
+    url: /publications/talks
   - text: reports
-    url: http://reports.p2pu.org/
+    url: /publications/reports
   - text: blog
     url: http://info.p2pu.org/
   - text: data
