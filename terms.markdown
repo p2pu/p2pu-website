@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: naked-page
 title: Terms of Use
 permalink: /terms/
 ---
