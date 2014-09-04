@@ -1,23 +1,23 @@
 - text: Our work
-  url: work/
+  url: /work
 
 - text: About
-  url: about/
+  url: /about
   submenu:
   - text: Philosophy
-    url: philosophy
+    url: /philosophy
   - text: People
-    url: people
+    url: /people
   - text: Credits and thanks
-    url: credits
+    url: /credits
 
 - text: Publications
-  url: publications
+  url: /publications
   submenu:
   - text: P2PU Roundtables
-    url: roundtables
+    url: /roundtables
   - text: Presentations and Talks
-    url: publications
+    url: /publications
   - text: reports
     url: http://reports.p2pu.org/
   - text: blog
@@ -29,8 +29,8 @@
   url: connect/
   submenu:
   - text: Get involved
-    url: get-involved/
+    url: /get-involved/
   - text: Forums
     url: http://community.p2pu.org
   - text: Contact Us
-    url: contact-us/
+    url: /contact-us/
