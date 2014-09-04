@@ -59,22 +59,23 @@
 .strech-banner {
 	height: 350px;
 	width: 100%;
-	background-position: 0 70%;
 	background-repeat: no-repeat;
 	margin-top: 50px;
 	background-size: cover;
 
 	&.about {
 		background-image: url(../images/about/about-banner.jpg);
+		background-position: 0 100%;
 	}
 
 	&.philosophy {
 		background-image: url(../images/about/philosophy-banner.jpg);
+		background-position: 0 22%;
 	}
 
 	&.people {
 		background-image: url(../images/about/people-banner.jpg);
-		background-position: 0 25%;
+		background-position: 0 38%;
 	}
 
 	&.credits {
