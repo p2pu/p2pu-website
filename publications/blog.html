@@ -22,15 +22,20 @@ extra_js_call: Blog
 
 <script type="text/mustache" id="app-template">
 	{% raw %}
-		 <div class="row">
-	    {{#each reports}}
-	    	<h4>{{ title }}</h4>
-				<p>{{ contentSnippet }}</p>
+    {{#each reports}}
+    <div class="row">
+			<div class="col-md-8">
+				<h4>{{ title }}</h4>
+				<p>{{content}}</p>
 				<a href="{{ link }}" target="_blank">More</a>
 				<p>{{ categories }}</p>
+			</div>
+			<div class="col-md-4 pull-right">
+				<img src={{image}} class="img-thumbnail blog-img">
+			</div>
 			<hr/>
-			{{/each}}
-    </div>
+		</div>
+		{{/each}}
 	{% endraw %}
 </script>
 
