@@ -1,4 +1,4 @@
-guard 'jekyll-plus', :serve => true, :config => ['_config.yml', '_config-dev.yml'] do
+guard 'jekyll-plus', :serve => true do
   watch /.*/
   ignore /^_site/
 end
