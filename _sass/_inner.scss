@@ -56,10 +56,6 @@ body {
 	}
 }
 
-.to-top {
-	margin: 50px 0;
-}
-
 .talk {
 	color: $brand-primary;
 	&:hover {
@@ -69,7 +65,21 @@ body {
 	.talk-image {
 		img {
 			border-radius: 10px;
+			max-width: 100%;
 		}
+	}
+}
+
+#data{
+	margin: 2em 0;
+}
+
+.video-wrap{
+	iframe{
+		width: 100%;
+	}
+	.video-title{
+		margin-top: 0;
 	}
 }
 

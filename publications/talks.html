@@ -3,14 +3,26 @@ layout: page
 title: What we have to say
 ---
 <div class="container">
-	<div class="home">
+	<div class="home row">
 
-		<div class="col-md-8">
+		<div class="col-md-12">
 			<h2>Talks and Presentations</h2>
+
+			<p>
+				What good is it if you have good product, when no one knows about it,
+				right? We like to share and like to be open, so we try to talk about our work as offten
+				as possible and spread everything we are
+				learning about building learning communities online.
+
+				Bellow are some presentations about our work in some form. If you have some questions
+				about what we talked about, please ask us.
+			</p>
+
+			<hr />
 			{% for talk in site.data.presentations %}
-				{% assign multi_three=forloop.index0|modulo:3 %}
+				{% assign multi_three=forloop.index0|modulo:4 %}
 				{% if multi_three == 0 %}<div class="row">{% endif %}
-				<div class="col-md-4">
+				<div class="col-md-3">
 
 					<a class="talk" href="{{ talk.url }}" target="_blank">
 						<div class="talk-image text-center">
@@ -29,26 +41,8 @@ title: What we have to say
 						</div>
 					</a>
 				</div>
-				{% if multi_three == 2 or forloop.last %}</div>{% endif %}
+				{% if multi_three == 3 or forloop.last %}</div>{% endif %}
 			{% endfor %}
 	</div>
-	<div class="col-md-3 col-md-offset-1">
-
-		<h2>Quick Updates</h2>
-
-		<a class="twitter-timeline" href="https://twitter.com/p2pu"
-		   data-widget-id="503992131787030528" data-link-color="#05c6b4"
-		   data-chrome="noheader nofooter noborders transparent noscrollbar"
-		   data-tweet-limit="6"
-		   data-aria-polite="assertive"
-		   lang="EN">Tweets by @p2pu </a>
-		<div>
-			<a class="btn btn-info"
-				href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fp2pu.org%2Fpublications%2F&region=follow_link&screen_name=p2pu&tw_p=followbutton&variant=2.0">
-					<i class="fa fa-twitter"></i> Follow P2PU
-				</a>
-		</div>
-	</div>
-
 </div>
 </div>

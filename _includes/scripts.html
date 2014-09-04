@@ -14,6 +14,21 @@
 	P2PU.Splash.init();
 </script>
 
+{% for js in page.extra_js %}
+	{% if js contains 'http' %}
+		<script src="{{ js }}"></script>
+	{% else %}
+    <script src="{{site.baseurl}}/assets/js/{{ js }}"></script>
+	{% endif %}
+{% endfor %}
+
+{% if page.extra_js_call %}
+	<script>
+		P2PU.{{ page.extra_js_call }}.init();
+	</script>
+{% endif %}
+
+
 <script>
 	!function (d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
