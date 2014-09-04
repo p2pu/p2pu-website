@@ -194,7 +194,7 @@ nav {
 			margin-top: 1px !important;
 			> li {
 				display: block;
-				&:hover{
+				&:hover {
 					border-color: transparent;
 				}
 				> a {
@@ -275,6 +275,15 @@ nav {
 		}
 
 		.people-link {
+			font-weight: bold;
+			padding-right: 1.5em;
+			position: relative;
+			&:before {
+				font-family: FontAwesome;
+				position: absolute;
+				right: 0;
+				top: 10%;
+			}
 			@media (min-width: $screen-xs-min) {
 				//@extend .btn;
 			}
@@ -283,6 +292,7 @@ nav {
 
 	.feature {
 		position: relative;
+		margin: 0;
 
 		.content {
 			display: inline-block;
