@@ -9,31 +9,35 @@ extra_js_call: Blog
 
 
 <div class="container push-footer">
-	<p>
-		We are saying all sorts of stuff
-	</p>
 	<div id="data">
 		<h1 class="text-center"><i class="fa fa-cog fa-2x fa-spin"></i></h1>
 	</div>
-	<a class="btn btn-success" target="_blank" href="">
-		Show Me the Whole Blog
-	</a>
+	<div class="text-center">
+		<a class="btn btn-success" target="_blank" href="">
+			Show Me Everything
+		</a>
+	</div>
 </div>
 
 <script type="text/mustache" id="app-template">
 	{% raw %}
     {{#each reports}}
     <div class="row">
-			<div class="col-md-8">
+			<div class="col-md-8 col-md-offset-2">
 				<h4>{{ title }}</h4>
-				<p>{{content}}</p>
-				<a href="{{ link }}" target="_blank">More</a>
-				<p>{{ categories }}</p>
+				<small><i>by <strong>{{ author }}</strong> on <strong>{{ publishedDate }}</strong>in categories: <strong>{{ categories }}</strong></i></small>
+				<p>
+				<div class="col-md-4">
+					<img src={{image}} class="img-thumbnail blog-img">
+				</div>
+				{{content}}.
+				</p>
+				<a href="{{ link }}" target="_blank">
+					<strong>Continue Reading</strong> &nbsp;<i class="fa fa-long-arrow-right"></i>
+				</a>
+				<hr/>
 			</div>
-			<div class="col-md-4 pull-right">
-				<img src={{image}} class="img-thumbnail blog-img">
-			</div>
-			<hr/>
+
 		</div>
 		{{/each}}
 	{% endraw %}
