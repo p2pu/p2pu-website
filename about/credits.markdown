@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: naked-page
 title: Credits and Thanks
 ---
 We would'nt be anywhere without people like this:
