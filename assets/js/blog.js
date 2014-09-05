@@ -15,6 +15,7 @@ var P2PU = window.P2PU || {};
 			$.ajax({
 				url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent("http://info.p2pu.org/feed/"),
 				dataType: 'json',
+				cache: true,
 				success: function (data) {
 					var image,
 						re_image = /<img(.*?)>/,

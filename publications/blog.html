@@ -24,7 +24,7 @@ extra_js_call: Blog
     {{#each reports}}
     <div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<h4>{{ title }}</h4>
+				<a href="{{ link }}" target="_blank"><h4>{{ title }}</h4></a>
 				<small><i>by <strong>{{ author }}</strong> on <strong>{{ publishedDate }}</strong>in categories: <strong>{{ categories }}</strong></i></small>
 				<p>
 				<div class="col-md-4">
