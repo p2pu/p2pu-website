@@ -4,8 +4,6 @@ title: P2PU Roundtables
 extra_js:
 - vendor/can.js
 - roundtables.js
-- https://apis.google.com/js/client.js?onload=load
-- https://apis.google.com/js/platform.js
 extra_js_call: Roundtables
 ---
 <div class="container">
@@ -14,19 +12,21 @@ extra_js_call: Roundtables
 		Every once in a while we like to gather folks from other corners of the world who are thinking
 		about the same things we are and organize one or even a series of roundtables, where we discuss
 		all the stuff we deem important.
+
 	</p>
 
 	<div id="data" class="row">
 		<h1 class="text-center"><i class="fa fa-cog fa-2x fa-spin"></i></h1>
+
 	</div>
+
 
 </div>
 
 <script type="text/mustache" id="app-template">
-
 	{% raw %}
 	    {{#each videos}}
-				<div class="row">
+				<div class="row" id="{{ snippet.position }}">
 			    <div class="col-md-6 video-wrap">
 						<iframe height="315"
 						src="//www.youtube.com/embed/{{ snippet.resourceId.videoId }}?autohide=1&theme=light&color=white&iv_load_policy=3"
@@ -39,12 +39,33 @@ extra_js_call: Roundtables
 						<p>
 							{{ snippet.description }}
 						</p>
-						<div class="g-ytsubscribe" data-channelid="UCJH3nTAgEAGljjTB5B8PjFw" data-layout="default" data-count="hidden"></div>
+	{% endraw %}
+
+						<div class="social-footer pull-right">
+							<a href="https://twitter.com/intent/tweet?url={{ page.url | prepend: site.baseurl | prepend: site.url }}&amp;original_referer={{ page.url| prepend: site.baseurl| prepend: site.url }}&amp;via=p2pu&amp;text={% raw %}{{ snippet.title }}{% endraw %}&amp;lang=en"
+								class="twitter-share-button btn btn-default tw"
+								data-lang="en">
+								<i class="fa fa-twitter-square"></i> Share
+							</a>
+							<a class="fb-share-button btn btn-default fb" target="_blank"
+								 href="https://www.facebook.com/sharer/sharer.php?display=popup&amp;u={{ page.url | prepend: site.baseurl | prepend: site.url }}">
+								<i class="fa fa-facebook-square"></i> Share
+							</a>
+							<iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no"
+				        style="position: static; top: 0px; width: 87px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;"
+				        tabindex="0" vspace="0" width="100%" id="I0_1409950129724" name="I0_1409950129724"
+				        src="https://www.youtube.com/subscribe_embed?usegapi=1&amp;channelid=UCJH3nTAgEAGljjTB5B8PjFw&amp;layout=default&amp;count=hidden&amp;origin=http%3A%2F%2Fp2pu.org/publications/roundtables%3A4000&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.vzs3XJaeb68.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAItRSTNUxGAC94B-2FEWbhqLsmTGRVKNpg#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1409950129724&amp;parent=http%3A%2F%2Flocalhost%3A4000&amp;pfname=&amp;rpctoken=64545358"
+				        data-gapiattached="true">
+				      </iframe>
+					    <a class="fb-share-button btn btn-default" target="_blank"
+								 href="http://community.p2pu.org/category/learning">
+								<i class="fa fa-comments"></i> Talk With Us
+							</a>
+						</div>
+	{% raw %}
 					</div>
 				</div>
 				<hr />
 			{{/each}}
-
 	{% endraw %}
-
 </script>

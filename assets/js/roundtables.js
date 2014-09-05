@@ -7,6 +7,7 @@ var P2PU = window.P2PU || {};
 
 	'use strict';
 
+
 	function list() {
 		var request = gapi.client.youtube.playlistItems.list({
 			part: 'snippet',
