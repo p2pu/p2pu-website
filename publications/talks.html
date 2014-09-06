@@ -2,11 +2,9 @@
 layout: page
 title: Presentations and Talks
 ---
-<div class="container">
-	<div class="home row">
-
-		<div class="col-md-12">
-
+<div class="container push-footer">
+	<div class="home">
+		<div class="row">
 			<p>
 				What good is it if you have good product, when no one knows about it,
 				right? We like to share and like to be open, so we try to talk about our work as offten
@@ -16,32 +14,26 @@ title: Presentations and Talks
 				Bellow are some presentations about our work in some form. If you have some questions
 				about what we talked about, please ask us.
 			</p>
-
-			<hr />
-			{% for talk in site.data.presentations %}
-				{% assign multi_three=forloop.index0|modulo:4 %}
-				{% if multi_three == 0 %}<div class="row">{% endif %}
-				<div class="col-md-3">
-
-					<a class="talk" href="{{ talk.url }}" target="_blank">
-						<div class="talk-image text-center">
-							<img class="img-rounded" src="{{ site.baseurl }}/assets/images/talks/{{ talk.image }}"
-							     alt="Presentation cover image" />
-						</div>
-						<div class="talk-overlay text-center">
-							<div class="talk-presenter">
-								<h4>
-									{% for presentor in talk.presentors %}
-										{{ presentor }}
-									{% endfor %}
-								</h4>
-							</div>
-							<p>{{ talk.event }}<br /><small>{{ talk.date| date: "%B %Y" }}</small></p>
-						</div>
-					</a>
+		</div>
+		<hr />
+		{% for talk in site.data.presentations %}
+			{% assign multi_three=forloop.index0|modulo:4 %}
+			{% if multi_three == 0 %}<div class="row">{% endif %}
+			<a class="col-md-3 talk fa-play-circle" href="{{ talk.url }}" target="_blank"
+			   style="background-image:url('{{ site.baseurl }}/assets/images/talks/{{ talk.image }}') ">
+				<div class="talk-overlay">
+					<div class="talk-presenter">
+						<h5>
+							{% for presentor in talk.presentors %}
+								{{ presentor }}
+							{% endfor %}
+						</h5>
+					</div>
+					<h4 class="event">{{ talk.event }}<br /></h4>
+					<small>{{ talk.date| date: "%B %Y" }}</small>
 				</div>
-				{% if multi_three == 3 or forloop.last %}</div>{% endif %}
-			{% endfor %}
+			</a>
+			{% if multi_three == 3 or forloop.last %}</div>{% endif %}
+		{% endfor %}
 	</div>
-</div>
 </div>

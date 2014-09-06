@@ -18,13 +18,14 @@ var P2PU = window.P2PU || {};
 				success: function (data) {
 					if (data.responseData.feed && data.responseData.feed.entries) {
 						$("#data").html(can.view("app-template", {reports: new can.List(data.responseData.feed.entries.reverse())}));
-						/*$.each(data.responseData.feed.entries, function (i, e) {
+						$.each(data.responseData.feed.entries, function (i, e) {
 							console.log(e);
 							console.log("------------------------");
 							console.log("title      : " + e.title);
-							console.log("thumbnail  : " + e.content);
+							console.log("content    : " + e.content);
+							console.log("enclosure  : " + e.enclosure);
 							console.log("url        : " + e.link);
-						});*/
+						});
 					}
 				},
 				error: function (){
