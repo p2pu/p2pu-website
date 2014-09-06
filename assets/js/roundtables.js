@@ -15,7 +15,7 @@ var P2PU = window.P2PU || {};
 		});
 
 		request.execute(function (response) {
-			console.log(response.items);
+
 			var videos = new can.List(response.items);
 
 			var frag = can.view("app-template", {videos: videos});
