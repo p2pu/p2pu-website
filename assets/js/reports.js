@@ -17,15 +17,23 @@ var P2PU = window.P2PU || {};
 				cache: true,
 				success: function (data) {
 					if (data.responseData.feed && data.responseData.feed.entries) {
-						$("#data").html(can.view("app-template", {reports: new can.List(data.responseData.feed.entries.reverse())}));
+
 						$.each(data.responseData.feed.entries, function (i, e) {
+							if(i % 2){
+								e.sideattr = 'left';
+							}else{
+								e.sideattr = 'right';
+							}
+
 							console.log(e);
 							console.log("------------------------");
 							console.log("title      : " + e.title);
 							console.log("content    : " + e.content);
-							console.log("enclosure  : " + e.enclosure);
+							console.log("madia      : " + e.mediaGroups[0].contents[0].url);
 							console.log("url        : " + e.link);
+							console.log("sideattr   : " + e.sideattr);
 						});
+						$("#data").html(can.view("app-template", {reports: new can.List(data.responseData.feed.entries.reverse())}));
 					}
 				},
 				error: function () {
