@@ -28,7 +28,7 @@ var P2PU = window.P2PU || {};
 						});
 					}
 				},
-				error: function (){
+				error: function () {
 					$("#data").html('<h1>Oh dear, something went wrong, could you try again please? Or tell us about this <a href="http://community.p2pu.org/category/tech/support">here</a></h1>');
 				}
 			});

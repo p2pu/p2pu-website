@@ -21,16 +21,16 @@ var P2PU = window.P2PU || {};
 			var frag = can.view("app-template", {videos: videos});
 
 			$("#data").html(frag);
-
+			/*
 			response.items.forEach(function (item) {
-				/*console.log(
+				console.log(
 					item.snippet.title,
 					item.snippet.resourceId.videoId,
 					item.snippet.thumbnails.default.url,
 					item.snippet.publishedAt,
 					item.snippet
-				);*/
-			});
+				);
+			});*/
 		});
 	}
 
