@@ -6,7 +6,7 @@
 			        data-target="#nav-links-collapse">
 				<i class="fa fa-bars"></i>
 			</a>
-			<a class="navbar-logo" href="{{ site.baseurl }}/">
+			<a class="navbar-logo" href="{{ site.baseurl }}/{{language}}/">
 				<img src="{{ site.baseurl }}/assets/images/p2pu-logo.png" alt="P2PU Logo" />
 			</a>
 			<a class="p2pu-tab" href="#">
@@ -18,7 +18,8 @@
 		<div class="collapse navbar-collapse" id="nav-links-collapse">
 
 			<ul class="nav navbar-nav navbar-right">
-				{% for link in site.data.navigation %}
+        {% assign navigation=site.data.navigation[language] %}
+				{% for link in navigation %}
 					{% assign active = nil %}
 
 					{% for sublink in link.submenu %}

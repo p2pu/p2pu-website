@@ -1,5 +1,6 @@
 ---
 ---
+{% include lang.html %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -48,9 +49,9 @@
 			<div class="collapse navbar-collapse" id="nav-links-collapse">
 
 				<ul class="nav navbar-nav navbar-right">
-					{% for link in site.data.navigation %}
+					{% for link in site.data.navigation.en %}
 						<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
-							<a href="{{ link.url|prepend:site.baseurl }}">
+							<a href="{{site.baseurl}}{{ link.url }}">
 								{{ link.text }}
 							</a>
 							{% if link.submenu %}
@@ -280,7 +281,7 @@
 
 </section>
 
-{% include footer.html %}
+{% include footer-en.html %}
 
 {% include scripts.html %}
 

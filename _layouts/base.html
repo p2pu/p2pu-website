@@ -1,9 +1,9 @@
 <!DOCTYPE html>
+{% include lang.html %}
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-
+<!--[if gt IE 8]><!--> <html lang="{{language}}" class="no-js"> <!--<![endif]-->
   {% include head.html %}
 
     <body>
@@ -16,7 +16,8 @@
       </div>
     </div>
 
-    {% include footer.html %}
+    {% assign footer = 'footer-' | append:language | append:'.html' }} %}
+    {% include {{footer}} %}
 
     {% include donate-modal.html %}
 
