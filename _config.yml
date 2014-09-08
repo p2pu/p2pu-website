@@ -5,6 +5,8 @@ description: "A University for the Web. Built by an open community. LEARNING BY 
 EVERYONE. ABOUT ALMOST ANYTHING. COMPLETELY FREE."
 baseurl: "/p2pu-website"
 url: "http://p2pu.org"
+languages: ['en']
+default_language: 'en'
 
 # Build settings
 markdown: kramdown
