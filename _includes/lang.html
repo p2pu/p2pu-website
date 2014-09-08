@@ -1,0 +1,6 @@
+{% assign language = page.url | replace_first:'/','' | split:"/" | first %}
+{% if site.languages contains language %}
+{% else %}
+  {% assign language=site.default_language %}
+{% endif %}
+
