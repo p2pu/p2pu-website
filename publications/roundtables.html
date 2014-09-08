@@ -26,6 +26,7 @@ youtube_call: true
 
 <script type="text/mustache" id="app-template">
 	{% raw %}
+			<div class="g-ytsubscribe" data-channel="GoogleDevelopers"></div>
 	    {{#each videos}}
 				<div class="row" id="{{ snippet.position }}">
 			    <div class="col-md-6 video-wrap">
@@ -52,12 +53,7 @@ youtube_call: true
 								 href="https://www.facebook.com/sharer/sharer.php?display=popup&amp;u={{ page.url | prepend: site.baseurl | prepend: site.url }}">
 								<i class="fa fa-facebook-square"></i> Share
 							</a>
-							<iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no"
-				        style="position: static; top: 0px; width: 87px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;"
-				        tabindex="0" vspace="0" width="100%" id="I0_1409950129724" name="I0_1409950129724"
-				        src="https://www.youtube.com/subscribe_embed?usegapi=1&amp;channelid=UCJH3nTAgEAGljjTB5B8PjFw&amp;layout=default&amp;count=hidden&amp;origin=http%3A%2F%2Fp2pu.org/publications/roundtables%3A4000&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.vzs3XJaeb68.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAItRSTNUxGAC94B-2FEWbhqLsmTGRVKNpg#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1409950129724&amp;parent=http%3A%2F%2Flocalhost%3A4000&amp;pfname=&amp;rpctoken=64545358"
-				        data-gapiattached="true">
-				      </iframe>
+							<div class="g-ytsubscribe" data-channel="GoogleDevelopers"></div>
 					    <a class="fb-share-button btn btn-default" target="_blank"
 								 href="http://community.p2pu.org/category/learning">
 								<i class="fa fa-comments"></i> Talk With Us
