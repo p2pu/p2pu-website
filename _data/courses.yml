@@ -1,0 +1,15 @@
+- name: Writing For Change
+  url: http://writing4change.p2pu.org/
+  image: w4c.png
+
+- name: Teach The Web
+  url: https://training.webmakerprototypes.org/en/
+  image: ttw.png
+
+- name: Play With Your Music
+  url: http://www.playwithyourmusic.org/
+  image: playwithyourmusic.png
+
+- name: Gentle Introduction To Python
+  url: http://mechanicalmooc.org/
+  image: mechmooc.png

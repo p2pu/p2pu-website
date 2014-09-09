@@ -290,6 +290,86 @@ nav {
 		}
 	}
 
+	.courses {
+		padding-bottom: 0;
+
+		.featured-courses {
+			padding: 2em 0;
+		}
+
+		.course-thumb {
+			height: 200px;
+			overflow: hidden;
+			position: relative;
+			display: block;
+			margin: 2em 0;
+
+			img {
+				width: 100%;
+			}
+
+			&:hover {
+				img {
+					@include grayscale_element(100%);
+				}
+			}
+
+			.course-title {
+				position: absolute;
+				bottom: 0;
+				width: 90%;
+				background: $gray-lighter;
+				padding: 20px 10px;
+				text-align: center;
+				color: $brand-primary;
+				@include transition(background-color 0.3s linear);
+			}
+
+			&:hover {
+				.course-title {
+					color: $white;
+					background-color: $brand-primary;
+				}
+			}
+
+			@media (min-width: $screen-xs-min) {
+				background-color: $gray-lighter;
+				padding-top: 10px;
+			}
+			@media (min-width: 480px) {
+				.course-title {
+					width: 95%;
+				}
+			}
+			@media (min-width: $screen-sm-min) {
+				background-color: $white;
+				text-align: center;
+				img {
+					width: 50%;
+				}
+				.course-title {
+					width: 50%;
+					left: 25%;
+				}
+			}
+			@media (min-width: $screen-md) {
+				img {
+					width: 100%;
+				}
+				.course-title {
+					width: 89.5%;
+					left: initial;
+				}
+			}
+		}
+
+		.courses-inner {
+			padding: 3em;
+			@include box-shadow(0px 0px 10px 0px rgba(81, 86, 101, 0.2));
+		}
+
+	}
+
 }
 
 .divider-center {

@@ -50,25 +50,18 @@
 				<ul class="nav navbar-nav navbar-right">
 					{% for link in site.data.navigation.en %}
 						<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
-							{% if link.url contains 'http' or sublink.url contains '#' %}
-								<a href="{{ link.url }}"
-								   {% if link.url contains 'http' %}target="_blank"{% endif %}>
-									{{ link.text }}
-								</a>
-							{% else %}
-								<a href="{{site.baseurl}}{{ link.url }}">
-									{{ link.text }}
-								</a>
-							{% endif %}
+							<a href="{{site.baseurl}}{{ link.url }}">
+								{{ link.text }}
+							</a>
 							{% if link.submenu %}
 								<span class="fa fa-caret-down dropdown-toggle visible-xs-block visible-sm-block"
 								      data-toggle="dropdown"></span>
 								<ul class="dropdown-menu nav navbar-nav subnav" role="menu">
 									{% for sublink in link.submenu %}
 										<li {% if page.url contains sublink.url %}class="active"{% endif %}>
-											{% if sublink.url contains 'http' or sublink.url contains '#' %}
+											{% if sublink.url contains 'http://' or sublink.url contains '#' %}
 												<a href="{{ sublink.url }}"
-												   {% if sublink.url contains 'http' %}target="_blank"{% endif %}>
+												   {% if sublink.url contains 'http://' %}target="_blank"{% endif %}>
 													{{ sublink.text }}
 												</a>
 											{% else %}
@@ -197,7 +190,7 @@
 				a new kind of university online. Sound good? Then we'd love you to join us. 
 			</p>
 
-				<a class="people-link fa-long-arrow-right" href="{{ site.baseurl }}/about/people">
+				<a class="people-link fa-long-arrow-right" href="{{ site.baseurl }}/en/about/people/">
 					Meet the community
 				</a>
 			</div>
@@ -270,6 +263,33 @@
 		</div>
 	</section>
 
+	<section class="courses">
+		<div class="container courses-inner">
+			<h3 class="header">Just here to learn something?</h3>
+			<p>
+				We offer a great variety of community built courses along with some that were produced
+				in collaboration with our partners
+			</p>
+			<div class="row featured-courses">
+				{% for course in site.data.courses %}
+					<a class="course-thumb col-md-3" href="{{ course.url }}" target="_blank">
+						<img src="{{ site.baseurl }}/assets/images/index/courses/{{ course.image }}"
+						     alt="{{ course.name }} Cover Image" />
+						<div class="course-title">
+							{{ course.name }}
+						</div>
+					</a>
+				{% endfor %}
+			</div>
+
+			<div class="pull-right">
+				<a class="btn btn-success" href="https://p2pu.org/en/groups/list/community/" target="_blank">
+					Show Me All Courses <i class="fa fa-angle-double-right"></i>
+				</a>
+			</div>
+		</div>
+	</section>
+
 	<section class="partners">
 		<div class="container">
 			<h4>Some people we've worked with</h4>
@@ -284,6 +304,8 @@
 			</div>
 		</div>
 	</section>
+
+
 
 </section>
 
