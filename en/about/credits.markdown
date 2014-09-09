@@ -1,8 +1,8 @@
 ---
-layout: naked-page
+layout: page
 title: Credits and Thanks
 ---
-
+{% capture credits %}
 Support and Funding
 
 P2PU is made possible by a global network of exceptional people and organizations who help or have helped us further our mission of opening the web up to the most effective kind of learning – peer to peer learning.
@@ -13,7 +13,7 @@ Our gratitude goes to:
 * [The Shuttleworth Foundation ](http://www.shuttleworthfoundation.org)
 * [MacArthur Foundation](http://www.macfound.org/)
 * [Creative Commons](http://creativecommons.org)
-* * [University of California Irvine](http://www.uci.edu)
+* [University of California Irvine](http://www.uci.edu)
 * [Aspiriation Tech](http://www.aspirationtech.org)
 * [iCommons](http://icommons.org/)
 * The many friends and supporters who have hosted our workshops around the world, including [Open University Catalunya](http://www.uoc.edu/portal/english/) in Barcelona, [Palomar 5](http://palomar5.org)in Berlin, The Loft Boys’ Club House in NYC, and the [Carnegie Foundation for the Advancement of Teaching for hosting assessment workshop](http://www.carnegiefoundation.org/).
@@ -30,5 +30,9 @@ P2PU is also lucky to have had a group of wise and wonderful advisors who have o
 * David Wiley, Associate Professor of Instructional Psychology and Technology at [Brigham Young University](http://byu.edu/), Chief Openness Officer at the [Open High School Utah](http://openhighschool.org/), [opencontent.org] ([personal home page](http://davidwiley.org/))
 
 ... and to all the [people of P2PU](https://p2pu.org/en/#people) who have worked hard to help spread high quality, zero cost, learning opportunities for all on the web. Thank you!!
+{% endcapture %}
 
+<div class="container">
+{{ credits | markdownify }}
+</div>
 <figure class="strech-banner credits"></figure>
