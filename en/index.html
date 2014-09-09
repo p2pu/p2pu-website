@@ -26,22 +26,17 @@
 <body>
 
 <section class="splash">
-	<div class="background"></div>	
+	<div class="background"></div>
 	<nav class="navbar" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<a class="navbar-toggle" data-toggle="collapse"
-				   data-target="#nav-links-collapse">
-					<i class="fa fa-bars"></i>
-				</a>
-				<a class="navbar-logo pull-left" href="{{ site.baseurl }}">
-					<img src="{{ "/assets/images/p2pu-logo-2x.png" | prepend: site.baseurl }}"
-						alt="P2PU Logo" width="122" />
-				</a>
-				<a class="p2pu-tab" href="#">
-					<i class="fa fa-chevron-down p2pu-tab-icon"></i>
-				</a>
+				   data-target="#nav-links-collapse"> <i class="fa fa-bars"></i> </a> <a
+					class="navbar-logo pull-left" href="{{ site.baseurl }}"> <img
+					src="{{ "/assets/images/p2pu-logo-2x.png" | prepend: site.baseurl }}"
+					alt="P2PU Logo" width="122" /> </a> <a class="p2pu-tab" href="#"> <i
+					class="fa fa-chevron-down p2pu-tab-icon"></i> </a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,7 +45,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					{% for link in site.data.navigation.en %}
 						<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
-							<a href="{{site.baseurl}}{{ link.url }}">
+							<a href="{{ site.baseurl }}{{ link.url }}">
 								{{ link.text }}
 							</a>
 							{% if link.submenu %}
@@ -167,8 +162,7 @@
 					</li>
 					<li><i class="fa-li fa fa-check-square"></i>
 						<h4>Comfort</h4>
-						When you tinker, play and feel comfortable, you spend more time on a
-						learning project.
+						When you tinker, play and feel comfortable, you spend more time on a learning project.
 					</li>
 					<li><i class="fa-li fa fa-check-square"></i>
 						<h4>Different learning paths</h4>
@@ -184,22 +178,22 @@
 				<h3>Who are we?</h3>
 				<h4>A passionate & powerful team of mostly volunteers.</h4>
 
-			<p>
-				P2PU would be nothing without our inspiring community, who are the core of our open activities.
-				This community is made up of people from all over the world, who are working together to build 
-				a new kind of university online. Sound good? Then we'd love you to join us. 
-			</p>
+				<p>
+					P2PU would be nothing without our inspiring community, who are the core of our open
+					activities. This community is made up of people from all over the world, who are working
+					together to build a new kind of university online. Sound good? Then we'd love you to join
+					us.
+				</p>
 
-				<a class="people-link fa-long-arrow-right" href="{{ site.baseurl }}/en/about/people/">
-					Meet the community
-				</a>
+				<a class="people-link fa-long-arrow-right" href="{{ site.baseurl }}/en/about/people/"> Meet
+					the community </a>
 			</div>
 		</div>
 	</section>
 
 	<section>
 		<div class="container">
-			<h3>How do we do spread the knowledge?</h3>
+			<h3>How we work?</h3>
 
 			<div class="row feature left">
 				<a href="http://community.p2pu.org/t/please-introduce-yourself/28/70"
@@ -208,73 +202,104 @@
 						alt="Community support image"> </a>
 
 				<div class="content col-md-6">
-					<h3 class="header">Community support</h3>
+					<h3 class="header">We are a community</h3>
 
 					<p>
-						Our community of eduthinkers come together in our space, to give each other feedback,
-						develop courses, and recommend tools. Pop over and say hello -- we're a friendly crew.
+						We're a group of learners, coders, thinkers, practitioners, educators and organizers. We
+						come together on our Discourse community to share resources, recommendations and support
+						each other to build learning communities.
 					</p>
 				</div>
 			</div>
 			<div class="row feature right">
-			<a href="#" class="image col-md-6 fa-bullhorn"> <img
-					src="{{ "/assets/images/index/roundtables.jpg"|prepend:site.baseurl }}"
-					alt="Roundtables image"> </a>
+				<a href="#courses"
+				   class="image col-md-6 fa-beer" target="_blank"> <img
+						src="{{ "/assets/images/index/community-online.png"|prepend:site.baseurl }}"
+						alt="Community support image"> </a>
 
 				<div class="content col-md-6">
-					<h3 class="header">Social Learning Roundtables</h3>
+					<h3 class="header">We build learning communities online</h3>
 
 					<p>
-						Once a month we come together to discuss important ideas in the future of learning.
-						Conversations have included collaboration with folks from the Khan Academy, DIY.org,
-						Mozilla, EdX and Hack Education.
+						We craft great online learning experiences using the best tools for the job.
 					</p>
 				</div>
 			</div>
 			<div class="row feature left">
-			<a href="#" class="image col-md-6 fa-bar-chart-o"> <img
-					src="{{ "/assets/images/index/reports.jpg"|prepend:site.baseurl }}"
-					alt="Reports image">
-			</a>
+				<a href="{{ site.baseurl }}/en/publications/reports/" class="image col-md-6
+				fa-bar-chart-o"> <img
+						src="{{ "/assets/images/index/reports.jpg"|prepend:site.baseurl }}"
+						alt="Reports image"> </a>
 
-			<div class="content">
-				<h3 class="header">Reports and documentation</h3>
+				<div class="content">
+					<h3 class="header">We make how-to's and toolkits </h3>
 
-				<p>
-					We produce elegant digital reports on all of our lessons learned, so folks can take our
-					blueprint and make it their own.
-				</p>
+					<p>
+						We document how we make engaging, innovative, sustainable learning experiences,
+						and we create tools to help you make your own.
+					</p>
+				</div>
 			</div>
-		</div>
 			<div class="row feature right">
-			<a href="#" class="image col-md-6 fa-comment"> <img
-					src="{{ "/assets/images/index/talks.jpg"|prepend:site.baseurl }}" alt="">
-			</a>
+				<a href="{{ site.baseurl }}/en/publications/roundtables/" class="image col-md-6
+				fa-bullhorn"> <img
+						src="{{ "/assets/images/index/roundtables.jpg"|prepend:site.baseurl }}"
+						alt="Roundtables image"> </a>
 
-			<div class="content col-md-6">
-				<h3 class="header">Talks, conferences, workshops and consulting</h3>
+				<div class="content col-md-6">
+					<h3 class="header">We answer the hard questions</h3>
 
-				<p>
-					We are always eager to talk about our experiences with online learning and how can we
-					help you.
-				</p>
+					<p>
+						We have a regular round table where we discuss big questions in open online learning,
+						share our successes and learn from each other. Guests include folks from Khan Academy,
+						Hack Education, Mozilla and NYU.
+					</p>
+				</div>
 			</div>
-		</div>
+			<div class="row feature left">
+				<a href="{{ site.baseurl }}/en/publications/talks/" class="image col-md-6 fa-comment"> <img
+						src="{{ "/assets/images/index/talks.jpg"|prepend:site.baseurl }}" alt=""> </a>
+
+				<div class="content col-md-6">
+					<h3 class="header">We give talks and workshops</h3>
+
+					<p>
+						We go to conferences to shareour expertise on learning technology, community design and
+						openness.
+					</p>
+				</div>
+			</div>
+			<div class="row feature right">
+				<a href="http://howto.p2pu.org/" class="image col-md-6 fa-comment"> <img
+						src="{{ "/assets/images/index/open-courses.jpg"|prepend:site.baseurl }}" alt=""> </a>
+
+				<div class="content col-md-6">
+					<h3 class="header">We help folks make open courses and tools</h3>
+
+					<p>
+						If you're looking to make a course, get started with our "School in a Box." We also
+						provide consulting services in learning design, technical implementation and community-building.
+					</p>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<section class="courses">
+	<section class="courses" id="courses">
 		<div class="container courses-inner">
 			<h3 class="header">Just here to learn something?</h3>
+
 			<p>
-				We offer a great variety of community built courses along with some that were produced
-				in collaboration with our partners
+				We offer a great variety of community built courses along with some that were produced in
+				collaboration with our partners
 			</p>
+
 			<div class="row featured-courses">
 				{% for course in site.data.courses %}
-					<a class="course-thumb col-md-3" href="{{ course.url }}" target="_blank">
-						<img src="{{ site.baseurl }}/assets/images/index/courses/{{ course.image }}"
-						     alt="{{ course.name }} Cover Image" />
+					<a class="course-thumb col-md-3" href="{{ course.url }}" target="_blank"> <img
+							src="{{ site.baseurl }}/assets/images/index/courses/{{ course.image }}"
+							alt="{{ course.name }} Cover Image" />
+
 						<div class="course-title">
 							{{ course.name }}
 						</div>
@@ -283,9 +308,8 @@
 			</div>
 
 			<div class="pull-right">
-				<a class="btn btn-success" href="https://p2pu.org/en/groups/list/community/" target="_blank">
-					Show Me All Courses <i class="fa fa-angle-double-right"></i>
-				</a>
+				<a class="btn btn-success" href="https://p2pu.org/en/groups/list/community/"
+				   target="_blank"> Show Me All Courses <i class="fa fa-angle-double-right"></i> </a>
 			</div>
 		</div>
 	</section>
@@ -304,7 +328,6 @@
 			</div>
 		</div>
 	</section>
-
 
 
 </section>
