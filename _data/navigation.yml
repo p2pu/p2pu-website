@@ -1,7 +1,8 @@
 en:
+  - text: Courses
+    url: https://p2pu.org/en/groups/list/community/
   - text: Our work
     url: /en/our-work
-
   - text: About
     url: /en/about
     submenu:
