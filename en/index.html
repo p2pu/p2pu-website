@@ -50,18 +50,25 @@
 				<ul class="nav navbar-nav navbar-right">
 					{% for link in site.data.navigation.en %}
 						<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
-							<a href="{{site.baseurl}}{{ link.url }}">
-								{{ link.text }}
-							</a>
+							{% if link.url contains 'http' or sublink.url contains '#' %}
+								<a href="{{ link.url }}"
+								   {% if link.url contains 'http' %}target="_blank"{% endif %}>
+									{{ link.text }}
+								</a>
+							{% else %}
+								<a href="{{site.baseurl}}{{ link.url }}">
+									{{ link.text }}
+								</a>
+							{% endif %}
 							{% if link.submenu %}
 								<span class="fa fa-caret-down dropdown-toggle visible-xs-block visible-sm-block"
 								      data-toggle="dropdown"></span>
 								<ul class="dropdown-menu nav navbar-nav subnav" role="menu">
 									{% for sublink in link.submenu %}
 										<li {% if page.url contains sublink.url %}class="active"{% endif %}>
-											{% if sublink.url contains 'http://' or sublink.url contains '#' %}
+											{% if sublink.url contains 'http' or sublink.url contains '#' %}
 												<a href="{{ sublink.url }}"
-												   {% if sublink.url contains 'http://' %}target="_blank"{% endif %}>
+												   {% if sublink.url contains 'http' %}target="_blank"{% endif %}>
 													{{ sublink.text }}
 												</a>
 											{% else %}

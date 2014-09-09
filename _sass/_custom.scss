@@ -98,7 +98,7 @@
 		&.tw {
 			background-color: #00BBF5;
 			border-color: #00BBF5;
-			&:hover{
+			&:hover {
 				background-color: darken(#00BBF5, 5%);
 			}
 		}
@@ -106,9 +106,48 @@
 		&.fb {
 			background-color: #415E9B;
 			border-color: #415E9B;
-			&:hover{
+			&:hover {
 				background-color: darken(#415E9B, 5%);
 			}
+		}
+	}
+}
+
+.connect-icons-wrapper {
+	margin: 50px 0;
+
+	$icon-size-background: 8em;
+	.icon-circle {
+		display: block;
+		margin: 0 auto;
+		background-color: $gray;
+		color: $white;
+		border-radius: 50%;
+		height: $icon-size-background;
+		width: $icon-size-background;
+		text-align: center;
+		line-height: $icon-size-background + 1.5;
+		@include transition(all 0.3s linear);
+	}
+
+	.item-title {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 0.8em;
+		margin: 1em 0;
+		line-height: 2;
+		color: $p2pu-blue;
+		@include transition(all 0.3s linear);
+	}
+
+	&:hover{
+		.icon-circle {
+			background-color: $gray-snow;
+			color: $brand-primary;
+		}
+
+		.item-title {
+			color: $p2pu-orange;
 		}
 	}
 }

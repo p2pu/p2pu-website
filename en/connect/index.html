@@ -3,20 +3,64 @@ layout: page
 title: Get in touch
 ---
 <div class="container push-footer">
-	<div class="col-md-8 first">
+	<div class="col-md-8 col-md-offset-2 text-center">
 		We like when new ideas flow in our direction, especially when we get to talk with creative people 
 		and build on what others have learned over the years. Our community of collaborators and learners are 
 		the best source of knowledge we can imagine. That's why we are always on standby to
 		help run new ideas, support new projects or answer any questions that grow out of our community.
 		If you have ideas or just feel like talking get in touch.
 
-		<h4>Don't know where to start? Come on over and introduce yourself.</h4>
-		<a href="http://community.p2pu.org" class="btn btn-lg btn-success">
-			I want to meet you
-			<i class="fa fa-smile-o"></i>
-		</a>
+		<h4>Don't know where to start? Give us a shout on any of these.</h4>
+
+		<div class="col-md-3 connect-icons-wrapper">
+			<script type="text/javascript">
+				function epos(mail, domain) {
+					var epos = mail + '@' + domain;
+					document.write('<a class="icon-circle" href="mailto:' + epos + '">');
+					document.write('<i class="fa fa-envelope-o fa-3x"></i></a>');
+				}
+			</script>
+			<script>epos("team","p2pu.com")</script>
+			<div class="item-title">
+				email
+			</div>
+		</div>
+
+		<div class="col-md-3 connect-icons-wrapper">
+			<a class="icon-circle" href="http://community.p2pu.org/t/please-introduce-yourself/28/82"
+					target="_blank">
+				<i class="fa fa-comments fa-3x"></i>
+			</a>
+			<div class="item-title">
+				our community space
+			</div>
+		</div>
+
+		<div class="col-md-3 connect-icons-wrapper">
+			<a class="icon-circle" href="https://twitter.com/p2pu"
+					target="_blank">
+				<i class="fa fa-twitter fa-3x"></i>
+			</a>
+			<div class="item-title">
+				Twitter
+			</div>
+		</div>
+
+		<div class="col-md-3 connect-icons-wrapper">
+			<a class="icon-circle" href="https://www.facebook.com/P2PUniversity?ref=br_rs"
+					target="_blank">
+				<i class="fa fa-facebook fa-3x"></i>
+			</a>
+			<div class="item-title">
+				Facebook
+			</div>
+		</div>
+
+
+
 
 	</div>
+	{% comment %}
 	<div class="col-md-3 col-md-offset-1">
 
 		<h2>Quick Updates</h2>
@@ -34,5 +78,5 @@ title: Get in touch
 				</a>
 		</div>
 	</div>
-
+	{% endcomment %}
 </div>
