@@ -1,90 +1,90 @@
 - event: EuroPython Lightening Talks
   title: P2PU, Gentle Introduction to Python, Play with Your Music, CodeCatz, codeEU
   date: 2014-07-25
-  presentors: Erika Pogorelc
-  url: http://www.slideshare.net/ErikaPogorelc/ep14-lightning-talk-1
+  presenters: Erika Pogorelc
+  url: http://youtu.be/SK-qrwx0le0?t=52m41s
   image: europython.png
 
 - event: Kickstarter HQ
-  title: Finding Your Crew: Cohorts, Peer Feedback and Measurement
+  title: "Finding Your Crew: Cohorts, Peer Feedback and Measurement"
   date: 2014-06-15
-  presentors: Vanessa Gennarelli
+  presenters: Vanessa Gennarelli
   url: https://speakerdeck.com/mozzadrella/finding-your-crew
   image: findingyourcrew2014.png
   
 - event: FemTechNet at the New School
   title: How to Build Learning Communities Online
   date: 2014-05-20
-  presentors: Vanessa Gennarelli
+  presenters: Vanessa Gennarelli
   url: https://speakerdeck.com/mozzadrella/how-to-build-learning-communities-online
   image: femtechnet.jpg 
   
 - event: re:publica
   title: Peer-to-Peer – Learning for a wi(l)der knowledge
   date: 2014-05-08
-  presentors: Delia Browne
+  presenters: Delia Browne
   url: http://re-publica.de/en/session/peer-peer-learning-wilder-knowledge-0
   image: republica2014.png
 
 - event: OCWC Global
   title: Online Assessment Through Peers
   date: 2014-04-25
-  presentors: Erika Pogorelc
+  presenters: Erika Pogorelc
   url: http://videolectures.net/ocwc2014_pogorelc_peers/
   image: ocwcglobal2014.png
   
 - event: DML Connecting Practices 2014
   title: Open Technologies for Learning – Putting the Learners in Charge
   date: 2014-03-06
-  presentors: Philipp Schmidt
+  presenters: Philipp Schmidt
   url: http://dml2014.dmlhub.net/live/featured-session-1/
   image: dml2014philipp.png
   
 - event: DML Connecting Practices 2014
-  title: Play With Your MOOC: One Open Tool, 3 Flavors of Learning
+  title: "Play With Your MOOC: One Open Tool, 3 Flavors of Learning"
   date: 2014-03-06
-  presentors: Vanessa Gennarelli
+  presenters: Vanessa Gennarelli
   url: http://www.slideshare.net/VanessaGennarelli/play-withyourmooc
-  image: dml2014vanessa.png
+  image: dml2014vmg.png
 
 - event: MIT Sloan Technology Conference
   title: Disrupting Education
   date: 2014-02-22
-  presentors: Philipp Schmidt
+  presenters: Philipp Schmidt
   url: http://techtv.mit.edu/collections/mitsloan/videos/27907-mit-sloan-technology-conference-panel-discussion-disrupting-education
   image: mitsloan.png
   
 - event: Online EduCa
-  title: Learning Moves: Models for Global Learning
+  title: "Learning Moves: Models for Global Learning"
   date: 2013-12-03
-  presentors: Philipp Schmidt
+  presenters: Philipp Schmidt
   url: http://www.online-educa.com/audio-video-130142
   image: onlineeducaberlin.png
 
 - event: Open Ed Meetup at MozFest
   title: Human Timeline of OER sprint
   date: 2013-11-12
-  presentors: Bekka Khan
+  presenters: Bekka Khan
   url: http://creativecommons.org/weblog/entry/40455
   image: human-timeline2014.jpg
   
 - event: Reclaim Open Symposium
   title: Reclaiming Open Learning--A Stake in the Ground
   date: 2013-09-27
-  presentors: Philipp Schmidt
+  presenters: Philipp Schmidt
   url: http://dmlhub.net/reclaim-open-learning-symposium/10am-panel
   image: reclaimopen.png
   
 - event: EDULEARN13
   title: MOOCs and other recent innovations in online learning - is the sky the limit, or falling on our heads?
   date: 2013-07-01
-  presentors: Philipp Schmidt
+  presenters: Philipp Schmidt
   url: http://iated.org/edulearn13/videos
   image: edulearn.png
   
-- event: Confab: the Content Strategy Conference
-  title: Getting the UGC You Want: Content Strategy, the Edupunk Way
+- event: "Confab: the Content Strategy Conference"
+  title: "Getting the UGC You Want: Content Strategy, the Edupunk Way"
   date: 2013-06-05
-  presentors: Vanessa Gennarelli
+  presenters: Vanessa Gennarelli
   url: http://www.slideshare.net/VanessaGennarelli/gennarelli-confabslides?related=1
   image: confab.png

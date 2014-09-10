@@ -6,14 +6,13 @@ title: Presentations and Talks
 	<div class="home">
 		<div class="row">
 			<p>
-				What good is it if you have good product, when no one knows about it,
-				right? We like to share and like to be open, so we try to talk about our work as offten
-				as possible and spread everything we are
-				learning about building learning communities online.
-
-				Bellow are some presentations about our work in some form. If you have some questions
-				about what we talked about, please ask us.
+				We speak widely on learning technology, communities and openness.
+				Here's a selection of our recent presentations. We love sharing what we're up to at
+				P2PU--if you have any questions, please ask us!
 			</p>
+			<a class="btn btn-success" href="http://community.p2pu.org">
+				Let's Talk About...
+			</a>
 		</div>
 		<hr />
 		{% for talk in site.data.presentations %}
@@ -24,8 +23,8 @@ title: Presentations and Talks
 				<div class="talk-overlay">
 					<div class="talk-presenter">
 						<h5>
-							{% for presentor in talk.presentors %}
-								{{ presentor }}
+							{% for presenter in talk.presenters %}
+								{{ presenter }}
 							{% endfor %}
 						</h5>
 					</div>
