@@ -29,7 +29,8 @@ P2PU is also lucky to have had a group of wise and wonderful advisors who have o
 * Gary W. Matkin, Dean Continuing Education – University of California, Irvine
 * David Wiley, Associate Professor of Instructional Psychology and Technology at [Brigham Young University](http://byu.edu/), Chief Openness Officer at the [Open High School Utah](http://openhighschool.org/), [opencontent.org] ([personal home page](http://davidwiley.org/))
 
-... and to all the [people of P2PU](https://p2pu.org/en/#people) who have worked hard to help spread high quality, zero cost, learning opportunities for all on the web. Thank you!!
+... and to all the [people of P2PU]({{ site.baseurl }}/en/about/people/) who have 
+worked hard to help spread high quality, zero cost, learning opportunities for all on the web. Thank you!!
 {% endcapture %}
 
 <div class="container">
