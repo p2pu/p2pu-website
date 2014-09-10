@@ -16,7 +16,7 @@ Our gratitude goes to:
 * [University of California Irvine](http://www.uci.edu)
 * [Aspiriation Tech](http://www.aspirationtech.org)
 * [iCommons](http://icommons.org/)
-* The many friends and supporters who have hosted our workshops around the world, including [Open University Catalunya](http://www.uoc.edu/portal/english/) in Barcelona, [Palomar 5](http://palomar5.org)in Berlin, The Loft Boys’ Club House in NYC, and the [Carnegie Foundation for the Advancement of Teaching for hosting assessment workshop](http://www.carnegiefoundation.org/).
+* The many friends and supporters who have hosted our workshops around the world, including [Open University Catalunya](http://www.uoc.edu/portal/english/) in Barcelona, [Palomar 5](http://palomar5.org) in Berlin, The Loft Boys’ Club House in NYC, and the [Carnegie Foundation for the Advancement of Teaching](http://www.carnegiefoundation.org/).
 
 
 Advisors
