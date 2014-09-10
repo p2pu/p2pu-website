@@ -190,18 +190,28 @@ nav {
 			left: -1px;
 			z-index: 5;
 			border: 1 opx solid transparent;
-			background-color: rgba(81, 86, 101, 0.8);
+			background-color: transparent;
 			margin-top: 1px !important;
 			> li {
 				display: block;
+				margin: 5px 0;
+				background-color: rgb(81, 86, 101);
+				border: 1px solid $gray-snow;
 				&:hover {
 					border-color: transparent;
+					background-color: darken($p2pu-blue, 10%);
 				}
 				> a {
 					text-align: left;
 					border: 0;
 					padding: 1em 1em 1em 0;
 					font-size: 0.9em;
+					line-height: 2;
+					color: $white;
+
+					&:hover{
+						color: $white;
+					}
 				}
 			}
 		}
