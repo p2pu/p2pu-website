@@ -27,7 +27,7 @@ P2PU is also lucky to have had a group of wise and wonderful advisors who have o
 * Mark Surman, Executive Director – [Mozilla Foundation](http://www.mozillafoundation.org/) ([blog](http://commonspace.wordpress.com/))
 * Steve Carson, External Relations Director – [MIT OpenCourseWare](http://ocw.mit.edu/), ([OCW blog](http://ocwblog.org/author/steve-carson/))
 * Gary W. Matkin, Dean Continuing Education – University of California, Irvine
-* David Wiley, Associate Professor of Instructional Psychology and Technology at [Brigham Young University](http://byu.edu/), Chief Openness Officer at the [Open High School Utah](http://openhighschool.org/), [opencontent.org](http://opencontent.org) ([personal home page](http://davidwiley.org/))
+* David Wiley, Associate Professor of Instructional Psychology and Technology at [Brigham Young University](http://byu.edu/), Chief Openness Officer at the [Open High School Utah](http://openhighschool.org/), ([opencontent.org](http://opencontent.org) and [personal home page](http://davidwiley.org/))
 
 ... and to all the [people of P2PU]({{ site.baseurl }}/en/about/people/) who have 
 worked hard to help spread high quality, zero cost, learning opportunities for all on the web. Thank you!!
