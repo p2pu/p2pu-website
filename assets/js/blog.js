@@ -44,7 +44,7 @@ var P2PU = window.P2PU || {};
 							e.categories = e.categories.join(', ');
 
 
-							console.log(e);
+							//console.log(e);
 							 /*console.log("------------------------");
 							 console.log("title      : " + e.title);
 							 console.log("description: " + e.content);
