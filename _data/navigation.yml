@@ -1,29 +1,30 @@
 en:
   - text: Our work
-    url: /en/our-work
+    url: /en/our-work/
+
   - text: About
-    url: /en/about
+    url: /en/about/
     submenu:
     - text: Philosophy
-      url: /en/about/philosophy
+      url: /en/about/philosophy/
     - text: People
-      url: /en/about/people
+      url: /en/about/people/
     - text: Credits and thanks
-      url: /en/about/credits
+      url: /en/about/credits/
 
   - text: Publications
-    url: /en/publications/roundtables
+    url: /en/publications/roundtables/
     submenu:
     - text: P2PU Roundtables
-      url: /en/publications/roundtables
+      url: /en/publications/roundtables/
     - text: Presentations
-      url: /en/publications/talks
+      url: /en/publications/talks/
     - text: reports
-      url: /en/publications/reports
+      url: /en/publications/reports/
     - text: blog
-      url: /en/publications/blog
+      url: /en/publications/blog/
     - text: data
       url: http://data.p2pu.org/
 
   - text: Connect with us
-    url: /en/connect
+    url: /en/connect/
