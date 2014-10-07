@@ -1,3 +1,17 @@
+- event: ITP Course
+  title: "Disruptive Technologies to Fix Education and Scale Solutions"
+  date: 2014-10-02
+  presenters: Vanessa Gennarelli
+  url: https://speakerdeck.com/mozzadrella/disruptive-technologies-to-fix-education-and-scale-solutions
+  image: ITPCourse.png
+
+- event: College Unbound
+  title: "P2PU: How We Came to Be"
+  date: 2014-09-30
+  presenters: Vanessa Gennarelli
+  url: https://speakerdeck.com/mozzadrella/p2pu-how-we-came-to-be
+  image: collegeunbound.png
+
 - event: EuroPython Lightening Talks
   title: P2PU, Gentle Introduction to Python, Play with Your Music, CodeCatz, codeEU
   date: 2014-07-25
