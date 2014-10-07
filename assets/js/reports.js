@@ -25,13 +25,6 @@ var P2PU = window.P2PU || {};
 								e.sideattr = 'right';
 							}
 
-							console.log(e);
-							console.log("------------------------");
-							console.log("title      : " + e.title);
-							console.log("content    : " + e.content);
-							console.log("madia      : " + e.mediaGroups[0].contents[0].url);
-							console.log("url        : " + e.link);
-							console.log("sideattr   : " + e.sideattr);
 						});
 						$("#data").html(can.view("app-template", {reports: new can.List(data.responseData.feed.entries.reverse())}));
 					}

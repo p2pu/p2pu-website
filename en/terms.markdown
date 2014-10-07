@@ -1,7 +1,6 @@
 ---
 layout: naked-page
 title: Terms of Use
-permalink: /terms/
 ---
 
 ## 2 February, 2012
