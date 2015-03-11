@@ -32,6 +32,13 @@ staff:
    twitter: riskycud
    url: "http://thebacklog.net/"
 
+ - name: Grif Peterson
+   image: grif_peterson.jpg
+   role: Learning Cook
+   bio: "Grif spends his time connecting people and ideas through learning, food, and adventure. He’s a member of the Learning over Education Initiative at the MIT Media Lab and co-founder of Creature Paris. In the past, he worked in investment banking, drove a school bus from London to Mongolia, and lived in Kyrgyzstan. At P2PU, he keeps a watchful eye over peers and pedagogy."
+   twitter: grifpeterson
+   url: "http://grifpeterson.com"
+
 collaborators:
  - name: June Ahn
    image: june_ahn.jpg
