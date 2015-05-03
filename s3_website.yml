@@ -12,3 +12,10 @@ exclude_from_upload:
 
 redirects:
     index.html: /en/
+
+routing_rules:
+  - condition:
+        key_prefix_equals: /en/courses/
+    redirect:
+        host_name: p2pu.org
+        http_redirect_code: 301
