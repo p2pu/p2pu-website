@@ -5,15 +5,15 @@ branches:
   only:
   - gh-pages
 install: bundle install
-script: bundle exec jekyll build
-after_success:
+script: 
+- bundle exec jekyll build
 - if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then echo "Deployments are only done
   for branches. "; exit 0; fi
 - if [[ "$TRAVIS_BRANCH" != "gh-pages" ]]; then echo "Deployments are only done for
   the gh-pages branch. "; exit 0; fi
 - echo "Deploying commit $TRAVIS_COMMIT"
-- bundle exec s3_website push
 - bundle exec s3_website cfg apply --headless
+- bundle exec s3_website push
 env:
   global:
   - secure: aCvpyjljg3FDHvwgNKHzGLS4m9JKEZ2fBdTc2SO+iVEb7q/hvmOCb9M3xyhzug0dIXjCnrjCsAF3MnQ/BQLQVjCnL9+2IH0rxRcx7fIAAsuZ6FCgL/ohzPGZVK2qqdXhujMDu3t3O+auA8T3vN3siG1ophXKHcqe9/spve/WmwU=
