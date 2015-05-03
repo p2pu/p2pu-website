@@ -15,4 +15,5 @@ after_success:
 - bundle exec s3_website push
 env:
   global:
-    secure: d5yry9QpwrGwFEcWZoiwArBiq3/JQRpgiTjAwvBhrbdFix7B5qe984jAxGDNkOoCq/XmD81Hr+jr4sdjxh1/ljfmEd7wUjK+1XoAjUXaqQdSGul6J1VkW7kTYU7B4fHUFJnP9ohoU7yR5aXa1c1iJpyapalpC5Y89Tc/vowfY5U=
+  - secure: aCvpyjljg3FDHvwgNKHzGLS4m9JKEZ2fBdTc2SO+iVEb7q/hvmOCb9M3xyhzug0dIXjCnrjCsAF3MnQ/BQLQVjCnL9+2IH0rxRcx7fIAAsuZ6FCgL/ohzPGZVK2qqdXhujMDu3t3O+auA8T3vN3siG1ophXKHcqe9/spve/WmwU=
+  - secure: MD3BKhnUEnE/JMKkwrycFJX6YI3QyYwpf9C14qXKh0HJ/3m0Fuz2e2KzRbD8kK7Qh4UKgJPp/1RUcnf6mTsMoZpacWYt1sv/5tiiqmBuK6UeYVd8oczhkD7swuj+xqr2i4MZPMoo3cFEQaXnvNgkVkEa4M6P4vHQVls566lZCy0=
