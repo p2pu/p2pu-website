@@ -1,11 +1,4 @@
 staff:
- - name: Vanessa Gennarelli
-   image: vanessa_gennarelli.jpg
-   role: Learning Scientist
-   bio: "Vanessa builds learning communities on the web (with pluck and aplomb). She holds a Master's in Educational Technology from Harvard and is a former Research Intern at the MIT Media Lab. You can find her on a yoga mat, making terrariums and coworking at Indy Hall in Philadelphia, PA."
-   twitter: mozzadrella
-   url: "http://mozzadrella.me"
-
  - name: Rebecca Kahn
    image: rebecca_kahn.jpg
    role: Happiness Officer
@@ -128,6 +121,13 @@ collaborators:
    image: karen_gabriels.jpg
    role: National Treasur(er)
    bio: "Keeps our finances tidy. And our monies safe. And us out of jail."
+
+ - name: Vanessa Gennarelli
+   image: vanessa_gennarelli.jpg
+   role: Learning Scientist
+   bio: "Vanessa built many learning communities on the web for P2PU. Much of the slang spoken by the team was inspired by her."
+   twitter: mozzadrella
+   url: "http://mozzadrella.me"
 
  - name: Allen Gunn
    image: allen_gunn.jpg
