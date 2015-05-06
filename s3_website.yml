@@ -15,7 +15,27 @@ redirects:
 
 routing_rules:
   - condition:
-        key_prefix_equals: en/courses/
+      key_prefix_equals: en/courses/
     redirect:
-        host_name: p2pu.org
-        http_redirect_code: 301
+      host_name: p2pu.org
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: en/groups/
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: en/schools/
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: en/badges/
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 301
+  - condition:
+      http_error_code_returned_equals: 404
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 302
