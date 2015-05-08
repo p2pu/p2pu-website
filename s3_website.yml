@@ -1,7 +1,7 @@
 s3_id: <%= ENV['AWS_ACCESS_KEY'] %>
 s3_secret: <%= ENV['AWS_SECRET_KEY'] %>
 s3_bucket: p2pu-website
-#cloudfront_distribution_id: EUO4GYGECFJM5
+#cloudfront_distribution_id: 
 #cloudfront_invalidate_root: true
 
 exclude_from_upload:
@@ -34,6 +34,56 @@ routing_rules:
     redirect:
       host_name: p2pu.org
       http_redirect_code: 301
+  - condition:
+      key_prefix_equals: en/JanePark/
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 301
+
+# ES Redirects
+  - condition:
+      key_prefix_equals: es/courses/
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: es/groups/
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: es/schools/
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: es/badges/
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 301
+
+# HE Redirects
+  - condition:
+      key_prefix_equals: he/courses/
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: he/groups/
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: he/schools/
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: he/badges/
+    redirect:
+      host_name: p2pu.org
+      http_redirect_code: 301
+
   - condition:
       http_error_code_returned_equals: 404
     redirect:
