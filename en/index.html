@@ -26,18 +26,24 @@
 
 <body>
 
-<section class="splash">
+<section class="splash" data-spy="affix" data-offset-top="500">
 	<div class="background"></div>
 	<nav class="navbar" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<a class="navbar-toggle" data-toggle="collapse"
-				   data-target="#nav-links-collapse"> <i class="fa fa-bars"></i> </a> <a
-					class="navbar-logo pull-left" href="{{ site.baseurl }}"> <img
-					src="{{ "/assets/images/p2pu-logo-2x.png" | prepend: site.baseurl }}"
-					alt="P2PU Logo" width="122" /> </a> <a class="p2pu-tab" href="#"> <i
-					class="fa fa-chevron-down p2pu-tab-icon"></i> </a>
+				   data-target="#nav-links-collapse">
+					<i class="fa fa-bars"></i> </a>
+				<a class="navbar-logo pull-left" href="{{ site.baseurl }}">
+					<img src="{{ "/assets/images/p2pu-logo-2x.png" | prepend: site.baseurl }}"
+					alt="P2PU Logo" width="122" class="color hidden" />
+					<img src="{{ "/assets/images/p2pu-logo-2x-white.png" | prepend: site.baseurl }}"
+					alt="P2PU Logo" width="122" class="white" />
+				</a>
+				<a class="p2pu-tab" href="#">
+					<i class="fa fa-chevron-down p2pu-tab-icon"></i>
+				</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -83,17 +89,27 @@
 		<div class="banner">
 			<div class="container">
 				<div class="row">
-					<header class="col-md-12">
-						Taking online courses together, in libraries, for free
-					</header>
-					<p class="col-md-12 subheader">Open tools + Community + Design + Support</p>
+					<div class="banner-graphic col-md-5 col-sm-4 col-xs-12">
+						<img src="{{ site.baseurl }}/assets/images/index/splash-graphics.png" alt="We are Peer 2 Peer
+						University" />
+					</div>
+					<div class="actions col-md-7">
+						<header>
+							Taking online courses together, in libraries, for free
+						</header>
+						<p class="subheader">Open tools + Community + Design + Support</p>
 
 					<p class="text-center">
+						{% comment %}
+						<div class="chicago-icon">
+							<img src="{{ site.baseurl }}/assets/images/index/chicago-icon.svg" 						                              alt="Join our program in Chicago" />
+						</div>
+						{% endcomment %}
 						<a class="btn btn-lg btn-cta" href="http://chicago.p2pu.org">Join our Chicago program</a>
+						<a class="btn btn-lg btn-subcta" href="http://community.p2pu.org/t/want-us-in-your-town/1886">Not in Chicago?</a>
 					</p>
-					<p class="text-center">
-						<a class="btn btn-lg btn-cta" href="http://community.p2pu.org/t/want-us-in-your-town/1886">Not in Chicago?</a>
-					</p>
+					</div>
+
 				</div>
 			</div>
 			

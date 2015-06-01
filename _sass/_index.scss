@@ -10,21 +10,21 @@
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		top: 0px;
-		left: 0px;
-		background-image: url(../images/overlay.png), url(../images/index/poster.png);
+		top: 0;
+		left: 0;
+		background-image: url(../images/overlay.png), radial-gradient( circle at top right, $p2pu-yellow, $p2pu-orange);
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;
 		background-position: top left, top left;
 
 		@media (min-width: $screen-xs-min) {
 			background-size: auto, auto;
-			background-position: top left, -22.5em 0;
+			background-position: top left, top left;
 		}
 
 		@media (min-width: $screen-sm-min) {
 			background-size: auto, cover;
-			background-position: top left, 0 -8em;
+			background-position: top left, top left;
 		}
 	}
 
@@ -32,7 +32,28 @@
 		position: relative;
 		z-index: 1;
 		padding-bottom: 20px;
-		height: 684px;
+		height: 750px;
+
+		@media (min-width: $screen-sm-min) {
+			height: 450px;
+		}
+		@media (min-width: $grid-float-breakpoint-max) {
+			height: 500px;
+		}
+
+		.banner-graphic{
+			img{
+				max-width: 100%;
+			}
+
+			@media (min-width: $screen-xs-min) {
+				padding-top: 250px;
+			}
+
+			@media (min-width: $screen-sm-min) {
+				padding-top: 0;
+			}
+		}
 
 		header {
 			color: $white;
@@ -46,12 +67,15 @@
 				line-height: 1.3;
 				padding-top: 1em;
 				padding-bottom: 0.8em;
+				position: absolute;
+				top: 0;
 			}
 
 			@media (min-width: $screen-sm-min) {
-				font-size: 4em;
+				font-size: 3em;
 				padding-top: 0;
 				padding-bottom: 1em;
+				position: relative;
 			}
 		}
 
@@ -75,13 +99,33 @@
 			}
 		}
 
-		.btn-cta {
-			background-color: darken($brand-warning, 10%);
+		.btn-cta, .btn-subcta {
+			border-color: $white;
+			border-radius: 5px;
+			text-transform: uppercase;
+			font-family: $font-family-base;
+			font-size: 1em;
 			color: $white;
-			font-family: $headings-font-family;
+			-webkit-transition: all 0.2s ease-out;
+		  -moz-transition: all 0.2s ease-out;
+		  -o-transition: all 0.2s ease-out;
+		  transition: all 0.2s ease-out;
 
 			&:hover {
+				background-color: $white;
+				color: $p2pu-orange;
+				border-color: transparent;
+			}
+		}
 
+		.btn-cta{
+			color: $p2pu-orange;
+			background-color: $white;
+
+			&:hover {
+				color: $white;
+				background-color: transparent;
+				border-color: $white;
 			}
 		}
 
@@ -134,7 +178,12 @@ nav {
 		@include transition(opacity 0.5s ease-in-out);
 
 		&:hover {
-			border-color: $gray;
+			background-color: $white;
+			border-color: $white;
+
+			a{
+				color: $p2pu-orange;
+			}
 		}
 
 		& > a {
@@ -146,7 +195,7 @@ nav {
 
 			&:hover, &:focus {
 				background-color: transparent;
-				color: $gray;
+				color: $p2pu-orange;
 			}
 
 		}
@@ -159,9 +208,8 @@ nav {
 
 @media (min-width: $grid-float-breakpoint-max) {
 	nav .nav > li {
-		@include transition(all 0.5s ease-in-out);
+		@include transition(opacity 0.5s ease-in-out);
 		&:hover .dropdown-menu {
-			@include transition(all 0.5s ease-in-out);
 			opacity: 1 !important;
 			visibility: visible !important;
 			display: block !important;
@@ -180,39 +228,44 @@ nav {
 	}
 
 	.navbar-nav {
+		& > li {
+
+			& > a {
+				line-height: 3;
+			}
+		}
 		.dropdown {
 			position: relative !important;
 			@include transition(all 0.5s ease-in-out);
 		}
 		.dropdown-menu {
 			@include transition(all 0.5s ease-in-out);
-			width: initial;
+			width: 450px;
 			left: -1px;
 			z-index: 5;
-			border: 1 opx solid transparent;
+			border: 1 px solid transparent;
 			background-color: transparent;
 			margin-top: 1px !important;
 			> li {
 				display: block;
-				margin: 5px 0;
-				background-color: rgb(81, 86, 101);
+				margin: 0;
+				background-color: $white;
 				border: 1px solid $gray-snow;
 				&:hover {
 					border-color: transparent;
-					background-color: darken($p2pu-blue, 10%);
+					color: $brand-primary;
 				}
 				> a {
 					text-align: left;
 					border: 0;
 					padding: 1em 1em 1em 0;
 					font-size: 0.9em;
-					line-height: 2;
+					line-height: 0.5;
 					color: $white;
+					text-transform: initial;
 
 					&:hover{
-						color: $white;
-
-
+						color: $brand-primary;
 					}
 				}
 			}

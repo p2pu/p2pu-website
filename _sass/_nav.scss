@@ -11,3 +11,93 @@ nav{
 		}
 	}
 }
+
+.splash.affix-top{
+	.navbar-logo{
+		.color{
+			@extend .hidden;
+		}
+		.white{
+			@extend .show;
+		}
+	}
+
+	nav{
+		@include transition(background-color 0.5s ease-in-out)
+	}
+}
+
+.splash.affix {
+	.navbar-logo {
+		.white {
+			@extend .hidden;
+		}
+		.color {
+			@extend .show;
+			visibility: visible !important;
+		}
+	}
+
+	nav {
+		&.navbar {
+			//position: fixed;
+			@extend .navbar-fixed-top;
+			background-color: $brand-primary;
+			border-bottom: 42px solid $gray-dark;
+		}
+		.container{
+			padding-top: 0;
+		}
+		.nav>li:hover{
+			background-color: $gray-dark;
+		}
+	}
+
+	@media (min-width: $grid-float-breakpoint-max) {
+		.navbar-nav{
+			> li {
+				&:hover{
+					border-color: $gray-dark;
+					a{
+						color: $white;
+					}
+				}
+				> a {
+					line-height: 4;
+
+					&:hover {
+						background-color: $gray-dark;
+						color: $white;
+					}
+				}
+			}
+
+			.dropdown{
+				position: static !important;
+			}
+
+			.dropdown-menu{
+				width: 100%;
+				background-color: $gray-dark;
+
+				li{
+					display: inline-block;
+					border: none;
+
+					a{
+						background-color: $gray-dark;
+					  border-color: transparent;
+					  color: $white;
+					  text-transform: uppercase;
+					  line-height: 1;
+						padding: 1em;
+
+						&:hover{
+							color: $gray-light;
+						}
+					}
+				}
+			}
+		}
+	}
+}
