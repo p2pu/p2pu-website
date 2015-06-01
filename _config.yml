@@ -1,8 +1,7 @@
 # Site settings
 title: Peer 2 Peer University
 email: admin@p2pu.org
-description: "A University for the Web. Built by an open community. LEARNING BY EVERYONE. FOR
-EVERYONE. ABOUT ALMOST ANYTHING. COMPLETELY FREE."
+description: "Taking online courses together, in libraries, for free."
 baseurl:
 url: "http://p2pu.org"
 languages: ['en']
