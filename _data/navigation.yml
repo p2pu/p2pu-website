@@ -1,6 +1,11 @@
 en:
-  - text: Our work
-    url: /en/our-work/
+  - text: Our Work
+    url: /en/our-work/learning-circles/
+    submenu:
+    - text: Learning Circles
+      url: /en/our-work/learning-circles/
+    - text: Projects
+      url: /en/our-work/
 
   - text: About
     url: /en/about/

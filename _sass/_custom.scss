@@ -172,3 +172,186 @@ section.featured-work{
 
 	}
 }
+
+.sidebar {
+	.affix {
+			top: 0;
+	}
+}
+
+.splash.learning-circles {
+	background: transparent;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin-top: -45px;
+
+	.background {
+		background-color: rgba(81, 86, 101, 0.85);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url(../images/work/overlay.png), radial-gradient( circle at top right, $p2pu-blue, $p2pu-green);
+		background-repeat: repeat, no-repeat;
+		background-size: auto, cover;
+		background-position: top left, top left;
+
+		@media (min-width: $screen-xs-min) {
+			background-size: auto, auto;
+			background-position: top left, top left;
+		}
+
+		@media (min-width: $screen-sm-min) {
+			background-size: auto, cover;
+			background-position: top left, top left;
+		}
+	}
+
+	.banner {
+		position: relative;
+		z-index: 1;
+		padding-bottom: 20px;
+		height: 750px;
+
+		@media (min-width: $screen-sm-min) {
+			height: 450px;
+		}
+		@media (min-width: $grid-float-breakpoint-max) {
+			height: 500px;
+		}
+
+		.banner-graphic{
+			img{
+				max-width: 100%;
+			}
+
+			@media (min-width: $screen-xs-min) {
+				padding-top: 250px;
+			}
+
+			@media (min-width: $screen-sm-min) {
+				padding-top: 0;
+			}
+		}
+
+		header {
+			color: $white;
+			float: none;
+			line-height: 1.2;
+			text-align: center;
+			font-family: $headings-font-family;
+
+			@media (min-width: $screen-xs-min) {
+				font-size: 2.4em;
+				line-height: 1.3;
+				padding-top: 1em;
+				padding-bottom: 0.8em;
+				position: absolute;
+				top: 0;
+			}
+
+			@media (min-width: $screen-sm-min) {
+				font-size: 3em;
+				padding-top: 0;
+				padding-bottom: 1em;
+				position: relative;
+			}
+		}
+
+		.subheader {
+			color: $white;
+			font-family: $font-family-base;
+			text-transform: uppercase;
+			text-align: center;
+			bottom: 11%;
+			left: 0;
+			line-height: 2;
+			margin-bottom: 2em;
+
+			@media (min-width: $screen-xs-min) {
+				font-size: 0.7em;
+				line-height: 1;
+			}
+
+			@media (min-width: $screen-sm-min) {
+				font-size: 1.5em;
+			}
+		}
+
+		.btn-cta, .btn-subcta {
+			border-color: $white;
+			border-radius: 5px;
+			text-transform: uppercase;
+			font-family: $font-family-base;
+			font-size: 1em;
+			color: $white;
+			-webkit-transition: all 0.2s ease-out;
+		  -moz-transition: all 0.2s ease-out;
+		  -o-transition: all 0.2s ease-out;
+		  transition: all 0.2s ease-out;
+
+			&:hover {
+				background-color: $white;
+				color: $p2pu-blue;
+				border-color: transparent;
+			}
+		}
+
+		.btn-cta{
+			color: $p2pu-blue;
+			background-color: $white;
+
+			&:hover {
+				color: $white;
+				background-color: transparent;
+				border-color: $white;
+			}
+		}
+
+		.featured-headline {
+			background-color: $brand-primary;
+			color: $white;
+			padding: 1em 0;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+
+			header {
+				font-family: $headings-font-family;
+				padding: 1em 0;
+
+				@media (min-width: $screen-xs-min) {
+					font-size: 1.5em;
+					line-height: 1.2;
+				}
+
+				@media (min-width: $screen-sm-min) {
+					font-size: 2.5em;
+				}
+			}
+
+			.body {
+				@media (min-width: $screen-xs-min) {
+					font-size: 1em;
+					line-height: 1.5;
+				}
+
+				@media (min-width: $screen-sm-min) {
+					font-size: 1.5em;
+				}
+			}
+
+		}
+
+		.banner-graphic{
+			padding-top: 30px;
+		}
+
+		.actions{
+			  padding-top: 60px;
+		}
+	}
+}
+
