@@ -20,14 +20,14 @@ en:
   - text: Publications
     url: /en/publications/roundtables/
     submenu:
-    - text: Blog
-      url: http://info.p2pu.org/
-    - text: Reports
-      url: http://reports.p2pu.org/
     - text: P2PU Roundtables
       url: /en/publications/roundtables/
     - text: Presentations
       url: /en/publications/talks/
+    - text: Reports
+      url: http://reports.p2pu.org/
+    - text: Blog
+      url: http://info.p2pu.org/
     - text: Data
       url: http://data.p2pu.org/
 
