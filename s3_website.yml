@@ -1,6 +1,6 @@
 s3_id: <%= ENV['AWS_ACCESS_KEY'] %>
 s3_secret: <%= ENV['AWS_SECRET_KEY'] %>
-s3_bucket: p2pu-website
+s3_bucket: <%= if (ENV['TRAVIS_BRANCH'] == 'release') then 'p2pu-website' else 'p2pu-staging' end  %>
 cloudfront_distribution_id: E1UDG3TDNIQGGC
 cloudfront_invalidate_root: true
 
