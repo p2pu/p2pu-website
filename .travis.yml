@@ -4,6 +4,7 @@ rvm:
 branches:
   only:
   - gh-pages
+  - release
 install: bundle install
 script: 
 - bundle exec jekyll build
