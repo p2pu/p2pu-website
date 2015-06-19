@@ -5,8 +5,8 @@ title: Learning Circles
 sidenav:
   - link: about
     title: "What are they?"
-  - link: where
-    title: "Where we’re active?"
+  - link: done
+    title: "What we've done so far."
   - link: want
     title: "Want us in your town?"
   - link: news
@@ -31,9 +31,9 @@ Sadly, this kind of culture cannot be bought, mandated, or otherwise simply turn
 
 You don’t need to be an expert to facilitate a group. In fact, it’s better that you aren’t. And it’s perfectly reasonable for you to be taking the course for the first time while you facilitate.
 
-<div id="where"></div>
+<div id="done"></div>
 
-#Where we’re active
+# What we've done so far.
 
 We have learning circles active right now:
 in the
@@ -41,9 +41,11 @@ in the
 studying Python, in Slovenia, South Africa, and the US <link to discourse>
 in Europe, studying open education resources <no link: July 2015>
 
+# Future plans.
+
 <div id="want"></div>
 
-#Want us in your town?
+# How to get involved
 Want to see Learning Circles in your local community? We want to hear from you. Tell us why learning together locally is needed in your community. Tell us how you imagine it happening. Tell us your story!
 
 Read other people’s stories, join us in debating where we should launch our next project, reach out to us if you have a great idea or want to partner with us in your home town!
@@ -52,7 +54,7 @@ Join the conversation, at [community.p2pu.org/t/learningcircles](community.p2pu.
 
 <div id="news"></div>
 
-#News
+# Resources
 Check out the P2PU blog for the latest happenings on [Learning Circles](http://info.p2pu
 .org/category/learning-circles/)
 
