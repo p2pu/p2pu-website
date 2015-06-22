@@ -1,8 +1,12 @@
 s3_id: <%= ENV['AWS_ACCESS_KEY'] %>
 s3_secret: <%= ENV['AWS_SECRET_KEY'] %>
-s3_bucket: p2pu-website
+<% if (ENV['TRAVIS_BRANCH'] == 'release') %>
 cloudfront_distribution_id: E1UDG3TDNIQGGC
 cloudfront_invalidate_root: true
+s3_bucket: 'p2pu-website'
+<% else %>
+s3_bucket: 'p2pu-staging'
+<% end %>
 
 exclude_from_upload:
   - CNAME
