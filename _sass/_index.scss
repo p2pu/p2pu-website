@@ -6,16 +6,17 @@
 	position: relative;
 
 	.background {
-		background-color: rgba(81, 86, 101, 0.85);
+		background-color: rgba(81, 86, 101, 1);
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-image: url(../images/overlay.png), radial-gradient( circle at top right, $p2pu-yellow, $p2pu-orange);
+		//background-image: url(../images/overlay.png), radial-gradient( circle at top right, $gray-dark, $brand-primary);
+		background-image: url(../images/overlay.png), url("../images/header/header.png");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;
-		background-position: top left, top left;
+		background-position: 0 0, -118px -159px;
 
 		@media (min-width: $screen-xs-min) {
 			background-size: auto, auto;
@@ -24,7 +25,7 @@
 
 		@media (min-width: $screen-sm-min) {
 			background-size: auto, cover;
-			background-position: top left, top left;
+			background-position:  0 0, -118px -159px;
 		}
 	}
 
@@ -53,6 +54,10 @@
 			@media (min-width: $screen-sm-min) {
 				padding-top: 0;
 			}
+		}
+
+		.actions{
+			padding-top: 100px;
 		}
 
 		header {
