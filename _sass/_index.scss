@@ -57,7 +57,21 @@
 		}
 
 		.actions{
-			padding-top: 100px;
+			padding-top: 50px;
+
+			.learn-more{
+				margin-top: 30px;
+			}
+
+			.learn-more-link{
+				padding-top: 30px;
+				color: $white;
+
+				&:hover{
+					text-decoration: none;
+					color: $gray-light;
+				}
+			}
 		}
 
 		header {
