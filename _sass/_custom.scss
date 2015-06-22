@@ -175,7 +175,7 @@ section.featured-work{
 
 .sidebar {
 	.affix {
-			top: 0;
+			top: 3em;
 	}
 }
 
@@ -185,6 +185,7 @@ section.featured-work{
 	overflow: hidden;
 	position: relative;
 	margin-top: -45px;
+	margin-bottom: 3em;
 
 	.background {
 		background-color: rgba(81, 86, 101, 0.85);
@@ -193,7 +194,8 @@ section.featured-work{
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-image: url(../images/work/overlay.png), radial-gradient( circle at top right, $p2pu-blue, $p2pu-green);
+		//background-image: url(../images/overlay.png), radial-gradient( circle at top right, $gray, $gray-darker);
+		background-image: url(../images/overlay.png), url("../images/learning-circles/header.png");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;
 		background-position: top left, top left;
@@ -240,7 +242,7 @@ section.featured-work{
 			color: $white;
 			float: none;
 			line-height: 1.2;
-			text-align: center;
+			text-align: left;
 			font-family: $headings-font-family;
 
 			@media (min-width: $screen-xs-min) {
@@ -255,7 +257,7 @@ section.featured-work{
 			@media (min-width: $screen-sm-min) {
 				font-size: 3em;
 				padding-top: 0;
-				padding-bottom: 1em;
+				padding-bottom: 10px;
 				position: relative;
 			}
 		}
@@ -263,20 +265,35 @@ section.featured-work{
 		.subheader {
 			color: $white;
 			font-family: $font-family-base;
-			text-transform: uppercase;
-			text-align: center;
+			text-align: left;
 			bottom: 11%;
 			left: 0;
 			line-height: 2;
-			margin-bottom: 2em;
+			margin-bottom: 1em;
 
 			@media (min-width: $screen-xs-min) {
 				font-size: 0.7em;
-				line-height: 1;
+				line-height: 1.4;
 			}
 
 			@media (min-width: $screen-sm-min) {
-				font-size: 1.5em;
+				font-size: 1.4em;
+			}
+		}
+
+		.subheader-list{
+			list-style-type: none;
+			color: $white;
+			padding: 0;
+
+			li{
+				font-size: 1.4em;
+
+				&:before{
+					content: "\f105";
+					font-family: FontAwesome;
+					padding: 0 20px;
+				}
 			}
 		}
 
@@ -308,6 +325,14 @@ section.featured-work{
 				background-color: transparent;
 				border-color: $white;
 			}
+		}
+
+		.cta-icon{
+			text-align: center;
+			margin: 1em;
+			color: $white;
+			text-shadow: 1px 1px rgba(81, 86, 101, 1);
+			font-size: 2.2em;
 		}
 
 		.featured-headline {
@@ -350,7 +375,7 @@ section.featured-work{
 		}
 
 		.actions{
-			  padding-top: 60px;
+			  padding-top: 30px;
 		}
 	}
 }
