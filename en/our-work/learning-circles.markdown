@@ -1,6 +1,7 @@
 ---
 layout: learning-circles
 title: Learning Circles
+permalink: /en/learning-circles/
 
   
 sidenav:
