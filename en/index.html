@@ -106,7 +106,7 @@
 					</p>
 						<p >
 							<h3 class="text-center learn-more">
-								<a href="{{ site.baseurl }}/en/learningcircles" class="learn-more-link">
+								<a href="{{ site.baseurl }}/en/learning-circles/"  class="learn-more-link">
 									Learn More
 									<i class="fa fa-angle-double-right"></i>
 								</a>
@@ -122,49 +122,7 @@
 
 </section>
 
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Sign up</h4>
-                  </div>
-                  <div class="modal-body">
-                    <form action="https://signup.p2pu.org/api/signup/" method="POST">
-                      <div class="form-group">
-                        <label for="email_input">Email *</label>
-                        <input id="email_input" class="form-control" type="email" value="" name="email" placeholder="email address" required>
-                      </div>
-                      <div class="form-group">
-                        <label>Name *</label>
-                        <input id="name_input" type="text" class="form-control" name="name" placeholder="what should we call you?" required>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label">Would you be interested in joining a study group?</label>
-                        <input type="text" class="form-control" placeholder="Where are you based?"></input>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label">Could you suggest a relevant online course?</label>
-                        <input type="text" class="form-control" placeholder="Link to course."></input>
-                      </div>
-                      <div class="form-group">
-                        <label>Do you have a space where you can host a study group?</label>
-                        <input type="text" class="form-control" placeholder="Details of the space?"></input>
-                      </div>
-                      <div class="form-group">
-                        <label>Would you like to facilitate a learning circle?</label>
-                        <input type="text" class="form-control" placeholder="Where are you based?"></input>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+{% include signup.html %}
 
 
 
