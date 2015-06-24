@@ -34,13 +34,13 @@ Courses ran for 5-7 weeks, and the groups met once a week in the library branch.
 
 We also ran another Learning Circle in Ljubljana, Slovenia. In this course, a group of young women (a community traditionally underserved by tech education) worked through the same Python course as those in Chicago. They too reported feeling more confident with the subject matter, and more engaged with the course. One participant even managed to find a job based on the skills she learnt in the course. 
 
-We'll be running more Learning Circles in conjunction with Chicago Public Library in September and October of 2015. Have a look at our [chicgao page](http://chicago.p2pu.org/){:target="_blank"} for more details. 
+We'll be running more Learning Circles in conjunction with Chicago Public Library in September and October of 2015.
 
 <div id="future-plans"></div>
 
 ##FUTURE PLANS
 
-We will kick off again in Chicago in September, with about 10 Chicago Public Libraries hosting Learning Circles. [Check out our Chicago site](http://chicago.p2pu.org){:target="_blank"} to sign up for a Learning Circle or get involved in some other way. We plan on adding additional Learning Circles in topics such as finance, HTML/CSS and applying for jobs. Our long-term goal is for any physical infrastructure (library, museum, prison, embassy, etc.)  to be able to plug into the Learning Circle model and empower their respective communities to take charge of their own learning pathways.
+We will kick off again in Chicago in September, with about 10 Chicago Public Libraries hosting Learning Circles. [Check out our Chicago site](http://chicago.p2pu.org){:target="_blank"} to sign up for a Learning Circle or get involved in some other way. We plan on adding additional Learning Circles in topics such as finance, HTML/CSS and applying for jobs. Our long-term goal is for any physical infrastructure (library, museum, prison, embassy, etc.)  to be able to plug into the Learning Circle model and empower their respective communities to take charge of their own learning.
 
 
 <div id="get-involved"></div>
@@ -53,7 +53,7 @@ We will kick off again in Chicago in September, with about 10 Chicago Public Lib
 
 ##RESOURCES FROM CPL PILOT
 
-Here are some of the resources we developed during the pilot in Chicago. We are working to expand both documentation and software tools for the fall, so that interested library branches can easily introduce Learning Circle to their communities.
+Here are some of the resources we developed during the pilot in Chicago. We are working to expand both documentation and software tools for the fall, so that interested library branches can easily introduce Learning Circles to their communities.
 
 * [WHAT IS A LEARNING CIRCLE?](https://docs.google.com/document/d/1hPp3mTk_U3OwEyY42w4ZxhMWcrZeLhByibFJNzQ8nM0/edit){:target="_blank"} to help orient you to Learning Circles.
 * [CHECKLIST FOR LEARNING CIRCLES](https://docs.google.com/document/d/17UnFpGzJ24oUcO26hxA2kEubGV4WfgsmweMKPlxIZ6M/edit){:target="_blank"} to make sure you’re well prepared.
