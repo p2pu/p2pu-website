@@ -6,7 +6,7 @@ layout: base
 	  <div class="background"></div>
 		  <div class="banner">
 			  <div class="container">
-				  <div class="actions col-md-7">
+				  <div class="actions col-md-6 col-md-offset-6">
 								<header>
 									<h1>{{ page.title }}</h1>
 								</header>
@@ -21,24 +21,16 @@ layout: base
 								  <li>Designed to be taken with few prerequisites</li>
 								  <li>Free</li>
 							  </ul>
+					      <a class="btn btn-lg btn-cta col-md-12" href="#get-involved">Join a Learning Circle</a>
 					  </div>
-				  <div class="banner-graphic col-md-5 col-sm-4 col-xs-12">
-					  <p class="text-center">
-						  <div class="cta-icon">
-						    <i class="fa fa-users fa-5x"></i>
-					    </div>
-					    <div class="text-center">
-								<a class="btn btn-lg btn-cta" href="#get-involved">Join a Learning Circle</a>
-					    </div>
-				    </p>
-				  </div>
+
 			  </div>
 		  </div>
   </header>
-
+	{% include signup.html %}
   <article class="post-content container push-footer">
-	  <div class="sidebar col-md-3">
-		  <nav data-spy="affix" data-offset-top="600" data-offset-bottom="520">
+	  <div class="sidebar col-md-3 hidden-sm hidden-xs">
+		  <nav data-spy="affix" data-offset-top="650" data-offset-bottom="520">
 			  <ul class="nav nav-pills nav-stacked">
 				  {% for item in page.sidenav %}
 					  <li><a href="#{{ item.link }}"><i class="fa fa-angle-double-right"></i>

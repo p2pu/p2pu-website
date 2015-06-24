@@ -35,18 +35,14 @@ This is where Learning Circles come in. Peer 2 Peer University is developing an 
 
 ##FUTURE PLANS
 
-We will kick off again in Chicago in September, with about 10 Chicago Public Libraries hosting Learning Circles. Check out our Chicago site to sign up for a Learning Circle or get involved in some other way. We plan on adding additional Learning Circles in topics such as finance, HTML/CSS and applying for jobs. Additionally, we are in the preliminary stages of expanding Learning Circles to other cities and want to <a href=”sign up form link”>hear from you</a> if you have interest in facilitating or hosting a Learning Circle. Our goal is for any physical infrastructure (library, museum, prison, embassy, etc.)  to be able to plug into the Learning Circle model and empower their respective communities to take charge of their own learning pathways.
+We will kick off again in Chicago in September, with about 10 Chicago Public Libraries hosting Learning Circles. [Check out our Chicago site](http://chicago.p2pu.org){:target="_blank"} to sign up for a Learning Circle or get involved in some other way. We plan on adding additional Learning Circles in topics such as finance, HTML/CSS and applying for jobs. Our long-term goal is for any physical infrastructure (library, museum, prison, embassy, etc.)  to be able to plug into the Learning Circle model and empower their respective communities to take charge of their own learning pathways.
 
 
 <div id="get-involved"></div>
 
 ##GET INVOLVED
 
-Want to see Learning Circles in your local community? We want to hear from you. Tell us why learning together locally is needed in your community. Tell us how you imagine it happening. Tell us your story!
-
-Read other people’s stories, join us in debating where we should launch our next project, reach out to us if you have a great idea or want to partner with us in your home town!
-
-Join the conversation, at [community.p2pu.org/t/learningcircles](community.p2pu.org/t/learningcircles)
+<a class="btn-link" data-toggle="modal" data-target="#myModal">Let us know</a> if you’d like Learning Circles in your community, and we’ll be back to you as soon as we can. In the meantime, jump in on our [community discussion](https://community.p2pu.org/c/libraries){:target="_blank"} and [follow our blog](https://community.p2pu.org/c/libraries){:target="_blank"} to stay up to date. 
 
 <div id="resources"></div>
 
@@ -54,18 +50,12 @@ Join the conversation, at [community.p2pu.org/t/learningcircles](community.p2pu.
 
 Here are some of the resources we developed during the pilot in Chicago. We are working to expand both documentation and software tools for the fall, so that interested library branches can easily introduce Learning Circle to their communities.
 
-* [Getting started guide](https://docs.google.com/document/d/1hPp3mTk_U3OwEyY42w4ZxhMWcrZeLhByibFJNzQ8nM0/edit)
-  * Checklist for Learning Circles
-  * Course selection criteria
-  * Flyer template
-  * Info session guidelines
-  * Application template
-  * Email/SMS dashboard
-  
-* Platform guides
-* Week-by-week recipes for facilitating a learning circles
-* Facilitation guide
-* Resource guide for your host institution (here’s our example from Chicago)
-[Marketing materials?] - info night how-to? flyers advertising courses? other materials?
+* [WHAT IS A LEARNING CIRCLE?](https://docs.google.com/document/d/1hPp3mTk_U3OwEyY42w4ZxhMWcrZeLhByibFJNzQ8nM0/edit){:target="_blank"} to help orient you to Learning Circles.
+* [CHECKLIST FOR LEARNING CIRCLES](https://docs.google.com/document/d/17UnFpGzJ24oUcO26hxA2kEubGV4WfgsmweMKPlxIZ6M/edit){:target="_blank"} to make sure you’re well prepared.
+* [COURSE SELECTION TABLE](https://docs.google.com/spreadsheets/d/1kDBPnuPsmMf078iMhl3Tpy-b8Q3_GObIB4FI6cMzPdk/edit){:target="_blank"} to help decide which courses best suit your needs.
+* [DRAFT FLYER](https://docs.google.com/presentation/d/1DtvWNttaY97MHqRBRnbtoEa6Rr0V27x-bYmhFD3xylI/edit){:target="_blank"} to market Learning Circles in your community.
+* [INFO SESSION TIPS](https://docs.google.com/document/d/1kPKmtokj8hgWmrwc2nCdjHAC0FDt3h8eGL7pt9RSqZs/edit){:target="_blank"} should you decide to host an info session before Learning Circles begin.
+* [LEARNING CIRCLE APPLICATION](https://docs.google.com/document/d/1G3p_BRCQybSStPjfCftFF2c5aS3KzWco63A-z87gHMI/edit){:target="_blank"} to gather interest and assess learner’s needs.
+* [FACILITATION TIPS](https://docs.google.com/document/d/1tls5PAKXIS0mc0jKMoobOUSd7y1xw9X--QC2tHQdMZk/edit){:target="_blank"} to help you keep the conversation going.
 
 
