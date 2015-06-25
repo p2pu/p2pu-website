@@ -4,7 +4,7 @@ var P2PU = window.P2PU || {};
 (function($, P2PU){
     'use strict';
 
-    function stepSubmit(form, validate, success){
+    function stepSubmit(form, validate, success, error){
         form.submit(function(e){
             e.preventDefault();
             // Submit using ajax
@@ -17,12 +17,13 @@ var P2PU = window.P2PU || {};
                 type: "POST",
                 url: form.attr("action"), 
                 data: form.serialize(),
-            }).done(success);
+            }).error(error).done(success);
         });
     }
 
     var init = function (){
-        stepSubmit($('#signup-form'), undefined, function(data){
+        stepSubmit($('#signup-form'), undefined, 
+        function(data){
             // update hidden input with interest id in other forms
             if (data.error !== undefined) {
             } else {
@@ -30,6 +31,9 @@ var P2PU = window.P2PU || {};
                 $('#signup-modal').modal('hide');
                 // TODO: need to give user feedback of success
             }
+        }, 
+        function(){
+            $('#signup-error').removeClass('hidden');
         });
     }
 
