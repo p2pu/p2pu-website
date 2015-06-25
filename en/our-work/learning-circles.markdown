@@ -2,8 +2,9 @@
 layout: learning-circles
 title: Learning Circles
 permalink: /en/learning-circles/
-
-  
+extra_js:
+- signup.js
+js_invocation: Signup
 sidenav:
   - link: about
     title: "LEARNING CIRCLES"
@@ -15,7 +16,6 @@ sidenav:
     title: "GET INVOLVED"
   - link: resources
     title: "RESOURCES FROM PILOT"  
-    
 ---
 <div id="about"></div>
 
@@ -47,7 +47,9 @@ We will kick off again in Chicago in September, with about 10 Chicago Public Lib
 
 ##GET INVOLVED
 
-<a class="btn-link" data-toggle="modal" data-target="#myModal">Let us know</a> if you’d like Learning Circles in your community, and we’ll be back to you as soon as we can. In the meantime, jump in on our [community discussion](https://community.p2pu.org/c/libraries){:target="_blank"} and [follow our blog](https://community.p2pu.org/c/libraries){:target="_blank"} to stay up to date. 
+<a class="btn-link" data-toggle="modal" data-target="#signup-modal">Let us know</a> if you’d like Learning Circles in your community, and we’ll be back to you as soon as we can. In the meantime, jump in on our [community discussion](https://community.p2pu.org/c/libraries){:target="_blank"} and [follow our blog](https://community.p2pu.org/c/libraries){:target="_blank"} to stay up to date. 
+
+{% include signup.html %}
 
 <div id="resources"></div>
 
