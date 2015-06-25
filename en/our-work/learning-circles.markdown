@@ -30,17 +30,15 @@ This is where Learning Circles come in. Peer 2 Peer University is developing an 
 ##WHAT WE’VE DONE
 
 In May and June in 2015, we ran four courses across two library branches in the Chicago Public Library system. 
-Courses ran for 5-7 weeks, and the groups met once a week in the library branch. The courses were facilitated by a community manager, and participants were recruited from within the library’s community of patrons.  These learners were guided through courses on Python programming, academic writing, GED math preparation and public speaking, all using course materials which are freely available online. We found that the Learning Circle structure not only helped learners feel confident about taking an online course, but our retention rates were also higher than in most online learning courses. And perhaps most importantly, the learners reported feeling more connected to each other, their community and the library branch. 
+Courses ran for 5-7 weeks, and the groups met once a week in the library branch. The courses were facilitated by a community organizer, and participants were recruited from within the library’s community of patrons.  These learners worked through courses on Python programming, academic writing, GED math prep and public speaking, all using course materials which are freely available online. We found that the Learning Circle structure not only helped learners feel confident about taking an online course, but our retention rates were also higher than in most online learning courses. And perhaps most importantly, the learners reported feeling more connected to each other, their community, and the library branch. 
 
-We also ran another Learning Circle in Ljubljana, Slovenia. In this course, a group of young women (a community traditionally underserved by tech education) worked through the same Python course as those in Chicago. They too reported feeling more confident with the subject matter, and more engaged with the course. One participant even managed to find a job based on the skills she learnt in the course. 
-
-We'll be running more Learning Circles in conjunction with Chicago Public Library in September and October of 2015.
+We also ran a Learning Circle in Ljubljana, Slovenia. In this course, a group of young women (a community traditionally underserved by tech education) worked through the same Python course as those in Chicago. They too reported feeling more confident with the subject matter, and more engaged with the course. One participant even managed to find a job based on the skills she learnt in the course. 
 
 <div id="future-plans"></div>
 
 ##FUTURE PLANS
 
-We will kick off again in Chicago in September, with about 10 Chicago Public Libraries hosting Learning Circles. [Check out our Chicago site](http://chicago.p2pu.org){:target="_blank"} to sign up for a Learning Circle or get involved in some other way. We plan on adding additional Learning Circles in topics such as finance, HTML/CSS and applying for jobs. Our long-term goal is for any physical infrastructure (library, museum, prison, embassy, etc.)  to be able to plug into the Learning Circle model and empower their respective communities to take charge of their own learning.
+We will kick off again in Chicago in September, with about 10 Chicago Public Library branches hosting Learning Circles. [Check out our Chicago site](http://chicago.p2pu.org){:target="_blank"} to sign up for a Learning Circle or get involved in some other way. We plan on adding additional Learning Circles in topics such as finance, HTML/CSS and applying for jobs. Our long-term goal is for any physical infrastructure (library, museum, prison, embassy, etc.) to be able to plug into the Learning Circle model and empower their respective communities to take charge of their own learning.
 
 
 <div id="get-involved"></div>
