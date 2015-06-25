@@ -62,5 +62,5 @@ Here are some of the resources we developed during the pilot in Chicago. We are 
 * [INFO SESSION TIPS](https://docs.google.com/document/d/1kPKmtokj8hgWmrwc2nCdjHAC0FDt3h8eGL7pt9RSqZs/edit){:target="_blank"} should you decide to host an info session before Learning Circles begin.
 * [LEARNING CIRCLE APPLICATION](https://docs.google.com/document/d/1G3p_BRCQybSStPjfCftFF2c5aS3KzWco63A-z87gHMI/edit){:target="_blank"} to gather interest and assess learner’s needs.
 * [FACILITATION TIPS](https://docs.google.com/document/d/1tls5PAKXIS0mc0jKMoobOUSd7y1xw9X--QC2tHQdMZk/edit){:target="_blank"} to help you keep the conversation going.
-
+* [CPL RESOURCE GUIDE](https://docs.google.com/presentation/d/1gCnUIS1C3RNNQKLZzjj-XJwEoBz2ObkySHAXqeyg7pI/edit#slide=id.gb4a17f5f4_1_9){:target="_blank"} to help learners take charge of their learning.
 
