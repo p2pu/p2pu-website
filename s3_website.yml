@@ -21,75 +21,89 @@ routing_rules:
   - condition:
       key_prefix_equals: en/courses/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
   - condition:
       key_prefix_equals: en/groups/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
   - condition:
       key_prefix_equals: en/schools/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
   - condition:
       key_prefix_equals: en/badges/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
   - condition:
       key_prefix_equals: en/JanePark/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
 
 # ES Redirects
   - condition:
       key_prefix_equals: es/courses/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
   - condition:
       key_prefix_equals: es/groups/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
   - condition:
       key_prefix_equals: es/schools/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
   - condition:
       key_prefix_equals: es/badges/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
 
 # HE Redirects
   - condition:
       key_prefix_equals: he/courses/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
   - condition:
       key_prefix_equals: he/groups/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
   - condition:
       key_prefix_equals: he/schools/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
   - condition:
       key_prefix_equals: he/badges/
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 301
 
   - condition:
       http_error_code_returned_equals: 404
     redirect:
-      host_name: p2pu.org
+      host_name: courses.p2pu.org
+      protocol: https
       http_redirect_code: 302

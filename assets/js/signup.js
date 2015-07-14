@@ -30,6 +30,9 @@ var P2PU = window.P2PU || {};
                 // Close singup dialog
                 $('#signup-modal').modal('hide');
                 // TODO: need to give user feedback of success
+                if (window.ga){
+                    window.ga('send', 'event', 'form', 'submit', 'cta-response');
+                }
             }
         }, 
         function(){
