@@ -7,6 +7,7 @@ s3_bucket: 'p2pu-website'
 <% else %>
 s3_bucket: 'p2pu-staging'
 <% end %>
+s3_reduced_redundancy: true
 
 exclude_from_upload:
   - CNAME

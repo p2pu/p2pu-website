@@ -12,13 +12,6 @@ staff:
    twitter: grifpeterson
    url: "http://grifpeterson.com"
 
- - name: Erika Pogorelc
-   image: erika_pogorelc.jpg
-   role: Pixel Princess
-   bio: "Though hard work and a little bit of fairy dust, Erika transformed from hairdresser to righteous developer. She reports from Ljubljana, Slovenia, where she is active in her local RailsGirls and CodeCatz communities."
-   twitter: ercchy
-   url: "http://ercchy.github.io"
-
  - name: Carl Ruppin
    image: carl_ruppin.jpg
    role: Operations/Dreamer Wrangler
@@ -226,6 +219,15 @@ collaborators:
    role: Researcher, Existentialist
    bio: "Beck is a researcher on the OER Research Hub (OERRH) project and is based at The Open University (UK).  Working with Jane Park, the OERRH conducted research on School of Open during 2013 and 2014. Beck also oversaw the development of the project's forthcoming School of Open 'Open Research' course."
    twitter: BeckPitt
+
+ - name: Erika Pogorelc
+   image: erika_pogorelc.jpg
+   role: Pixel Princess
+   bio: "Though hard work and a little bit of fairy dust, Erika transformed from hairdresser to righteous developer. She reports from Ljubljana, Slovenia, where she is active in her local RailsGirls and CodeCatz communities."
+   twitter: ercchy
+   url: "http://ercchy.github.io"
+
+
 
  - name: Andrew Rens
    image: andrew_rens.jpg
