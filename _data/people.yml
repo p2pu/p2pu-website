@@ -33,6 +33,14 @@ board:
    twitter: schmidtphi
    url: "http://1l2p.net"
 
+ - name: June Ahn
+   image: june_ahn.jpg
+   role: Assistant Professor, University of Maryland
+   bio: "June is a human-computer interaction researcher at University of Maryland. He bravely collaborates with P2PU on research projects about engagement, motivation and cohorts."
+   twitter: ahnjune
+   url: "http://ahnjune.com"
+
+
  - name: Ahrash Bissell
    image: ahrash_bissell.jpg
    role: Project Manager Monterey Institute for Technology and Education
@@ -64,13 +72,6 @@ board:
 
 
 collaborators:
- - name: June Ahn
-   image: june_ahn.jpg
-   role: Assistant Professor, University of Maryland
-   bio: "June is a human-computer interaction researcher at University of Maryland. He bravely collaborates with P2PU on research projects about engagement, motivation and cohorts."
-   twitter: ahnjune
-   url: "http://ahnjune.com"
-
  - name: Lila Bailey
    image: lila_bailey.jpg
    role: Lawyer
