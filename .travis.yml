@@ -6,6 +6,7 @@ branches:
   - gh-pages
   - release
 install: bundle install
+sudo: false
 script: 
 - bundle exec jekyll build
 - if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then echo "Deployments are only done
