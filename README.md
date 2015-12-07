@@ -1,6 +1,6 @@
 P2PU Website
 
-[![Travis CI Image](https://travis-ci.org/p2pu/p2pu-website.svg])](https://travis-ci.org/p2pu/p2pu-website)
+[![Travis CI Image](https://travis-ci.org/p2pu/p2pu-website.svg)](https://travis-ci.org/p2pu/p2pu-website)
 
 Built using Jekyll and deployed to AWS S3 using TravisCI
 
