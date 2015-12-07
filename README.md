@@ -1,8 +1,9 @@
-P2PU Website
+# P2PU Website
 
-[![Travis CI Image](https://travis-ci.org/p2pu/p2pu-website.svg)](https://travis-ci.org/p2pu/p2pu-website)
+Staging status: [![](https://travis-ci.org/p2pu/p2pu-website.svg)](https://travis-ci.org/p2pu/p2pu-website)
+Deploy status: [![](https://travis-ci.org/p2pu/p2pu-website.svg?branch=release)](https://travis-ci.org/p2pu/p2pu-website)
 
-Built using Jekyll and deployed to AWS S3 using TravisCI
+Built using Jekyll and deployed to AWS Cloudfront using TravisCI
 
 gh-pages branch is staging and is deployed to [http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/](http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/)
 
