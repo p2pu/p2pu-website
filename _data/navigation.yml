@@ -1,9 +1,9 @@
 en:
   - text: Our Work
-    url: /en/learning-circles/
+    url: /en/facilitate/
     submenu:
     - text: Learning Circles
-      url: /en/learning-circles/
+      url: /en/facilitate/
     - text: Projects
       url: /en/our-work/
 

@@ -1,6 +1,7 @@
 # P2PU Website
 
 Staging status: [![](https://travis-ci.org/p2pu/p2pu-website.svg)](https://travis-ci.org/p2pu/p2pu-website)
+
 Deploy status: [![](https://travis-ci.org/p2pu/p2pu-website.svg?branch=release)](https://travis-ci.org/p2pu/p2pu-website)
 
 Built using Jekyll and deployed to AWS Cloudfront using TravisCI

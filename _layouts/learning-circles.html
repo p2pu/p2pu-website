@@ -11,8 +11,7 @@ layout: base
 									<h1>{{ page.title }}</h1>
 								</header>
 							  <p class="subheader">
-								  Learning Circles are lightly-facilitated study groups for learners who want to take online courses together at their local library.
-								  <br />Learning Circles are:
+								  Learning Circles are lightly-facilitated study groups for learners who want to take online courses together at their local library. Learning Circles are:
 							  </p>
 							  <ul class="subheader-list">
 								  <li>Peer-supported</li>
@@ -21,15 +20,14 @@ layout: base
 								  <li>Designed to be taken with few prerequisites</li>
 								  <li>Free</li>
 							  </ul>
-                <a class="btn btn-lg btn-cta col-md-12" data-toggle="modal" data-target="#signup-modal">Get involved</a>
+                <a class="btn btn-lg btn-cta col-md-12" href="https://learningcircles.p2pu.org/en/facilitator/signup/" target="_blank">Run a learning circle</a>
 					  </div>
 
 			  </div>
 		  </div>
   </header>
-	{% include signup.html %}
   <article class="post-content container push-footer">
-	  <div class="sidebar col-md-3 hidden-sm hidden-xs">
+	  <!--div class="sidebar col-md-3 hidden-sm hidden-xs">
 		  <nav data-spy="affix" data-offset-top="650" data-offset-bottom="520">
 			  <ul class="nav nav-pills nav-stacked">
 				  {% for item in page.sidenav %}
@@ -38,8 +36,8 @@ layout: base
 				  {% endfor %}
 			  </ul>
 		  </nav>
-	  </div>
-	  <div class="col-md-9">
+	  </div-->
+	  <div class="col-md-10 col-md-offset-1">
 		  {{ content }}
 	  </div>
   </article>

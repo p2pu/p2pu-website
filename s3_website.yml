@@ -20,6 +20,11 @@ redirects:
 
 routing_rules:
   - condition:
+      key_prefix_equals: en/learning-circles/
+    redirect:
+      replace_key_prefix_with: en/facilitate/
+      http_redirect_code: 301
+  - condition:
       key_prefix_equals: en/courses/
     redirect:
       host_name: courses.p2pu.org
