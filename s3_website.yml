@@ -20,6 +20,11 @@ redirects:
 
 routing_rules:
   - condition:
+      key_prefix_equals: en/learning-circles/
+    redirect:
+      replace_key_prefix_with: en/facilitate/
+      http_redirect_code: 301
+  - condition:
       key_prefix_equals: en/courses/
     redirect:
       host_name: courses.p2pu.org
@@ -103,8 +108,23 @@ routing_rules:
       http_redirect_code: 301
 
   - condition:
+      key_prefix_equals: en/
       http_error_code_returned_equals: 404
     redirect:
       host_name: courses.p2pu.org
       protocol: https
       http_redirect_code: 302
+  - condition:
+      key_prefix_equals: es/
+      http_error_code_returned_equals: 404
+    redirect:
+      host_name: courses.p2pu.org
+      protocol: https
+      http_redirect_code: 302
+
+  - condition:
+      http_error_code_returned_equals: 404
+    redirect:
+      replace_key_prefix_with: en/
+      http_redirect_code: 302
+
