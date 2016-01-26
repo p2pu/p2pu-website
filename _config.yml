@@ -2,7 +2,7 @@
 title: Peer 2 Peer University
 email: admin@p2pu.org
 description: "Taking online courses together, in libraries, for free."
-baseurl:
+baseurl: /homepage-workspace
 url: "http://p2pu.org"
 languages: ['en']
 default_language: 'en'
