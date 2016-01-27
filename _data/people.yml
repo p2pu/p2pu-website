@@ -40,7 +40,6 @@ board:
    twitter: ahnjune
    url: "http://ahnjune.com"
 
-
  - name: Ahrash Bissell
    image: ahrash_bissell.jpg
    role: Project Manager Monterey Institute for Technology and Education
@@ -51,6 +50,12 @@ board:
    role: Chair of the Board
    bio: "As a board member and active community member Delia makes sure things keep running smoothly at P2PU. Next to this she is involved in many of the legal aspects surrounding the organization."
 
+ - name: Allen Gunn
+   image: allen_gunn.jpg
+   role: Gunner the Facilitator
+   bio: "It is not without reason that Gunner is our workshop facilitator of choice. He is Executive Director at Aspiration, helping NGOs, activists, foundations and software developers make more effective use of technology for social change."
+   twitter: allengunn
+   
  - name: Neeru Paharia
    image: neeru_paharia.jpg
    role: Co-founder, Assistant Professor, Georgetown University
@@ -150,12 +155,6 @@ collaborators:
    bio: "Vanessa built many learning communities on the web for P2PU. Much of the slang spoken by the team was inspired by her."
    twitter: mozzadrella
    url: "http://mozzadrella.me"
-
- - name: Allen Gunn
-   image: allen_gunn.jpg
-   role: Gunner the Facilitator
-   bio: "It is not without reason that Gunner is our workshop facilitator of choice. He is Executive Director at Aspiration, helping NGOs, activists, foundations and software developers make more effective use of technology for social change."
-   twitter: allengunn
 
  - name: Stian Haklev
    image: stian_haklev.jpg
