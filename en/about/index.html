@@ -106,9 +106,62 @@ title: Our values, our team, and our work
 
 <figure class="strech-banner philosophy"></figure>
 
+<div class="container">
+	<div class="row">
 
+		<h2>
+			Our past work
+		</h2>
+		{% for project in site.data.projects.past | sort:'date' reversed %}
+			{% assign multi_three=forloop.index0|modulo:3  %}
+			{% if multi_three == 0 %}<div class="row">{% endif %}
+			<div class="p2pu-project col-xs-8 col-md-4">
+				<a class="thumbnail" href="{{ project.url }}" target="_blank">
+					<aside class="thumbnail-side">{{ project.title }}</aside>
+					<img class="project-img" src=
+						{% if project.image %}
+							"{{ "/assets/images/projects/" |append: project.image |prepend: site.baseurl }}"
+						{% else %}
+							"{{ "/assets/images/projects/default_project.jpg" |prepend: site.baseurl }}"
+						{% endif %} alt="{{ project.name }} Image">
+					<div class="cotent-wrap">
+						<p>{{ project.short-description }}</p>
+					</div>
+				</a>
+			</div>
+			{% if multi_three == 2 %}</div>{% endif %}
+		{% endfor %}
+	</div>
+</div>
+</div>
 
+<section class="featured-work">
+		<div class="container">
+			<h4>Our work has been featured in:</h4>
 
+			<div class="inner">
 
-<figure class="strech-banner people"></figure>
-<figure class="strech-banner about"></figure>
+					<a href="http://chronicle.com/article/In-This-Online-University/132307/" target="_blank">
+						<img src="{{ site.baseurl }}/assets/images/projects/featured/chronicle-logo.png"
+					     alt="Creative Commons Logo" width="150" class="col-md-3">
+					</a>
+
+					<a href="http://www.nytimes.com/2010/04/18/education/edlife/18open-t.html?pagewanted=all&_r=0"
+					   target="_blank">
+						<img src="{{ site.baseurl }}/assets/images/projects/featured/nyt-logo.png" alt="New
+					York Times Logo" width="150" class="col-md-3">
+					</a>
+
+					<a href="http://www.wired.co.uk/magazine/archive/2013/12/features/the-smart-list-2013" target="_blank">
+						<img src="{{ site.baseurl }}/assets/images/projects/featured/wired-logo.png" alt="Wired
+					 Magazine Logo" width="150" class="col-md-3">
+					</a>
+
+					<a href="http://lifehacker.com/this-free-course-in-music-engineering-is-back-with-more-1574062465" target="_blank">
+						<img src="{{ site.baseurl }}/assets/images/projects/featured/lh-logo.png" alt="Lifehacker
+					Logo" width="150" class="col-md-3">
+					</a>
+
+			</div>
+		</div>
+	</section>
