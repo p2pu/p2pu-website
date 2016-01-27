@@ -1,11 +1,11 @@
 ---
 layout: page
 category: page
-title: Values
+title: Our values, our team, and our work
 ---
 <div class="container" id="philosophy">
 
-	<h2>P2PU is driven by three core values:</h2>
+	<h2>Our core values:</h2>
 
 	<div class="row">
 
@@ -42,15 +42,9 @@ title: Values
 	</div>
 
 </div>
-<figure class="strech-banner philosophy"></figure>
 
----
-layout: page
-title: The People
-category: people
----
 <div class="container" id="people">
-	<h4>Our Staff</h4>
+	<h2>Our Staff</h2>
 
 	<div class="tiles">
 		{% for person in site.data.people.staff %}
@@ -79,7 +73,7 @@ category: people
 	</div>
 	<hr />
 
-	<h4>Our Board</h4>
+	<h2>Our Board</h2>
 	<div class="tiles">
 		{% for person in site.data.people.board %}
 			{% assign multi_three=forloop.index0|modulo:3 %}
@@ -107,10 +101,14 @@ category: people
 	</div>
 	<hr />
 
-	<h4><a href="https://www.p2pu.org/en/about/people/">Our Extended Family</a></h4>
+	<h2><a href="https://www.p2pu.org/en/about/people/">Our Extended Family</a></h2>
 </div>
 
+<figure class="strech-banner philosophy"></figure>
+
+
+
+
+
 <figure class="strech-banner people"></figure>
-
-
 <figure class="strech-banner about"></figure>
