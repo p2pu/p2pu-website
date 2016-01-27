@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Our Projects
+title: Our work
 ---
 <div class="container">
 	<div class="row">
 
 		<p>
-			Here's a taste of what we've been working on recently.
+			Here's a taste of some other things we've been working on recently.
 		</p>
 		{% for project in site.data.projects.past | sort:'date' reversed %}
 			{% assign multi_three=forloop.index0|modulo:3  %}
