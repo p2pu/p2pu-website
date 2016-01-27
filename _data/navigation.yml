@@ -1,7 +1,16 @@
 en:
-  - text: Facilitator Hub
-    url: /en/facilitate/
   - text: About
     url: /en/about/
+    submenu:
+    - text: Values
+      url: /en/about/
+    - text: People
+      url: /en/people/
+    - text: Projects
+      url: /en/projects
+      
   - text: Blog
     url: http://info.p2pu.org/
+    
+  - text: Facilitate
+    url: /en/facilitate/
