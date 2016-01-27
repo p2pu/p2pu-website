@@ -1,26 +1,14 @@
 past:
-  - title: Learning Circles @ CPL
-    image: knight-news.png
-    short-description: "Building offline study groups for online courses in Chicago"
-    url: http://chicago.p2pu.org/
-  
   - title: Course in a Box
     image: community101.png
-    short-description: "develop your course using the methodologies we use at P2PU to build
+    short-description: "Develop an online course using the methodologies we use at P2PU to build
     learning communities on the web."
     url: http://howto.p2pu.org/
-
-  - title: Writing For Change
-    image: w4c.png
-    short-description: "A free course to help you enact social change. Learn how
-    to write grant proposals, applications and op-eds from the community."
-    url: http://writing4change.p2pu.org/
-
-  - title: Webmaker Training
-    image: ttw.png
-    short-description: "Helping one another teach web literacy, digital skills and open practices.
-    Teacher training, the participatory, open way."
-    url: https://training.webmakerprototypes.org/en/
+    
+  - title: Badges
+    image: badges.png
+    short-description: "Badges spark feedback between Experts and Learners about their learning projects. A Badge is symbol of mastery that comes out of those conversations."
+    url: http://badges.p2pu.org
 
   - title: Learning Creative Learning
     image: lclmooc.png
@@ -40,9 +28,16 @@ past:
     interested in encouraging deeper learning in their schools and classrooms."
     url: http://dlmooc.deeper-learning.org/
 
-  - title: Badges
-    image: badges.png
-    short-description: "Badges spark feedback between Experts and Learners about their learning projects. A Badge is symbol of mastery that comes out of those conversations."
-    url: http://badges.p2pu.org
+  - title: Writing For Change
+    image: w4c.png
+    short-description: "A free course to help you enact social change. Learn how
+    to write grant proposals, applications and op-eds from the community."
+    url: http://writing4change.p2pu.org/
 
+  - title: Webmaker Training
+    image: ttw.png
+    short-description: "Helping one another teach web literacy, digital skills and open practices.
+    Teacher training, the participatory, open way."
+    url: https://training.webmakerprototypes.org/en/
+    
 featured:
