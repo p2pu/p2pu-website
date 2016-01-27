@@ -1,110 +1,13 @@
----
+
 layout: page
-category: page
-title: 
+title: Recent work
 ---
-<div class="container" id="people">
-	<h2>Values</h2>
-
-	<div class="row">
-		<div class="col-md-4 ">
-			<h2>Peer learning <i class="fa fa-star fa-2x pull-right"></i></h2>
-			<br>
-			<p>
-			Underlying all our work is the understanding that learning is a social activity. 
-			We believe that everybody is an expert in something, that sharing and connecting 
-			is how we learn best, and that feedback is necessary in order to improve. 
-			</p>
-		</div>
-
-		<div class="col-md-4">
-			<h2>Community <i class="fa fa-share-alt fa-flip-horizontal fa-2x pull-right"></i></h2>
-			<br>
-			<p>
-			P2PU is a community-centered project, which is reflected across our organization through 
-			our volunteer network and governance model. By involving learners and collaborators in all 
-			stages of the design and delivery of our work, we foster networks of learners and facilitators, 
-			and contribute to the crucial role that informal learning plays in local communities. 
-			</p>
-		</div>
-
-		<div class="col-md-4">
-			<h2>Open <i class="fa fa-volume-up fa-flip-horizontal fa-2x pull-right"></i></h2>
-			<br>
-			<p>
-			Openness enables participation, replication, and accountability. We strive to use openly-licensed 
-			learning materials and always share our methodology and resources openly, so that as many people as 
-			possible can take leverage our work.
-			</p>
-		</div>
-	</div>
-
-	<h2>Staff</h2>
-
-	<div class="tiles">
-		{% for person in site.data.people.staff %}
-			{% assign multi_three=forloop.index0|modulo:3 %}
-			{% if multi_three == 0 %}
-				<div class="row">{% endif %}
-			<div class="p2pu-person col-lg-4 col-sm-6">
-				<img class="img-circle pull-right people-img" src=
-						"{{ "/assets/images/people/" |append: person.image |prepend: site.baseurl }}"
-				     alt="{{ person.name }} Image">
-
-				<h3>{{ person.name }}<br>
-					<small>{{ person.role }}</small>
-				</h3>
-				<p>{{ person.bio }}</p>
-				{% if person.twitter %}
-					<span><a href="https://twitter.com/{{ person.twitter }}" target="_blank"><i
-							class="fa fa-twitter"></i> {{ person.twitter }}</a></span>
-				{% endif %}
-				{% if person.url %} |
-					<span><a href="{{ person.url }}" target="_blank">{{ person.url | replace_first: 'http://' '' }}</a></span>
-				{% endif %}
-			</div>
-			{% if multi_three == 2 or forloop.last %}</div>{% endif %}
-		{% endfor %}
-	</div>
-	<hr />
-
-	<h2>Board</h2>
-	<div class="tiles">
-		{% for person in site.data.people.board %}
-			{% assign multi_three=forloop.index0|modulo:3 %}
-			{% if multi_three == 0 %}
-				<div class="row">{% endif %}
-			<div class="p2pu-person col-lg-4 col-sm-6">
-				<img class="img-circle pull-right people-img" src=
-						"{{ "/assets/images/people/" |append: person.image |prepend: site.baseurl }}"
-				     alt="{{ person.name }} Image">
-
-				<h3>{{ person.name }}<br>
-					<small>{{ person.role }}</small>
-				</h3>
-				<p>{{ person.bio }}</p>
-				{% if person.twitter %}
-					<span><a href="https://twitter.com/{{ person.twitter }}" target="_blank"><i
-							class="fa fa-twitter"></i> {{ person.twitter }}</a></span>
-				{% endif %}
-				{% if person.url %} |
-					<span><a href="{{ person.url }}" target="_blank">{{ person.url | replace_first: 'http://' '' }}</a></span>
-				{% endif %}
-			</div>
-			{% if multi_three == 2 or forloop.last %}</div>{% endif %}
-		{% endfor %}
-	<h4><a href="https://www.p2pu.org/en/about/people/">Our Extended Family</a></h4>
-	</div>
-</div>
-
-<!--<figure class="strech-banner philosophy"></figure>-->
-
 <div class="container">
 	<div class="row">
 
-		<h2>
-			Recent work
-		</h2>
+		<p>
+			Here's a taste of what we've been working on recently.
+		</p>
 		{% for project in site.data.projects.past | sort:'date' reversed %}
 			{% assign multi_three=forloop.index0|modulo:3  %}
 			{% if multi_three == 0 %}<div class="row">{% endif %}
@@ -125,6 +28,7 @@ title:
 			{% if multi_three == 2 %}</div>{% endif %}
 		{% endfor %}
 	</div>
+</div>
 </div>
 
 <section class="featured-work">
@@ -156,4 +60,4 @@ title:
 
 			</div>
 		</div>
-</section>
+	</section>
