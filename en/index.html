@@ -131,15 +131,13 @@ js_invocation: Signup
 	<section class="who">
 		<div class="container">
 			<div class="col-md-8">
-				<h3>Who are we?</h3>
-				<h4>	Learning Circles are lightly-facilitated study groups for learners who want to take online courses together,
+				<!--<h3>Who are we?</h3>-->
+				<p>	
+					Learning Circles are lightly-facilitated study groups for learners who want to take online courses together,
 					in-person. Learning Circles are: peer supported, facilitated by non-content experts, hosted in publicly accessible spaces, 
 					designed to be taken with few prerequisites, and free for learners. We believe that anybody can facilitate a Learning Circle, 
 					and whether you want to run just one in your home or organize 100 across an urban library system, we are here to help you get 
-					started.</h4>
-
-				<p>
-				paragraph text
+					started.
 				</p>
 
 				<a class="people-link fa-long-arrow-right" href="{{ site.baseurl }}/en/about/people/"> Meet
@@ -157,8 +155,6 @@ js_invocation: Signup
 						alt="Community support image"> </a>
 
 				<div class="content col-md-6">
-					<h3 class="header">We are a community</h3>
-
 					<p>
 						Open source technology and educational resources set the groundwork for free, high-quality learning experiences. 
 					</p>
@@ -171,8 +167,6 @@ js_invocation: Signup
 						alt="Community support image"> </a>
 
 				<div class="content col-md-6">
-					<h3 class="header">We build learning communities online</h3>
-
 					<p>
 						A social context supported by a facilitator encourages peers to learn together, developing interpersonal skills and competencies, not just content knowledge.
 					</p>
@@ -185,7 +179,9 @@ js_invocation: Signup
 						alt="Reports image"> </a>
 
 				<div class="content">
-					<h3 class="header">Delivered locally, Learning Circles engage individuals who wouldn’t otherwise benefit from online education, transforming physical spaces into community learning hubs. </h3>
+					<p>
+						Delivered locally, Learning Circles engage individuals who wouldn’t otherwise benefit from online education, transforming physical spaces into community learning hubs. </h3>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -193,30 +189,14 @@ js_invocation: Signup
 
 	<section class="courses" id="courses">
 		<div class="container courses-inner">
-			<h3 class="header">Just here to learn something?</h3>
+			<h3 class="header">WORK WITH US</h3>
 
 			<p>
-				We offer a great variety of community built courses along with some that were produced in
-				collaboration with our partners
+				P2PU consults with individuals and organizations looking to get started with Learning Circles. 
+				Our services include facilitator training workshops, course selection and adaption expertise, 
+				ongoing facilitator support, web hosting, and software tool integration. We can also help you 
+				design and launch a course with <a href="http://howto.p2pu.org/">Course in a Box</a>.  <a href="mailto:thepeople@p2pu.org"></a>Get in touch</a> if this interests you.
 			</p>
-
-			<div class="row featured-courses">
-				{% for course in site.data.courses %}
-					<a class="course-thumb col-md-3" href="{{ course.url }}" target="_blank"> <img
-							src="{{ site.baseurl }}/assets/images/index/courses/{{ course.image }}"
-							alt="{{ course.name }} Cover Image" />
-
-						<div class="course-title">
-							{{ course.name }}
-						</div>
-					</a>
-				{% endfor %}
-			</div>
-
-			<div class="pull-right">
-				<a class="btn btn-success" href="https://p2pu.org/en/groups/list/community/"
-				   target="_blank"> Show Me All Courses <i class="fa fa-angle-double-right"></i> </a>
-			</div>
 		</div>
 	</section>
 
@@ -234,7 +214,17 @@ js_invocation: Signup
 			</div>
 		</div>
 	</section>
+	
+	<section class="courses" id="courses">
+		<div class="container courses-inner">
+			<h3 class="header">STAY IN TOUCH</h3>
 
+			<p>
+				Sign up to stay apprised of the latest happenings.
+			</p>
+			<a class="btn btn-lg btn-cta" data-toggle="modal" data-target="#signup-modal">Sign up for a Learning Circle</a>
+		</div>
+	</section>
 
 </section>
 
