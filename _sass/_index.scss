@@ -12,10 +12,10 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-image: url(../images/overlay.png), url("../images/header/header.png");
+		background-image: url(../images/overlay.png), url("../images/header.jpg");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;
-		background-position: 0 0, -118px -159px;
+		/*background-position: 0 0, -118px -159px;*/
 
 		@media (min-width: $screen-xs-min) {
 			background-size: auto, auto;
@@ -24,7 +24,7 @@
 
 		@media (min-width: $screen-sm-min) {
 			background-size: auto, cover;
-			background-position:  0 0, -118px -159px;
+			/*background-position:  0 0, -118px -159px;*/
 		}
 	}
 
