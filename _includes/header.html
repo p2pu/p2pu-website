@@ -33,7 +33,12 @@
 					{% endif %}
 
 					<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
+
+					  {% if link.url|split:"/"|first contains 'http' %}
+						<a href="{{ link.url }}">{{ link.text }}</a>
+            {% else %}
 						<a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
+            {% endif %}
 
 						{% if link.submenu %}
 							<span class="fa fa-caret-down dropdown-toggle visible-xs-block visible-sm-block"
