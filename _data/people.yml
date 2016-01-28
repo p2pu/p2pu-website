@@ -88,6 +88,11 @@ collaborators:
    bio: "Adam is the co-founder of College Unbound: a college degree program in Providence, RI for first generation college students that values civic engagement and focuses on real-life experiences. He works with P2PU on our Writing for Change initiative, listens to jazz and bakes a mean sourdough."
    twitter: MrAdamBush
 
+ - name: Mark Andersen
+   image: mark_andersen.jpg
+   role: Learning Circle Extraordinaire
+   bio:  "Mark runs adult programming at Chicago Public Library, and has been our partner from the start getting Learning Circles up and running in the Windy City."
+ 
  - name: John Britton
    image: john_britton.jpg
    role: OG Edupunk
@@ -155,6 +160,11 @@ collaborators:
    bio: "Vanessa built many learning communities on the web for P2PU. Much of the slang spoken by the team was inspired by her."
    twitter: mozzadrella
    url: "http://mozzadrella.me"
+   
+ - name: Anna Haggman
+  image: anna_haggman.jpg
+  role: P2PU Internist
+  bio: "Anna goes well beyond the call of duty to design facilitator resources and professional development tools for Learning Circles. We wish there were ten of her."
 
  - name: Stian Haklev
    image: stian_haklev.jpg
@@ -226,8 +236,6 @@ collaborators:
    bio: "Though hard work and a little bit of fairy dust, Erika transformed from hairdresser to righteous developer. She reports from Ljubljana, Slovenia, where she is active in her local RailsGirls and CodeCatz communities."
    twitter: ercchy
    url: "http://ercchy.github.io"
-
-
 
  - name: Andrew Rens
    image: andrew_rens.jpg
