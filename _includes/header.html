@@ -34,7 +34,8 @@
 
 					<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
 
-					  {% if link.url|split:"/"|first contains 'http' %}
+            {% assign urlstart=link.url|split:"/"|first %}
+						{% if urlstart contains "http" %}
 						<a href="{{ link.url }}">{{ link.text }}</a>
             {% else %}
 						<a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>

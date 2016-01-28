@@ -55,8 +55,9 @@ js_invocation: Signup
 				<ul class="nav navbar-nav navbar-right">
 					{% for link in site.data.navigation.en %}
 						<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
-							{% if link.url|split:"/"|first contains 'http' %}
-							<a href="{{ link.url }}">
+              {% assign urlstart=link.url|split:"/"|first %}
+							{% if urlstart contains "http" %}
+              <a href="{{ link.url }}">
               {% else %}
 							<a href="{{ site.baseurl }}{{ link.url }}">
               {% endif %}
