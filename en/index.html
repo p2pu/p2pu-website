@@ -236,24 +236,13 @@ js_invocation: Signup
 			<div class="partners-inner">
 				{% for partner in site.data.partners %}
 					<img
-              src="{{ site.baseurl }}/assets/images/index/partners/{{ partner.image }}"
+              src="{{ site.baseurl }}{{ partner.image }}"
 							alt="{{ partner.name }} Logo" width="150"
 							class="col-md-2" />
 				{% endfor %}
 			</div>
 		</div>
 	</section>
-
-	
-	<!--<section class="courses" id="courses">
-		<div class="container courses-inner">
-			<h3 class="header">WORK WITH US</h3>
-
-			<p>
-			<a class="people-link fa-long-arrow-right" data-toggle="modal" data-target="#signup-modal">Join our mailing list</a>
-			</p>
-		</div>
-	</section>-->
 </section>
 
 {% include footer-en.html %}

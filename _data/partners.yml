@@ -1,14 +1,17 @@
+- name: Chicago Public Library
+  image: /assets/images/index/partners/cpl-logo.png
+
 - name: Creative Commons
-  image: cc-logo.png
+  image: /assets/images/index/partners/cc-logo.png
 
 - name: GovLab
-  image: govlab-logo.png
+  image: /assets/images/index/partners/govlab-logo.png
 
 - name: NYU Steinhardt
-  image: nyusteinhardt-logo.png
+  image: /assets/images/index/partners/nyusteinhardt-logo.png
 
 - name: MIT Medi Lab
-  image: medialab-logo.png
+  image: /assets/images/index/partners/medialab-logo.png
 
 - name: Mozilla Foundation
-  image: mozilla-logo.png
+  image: /assets/images/index/partners/mozilla-logo.png
