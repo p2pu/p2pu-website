@@ -9,7 +9,7 @@ title: About P2PU
   </header>
 
 <div class="container" id="philosophy">
-<p> P2PU is driven by three core values: peer learning, community, and openness.</p>
+<h4> P2PU is driven by three core values: peer learning, community, and openness.</h4>
 	<div class="row">
 		<div class="col-md-4 ">
 			<h2>Peer learning <i class="fa fa-star fa-2x pull-right"></i></h2>
@@ -86,9 +86,9 @@ title: About P2PU
 <div class="container">
 	<div class="row">
 
-		<p>
-			Here's a taste of some other things we've been working on recently.
-		</p>
+		<h4>
+			Here's a taste of some other things we've been working on.
+		</h4>
 		{% for project in site.data.projects.past | sort:'date' reversed %}
 			{% assign multi_three=forloop.index0|modulo:3  %}
 			{% if multi_three == 0 %}<div class="row">{% endif %}
