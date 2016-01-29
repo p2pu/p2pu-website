@@ -1,14 +1,7 @@
 en:
   - text: About
     url: /en/about/
-    submenu:
-    - text: Values
-      url: /en/about/
-    - text: People
-      url: /en/people/
-    - text: Projects
-      url: /en/our-work
-      
+
   - text: Blog
     url: http://info.p2pu.org/
     
