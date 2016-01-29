@@ -215,15 +215,12 @@ js_invocation: Signup
 				
 				<a class="people-link fa-long-arrow-right" href="https://community.p2pu.org/t/please-introduce-yourself/28/last"> 
 				Introduce yourself</a>
-				
-						<a class="people-link fa-long-arrow-right" href="mailto:thepeople@p2pu.org?Subject=Hi%20there!"> 
-			Get in touch</a>
 			</div>
 		</div>
 	</section>
 
-	<section class="partners">
-		<div class="container">
+	<section class="courses" id="courses">
+		<div class="container courses-inner">
 			<h3>Work with us</h3>
 			<p>	
 				P2PU consults with individuals and organizations looking to get started with Learning Circles. 
@@ -235,18 +232,19 @@ js_invocation: Signup
 			Get in touch</a>
 			
 			<br>
-		
+		</div>
+		<div class="container courses-inner">
 			<h4>Our collaborators and clients include:</h4>
-
-			<div class="partners-inner">
-				{% for partner in site.data.partners %}
-					<img
+		</div>
+		<div class="partners-inner">
+			{% for partner in site.data.partners %}
+				<img
               src="{{ site.baseurl }}/assets/images/index/partners/{{ partner.image }}"
 							alt="{{ partner.name }} Logo" width="150"
 							class="col-md-2" />
 				{% endfor %}
-			</div>
 		</div>
+		
 	</section>
 	
 	<!--<section class="courses" id="courses">
