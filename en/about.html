@@ -45,6 +45,38 @@ title: About P2PU
 	</div>
 
 <header class="page-header">
+  <h1>Our Work</h1>
+</header>
+
+<div class="container">
+	<div class="row">
+
+		<h4>
+			Here's a taste of some other things we've been working on.
+		</h4>
+		{% for project in site.data.projects.past | sort:'date' reversed %}
+			{% assign multi_three=forloop.index0|modulo:3  %}
+			{% if multi_three == 0 %}<div class="row">{% endif %}
+			<div class="p2pu-project col-xs-8 col-md-4">
+				<a class="thumbnail" href="{{ project.url }}" target="_blank">
+					<aside class="thumbnail-side">{{ project.title }}</aside>
+					<img class="project-img" src=
+						{% if project.image %}
+							"{{ "/assets/images/projects/" |append: project.image |prepend: site.baseurl }}"
+						{% else %}
+							"{{ "/assets/images/projects/default_project.jpg" |prepend: site.baseurl }}"
+						{% endif %} alt="{{ project.name }} Image">
+					<div class="cotent-wrap">
+						<p>{{ project.short-description }}</p>
+					</div>
+				</a>
+			</div>
+			{% if multi_three == 2 %}</div>{% endif %}
+		{% endfor %}
+	</div>
+</div>
+
+<header class="page-header">
   <h1>Our People</h1>
 </header>
 
@@ -79,37 +111,7 @@ title: About P2PU
 	</div>
 </div>
 
-<header class="page-header">
-  <h1>Our Work</h1>
-</header>
 
-<div class="container">
-	<div class="row">
-
-		<h4>
-			Here's a taste of some other things we've been working on.
-		</h4>
-		{% for project in site.data.projects.past | sort:'date' reversed %}
-			{% assign multi_three=forloop.index0|modulo:3  %}
-			{% if multi_three == 0 %}<div class="row">{% endif %}
-			<div class="p2pu-project col-xs-8 col-md-4">
-				<a class="thumbnail" href="{{ project.url }}" target="_blank">
-					<aside class="thumbnail-side">{{ project.title }}</aside>
-					<img class="project-img" src=
-						{% if project.image %}
-							"{{ "/assets/images/projects/" |append: project.image |prepend: site.baseurl }}"
-						{% else %}
-							"{{ "/assets/images/projects/default_project.jpg" |prepend: site.baseurl }}"
-						{% endif %} alt="{{ project.name }} Image">
-					<div class="cotent-wrap">
-						<p>{{ project.short-description }}</p>
-					</div>
-				</a>
-			</div>
-			{% if multi_three == 2 %}</div>{% endif %}
-		{% endfor %}
-	</div>
-</div>
 
 <section class="featured-work">
 		<div class="container">
