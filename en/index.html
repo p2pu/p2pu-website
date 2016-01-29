@@ -119,8 +119,6 @@
 
 </section>
 
-{% include signup.html %}
-
 <section class="page-content">
 	<section>
 		<div class="container">
@@ -204,7 +202,7 @@
 					activities. This community is made up of people from all over the world, who are working
 					together to transform education online and offline. Sound good? We'd love you to meet you.
 				</p>
-				<a class="people-link fa-long-arrow-right" href="#"> 
+				<a class="people-link fa-long-arrow-right" href="#" data-toggle="modal" data-target="#signup-modal"> 
 				Join our mailing list</a>
 
 				<h3>Work with us</h3>
@@ -218,20 +216,13 @@
 				<a class="people-link fa-long-arrow-right" href="mailto:thepeople@p2pu.org?Subject=Hi%20there!"> 
 				Get in touch</a>
 			</div>
-
-
-				
-			</div>
-			
+	  </div>
 	</section>
 
 	<section>
 		<div class="container">
-			<div class="col-md-12">
-
       <div class="col-md-12">
 				<h4>Our collaborators and clients include:</h4>
-        
 				<div class="partners-inner">
 					{% for partner in site.data.partners %}
 						<img
@@ -241,10 +232,30 @@
 					{% endfor %}
 				</div>
       </div>
-		</div>
+    </div>
 	</section>
 
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Sign up</h4>
+			</div>
+			<div class="modal-body">
+        {% include mailing-list.html %}
+			</div>
+			<div class="modal-footer">
+			</div>
+		</div>
+	</div>
+</div>
+
 
 {% include footer-en.html %}
 
