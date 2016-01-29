@@ -19,4 +19,6 @@ sass:
 env: prod
 
 exclude: [Guardfile, Gemfile, Gemfile.lock, README, s3_website.yml]
+prose:
+  media: assets/images
 
