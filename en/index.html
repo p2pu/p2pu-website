@@ -219,6 +219,7 @@ js_invocation: Signup
 			
 			<div class="col-md-8">
 				<h3>Work with us</h3>
+				<h4>No project is too big or too small.</h4>
 				<p>	
 					P2PU consults with individuals and organizations looking to get started with Learning Circles. 
 					Our services include facilitator training workshops, course selection and development, 
@@ -228,15 +229,17 @@ js_invocation: Signup
 				<a class="people-link fa-long-arrow-right" href="mailto:thepeople@p2pu.org?Subject=Hi%20there!"> 
 				Get in touch</a>
 			</div>
+	</section>
+	<section class="partners">
 			
-		<div class="partners">
+		<div class="container">
 			<h4>Our collaborators and clients include:</h4>
 		</div>
 		<div class="partners-inner">
 			{% for partner in site.data.partners %}
 				<img
               src="{{ site.baseurl }}/assets/images/index/partners/{{ partner.image }}"
-							alt="{{ partner.name }} Logo" width="150"
+							alt="{{ partner.name }} Logo" width="100"
 							class="col-md-2" />
 				{% endfor %}
 		</div>
