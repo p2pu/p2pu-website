@@ -77,6 +77,11 @@ board:
 
 
 collaborators:
+ - name: Mark Andersen
+   image: mark_andersen.jpg
+   role: Learning Circle Extraordinaire
+   bio:  "Mark runs adult programming at Chicago Public Library, and has been our partner from the start getting Learning Circles up and running in the Windy City."
+
  - name: Lila Bailey
    image: lila_bailey.jpg
    role: Lawyer
@@ -88,11 +93,6 @@ collaborators:
    bio: "Adam is the co-founder of College Unbound: a college degree program in Providence, RI for first generation college students that values civic engagement and focuses on real-life experiences. He works with P2PU on our Writing for Change initiative, listens to jazz and bakes a mean sourdough."
    twitter: MrAdamBush
 
- - name: Mark Andersen
-   image: mark_andersen.jpg
-   role: Learning Circle Extraordinaire
-   bio:  "Mark runs adult programming at Chicago Public Library, and has been our partner from the start getting Learning Circles up and running in the Windy City."
- 
  - name: John Britton
    image: john_britton.jpg
    role: OG Edupunk
