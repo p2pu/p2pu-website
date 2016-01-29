@@ -109,11 +109,12 @@
 
 		.btn-cta, .btn-subcta {
 			border-color: $white;
-			border-radius: 5px;
+			/*border-radius: 5px;*/
 			text-transform: uppercase;
 			font-family: $font-family-base;
 			font-size: 1em;
 			color: $white;
+            background-color: rgba(0,0,0,0.2);
 			-webkit-transition: all 0.2s ease-out;
 		  -moz-transition: all 0.2s ease-out;
 		  -o-transition: all 0.2s ease-out;
