@@ -125,9 +125,8 @@
 #handbook-nav{
     position: absolute;
     top:-5px;
-    left:-250px;
+    left:-200px;
 }
-
 
 #handbook-nav ul{
 padding: 0 0 15px 0;
