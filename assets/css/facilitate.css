@@ -113,3 +113,9 @@
        background-repeat: no-repeat;
     background-position: right bottom;
 }
+
+@media screen and (max-width: 992px) {
+.jumbotron-conf {
+    margin-top:0px;
+}
+}
