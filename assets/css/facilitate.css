@@ -18,6 +18,15 @@
 }
 }
 
+@media screen and (max-width: 540px) {
+#container {
+    margin-top:250px;
+    padding: 16px;
+}
+
+}
+
+
 #container p {
     padding-bottom: 14px;
 }
@@ -147,8 +156,8 @@ font-size:16px;
 @media screen and (max-width: 540px) {
 #handbook-nav{
     position: absolute;
-    top:-5px;
-    left:4px;
+    top:-215px;
+    left:0;
 }
 #handbook-nav li > a {
     padding:5px 15px;
