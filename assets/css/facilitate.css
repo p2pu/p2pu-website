@@ -23,9 +23,7 @@
     margin-top:250px;
     padding: 0 16px;
 }
-
 }
-
 
 #container p {
     padding-bottom: 14px;
@@ -118,8 +116,6 @@
     margin-bottom: -14px;
 }
 
-
-
 .jumbotron-conf {
     height:320px;
     width:100%;
@@ -152,7 +148,6 @@ font-size:16px;
     max-width:100%;
 }
 
-
 @media screen and (max-width: 540px) {
 #handbook-nav{
     position: absolute;
@@ -162,9 +157,7 @@ font-size:16px;
 #handbook-nav li > a {
     padding:5px 15px;
 }
-
 }
-
 
 a.downloads-links { 
 padding:15px 0 25px 50px;
@@ -175,7 +168,7 @@ display:block;
 a.downloads-links:before { 
     font-family: FontAwesome;
     content: "\f019";
-    font-size:36px;
+    font-size:26px;
     position:absolute;
     top:2px;
     left:15px;
