@@ -131,3 +131,7 @@
 #handbook-nav ul{
 padding: 0 0 15px 0;
 }
+
+.background-image {
+    max-width:720px;
+}
