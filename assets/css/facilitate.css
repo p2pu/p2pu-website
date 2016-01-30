@@ -64,7 +64,7 @@
 }
 .container a {
     font-weight: 700;
-    transition: all 0.15s ease-in-out 0s;
+    transition: all 0.15s ease;
 }
 .container a:link, a:visited {
     color: #04b0aa;
@@ -125,7 +125,7 @@
 #handbook-nav{
     position: absolute;
     top:-5px;
-    left:-200px;
+    left:-160px;
 }
 
 #handbook-nav ul{
