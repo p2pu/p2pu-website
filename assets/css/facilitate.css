@@ -8,6 +8,7 @@
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 15px;
     line-height: 1.8;
+    position:relative;
 }
 
 .container p {
@@ -118,4 +119,11 @@
 .jumbotron-conf {
     margin-top:0px;
 }
+}
+
+
+.container .handbook-nav{
+    position:aboslute;
+    top:10px;
+    left:10px;
 }
