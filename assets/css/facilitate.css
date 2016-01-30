@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-.container {
+#container {
     max-width: 760px;
     padding: 0 24 0 164px;
     color: #515665;
@@ -12,24 +12,24 @@
 }
 
 @media screen and (max-width: 992px) {
-.container {
+#container {
     margin-top:60px;
 }
 }
 
-.container p {
+#container p {
     padding-bottom: 14px;
 }
-.container ul {
+#container ul {
     margin: 0;
     padding: 0 0 15px 32px;
 }
-.container ul.sublist {
+#container ul.sublist {
     list-style-type: circle;
     margin: 0;
     padding: 0 0 15px 64px;
 }
-.container h1, h2, h3, h4, h5, h6 {
+#container h1, h2, h3, h4, h5, h6 {
     color: #fc7100;
     font-family: Arvo,sans-serif;
     font-style: normal;
@@ -37,20 +37,20 @@
     margin: 0;
     padding: 0;
 }
-.container h1 {
+#container h1 {
     font-size: 44px;
     line-height: 1.2;
     padding: 48px 0 30px;
 }
-.container h2 {
+#container h2 {
     font-size: 32px;
     padding-top: 28px;
 }
-.container h3 {
+#container h3 {
     font-size: 24px;
     padding-top: 20px;
 }
-.container h4 {
+#container h4 {
     color: #515665;
     font-family: Arvo,sans-serif;
     font-size: 16px;
@@ -58,53 +58,53 @@
     padding: 12px 0 0;
     text-transform: uppercase;
 }
-.container h6 {
+#container h6 {
     font-family: Arvo,sans-serif;
     font-size: 17px;
     margin: 15px 0 0;
 }
-.container h6 span {
+#container h6 span {
     background-color: #78b60b;
     color: #fff;
     padding: 1px 2px;
 }
-.container a {
+#container a {
     font-weight: 700;
     transition: all 0.15s ease !important;
 }
-.container a:link, a:visited {
+#container a:link, a:visited {
     color: #04b0aa;
 }
-.container a:hover {
+#container a:hover {
     background-color: #04b0aa;
     color: #fff;
 }
-.container .template {
+#container .template {
     color: #78b60b;
     padding-left: 15px;
 }
-.container .bold {
+#container .bold {
     font-weight: 700;
 }
-.container .caps {
+#container .caps {
     text-transform: uppercase;
 }
-.container .list-below {
+#container .list-below {
     margin-bottom: -8px;
 }
-.container .green-heading {
+#container .green-heading {
     color: #78b60b;
 }
-.container .teal {
+#container .teal {
     color: #04b0aa;
 }
-.container .green {
+#container .green {
     color: #78b60b;
 }
-.container .space-top {
+#container .space-top {
     padding-top: 15px;
 }
-.container .list-below {
+#container .list-below {
     margin-bottom: -14px;
 }
 
