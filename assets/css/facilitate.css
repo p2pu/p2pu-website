@@ -167,16 +167,17 @@ font-size:16px;
 
 
 a.downloads-links { 
-padding:15px 0 30px 30px;
+padding:15px 0 25px 50px;
 position:relative;
+display:block;
 }
 
 a.downloads-links:before { 
     font-family: FontAwesome;
     content: "\f019";
-    font-size:30px;
+    font-size:36px;
     position:absolute;
-    top:0;
-    left:0;
+    top:2px;
+    left:15px;
 }
 
