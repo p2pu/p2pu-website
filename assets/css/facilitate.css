@@ -109,5 +109,5 @@
     background-color:#fdbc1f;
     margin-top:-60px;
    margin-bottom:48px;
-   background-image:(url:"{{site.baseurl}}/http://i.imgur.com/pAD5DqS.jpg");
+   background-image:url("http://i.imgur.com/pAD5DqS.jpg");
 }
