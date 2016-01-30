@@ -106,7 +106,8 @@
 .jumbotron-conf {
     height:320px;
     width:100%;
-    background-color:red;
+    background-color:#fdbc1f;
     margin-top:-60px;
    margin-bottom:48px;
+   background-image:(url:"{{site.baseurl}}/http://i.imgur.com/pAD5DqS.jpg");
 }
