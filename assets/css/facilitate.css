@@ -124,6 +124,6 @@
 
 #handbook-nav{
     position: absolute;
-    top:10px;
-    left:10px;
+    top:-5px;
+    left:-250px;
 }
