@@ -166,9 +166,17 @@ font-size:16px;
 }
 
 
+a.downloads-links { 
+padding:15px 0 30px 30px;
+position:relative;
+}
+
 a.downloads-links:before { 
     font-family: FontAwesome;
     content: "\f019";
-    font-size:15px;
+    font-size:30px;
+    position:absolute;
+    top:0;
+    left:0;
 }
 
