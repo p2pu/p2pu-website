@@ -21,7 +21,7 @@
 @media screen and (max-width: 540px) {
 #container {
     margin-top:250px;
-    padding: 16px;
+    padding: 0 16px;
 }
 
 }
