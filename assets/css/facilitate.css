@@ -2,13 +2,19 @@
     box-sizing: border-box;
 }
 .container {
-    max-width: 720px;
-    padding: 0 24px;
+    max-width: 760px;
+    padding: 0 24 0 164px;
     color: #515665;
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 15px;
     line-height: 1.8;
     position:relative;
+}
+
+@media screen and (max-width: 992px) {
+.container {
+    margin-top:60px;
+}
 }
 
 .container p {
@@ -125,7 +131,7 @@
 #handbook-nav{
     position: absolute;
     top:-5px;
-    left:-160px;
+    left:4px;
 }
 
 #handbook-nav ul{
