@@ -128,7 +128,6 @@
 }
 }
 
-
 #handbook-nav{
     position: absolute;
     top:-5px;
@@ -142,4 +141,17 @@ font-size:16px;
 
 .background-image, .starting-image, .running-image, .downloads-image, .sample-circle {
     max-width:100%;
+}
+
+
+@media screen and (max-width: 540px) {
+#handbook-nav{
+    position: absolute;
+    top:-5px;
+    left:4px;
+}
+#handbook-nav li > a {
+    padding:5px 15px;
+}
+
 }
