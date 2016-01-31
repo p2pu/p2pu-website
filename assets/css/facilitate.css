@@ -179,8 +179,7 @@
     padding:12px;
     max-width:47%;
     vertical-align:top;
-    margin-right:15px;
-    margin-bottom:15px;
+    margin:0 15px 15px 0;
     min-width:288px;
 }
 
@@ -189,8 +188,9 @@
     font-style:italic;
     background-color:#ddd;
     border-radius:8px;
-    padding:16px;
-    margin:16px 0  16px 0;
+    padding:4px 8px;
+    margin:36px 0  16px;
+    font-weight:700;
 }
 
 /*Navigation*/
