@@ -116,6 +116,8 @@
     margin-bottom: -14px;
 }
 
+
+/*Jumbotron*/
 .jumbotron-conf {
     height:320px;
     width:100%;
@@ -133,6 +135,28 @@
 }
 }
 
+.jumbotron-center{
+    margin:0 auto;
+}
+
+.jumbotron-subtitle{
+    color:#fff;
+    font-size:15px;
+    font-family:Arvo;
+}
+
+.jumbotron-title{
+    color:#df5c20;
+    font-size:15px;
+    font-family:Arvo;
+}
+
+
+
+
+
+/*Navigation*/
+
 #handbook-nav{
     position: absolute;
     top:-5px;
@@ -142,10 +166,6 @@
 #handbook-nav ul{
 padding: 0 0 15px 0;
 font-size:16px;
-}
-
-.background-image, .starting-image, .running-image, .downloads-image, .sample-circle {
-    max-width:100%;
 }
 
 @media screen and (max-width: 540px) {
@@ -158,6 +178,14 @@ font-size:16px;
     padding:5px 15px;
 }
 }
+
+/* Images*/
+.background-image, .starting-image, .running-image, .downloads-image, .sample-circle {
+    max-width:100%;
+}
+
+
+/*Downloads*/
 
 a.downloads-links { 
 padding:15px 0 25px 50px;
