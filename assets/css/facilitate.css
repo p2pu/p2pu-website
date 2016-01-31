@@ -166,6 +166,19 @@
 }
 
 
+/*Quotes*/
+.qote-container{
+    max-width:100%
+}
+.qote-left, .qote-right{
+    display:inline-block;
+    font-size:12px;
+    font-style:italic;
+    background-color:#ddd;
+    border-radius:2px;
+    padding:12px;
+}
+
 
 /*Navigation*/
 
