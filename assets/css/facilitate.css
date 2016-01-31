@@ -177,6 +177,8 @@
     background-color:#ddd;
     border-radius:2px;
     padding:12px;
+    max-width:45%;
+    vertical-align:top;
 }
 
 
