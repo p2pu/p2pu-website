@@ -125,7 +125,7 @@
     margin-top:-60px;
    margin-bottom:48px;
    background-image:url("http://i.imgur.com/pAD5DqS.jpg");
-       background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-position: right bottom;
 }
 
@@ -159,7 +159,11 @@
     display:block;
 }
 
-
+@media screen and (max-width: 625px) {
+.jumbotron-conf {
+   background-image:url("http://i.imgur.com/wIpZWgT.jpg");
+}
+}
 
 
 
