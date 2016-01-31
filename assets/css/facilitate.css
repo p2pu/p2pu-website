@@ -167,10 +167,10 @@
 
 
 /*Quotes*/
-.qote-container{
+.quote-container{
     max-width:100%
 }
-.qote-left, .qote-right{
+.quote-left, .quote-right{
     display:inline-block;
     font-size:12px;
     font-style:italic;
