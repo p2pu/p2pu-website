@@ -138,19 +138,25 @@
 .jumbotron-center{
     margin:0 auto;
     max-width:860px;
-    padding:0 24px 0 24px;
+    padding:60px 270px 0 24px;
 }
 
 .jumbotron-subtitle{
     color:#fff;
-    font-size:15px;
-    font-family:Arvo;
+    font-size:32px;
+    font-family: Arvo,sans-serif;
+    font-weight:700;
+    line-height:1.6;
+    display:block;
 }
 
 .jumbotron-title{
     color:#df5c20;
-    font-size:15px;
-    font-family:Arvo;
+    font-size:50px;
+    font-family: Arvo,sans-serif;
+    line-height:1;
+    font-weight:700;
+    display:block;
 }
 
 
