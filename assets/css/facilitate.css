@@ -137,6 +137,8 @@
 
 .jumbotron-center{
     margin:0 auto;
+    max-width:860px;
+    padding:0 24px 0 24px;
 }
 
 .jumbotron-subtitle{
