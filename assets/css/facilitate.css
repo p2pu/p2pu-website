@@ -227,7 +227,7 @@ font-size:16px;
 @media screen and (max-width: 540px) {
 #handbook-nav{
     position: absolute;
-    top:-215px;
+    top:-235px;
     left:0;
 }
 #handbook-nav li > a {
