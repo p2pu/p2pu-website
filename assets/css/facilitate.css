@@ -168,7 +168,12 @@
 
 /* Call to action*/
 
-a.call-to-action {padding:15px; background-color:#04b0aa; }
+a.call-to-action {
+    padding:15px; 
+    background-color:#04b0aa;
+     border-radius:8px;
+    
+}
 
 /*Quotes*/
 .quote-container{
