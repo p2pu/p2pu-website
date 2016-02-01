@@ -168,10 +168,11 @@
 
 /* Call to action*/
 
-a.call-to-action {
+#container a.call-to-action:link, a.call-to-action:visited {
     padding:15px; 
     background-color:#04b0aa;
      border-radius:8px;
+     color:#ffffff;
     
 }
 
