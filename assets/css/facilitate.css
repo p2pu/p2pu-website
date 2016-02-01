@@ -166,6 +166,10 @@
 }
 
 
+/* Call to action*/
+
+a.call-to-action {padding:15px; background-color:red;}
+
 /*Quotes*/
 .quote-container{
     max-width:100%
