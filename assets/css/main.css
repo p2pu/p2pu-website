@@ -22,18 +22,6 @@ a         { color: #2a7ae2; text-decoration: none; }
 a:hover   { color: #000; text-decoration: underline; }
 a:visited { color: #205caa; }
 
-/*Jumbotron*/
-.jumbotron {
-    height:320px;
-    width:100%;
-    background-color:#fdbc1f;
-    margin-top:-60px;
-   margin-bottom:48px;
-   /*background-image:url("http://i.imgur.com/pAD5DqS.jpg");
-    background-repeat: no-repeat;
-    background-position: right bottom;*/
-}
-
 /* Utility */
 
 .wrap:before,
@@ -191,6 +179,17 @@ a:visited { color: #205caa; }
   font-size: 15px;
   color: #818181;
   margin-top: 5px;
+}
+
+.post-header .yellow {
+    height:320px;
+    width:100%;
+    background-color:#fdbc1f;
+    margin-top:-60px;
+   margin-bottom:48px;
+   /*background-image:url("http://i.imgur.com/pAD5DqS.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom;*/
 }
 
 .post-content { margin: 0 0 30px; }
