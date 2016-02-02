@@ -181,17 +181,6 @@ a:visited { color: #205caa; }
   margin-top: 5px;
 }
 
-.post-header .yellow {
-    height:320px;
-    width:100%;
-    background-color:#fdbc1f;
-    margin-top:-60px;
-   margin-bottom:48px;
-   /*background-image:url("http://i.imgur.com/pAD5DqS.jpg");
-    background-repeat: no-repeat;
-    background-position: right bottom;*/
-}
-
 .post-content { margin: 0 0 30px; }
 
 .post-content > * { margin: 20px 0; }
