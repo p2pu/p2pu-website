@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
 }
+
+#handbook-nav.affix {
+    position: fixed;
+}
+
 #container {
     max-width: 860px;
     padding: 0 24px 0 164px;
