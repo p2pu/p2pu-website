@@ -318,3 +318,8 @@ a.downloads-links:before {
 a.downloads-links:last-of-type { 
 margin-bottom:90px;
 }
+
+
+.col-md-4.col-md-offset-1 > h4{
+    color:#fcfcfc;
+}
