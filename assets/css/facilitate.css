@@ -244,6 +244,13 @@ padding: 0 0 15px 0;
 font-size:16px;
 }
 
+#handbook-nav li > a{
+transition:all 0.15s linear 0s;
+}
+
+#handbook-nav li > a:focus, #handbook-nav li > a:hover{
+background-color:#fdbc1f;
+}
 
 
 @media screen and (max-width: 992px) {
@@ -268,10 +275,18 @@ font-size:16px;
 }
 #handbook-nav-mobile li > a {
     padding:4px 15px;
+    transition:all 0.15s linear 0s;
 }
 #handbook-nav{
     display:none;
 }
+
+
+#handbook-nav-mobile li > a:focus, #handbook-nav-mobile li > a:hover{
+background-color:#fdbc1f;
+}
+
+
 
 }
 
