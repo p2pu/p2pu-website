@@ -7,7 +7,7 @@
 }
 
 #container {
-    max-width: 860px;
+    max-width: 760px;
     padding: 0 24px 0 24px;
     color: #515665;
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -147,7 +147,7 @@
 
 .jumbotron-center{
     margin:0 auto;
-    max-width:860px;
+    max-width:760px;
     padding:60px 270px 0 24px;
 }
 
