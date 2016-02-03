@@ -236,6 +236,7 @@ margin-bottom:45px;
     position: absolute;
     top:354px;
     left:16px;
+    z-index:1000;
 }
 
 #handbook-nav ul{
