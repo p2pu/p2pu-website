@@ -243,6 +243,15 @@ padding: 0 0 15px 0;
 font-size:16px;
 }
 
+
+
+@media screen and (max-width: 992px) {
+#handbook-nav{
+    top:370px;
+}
+}
+
+
 @media screen and (max-width: 540px) {
 #handbook-nav{
     position: absolute;
