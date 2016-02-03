@@ -18,9 +18,22 @@
     margin:0 auto;
 }
 
+
+@media screen and (max-width: 1030px) {
+#container {
+    margin-top:60px;
+    padding: 0 24px 0 164px;
+}
+}
+
+
 @media screen and (max-width: 992px) {
 #container {
     margin-top:60px;
+}
+#handbook-nav{
+    position: absolute;
+    top:370px;
 }
 }
 
