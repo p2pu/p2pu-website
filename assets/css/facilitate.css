@@ -4,6 +4,7 @@
 
 #handbook-nav.affix {
     position: fixed;
+    top:6px;
 }
 
 #container {
