@@ -317,11 +317,14 @@ a.downloads-links:last-of-type {
 margin-bottom:90px;
 }
 
-
+/*Meta footer color fix*/
 .col-md-4.col-md-offset-1 > h4{
     color:#fcfcfc;
 }
 
+
+
+/*Software icons*/
 .hpicon{
     padding: 0 4px;
     font-size:17px;
