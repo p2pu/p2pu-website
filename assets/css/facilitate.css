@@ -246,6 +246,7 @@ font-size:16px;
 
 #handbook-nav li > a{
 transition:all 0.15s linear 0s;
+font-weight:700;
 }
 
 #handbook-nav li > a:focus, #handbook-nav li > a:hover{
@@ -276,6 +277,7 @@ font-size:16px;
 #handbook-nav-mobile li > a {
     padding:4px 15px;
     transition:all 0.15s linear 0s;
+    font-weight:700;
 }
 #handbook-nav{
     display:none;
@@ -320,4 +322,21 @@ margin-bottom:90px;
     color:#fcfcfc;
 }
 
-.hpicon{padding: 0 4px;}
+.hpicon{
+    padding: 0 4px;
+    font-size:17px;
+}
+
+p.highlightp { 
+    position:relative;
+    left:30px;
+}
+
+p.highlightp:before { 
+    font-family: FontAwesome;
+    content: "\f108";
+    font-size:26px;
+    position:absolute;
+    top:2px;
+    left:15px;
+}
