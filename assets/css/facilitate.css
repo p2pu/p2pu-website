@@ -329,14 +329,15 @@ margin-bottom:90px;
 
 p.highlightp { 
     position:relative;
-    left:30px;
+    margin-left:40px;
 }
 
 p.highlightp:before { 
     font-family: FontAwesome;
     content: "\f108";
-    font-size:26px;
+    font-size:24px;
     position:absolute;
-    top:2px;
-    left:15px;
+    top:-7px;
+    left:-37px;
+    color: #04b0aa;
 }
