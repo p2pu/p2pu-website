@@ -7,9 +7,15 @@
 - name: GovLab
   image: /assets/images/index/partners/govlab-logo.png
 
+- name: HCIL
+  image: /assets/images/index/partners/hcil-logo.png
+  
 - name: MIT Media Lab
   image: /assets/images/index/partners/medialab-logo.png
 
 - name: Mozilla Foundation
   image: /assets/images/index/partners/mozilla-logo.png
 
+- name: Open Knowledge
+  image: /assets/images/index/partners/okfn-logo.png
+  
