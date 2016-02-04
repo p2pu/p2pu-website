@@ -247,24 +247,26 @@
 		<div class="container">
       <div class="col-md-12">
 				<h4>Our collaborators and clients include:</h4>
-				
 				<div class="partners-inner">
 					{% for partner in site.data.partners %}
-						<imgsrc="{{ site.baseurl }}{{ partner.image }}" alt="{{ partner.name }} Logo" width="150" class="col-md-2"/>
+						<img
+                src="{{ site.baseurl }}{{ partner.image }}"
+								alt="{{ partner.name }} Logo" width="150"
+								class="col-md-2" />
 					{% endfor %}
 				</div>
       </div>
-      
       <!--<div class="col-md-4">
 				<h4>Our funders include:</h4>
-				
 				<div class="partners-inner">
 					{% for partner in site.data.funders %}
-						<imgsrc="{{ site.baseurl }}{{ partner.image }}" alt="{{ partner.name }} Logo" width="150" class="col-md-2" />
+						<img
+                src="{{ site.baseurl }}{{ partner.image }}"
+								alt="{{ partner.name }} Logo" width="150"
+								class="col-md-2" />
 					{% endfor %}
 				</div>
       </div>-->
-      
     </div>
 	</section>
 
