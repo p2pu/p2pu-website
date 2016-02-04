@@ -1,6 +1,7 @@
 - name: Hewlett Foundation
   image: /assets/images/index/partners/hewlett-logo.png
-  URL: http://www.hewlett.org/
+  url: "http://www.hewlett.org/"
   
 - name: Knight Foundation
   image: /assets/images/index/partners/knight-logo.png
+  url: "http://knightfoundation.org/"
