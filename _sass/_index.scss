@@ -333,10 +333,25 @@ nav {
 		}
 	}
 
-    .mailing-list {
+    	.mailing-list {
 		background-color: #F3F4F8;
-    }
+	 }
 
+	.people-link {
+			font-weight: bold;
+			padding-right: 1.5em;
+			position: relative;
+			&:before {
+				font-family: FontAwesome;
+				position: absolute;
+				right: 0;
+				top: 10%;
+			}
+			@media (min-width: $screen-xs-min) {
+				//@extend .btn;
+			}
+		}
+		
 	.who {
 		background: url(../images/index/community.png) top right no-repeat;
 		background-color: #F3F4F8;
@@ -352,7 +367,7 @@ nav {
 			text-align: left;
 		}
 
-		.people-link {
+		/*.people-link {
 			font-weight: bold;
 			padding-right: 1.5em;
 			position: relative;
@@ -365,7 +380,7 @@ nav {
 			@media (min-width: $screen-xs-min) {
 				//@extend .btn;
 			}
-		}
+		}*/
 	}
 
 	.courses {
