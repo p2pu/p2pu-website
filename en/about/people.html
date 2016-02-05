@@ -11,23 +11,7 @@ category: people
 			{% assign multi_three=forloop.index0|modulo:3 %}
 			{% if multi_three == 0 %}
 				<div class="row">{% endif %}
-			<div class="p2pu-person col-lg-4 col-sm-6">
-				<img class="img-circle pull-right people-img" src=
-						"{{ "/assets/images/people/" |append: person.image |prepend: site.baseurl }}"
-				     alt="{{ person.name }} Image">
-
-				<h3>{{ person.name }}<br>
-					<small>{{ person.role }}</small>
-				</h3>
-				<p>{{ person.bio }}</p>
-				{% if person.twitter %}
-					<span><a href="https://twitter.com/{{ person.twitter }}" target="_blank"><i
-							class="fa fa-twitter"></i> {{ person.twitter }}</a></span>
-				{% endif %}
-				{% if person.url %} |
-					<span><a href="{{ person.url }}" target="_blank">{{ person.url | replace_first: 'http://' '' }}</a></span>
-				{% endif %}
-			</div>
+          {% include person.html %}
 			{% if multi_three == 2 or forloop.last %}</div>{% endif %}
 		{% endfor %}
 	</div>
@@ -39,23 +23,7 @@ category: people
 			{% assign multi_three=forloop.index0|modulo:3 %}
 			{% if multi_three == 0 %}
 				<div class="row">{% endif %}
-			<div class="p2pu-person col-lg-4 col-sm-6">
-				<img class="img-circle pull-right people-img" src=
-						"{{ "/assets/images/people/" |append: person.image |prepend: site.baseurl }}"
-				     alt="{{ person.name }} Image">
-
-				<h3>{{ person.name }}<br>
-					<small>{{ person.role }}</small>
-				</h3>
-				<p>{{ person.bio }}</p>
-				{% if person.twitter %}
-					<span><a href="https://twitter.com/{{ person.twitter }}" target="_blank"><i
-							class="fa fa-twitter"></i> {{ person.twitter }}</a></span>
-				{% endif %}
-				{% if person.url %} |
-					<span><a href="{{ person.url }}" target="_blank">{{ person.url | replace_first: 'http://' '' }}</a></span>
-				{% endif %}
-			</div>
+          {% include person.html %}
 			{% if multi_three == 2 or forloop.last %}</div>{% endif %}
 		{% endfor %}
 	</div>
@@ -68,23 +36,7 @@ category: people
 			{% assign multiply=forloop.index0|modulo:3 %}
 			{% if multiply == 0 %}
 				<div class="row">{% endif %}
-			<div class="p2pu-person col-lg-4 col-sm-6">
-				<img class="img-circle pull-right people-img" src=
-						"{{ "/assets/images/people/" |append: person.image |prepend: site.baseurl }}"
-				     alt="{{ person.name }} Image">
-
-				<h3>{{ person.name }} <br>
-					<small>{{ person.role }}</small>
-				</h3>
-				<p>{{ person.bio }}</p>
-				{% if person.twitter %}
-					<span><a href="https://twitter.com/{{ person.twitter }}" target="_blank"><i
-							class="fa fa-twitter"></i> {{ person.twitter }}</a></span>
-				{% endif %}
-				{% if person.url %}|
-					<span><a href="{{ person.url }}" target="_blank">{{ person.url | replace_first: 'http://' '' }}</a></span>
-				{% endif %}
-			</div>
+          {% include person.html %}
 			{% if multiply == 2 or forloop.last %}</div>{% endif %}
 		{% endfor %}
 	</div>

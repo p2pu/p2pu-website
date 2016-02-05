@@ -1,8 +1,8 @@
 # Site settings
-title: Peer 2 Peer University
+title: P2PU
 email: admin@p2pu.org
 description: "Taking online courses together, in libraries, for free."
-baseurl:
+baseurl: /homepage-workspace
 url: "http://p2pu.org"
 languages: ['en']
 default_language: 'en'
@@ -19,4 +19,6 @@ sass:
 env: prod
 
 exclude: [Guardfile, Gemfile, Gemfile.lock, README, s3_website.yml]
+prose:
+  media: assets/images
 

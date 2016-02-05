@@ -1,48 +1,52 @@
 past:
-  - title: Learning Circles @ CPL
-    image: knight-news.png
-    short-description: "Building offline study groups for online courses in Chicago"
-    url: http://chicago.p2pu.org/
-  
-  - title: Community Design 101
-    image: community101.png
-    short-description: "develop your course using the methodologies we use at P2PU to build
-    learning communities on the web."
+  - title: Course in a Box
+    image: Course_in_a_Box.jpg
+    short-description: "Develop your own online course using the methodologies we use at P2PU to build
+    our own web learning communities."
     url: http://howto.p2pu.org/
 
-  - title: Writing For Change
-    image: w4c.png
-    short-description: "A free course to help you enact social change. Learn how
-    to write grant proposals, applications and op-eds from the community."
-    url: http://writing4change.p2pu.org/
-
-  - title: Webmaker Training
-    image: ttw.png
-    short-description: "Helping one another teach web literacy, digital skills and open practices.
-    Teacher training, the participatory, open way."
-    url: https://training.webmakerprototypes.org/en/
-
+  - title: Mechanical MOOC
+    image: mooc_e.jpg
+    short-description: "Once you want to run your course, let our robot friend take over the logistics. Mechanical MOOC take cares of sign ups, emails, and reminders."
+    url: https://github.com/p2pu/mechanical-mooc
+    
+  - title: Community Courses
+    image: Community_courses.jpg
+    short-description: "The home for courses that the P2PU community has designed and run over the years."
+    url: https://courses.p2pu.org/en/groups/list/community/
+    
+  - title: Badges
+    image: badges.png
+    short-description: "Badges spark feedback between experts and learners about their learning projects. Create and share badges to symbolize these conversations."
+    url: http://badges.p2pu.org
+    
   - title: Learning Creative Learning
     image: lclmooc.png
-    short-description: "Like-minded educators and learners from around the world share their
-    ideas about creative learning."
+    short-description: "A global community for Like-minded educators and learners to share their
+    ideas about creative learning. Run in partnership with MIT Media Lab."
     url: http://learn.media.mit.edu/lcl/
 
   - title: Play With Your Music
     image: playwithyourmusic.png
-    short-description: "Learn to mix your own songs using the newest tools on the web,
-    you can now do so as part of “Play With Your Music” ."
+    short-description: "An online community dedicating to mix your own songs using the newest tools on the web. Run in partnership with NYU."
     url: http://playwithyourmusic.org
 
   - title: Deeper Learning MOOC
     image: dlmooc.png
-    short-description: "DLMOOC is aimed at teachers, school leaders, and other educators who are
-    interested in encouraging deeper learning in their schools and classrooms."
+    short-description: "An online community designed for teachers, school leaders, and other educators who are
+    interested in encouraging deeper learning in their schools and classrooms. Run in partnership with High Tech High."
     url: http://dlmooc.deeper-learning.org/
 
-  - title: Badges
-    image: badges.png
-    short-description: "Badges spark feedback between Experts and Learners about their learning projects. A Badge is symbol of mastery that comes out of those conversations."
-    url: http://badges.p2pu.org
+  - title: Writing For Change
+    image: w4c.png
+    short-description: "A free course to help you enact social change. Learn how
+    to write grant proposals, applications and op-eds from the community. Run in partnership with College Unbound."
+    url: http://writing4change.p2pu.org/
 
+  - title: Webmaker Training
+    image: ttw.png
+    short-description: "Help one another teach web literacy, digital skills and open practices.
+    Teacher training, the participatory, open way."
+    url: https://training.webmakerprototypes.org/en/
+    
 featured:

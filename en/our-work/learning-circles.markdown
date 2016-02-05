@@ -1,7 +1,7 @@
 ---
 layout: learning-circles
 title: Learning Circles
-permalink: /en/facilitate/
+permalink: /en/facilitate1/
 extra_js:
 - signup.js
 js_invocation: Signup
