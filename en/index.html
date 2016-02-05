@@ -1,7 +1,4 @@
 ---
-extra_js:
-- signup.js
-js_invocation: Signup
 ---
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -38,15 +35,15 @@ js_invocation: Signup
 				<a class="navbar-toggle" data-toggle="collapse"
 				   data-target="#nav-links-collapse">
 					<i class="fa fa-bars"></i> </a>
-				<a class="navbar-logo pull-left" href="{{ site.baseurl }}">
+				<a class="navbar-logo pull-left" href="{{ site.baseurl }}/en/">
 					<img src="{{ "/assets/images/p2pu-logo-2x.png" | prepend: site.baseurl }}"
 					alt="P2PU Logo" width="122" class="color hidden" />
 					<img src="{{ "/assets/images/p2pu-logo-2x-white.png" | prepend: site.baseurl }}"
 					alt="P2PU Logo" width="122" class="white" />
 				</a>
-				<a class="p2pu-tab" href="#">
+				<!--a class="p2pu-tab" href="#">
 					<i class="fa fa-chevron-down p2pu-tab-icon"></i>
-				</a>
+				</a-->
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,7 +52,12 @@ js_invocation: Signup
 				<ul class="nav navbar-nav navbar-right">
 					{% for link in site.data.navigation.en %}
 						<li class="{{ active }}{% if link.submenu %} dropdown has-subnav{% endif %}">
+              {% assign urlstart=link.url|split:"/"|first %}
+							{% if urlstart contains "http" %}
+              <a href="{{ link.url }}">
+              {% else %}
 							<a href="{{ site.baseurl }}{{ link.url }}">
+              {% endif %}
 								{{ link.text }}
 							</a>
 							{% if link.submenu %}
@@ -97,24 +99,16 @@ js_invocation: Signup
 					</div>
 					<div class="actions col-md-7">
 						<header>
-							Take online courses together, in libraries, for free.
+							ONLINE COURSES, OFFLINE.
 						</header>
-						<p class="subheader">Open tools + Community + Design + Support</p>
+						<p class="subheader">Introducing Learning Circles</p>
 
 					<p class="text-center">
 
-						<a class="btn btn-lg btn-cta" data-toggle="modal" data-target="#signup-modal">Join our mailing list</a>
+						<a class="btn btn-lg btn-subcta" href="https://learningcircles.p2pu.org/en/">Join a Learning Circle</a>
 
-						<a class="btn btn-lg btn-subcta" href="/en/facilitate/">Run your own learning circle</a>
+            <a class="btn btn-lg btn-subcta" href="{{site.baseurl}}/en/facilitate/">Run a Learning Circle</a>
 					</p>
-						<p >
-							<!--h3 class="text-center learn-more">
-								<a href="{{ site.baseurl }}/en/learning-circles/"  class="learn-more-link">
-									Learn More
-									<i class="fa fa-angle-double-right"></i>
-								</a>
-							</h3-->
-						</p>
 					</div>
 				</div>
 			</div>
@@ -125,227 +119,176 @@ js_invocation: Signup
 
 </section>
 
-{% include signup.html %}
-
 <section class="page-content">
+	<section>
+		<div class="container">
+			<h3>Learning Circles are peer-led study groups for learners who want to take online courses together and in-person.</h3>
+			<h3>Learning Circles are:</h3>
+			<br>
+			
+			<div class="row feature left">
+				<div class="image col-md-6" target="_blank"> <img
+					src="{{site.baseurl}}/assets/images/index/free_nolabel.jpg"
+					alt="Free image">
+        			</div>
 
-	<div class="container">
-		<section class="know-believe row">
-			<div class="col-md-5 left">
-				<div class="text-center divider-left">
-					<span><img src="{{ site.baseurl }}/assets/images/index/heart-icon.png" alt="We belive in this" height="35" /></span>
-					<hr />
+				<div class="content col-md-6">
+					<h3>Social</h3>
+					<p>
+						Learning Circles provide a social wrapper for online learning, supported by a designated 
+						facilitator (who could be you!). Far more than just delivering content, Learning Circles support 
+						the development of interpersonal skills and provide a space for participants to meaningfully 
+						engage with both online educational resources and with their peers. 
+					</p>
+				</div>
+			</div>
+			
+			<div class="row feature right">
+				<div class="image col-md-6"> <img
+						src="{{site.baseurl}}/assets/images/index/social_nolabel.jpg"
+						alt="Community support image"> 
 				</div>
 
-				<h3 class="title text-center">We Believe:</h3>
-				<ul class="fa-ul">
-						<li><i class="fa-li fa fa-check-square"></i>
-						<h4>The power of community is transformative</h4>
-						The future of learning is not in "disruptive" technologies. It lies in the power of
-						people exploring together.
-					</li>
-					<li><i class="fa-li fa fa-check-square"></i>
-						<h4>Open is the best way to work</h4>
-						Anyone can join, make or contribute to a P2PU experience. We are a 100% open
-						organisation.
-					</li>
-					<li><i class="fa-li fa fa-check-square"></i>
-						<h4>Peers working together can move mountains</h4>
-						Our courses nurture sharing, connection, and help folks feel generally comfortable on
-						the internet.
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-2 visible-md-block visible-lg-block">
-				<div class="text-center divider-center"><span><i
-						class="fa fa-adjust fa-1x fa-rotate-90"></i></span>
+				<div class="content col-md-6">
+					<h3>Local</h3>
+					<p>
+						Delivered locally, Learning Circles bring online learning down to Earth. By identifying 
+						courses and subject matter relevant to specific communities and marketing through 
+						offline channels, Learning Circles engage individuals who wouldn’t otherwise benefit from online 
+						education and transform physical spaces into community learning hubs. 
+					</p>
 				</div>
 			</div>
-			<div class="col-md-5 right">
-				<div class="text-center"><span><img src="{{ site.baseurl }}/assets/images/index/check-icon.png" alt="We know this" height="35" /></span>
-					<hr />
+			
+			<div class="row feature left">
+				<div class="image col-md-6">
+          				<img src="{{ site.baseurl }}/assets/images/index/proven_nolabel.jpg"
+					alt="Reports image">
+        			</div>
+
+				<div class="content">
+					<h3>Free</h3>
+					<p>
+						Built on open source technology and utilizing free online educational resources such as MOOCs, Learning 
+						Circles connect individuals directly to high-quality learning experiences, for free.
+						<a href="learningcircles.p2pu.org/courses">Check out</a> a selection of courses we've used
+						in the past.
+					</p>
 				</div>
-				<h3 class="title text-center">We Know:</h3>
-				<ul class="fa-ul">
-					<li><i class="fa-li fa fa-check-square"></i>
-						<h4>Real people sustain engagement</h4>
-						Working with your peers keeps you engaged in a course.
-					</li>
-					<li><i class="fa-li fa fa-check-square"></i>
-						<h4>Feedback improves projects</h4>
-						Deep, substantative feedback makes your project better.
-					</li>
-					<li><i class="fa-li fa fa-check-square"></i>
-						<h4>Comfort leads to learning</h4>
-						When you tinker, play and feel comfortable, you spend more time on a learning project.
-					</li>
-					<li><i class="fa-li fa fa-check-square"></i>
-						<h4>There are several paths to the answer</h4>
-						People learn in different ways, and we design for diversity.
-					</li>
-				</ul>
 			</div>
-		</section>
-	</div>
+			
+			<div class="row feature right">
+				<div class="image col-md-6">
+          				<img src="{{ site.baseurl }}/assets/images/index/local_nolabel.jpg"
+					alt="Community support image"> 
+        			</div>
+
+				<div class="content col-md-6">
+					<h3>Proven</h3>
+					<p>
+						A 2015 pilot across 11 branches of Chicago Public Library demonstrated that Learning Circles can increase retention for online
+						learning tenfold, reach entirely new audiences of first-time online learners, and foster an environment that learners, facilitators,
+						and library staff are eager to repeat.
+					</p>
+				</div>
+			</div>
+			
+			<div class="row feature left">
+				<div class="image col-md-6">
+        				 <img src="{{ site.baseurl }}/assets/images/index/yours_nolabel.jpg"
+					alt="Reports image">
+        			</div>
+
+				<div class="content">
+					<h3>Yours</h3>
+					<p>
+						We believe that anybody can run a Learning Circle, and so we have developed a Learning Circle toolkit
+						complete with software, facilitation guides, curated course lists, and marketing templates. Whether you 
+						want to run just one Learning Circle in your home or organize dozens across an entire library system, the toolkit 
+						is the place to start. 
+					</p>
+					<a class="people-link fa-long-arrow-right" href="https://www.p2pu.org/en/facilitate/"> 
+					Run a Learning Circle now</a>
+				</div>
+			</div>	
+		</div>
+	</section>
+	
 	<section class="who">
 		<div class="container">
 			<div class="col-md-8">
 				<h3>Who are we?</h3>
-				<h4>A passionate & powerful team of mostly volunteers.</h4>
-
+				<h4>A passionate and powerful team of colleagues and volunteers.</h4>
 				<p>
-					P2PU would be nothing without our inspiring community, who are the core of our open
-					activities. This community is made up of people from all over the world, who are working
-					together to build a new kind of university online. Sound good? Then we'd love you to join
-					us.
+					Our small and dedicated team is based in Africa, Europe, and North America. We work closely with the global P2PU community
+					to deliver our programs and redefine higher education, both online and offline. Sound good? Then we'd love to meet you.
 				</p>
+					<a class="people-link fa-long-arrow-right" href="#" data-toggle="modal" data-target="#signup-modal"> 
+					Join our mailing list</a>
+			
+				<h3>Work with us.</h3>
+				<h4>No project is too big or too small.</h4>
+				<p>	
+					Want help integrating Learning Circles into your organization? P2PU consults for organizations 
+					looking to get started. Our services include: facilitator workshops, 
+					course development, custom program design, ongoing facilitator support, web hosting, and 
+					software integration.
+				</p>	
+					<a class="people-link fa-long-arrow-right" href="mailto:thepeople@p2pu.org?Subject=Hi%20there!"> 
+					Get in touch</a>
+				
+				
 
-				<a class="people-link fa-long-arrow-right" href="{{ site.baseurl }}/en/about/people/"> Meet
-					the community </a>
 			</div>
-		</div>
+	  </div>
 	</section>
 
 	<section>
 		<div class="container">
-			<h3>How we work</h3>
-
-			<div class="row feature left">
-				<a href="https://community.p2pu.org/t/please-introduce-yourself/28/70"
-				   class="image col-md-6 fa-beer" target="_blank"> <img
-						src="{{ "/assets/images/index/community.jpg"|prepend:site.baseurl }}"
-						alt="Community support image"> </a>
-
-				<div class="content col-md-6">
-					<h3 class="header">We are a community</h3>
-
-					<p>
-						We're a group of learners, coders, thinkers, practitioners, educators and organizers. We
-						come together on our Discourse community to share resources, recommendations and support
-						each other to build learning communities.
-					</p>
+      <div class="partners col-md-9">
+				<h4>Our collaborators and clients include:</h4>
+				<div class="partners-inner">
+					{% for partner in site.data.partners %}
+						<img
+                src="{{ site.baseurl }}{{ partner.image }}"
+								alt="{{ partner.name }} Logo" width="110"/>
+					{% endfor %}
 				</div>
-			</div>
-			<div class="row feature right">
-				<a href="#courses"
-				   class="image col-md-6 fa-cubes" target="_blank"> <img
-						src="{{ "/assets/images/index/community-online.png"|prepend:site.baseurl }}"
-						alt="Community support image"> </a>
-
-				<div class="content col-md-6">
-					<h3 class="header">We build learning communities online</h3>
-
-					<p>
-						We craft great online learning experiences using the best tools for the job.
-					</p>
+      </div>
+      <div class="partners col-md-3">
+				<h4>Our funders include:</h4>
+				<div class="partners-inner">
+					{% for partner in site.data.funders %}
+						<img
+                src="{{ site.baseurl }}{{ partner.image }}"
+								alt="{{ partner.name }} Logo" width="110"/>
+					{% endfor %}
 				</div>
-			</div>
-			<div class="row feature left">
-				<a href="{{ site.baseurl }}/en/publications/reports/" class="image col-md-6
-				fa-bar-chart-o"> <img
-						src="{{ "/assets/images/index/reports.jpg"|prepend:site.baseurl }}"
-						alt="Reports image"> </a>
-
-				<div class="content">
-					<h3 class="header">We make how-to's and toolkits </h3>
-
-					<p>
-						We document how we make engaging, innovative, sustainable learning experiences,
-						and we create tools to help you make your own.
-					</p>
-				</div>
-			</div>
-			<div class="row feature right">
-				<a href="{{ site.baseurl }}/en/publications/roundtables/" class="image col-md-6
-				fa-bullhorn"> <img
-						src="{{ "/assets/images/index/roundtables.jpg"|prepend:site.baseurl }}"
-						alt="Roundtables image"> </a>
-
-				<div class="content col-md-6">
-					<h3 class="header">We answer the hard questions</h3>
-
-					<p>
-						We have a regular round table where we discuss big questions in open online learning,
-						share our successes and learn from each other. Guests include folks from Khan Academy,
-						Hack Education, Mozilla and NYU.
-					</p>
-				</div>
-			</div>
-			<div class="row feature left">
-				<a href="{{ site.baseurl }}/en/publications/talks/" class="image col-md-6 fa-comment"> <img
-						src="{{ "/assets/images/index/talks.jpg"|prepend:site.baseurl }}" alt=""> </a>
-
-				<div class="content col-md-6">
-					<h3 class="header">We give talks and workshops</h3>
-
-					<p>
-						We go to conferences to shareour expertise on learning technology, community design and
-						openness.
-					</p>
-				</div>
-			</div>
-			<div class="row feature right">
-				<a href="http://howto.p2pu.org/" class="image col-md-6 fa-code-fork"> <img
-            src="{{site.baseurl}}/assets/images/index/open-courses.png" alt=""> </a>
-
-				<div class="content col-md-6">
-					<h3 class="header">We help folks make open courses and tools</h3>
-
-					<p>
-						If you're looking to make a course, get started with our "School in a Box." We also
-						provide consulting services in learning design, technical implementation and community-building.
-					</p>
-				</div>
-			</div>
-		</div>
+      </div>
+    </div>
 	</section>
-
-	<section class="courses" id="courses">
-		<div class="container courses-inner">
-			<h3 class="header">Just here to learn something?</h3>
-
-			<p>
-				We offer a great variety of community built courses along with some that were produced in
-				collaboration with our partners
-			</p>
-
-			<div class="row featured-courses">
-				{% for course in site.data.courses %}
-					<a class="course-thumb col-md-3" href="{{ course.url }}" target="_blank"> <img
-							src="{{ site.baseurl }}/assets/images/index/courses/{{ course.image }}"
-							alt="{{ course.name }} Cover Image" />
-
-						<div class="course-title">
-							{{ course.name }}
-						</div>
-					</a>
-				{% endfor %}
-			</div>
-
-			<div class="pull-right">
-				<a class="btn btn-success" href="https://p2pu.org/en/groups/list/community/"
-				   target="_blank"> Show Me All Courses <i class="fa fa-angle-double-right"></i> </a>
-			</div>
-		</div>
-	</section>
-
-	<section class="partners">
-		<div class="container">
-			<h4>Our collaborators and clients include:</h4>
-
-			<div class="partners-inner">
-				{% for partner in site.data.partners %}
-					<img
-              src="{{ site.baseurl }}/assets/images/index/partners/{{ partner.image }}"
-							alt="{{ partner.name }} Logo" width="150"
-							class="col-md-2" />
-				{% endfor %}
-			</div>
-		</div>
-	</section>
-
 
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Sign up</h4>
+			</div>
+			<div class="modal-body">
+        {% include mailing-list.html %}
+			</div>
+			<div class="modal-footer">
+			</div>
+		</div>
+	</div>
+</div>
+
 
 {% include footer-en.html %}
 

@@ -1,0 +1,18 @@
+<div class="p2pu-person col-lg-4 col-sm-6">
+	<img class="img-circle pull-right people-img" src=
+			"{{ "/assets/images/people/" |append: person.image |prepend: site.baseurl }}"
+	     alt="{{ person.name }} Image">
+
+	<h3>{{ person.name }}<br>
+		<small>{{ person.role }}</small>
+	</h3>
+	<p>{{ person.bio }}</p>
+	{% if person.twitter %}
+		<span><a href="https://twitter.com/{{ person.twitter }}" target="_blank"><i
+				class="fa fa-twitter"></i> {{ person.twitter }}</a></span>
+	{% endif %}
+	{% if person.url %} |
+		<span><a href="{{ person.url }}" target="_blank">{{ person.url | replace_first: 'http://' '' }}</a></span>
+	{% endif %}
+</div>
+

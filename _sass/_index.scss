@@ -12,20 +12,10 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-image: url(../images/overlay.png), url("../images/header/header.png");
+		background-image: url(../images/overlay.png), url("../images/header.jpg");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;
-		background-position: 0 0, -118px -159px;
-
-		@media (min-width: $screen-xs-min) {
-			background-size: auto, auto;
-			background-position: top left, top left;
-		}
-
-		@media (min-width: $screen-sm-min) {
-			background-size: auto, cover;
-			background-position:  0 0, -118px -159px;
-		}
+	    background-position: top left, center;
 	}
 
 	.banner {
@@ -119,11 +109,12 @@
 
 		.btn-cta, .btn-subcta {
 			border-color: $white;
-			border-radius: 5px;
+			/*border-radius: 5px;*/
 			text-transform: uppercase;
 			font-family: $font-family-base;
 			font-size: 1em;
 			color: $white;
+            background-color: rgba(0,0,0,0.2);
 			-webkit-transition: all 0.2s ease-out;
 		  -moz-transition: all 0.2s ease-out;
 		  -o-transition: all 0.2s ease-out;
@@ -342,22 +333,11 @@ nav {
 		}
 	}
 
-	.who {
-		background: url(../images/index/community.png) top right no-repeat;
+    	.mailing-list {
 		background-color: #F3F4F8;
-		@media (min-width: $screen-xs-min) {
-			background-size: cover;
-			color: $white;
-			text-align: center;
-		}
+	 }
 
-		@media (min-width: $screen-sm-min) {
-			background-size: initial;
-			color: inherit;
-			text-align: left;
-		}
-
-		.people-link {
+	.people-link {
 			font-weight: bold;
 			padding-right: 1.5em;
 			position: relative;
@@ -371,6 +351,23 @@ nav {
 				//@extend .btn;
 			}
 		}
+		
+	.who {
+		background: url(../images/index/who.jpg) top right no-repeat;
+		background-color: #F3F4F8;
+		padding: 1.5em;
+		@media (min-width: $screen-xs-min) {
+			background-size: cover;
+			color: $white;
+			text-align: center;
+		}
+
+		@media (min-width: $screen-sm-min) {
+			background-size: initial;
+			color: inherit;
+			text-align: left;
+		}
+
 	}
 
 	.courses {
@@ -469,13 +466,11 @@ nav {
 }
 
 .partners {
-	background-color: #F3F4F8;
-	padding: 50px 0;
+
 	.partners-inner {
-		text-align: center;
 		img {
-			margin: 20px 15px;
 			vertical-align: middle;
+			padding: 10px;
 		}
 	}
 }

@@ -1,35 +1,12 @@
 en:
-  - text: Our Work
-    url: /en/facilitate/
-    submenu:
-    - text: Learning Circles
-      url: /en/facilitate/
-    - text: Projects
-      url: /en/our-work/
-
   - text: About
     url: /en/about/
-    submenu:
-    - text: Philosophy
-      url: /en/about/philosophy/
-    - text: People
-      url: /en/about/people/
-    - text: Credits and thanks
-      url: /en/about/credits/
 
-  - text: Publications
-    url: /en/publications/roundtables/
-    submenu:
-    - text: P2PU Roundtables
-      url: /en/publications/roundtables/
-    - text: Presentations
-      url: /en/publications/talks/
-    - text: Reports
-      url: http://reports.p2pu.org/
-    - text: Blog
-      url: http://info.p2pu.org/
-    - text: Data
-      url: http://data.p2pu.org/
-
-  - text: Connect with us
-    url: /en/connect/
+  - text: Blog
+    url: http://info.p2pu.org/
+    
+  - text: Community
+    url: https://community.p2pu.org/
+    
+  - text: Facilitate
+    url: /en/facilitate/
