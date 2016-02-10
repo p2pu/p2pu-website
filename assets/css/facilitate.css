@@ -184,10 +184,11 @@
 }
 
 .jumbotron-button{
-    padding:15px; 
-    background-color:#04b0aa;
-    border-radius:8px;
     color:#ffffff;
+    text-transform: uppercase;
+    padding:15px; 
+    border-radius:8px;
+    border-color:#ffffff;
     display:inline-block;
     margin-bottom:45px;
 }
