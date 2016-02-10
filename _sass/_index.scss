@@ -351,10 +351,24 @@ nav {
 				//@extend .btn;
 			}
 		}
-	.interested {
-		padding: 1.5em;
-		text-align: center;
-	}
+
+	.button-explore {
+			color: $p2pu-orange;
+			border-color: $p2pu-orange;
+			background-color: $white;
+			/*border-radius: 5px;*/
+			text-transform: uppercase;
+			font-family: $font-family-base;
+			font-size: 2em;
+			color: $white;
+
+		&:hover {
+			color: $white;
+			border-color: $p2pu-orange;
+			background-color: $p2pu-orange;
+			}
+		}
+
 	
 	.who {
 		background: url(../images/index/who.jpg) top right no-repeat;
