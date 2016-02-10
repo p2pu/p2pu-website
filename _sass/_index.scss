@@ -311,7 +311,7 @@ nav {
 		h1 {
 			&:before {
 				left: 50%;
-				margin-left: -20%;
+				-left: -20%;
 			}
 		}
 
@@ -367,6 +367,7 @@ nav {
 			font-family: $font-family-base;
 			font-size: 1.4em;
 			padding: 1.5em;
+			margin: 1.5em;
 
 		&:hover {
 			color: $white;
