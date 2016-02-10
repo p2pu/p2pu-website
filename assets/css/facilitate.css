@@ -183,6 +183,15 @@
     display:block;
 }
 
+.jumbotron-button{
+    padding:15px; 
+    background-color:#04b0aa;
+    border-radius:8px;
+    color:#ffffff;
+    display:inline-block;
+    margin-bottom:45px;
+}
+
 @media screen and (max-width: 625px) {
 .jumbotron-conf {
    background-image:url("../images/facilitate/header-faded.jpg");
