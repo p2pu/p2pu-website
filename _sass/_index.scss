@@ -355,6 +355,7 @@ nav {
 	.interested {
 		text-align: center;
 		padding: 1.5em;
+		margin: 1em;
 	
 		.button-explore {
 			color: $p2pu-orange;
@@ -366,8 +367,8 @@ nav {
 			text-transform: uppercase;
 			font-family: $font-family-base;
 			font-size: 1.4em;
-			padding: 1.5em;
-			margin: 1.5em;
+			padding: 1em;
+
 
 		&:hover {
 			color: $white;
