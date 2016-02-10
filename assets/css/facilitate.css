@@ -183,7 +183,7 @@
     display:block;
 }
 
-.jumbotron-button{
+.jumbotron-button {
     color:#ffffff;
     text-transform:uppercase;
     padding:15px; 
@@ -202,7 +202,7 @@
 }
 
 
-/* Call to action
+/* Call to action*/
 
 #container a.call-to-action:link, a.call-to-action:visited {
     padding:15px; 
@@ -212,7 +212,7 @@
 display:inline-block;
 margin-bottom:45px;
     
-}*/
+}
 
 /*Quotes*/
 .quote-container{
