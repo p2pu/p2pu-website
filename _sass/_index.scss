@@ -352,15 +352,20 @@ nav {
 			}
 		}
 
-	.button-explore {
+	.interested {
+		text-align: center;
+		padding: 1.5em;
+	
+		.button-explore {
 			color: $p2pu-orange;
 			border-color: $p2pu-orange;
+			border-style: solid;
+			border-width: 2px;
 			background-color: $white;
 			/*border-radius: 5px;*/
 			text-transform: uppercase;
 			font-family: $font-family-base;
-			font-size: 2em;
-			color: $white;
+			font-size: 1.4em;
 
 		&:hover {
 			color: $white;
@@ -368,7 +373,7 @@ nav {
 			background-color: $p2pu-orange;
 			}
 		}
-
+	}
 	
 	.who {
 		background: url(../images/index/who.jpg) top right no-repeat;
