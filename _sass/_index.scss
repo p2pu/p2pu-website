@@ -358,7 +358,7 @@ nav {
 		margin: 1em;
 	
 		.button-explore {
-            display: inline-block;
+            		display: inline-block;
 			color: $p2pu-orange;
 			border-color: $p2pu-orange;
 			border-style: solid;
@@ -369,6 +369,7 @@ nav {
 			font-family: $font-family-base;
 			font-size: 1.4em;
 			padding: 1em;
+			text-decoration: none;
 
 
 		&:hover {
