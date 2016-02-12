@@ -2,6 +2,8 @@
 	position: relative;
 	margin: 0px;
 
+    h3 { margin-top:0; }
+
 	.img-as-bck {
 		background-size: cover;
 		background-position: top left;
@@ -50,11 +52,11 @@
 		}
 
 		.image {
-			float: left;
 			padding: 0;
 			/*@include feature-overlay();*/
 			@media (min-width: $screen-sm-min) {
 				width: 50%;
+			    float: left;
 			}
 
 			img {
@@ -70,11 +72,11 @@
 		}
 
 		.image {
-			float: right;
 			padding: 0;
 			/*@include feature-overlay();*/
 			@media (min-width: $screen-sm-min) {
 				width: 50%;
+			    float: right;
 			}
 
 			img {

@@ -7,7 +7,7 @@
     top:6px;
 }
 
-#container {
+#lc-container {
     max-width: 760px;
     padding: 0 24px 0 24px;
     color: #515665;
@@ -20,7 +20,7 @@
 
 
 @media screen and (max-width: 1030px) {
-#container {
+#lc-container {
     margin-top:60px;
     padding: 0 24px 0 164px;
 }
@@ -28,7 +28,7 @@
 
 
 @media screen and (max-width: 992px) {
-#container {
+#lc-container {
     margin-top:60px;
 }
 #handbook-nav{
@@ -37,25 +37,25 @@
 }
 
 @media screen and (max-width: 540px) {
-#container {
+#lc-container {
     margin-top:250px;
     padding: 0 16px;
 }
 }
 
-#container p {
+#lc-container p {
     padding-bottom: 14px;
 }
-#container ul {
+#lc-container ul {
     margin: 0;
     padding: 0 0 15px 32px;
 }
-#container ul.sublist {
+#lc-container ul.sublist {
     list-style-type: circle;
     margin: 0;
     padding: 0 0 15px 64px;
 }
-#container h1, h2, h3, h4, h5, h6 {
+#lc-container h1, h2, h3, h4, h5, h6 {
     color: #fc7100;
     font-family: Arvo,sans-serif;
     font-style: normal;
@@ -63,20 +63,20 @@
     margin: 0;
     padding: 0;
 }
-#container h1 {
+#lc-container h1 {
     font-size: 44px;
     line-height: 1.2;
     padding: 48px 0 30px;
 }
-#container h2 {
+#lc-container h2 {
     font-size: 32px;
     padding-top: 28px;
 }
-#container h3 {
+#lc-container h3 {
     font-size: 24px;
     padding-top: 20px;
 }
-#container h4 {
+#lc-container h4 {
     color: #515665;
     font-family: Arvo,sans-serif;
     font-size: 16px;
@@ -84,57 +84,57 @@
     padding: 12px 0 0;
     text-transform: uppercase;
 }
-#container h6 {
+#lc-container h6 {
     font-family: Arvo,sans-serif;
     font-size: 17px;
     margin: 15px 0 0;
 }
-#container h6 span {
+#lc-container h6 span {
     background-color: #78b60b;
     color: #fff;
     padding: 1px 2px;
 }
-#container a {
+#lc-container a {
     font-weight: 700;
     transition: all 0.15s ease !important;
 }
-#container a:link, a:visited {
+#lc-container a:link, #lc-container a:visited {
     color: #04b0aa;
 }
-#container a:hover {
+#lc-container a:hover {
     background-color: #04b0aa;
     color: #fff;
 }
-#container .template {
+#lc-container .template {
     color: #78b60b;
     padding-left: 15px;
 }
-#container .bold {
+#lc-container .bold {
     font-weight: 700;
 }
-#container .caps {
+#lc-container .caps {
     text-transform: uppercase;
 }
-#container .list-below {
+#lc-container .list-below {
     margin-bottom: -8px;
 }
-#container .green-heading {
+#lc-container .green-heading {
     color: #78b60b;
 }
-#container .teal {
+#lc-container .teal {
     color: #04b0aa;
 }
-#container .green {
+#lc-container .green {
     color: #78b60b;
 }
-#container .space-top {
+#lc-container .space-top {
     padding-top: 15px;
 }
-#container .list-below {
+#lc-container .list-below {
     margin-bottom: -14px;
 }
 
-#container .teal-highlights{
+#lc-container .teal-highlights{
     background-color:#04b0aa;;
     padding:1px 2px;
     color:#ffffff;
@@ -159,10 +159,17 @@
 }
 }
 
+
 .jumbotron-center{
     margin:0 auto;
     max-width:760px;
     padding:60px 270px 0 24px;
+}
+
+@media screen and (max-width: 625px) {
+    .jumbotron-center{
+        padding:1em;
+    }
 }
 
 .jumbotron-subtitle{
@@ -183,6 +190,19 @@
     display:block;
 }
 
+.jumbotron-button {
+    color:#ffffff;
+    text-transform:uppercase;
+    padding:15px; 
+    border-radius:8px;
+    border-color:#ffffff;
+    border-style:solid;
+    border-width:2px;
+    display:inline-block;
+    margin-bottom:45px;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 625px) {
 .jumbotron-conf {
    background-image:url("../images/facilitate/header-faded.jpg");
@@ -192,7 +212,7 @@
 
 /* Call to action*/
 
-#container a.call-to-action:link, a.call-to-action:visited {
+#lc-container a.call-to-action:link, #lc-container a.call-to-action:visited {
     padding:15px; 
     background-color:#04b0aa;
      border-radius:8px;
