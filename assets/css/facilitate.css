@@ -159,10 +159,17 @@
 }
 }
 
+
 .jumbotron-center{
     margin:0 auto;
     max-width:760px;
     padding:60px 270px 0 24px;
+}
+
+@media screen and (max-width: 625px) {
+    .jumbotron-center{
+        padding:1em;
+    }
 }
 
 .jumbotron-subtitle{
