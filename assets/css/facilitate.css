@@ -200,6 +200,7 @@
     border-width:2px;
     display:inline-block;
     margin-bottom:45px;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 625px) {
