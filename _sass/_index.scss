@@ -387,20 +387,38 @@ nav {
 	}
 	
 	.who {
-		background: url(../images/index/who.jpg) top right no-repeat;
 		background-color: #F3F4F8;
 		padding: 1.5em 0;
 		@media (min-width: $screen-xs-min) {
-			background-size: cover;
-			color: $white;
 			text-align: center;
 		}
 
 		@media (min-width: $screen-sm-min) {
-			background-size: initial;
 			color: inherit;
 			text-align: left;
 		}
+
+        @media (min-width: $screen-md-min){
+		    background: url(../images/index/who.jpg) top right no-repeat;
+		    background-color: #F3F4F8;
+        }
+        .btn {
+            white-space: initial;
+            border-color: $p2pu-blue;
+            text-transform: uppercase;
+            font-family: $font-family-base;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+
+            &:hover {
+                background-color: $p2pu-blue;
+                color: $white;
+            }
+        }
+
+
 
 	}
 
@@ -512,8 +530,4 @@ nav {
 .p2pu-footer {
 	margin-top: 0;
 }
-
-
-
-
 
