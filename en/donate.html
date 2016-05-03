@@ -6,13 +6,9 @@ title: Donate
 	<div class="container">
 		<div class="clearfix">
 			<div class="col-md-8">
-				<h4>Thank you, we're so glad you are supporting us.</h4>
-				P2PU is a 501(c)3 non-profit, registered in California. <br /> We
-				promise to only use donations for good, and if you have any preferences
-				for how you’d like your donation to be used, we’d love to hear from
-				you. <a href="https://community.p2pu.org/category/meta" target="_blank">
-				Drop us a line </a> and let us know. There might even be a t-shirt in
-				it for you!
+				<h4>Thank you for your support!</h4>
+        <p>P2PU is a 501(c)3 non-profit, registered in California. Your donations cover operating expenses like web hosting, domain name registrations and ongoing support. No amount is too small!</p>
+        <p><a href="mailto:thepeople@p2pu.org?Subject=Hi%20there!">Get in touch</a> if you would like to support us in another way or contract our services.</p>
 			</div>
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post"
 			      target="_top"
@@ -35,17 +31,5 @@ title: Donate
 			</form>
 		</div>
 		<hr />
-		<div class="staff visible-lg-block">
-			<ul class="people list-unstyled">
-				{% for staff in site.data.people.staff %}
-					<li class="col-md-2">
-						<img
-								src="{{ site.baseurl }}/assets/images/people/{{ staff.image }}"
-								alt="{{ staff.name }}"
-								class="img-circle pull-right people-img" />
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
 	</div>
 </div>
