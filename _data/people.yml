@@ -1,10 +1,4 @@
 staff:
- - name: Rebecca Kahn
-   image: rebecca_kahn.jpg
-   role: Happiness Officer
-   bio: "Bekka makes the trains at P2PU run on time (or as close to it as possible). A London-dweller by day but a South African in spirit, Bekka is currently finishing up her PhD in Digital Humanities at King's College, and serves as the Coordinator for the Open Coalition."
-   twitter: rebamex
-
  - name: Grif Peterson
    image: grif_peterson.jpg
    role: Learning Cook
@@ -12,11 +6,10 @@ staff:
    twitter: grifpeterson
    url: "http://grifpeterson.com"
 
- - name: Carl Ruppin
-   image: carl_ruppin.jpg
-   role: Operations/Dreamer Wrangler
-   bio: "An Aussie by birth and an attorney by training, Carl has heaps of experience in the open community as the National Copyright Manager for the New South Wales Department of Education and Training in Sydney. He keeps P2PU organized, optimized, spreadsheeted and focused."
-   twitter: ender_78
+ - name: Anna Häggman
+   image: anna_haggman.jpg
+   role: Learning Designer / Business development Lead
+   bio: "Anna works to increase P2PU's reach and build up its community. She got hooked while interning with P2PU during her M.Ed. studies in the Technology, Innovation, and Education program at Harvard. Before joining P2PU Anna pioneered childcare initiatives in US higher education, and worked as a research scientist in biotech back in her home country of Finland."
 
  - name: Dirk Uys
    image: dirk_uys.jpg
@@ -161,11 +154,6 @@ collaborators:
    twitter: mozzadrella
    url: "http://mozzadrella.me"
    
- - name: Anna Häggman
-   image: anna_haggman.jpg
-   role: P2PU Internist
-   bio: "Anna goes well beyond the call of duty to design facilitator resources and professional development tools for Learning Circles. We wish there were ten of her. We wish they all worked at P2PU."
-
  - name: Stian Haklev
    image: stian_haklev.jpg
    role: Co-founder
@@ -185,6 +173,12 @@ collaborators:
    role: Founder of the P2PU Mentor Program
    bio: "Alex has been working on a mentorship platform for people to connect with knowledgeable mentors to guide them through learning a topic. He is also applying his vast real-life experience in coming up with great opening lines to create an ice-breaker functionality to butter up online interaction."
    twitter: alexkehayias
+
+ - name: Rebecca Kahn
+   image: rebecca_kahn.jpg
+   role: Happiness Officer
+   bio: "For a long time Bekka made the trains at P2PU run on time (or as close to it as possible). A London-dweller by day but a South African in spirit, Bekka is currently finishing up her PhD in Digital Humanities at King's College, and serves as the Coordinator for the Open Coalition"
+   twitter: rebamex
 
  - name: Molly Kleinman
    image: molly_kleinman.jpg
@@ -241,6 +235,12 @@ collaborators:
    image: andrew_rens.jpg
    role: Founding Volunteer
    bio: "As a founding volunteer and early course facilitator of Copyright for Educators, Andrew was instrumental at arriving to a choice for a specific open license and the legalities involved in implementing the license at P2PU. He was formerly the legal lead for Creative Commons South Africa."
+
+ - name: Carl Ruppin
+   image: carl_ruppin.jpg
+   role: Operations/Dreamer Wrangler
+   bio: "An Aussie by birth and an attorney by training, Carl has heaps of experience in the open community as the National Copyright Manager for the New South Wales Department of Education and Training in Sydney."
+   twitter: ender_78
 
  - name: Alex Ruthmann
    image: alex_ruthmann.jpg
