@@ -11,6 +11,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/assets/css/p2pu-custom.css" | prepend: site.baseurl }}">
 
+    {% if layout.extra_css %}
+        {% for css in layout.extra_css %}
+            <link rel="stylesheet" href="{{ site.baseurl }}{{ css }}" />
+        {% endfor %}
+    {% endif %}
+
     {% if page.extra_css %}
         {% for css in page.extra_css %}
             <link rel="stylesheet" href="{{ site.baseurl }}{{ css }}" />
