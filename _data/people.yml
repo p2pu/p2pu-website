@@ -6,17 +6,17 @@ staff:
    twitter: grifpeterson
    url: "http://grifpeterson.com"
 
- - name: Anna Häggman
-   image: anna_haggman.jpg
-   role: Learning Designer / Business development Lead
-   bio: "Anna works to increase P2PU's reach and build up its community. She got hooked while interning with P2PU during her M.Ed. studies in the Technology, Innovation, and Education program at Harvard. Before joining P2PU Anna pioneered childcare initiatives in US higher education, and worked as a research scientist in biotech back in her home country of Finland."
-
  - name: Dirk Uys
    image: dirk_uys.jpg
    role: Wizard of 0s and 1s
    bio: "Though Dirk leads tech at P2PU, everyone on the team can do technical things, which makes him very happy. Dirk is currently traveling through South America and learning Spanish before heading back to his homeland of South Africa. As he nomads about the globe, he’s writing code tutorials, tinkering with Raspberry Pi’s and sharpening his photography-fu."
    twitter: riskycud
    url: "http://thebacklog.net"
+ 
+ - name: Ryan George
+   image: ryan_george.jpg
+   role: Financial Administrator
+   bio: "Ryan oversees Financing and Accounting for P2PU. He is a vibrant and energetic person who has been with P2PU since 2012. He loves culture, innovative ideas, people and numbers. He is based in Cape Town, South Africa."
 
 board:
  - name: Philipp Schmidt
@@ -191,10 +191,20 @@ collaborators:
    bio: "Piet has been quietly learning about learning for several years, many of them while working with the University of Michigan’s Open. Michigan initiative. He is a founding volunteer with the School of Open, but also contributes to P2PU’s work on mentorship, interface design, the Open Masters project, and pretty much any place people are thinking about the intersections of learning, identity, and information."
    twitter: bagabot
 
+ - name: Kate Lapinski
+   image: kate_lapinski.jpg
+   role: Chicago Public Library Coordinator
+   bio: "After the first Learning Circle pilot ended, it was Kate who was handed the reigns to make sure the program continued to thrive at Chicago Public Library. She's faciliated Learning Circles, remixed courses, and ran workshops. A real model community member!"
+
  - name: Gary Matkin
    image: gary_matkin.jpg
    role: Dean of the Extension School, University of California Irvine
    bio: "He taught Philipp everything he knows about accounting--in 45 min--and infused P2PU with an awesome *beg for forgiveness, rather than ask for permission* attitude from the start."
+
+- name: Katherine McConachie
+   image: katherine_mcconachie.jpg
+   role: Oracle
+   bio: "Katherine lends her insights and support to P2PU on a daily basis. In fact, it was she who coined the term "Learning Circles". By day, she is the Learning Initiative Coordinator at the MIT Media Lab, working alongside P2PU's co-founder, Philipp Schmidt."
 
  - name: João Menezes
    image: joao_menezes.jpg
@@ -205,6 +215,11 @@ collaborators:
    image: dany_javier_bautista_montana.jpg
    role: Founder P2PU ambassador program
    bio: "Disappointed by the lack of easy access to learning about web design in Colombia, Dany gathered a group of people and engaged in learning web design through P2PU. He currently leads this P2PU ambassador program."
+
+ - name: Juliana Muchai
+   image: juliana_muchai.jpg
+   role: Kenya Coordinator
+   bio: "Juliana is the Principal Resource Mobilization Officer for the Kenya National Library Service, and the point-person for Learning Circles in Kenya. She has substantive experience in resource mobilization, project development, community mobilization and training. Previously, she worked the Green Belt Movement, a community-based NGO that brough about social change through community empowerment and development programmes."
 
  - name: Paul Osman
    image: paul_osman.jpg
