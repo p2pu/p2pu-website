@@ -8,7 +8,8 @@ title: Our work
 		<p>
 			Here's a taste of some other things we've been working on recently.
 		</p>
-		{% for project in site.data.projects.past | sort:'date' reversed %}
+	    {% assign projects=site.data.projects.past|sort:'date'|reverse %}
+		{% for project in project %}
 			{% assign multi_three=forloop.index0|modulo:3  %}
 			{% if multi_three == 0 %}<div class="row">{% endif %}
 			<div class="p2pu-project col-xs-8 col-md-4">
