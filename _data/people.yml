@@ -1,6 +1,6 @@
 staff:
  - name: Grif Peterson
-   image: grif_peterson.jpg
+   image: grif_peterson.jpeg
    role: Learning Cook
    bio: "Grif keeps a watchful eye over peers and pedagogy at P2PU, and currently serves as a fellow at the Berkman Klein Center for Internet & Society at Harvard University. In the past, he worked in investment banking, drove a school bus from London to Mongolia, and lived in Kyrgyzstan."
    twitter: grifpeterson
@@ -201,10 +201,10 @@ collaborators:
    role: Dean of the Extension School, University of California Irvine
    bio: "He taught Philipp everything he knows about accounting--in 45 min--and infused P2PU with an awesome *beg for forgiveness, rather than ask for permission* attitude from the start."
 
-- name: Katherine McConachie
+ - name: Katherine McConachie
    image: katherine_mcconachie.jpg
    role: Oracle
-   bio: "Katherine lends her insights and support to P2PU on a daily basis. In fact, it was she who coined the term "Learning Circles". By day, she is the Learning Initiative Coordinator at the MIT Media Lab, working alongside P2PU's co-founder, Philipp Schmidt."
+   bio: "Katherine lends her insights and support to P2PU on a daily basis. In fact, it was she who coined the term \"Learning Circles\". By day, she is the Learning Initiative Coordinator at the MIT Media Lab, working alongside P2PU's co-founder, Philipp Schmidt."
 
  - name: João Menezes
    image: joao_menezes.jpg

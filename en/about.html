@@ -54,7 +54,9 @@ title: About P2PU
 		<h4>
 			Here's a taste of some other things we've been working on.
 		</h4>
-		{% for project in site.data.projects.past | sort:'date' reversed %}
+
+	    {% assign projects=site.data.projects.past|sort:'date' %}
+		{% for project in projects %}
 			{% assign multi_three=forloop.index0|modulo:3  %}
 			{% if multi_three == 0 %}<div class="row">{% endif %}
 			<div class="p2pu-project col-xs-8 col-md-4">
