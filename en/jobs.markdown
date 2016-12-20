@@ -5,8 +5,7 @@ title: Jobs
 
 # Current listings
 
-## Program Coordinator
-####Full time, early 2017 start
+## Program Coordinator (Full time, early 2017 start)
 Peer 2 Peer University is recruiting a North America-based Program Coordinator to support the growth and development of learning circles: study groups for adults who want to take online courses together in libraries and other public spaces. In the past two years, learning circles have evolved from a pilot project with Chicago Public Library to a movement of educators, librarians, activists, policy-makers, and technologists around the globe -- and in order to keep growing we need you! 
 
 We believe that community-based online learning can challenge the hierarchy and exclusivity of traditional educational institutions and support inclusive, empowering, learning experiences around the world. To achieve this goal, we work with amazing library and civil society partners. Together, we design and build software tools, conduct professional development workshops, develop and curate open educational resources, and advocate for libraries and other community centers as nodes for lifelong learning. 
