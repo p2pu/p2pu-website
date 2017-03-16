@@ -22,7 +22,7 @@ To support learning circles, we build software for facilitators, conduct trainin
  - Learning and education - You have some experience, or at least a strong interest, working in the field of learning/education. Teaching, curriculum development, online learning design, and facilitation experience are all pluses. 
 
 ## To Apply
-Please send your portfolio, resume, and rate to <thepeople@p2pu.org> with the subject line “Web Design Consultant” before the 27th of January.
+Please send your portfolio, resume, and rate to <thepeople@p2pu.org> with the subject line “Web Design Consultant”.
 
 ## About the Org
 Founded in 2009, Peer 2 Peer University is a non-profit organization that facilitates learning outside of institutional walls. Designing and leveraging open education tools and resources, P2PU strives to cultivate a high-quality, low-cost model for lifelong learning. We are a small organization that practices open governance, meaning that everything from deciding which projects to pursue to setting salaries are decided collectively by the team.
