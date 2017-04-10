@@ -6,6 +6,13 @@ staff:
    twitter: grifpeterson
    url: "http://grifpeterson.com"
 
+ - name: Nico Koenig
+   image: nico.jpg
+   role: Town Crier
+   bio: "Nico takes a community-first approach in coordinating and expanding P2PU's Learning Circle program. From education through sport programs in Zambia, to community festivals in the Northwest Territories, to free schools in the storefronts of Toronto, Nico promotes learning just about anywhere. That is, anywhere but the lecture hall. Nico can usually be found biking around Ottawa, Canada."
+   twitter: nicokoenig
+   url: "http://nicokoenig.com"
+
  - name: Dirk Uys
    image: dirk_uys.jpg
    role: Wizard of 0s and 1s
