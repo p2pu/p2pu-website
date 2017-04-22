@@ -5,7 +5,7 @@ title: Jobs
 
 # Current listings
 
-## Web Designer
+## Web Designer (Contract position)
 
 We are looking for an independent web designer who can work with us to ensure our software and materials are visually satisfying and cohesive. We’re looking for somebody to engage from time to time on a contract basis for several projects throughout the year. At first, you will help us integrate our primary project, [learning circles](https://learningcircles.p2pu.org), with our [homepage](https://www.p2pu.org). You will help define the work to be done and implement the changes in HTML and CSS.
 
