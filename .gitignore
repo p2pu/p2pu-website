@@ -1,6 +1,7 @@
 _site
 .sass-cache
 .idea/
+node_modules/
 
 # Development configuration
 _config-dev.yml
