@@ -17,15 +17,12 @@ exclude_from_upload:
 
 redirects:
     index.html: /en/
+    en/learning-circles/: /en/facilitate/
+    en/community/: https://groups.google.com/a/p2pu.org/forum/#!forum/community
 
 routing_rules:
-  - condition:
-      key_prefix_equals: en/learning-circles/
-    redirect:
-      host_name: www.p2pu.org
-      protocol: https
-      replace_key_prefix_with: en/facilitate/
-      http_redirect_code: 301
+
+# Lernanta EN redirects 
   - condition:
       key_prefix_equals: en/courses/
     redirect:
@@ -50,14 +47,8 @@ routing_rules:
       host_name: courses.p2pu.org
       protocol: https
       http_redirect_code: 301
-  - condition:
-      key_prefix_equals: en/JanePark/
-    redirect:
-      host_name: courses.p2pu.org
-      protocol: https
-      http_redirect_code: 301
 
-# ES Redirects
+# Lernanta ES Redirects
   - condition:
       key_prefix_equals: es/courses/
     redirect:
@@ -83,46 +74,12 @@ routing_rules:
       protocol: https
       http_redirect_code: 301
 
-# HE Redirects
+# i18n redirects
   - condition:
-      key_prefix_equals: he/courses/
-    redirect:
-      host_name: courses.p2pu.org
-      protocol: https
-      http_redirect_code: 301
-  - condition:
-      key_prefix_equals: he/groups/
-    redirect:
-      host_name: courses.p2pu.org
-      protocol: https
-      http_redirect_code: 301
-  - condition:
-      key_prefix_equals: he/schools/
-    redirect:
-      host_name: courses.p2pu.org
-      protocol: https
-      http_redirect_code: 301
-  - condition:
-      key_prefix_equals: he/badges/
-    redirect:
-      host_name: courses.p2pu.org
-      protocol: https
-      http_redirect_code: 301
-
-  - condition:
+      http_error_code_returned_equals: 404
       key_prefix_equals: en/
-      http_error_code_returned_equals: 404
     redirect:
-      host_name: courses.p2pu.org
-      protocol: https
-      http_redirect_code: 302
-  - condition:
-      key_prefix_equals: es/
-      http_error_code_returned_equals: 404
-    redirect:
-      host_name: courses.p2pu.org
-      protocol: https
-      http_redirect_code: 302
+      http_redirect_code: 404
 
   - condition:
       http_error_code_returned_equals: 404
@@ -130,5 +87,5 @@ routing_rules:
       host_name: www.p2pu.org
       protocol: https
       replace_key_prefix_with: en/
-      http_redirect_code: 302
+      http_redirect_code: 301
 
