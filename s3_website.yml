@@ -76,56 +76,56 @@ routing_rules:
 
 # i18n redirects
   - condition:
-      key_prefix_equals: about/
+      key_prefix_equals: about
     redirect:
       host_name: www.p2pu.org
       protocol: https
       replace_key_prefix_with: en/about/
       http_redirect_code: 301
   - condition:
-      key_prefix_equals: connect/
+      key_prefix_equals: connect
     redirect:
       host_name: www.p2pu.org
       protocol: https
       replace_key_prefix_with: en/connect/
       http_redirect_code: 301
   - condition:
-      key_prefix_equals: donate/
+      key_prefix_equals: donate
     redirect:
       host_name: www.p2pu.org
       protocol: https
       replace_key_prefix_with: en/donate/
       http_redirect_code: 301
   - condition:
-      key_prefix_equals: facilitate/
+      key_prefix_equals: facilitate
     redirect:
       host_name: www.p2pu.org
       protocol: https
       replace_key_prefix_with: en/facilitate/
       http_redirect_code: 301
   - condition:
-      key_prefix_equals: jobs/
+      key_prefix_equals: jobs
     redirect:
       host_name: www.p2pu.org
       protocol: https
       replace_key_prefix_with: en/jobs/
       http_redirect_code: 301
   - condition:
-      key_prefix_equals: our-work/
+      key_prefix_equals: our-work
     redirect:
       host_name: www.p2pu.org
       protocol: https
       replace_key_prefix_with: en/our-work/
       http_redirect_code: 301
   - condition:
-      key_prefix_equals: publications/
+      key_prefix_equals: publications
     redirect:
       host_name: www.p2pu.org
       protocol: https
       replace_key_prefix_with: en/publications/
       http_redirect_code: 301
   - condition:
-      key_prefix_equals: terms/
+      key_prefix_equals: terms
     redirect:
       host_name: www.p2pu.org
       protocol: https
