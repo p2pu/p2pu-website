@@ -3,6 +3,7 @@ s3_secret: <%= ENV['AWS_SECRET_KEY'] %>
 <% if (ENV['TRAVIS_BRANCH'] == 'release') %>
 cloudfront_distribution_id: E1UDG3TDNIQGGC
 cloudfront_invalidate_root: true
+cloudfront_wildcard_invalidation: true
 s3_bucket: 'p2pu-website'
 <% else %>
 s3_bucket: 'p2pu-staging'
@@ -80,56 +81,56 @@ routing_rules:
     redirect:
       host_name: www.p2pu.org
       protocol: https
-      replace_key_prefix_with: en/about/
+      replace_key_prefix_with: en/about
       http_redirect_code: 301
   - condition:
       key_prefix_equals: connect
     redirect:
       host_name: www.p2pu.org
       protocol: https
-      replace_key_prefix_with: en/connect/
+      replace_key_prefix_with: en/connect
       http_redirect_code: 301
   - condition:
       key_prefix_equals: donate
     redirect:
       host_name: www.p2pu.org
       protocol: https
-      replace_key_prefix_with: en/donate/
+      replace_key_prefix_with: en/donate
       http_redirect_code: 301
   - condition:
       key_prefix_equals: facilitate
     redirect:
       host_name: www.p2pu.org
       protocol: https
-      replace_key_prefix_with: en/facilitate/
+      replace_key_prefix_with: en/facilitate
       http_redirect_code: 301
   - condition:
       key_prefix_equals: jobs
     redirect:
       host_name: www.p2pu.org
       protocol: https
-      replace_key_prefix_with: en/jobs/
+      replace_key_prefix_with: en/jobs
       http_redirect_code: 301
   - condition:
       key_prefix_equals: our-work
     redirect:
       host_name: www.p2pu.org
       protocol: https
-      replace_key_prefix_with: en/our-work/
+      replace_key_prefix_with: en/our-work
       http_redirect_code: 301
   - condition:
       key_prefix_equals: publications
     redirect:
       host_name: www.p2pu.org
       protocol: https
-      replace_key_prefix_with: en/publications/
+      replace_key_prefix_with: en/publications
       http_redirect_code: 301
   - condition:
       key_prefix_equals: terms
     redirect:
       host_name: www.p2pu.org
       protocol: https
-      replace_key_prefix_with: en/terms/
+      replace_key_prefix_with: en/terms
       http_redirect_code: 301
 
 
