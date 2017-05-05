@@ -20,9 +20,12 @@ redirects:
     index.html: /en/
     en/learning-circles/: /en/facilitate/
     en/community/: https://groups.google.com/a/p2pu.org/forum/#!forum/community
+    About-P2PU: /en/about/
+    webcraft/: https://courses.p2pu.org/webcraft/
+    school-of-ed: https://courses.p2pu.org/school-of-ed
+    en/Janepark/: https://courses.p2pu.org/en/Janepark/
 
 routing_rules:
-
 # Lernanta EN redirects 
   - condition:
       key_prefix_equals: en/courses/
