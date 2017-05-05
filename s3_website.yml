@@ -48,6 +48,13 @@ routing_rules:
       host_name: courses.p2pu.org
       protocol: https
       http_redirect_code: 301
+  - condition:
+      key_prefix_equals: en/people/
+    redirect:
+      host_name: courses.p2pu.org
+      protocol: https
+      http_redirect_code: 301
+
 
 # Lernanta ES Redirects
   - condition:
@@ -70,6 +77,12 @@ routing_rules:
       http_redirect_code: 301
   - condition:
       key_prefix_equals: es/badges/
+    redirect:
+      host_name: courses.p2pu.org
+      protocol: https
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: es/people/
     redirect:
       host_name: courses.p2pu.org
       protocol: https
