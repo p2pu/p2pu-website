@@ -20,9 +20,14 @@ redirects:
     index.html: /en/
     en/learning-circles/: /en/facilitate/
     en/community/: https://groups.google.com/a/p2pu.org/forum/#!forum/community
+    About-P2PU: /en/about/
+    webcraft/: https://courses.p2pu.org/webcraft/
+    school-of-ed: https://courses.p2pu.org/school-of-ed
+    en/Janepark/: https://courses.p2pu.org/en/Janepark/
+    course/list: https://learningcircles.p2pu.org/en/courses/
+    sosi: https://courses.p2pu.org/sosi
 
 routing_rules:
-
 # Lernanta EN redirects 
   - condition:
       key_prefix_equals: en/courses/
@@ -48,6 +53,13 @@ routing_rules:
       host_name: courses.p2pu.org
       protocol: https
       http_redirect_code: 301
+  - condition:
+      key_prefix_equals: en/people/
+    redirect:
+      host_name: courses.p2pu.org
+      protocol: https
+      http_redirect_code: 301
+
 
 # Lernanta ES Redirects
   - condition:
@@ -70,6 +82,12 @@ routing_rules:
       http_redirect_code: 301
   - condition:
       key_prefix_equals: es/badges/
+    redirect:
+      host_name: courses.p2pu.org
+      protocol: https
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: es/people/
     redirect:
       host_name: courses.p2pu.org
       protocol: https
