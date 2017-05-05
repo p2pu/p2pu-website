@@ -24,6 +24,8 @@ redirects:
     webcraft/: https://courses.p2pu.org/webcraft/
     school-of-ed: https://courses.p2pu.org/school-of-ed
     en/Janepark/: https://courses.p2pu.org/en/Janepark/
+    course/list: https://learningcircles.p2pu.org/en/courses/
+    sosi: https://courses.p2pu.org/sosi
 
 routing_rules:
 # Lernanta EN redirects 
