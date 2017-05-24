@@ -41,3 +41,22 @@
     -moz-filter: grayscale($value);
     filter: grayscale($value);
 }
+
+@mixin flex-column-centered {
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin columns-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+@mixin column-three {
+	flex-basis: 33%;
+	min-width: 200px;
+	padding: $padding-base-horizontal;
+}

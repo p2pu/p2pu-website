@@ -1,0 +1,56 @@
+body {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+
+  .small {
+    font-size: $font-size-small;
+  }
+
+  .large {
+    font-size: $font-size-large;
+  }
+
+  .bold {
+    font-family: $font-family-sans-serif-bold;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: $font-size-h3;
+
+    .underline {
+      border-bottom: 0.8em solid $gray-light;
+      padding-left: 2em;
+      padding-right: 2em;
+
+      .text {
+        font-family: $headings-font-family;
+        font-weight: bold;
+        text-transform: uppercase;
+        transform: translateY(0.9em);
+      }
+    }
+
+    &.small {
+      font-size: $font-size-h4;
+    }
+  }
+
+  .headline {
+    font-family: $font-family-sans-serif;
+    font-weight: initial;
+    line-height: normal;
+    text-align: center;
+  }
+}
