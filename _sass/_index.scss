@@ -91,21 +91,16 @@ main {
 		}
 
 		.search-results {
-			display: flex;
-			flex-wrap: wrap;
-
 			.result-item {
-				min-width: 350px;
-				flex-basis: 30%;
 		    position: relative;
 		    display: flex;
 		    justify-content: center;
-		    margin: $padding-sm 10px;
+		    padding: $padding-sm 10px;
+		    margin-bottom: $padding-sm;
 
 		    .card {
 		    	position: absolute;
 			    background: $p2pu-orange;
-			    width: 80%;
 			    padding: $padding-sm;
 			    text-align: center;
 			    color: #fff;
@@ -122,13 +117,10 @@ main {
 
 			    .image {
 			    	min-height: 200px;
-						background: $p2pu-light-yellow;
+						background: $p2pu-light-orange;
+
 						img {
 				    	width: 100%;
-				    }
-
-				    img[src=""] {
-				    	display: none;
 				    }
 			    }
 		    }
@@ -217,11 +209,9 @@ main {
 		color: $white;
 
 		.columns {
-			@include columns-container;
-
 			.column {
-				@include column-three;
 		    text-align: center;
+				margin-bottom: $padding-md;
 
 		    p {
 		    	margin-bottom: $padding-md;
@@ -232,11 +222,9 @@ main {
 
 	section#partners-and-funders {
 		.partners {
-			@include columns-container;
-
-			div {
-				@include column-three;
+			> div {
 				text-align: center;
+				margin-bottom: $padding-sm;
 			}
 		}
 

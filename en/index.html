@@ -22,7 +22,7 @@
 	<link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
 
 	<script src="{{ "/assets/js/vendor/modernizr-2.6.2.min.js" | prepend: site.baseurl }}"></script>
-	<script src="{{ "/assets/js/vendor/masonry.min.js" | prepend: site.baseurl }}"></script>
+
 </head>
 
 <body>
@@ -37,7 +37,7 @@
 	<section id="landing">
 		<div class="header-text">
 			<h1 class="bold centered">
-				Master <span id="topic">public speaking</span>, <br> in your neighborhood, for free.
+				<span id="topic">Master public speaking</span>, <br> in your neighborhood, for free.
 			</h1>
 			<a href="#search" class="btn p2pu-btn dark">join a learning circle</a>
 		</div>
@@ -85,76 +85,29 @@
 			<p>I live in <input type="text" placeholder="Toronto, ON, Canada" value=""></p>
 		</div>
 
-		<div class="search-results grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 30% }'>
-			<div class="result-item grid-item">
-				<div class="card">
-					<h3 class="title">Make a website</h3>
-					<p class="schedule">Tuesdays 6:30 to 7:30pm</p>
-					<div class="show-on-hover">
-						<p class="facilitator">Facilitator: Rob Germeroth</p>
-						<p class="location">Location: Parkman Branch Library (map)</p>
-						<p class="duration">6 weeks beginning April 27, 2017</p>
-					</div>
-				</div>
-				<div class="image-container">
-					<div class="image">
-						<img src="../assets/images/index/courses/ttw.png" alt="">
-					</div>
-				</div>
-			</div>
+		<div class="search-results grid row">
+			{% for course in site.data.courses %}
+			<div class="result-item grid-item col-md-4 col-sm-6 col-xs-12">
+		    <div class="card col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-sx-12">
+		      <h4 class="title">{{ course.name }}</h4>
+		      <p class="schedule">{{ course.schedule }}</p>
+		      <div class="show-on-hover">
+		        <p class="facilitator">Facilitator: {{ course.facilitator }}</p>
+		        <p class="location">Location: {{ course.location }}</p>
+		        <p class="duration">{{ course.duration }}</p>
+		      </div>
+		    </div>
+		    <div class="image-container col-xs-0">
+		      <div class="image">
+						{% if course.image %}
+		        <img src="../assets/images/index/courses/{{ course.image }}" alt="{{ course.name }}">
+		        {% endif %}
+		      </div>
+		    </div>
+		  </div>
+		  {% endfor %}
 
-			<div class="result-item grid-item">
-				<div class="card">
-					<h3 class="title">Become a better writer</h3>
-					<p class="schedule">Thursdays 6:30 to 7:30pm</p>
-					<div class="show-on-hover">
-						<p class="facilitator">Facilitator: Rob Germeroth</p>
-						<p class="location">Location: Parkman Branch Library (map)</p>
-						<p class="duration">6 weeks beginning April 27, 2017</p>
-					</div>
-				</div>
-				<div class="image-container">
-					<div class="image">
-						<img src="" alt="">
-					</div>
-				</div>
-			</div>
-
-			<div class="result-item grid-item">
-				<div class="card">
-					<h3 class="title">Become a better writer</h3>
-					<p class="schedule">Thursdays 6:30 to 7:30pm</p>
-					<div class="show-on-hover">
-						<p class="facilitator">Facilitator: Rob Germeroth</p>
-						<p class="location">Location: Parkman Branch Library (map)</p>
-						<p class="duration">6 weeks beginning April 27, 2017</p>
-					</div>
-				</div>
-				<div class="image-container">
-					<div class="image">
-						<img src="" alt="">
-					</div>
-				</div>
-			</div>
-
-			<div class="result-item grid-item">
-				<div class="card">
-					<h3 class="title">Become a better writer</h3>
-					<p class="schedule">Thursdays 6:30 to 7:30pm</p>
-					<div class="show-on-hover">
-						<p class="facilitator">Facilitator: Rob Germeroth</p>
-						<p class="location">Location: Parkman Branch Library (map)</p>
-						<p class="duration">6 weeks beginning April 27, 2017</p>
-					</div>
-				</div>
-				<div class="image-container">
-					<div class="image">
-						<img src="" alt="">
-					</div>
-				</div>
-			</div>
-
-			<div class="result-item grid-item start-learning-circle">
+			<div class="result-item grid-item start-learning-circle col-md-4 col-sm-6 col-xs-12">
 				<div class="circle">
 					<p class="large">Start your own learning circle</p>
 					<a href="#" class="btn p2pu-btn dark arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -175,16 +128,16 @@
 			<h2 class="headline">P2PU facilitates learning outside of institutional walls. Designing and leveraging open education tools and resources, P2PU strives to cultivate high-quality, low-cost models for lifelong learning.</h2>
 		</header>
 
-		<div class="columns">
-			<div class="column">
+		<div class="columns row">
+			<div class="col-md-4 col-sm-6 col-xs-12 column">
 				<p class="large">Whether or not you are interested in facilitating a learning circle yourself, we have resources you can use to try and start a learning circle program locally.</p>
 				<button class="btn p2pu-btn light">get learning circles started</button>
 			</div>
-			<div class="column">
+			<div class="col-md-4 col-sm-6 col-xs-12 column">
 				<p class="large">P2PU represents a growing movement of educators, librarians, activists, policy-makers, and technologists around the globe; we use a community listserv to share ideas, celebrate victories, and support one another.</p>
 				<button class="btn p2pu-btn light">join the community</button>
 			</div>
-			<div class="column">
+			<div class="col-md-4 col-sm-6 col-xs-12 column">
 				<p class="large">Beyond our openly-licensed toolkit, there are lots of other services we can provide, including hosting facilitator workshops, developing online courses, and customizing tool development.</p>
 				<button class="btn p2pu-btn light">work with us</button>
 			</div>
@@ -202,33 +155,10 @@
 				</div>
 			</div>
 		</header>
-		<div class="partners">
-				<div>Boston Public Library</div>
-				<div>Charlotte Mecklenburg Public Library</div>
-				<div>Cleveland Public Library</div>
-				<div>Chicago Public Library</div>
-				<div>Creative Commons</div>
-				<div>CRI</div>
-				<div>Detroit Public Library</div>
-				<div>eIFL</div>
-				<div>Hillsborough County Public Library Cooperative</div>
-				<div>Kansas City Public Library</div>
-				<div>Kenya National Library Services</div>
-				<div>Libraries without Borders</div>
-				<div>MIT Media Lab</div>
-				<div>Mozilla</div>
-				<div>Multnomah County Library</div>
-				<div>OERu</div>
-				<div>Open University</div>
-				<div>Pierce County Library</div>
-				<div>Children's Museum of Pittsburgh</div>
-				<div>Providence Public Library</div>
-				<div>Richland County Library</div>
-				<div>San Jose Public Library</div>
-				<div>TASCHA</div>
-				<div>Twin Lakes Library System</div>
-				<div>Wichita Public Library</div>
-				<div>World Education</div>
+		<div class="partners row">
+			{% for partner in site.data.partners %}
+				<div class="col-md-4 col-sm-6 col-xs-12"><a href="{{ partner.url }}">{{ partner.name }}</a></div>
+			{% endfor %}
 		</div>
 
 		<header>
@@ -239,22 +169,16 @@
 			</div>
 		</header>
 		<div class="funders">
+			{% for funder in site.data.funders %}
 			<div class="funder">
-				<img src="../assets/images/index/funders/dollar-general.jpg" alt="Dollar General Literacy Foundation">
+				<a href="{{ funder.url }}">
+					<img src="{{ site.baseurl }}{{ funder.logo }}" alt="{{ funder.name }}">
+				</a>
 			</div>
-			<div class="funder">
-				<img src="../assets/images/index/funders/imls.jpg" alt="Institute of Museum and Library Services">
-			</div>
-			<div class="funder">
-				<img src="../assets/images/index/funders/knight.png" alt="Knight Foundation">
-			</div>
-			<div class="funder">
-				<img src="../assets/images/index/funders/osf.jpg" alt="Open Society Foundations">
-			</div>
+			{% endfor %}
 		</div>
 	</section>
 </main>
-
 
 {% include new_footer_en.html %}
 

@@ -6,6 +6,13 @@ body {
     font-weight: bold;
   }
 
+  a {
+    color: $gray-darker;
+    &:hover, &:focus, &:active {
+      color: $p2pu-orange;
+    }
+  }
+
   .small {
     font-size: $font-size-small;
   }
@@ -30,23 +37,50 @@ body {
     font-size: $font-size-h3;
 
     .underline {
-      border-bottom: 0.8em solid $gray-light;
       padding-left: 2em;
       padding-right: 2em;
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px transparent;
+      position: relative;
+      overflow: hidden;
 
       .text {
         font-family: $headings-font-family;
         font-weight: bold;
         text-transform: uppercase;
-        transform: translateY(0.9em);
+        transform: translateY(0.1em);
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background: $gray-light;
+        height: 0.8em;
+        -webkit-transition-property: right;
+        transition-property: right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
       }
 
       &.light {
-        border-bottom: 0.8em solid transparentize($white, 0.6);
+        &:before {
+          background: transparentize($white, 0.6);
+        }
       }
 
       &.dark {
-        border-bottom: 0.8em solid transparentize($gray-darker, 0.6);
+        &:before {
+          background: transparentize($gray-darker, 0.6);
+        }
       }
     }
 
@@ -54,7 +88,13 @@ body {
       font-size: $font-size-h4;
 
       .text {
-        transform: translateY(1.1em);
+        transform: translateY(0.2em);
+      }
+    }
+
+    &.active {
+      .underline:before {
+        right: 0;
       }
     }
   }
