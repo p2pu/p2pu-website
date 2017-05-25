@@ -15,14 +15,22 @@ footer.home-footer {
     .column-item {
       flex-basis: 33%;
       min-width: 200px;
-      padding: 40px;
+      padding: $padding-md;
+
+      .footer-section {
+        padding-top: $padding-sm;
+      }
     }
   }
 
   .social {
+    > div {
+      margin-bottom: 10px;
+    }
+
     span {
       i {
-        margin-right: 20px;
+        margin-right: $padding-sm;
         width: 14px;
       }
     }
@@ -30,12 +38,13 @@ footer.home-footer {
 
   .toc {
     text-align: center;
-    padding: 20px;
+    padding: $padding-sm;
   }
 
   form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     input[type="text"] {
@@ -43,7 +52,7 @@ footer.home-footer {
       background: none;
       border-bottom: 2px solid $white;
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: $padding-sm;
 
       &::placeholder {
         font-style: italic;

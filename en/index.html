@@ -22,6 +22,7 @@
 	<link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
 
 	<script src="{{ "/assets/js/vendor/modernizr-2.6.2.min.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/assets/js/vendor/masonry.min.js" | prepend: site.baseurl }}"></script>
 </head>
 
 <body>
@@ -73,7 +74,7 @@
 	<section id="search">
 		<header>
 			<div class="subtitle">
-				<div class="underline">
+				<div class="underline dark">
 					<div class="text"><h3>Join a learning circle near you</h3></div>
 				</div>
 			</div>
@@ -84,11 +85,16 @@
 			<p>I live in <input type="text" placeholder="Toronto, ON, Canada" value=""></p>
 		</div>
 
-		<div class="search-results">
-			<div class="result-item">
+		<div class="search-results grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 30% }'>
+			<div class="result-item grid-item">
 				<div class="card">
 					<h3 class="title">Make a website</h3>
 					<p class="schedule">Tuesdays 6:30 to 7:30pm</p>
+					<div class="show-on-hover">
+						<p class="facilitator">Facilitator: Rob Germeroth</p>
+						<p class="location">Location: Parkman Branch Library (map)</p>
+						<p class="duration">6 weeks beginning April 27, 2017</p>
+					</div>
 				</div>
 				<div class="image-container">
 					<div class="image">
@@ -97,10 +103,15 @@
 				</div>
 			</div>
 
-			<div class="result-item">
+			<div class="result-item grid-item">
 				<div class="card">
 					<h3 class="title">Become a better writer</h3>
 					<p class="schedule">Thursdays 6:30 to 7:30pm</p>
+					<div class="show-on-hover">
+						<p class="facilitator">Facilitator: Rob Germeroth</p>
+						<p class="location">Location: Parkman Branch Library (map)</p>
+						<p class="duration">6 weeks beginning April 27, 2017</p>
+					</div>
 				</div>
 				<div class="image-container">
 					<div class="image">
@@ -109,10 +120,15 @@
 				</div>
 			</div>
 
-			<div class="result-item">
+			<div class="result-item grid-item">
 				<div class="card">
 					<h3 class="title">Become a better writer</h3>
 					<p class="schedule">Thursdays 6:30 to 7:30pm</p>
+					<div class="show-on-hover">
+						<p class="facilitator">Facilitator: Rob Germeroth</p>
+						<p class="location">Location: Parkman Branch Library (map)</p>
+						<p class="duration">6 weeks beginning April 27, 2017</p>
+					</div>
 				</div>
 				<div class="image-container">
 					<div class="image">
@@ -121,10 +137,15 @@
 				</div>
 			</div>
 
-			<div class="result-item">
+			<div class="result-item grid-item">
 				<div class="card">
 					<h3 class="title">Become a better writer</h3>
 					<p class="schedule">Thursdays 6:30 to 7:30pm</p>
+					<div class="show-on-hover">
+						<p class="facilitator">Facilitator: Rob Germeroth</p>
+						<p class="location">Location: Parkman Branch Library (map)</p>
+						<p class="duration">6 weeks beginning April 27, 2017</p>
+					</div>
 				</div>
 				<div class="image-container">
 					<div class="image">
@@ -133,10 +154,10 @@
 				</div>
 			</div>
 
-			<div class="result-item start-learning-circle">
+			<div class="result-item grid-item start-learning-circle">
 				<div class="circle">
 					<p class="large">Start your own learning circle</p>
-					<a href="#" class="btn p2pu-btn light arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					<a href="#" class="btn p2pu-btn dark arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</div>

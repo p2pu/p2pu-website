@@ -40,10 +40,22 @@ body {
         text-transform: uppercase;
         transform: translateY(0.9em);
       }
+
+      &.light {
+        border-bottom: 0.8em solid transparentize($white, 0.6);
+      }
+
+      &.dark {
+        border-bottom: 0.8em solid transparentize($gray-darker, 0.6);
+      }
     }
 
     &.small {
       font-size: $font-size-h4;
+
+      .text {
+        transform: translateY(1.1em);
+      }
     }
   }
 

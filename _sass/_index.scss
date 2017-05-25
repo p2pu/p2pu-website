@@ -40,10 +40,14 @@ main {
 			    height: 20px;
 			    width: 20px;
 			    border-radius: 50%;
+				  transition: transform 0.3s;
+				  z-index: -1;
+				  bottom: 0;
 				}
 
 				.title {
 					padding-bottom: $padding-sm;
+					transition: color 0.3s;
 
 					a {
 						color: $gray-darker;
@@ -52,14 +56,18 @@ main {
 					}
 				}
 
-/*				&:hover {
-					transition: all 0.5s ease-in-out;
+				&:hover {
+					.title {
+						a {
+							color: $white;
+							font-weight: bold;
+						}
+					}
 
 					.dot {
-						height: 100px;
-						width: 100px;
+						transform: scale(6.5) translateY(-30%);
 					}
-				}*/
+				}
 	    }
 		}
 	}
@@ -88,11 +96,11 @@ main {
 
 			.result-item {
 				min-width: 350px;
-				flex-basis: 31%;
+				flex-basis: 30%;
 		    position: relative;
 		    display: flex;
 		    justify-content: center;
-		    margin: 10px;
+		    margin: $padding-sm 10px;
 
 		    .card {
 		    	position: absolute;
@@ -162,6 +170,18 @@ main {
 
 		    	.image-container > .image {
 		    		background: $p2pu-light-yellow;
+		    	}
+		    }
+
+		    .show-on-hover {
+		    	max-height: 0;
+		    	overflow: hidden;
+		    	transition: max-height 0.3s ease-in-out;
+		    }
+
+		    &:hover, &:focus {
+		    	.show-on-hover {
+			    	max-height: 150px;
 		    	}
 		    }
 			}
