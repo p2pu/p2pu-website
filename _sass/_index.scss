@@ -104,6 +104,7 @@ main {
 			    padding: $padding-sm;
 			    text-align: center;
 			    color: #fff;
+			    cursor: pointer;
 
 			    .title {
 			    	text-transform: uppercase;
@@ -231,6 +232,7 @@ main {
 		.funders {
 			display: flex;
 	    justify-content: space-around;
+	    padding: $padding-md;
 
 	    .funder {
 	    	display: flex;
