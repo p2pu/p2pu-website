@@ -1,15 +1,26 @@
 - name: Writing For Change
-  url: http://writing4change.p2pu.org/
   image: w4c.png
+  schedule: Tuesdays 6:30 to 7:30pm
+  facilitator: Rob Germeroth
+  location: Parkman Branch Library
+  duration: 6 weeks beginning April 27, 2017
 
 - name: Teach The Web
-  url: https://training.webmakerprototypes.org/en/
   image: ttw.png
+  schedule: Tuesdays 6:30 to 7:30pm
+  facilitator: Rob Germeroth
+  location: Parkman Branch Library
+  duration: 6 weeks beginning April 27, 2017
 
 - name: Play With Your Music
-  url: http://www.playwithyourmusic.org/
   image: playwithyourmusic.png
+  schedule: Tuesdays 6:30 to 7:30pm
+  facilitator: Rob Germeroth
+  location: Parkman Branch Library
+  duration: 6 weeks beginning April 27, 2017
 
 - name: Gentle Introduction To Python
-  url: http://python.p2pu.org/
-  image: gitp-logo.png
+  schedule: Tuesdays 6:30 to 7:30pm
+  facilitator: Rob Germeroth
+  location: Parkman Branch Library
+  duration: 6 weeks beginning April 27, 2017

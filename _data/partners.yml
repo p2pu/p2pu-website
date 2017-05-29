@@ -1,21 +1,77 @@
+- name: Boston Public Library
+  url: www.bpl.org/
+
+- name: Charlotte Mecklenburg Public Library
+  url: https://www.cmlibrary.org/
+
+- name: Cleveland Public Library
+  url: https://cpl.org/
+
 - name: Chicago Public Library
-  image: /assets/images/index/partners/cpl-logo.png
+  url: https://www.chipublib.org/
 
 - name: Creative Commons
-  image: /assets/images/index/partners/cc-logo.png
+  url: https://creativecommons.org/
 
-- name: GovLab
-  image: /assets/images/index/partners/govlab-logo.png
+- name: CRI
+  url: https://cri-paris.org/
 
-- name: HCIL
-  image: /assets/images/index/partners/hcil-logo.png
-  
+- name: Detroit Public Library
+  url: www.detroitpubliclibrary.org/
+
+- name: eIFL
+  url: www.eifl.net/
+
+- name: Hillsborough County Public Library Cooperative
+  url: www.hcplc.org/
+
+- name: Kansas City Public Library
+  url: www.kclibrary.org/
+
+- name: Kenya National Library Services
+  url: www.knls.ac.ke/
+
+- name: Libraries without Borders
+  url: https://www.librarieswithoutborders.org/
+
 - name: MIT Media Lab
-  image: /assets/images/index/partners/medialab-logo.png
+  url: https://www.media.mit.edu/
 
-- name: Mozilla Foundation
-  image: /assets/images/index/partners/mozilla-logo.png
+- name: Mozilla
+  url: https://www.mozilla.org/
 
-- name: Open Knowledge
-  image: /assets/images/index/partners/okfn-logo.png
-  
+- name: Multnomah County Library
+  url: https://multcolib.org/
+
+- name: OERu
+  url: https://oeru.org/
+
+- name: Open University
+  url: www.open.ac.uk/
+
+- name: Pierce County Library
+  url: https://www.piercecountylibrary.org/
+
+- name: Children's Museum of Pittsburgh
+  url: https://pittsburghkids.org/
+
+- name: Providence Public Library
+  url: www.provlib.org/
+
+- name: Richland County Library
+  url: www.richlandlibrary.com/
+
+- name: San Jose Public Library
+  url: https://www.sjpl.org/
+
+- name: TASCHA
+  url: tascha.uw.edu/
+
+- name: Twin Lakes Library System
+  url: tllsga.org/
+
+- name: Wichita Public Library
+  url: www.wichitalibrary.org/
+
+- name: World Education
+  url: www.worlded.org/

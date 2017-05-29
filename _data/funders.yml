@@ -1,5 +1,15 @@
-- name: Hewlett Foundation
-  image: /assets/images/index/partners/hewlett-logo.png
-  
+- name: Dollar General Literacy Foundation
+  logo: /assets/images/index/funders/dollar-general.png
+  url: http://www2.dollargeneral.com/dgliteracy/Pages/index.aspx
+
 - name: Knight Foundation
-  image: /assets/images/index/partners/knight-logo.png
+  logo: /assets/images/index/funders/knight.png
+  url: https://knightfoundation.org/
+
+- name: Institute of Museum and Library Services
+  logo: /assets/images/index/funders/imls.png
+  url: https://www.imls.gov/
+
+- name: Open Society Foundations
+  logo: /assets/images/index/funders/osf.png
+  url: https://www.opensocietyfoundations.org/
