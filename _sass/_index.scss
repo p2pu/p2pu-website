@@ -18,8 +18,10 @@ main {
 		display: flex;
 	  flex-direction: column;
 	  justify-content: center;
+	  text-align: center;
 		min-height: 100vh;
 		padding: $padding-md 0;
+		transition: all 2s ease-in-out;
 
     .header-text {
 			text-align: center;
@@ -31,17 +33,13 @@ main {
     }
 
 		.secondary-nav {
-	    margin-top: 20vh;
-	    margin-bottom: 20vh;
+	    margin-top: 14vh;
+	    margin-bottom: 14vh;
 
 	    .nav-item {
 	    	position: relative;
 	    	display: flex;
 		    align-items: center;
-
-	    	> div {
-  		    display: inline-block;
-	    	}
 
 				.title {
 					font-size: 1.2em;
@@ -50,7 +48,6 @@ main {
 					a {
 						color: $gray-darker;
 			    	text-transform: uppercase;
-						text-decoration: none;
 
 						&:hover {
 							font-weight: bold;
@@ -60,33 +57,49 @@ main {
 
 				&:nth-of-type(1) {
 					.line {
-						border: 0.5em solid $p2pu-blue;
+						width: 0;
+						transition: width 1s ease-in-out;
+						border: 0.6em solid $p2pu-blue;
 						background: $p2pu-blue;
-						width: 20vw;
+						&.expanded {
+							width: 20vw;
+						}
 					}
 				}
 
 				&:nth-of-type(2) {
 					.line {
-						border: 0.5em solid $p2pu-green;
+						width: 0;
+						transition: width 1s ease-in-out;
+						border: 0.6em solid $p2pu-green;
 						background: $p2pu-green;
-						width: 35vw;
+						&.expanded {
+							width: 35vw;
+						}
 					}
 				}
 
 				&:nth-of-type(3) {
 					.line {
-						border: 0.5em solid $p2pu-yellow;
+						width: 0;
+						transition: width 1s ease-in-out;
+						border: 0.6em solid $p2pu-yellow;
 						background: $p2pu-yellow;
-						width: 50vw;
+						&.expanded {
+							width: 50vw;
+						}
 					}
 				}
 
 				&:nth-of-type(4) {
 					.line {
-						border: 0.5em solid $p2pu-orange;
+						width: 0;
+						transition: width 1s ease-in-out;
+						border: 0.6em solid $p2pu-orange;
 						background: $p2pu-orange;
-						width: 65vw;
+						&.expanded {
+							width: 65vw;
+						}
 					}
 				}
 	    }
@@ -322,6 +335,44 @@ main {
 			height: auto;
 			min-height: 50vh;
 			width: auto;
+		}
+
+		section#landing {
+			.secondary-nav {
+				.nav-item {
+					&:nth-of-type(1) {
+						.line {
+							&.expanded {
+								width: 10vw;
+							}
+						}
+					}
+
+					&:nth-of-type(2) {
+						.line {
+							&.expanded {
+								width: 20vw;
+							}
+						}
+					}
+
+					&:nth-of-type(3) {
+						.line {
+							&.expanded {
+								width: 30vw;
+							}
+						}
+					}
+
+					&:nth-of-type(4) {
+						.line {
+							&.expanded {
+								width: 40vw;
+							}
+						}
+					}
+				}
+			}
 		}
 
 		section#search {
