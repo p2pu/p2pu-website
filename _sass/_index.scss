@@ -8,6 +8,10 @@ main {
 	header {
 		@include flex-column-centered;
 	  margin: $padding-sm;
+
+	  .subtitle {
+	  	text-align: center;
+	  }
 	}
 
 	section#landing {
@@ -76,7 +80,7 @@ main {
 
 		.search-form {
 			text-align: center;
-	    font-size: 36px;
+	    font-size: 2em;
 	    margin: $padding-md;
 
 	    input {
@@ -230,13 +234,12 @@ main {
 		}
 
 		.funders {
-			display: flex;
-	    justify-content: space-around;
 	    padding: $padding-md;
 
 	    .funder {
 	    	display: flex;
 	    	align-items: center;
+	    	justify-content: center;
 
 		    img {
 		    	max-width: 200px;
@@ -281,4 +284,77 @@ main {
 
 .background-orange {
 	background-color: $p2pu-orange;
+}
+
+@media (max-width: $screen-sm-max) {
+	body {
+		font-size: $font-size-base-mobile;
+	}
+
+	main {
+
+		section {
+			padding: 4px;
+
+			header {
+				margin: 12px 4px;
+			}
+		}
+
+		.full-width-image {
+			height: auto;
+			min-height: 50vh;
+			width: auto;
+		}
+
+		section#search {
+			.search-form {
+		    font-size: 1.4em;
+		    margin: $padding-sm;
+		  }
+
+		  .search-results {
+				.result-item {
+					padding: 8px 0;
+					margin-bottom: 0;
+			    .card {
+			    	position: relative;
+			    }
+
+			    &:hover, &:focus {
+			    	.show-on-hover {
+				    	max-height: 0px;
+			    	}
+			    }
+			  }
+			}
+		}
+
+		section#partners-and-funders {
+			.funders {
+				padding: $padding-sm;
+				.funder {
+					img {
+						max-width: 160px;
+					}
+				}
+			}
+		}
+	}
+
+	.hidden-on-mobile {
+		display: none !important;
+	}
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	main {
+		section {
+			padding: $padding-sm;
+
+			header {
+				margin: 12px 4px;
+			}
+		}
+	}
 }

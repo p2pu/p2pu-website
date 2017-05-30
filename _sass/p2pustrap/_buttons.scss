@@ -83,4 +83,24 @@
   &:active {
     outline: none;
   }
+
+  @media (max-width: $screen-sm-max) {
+    &.dark {
+      background: $gray-darker;
+      color: $white;
+
+      &:before {
+        background: $gray-darker;
+      }
+    }
+
+    &.light {
+      background: $white;
+      color: $gray-darker;
+
+      &:before {
+        background: $white;
+      }
+    }
+  }
 }

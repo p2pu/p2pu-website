@@ -41,32 +41,7 @@
 			</h1>
 			<a href="#search" class="btn p2pu-btn dark">join a learning circle</a>
 		</div>
-		<div class="secondary-nav">
-			<div class="nav-item">
-				<span class="title">
-					<a href="#">facilitate</a>
-				</span>
-				<div class="dot background-yellow"></div>
-			</div>
-			<div class="nav-item">
-				<span class="title">
-					<a href="#">about</a>
-				</span>
-				<div class="dot background-blue"></div>
-			</div>
-			<div class="nav-item">
-				<span class="title">
-					<a href="#">stories</a>
-				</span>
-				<div class="dot background-green"></div>
-			</div>
-			<div class="nav-item">
-				<span class="title">
-					<a href="#">work with us</a>
-				</span>
-				<div class="dot background-orange"></div>
-			</div>
-		</div>
+
 	</section>
 
 	<div class="full-width-image"></div>
@@ -81,14 +56,14 @@
 		</header>
 		<p class="centered large">Learning circles are study groups for people who want to take online classes together and in-person.</p>
 
-		<div class="search-form">
+		<div class="search-form col-md-12">
 			<p>I live in <input type="text" placeholder="Toronto, ON, Canada" value=""></p>
 		</div>
 
-		<div class="search-results grid row">
+		<div class="search-results grid">
 			{% for course in site.data.courses %}
-			<div class="result-item grid-item col-md-4 col-sm-6 col-xs-12">
-		    <div class="card col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-sx-12">
+			<div class="result-item grid-item col-md-4 col-sm-12 col-xs-12">
+		    <div class="card col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-xs-12">
 		      <h4 class="title">{{ course.name }}</h4>
 		      <p class="schedule">{{ course.schedule }}</p>
 		      <div class="show-on-hover">
@@ -97,7 +72,7 @@
 		        <p class="duration">{{ course.duration }}</p>
 		      </div>
 		    </div>
-		    <div class="image-container col-xs-0">
+		    <div class="image-container col-xs-0 hidden-on-mobile">
 		      <div class="image">
 						{% if course.image %}
 		        <img src="../assets/images/index/courses/{{ course.image }}" alt="{{ course.name }}">
@@ -107,7 +82,7 @@
 		  </div>
 		  {% endfor %}
 
-			<div class="result-item grid-item start-learning-circle col-md-4 col-sm-6 col-xs-12">
+			<div class="result-item grid-item start-learning-circle col-md-4 col-sm-12 col-xs-12">
 				<div class="circle">
 					<p class="large">Start your own learning circle</p>
 					<a href="#" class="btn p2pu-btn dark arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -125,19 +100,19 @@
 
 	<section id="about" class="background-blue">
 		<header>
-			<h2 class="headline">P2PU facilitates learning outside of institutional walls. Designing and leveraging open education tools and resources, P2PU strives to cultivate high-quality, low-cost models for lifelong learning.</h2>
+			<h2 class="headline">P2PU facilitates learning outside of institutional walls. <span class="hidden-on-mobile">Designing and leveraging open education tools and resources, P2PU strives to cultivate high-quality, low-cost models for lifelong learning.</span></h2>
 		</header>
 
 		<div class="columns row">
-			<div class="col-md-4 col-sm-6 col-xs-12 column">
+			<div class="col-md-4 col-sm-12 col-xs-12 column">
 				<p class="large">Whether or not you are interested in facilitating a learning circle yourself, we have resources you can use to try and start a learning circle program locally.</p>
 				<button class="btn p2pu-btn light">get learning circles started</button>
 			</div>
-			<div class="col-md-4 col-sm-6 col-xs-12 column">
+			<div class="col-md-4 col-sm-12 col-xs-12 column">
 				<p class="large">P2PU represents a growing movement of educators, librarians, activists, policy-makers, and technologists around the globe; we use a community listserv to share ideas, celebrate victories, and support one another.</p>
 				<button class="btn p2pu-btn light">join the community</button>
 			</div>
-			<div class="col-md-4 col-sm-6 col-xs-12 column">
+			<div class="col-md-4 col-sm-12 col-xs-12 column">
 				<p class="large">Beyond our openly-licensed toolkit, there are lots of other services we can provide, including hosting facilitator workshops, developing online courses, and customizing tool development.</p>
 				<button class="btn p2pu-btn light">work with us</button>
 			</div>
@@ -157,7 +132,7 @@
 		</header>
 		<div class="partners row">
 			{% for partner in site.data.partners %}
-				<div class="col-md-4 col-sm-6 col-xs-12"><a href="{{ partner.url }}">{{ partner.name }}</a></div>
+				<div class="col-md-4 col-sm-12 col-xs-12"><a href="{{ partner.url }}">{{ partner.name }}</a></div>
 			{% endfor %}
 		</div>
 
@@ -168,9 +143,9 @@
 				</div>
 			</div>
 		</header>
-		<div class="funders">
+		<div class="funders row">
 			{% for funder in site.data.funders %}
-			<div class="funder">
+			<div class="funder col-md-3 col-sm-6 col-xs-6">
 				<a href="{{ funder.url }}">
 					<img src="{{ site.baseurl }}{{ funder.logo }}" alt="{{ funder.name }}">
 				</a>

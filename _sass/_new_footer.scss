@@ -39,7 +39,12 @@ footer.home-footer {
       justify-content: center;
       align-items: center;
 
-      input[type="text"] {
+      div {
+        width: 100%;
+        text-align: center;
+      }
+
+      input[type="email"] {
         border: none;
         background: none;
         border-bottom: 2px solid $white;
