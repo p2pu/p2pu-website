@@ -15,8 +15,13 @@ main {
 	}
 
 	section#landing {
-		@include flex-column-centered;
+		display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  text-align: center;
 		min-height: 100vh;
+		padding: $padding-md 0;
+		transition: all 2s ease-in-out;
 
     .header-text {
 			text-align: center;
@@ -28,48 +33,73 @@ main {
     }
 
 		.secondary-nav {
-			display: flex;
-	    flex-direction: row;
-	    margin-top: 20vh;
-	    margin-bottom: 20vh;
+	    margin-top: 14vh;
+	    margin-bottom: 14vh;
 
 	    .nav-item {
-	    	@include flex-column-centered;
-	    	margin-right: $padding-lg;
-	    	margin-left: $padding-lg;
+	    	position: relative;
+	    	display: flex;
 		    align-items: center;
-		    cursor: pointer;
-
-				.dot {
-			    height: 20px;
-			    width: 20px;
-			    border-radius: 50%;
-				  transition: transform 0.3s;
-				  z-index: -1;
-				  bottom: 0;
-				}
 
 				.title {
-					padding-bottom: $padding-sm;
-					transition: color 0.3s;
+					font-size: 1.2em;
+					padding-left: 5px;
 
 					a {
 						color: $gray-darker;
 			    	text-transform: uppercase;
-						text-decoration: none;
-					}
-				}
 
-				&:hover {
-					.title {
-						a {
-							color: $white;
+						&:hover {
 							font-weight: bold;
 						}
 					}
+				}
 
-					.dot {
-						transform: scale(6.5) translateY(-30%);
+				&:nth-of-type(1) {
+					.line {
+						width: 0;
+						transition: width 1s ease-in-out;
+						border: 0.6em solid $p2pu-blue;
+						background: $p2pu-blue;
+						&.expanded {
+							width: 20vw;
+						}
+					}
+				}
+
+				&:nth-of-type(2) {
+					.line {
+						width: 0;
+						transition: width 1s ease-in-out;
+						border: 0.6em solid $p2pu-green;
+						background: $p2pu-green;
+						&.expanded {
+							width: 35vw;
+						}
+					}
+				}
+
+				&:nth-of-type(3) {
+					.line {
+						width: 0;
+						transition: width 1s ease-in-out;
+						border: 0.6em solid $p2pu-yellow;
+						background: $p2pu-yellow;
+						&.expanded {
+							width: 50vw;
+						}
+					}
+				}
+
+				&:nth-of-type(4) {
+					.line {
+						width: 0;
+						transition: width 1s ease-in-out;
+						border: 0.6em solid $p2pu-orange;
+						background: $p2pu-orange;
+						&.expanded {
+							width: 65vw;
+						}
 					}
 				}
 	    }
@@ -305,6 +335,44 @@ main {
 			height: auto;
 			min-height: 50vh;
 			width: auto;
+		}
+
+		section#landing {
+			.secondary-nav {
+				.nav-item {
+					&:nth-of-type(1) {
+						.line {
+							&.expanded {
+								width: 10vw;
+							}
+						}
+					}
+
+					&:nth-of-type(2) {
+						.line {
+							&.expanded {
+								width: 20vw;
+							}
+						}
+					}
+
+					&:nth-of-type(3) {
+						.line {
+							&.expanded {
+								width: 30vw;
+							}
+						}
+					}
+
+					&:nth-of-type(4) {
+						.line {
+							&.expanded {
+								width: 40vw;
+							}
+						}
+					}
+				}
+			}
 		}
 
 		section#search {
