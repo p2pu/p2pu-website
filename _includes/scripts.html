@@ -1,7 +1,4 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>
-	window.jQuery || document.write('<script src="{{ site.baseurl }}/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')
-</script>
+
 <script src="{{ site.baseurl }}/assets/js/vendor/bootstrap/collapse.js"></script>
 <script src="{{ site.baseurl }}/assets/js/vendor/bootstrap/dropdown.js"></script>
 <script src="{{ site.baseurl }}/assets/js/vendor/bootstrap/affix.js"></script>
@@ -93,17 +90,17 @@
 		'Become a better writer',
 	]
 
-	function rotateText() {
-		var topicSpan = document.getElementById('topic');
-		var currentTopic = topicSpan.textContent;
-		var currentTopicIndex = courseTopics.indexOf(currentTopic);
-		var newPosition = currentTopicIndex >= (courseTopics.length -1) ? 0 : currentTopicIndex + 1
-		var newTopic = courseTopics[newPosition];
+	// function rotateText() {
+	// 	var topicSpan = document.getElementById('topic');
+	// 	var currentTopic = topicSpan.textContent;
+	// 	var currentTopicIndex = courseTopics.indexOf(currentTopic);
+	// 	var newPosition = currentTopicIndex >= (courseTopics.length -1) ? 0 : currentTopicIndex + 1
+	// 	var newTopic = courseTopics[newPosition];
 
-		topicSpan.textContent = newTopic;
-	}
+	// 	topicSpan.textContent = newTopic;
+	// }
 
-	window.setInterval(rotateText, 2500)
+	// window.setInterval(rotateText, 2500)
 
 </script>
 

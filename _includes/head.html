@@ -8,6 +8,11 @@
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="{{ site.baseurl }}/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')
+    </script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/assets/css/p2pu-custom.css" | prepend: site.baseurl }}">
 
@@ -28,5 +33,5 @@
 		<script src="{{ "/assets/js/vendor/modernizr-2.6.2.min.js" | prepend: site.baseurl }}"></script>
 	          <script type="text/javascript">window.liveSettings={api_key:"3cb3a6db697c4b138c1378204e79a8a3"};</script>
           <script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
-        
+
 </head>

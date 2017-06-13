@@ -10,18 +10,20 @@ layout: facilitate
 
 <main>
 
-  <section id="facilitator-landing">
-    <div class="full-width-image"></div>
-    <div class="facilitator-profile">
-      <div class="text">
-        <h2 class="name">Elsa</h2>
-        <p class="tagline">Learning Circle facilitator since 2013</p>
-        <p class="quote">"I was the first facilitator at my local library. I'm always looking for new volunteers to join me."</p>
+  <section id="facilitator-landing" class="row">
+    <div class="profile-container">
+      <div class="full-width-image"></div>
+      <div class="facilitator-profile col-md-5 col-sm-8 col-xs-12">
+        <div class="text">
+          <h2 class="name">Elsa</h2>
+          <p class="tagline">Learning Circle facilitator since 2013</p>
+          <p class="quote">"I was the first facilitator at my local library. I'm always looking for new volunteers to join me."</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="get-started">
+  <section id="get-started" class="row">
     <header>
       <div class="subtitle">
         <div class="underline">
@@ -31,21 +33,24 @@ layout: facilitate
       <h2 class="headline">We believe that with a little practice and training, anybody can facilitate a learning circle. Whether you want to run a single learning circle in your home or organize dozens across an urban library system, you've come to the right place.</h2>
     </header>
 
-    <div class="columns row">
-      <div class="col-md-4 col-sm-12 col-xs-12 column">
-        <p class="large">Check out the handbook</p>
-        <p>The facilitator handbook covers practical details of starting a learning circle.</p>
-        <button class="btn p2pu-btn light">Handbook</button>
+    <div class="resources row">
+      <div class="col-md-4 col-sm-12 col-xs-12 resource grow-on-hover">
+        <div class="jumbo-number yellow"><h1>1</h1></div>
+        <h3>Check out the handbook</h3>
+        <p class="large">The facilitator handbook covers practical details of starting a learning circle.</p>
+        <button class="btn p2pu-btn dark">Handbook</button>
       </div>
-      <div class="col-md-4 col-sm-12 col-xs-12 column">
-        <p class="large">Join the community</p>
-        <p>Head over to the community to connect with facilitators from around the world.</p>
-        <button class="btn p2pu-btn light">Community</button>
+      <div class="col-md-4 col-sm-12 col-xs-12 resource grow-on-hover">
+        <div class="jumbo-number orange"><h1>2</h1></div>
+        <h3>Join the community</h3>
+        <p class="large">Head over to the community to connect with facilitators from around the world.</p>
+        <button class="btn p2pu-btn dark">Community</button>
       </div>
-      <div class="col-md-4 col-sm-12 col-xs-12 column">
-        <p class="large">Learn from others</p>
-        <p>Read about how others are using learning circles in our blog.</p>
-        <button class="btn p2pu-btn light">Blog</button>
+      <div class="col-md-4 col-sm-12 col-xs-12 resource grow-on-hover">
+        <div class="jumbo-number blue"><h1>3</h1></div>
+        <h3>Learn from others</h3>
+        <p class="large">Read about how others are using learning circles in our blog.</p>
+        <button class="btn p2pu-btn dark">Blog</button>
       </div>
     </div>
   </section>
@@ -65,6 +70,56 @@ layout: facilitate
         </div>
       </div>
     </header>
+    <div class="faq-questions">
+      {% for faq in site.data.faqs %}
+        {% if forloop.first %}
+        <div class="faq-container open">
+        {% else %}
+        <div class="faq-container closed">
+        {% endif %}
+          <div class="question">
+            <h3>{{ faq.question }}</h3>
+            <a class="show-answer"><i class="fa fa-plus" aria-hidden="true"></i></a>
+            <a class="hide-answer"><i class="fa fa-minus" aria-hidden="true"></i></a>
+          </div>
+          <div class="answer">
+            {% for paragraph in faq.answer.paragraphs %}
+              {% if paragraph.list %}
+              <ul>
+                {% for list_item in paragraph.list %}
+                  {% if list_item.sublist %}
+                  <ul>
+                    {% for sublist_item in list_item.sublist %}
+                      <li>{{ sublist_item }}</li>
+                    {% endfor %}
+                  </ul>
+                  {% else %}
+                  <li>{{ list_item }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+              {% else %}
+              <p class="large">{{ paragraph }}</p>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </section>
 
 </main>
+
+<script>
+  $(function() {
+    $('.faq-container a.show-answer').on('click', function(e) {
+      e.preventDefault()
+      $(this).closest('.faq-container').removeClass('closed').addClass('open');
+    })
+
+    $('.faq-container a.hide-answer').on('click', function(e) {
+      e.preventDefault()
+      $(this).closest('.faq-container').removeClass('open').addClass('closed');
+    })
+  })
+</script>
