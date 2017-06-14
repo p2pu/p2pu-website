@@ -13,17 +13,23 @@ export default class LearningCircles extends Component {
   }
 
   _searchByLocation(query) {
-    // make query to API
-    this.setState({ searchResults: results })
+    const uriEncodedCity = encodeURIComponent(query)
+    const url = `https://learningcircles.p2pu.org/api/learningcircles?city=${uriEncodedCity}&active=true`
+    $.ajax({
+      url,
+      dataType: 'JSONP',
+      type: 'GET',
+      success: (res) => {
+        this.setState({ searchResults: res.items })
+      }
+    });
   }
 
   render() {
-    const locationPlaceholder = "Toronto, ON, Canada";
-
     return (
       <div className="search-and-results">
-        <SearchForm placeholder={locationPlaceholder} />
-        <BrowseLearningCircles learningCircles={this.state.searchResults} />
+        <SearchForm searchByLocation={ this.searchByLocation }/>
+        <BrowseLearningCircles learningCircles={ this.state.searchResults } />
       </div>
     );
   }

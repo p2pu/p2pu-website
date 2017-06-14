@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import LearningCircles from './components/learning-circles'
+import LearningCircles from './components/LearningCircles'
 import HeaderTextCarousel from './components/HeaderTextCarousel'
 
 

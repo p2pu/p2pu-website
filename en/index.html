@@ -20,6 +20,7 @@
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="{{ "/assets/css/p2pu-index.css" | prepend: site.baseurl }}">
 	<link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="https://unpkg.com/react-select/dist/react-select.css">
 
 	<script src="{{ "/assets/js/vendor/modernizr-2.6.2.min.js" | prepend: site.baseurl }}"></script>
 
@@ -82,36 +83,6 @@
 		<p class="centered large">Learning circles are study groups for people who want to take online classes together and in-person.</p>
 
 		<div id="learning-circles-browse"></div>
-
-		<div class="search-results col-md-12">
-			{% for course in site.data.courses %}
-			<div class="result-item grid-item col-md-4 col-sm-12 col-xs-12">
-		    <div class="card col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-xs-12">
-		      <h4 class="title">{{ course.name }}</h4>
-		      <p class="schedule">{{ course.schedule }}</p>
-		      <div class="show-on-hover">
-		        <p class="facilitator">Facilitator: {{ course.facilitator }}</p>
-		        <p class="location">Location: {{ course.location }}</p>
-		        <p class="duration">{{ course.duration }}</p>
-		      </div>
-		    </div>
-		    <div class="image-container col-xs-0 hidden-on-mobile">
-		      <div class="image">
-						{% if course.image %}
-		        <img src="../assets/images/index/courses/{{ course.image }}" alt="{{ course.name }}">
-		        {% endif %}
-		      </div>
-		    </div>
-		  </div>
-		  {% endfor %}
-
-			<div class="result-item grid-item start-learning-circle col-md-4 col-sm-12 col-xs-12">
-				<div class="circle">
-					<p class="large">Start your own learning circle</p>
-					<a href="#" class="btn p2pu-btn dark arrow"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-				</div>
-			</div>
-		</div>
 
 		<div class="load-more">
 			<p class="large">Load more results</p>

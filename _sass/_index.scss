@@ -109,17 +109,31 @@ main {
 	section#search {
 
 		.search-form {
-			text-align: center;
-	    font-size: 2em;
-	    margin: $padding-md;
+			display: flex;
+	    align-items: flex-end;
+	    justify-content: center;
+	    transform: scale(1.6);
+	    z-index: 10;
+	    margin-top: $padding-md;
+	    margin-bottom: $padding-lg;
 
-	    input {
-	    	border: none;
-	    	border-bottom: 2px solid $gray-darker;
-	    	margin-left: 0.2em;
+	    .city-select {
+	    	display: block;
+	    	min-width: 380px;
+	    	margin-left: 12px;
 
-	    	&::placeholder {
-  		    font-style: italic;
+	    	.Select-control {
+	    		border: none;
+	    		border-radius: 0;
+	    		border-bottom: 1px solid $gray-darker;
+	    	}
+
+	    	.Select-menu-outer {
+	    		border-radius: none;
+	    	}
+
+	    	.Select-value {
+	    		padding-right: 48px;
 	    	}
 	    }
 		}
@@ -139,6 +153,7 @@ main {
 			    text-align: center;
 			    color: #fff;
 			    cursor: pointer;
+			    box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
 
 			    .title {
 			    	text-transform: uppercase;
@@ -208,28 +223,28 @@ main {
 
 		    &:hover, &:focus {
 		    	.show-on-hover {
-			    	max-height: 150px;
+			    	max-height: 200px;
 		    	}
 		    }
 			}
+		}
 
-			.result-item.start-learning-circle {
-				align-items: center;
+		.result-item.start-learning-circle {
+			align-items: center;
 
-				p {
-					padding: 20px 0 12px 0;
-				}
+			p {
+				padding: 20px 0 12px 0;
+			}
 
-				.circle {
-					@include flex-column-centered;
-					height: 200px;
-			    width: 200px;
-			    background: $p2pu-light-blue;
-			    border-radius: 50%;
-			    text-align: center;
-			    padding: $padding-sm;
-			    color: $gray-darker;
-				}
+			.circle {
+				@include flex-column-centered;
+				height: 200px;
+		    width: 200px;
+		    background: $p2pu-light-blue;
+		    border-radius: 50%;
+		    text-align: center;
+		    padding: $padding-sm;
+		    color: $gray-darker;
 			}
 		}
 
@@ -249,7 +264,8 @@ main {
 				margin-bottom: $padding-md;
 
 		    p {
-		    	margin-bottom: $padding-md;
+		    	margin-bottom: $padding-sm;
+    	    padding: $padding-sm;
 		    }
 			}
 		}
