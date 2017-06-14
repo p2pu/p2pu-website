@@ -9,7 +9,6 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-  <LearningCircles />,
-  document.getElementById('learning-circles-browse')
+  <LearningCircles />, document.getElementById('learning-circles-browse')
 );
 
