@@ -4,12 +4,18 @@ section#facilitator-landing {
   .profile-container {
     position: relative;
 
-    .full-width-image {
-      height: 80vh;
-      min-height: 250px;
-      width: 100%;
-      background: url('../images/facilitator-header-1.jpg') no-repeat center center;
-      background-size: cover;
+    .facilitator-profile-images {
+      .half-page-image {
+        height: 80vh;
+        min-height: 250px;
+        background-size: cover;
+        background: url('../images/facilitator-header-1.jpg') no-repeat center center;
+
+        &:nth-of-type(2) {
+          background: url('../images/finance_for_everyone.jpg') no-repeat center center;
+        }
+      }
+
     }
 
     .facilitator-profile {
@@ -83,7 +89,7 @@ section#get-started {
   .resources {
     .resource {
       text-align: center;
-      margin-bottom: $padding-lg;
+      margin-bottom: $padding-md;
 
       p {
         padding: $padding-md $padding-sm;
@@ -92,7 +98,7 @@ section#get-started {
       .jumbo-number {
 
         h1 {
-          font-size: 180px;
+          font-size: 120px;
         }
 
         &.blue {
