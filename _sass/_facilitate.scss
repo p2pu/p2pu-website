@@ -4,18 +4,27 @@ section#facilitator-landing {
   .profile-container {
     position: relative;
 
+    &:not(.selected-profile) {
+      display: none;
+    }
+
     .facilitator-profile-images {
       .half-page-image {
-        height: 80vh;
+        height: 75vh;
         min-height: 250px;
-        background-size: cover;
-        background: url('../images/facilitator-header-1.jpg') no-repeat center center;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: $p2pu-light-blue;
 
-        &:nth-of-type(2) {
-          background: url('../images/finance_for_everyone.jpg') no-repeat center center;
+        img {
+          max-width: 100%;
+          height: auto;
         }
       }
-
     }
 
     .facilitator-profile {
@@ -23,14 +32,7 @@ section#facilitator-landing {
       color: $white;
       padding: $padding-md;
       transform: translateY(-100px);
-
-      @media (min-width: 768px) {
-        right: -25%;
-      }
-
-      @media (min-width: 992px) {
-        right: -50%;
-      }
+      right: -30%;
 
       &:before {
         content: '';
@@ -40,7 +42,7 @@ section#facilitator-landing {
         height: 0;
         border-left: 30px solid transparent;
         border-right: 30px solid transparent;
-        border-bottom: 30px solid #05c6b4;
+        border-bottom: 30px solid $p2pu-blue;
       }
 
       .text {
@@ -60,9 +62,32 @@ section#facilitator-landing {
       }
     }
   }
+  @media (max-width: 992px) {
+    .profile-container {
+      .facilitator-profile-images {
+        .hide-on-mobile {
+          display: none;
+        }
+      }
+
+      .facilitator-profile {
+        right: -25%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .profile-container {
+      .facilitator-profile {
+        right: 0;
+      }
+    }
+  }
 }
 
 section#get-started {
+  padding-top: 0;
+
   @keyframes pulse-grow {
     50% {
       transform: scale(1.1);
@@ -254,3 +279,4 @@ section#faqs {
 
   }
 }
+

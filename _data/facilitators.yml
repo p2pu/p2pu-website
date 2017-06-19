@@ -1,0 +1,15 @@
+- name: Elsa
+  image_1: profile_1_1.jpg
+  image_2: profile_1_2.jpg
+  description: Facilitator since 2013
+  quote: Being a facilitator is what keeps me young!
+- name: Olaf
+  image_1: profile_2_1.jpg
+  image_2: profile_2_2.jpg
+  description: Facilitator since 2009
+  quote: I've been facilitating ever since learning circles have been round.
+- name: Anna
+  image_1: profile_3_1.jpg
+  image_2: profile_3_2.jpg
+  description: Facilitator since 2017
+  quote: Learning circles have changed my life.

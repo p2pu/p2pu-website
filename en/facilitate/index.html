@@ -11,19 +11,25 @@ layout: facilitate
 <main>
 
   <section id="facilitator-landing" class="row">
-    <div class="profile-container">
-      <div class="facilitator-profile-images">
-        <div class="half-page-image col-md-6"></div>
-        <div class="half-page-image col-md-6"></div>
-      </div>
-      <div class="facilitator-profile col-md-5 col-sm-8 col-xs-12">
-        <div class="text">
-          <h2 class="name">Elsa</h2>
-          <p class="tagline">Learning Circle facilitator since 2013</p>
-          <p class="quote">"I was the first facilitator at my local library. I'm always looking for new volunteers to join me."</p>
+    {% for facilitator in site.data.facilitators %}
+      <div class="profile-container profile_{{ forloop.index }}">
+        <div class="facilitator-profile-images">
+          <div class="half-page-image col-md-6">
+            <img src="{{ site.baseurl }}/assets/images/facilitate/{{ facilitator.image_1 }}" alt="{{ facilitator.name }}">
+          </div>
+          <div class="half-page-image col-md-6 hide-on-mobile">
+            <img src="{{ site.baseurl }}/assets/images/facilitate/{{ facilitator.image_2 }}" alt="{{ facilitator.name }}">
+          </div>
+        </div>
+        <div class="facilitator-profile col-md-5 col-sm-8 col-xs-12">
+          <div class="text">
+            <h2 class="name">{{ facilitator.name }}</h2>
+            <p class="tagline">{{ facilitator.description }}</p>
+            <p class="quote">"{{ facilitator.quote }}"</p>
+          </div>
         </div>
       </div>
-    </div>
+    {% endfor %}
   </section>
 
   <section id="get-started" class="row">
@@ -130,5 +136,11 @@ layout: facilitate
       e.preventDefault()
       $(this).closest('.faq-container').removeClass('open').addClass('closed');
     })
+
+    var numberOfProfiles = 3;
+    var selectedProfile = Math.floor(Math.random() * (numberOfProfiles)) + 1;
+    var profileClass = 'profile_' + selectedProfile;
+
+    $('.' + profileClass).addClass('selected-profile');
   })
 </script>
