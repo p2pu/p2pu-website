@@ -1,12 +1,45 @@
-en:
+full_column:
+  - text: Home
+    url: /en/
+    submenu:
+      - text: Join a learning circles
+        url: /en/#search
+      - text: Contact us
+        url: /en/#contact
+  - text: Facilitate
+    url: /en/facilitate
+    submenu:
+      - text: Handbook
+        url:
+      - text: Courses
+        url: https://learningcircles.p2pu.org
+      - text: Community
+        url: https://groups.google.com/a/p2pu.org/forum/#!forum/community
+      - text: Facilitator login
+        url:
   - text: About
-    url: /en/about/
-
-  - text: Blog
+    url: /en/About
+    submenu:
+      - text: What is P2PU?
+        url:
+      - text: Values
+        url:
+      - text: People
+        url:
+      - text: Job openings
+        url:
+  - text: Stories
     url: http://info.p2pu.org/
-    
-  - text: Community
-    url: https://groups.google.com/a/p2pu.org/forum/#!forum/community
-    
-  - text: Facilitator Guide
-    url: /en/facilitate/
+    submenu:
+      - text: Latest Blog Post
+        url:
+      - text: Other Blog Post
+        url:
+      - text: Big Big Story
+        url:
+half_column:
+  - text: Work with us
+    url:
+  - text: Donate
+    url: /en/donate
+

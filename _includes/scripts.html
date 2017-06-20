@@ -59,4 +59,26 @@
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 {% endif %}
 
+<script>
+	$(function() {
+		function openMenu() {
+			$('nav').addClass('collapsed');
+			$('#full-page-menu').removeClass('collapsed');
+		}
+
+		function closeMenu() {
+			$('nav').removeClass('collapsed');
+			$('#full-page-menu').addClass('collapsed');
+		}
+
+		$('nav .menu').on('click', function() {
+			openMenu();
+		})
+
+		$('#close-menu').on('click', function() {
+			closeMenu();
+		})
+	})
+</script>
+
 
