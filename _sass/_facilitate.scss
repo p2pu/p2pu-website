@@ -112,6 +112,10 @@ section#get-started {
   }
 
   .resources {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
     .resource {
       text-align: center;
       margin-bottom: $padding-md;
@@ -119,29 +123,45 @@ section#get-started {
       p {
         padding: $padding-md $padding-sm;
       }
+    }
 
-      .jumbo-number {
+  }
 
-        h1 {
-          font-size: 120px;
+  .resource {
+    h1 {
+      .material-icons {
+        font-size: 120px;
+      }
+    }
+
+    &:nth-of-type(4n+1) {
+      h1 {
+        .material-icons {
+          color: $p2pu-blue;
         }
+      }
+    }
 
-        &.blue {
-          h1 {
-            color: $p2pu-blue;
-          }
+    &:nth-of-type(4n+2) {
+      h1 {
+        .material-icons {
+          color: $p2pu-yellow;
         }
+      }
+    }
 
-        &.yellow {
-          h1 {
-            color: $p2pu-yellow;
-          }
+    &:nth-of-type(4n+3) {
+      h1 {
+        .material-icons {
+          color: $p2pu-orange;
         }
+      }
+    }
 
-        &.orange {
-          h1 {
-            color: $p2pu-orange;
-          }
+    &:nth-of-type(4n+4) {
+      h1 {
+        .material-icons {
+          color: $p2pu-green;
         }
       }
     }

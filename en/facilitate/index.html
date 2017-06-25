@@ -1,6 +1,32 @@
 ---
 title: Learning Circles
 layout: facilitate
+resources:
+  - heading: Check out the handbook
+    icon: chrome_reader_mode
+    text: The facilitator handbook covers practical details of starting a learning circle.
+    button_text: Handbook
+    button_url:
+  - heading: Join the community
+    icon: group_work
+    text: Head over to the community to connect with facilitators from around the world.
+    button_text: Community
+    button_url: https://community.p2pu.org/
+  - heading: Learn from others
+    icon: record_voice_over
+    text: Read about how others are using learning circles in our blog.
+    button_text: Blog
+    button_url: http://info.p2pu.org/
+  - heading: Browse the courses
+    icon: list
+    text: See what courses are most popular for learning circles.
+    button_text: Courses
+    button_url: https://learningcircles.p2pu.org/en/courses/
+  - heading: Build a network
+    icon: build
+    text: Want to get a learning circle network going in your community? Here's how you can get started.
+    button_text: Organizer Tools
+    button_url: https://drive.google.com/drive/folders/0B3PxZrm3B5zHNXRaSC1yS2Yxb3M?usp=sharing
 ---
 
 <nav class="nav-collapsed">
@@ -43,37 +69,37 @@ layout: facilitate
     </header>
 
     <div class="resources row">
-      <div class="col-md-4 col-sm-12 col-xs-12 resource grow-on-hover">
-        <div class="jumbo-number yellow">
-          <h1><i class="fa fa-book" aria-hidden="true"></i></h1>
+      {% for resource in page.resources limit:3 %}
+        <div class="col-md-4 col-sm-12 col-xs-12 resource grow-on-hover">
+          <div class="jumbo-number">
+            <h1><i class="material-icons">{{ resource.icon }}</i></h1>
+          </div>
+          <h3>{{ resource.heading }}</h3>
+          <p class="large">{{ resource.text }}</p>
+          <a href="{{ resource.button_url }}"><button class="btn p2pu-btn dark">{{ resource.button_text }}</button></a>
         </div>
-        <h3>Check out the handbook</h3>
-        <p class="large">The facilitator handbook covers practical details of starting a learning circle.</p>
-        <button class="btn p2pu-btn dark">Handbook</button>
-      </div>
-      <div class="col-md-4 col-sm-12 col-xs-12 resource grow-on-hover">
-        <div class="jumbo-number orange">
-          <h1><i class="fa fa-users" aria-hidden="true"></i></h1>
+      {% endfor %}
+    </div>
+    <div class="resources row">
+      {% for resource in page.resources limit:3 offset: 3 %}
+        <div class="col-md-4 col-sm-12 col-xs-12 resource grow-on-hover">
+          <div class="jumbo-number">
+            <h1><i class="material-icons">{{ resource.icon }}</i></h1>
+          </div>
+          <h3>{{ resource.heading }}</h3>
+          <p class="large">{{ resource.text }}</p>
+          <a href="{{ resource.button_url }}"><button class="btn p2pu-btn dark">{{ resource.button_text }}</button></a>
         </div>
-        <h3>Join the community</h3>
-        <p class="large">Head over to the community to connect with facilitators from around the world.</p>
-        <button class="btn p2pu-btn dark">Community</button>
-      </div>
-      <div class="col-md-4 col-sm-12 col-xs-12 resource grow-on-hover">
-        <div class="jumbo-number blue">
-          <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i></h1>
-        </div>
-        <h3>Learn from others</h3>
-        <p class="large">Read about how others are using learning circles in our blog.</p>
-        <button class="btn p2pu-btn dark">Blog</button>
-      </div>
+      {% endfor %}
     </div>
   </section>
 
   <section id="lets-do-it">
     <div class="callout">
       <h1>Let's do it!</h1>
-      <button class="btn p2pu-btn light">Start a learning circle</button>
+      <a href="https://learningcircles.p2pu.org/en/accounts/login/">
+        <button class="btn p2pu-btn light">Start a learning circle</button>
+      </a>
     </div>
   </section>
 
