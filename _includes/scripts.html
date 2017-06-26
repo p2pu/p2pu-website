@@ -62,13 +62,13 @@
 <script>
 	$(function() {
 		function openMenu() {
-			$('nav').addClass('collapsed');
 			$('#full-page-menu').removeClass('collapsed');
+			$('body').css({ 'overflow': 'hidden' })
 		}
 
 		function closeMenu() {
-			$('nav').removeClass('collapsed');
 			$('#full-page-menu').addClass('collapsed');
+			$('body').css({ 'overflow': 'scroll' })
 		}
 
 		$('nav .menu').on('click', function() {

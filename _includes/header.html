@@ -5,33 +5,34 @@
 		</a>
 	</span>
 	<span class="menu"><i class="fa fa-bars" aria-hidden="true"></i>MENU</span>
-</nav>
-
 
 <div id="full-page-menu" class="collapsed">
-  <div id="close-menu"><i class="fa fa-times"></i></div>
-  {% for link in site.data.navigation.full_column %}
-    <div class="menu-section full-column">
-      <div class="nav-container">
-        <h2>
-          <a href="{{ link.url }}">
-            {{ link.text }}
-            <i class="fa fa-arrow-right"></i>
-          </a>
-        </h2>
-        {% for sub_link in link.submenu %}
-          <p><a href="{{ sub_link.url }}">{{ sub_link.text }}</a></p>
-        {% endfor %}
+  <div class="content-container">
+    <div id="close-menu"><i class="fa fa-times"></i></div>
+    {% for link in site.data.navigation.full_column %}
+      <div class="menu-section full-column">
+        <div class="nav-container">
+          <h2>
+            <a href="{{ link.url }}">
+              {{ link.text }}
+              <i class="fa fa-arrow-right"></i>
+            </a>
+          </h2>
+          {% for sub_link in link.submenu %}
+            <p><a href="{{ sub_link.url }}">{{ sub_link.text }}</a></p>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-  {% endfor %}
-  <div class="menu-section parent-column">
-  {% for link in site.data.navigation.half_column %}
-    <div class="menu-section half-column">
-      <div class="nav-container">
-        <h2><a href="{{ link.url }}">{{ link.text }}<i class="fa fa-arrow-right"></i></a></h2>
+    {% endfor %}
+    <div class="menu-section parent-column">
+    {% for link in site.data.navigation.half_column %}
+      <div class="menu-section half-column">
+        <div class="nav-container">
+          <h2><a href="{{ link.url }}">{{ link.text }}<i class="fa fa-arrow-right"></i></a></h2>
+        </div>
       </div>
+    {% endfor %}
     </div>
-  {% endfor %}
   </div>
 </div>
+</nav>

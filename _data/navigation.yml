@@ -4,42 +4,47 @@ full_column:
     submenu:
       - text: Join a learning circles
         url: /en/#search
-      - text: Contact us
-        url: /en/#contact
   - text: Facilitate
-    url: /en/facilitate
+    url: https://www.p2pu.org/facilitate
     submenu:
       - text: Handbook
-        url:
-      - text: Courses
-        url: https://learningcircles.p2pu.org
+        url: https://www.p2pu.org/handbook
       - text: Community
         url: https://groups.google.com/a/p2pu.org/forum/#!forum/community
-      - text: Facilitator login
-        url:
+      - text: Courses
+        url: https://learningcircles.p2pu.org/en/courses/
+      - text: Dashboard
+        url: https://learningcircles.p2pu.org/en/accounts/login/
   - text: About
-    url: /en/About
+    url: https://www.p2pu.org/en/about/
     submenu:
-      - text: What is P2PU?
-        url:
-      - text: Values
+      - text: Vision
         url:
       - text: People
-        url:
+        url: https://www.p2pu.org/people
       - text: Job openings
-        url:
+        url: https://www.p2pu.org/en/jobs/
   - text: Stories
     url: http://info.p2pu.org/
     submenu:
-      - text: Latest Blog Post
-        url:
-      - text: Other Blog Post
-        url:
-      - text: Big Big Story
-        url:
-half_column:
-  - text: Work with us
-    url:
-  - text: Donate
-    url: /en/donate
+      - text: Seekers and Rebels
+        date: June 14, 2017
+        url: http://info.p2pu.org/2017/06/14/when-seekers-and-rebels-meet-or-my-experience-studying-the-learning-circles/
+      - text: Will People Show Up?
+        date: June 2, 2017
+        url: http://info.p2pu.org/2017/06/02/will-people-show-up/
+      - text: Coast 2 Coast
+        date: May 16, 2017
+        url: http://info.p2pu.org/2017/05/16/peer-2-peer-coast-2-coast/
+  - text: Support (y)our work
+    submenu:
+      - text: Collaborate
+        url: https://www.p2pu.org/collaborate
+      - text: Donate
+        url: https://www.p2pu.org/en/donate/
+      - text: Connect
+        url: https://www.p2pu.org/en/connect/
+
+# currently there are no half columns but the code for them is still in the template
+# in case you decide to add them back someday
 
