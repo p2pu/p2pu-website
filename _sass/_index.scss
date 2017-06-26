@@ -112,14 +112,14 @@ main {
 			display: flex;
 	    align-items: flex-end;
 	    justify-content: center;
-	    transform: scale(1.6);
+	    font-size: 1.4em;
 	    z-index: 10;
 	    margin-top: $padding-md;
 	    margin-bottom: $padding-lg;
 
 	    .city-select {
 	    	display: block;
-	    	min-width: 380px;
+	    	min-width: 360px;
 	    	margin-left: 12px;
 
 	    	.Select-control {

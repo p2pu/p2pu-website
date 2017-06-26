@@ -45,8 +45,10 @@ export default class SearchForm extends Component {
   render() {
     return(
       <div className="search-form col-md-12">
-        <span>I live in </span>
-        <Select name="search-form" className="city-select" value={ this.state.value } options={ this.state.cities } onChange={this.handleChange} />
+        <div className="form-container">
+          <span>I live in </span>
+          <Select name="search-form" className="city-select" value={ this.state.value } options={ this.state.cities } onChange={this.handleChange} />
+        </div>
       </div>
     )
   }

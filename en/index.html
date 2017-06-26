@@ -1,4 +1,13 @@
 ---
+headers:
+  - link: /en/facilitate/
+    title: Facilitate
+  - link: /en/about/
+    title: About
+  - link: http://info.p2pu.org/
+    title: Stories
+  - link: p2pu.org/collaborate
+    title: Work with us
 ---
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -42,30 +51,14 @@
 		</div>
 
 		<div class="secondary-nav">
+			{% for header in page.headers %}
 			<div class="nav-item">
 				<div class="line"></div>
 				<div class="title">
-					<a href="#">facilitate</a>
+					<a href="{{ header.link }}">{{ header.title }}</a>
 				</div>
 			</div>
-			<div class="nav-item">
-				<div class="line"></div>
-				<div class="title">
-					<a href="#">about</a>
-				</div>
-			</div>
-			<div class="nav-item">
-				<div class="line"></div>
-				<div class="title">
-					<a href="#">stories</a>
-				</div>
-			</div>
-			<div class="nav-item">
-				<div class="line"></div>
-				<div class="title">
-					<a href="#">work with us</a>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 			<a href="#search" class="btn p2pu-btn dark arrow"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
 	</section>
@@ -100,15 +93,21 @@
 		<div class="columns row">
 			<div class="col-md-4 col-sm-12 col-xs-12 column">
 				<p class="large">Whether or not you are interested in facilitating a learning circle yourself, we have resources you can use to try and start a learning circle program locally.</p>
-				<button class="btn p2pu-btn light">get learning circles started</button>
+				<a href="/en/facilitate/">
+					<button class="btn p2pu-btn light">get learning circles started</button>
+				</a>
 			</div>
 			<div class="col-md-4 col-sm-12 col-xs-12 column">
 				<p class="large">P2PU represents a growing movement of educators, librarians, activists, policy-makers, and technologists around the globe; we use a community listserv to share ideas, celebrate victories, and support one another.</p>
-				<button class="btn p2pu-btn light">join the community</button>
+				<a href="https://groups.google.com/a/p2pu.org/forum/#!forum/community">
+					<button class="btn p2pu-btn light">join the community</button>
+				</a>
 			</div>
 			<div class="col-md-4 col-sm-12 col-xs-12 column">
 				<p class="large">Beyond our openly-licensed toolkit, there are lots of other services we can provide, including hosting facilitator workshops, developing online courses, and customizing tool development.</p>
-				<button class="btn p2pu-btn light">work with us</button>
+				<a href="https://www.p2pu.org/collaborate">
+					<button class="btn p2pu-btn light">work with us</button>
+				</a>
 			</div>
 		</div>
 	</section>

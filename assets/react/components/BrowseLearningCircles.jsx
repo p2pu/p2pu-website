@@ -8,7 +8,6 @@ const BrowseLearningCircles = (props) => {
     <div className="search-results col-md-12">
       {
         props.learningCircles.map((circle, index) => {
-          debugger;
           const startTime = circle.meeting_time.slice(0, -3)
           const endTime = circle.end_time.slice(0, -3)
           const startDate = new Date(circle.start_date).toLocaleDateString('en-US', {month: 'long', year: 'numeric', day: 'numeric'});
@@ -32,7 +31,7 @@ const BrowseLearningCircles = (props) => {
       <div className="result-item grid-item start-learning-circle col-md-4 col-sm-12 col-xs-12">
         <div className="circle">
           <p>Start your own learning circle</p>
-          <a href="#" className="btn p2pu-btn dark arrow"><i className="fa fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="https://learningcircles.p2pu.org/en/accounts/login/" className="btn p2pu-btn dark arrow"><i className="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
