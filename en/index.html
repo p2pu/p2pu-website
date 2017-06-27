@@ -101,7 +101,7 @@ headers:
 			</div>
 			<div class="col-md-4 col-sm-12 col-xs-12 column">
 				<p class="large">Beyond our openly-licensed toolkit, there are lots of other services we can provide, including hosting facilitator workshops, developing online courses, and customizing tool development.</p>
-				<a href="https://www.p2pu.org/collaborate">
+				<a href="/en/collaborate">
 					<button class="btn p2pu-btn light">work with us</button>
 				</a>
 			</div>
@@ -147,37 +147,7 @@ headers:
 
 {% include scripts.html %}
 
-<script>
-	var controller = new ScrollMagic.Controller();
-	var subtitles = document.querySelectorAll('.subtitle');
-
-	subtitles.forEach(function(subtitle) {
-		new ScrollMagic.Scene({
-	        triggerElement: subtitle,
-	        triggerHook: 0.6
-	    })
-	    .setClassToggle(subtitle, "active")
-	    .addTo(controller);
-	});
-
-	$('.grid').masonry({
-	  itemSelector: '.grid-item',
-	  columnWidth: '.col-md-4',
-	  percentPosition: true
-	});
-</script>
-
-<script>
-	$(function() {
-		var delay = 100;
-		$('.nav-item .line').each(function(index) {
-			var el = this;
-			window.setTimeout(function() {
-				$(el).addClass('expanded');
-			}, delay * (index + 1))
-		});
-	})
-</script>
+<script src="{{ site.baseurl }}/assets/js/index.js"></script>
 
 <script src="{{ site.baseurl }}/assets/bundles/landing-view.js"></script>
 

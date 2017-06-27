@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import Masonry from 'react-masonry-component'
 import LearningCircleCard from './LearningCircleCard.jsx'
-import moment from 'moment'
 
 const BrowseLearningCircles = (props) => {
+
   return (
-    <div className="search-results col-md-12">
+    <Masonry className={"search-results row grid"}>
       {
         props.learningCircles.map((circle, index) => {
           const startTime = circle.meeting_time.slice(0, -3)
@@ -34,7 +35,7 @@ const BrowseLearningCircles = (props) => {
           <a href="https://learningcircles.p2pu.org/en/accounts/login/" className="btn p2pu-btn dark arrow"><i className="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
-    </div>
+    </Masonry>
   );
 }
 
