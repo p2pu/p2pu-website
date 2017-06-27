@@ -13,7 +13,9 @@ export default class SearchForm extends Component {
   }
 
   _handleChange(selected) {
-    this.props.searchByLocation(selected.label);
+    if (selected) {
+      this.props.searchByLocation(selected.label);
+    }
     this.setState({ value: selected })
   }
 
@@ -44,11 +46,9 @@ export default class SearchForm extends Component {
 
   render() {
     return(
-      <div className="search-form col-md-12">
-        <div className="form-container">
-          <span>I live in </span>
-          <Select name="search-form" className="city-select" value={ this.state.value } options={ this.state.cities } onChange={this.handleChange} />
-        </div>
+      <div className="course-search">
+        <div className="label col-md-1 col-sm-2">I live in</div>
+        <Select name="search-form" className="city-select col-md-6 col-sm-8" value={ this.state.value } options={ this.state.cities } onChange={this.handleChange} />
       </div>
     )
   }
