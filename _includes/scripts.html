@@ -7,7 +7,6 @@
 <script type="text/javascript"
         src="//s3.amazonaws.com/p2pu-navigation-widget/p2pu_menu_slider.js"></script>
 <script src="{{ site.baseurl }}/assets/js/main.js"></script>
-<script src="{{ site.baseurl }}/assets/js/vendor/masonry.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/vendor/scroll-magic.min.js"></script>
 
 <script>
@@ -57,62 +56,26 @@
 {% endif %}
 
 <script>
-	var controller = new ScrollMagic.Controller();
-	var subtitles = document.querySelectorAll('.subtitle');
 
-	subtitles.forEach(function(subtitle) {
-		new ScrollMagic.Scene({
-	        triggerElement: subtitle,
-	        triggerHook: 0.6
-	    })
-	    .setClassToggle(subtitle, "active")
-	    .addTo(controller);
-	});
-
-	$('.grid').masonry({
-	  itemSelector: '.grid-item',
-	  columnWidth: '.col-md-4',
-	  percentPosition: true
-	});
-</script>
-
-<script>
-	var courseTopics = [
-		'Master public speaking',
-		'Build a website',
-		'Start writing fiction',
-		'Perfect your resume',
-		'Hone your interview skills',
-		'Write a business plan',
-		'Prep for a citizenship exam',
-		'Speak English with confidence',
-		'Design an online course',
-		'Become a better writer',
-	]
-
-	// function rotateText() {
-	// 	var topicSpan = document.getElementById('topic');
-	// 	var currentTopic = topicSpan.textContent;
-	// 	var currentTopicIndex = courseTopics.indexOf(currentTopic);
-	// 	var newPosition = currentTopicIndex >= (courseTopics.length -1) ? 0 : currentTopicIndex + 1
-	// 	var newTopic = courseTopics[newPosition];
-
-	// 	topicSpan.textContent = newTopic;
-	// }
-
-	// window.setInterval(rotateText, 2500)
-
-</script>
-
-<script>
 	$(function() {
-		var delay = 100;
-		$('.nav-item .line').each(function(index) {
-			var el = this;
-			window.setTimeout(function() {
-				$(el).addClass('expanded');
-			}, delay * (index + 1))
-		});
+		function openMenu() {
+			$('#full-page-menu').removeClass('collapsed');
+			$('body').css({ 'overflow': 'hidden' })
+		}
+
+		function closeMenu() {
+			$('#full-page-menu').addClass('collapsed');
+			$('body').css({ 'overflow': 'scroll' })
+		}
+
+		$('nav .menu').on('click', function() {
+			openMenu();
+		})
+
+		$('#close-menu').on('click', function() {
+			closeMenu();
+		})
 	})
 </script>
+
 
