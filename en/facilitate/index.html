@@ -27,6 +27,8 @@ resources:
     text: Want to get a learning circle network going in your community? Here's how you can get started.
     button_text: Organizer Tools
     button_url: https://drive.google.com/drive/folders/0B3PxZrm3B5zHNXRaSC1yS2Yxb3M?usp=sharing
+extra_js:
+  - facilitate.js
 ---
 
 <nav class="nav-collapsed">
@@ -150,23 +152,3 @@ resources:
   </section>
 
 </main>
-
-<script>
-  $(function() {
-    $('.faq-container a.show-answer').on('click', function(e) {
-      e.preventDefault()
-      $(this).closest('.faq-container').removeClass('closed').addClass('open');
-    })
-
-    $('.faq-container a.hide-answer').on('click', function(e) {
-      e.preventDefault()
-      $(this).closest('.faq-container').removeClass('open').addClass('closed');
-    })
-
-    var numberOfProfiles = 3;
-    var selectedProfile = Math.floor(Math.random() * (numberOfProfiles)) + 1;
-    var profileClass = 'profile_' + selectedProfile;
-
-    $('.' + profileClass).addClass('selected-profile');
-  })
-</script>

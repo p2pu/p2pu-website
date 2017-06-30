@@ -60,12 +60,12 @@
 	$(function() {
 		function openMenu() {
 			$('#full-page-menu').removeClass('collapsed');
-			$('body').css({ 'overflow': 'hidden' })
+			$('body').addClass('freeze');
 		}
 
 		function closeMenu() {
 			$('#full-page-menu').addClass('collapsed');
-			$('body').css({ 'overflow': 'scroll' })
+			$('body').removeClass('freeze');
 		}
 
 		$('nav .menu').on('click', function() {
