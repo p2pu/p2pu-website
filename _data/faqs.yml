@@ -1,0 +1,77 @@
+- question: What is a learning circle?
+  answer:
+    paragraphs:
+    - Learning circles are lightly-facilitated study groups for adult learners who want to take free online courses together at a library or community center. Meeting once a week for 6-8 weeks, participants work together through course materials in subjects ranging from resume writing to web design to public speaking. The facilitator is not expected to be a content expert - their role is to be proficient in online courseware and skilled in facilitating peer learning groups.
+- question: Can’t we already learn everything, anywhere, whenever, for free?
+  answer:
+    paragraphs:
+    - There is a huge volume of free, high-quality learning courses available online, but completion rates for online learning hover around 5%, and those who do complete a course are often already highly educated. Due to barriers like digital literacy, awareness, and academic confidence, many of the individuals who stand to gain the most from online learning are not currently taking part. Learning circles offer an opportunity for first-time online learners meaningfully engage with course materials, and provide peer-to-peer support to help each other succeed. They also support the development of digital skills, and help create face-to-face community around shared interests.
+    - No, that’s not true.
+    - Sure, “you” might learn just fine. You’re super comfortable using the internet, you have access to a computer and the internet whenever you want it, you’ve got some extra time on your hands and, bonus, there’s already awesome course on building a website that will help you with your job. Also, it helps that you’ve done this before because a big part of your university degree was online, right?
+    - But that’s only you. How about everyone else? Due to barriers like digital literacy, awareness, and academic confidence, many of the individuals who stand to gain the most from online learning are not currently taking part. Learning circles offer an opportunity for first-time online learners meaningfully engage with course materials, and provide peer-to-peer support to help each other succeed. They also support the development of digital skills, and help create face-to-face community around shared interests.
+- question: Who can start learning circles?
+  answer:
+    paragraphs:
+    - Anyone can run a learning circle. We call those who run or organize learning circles “facilitators”. The first step as a learning circle facilitator is to trust that a small group of people can come together to learn almost anything without the need for an expert or a teacher - we what call this peer learning.
+    - You can start a learning circle without any prior experience. We’ve had all types of folks lead learning circles, from librarians, english teachers, technology hobbyist to student volunteers and passionate neighbours.
+    - 'There are, however, a few small things you should have first when running a learning circle:  a quiet, accessible, space with consistent power and internet. That’s it!'
+- question: How much does it cost?
+  answer:
+    paragraphs:
+    - Nothing! Zero! Nada!
+    - You can access P2PU’s facilitator guide, our dashboard, and our global network of educators for free. P2PU is funded by organizations and community members like you who believe in lifelong learning, accessible education, and digital inclusion.
+    - You can also share and remix our work as you wish. Unless otherwise noted, all our materials are licensed under a Creative Commons Attribution Share Alike 4.0 Unported license.
+    - We also accept donations! P2PU is a 501(c)3 non-profit, registered in California. We promise to only use donations for good, and if you have any preferences for how you’d like your donation to be used, we’d love to hear from you. Drop us a line and let us know. There might even be a t-shirt in it for you!
+- question: I’m not a teacher or an expert, can I still run a learning circle?
+  answer:
+    paragraphs:
+    - Absolutely! In fact, you’re exactly who should be running learning circles.
+    - As a learning circle facilitator, your job is not to teach, but instead host, organize, ask questions, guide, build relationships, support, and facilitate learning. Facilitators aim to understand each learner’s motivation for joining and cultivate an environment in which learners can clearly see how the learning circle will help them achieve their desired goals. It certainly is helpful to be excited or passionate about the learning circle topic, however expertise is not encouraged.
+    - We’ve got a ton of tips too that can help you facilitate learning circles, and a whole network of facilitators who are ready to help you. Reach out when you’re ready!
+- question: How do I start a learning circle?
+  answer:
+    paragraphs:
+    - Go ahead and create your own! It might be helpful to take a look through our learning circles facilitator guide to get a sense of what to expect.
+    - Once you create a learning circle, our online dashboard will generate a webpage where people can sign up for your Learning Circle, gather applications, allow you to communicate with learners via email or SMS and it will send learners automatic reminders before each Learning Circle.
+- question: How much time will this take?
+  answer:
+    paragraphs:
+    - Learning circles usually meet for 90 minutes/week for 6 weeks with between 4-15 participants, though this model is flexible. Facilitating a learning circle will require between 2 -3 hours hours/week, most of which is spent with participants.
+- question: Where can I find a good course to run as a learning circle?
+  answer:
+    paragraphs:
+    - There are a number of ways to search for online courses. Here are a few options for choosing a course.
+    - list:
+      - Head over to learningcircles.p2pu.org/courses to see courses we’ve used in the past.
+      - Check out class-central.com, a good aggregator of all online courses.
+      - 'Search by subject by platform. Platforms we’ve worked with in the past include:'
+      - sublist:
+        - Codeacademy
+        - Coursera
+        - edX
+        - FutureLearn
+        - Khan Academy
+        - MIT OpenCourseware
+        - NovoEd
+        - Saylor
+        - Udacity
+- question: How do I promote the learning circle and keep in touch with participants?
+  answer:
+    paragraphs:
+    - Once you create your own learning circle through our website, our online Dashboard will generate a webpage where people can sign up for your Learning Circle, gather applications, allow you to communicate with learners via email or SMS, send learners automatic reminders before each Learning Circle, and prompt you to share weekly feedback with learners, P2PU, and other facilitators around the world.
+- question: I found an online course, but I can’t seem to register for it for free?
+  answer:
+    paragraphs:
+    - This happens a lot. Let’s see if we can help.
+    - Online education is not always free, on-demand or, as some people say, “open”. However, many online education providers still offer learners the option to audit (see if you can find it buried in their registration page!). By auditing a course, you will likely be able to access the course content, but you will not be allowed entry into live course discussions, or be given a printable certificate.
+    - We say that’s perfectly fine. The course content is a guide and resource for your learning circle, and the live discussion happens already in-person! Even better!
+    - Sometimes too, you can only have access to course content at a specific moment (sometimes called synchronous courses) or it can be taken whenever you want (on-demand or asynchronous courses). We know a few ways around that! Sometimes you can find the course exact same course content elsewhere and openly licensed, for example on The Open University or MIT OpenCourseWare.
+    - If you’re still having trouble, reach out to network of learning circle facilitators through our community forum. Tell us what kind of course you’re looking for or which one you were trying to access and we’ll try to help you out.
+- question: Can learning circle participants receive certificates or accreditation?
+  answer:
+    paragraphs:
+    - No, not exactly.
+    - While learning in itself is a valuable goal, getting credit for what you've done is also important to gain social and economic opportunities. As P2PU develops, we are experimenting with new ways of recognising learning and we plan for learning circles to support pathways towards college or university enrollment.
+    - We want learners to get recognition for their achievements, but we don't issue any kind of accredited or official certificates ourselves at the moment.
+    - However, we encourage all facilitators to print and distribute our certificates found in our facilitator handbook for those who complete a learning circle, although it is not necessary.
+

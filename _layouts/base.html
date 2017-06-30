@@ -8,16 +8,13 @@
 
     <body>
 
-    {% include header.html %}
-
     <div class="page-content">
       <div class="wrap">
       {{ content }}
       </div>
     </div>
 
-    {% assign footer = 'footer-' | append:language | append:'.html' }} %}
-    {% include {{footer}} %}
+    {% include new_footer_en.html %}
 
 		{% include scripts.html %}
 
