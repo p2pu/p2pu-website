@@ -1,0 +1,15 @@
+- name: Elsa
+  image_1: profile_1_1.jpg
+  image_2: profile_1_2.jpg
+  description: Facilitator since 2013
+  quote: Being a facilitator is what keeps me young!
+- name: Olaf
+  image_1: profile_2_1.jpg
+  image_2: profile_2_2.jpg
+  description: Facilitator since 2009
+  quote: I've been facilitating ever since learning circles have been round.
+- name: Manny Reynoso
+  image_1: profile_3_1.jpg
+  image_2: profile_3_2.jpg
+  description: Facilitator since 2017
+  quote: People come to the United States from many parts of the world. The faces, cultures, customs and religions are all different but the goal is the same- to learn English in order to better their lives. As an immigrant myself I seek opportunities to help families obtain this goal much like my family was helped when we arrived here. Perhaps one day someone I helped will pay it forward and help some one else.
