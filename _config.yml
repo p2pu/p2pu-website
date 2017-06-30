@@ -18,7 +18,14 @@ sass:
 
 env: prod
 
-exclude: [Guardfile, Gemfile, Gemfile.lock, README, s3_website.yml]
+exclude:
+  - Guardfile
+  - Gemfile
+  - Gemfile.lock
+  - README
+  - s3_website.yml]
+  - node_modules
+
 prose:
   media: assets/images
 
