@@ -54,7 +54,7 @@ export default class LearningCircles extends Component {
 
   _generateUrl(opts) {
     const validParams = ['active', 'limit', 'offset', 'city'];
-    let baseUrl = `https://learningcircles.p2pu.org/api/learningcircles?`;
+    let baseUrl = `https://learningcircles.p2pu.org/api/learningcircles/?`;
 
     validParams.forEach((param) => {
       if (opts[param] && param.length > 2) {

@@ -20,7 +20,7 @@ export default class SearchForm extends Component {
 
   _populateCities() {
     $.ajax({
-      url: 'https://learningcircles.p2pu.org/api/learningcircles?active=true',
+      url: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true',
       dataType: 'JSONP',
       type: 'GET',
       success: (res) => {
