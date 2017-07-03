@@ -2,7 +2,7 @@ full_column:
   - text: Home
     url: /en/
     submenu:
-      - text: Join a learning circles
+      - text: Join a learning circle
         url: /en/#search
   - text: Facilitate
     url: https://www.p2pu.org/facilitate

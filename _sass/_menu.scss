@@ -140,6 +140,12 @@ nav {
 }
 
 @media (max-width: $screen-sm-max) {
+  body {
+    &.freeze {
+      overflow: hidden;
+    }
+  }
+
   #full-page-menu {
     flex-direction: column;
     width: 100vw;
