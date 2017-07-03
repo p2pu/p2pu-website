@@ -5,10 +5,10 @@ full_column:
       - text: Join a learning circle
         url: /en/#search
   - text: Facilitate
-    url: https://www.p2pu.org/facilitate
+    url: /en/facilitate/
     submenu:
       - text: Handbook
-        url: https://www.p2pu.org/handbook
+        url: /en/handbook/
       - text: Community
         url: https://groups.google.com/a/p2pu.org/forum/#!forum/community
       - text: Courses
@@ -16,14 +16,14 @@ full_column:
       - text: Dashboard
         url: https://learningcircles.p2pu.org/en/accounts/login/
   - text: About
-    url: https://www.p2pu.org/en/about/
+    url: /en/about/
     submenu:
       - text: Vision
         url:
       - text: People
-        url: https://www.p2pu.org/people
+        url: /en/about/people/
       - text: Job openings
-        url: https://www.p2pu.org/en/jobs/
+        url: /en/jobs/
   - text: Stories
     url: http://info.p2pu.org/
     submenu:
@@ -39,11 +39,11 @@ full_column:
   - text: Support (y)our work
     submenu:
       - text: Collaborate
-        url: https://www.p2pu.org/collaborate
+        url: /en/collaborate/
       - text: Donate
-        url: https://www.p2pu.org/en/donate/
+        url: /en/donate/
       - text: Connect
-        url: https://www.p2pu.org/en/connect/
+        url: /en/connect/
 
 # currently there are no half columns but the code for them is still in the template
 # in case you decide to add them back someday
