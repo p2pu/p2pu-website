@@ -1,1 +1,1 @@
-Any images added to this directory should be square and no bigger than 300x300
+Any images added to this directory should be 150x150 pixels in size
