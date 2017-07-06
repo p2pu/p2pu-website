@@ -13120,6 +13120,7 @@ var SearchForm = function (_Component) {
 
       cities = _lodash2.default.compact(cities);
       cities = _lodash2.default.uniqBy(cities, 'value');
+      cities = _lodash2.default.sortBy(cities, 'label');
 
       this.setState({ cities: cities });
     }

@@ -39,6 +39,7 @@ export default class SearchForm extends Component {
 
     cities = _.compact(cities);
     cities = _.uniqBy(cities, 'value');
+    cities = _.sortBy(cities, 'label');
 
     this.setState({ cities });
   }
