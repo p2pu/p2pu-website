@@ -12734,6 +12734,7 @@ var LearningCircles = function (_Component) {
     value: function _populateLearningCircles() {
       var urlOpts = {
         active: true,
+        signup: 'open',
         limit: _constants.LEARNING_CIRCLES_LIMIT
       };
       this.fetchLearningCircles(urlOpts);
@@ -12743,6 +12744,7 @@ var LearningCircles = function (_Component) {
     value: function _searchByLocation(query) {
       var urlOpts = {
         active: true,
+        signup: 'open',
         limit: _constants.LEARNING_CIRCLES_LIMIT,
         city: query
       };
@@ -12769,7 +12771,7 @@ var LearningCircles = function (_Component) {
   }, {
     key: '_generateUrl',
     value: function _generateUrl(opts) {
-      var validParams = ['active', 'limit', 'offset', 'city'];
+      var validParams = ['active', 'limit', 'offset', 'city', 'signup'];
       var baseUrl = 'https://learningcircles.p2pu.org/api/learningcircles/?';
 
       validParams.forEach(function (param) {
@@ -12897,7 +12899,7 @@ var BrowseLearningCircles = function BrowseLearningCircles(props) {
         ),
         _react2.default.createElement(
           'a',
-          { href: 'https://learningcircles.p2pu.org/en/accounts/login/', className: 'btn p2pu-btn dark arrow' },
+          { href: '/en/facilitate/', className: 'btn p2pu-btn dark arrow' },
           _react2.default.createElement('i', { className: 'fa fa-arrow-right', 'aria-hidden': 'true' })
         )
       )
