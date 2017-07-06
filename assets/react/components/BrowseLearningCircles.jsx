@@ -32,7 +32,7 @@ const BrowseLearningCircles = (props) => {
       <div className="result-item grid-item start-learning-circle col-md-4 col-sm-12 col-xs-12">
         <div className="circle">
           <p>Start your own learning circle</p>
-          <a href="https://learningcircles.p2pu.org/en/accounts/login/" className="btn p2pu-btn dark arrow"><i className="fa fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="/en/facilitate/" className="btn p2pu-btn dark arrow"><i className="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </Masonry>
