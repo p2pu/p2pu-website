@@ -13100,7 +13100,7 @@ var SearchForm = function (_Component) {
       var _this2 = this;
 
       $.ajax({
-        url: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true',
+        url: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true&signup=open',
         dataType: 'JSONP',
         type: 'GET',
         success: function success(res) {
