@@ -1,6 +1,7 @@
 footer.home-footer {
   background: $gray-darker;
   color: $white;
+  font-size: $font-size-small;
 
   a {
     color: $white;
@@ -63,6 +64,11 @@ footer.home-footer {
   .toc {
     text-align: center;
     padding: $padding-sm;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
   }
 
 }

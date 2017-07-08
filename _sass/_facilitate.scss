@@ -116,6 +116,11 @@ section#get-started {
     justify-content: center;
     flex-wrap: wrap;
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     .resource {
       text-align: center;
       margin-bottom: $padding-md;
@@ -203,6 +208,7 @@ section#faqs {
         align-items: center;
         justify-content: space-between;
         border-bottom: 4px solid $p2pu-orange;
+        cursor: pointer;
 
         h3 {
           font-family: $font-family-sans-serif;
@@ -267,18 +273,16 @@ section#faqs {
         }
       }
 
-      &.closed {
-        .answer {
-          max-height: 0;
-        }
+      .answer {
+        max-height: 0;
+      }
 
-        a.hide-answer {
-          display: none;
-        }
+      a.hide-answer {
+        display: none;
+      }
 
-        a.show-answer {
-          display: block;
-        }
+      a.show-answer {
+        display: block;
       }
 
       &.open {
