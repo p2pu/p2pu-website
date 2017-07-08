@@ -3,7 +3,7 @@ title: Learning Circles
 layout: facilitate
 resources:
   - heading: Check out the handbook
-    icon: chrome_reader_mode
+    icon: local_library
     text: The facilitator handbook covers practical details of starting a learning circle.
     button_text: Handbook
     button_url:
@@ -23,18 +23,13 @@ resources:
     button_text: Courses
     button_url: https://learningcircles.p2pu.org/en/courses/
   - heading: Build a network
-    icon: build
+    icon: room
     text: Want to get a learning circle network going in your community? Here's how you can get started.
     button_text: Organizer Tools
     button_url: https://drive.google.com/drive/folders/0B3PxZrm3B5zHNXRaSC1yS2Yxb3M?usp=sharing
 extra_js:
   - facilitate.js
 ---
-
-<nav class="nav-collapsed">
-  <span class="logo dark">P2PU</span>
-  <span class="menu">MENU</span>
-</nav>
 
 <main>
 
@@ -73,24 +68,28 @@ extra_js:
     <div class="resources row">
       {% for resource in page.resources limit:3 %}
         <div class="col-md-4 col-sm-12 col-xs-12 resource grow-on-hover">
-          <div class="jumbo-number">
-            <h1><i class="material-icons">{{ resource.icon }}</i></h1>
-          </div>
-          <h3>{{ resource.heading }}</h3>
-          <p class="large">{{ resource.text }}</p>
-          <a href="{{ resource.button_url }}"><button class="btn p2pu-btn dark">{{ resource.button_text }}</button></a>
+          <a href="{{ resource.button_url }}">
+            <div class="jumbo-number">
+              <h1><i class="material-icons">{{ resource.icon }}</i></h1>
+            </div>
+            <h3>{{ resource.heading }}</h3>
+            <p class="large">{{ resource.text }}</p>
+            <button class="btn p2pu-btn dark">{{ resource.button_text }}</button>
+          </a>
         </div>
       {% endfor %}
     </div>
     <div class="resources row">
       {% for resource in page.resources limit:3 offset: 3 %}
         <div class="col-md-4 col-sm-12 col-xs-12 resource grow-on-hover">
-          <div class="jumbo-number">
-            <h1><i class="material-icons">{{ resource.icon }}</i></h1>
-          </div>
-          <h3>{{ resource.heading }}</h3>
-          <p class="large">{{ resource.text }}</p>
-          <a href="{{ resource.button_url }}"><button class="btn p2pu-btn dark">{{ resource.button_text }}</button></a>
+          <a href="{{ resource.button_url }}">
+            <div class="jumbo-number">
+              <h1><i class="material-icons">{{ resource.icon }}</i></h1>
+            </div>
+            <h3>{{ resource.heading }}</h3>
+            <p class="large">{{ resource.text }}</p>
+            <button class="btn p2pu-btn dark">{{ resource.button_text }}</button>
+          </a>
         </div>
       {% endfor %}
     </div>
@@ -118,7 +117,7 @@ extra_js:
         {% if forloop.first %}
         <div class="faq-container open">
         {% else %}
-        <div class="faq-container closed">
+        <div class="faq-container">
         {% endif %}
           <div class="question">
             <h3>{{ faq.question }}</h3>

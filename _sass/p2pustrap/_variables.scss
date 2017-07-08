@@ -64,7 +64,7 @@ $font-family-base:        $font-family-sans-serif;
 
 $font-size-base:          18px;
 $font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
-$font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
+$font-size-small:         ceil(($font-size-base * 0.75)); // ~12px
 
 $font-size-base-mobile:   18px;
 
@@ -362,7 +362,7 @@ $container-lg:                 $container-large-desktop;
 //##
 
 // Basics of a navbar
-$navbar-height:                    60px;
+$navbar-height:                    61px;
 $navbar-margin-bottom:             $line-height-computed;
 $navbar-border-radius:             $border-radius-base;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));

@@ -8,6 +8,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
+    autoprefixer-rails (7.1.1.2)
+      execjs
     aws-sdk (2.9.40)
       aws-sdk-resources (= 2.9.40)
     aws-sdk-core (2.9.40)
@@ -184,6 +186,9 @@ GEM
       mini_portile2 (~> 2.2.0)
     octokit (4.7.0)
       sawyer (~> 0.8.0, >= 0.5.3)
+    octopress-autoprefixer (2.0.1)
+      autoprefixer-rails
+      jekyll (~> 3.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -217,6 +222,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (= 140)
   json
+  octopress-autoprefixer
   s3_website
 
 BUNDLED WITH

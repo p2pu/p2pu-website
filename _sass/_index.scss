@@ -161,6 +161,7 @@ main {
 			    cursor: pointer;
 			    box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
 			    transition: transform 0.3s ease-in-out;
+			    font-size: $font-size-small;
 
 			    .title {
 			    	text-transform: uppercase;
