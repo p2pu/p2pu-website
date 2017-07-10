@@ -14,6 +14,7 @@ const BrowseLearningCircles = (props) => {
           const startDate = new Date(circle.start_date).toLocaleDateString('en-US', {month: 'long', year: 'numeric', day: 'numeric'});
           const schedule = `${circle.day} from ${startTime} to ${endTime} (${circle.time_zone})`;
           const duration = `${circle.weeks} weeks starting ${startDate}`;
+          console.log('circle', circle)
 
           return(
             <LearningCircleCard
@@ -25,6 +26,7 @@ const BrowseLearningCircles = (props) => {
               location={ circle.venue }
               duration={ duration }
               image={ circle.image_url }
+              city={ circle.city }
             />
           )
         })

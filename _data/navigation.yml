@@ -38,7 +38,7 @@ full_column:
         url: http://info.p2pu.org/2017/05/16/peer-2-peer-coast-2-coast/
   - text: Support (y)our work
     submenu:
-      - text: Collaborate
+      - text: Work With Us
         url: /en/collaborate/
       - text: Donate
         url: /en/donate/
