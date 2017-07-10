@@ -1,12 +1,7 @@
 $(function() {
-  $('.faq-container a.show-answer').on('click', function(e) {
-    e.preventDefault()
-    $(this).closest('.faq-container').removeClass('closed').addClass('open');
-  })
-
-  $('.faq-container a.hide-answer').on('click', function(e) {
-    e.preventDefault()
-    $(this).closest('.faq-container').removeClass('open').addClass('closed');
+  $('.question').on('click', function(e) {
+    e.preventDefault();
+    $(this).closest('.faq-container').toggleClass('open');
   })
 
   var numberOfProfiles = 3;

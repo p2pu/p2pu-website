@@ -12874,6 +12874,7 @@ var BrowseLearningCircles = function BrowseLearningCircles(props) {
       var startDate = new Date(circle.start_date).toLocaleDateString('en-US', { month: 'long', year: 'numeric', day: 'numeric' });
       var schedule = circle.day + ' from ' + startTime + ' to ' + endTime + ' (' + circle.time_zone + ')';
       var duration = circle.weeks + ' weeks starting ' + startDate;
+      console.log('circle', circle);
 
       return _react2.default.createElement(_LearningCircleCard2.default, {
         key: index,
@@ -12883,7 +12884,8 @@ var BrowseLearningCircles = function BrowseLearningCircles(props) {
         facilitator: circle.facilitator,
         location: circle.venue,
         duration: duration,
-        image: circle.image_url
+        image: circle.image_url,
+        city: circle.city
       });
     }),
     _react2.default.createElement(
@@ -12951,6 +12953,11 @@ var LearningCircleCard = function LearningCircleCard(props) {
         'p',
         { className: 'schedule' },
         props.schedule
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'city-country' },
+        props.city
       ),
       _react2.default.createElement(
         'div',
