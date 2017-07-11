@@ -9,10 +9,11 @@ export default class LearningCircles extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { searchResults: [], noResults: false };
+    this.state = { searchResults: [] };
     this.searchByLocation = (q) => this._searchByLocation(q);
     this.populateLearningCircles = () => this._populateLearningCircles();
     this.showMoreResults = (q) => this._showMoreResults(q);
+    this.clearResults = () => this._clearResults();
     this.generateUrl = (opts) => this._generateUrl(opts);
     this.fetchLearningCircles = (opts, append) => this._fetchLearningCircles(opts, append);
     this.populateLearningCircles();
@@ -33,6 +34,12 @@ export default class LearningCircles extends Component {
       city: query
     }
     this.fetchLearningCircles(urlOpts);
+  }
+
+  _clearResults() {
+    if (this.state.searchResults.length > 0) {
+      this.setState({ searchResults: [] })
+    }
   }
 
   _showMoreResults() {
@@ -73,20 +80,13 @@ export default class LearningCircles extends Component {
       dataType: 'JSONP',
       type: 'GET',
       success: (res) => {
-        if (append) {
-          const results = this.state.searchResults.concat(res.items);
-          this.setState({
-            searchResults: results,
-            currentQuery: opts,
-            noResults: (res.items.length === 0)
-          })
-        } else {
-          this.setState({
-            searchResults: res.items,
-            currentQuery: opts,
-            noResults: (res.items.length === 0)
-          })
-        }
+        console.log(res);
+        const results = append ? this.state.searchResults.concat(res.items) : res.items;
+        this.setState({
+          searchResults: results,
+          currentQuery: opts,
+          totalResults: res.count
+        })
       }
     });
   }
@@ -94,12 +94,16 @@ export default class LearningCircles extends Component {
   render() {
     return (
       <div className="search-and-results">
-        <SearchForm searchByLocation={ this.searchByLocation }/>
+        <SearchForm searchByLocation={ this.searchByLocation } clearResults={ this.clearResults } />
         <BrowseLearningCircles
           learningCircles={ this.state.searchResults }
           showMoreResults={ this.showMoreResults }
         />
-        <LoadMoreResults noResults={ this.state.noResults } showMoreResults={ this.showMoreResults } />
+        <LoadMoreResults
+          visibleSearchResults={ this.state.searchResults.length }
+          totalSearchResults={ this.state.totalResults }
+          showMoreResults={ this.showMoreResults }
+        />
       </div>
     );
   }

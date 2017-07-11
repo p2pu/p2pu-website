@@ -7,26 +7,31 @@ resources:
     text: The facilitator handbook covers practical details of starting a learning circle.
     button_text: Handbook
     button_url:
+    link_target:
   - heading: Join the community
     icon: group_work
     text: Head over to the community to connect with facilitators from around the world.
     button_text: Community
     button_url: https://community.p2pu.org/
+    link_target: _blank
   - heading: Learn from others
     icon: record_voice_over
     text: Read about how others are using learning circles in our blog.
     button_text: Blog
     button_url: http://info.p2pu.org/
+    link_target:
   - heading: Browse the courses
     icon: list
     text: See what courses are most popular for learning circles.
     button_text: Courses
     button_url: https://learningcircles.p2pu.org/en/courses/
+    link_target:
   - heading: Build a network
     icon: room
     text: Want to get a learning circle network going in your community? Here's how you can get started.
     button_text: Organizer Tools
     button_url: https://drive.google.com/drive/folders/0B3PxZrm3B5zHNXRaSC1yS2Yxb3M?usp=sharing
+    link_target:
 extra_js:
   - facilitate.js
 ---
@@ -68,7 +73,7 @@ extra_js:
     <div class="resources row">
       {% for resource in page.resources limit:3 %}
         <div class="col-md-4 col-sm-12 col-xs-12 resource grow-on-hover">
-          <a href="{{ resource.button_url }}">
+          <a href="{{ resource.button_url }}" target="{{ resource.link_target }}">
             <div class="jumbo-number">
               <h1><i class="material-icons">{{ resource.icon }}</i></h1>
             </div>
@@ -98,7 +103,7 @@ extra_js:
   <section id="lets-do-it">
     <div class="callout">
       <h1>Let's do it!</h1>
-      <a href="https://learningcircles.p2pu.org/en/accounts/login/">
+      <a href="https://learningcircles.p2pu.org/en/facilitator/signup/">
         <button class="btn p2pu-btn light">Start a learning circle</button>
       </a>
     </div>

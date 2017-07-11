@@ -13709,7 +13709,7 @@ var LearningCircles = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (LearningCircles.__proto__ || Object.getPrototypeOf(LearningCircles)).call(this, props));
 
-    _this.state = { searchResults: [], noResults: false };
+    _this.state = { searchResults: [] };
     _this.searchByLocation = function (q) {
       return _this._searchByLocation(q);
     };
@@ -13718,6 +13718,9 @@ var LearningCircles = function (_Component) {
     };
     _this.showMoreResults = function (q) {
       return _this._showMoreResults(q);
+    };
+    _this.clearResults = function () {
+      return _this._clearResults();
     };
     _this.generateUrl = function (opts) {
       return _this._generateUrl(opts);
@@ -13747,6 +13750,13 @@ var LearningCircles = function (_Component) {
         city: query
       };
       this.fetchLearningCircles(urlOpts);
+    }
+  }, {
+    key: '_clearResults',
+    value: function _clearResults() {
+      if (this.state.searchResults.length > 0) {
+        this.setState({ searchResults: [] });
+      }
     }
   }, {
     key: '_showMoreResults',
@@ -13794,20 +13804,13 @@ var LearningCircles = function (_Component) {
         dataType: 'JSONP',
         type: 'GET',
         success: function success(res) {
-          if (append) {
-            var results = _this2.state.searchResults.concat(res.items);
-            _this2.setState({
-              searchResults: results,
-              currentQuery: opts,
-              noResults: res.items.length === 0
-            });
-          } else {
-            _this2.setState({
-              searchResults: res.items,
-              currentQuery: opts,
-              noResults: res.items.length === 0
-            });
-          }
+          console.log(res);
+          var results = append ? _this2.state.searchResults.concat(res.items) : res.items;
+          _this2.setState({
+            searchResults: results,
+            currentQuery: opts,
+            totalResults: res.count
+          });
         }
       });
     }
@@ -13817,12 +13820,16 @@ var LearningCircles = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'search-and-results' },
-        _react2.default.createElement(_SearchForm2.default, { searchByLocation: this.searchByLocation }),
+        _react2.default.createElement(_SearchForm2.default, { searchByLocation: this.searchByLocation, clearResults: this.clearResults }),
         _react2.default.createElement(_BrowseLearningCircles2.default, {
           learningCircles: this.state.searchResults,
           showMoreResults: this.showMoreResults
         }),
-        _react2.default.createElement(_LoadMoreResults2.default, { noResults: this.state.noResults, showMoreResults: this.showMoreResults })
+        _react2.default.createElement(_LoadMoreResults2.default, {
+          visibleSearchResults: this.state.searchResults.length,
+          totalSearchResults: this.state.totalResults,
+          showMoreResults: this.showMoreResults
+        })
       );
     }
   }]);
@@ -13872,7 +13879,6 @@ var BrowseLearningCircles = function BrowseLearningCircles(props) {
       var startDate = new Date(circle.start_date).toLocaleDateString('en-US', { month: 'long', year: 'numeric', day: 'numeric' });
       var schedule = circle.day + ' from ' + startTime + ' to ' + endTime + ' (' + circle.time_zone + ')';
       var duration = circle.weeks + ' weeks starting ' + startDate;
-      console.log('circle', circle);
 
       return _react2.default.createElement(_LearningCircleCard2.default, {
         key: index,
@@ -13899,7 +13905,7 @@ var BrowseLearningCircles = function BrowseLearningCircles(props) {
         ),
         _react2.default.createElement(
           'a',
-          { href: 'https://learningcircles.p2pu.org/en/accounts/login/', className: 'btn p2pu-btn dark arrow' },
+          { href: '/en/facilitate', className: 'btn p2pu-btn dark arrow' },
           _react2.default.createElement('i', { className: 'fa fa-arrow-right', 'aria-hidden': 'true' })
         )
       )
@@ -14015,12 +14021,15 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var LoadMoreResults = function LoadMoreResults(props) {
-  if (props.noResults) {
-    return null;
-  } else {
+  if (props.visibleSearchResults < props.totalSearchResults) {
     return _react2.default.createElement(
       'div',
       { className: 'load-more' },
+      _react2.default.createElement(
+        'p',
+        { className: 'large' },
+        'Showing ' + props.visibleSearchResults + ' of ' + props.totalSearchResults + ' results'
+      ),
       _react2.default.createElement(
         'p',
         { className: 'large' },
@@ -14032,6 +14041,8 @@ var LoadMoreResults = function LoadMoreResults(props) {
         _react2.default.createElement('i', { className: 'fa fa-arrow-down', 'aria-hidden': 'true' })
       )
     );
+  } else {
+    return null;
   }
 };
 
@@ -14082,6 +14093,9 @@ var SearchForm = function (_Component) {
     _this.handleChange = function (s) {
       return _this._handleChange(s);
     };
+    _this.handleInputChange = function () {
+      return _this._handleInputChange();
+    };
     _this.populateCities = function () {
       return _this._populateCities();
     };
@@ -14098,6 +14112,11 @@ var SearchForm = function (_Component) {
       var query = selected ? selected.label : selected;
       this.props.searchByLocation(query);
       this.setState({ value: selected });
+    }
+  }, {
+    key: '_handleInputChange',
+    value: function _handleInputChange() {
+      this.props.clearResults();
     }
   }, {
     key: '_populateCities',
@@ -14139,7 +14158,15 @@ var SearchForm = function (_Component) {
           { className: 'label col-md-1 col-sm-2 col-xs-12' },
           'I live in'
         ),
-        _react2.default.createElement(_reactSelect2.default, { name: 'search-form', className: 'city-select col-md-6 col-sm-8 col-xs-12', value: this.state.value, options: this.state.cities, onChange: this.handleChange })
+        _react2.default.createElement(_reactSelect2.default, {
+          name: 'search-form',
+          className: 'city-select col-md-6 col-sm-8 col-xs-12',
+          value: this.state.value,
+          options: this.state.cities,
+          onChange: this.handleChange,
+          onInputChange: this.handleInputChange,
+          noResultsText: 'No results for this city'
+        })
       );
     }
   }]);
@@ -14159,7 +14186,7 @@ exports.default = SearchForm;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var LEARNING_CIRCLES_LIMIT = exports.LEARNING_CIRCLES_LIMIT = 5;
+var LEARNING_CIRCLES_LIMIT = exports.LEARNING_CIRCLES_LIMIT = 11;
 
 /***/ }),
 /* 127 */
