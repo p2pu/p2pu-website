@@ -162,6 +162,8 @@ main {
 			    box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
 			    transition: transform 0.3s ease-in-out;
 			    font-size: $font-size-small;
+			    left: 50%;
+			    transform: translateX(-50%);
 
 			    .title {
 			    	text-transform: uppercase;
@@ -238,7 +240,8 @@ main {
 
 		    	.card {
 		    		z-index: 10;
-		    		transform: scale(1.1);
+		    		left: 50%;
+		    		transform: scale(1.1) translateX(-45%);
 		    	}
 		    }
 			}
@@ -418,11 +421,18 @@ main {
 					margin-bottom: 0;
 			    .card {
 			    	position: relative;
+			    	left: 0;
+				    transform: translateX(0);
 			    }
 
 			    &:hover, &:focus {
 			    	.show-on-hover {
 				    	max-height: 0px;
+			    	}
+
+			    	.card {
+			    		left: 0;
+					    transform: scale(1.1) translateX(0);
 			    	}
 			    }
 			  }
