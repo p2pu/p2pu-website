@@ -1,5 +1,5 @@
 nav {
-  z-index: 99;
+  z-index: $zindex-navbar-fixed;
   font-family: $headings-font-family;
 
   .menu {

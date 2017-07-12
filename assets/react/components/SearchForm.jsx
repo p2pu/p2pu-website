@@ -25,7 +25,7 @@ export default class SearchForm extends Component {
 
   _populateCities() {
     $.ajax({
-      url: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true',
+      url: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true&signup=open',
       dataType: 'JSONP',
       type: 'GET',
       success: (res) => {
@@ -44,6 +44,7 @@ export default class SearchForm extends Component {
 
     cities = _.compact(cities);
     cities = _.uniqBy(cities, 'value');
+    cities = _.sortBy(cities, 'label');
 
     this.setState({ cities });
   }

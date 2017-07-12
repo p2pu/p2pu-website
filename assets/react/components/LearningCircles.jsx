@@ -22,6 +22,7 @@ export default class LearningCircles extends Component {
   _populateLearningCircles() {
     const urlOpts = {
       active: true,
+      signup: 'open',
       limit: LEARNING_CIRCLES_LIMIT
     }
     this.fetchLearningCircles(urlOpts);
@@ -30,6 +31,7 @@ export default class LearningCircles extends Component {
   _searchByLocation(query) {
     const urlOpts = {
       active: true,
+      signup: 'open',
       limit: LEARNING_CIRCLES_LIMIT,
       city: query
     }
@@ -60,7 +62,7 @@ export default class LearningCircles extends Component {
   }
 
   _generateUrl(opts) {
-    const validParams = ['active', 'limit', 'offset', 'city'];
+    const validParams = ['active', 'limit', 'offset', 'city', 'signup'];
     let baseUrl = `https://learningcircles.p2pu.org/api/learningcircles/?`;
 
     validParams.forEach((param) => {

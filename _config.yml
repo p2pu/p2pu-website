@@ -23,7 +23,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README
-  - s3_website.yml]
+  - s3_website.yml
   - node_modules
 
 prose:

@@ -13737,6 +13737,7 @@ var LearningCircles = function (_Component) {
     value: function _populateLearningCircles() {
       var urlOpts = {
         active: true,
+        signup: 'open',
         limit: _constants.LEARNING_CIRCLES_LIMIT
       };
       this.fetchLearningCircles(urlOpts);
@@ -13746,6 +13747,7 @@ var LearningCircles = function (_Component) {
     value: function _searchByLocation(query) {
       var urlOpts = {
         active: true,
+        signup: 'open',
         limit: _constants.LEARNING_CIRCLES_LIMIT,
         city: query
       };
@@ -13779,7 +13781,7 @@ var LearningCircles = function (_Component) {
   }, {
     key: '_generateUrl',
     value: function _generateUrl(opts) {
-      var validParams = ['active', 'limit', 'offset', 'city'];
+      var validParams = ['active', 'limit', 'offset', 'city', 'signup'];
       var baseUrl = 'https://learningcircles.p2pu.org/api/learningcircles/?';
 
       validParams.forEach(function (param) {
@@ -14124,7 +14126,7 @@ var SearchForm = function (_Component) {
       var _this2 = this;
 
       $.ajax({
-        url: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true',
+        url: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true&signup=open',
         dataType: 'JSONP',
         type: 'GET',
         success: function success(res) {
@@ -14144,6 +14146,7 @@ var SearchForm = function (_Component) {
 
       cities = _lodash2.default.compact(cities);
       cities = _lodash2.default.uniqBy(cities, 'value');
+      cities = _lodash2.default.sortBy(cities, 'label');
 
       this.setState({ cities: cities });
     }

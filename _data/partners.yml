@@ -1,5 +1,5 @@
 - name: Boston Public Library
-  url: www.bpl.org/
+  url: https://www.bpl.org/
 
 - name: Charlotte Mecklenburg Public Library
   url: https://www.cmlibrary.org/
@@ -13,7 +13,7 @@
 - name: Creative Commons
   url: https://creativecommons.org/
 
-- name: CRI
+- name: Centre de Recherches Interdisciplinaires
   url: https://cri-paris.org/
 
 - name: Detroit Public Library
