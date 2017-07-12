@@ -194,6 +194,7 @@
 
   #lc-container {
     max-width: 760px;
+    min-height: 300px;
     padding: 0 24px 0 24px;
     color: #515665;
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -330,7 +331,6 @@
     height:320px;
     width:100%;
     background-color:#fdbc1f;
-    margin-top:-60px;
     margin-bottom:48px;
     background-image:url("../images/facilitate/header.jpg");
     background-repeat: no-repeat;
@@ -348,7 +348,7 @@
   .jumbotron-center{
     margin:0 auto;
     max-width:760px;
-    padding:60px 270px 0 24px;
+    padding:100px 210px 0 24px;
   }
 
   @media screen and (max-width: 625px) {
@@ -380,7 +380,7 @@
     text-transform:uppercase;
     padding:15px; 
     border-radius:8px;
-    border-color:#ffffff;
+    border-color:#04b0aa;
     border-style:solid;
     border-width:2px;
     display:inline-block;
