@@ -7,6 +7,7 @@ export default class SearchForm extends Component {
     super(props)
     this.state = { value: '' }
     this.handleChange = (s) => this._handleChange(s)
+    this.handleInputChange = () => this._handleInputChange()
     this.populateCities = () => this._populateCities()
     this.filterCitiesFromResults = (r) => this._filterCitiesFromResults(r)
     this.populateCities();
@@ -16,6 +17,10 @@ export default class SearchForm extends Component {
     const query = selected ? selected.label : selected;
     this.props.searchByLocation(query);
     this.setState({ value: selected })
+  }
+
+  _handleInputChange() {
+    this.props.clearResults()
   }
 
   _populateCities() {
@@ -48,7 +53,15 @@ export default class SearchForm extends Component {
     return(
       <div className="course-search">
         <div className="label col-md-1 col-sm-2 col-xs-12">I live in</div>
-        <Select name="search-form" className="city-select col-md-6 col-sm-8 col-xs-12" value={ this.state.value } options={ this.state.cities } onChange={this.handleChange} />
+        <Select
+          name="search-form"
+          className="city-select col-md-6 col-sm-8 col-xs-12"
+          value={ this.state.value }
+          options={ this.state.cities }
+          onChange={ this.handleChange }
+          onInputChange={ this.handleInputChange }
+          noResultsText='No results for this city'
+        />
       </div>
     )
   }

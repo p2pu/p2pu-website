@@ -14,7 +14,6 @@ const BrowseLearningCircles = (props) => {
           const startDate = new Date(circle.start_date).toLocaleDateString('en-US', {month: 'long', year: 'numeric', day: 'numeric'});
           const schedule = `${circle.day} from ${startTime} to ${endTime} (${circle.time_zone})`;
           const duration = `${circle.weeks} weeks starting ${startDate}`;
-          console.log('circle', circle)
 
           return(
             <LearningCircleCard
@@ -34,7 +33,7 @@ const BrowseLearningCircles = (props) => {
       <div className="result-item grid-item start-learning-circle col-md-4 col-sm-12 col-xs-12">
         <div className="circle">
           <p>Start your own learning circle</p>
-          <a href="/en/facilitate/" className="btn p2pu-btn dark arrow"><i className="fa fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="/en/facilitate" className="btn p2pu-btn dark arrow"><i className="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </Masonry>
