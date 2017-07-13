@@ -18,10 +18,10 @@ full_column:
   - text: About
     url: /en/about/
     submenu:
-      - text: Vision
-        url:
       - text: People
         url: /en/about/people/
+      - text: Values
+        url: /en/about/values/
       - text: Job openings
         url: /en/jobs/
   - text: Stories
@@ -36,10 +36,9 @@ full_column:
       - text: Coast 2 Coast
         date: May 16, 2017
         url: http://info.p2pu.org/2017/05/16/peer-2-peer-coast-2-coast/
-  - text: Support (y)our work
+  - text: Work with us
+    url: /en/workwithus/
     submenu:
-      - text: Work With Us
-        url: /en/collaborate/
       - text: Donate
         url: /en/donate/
       - text: Connect
