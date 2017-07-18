@@ -4,7 +4,7 @@ $(function() {
     $(this).closest('.faq-container').toggleClass('open');
   })
 
-  var numberOfProfiles = 3;
+  var numberOfProfiles = 4;
   var selectedProfile = Math.floor(Math.random() * (numberOfProfiles)) + 1;
   var profileClass = 'profile_' + selectedProfile;
 
