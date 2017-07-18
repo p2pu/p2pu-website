@@ -1,15 +1,20 @@
-- name: Elsa
+- name: Manny Reynoso
   image_1: profile_1_1.jpg
   image_2: profile_1_2.jpg
-  description: Facilitator since 2013
-  quote: Being a facilitator is what keeps me young!
-- name: Olaf
+  description: Facilitator since 2017
+  quote: As an immigrant myself I seek opportunities to help families learn English much like my family was helped when we arrived here. Perhaps one day someone I helped will pay it forward and help someone else.
+- name: Wendy Pearson
   image_1: profile_2_1.jpg
   image_2: profile_2_2.jpg
-  description: Facilitator since 2009
-  quote: I've been facilitating ever since learning circles have been round.
-- name: Manny Reynoso
+  description: Facilitator since 2016
+  quote: We created micro-communities in the path of each learning circle. 
+- name: Edgar Ornelas
   image_1: profile_3_1.jpg
   image_2: profile_3_2.jpg
+  description: Facilitator since 2016
+  quote: Learning circles can be democratic and open to anyone, or they can be tailored to target a group in need of professional development.
+  - name: Jessica Elias
+  image_1: profile_4_1.jpg
+  image_2: profile_4_2.jpg
   description: Facilitator since 2017
-  quote: People come to the United States from many parts of the world. The faces, cultures, customs and religions are all different but the goal is the same- to learn English in order to better their lives. As an immigrant myself I seek opportunities to help families obtain this goal much like my family was helped when we arrived here. Perhaps one day someone I helped will pay it forward and help some one else.
+  quote: This was a TON of fun to run!
