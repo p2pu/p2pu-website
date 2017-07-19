@@ -144,6 +144,8 @@ main {
 		}
 
 		.search-results {
+			margin-left: 0;
+			margin-right: 0;
 
 			.result-item {
 		    position: relative;
@@ -416,6 +418,7 @@ main {
 		  }
 
 		  .search-results {
+		  	overflow: hidden;
 				.result-item {
 					padding: 8px 0;
 					margin-bottom: 0;
