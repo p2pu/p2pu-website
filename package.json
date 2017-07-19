@@ -4,7 +4,7 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "webpack --config webpack.base.config.js",
+    "build": "webpack --optimize-minimize --config webpack.prod.config.js",
     "watch": "webpack --config webpack.base.config.js --watch"
   },
   "repository": {
