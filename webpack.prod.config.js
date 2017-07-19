@@ -27,6 +27,5 @@ config[0].plugins = config[0].plugins.concat([
     }
   })
 ]);
-//config[0].output.path = path.resolve('./assets/dist');
 
 module.exports = config;
