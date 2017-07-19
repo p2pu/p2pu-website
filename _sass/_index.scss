@@ -279,6 +279,9 @@ main {
 		color: $white;
 
 		.columns {
+			margin-right: 0;
+			margin-left: 0;
+
 			.column {
 		    text-align: center;
 				margin-bottom: $padding-md;
@@ -350,6 +353,11 @@ main {
 
 .background-orange {
 	background-color: $p2pu-orange;
+}
+
+.row {
+	margin-right: 0 !important;
+	margin-left: 0 !important;
 }
 
 @media (max-width: $screen-sm-max) {
@@ -435,7 +443,7 @@ main {
 
 			    	.card {
 			    		left: 0;
-					    transform: scale(1.1) translateX(0);
+					    transform: scale(1) translateX(0);
 			    	}
 			    }
 			  }
