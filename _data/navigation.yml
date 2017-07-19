@@ -1,12 +1,49 @@
-en:
+full_column:
+  - text: Home
+    url: /en/
+    submenu:
+      - text: Join a learning circle
+        url: /en/#search
+  - text: Facilitate
+    url: /en/facilitate/
+    submenu:
+      - text: Handbook
+        url: /en/handbook/
+      - text: Community
+        url: https://groups.google.com/a/p2pu.org/forum/#!forum/community
+      - text: Courses
+        url: https://learningcircles.p2pu.org/en/courses/
+      - text: Dashboard
+        url: https://learningcircles.p2pu.org/en/facilitator/
   - text: About
     url: /en/about/
-
-  - text: Blog
+    submenu:
+      - text: People
+        url: /en/about/people/
+      - text: Values
+        url: /en/about/values/
+      - text: Job openings
+        url: /en/jobs/
+  - text: Stories
     url: http://info.p2pu.org/
-    
-  - text: Community
-    url: https://groups.google.com/a/p2pu.org/forum/#!forum/community
-    
-  - text: Facilitator Guide
-    url: /en/facilitate/
+    submenu:
+      - text: Seekers and Rebels
+        date: June 14, 2017
+        url: http://info.p2pu.org/2017/06/14/when-seekers-and-rebels-meet-or-my-experience-studying-the-learning-circles/
+      - text: Will People Show Up?
+        date: June 2, 2017
+        url: http://info.p2pu.org/2017/06/02/will-people-show-up/
+      - text: Coast 2 Coast
+        date: May 16, 2017
+        url: http://info.p2pu.org/2017/05/16/peer-2-peer-coast-2-coast/
+  - text: Work with us
+    url: /en/workwithus/
+    submenu:
+      - text: Donate
+        url: /en/donate/
+      - text: Connect
+        url: /en/connect/
+
+# currently there are no half columns but the code for them is still in the template
+# in case you decide to add them back someday
+

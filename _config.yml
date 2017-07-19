@@ -2,7 +2,7 @@
 title: P2PU
 email: admin@p2pu.org
 description: "Taking online courses together, in libraries, for free."
-baseurl: 
+baseurl:
 url: "http://p2pu.org"
 languages: ['en']
 default_language: 'en'
@@ -18,7 +18,16 @@ sass:
 
 env: prod
 
-exclude: [Guardfile, Gemfile, Gemfile.lock, README, s3_website.yml]
+exclude:
+  - Guardfile
+  - Gemfile
+  - Gemfile.lock
+  - README
+  - s3_website.yml
+  - node_modules
+
 prose:
   media: assets/images
 
+gems:
+  - octopress-autoprefixer

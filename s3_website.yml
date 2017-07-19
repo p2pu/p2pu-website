@@ -19,6 +19,10 @@ exclude_from_upload:
 redirects:
     index.html: /en/
     en/learning-circles/: /en/facilitate/
+    en/facilitate/background/: /en/handbook/background/
+    en/facilitate/starting/: /en/handbook/starting/
+    en/facilitate/running/: /en/handbook/running/
+    en/facilitate/downloads/: /en/handbook/downloads/
     en/community/: https://groups.google.com/a/p2pu.org/forum/#!forum/community
     About-P2PU: /en/about/
     webcraft/: https://courses.p2pu.org/webcraft/

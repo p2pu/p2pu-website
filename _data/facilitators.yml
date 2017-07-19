@@ -1,0 +1,20 @@
+- name: Manny Reynoso
+  image_1: profile_1_1.jpg
+  image_2: profile_1_2.jpg
+  description: Notre Dame Education Center, Boston
+  quote: As an immigrant myself I seek opportunities to help families learn English much like my family was helped when we arrived here. Perhaps one day someone I helped will pay it forward and help someone else.
+- name: Wendy Pearson
+  image_1: profile_2_1.jpg
+  image_2: profile_2_2.jpg
+  description: Kansas City Public Library
+  quote: People want to learn how to use computers but they haven't had success sitting in a class listening to an "expert" tell them how. Learning circles have been a great way to attract digital literacy learners by offering something new and peer-centered.
+- name: Edgar Ornelas
+  image_1: profile_3_1.jpg
+  image_2: profile_3_2.jpg
+  description: Center for Research & Interdisciplinarity, Paris, France
+  quote: Learning circles can be democratic and open to anyone, or they can be tailored to target a group in need of professional development.
+- name: Jessica Elias
+  image_1: profile_4_1.jpg
+  image_2: profile_4_2.jpg
+  description: Boston Public Library
+  quote: As a facilitator, this was a TON of fun to run!
