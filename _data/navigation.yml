@@ -14,7 +14,7 @@ full_column:
       - text: Courses
         url: https://learningcircles.p2pu.org/en/courses/
       - text: Dashboard
-        url: https://learningcircles.p2pu.org/en/accounts/login/
+        url: https://learningcircles.p2pu.org/en/facilitator/
   - text: About
     url: /en/about/
     submenu:
