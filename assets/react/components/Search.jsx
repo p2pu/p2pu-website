@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SearchBar from './SearchBar'
-import Filters from './Filters'
+import FiltersSection from './FiltersSection'
 import ResultsDisplay from './ResultsDisplay'
 
 export default class Search extends Component {
@@ -22,10 +22,12 @@ export default class Search extends Component {
   }
 
   render() {
+    const filterTypes = ['location', 'courses', 'startDate'];
+
     return(
       <div className="search-container">
         <SearchBar />
-        <Filters />
+        <FiltersSection filterTypes={filterTypes} />
         <ResultsDisplay />
       </div>
     )

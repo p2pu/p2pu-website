@@ -22288,9 +22288,9 @@ var _SearchBar = __webpack_require__(325);
 
 var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
-var _Filters = __webpack_require__(326);
+var _FiltersSection = __webpack_require__(331);
 
-var _Filters2 = _interopRequireDefault(_Filters);
+var _FiltersSection2 = _interopRequireDefault(_FiltersSection);
 
 var _ResultsDisplay = __webpack_require__(328);
 
@@ -22337,11 +22337,13 @@ var Search = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var filterTypes = ['location', 'courses', 'startDate'];
+
       return _react2.default.createElement(
         'div',
         { className: 'search-container' },
         _react2.default.createElement(_SearchBar2.default, null),
-        _react2.default.createElement(_Filters2.default, null),
+        _react2.default.createElement(_FiltersSection2.default, { filterTypes: filterTypes }),
         _react2.default.createElement(_ResultsDisplay2.default, null)
       );
     }
@@ -22516,33 +22518,7 @@ var SearchBar = function SearchBar(props) {
 exports.default = SearchBar;
 
 /***/ }),
-/* 326 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(8);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Filters = function Filters(props) {
-  return _react2.default.createElement(
-    "div",
-    { className: "filters" },
-    "Filters go here"
-  );
-};
-
-exports.default = Filters;
-
-/***/ }),
+/* 326 */,
 /* 327 */,
 /* 328 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -22569,6 +22545,148 @@ var ResultsDisplay = function ResultsDisplay(props) {
 };
 
 exports.default = ResultsDisplay;
+
+/***/ }),
+/* 329 */,
+/* 330 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Filter = function Filter(_ref) {
+  var filter = _ref.filter,
+      activeFilter = _ref.activeFilter,
+      updateActiveFilter = _ref.updateActiveFilter;
+
+  var filterNames = {
+    'location': 'Location',
+    'courses': 'Courses',
+    'startDate': 'Start Date'
+  };
+
+  var generateFilterIcon = function generateFilterIcon(filter) {
+    if (activeFilter === filter) {
+      return _react2.default.createElement(
+        'i',
+        { className: 'material-icons' },
+        'remove'
+      );
+    } else {
+      return _react2.default.createElement(
+        'i',
+        { className: 'material-icons' },
+        'add'
+      );
+    }
+  };
+
+  var handleClick = function handleClick() {
+    if (filter === activeFilter) {
+      updateActiveFilter('');
+    } else {
+      updateActiveFilter(filter);
+    }
+  };
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'filter', onClick: handleClick },
+    filterNames[filter],
+    generateFilterIcon(filter)
+  );
+};
+
+exports.default = Filter;
+
+/***/ }),
+/* 331 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(8);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Filter = __webpack_require__(330);
+
+var _Filter2 = _interopRequireDefault(_Filter);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FilterSection = function (_Component) {
+  _inherits(FilterSection, _Component);
+
+  function FilterSection(props) {
+    _classCallCheck(this, FilterSection);
+
+    var _this = _possibleConstructorReturn(this, (FilterSection.__proto__ || Object.getPrototypeOf(FilterSection)).call(this, props));
+
+    _this.state = { activeFilter: '' };
+    _this.updateActiveFilter = function (filter) {
+      return _this._updateActiveFilter(filter);
+    };
+    return _this;
+  }
+
+  _createClass(FilterSection, [{
+    key: '_updateActiveFilter',
+    value: function _updateActiveFilter(filter) {
+      this.setState({ activeFilter: filter });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      console.log('this.state.activeFilter', this.state.activeFilter);
+      return _react2.default.createElement(
+        'div',
+        { className: 'filters-bar col-sm-12' },
+        _react2.default.createElement(
+          'div',
+          { className: 'slider' },
+          this.props.filterTypes.map(function (filter, index) {
+            return _react2.default.createElement(_Filter2.default, {
+              key: index,
+              filter: filter,
+              activeFilter: _this2.state.activeFilter,
+              updateActiveFilter: _this2.updateActiveFilter
+            });
+          })
+        )
+      );
+    }
+  }]);
+
+  return FilterSection;
+}(_react.Component);
+
+exports.default = FilterSection;
 
 /***/ })
 /******/ ]);
