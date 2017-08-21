@@ -1,0 +1,48 @@
+section.page-title {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: $padding-md;
+  padding-bottom: $padding-md;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+
+    h1 {
+      font-size: 4em;
+      color: $gray-light;
+    }
+  }
+}
+
+.search-container {
+  .search-bar {
+    background-color: $p2pu-blue;
+    display: flex;
+    padding: $padding-sm;
+
+    i.material-icons {
+      position: absolute;
+      padding-top: 10px;
+      padding-left: 10px;
+    }
+
+    input.search-input {
+      flex-grow: 1;
+      border-radius: 2em;
+      margin-right: $padding-sm;
+      padding-left: $padding-md;
+      padding-right: $padding-sm;
+      border: none;
+
+      &::placeholder {
+        font-style: italic;
+      }
+    }
+  }
+}
