@@ -7,7 +7,6 @@ export default class CitySelect extends Component {
     super(props)
     this.state = { value: '' }
     this.handleChange = (s) => this._handleChange(s)
-    this.handleInputChange = () => this._handleInputChange()
     this.populateCities = () => this._populateCities()
     this.filterCitiesFromResults = (r) => this._filterCitiesFromResults(r)
     this.populateCities();
@@ -15,12 +14,8 @@ export default class CitySelect extends Component {
 
   _handleChange(selected) {
     const query = selected ? selected.label : selected;
-    this.props.searchByLocation(query);
+    this.props.handleSelect(query)
     this.setState({ value: selected })
-  }
-
-  _handleInputChange() {
-    this.props.clearResults()
   }
 
   _populateCities() {
@@ -52,12 +47,12 @@ export default class CitySelect extends Component {
   render() {
     return(
       <Select
-        name="search-form"
-        className="city-select col-md-6 col-sm-8 col-xs-12"
+        name={ this.props.name }
+        className={ `city-select ${this.props.classes}` }
         value={ this.state.value }
         options={ this.state.cities }
-        onChange={ this.handleChange }
-        onInputChange={ this.handleInputChange }
+        onChange={ this.props.handleChange }
+        onInputChange={ this.props.handleInputChange }
         noResultsText='No results for this city'
       />
     )

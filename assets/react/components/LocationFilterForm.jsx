@@ -76,7 +76,6 @@ export default class LocationFilterForm extends Component {
           classes='col-sm-12'
           name='select-city'
           label="Select a location"
-          options={}
         />
       </div>
     )
