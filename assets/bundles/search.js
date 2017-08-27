@@ -30379,11 +30379,15 @@ var LEARNING_CIRCLES_LIMIT = exports.LEARNING_CIRCLES_LIMIT = 11;
 
 var SEARCH_PROPS = exports.SEARCH_PROPS = {
   learningCircles: {
-    filters: ['location', 'courses', 'startDate'],
+    filters: ['location', 'topics', 'meetingDays'],
     placeholder: 'Search by city, organization, topic, and more... ',
     resultsSubtitle: 'Sign up below for a learning circle in your area, or create your own!'
   }
 };
+
+var MEETING_DAYS = exports.MEETING_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+var COURSE_CATEGORIES = exports.COURSE_CATEGORIES = ['Geography', 'Economics', 'Social Sciences', 'Humanities', 'Languages'];
 
 /***/ }),
 /* 110 */
@@ -50475,8 +50479,8 @@ var Filter = function Filter(_ref) {
 
   var filterNames = {
     'location': 'Location',
-    'courses': 'Courses',
-    'startDate': 'Start Date'
+    'topics': 'Topics',
+    'meetingDays': 'Meeting Day(s)'
   };
 
   var iconName = active ? 'remove' : 'add';
@@ -50523,6 +50527,10 @@ var _LocationFilterForm = __webpack_require__(266);
 
 var _LocationFilterForm2 = _interopRequireDefault(_LocationFilterForm);
 
+var _TopicsFilterForm = __webpack_require__(346);
+
+var _TopicsFilterForm2 = _interopRequireDefault(_TopicsFilterForm);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50551,6 +50559,8 @@ var FilterForm = function (_Component) {
       switch (this.props.activeFilter) {
         case 'location':
           return _react2.default.createElement(_LocationFilterForm2.default, this.props);
+        case 'topics':
+          return _react2.default.createElement(_TopicsFilterForm2.default, this.props);
       }
     }
   }, {
@@ -52642,6 +52652,90 @@ if(false) {
 	// When the module is disposed, remove the <style> tags
 	module.hot.dispose(function() { update(); });
 }
+
+/***/ }),
+/* 346 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _CheckboxWithLabel = __webpack_require__(270);
+
+var _CheckboxWithLabel2 = _interopRequireDefault(_CheckboxWithLabel);
+
+var _constants = __webpack_require__(109);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TopicsFilterForm = function (_Component) {
+  _inherits(TopicsFilterForm, _Component);
+
+  function TopicsFilterForm(props) {
+    _classCallCheck(this, TopicsFilterForm);
+
+    var _this = _possibleConstructorReturn(this, (TopicsFilterForm.__proto__ || Object.getPrototypeOf(TopicsFilterForm)).call(this, props));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(TopicsFilterForm, [{
+    key: 'generateChangeHandler',
+    value: function generateChangeHandler(category) {
+      var _this2 = this;
+
+      return function (checked) {
+        _this2.setState(_defineProperty({}, category, checked), function () {
+          console.log(_this2.state);
+        });
+      };
+    }
+  }, {
+    key: 'generateTopicCheckboxes',
+    value: function generateTopicCheckboxes() {
+      return _constants.COURSE_CATEGORIES.forEach(function (category) {
+        return _react2.default.createElement(_CheckboxWithLabel2.default, {
+          classes: 'col-sm-12 col-md-6 col-lg-6',
+          name: category,
+          label: category,
+          handleChange: generateChangeHandler(category)
+        });
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        generateTopicCheckboxes()
+      );
+    }
+  }]);
+
+  return TopicsFilterForm;
+}(_react.Component);
+
+exports.default = TopicsFilterForm;
 
 /***/ })
 /******/ ]);

@@ -30551,11 +30551,15 @@ var LEARNING_CIRCLES_LIMIT = exports.LEARNING_CIRCLES_LIMIT = 11;
 
 var SEARCH_PROPS = exports.SEARCH_PROPS = {
   learningCircles: {
-    filters: ['location', 'courses', 'startDate'],
+    filters: ['location', 'topics', 'meetingDays'],
     placeholder: 'Search by city, organization, topic, and more... ',
     resultsSubtitle: 'Sign up below for a learning circle in your area, or create your own!'
   }
 };
+
+var MEETING_DAYS = exports.MEETING_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+var COURSE_CATEGORIES = exports.COURSE_CATEGORIES = ['Geography', 'Economics', 'Social Sciences', 'Humanities', 'Languages'];
 
 /***/ }),
 /* 110 */

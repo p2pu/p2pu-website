@@ -3,8 +3,8 @@ import React from 'react'
 const Filter = ({filter, active, updateActiveFilter}) => {
   const filterNames = {
     'location': 'Location',
-    'courses': 'Courses',
-    'startDate': 'Start Date'
+    'topics': 'Topics',
+    'meetingDays': 'Meeting Day(s)'
   }
 
   const iconName = active ? 'remove' : 'add'

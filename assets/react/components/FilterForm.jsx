@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import LocationFilterForm from './LocationFilterForm'
+import TopicsFilterForm from './TopicsFilterForm'
 
 export default class FilterForm extends Component {
   constructor(props) {
@@ -11,6 +12,8 @@ export default class FilterForm extends Component {
     switch (this.props.activeFilter) {
       case 'location':
       return <LocationFilterForm {...this.props} />;
+      case 'topics':
+      return <TopicsFilterForm {...this.props} />;
     }
   }
 
