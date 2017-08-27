@@ -8,7 +8,7 @@ import LearningCirclesSearch from '../helpers/LearningCirclesSearch'
 export default class Search extends Component {
   constructor(props) {
     super(props)
-    this.state = { value: '', searchResults: [], distance: 300 }
+    this.state = { value: '', searchResults: [], distance: 50 }
     this.handleChange = (s) => this._handleChange(s);
     this.handleInputChange = () => this._handleInputChange();
     this.handleSearchBarSubmit = (query) => this._handleSearchBarSubmit(query);
@@ -58,7 +58,7 @@ export default class Search extends Component {
     return(
       <div className="search-container">
         <SearchBar placeholder={placeholder} updateQueryParams={this.updateQueryParams} />
-        <FiltersSection filterCollection={filterCollection} updateQueryParams={this.updateQueryParams} />
+        <FiltersSection filterCollection={filterCollection} updateQueryParams={this.updateQueryParams} {...this.state} />
         <ResultsDisplay resultsSubtitle={resultsSubtitle} learningCircles={this.state.searchResults} />
       </div>
     )

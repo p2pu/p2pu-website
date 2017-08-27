@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CheckboxWithLabel from './common/CheckboxWithLabel'
 import CitySelect from './CitySelect'
+import RangeSliderWithLabel from './common/RangeSliderWithLabel'
 
 export default class LocationFilterForm extends Component {
   constructor(props) {
@@ -8,6 +9,7 @@ export default class LocationFilterForm extends Component {
     this.state = {}
     this.getLocation = (checkboxValue) => this._getLocation(checkboxValue);
     this.handleCitySelect = (city) => this._handleCitySelect(city);
+    this.handleRangeChange = (value) => this._handleRangeChange(value);
   }
 
   _getLocation(checkboxValue) {
@@ -40,23 +42,40 @@ export default class LocationFilterForm extends Component {
     this.props.updateQueryParams({ city })
   }
 
+  _handleRangeChange(value) {
+    this.props.updateQueryParams({ distance: value })
+  }
+
   render() {
-    console.log(this.state);
+    console.log('this.props.distance', this.props.distance);
 
     return(
       <div>
         <CheckboxWithLabel
-          classes='col-sm-12 col-md-6 col-lg-3'
+          classes='col-sm-12 col-md-6 col-lg-6'
           name='geolocation'
           label='Use my current location'
           handleChange={this.getLocation}
         />
-        <CitySelect
-          classes='col-sm-12'
-          name='select-city'
-          label="Select a location"
-          handleSelect={this.handleCitySelect}
+        <RangeSliderWithLabel
+          classes='col-sm-12 col-md-6 col-lg-6'
+          label={`Within a distance of ${this.props.distance}km`}
+          name='distance-slider'
+          value={this.props.distance}
+          handleChange={this.handleRangeChange}
+          min={10}
+          max={150}
+          step={10}
         />
+        <div className='select-with-label label-left col-sm-12' >
+          <label htmlFor='select-city'>Or select a location:</label>
+          <CitySelect
+            classes='col-sm-12'
+            name='select-city'
+            label="Select a location"
+            handleSelect={this.handleCitySelect}
+          />
+        </div>
       </div>
     )
   }

@@ -50327,6 +50327,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(4);
@@ -50367,7 +50369,7 @@ var Search = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).call(this, props));
 
-    _this.state = { value: '', searchResults: [], distance: 300 };
+    _this.state = { value: '', searchResults: [], distance: 50 };
     _this.handleChange = function (s) {
       return _this._handleChange(s);
     };
@@ -50438,7 +50440,7 @@ var Search = function (_Component) {
         'div',
         { className: 'search-container' },
         _react2.default.createElement(_SearchBar2.default, { placeholder: placeholder, updateQueryParams: this.updateQueryParams }),
-        _react2.default.createElement(_FiltersSection2.default, { filterCollection: filterCollection, updateQueryParams: this.updateQueryParams }),
+        _react2.default.createElement(_FiltersSection2.default, _extends({ filterCollection: filterCollection, updateQueryParams: this.updateQueryParams }, this.state)),
         _react2.default.createElement(_ResultsDisplay2.default, { resultsSubtitle: resultsSubtitle, learningCircles: this.state.searchResults })
       );
     }
@@ -50580,6 +50582,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(4);
@@ -50646,10 +50650,10 @@ var FilterSection = function (_Component) {
             })
           )
         ),
-        _react2.default.createElement(_FilterForm2.default, {
+        _react2.default.createElement(_FilterForm2.default, _extends({
           activeFilter: this.state.activeFilter,
           updateQueryParams: this.props.updateQueryParams
-        })
+        }, this.props))
       );
     }
   }]);
@@ -50685,6 +50689,10 @@ var _CitySelect = __webpack_require__(107);
 
 var _CitySelect2 = _interopRequireDefault(_CitySelect);
 
+var _RangeSliderWithLabel = __webpack_require__(339);
+
+var _RangeSliderWithLabel2 = _interopRequireDefault(_RangeSliderWithLabel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50707,6 +50715,9 @@ var LocationFilterForm = function (_Component) {
     };
     _this.handleCitySelect = function (city) {
       return _this._handleCitySelect(city);
+    };
+    _this.handleRangeChange = function (value) {
+      return _this._handleRangeChange(value);
     };
     return _this;
   }
@@ -50746,25 +50757,49 @@ var LocationFilterForm = function (_Component) {
       this.props.updateQueryParams({ city: city });
     }
   }, {
+    key: '_handleRangeChange',
+    value: function _handleRangeChange(value) {
+      this.props.updateQueryParams({ distance: value });
+    }
+  }, {
     key: 'render',
     value: function render() {
-      console.log(this.state);
+      console.log('this.props.distance', this.props.distance);
 
       return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(_CheckboxWithLabel2.default, {
-          classes: 'col-sm-12 col-md-6 col-lg-3',
+          classes: 'col-sm-12 col-md-6 col-lg-6',
           name: 'geolocation',
           label: 'Use my current location',
           handleChange: this.getLocation
         }),
-        _react2.default.createElement(_CitySelect2.default, {
-          classes: 'col-sm-12',
-          name: 'select-city',
-          label: 'Select a location',
-          handleSelect: this.handleCitySelect
-        })
+        _react2.default.createElement(_RangeSliderWithLabel2.default, {
+          classes: 'col-sm-12 col-md-6 col-lg-6',
+          label: 'Within a distance of ' + this.props.distance + 'km',
+          name: 'distance-slider',
+          value: this.props.distance,
+          handleChange: this.handleRangeChange,
+          min: 10,
+          max: 150,
+          step: 10
+        }),
+        _react2.default.createElement(
+          'div',
+          { className: 'select-with-label label-left col-sm-12' },
+          _react2.default.createElement(
+            'label',
+            { htmlFor: 'select-city' },
+            'Or select a location:'
+          ),
+          _react2.default.createElement(_CitySelect2.default, {
+            classes: 'col-sm-12',
+            name: 'select-city',
+            label: 'Select a location',
+            handleSelect: this.handleCitySelect
+          })
+        )
       );
     }
   }]);
@@ -50800,7 +50835,7 @@ var ResultsDisplay = function ResultsDisplay(_ref) {
       learningCircles = _ref.learningCircles;
   return _react2.default.createElement(
     'div',
-    { className: 'search-results' },
+    { className: 'search-results col-sm-12' },
     _react2.default.createElement(
       'header',
       null,
@@ -50911,7 +50946,7 @@ var CheckboxWithLabel = function CheckboxWithLabel(_ref) {
 
   return _react2.default.createElement(
     "div",
-    { className: "checkbox-with-label " + classes },
+    { className: "checkbox-with-label label-right " + classes },
     _react2.default.createElement("input", { type: "checkbox", name: name, id: name, onChange: onChange }),
     _react2.default.createElement(
       "label",
@@ -50946,6 +50981,1667 @@ var _Search2 = _interopRequireDefault(_Search);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(_Search2.default, { searchSubject: 'learningCircles' }), document.getElementById('search-lc-component'));
+
+/***/ }),
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRangeslider = __webpack_require__(342);
+
+var _reactRangeslider2 = _interopRequireDefault(_reactRangeslider);
+
+var _index = __webpack_require__(345);
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var RangeSliderWithLabel = function RangeSliderWithLabel(props) {
+  return _react2.default.createElement(
+    'div',
+    { className: 'range-slider-with-label label-left ' + props.classes },
+    _react2.default.createElement(
+      'label',
+      { htmlFor: props.name },
+      props.label
+    ),
+    _react2.default.createElement(_reactRangeslider2.default, {
+      value: props.value,
+      name: props.name,
+      min: props.min,
+      max: props.max,
+      step: props.step,
+      onChange: props.handleChange
+    })
+  );
+};
+
+exports.default = RangeSliderWithLabel;
+
+/***/ }),
+/* 340 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(114)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "/**\n* Rangeslider\n*/\n.rangeslider {\n  margin: 20px 0;\n  position: relative;\n  background: #e6e6e6;\n  -ms-touch-action: none;\n  touch-action: none;\n}\n.rangeslider,\n.rangeslider .rangeslider__fill {\n  display: block;\n  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);\n}\n.rangeslider .rangeslider__handle {\n  background: #fff;\n  border: 1px solid #ccc;\n  cursor: pointer;\n  display: inline-block;\n  position: absolute;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 -1px 3px rgba(0, 0, 0, 0.4);\n}\n.rangeslider .rangeslider__handle:hover .rangeslider__tooltip {\n  opacity: 1;\n}\n.rangeslider .rangeslider__tooltip {\n  width: 40px;\n  height: 40px;\n  text-align: center;\n  position: absolute;\n  background-color: rgba(0, 0, 0, 0.8);\n  font-weight: normal;\n  font-size: 14px;\n  transition: all 100ms ease-in;\n  border-radius: 4px;\n  display: inline-block;\n  color: white;\n  opacity: 0;\n}\n.rangeslider .rangeslider__tooltip span {\n  margin-top: 12px;\n  display: inline-block;\n  line-height: 100%;\n}\n.rangeslider .rangeslider__tooltip:after {\n  content: ' ';\n  position: absolute;\n  width: 0;\n  height: 0;\n}\n/**\n* Rangeslider - Horizontal slider\n*/\n.rangeslider-horizontal {\n  height: 12px;\n  border-radius: 10px;\n}\n.rangeslider-horizontal .rangeslider__fill {\n  height: 100%;\n  background-color: #7CB342;\n  border-radius: 10px;\n  top: 0;\n}\n.rangeslider-horizontal .rangeslider__handle {\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  top: -10px;\n}\n.rangeslider-horizontal .rangeslider__handle:after {\n  content: ' ';\n  position: absolute;\n  width: 16px;\n  height: 16px;\n  top: 6px;\n  left: 6px;\n  border-radius: 50%;\n  background-color: #dadada;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) inset, 0 -1px 3px rgba(0, 0, 0, 0.4) inset;\n}\n.rangeslider-horizontal .rangeslider__tooltip {\n  top: -55px;\n}\n.rangeslider-horizontal .rangeslider__tooltip:after {\n  border-left: 8px solid transparent;\n  border-right: 8px solid transparent;\n  border-top: 8px solid rgba(0, 0, 0, 0.8);\n  left: 12px;\n  bottom: -8px;\n}\n/**\n* Rangeslider - Vertical slider\n*/\n.rangeslider-vertical {\n  margin: 20px auto;\n  height: 150px;\n  max-width: 10px;\n  background-color: transparent;\n}\n.rangeslider-vertical .rangeslider__fill,\n.rangeslider-vertical .rangeslider__handle {\n  position: absolute;\n}\n.rangeslider-vertical .rangeslider__fill {\n  width: 100%;\n  background-color: #7CB342;\n  box-shadow: none;\n  bottom: 0;\n}\n.rangeslider-vertical .rangeslider__handle {\n  width: 30px;\n  height: 10px;\n  left: -10px;\n  box-shadow: none;\n}\n.rangeslider-vertical .rangeslider__tooltip {\n  left: -55px;\n  top: -15px;\n}\n.rangeslider-vertical .rangeslider__tooltip:after {\n  border-top: 8px solid transparent;\n  border-bottom: 8px solid transparent;\n  border-left: 8px solid rgba(0, 0, 0, 0.8);\n  left: 100%;\n  top: 12px;\n}\n/**\n* Rangeslider - Reverse\n*/\n.rangeslider-reverse.rangeslider-horizontal .rangeslider__fill {\n  right: 0;\n}\n.rangeslider-reverse.rangeslider-vertical .rangeslider__fill {\n  top: 0;\n  bottom: inherit;\n}\n/**\n* Rangeslider - Labels\n*/\n.rangeslider-vertical .rangeslider__label-list {\n  position: relative;\n  list-style-type: none;\n  margin: 0 0 0 24px;\n  padding: 0;\n  text-align: left;\n  width: 250px;\n}\n.rangeslider-vertical .rangeslider__label-list .rangeslider__label {\n  position: absolute;\n}\n.rangeslider-vertical .rangeslider__label-list .rangeslider__label::before {\n  content: '';\n  width: 10px;\n  height: 2px;\n  background: black;\n  position: absolute;\n  left: -14px;\n  top: 50%;\n  transform: translateY(-50%);\n  z-index: -1;\n}\n.rangeslider__label-list .rangeslider__label {\n  position: absolute;\n  font-size: 14px;\n  cursor: pointer;\n  display: inline-block;\n  top: 10px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 341 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _classnames = __webpack_require__(28);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(16);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _resizeObserverPolyfill = __webpack_require__(344);
+
+var _resizeObserverPolyfill2 = _interopRequireDefault(_resizeObserverPolyfill);
+
+var _utils = __webpack_require__(343);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint no-debugger: "warn" */
+
+
+/**
+ * Predefined constants
+ * @type {Object}
+ */
+var constants = {
+  orientation: {
+    horizontal: {
+      dimension: 'width',
+      direction: 'left',
+      reverseDirection: 'right',
+      coordinate: 'x'
+    },
+    vertical: {
+      dimension: 'height',
+      direction: 'top',
+      reverseDirection: 'bottom',
+      coordinate: 'y'
+    }
+  }
+};
+
+var Slider = function (_Component) {
+  _inherits(Slider, _Component);
+
+  function Slider(props, context) {
+    _classCallCheck(this, Slider);
+
+    var _this = _possibleConstructorReturn(this, (Slider.__proto__ || Object.getPrototypeOf(Slider)).call(this, props, context));
+
+    _this.handleNoop = function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    };
+
+    _this.handleFormat = function (value) {
+      var format = _this.props.format;
+
+      return format ? format(value) : value;
+    };
+
+    _this.handleUpdate = function () {
+      if (!_this.slider) {
+        // for shallow rendering
+        return;
+      }
+      var orientation = _this.props.orientation;
+
+      var dimension = (0, _utils.capitalize)(constants.orientation[orientation].dimension);
+      var sliderPos = _this.slider['offset' + dimension];
+      var handlePos = _this.handle['offset' + dimension];
+
+      _this.setState({
+        limit: sliderPos - handlePos,
+        grab: handlePos / 2
+      });
+    };
+
+    _this.handleStart = function (e) {
+      var onChangeStart = _this.props.onChangeStart;
+
+      document.addEventListener('mousemove', _this.handleDrag);
+      document.addEventListener('mouseup', _this.handleEnd);
+      onChangeStart && onChangeStart(e);
+    };
+
+    _this.handleDrag = function (e) {
+      _this.handleNoop(e);
+      var onChange = _this.props.onChange;
+      var target = e.target;
+
+      if (!onChange) return;
+
+      var value = _this.position(e);
+      if (target.classList.contains('rangeslider__label') && target.dataset.value) {
+        value = parseFloat(target.dataset.value);
+      }
+
+      onChange && onChange(value, e);
+    };
+
+    _this.handleEnd = function (e) {
+      var onChangeComplete = _this.props.onChangeComplete;
+
+      onChangeComplete && onChangeComplete(e);
+      document.removeEventListener('mousemove', _this.handleDrag);
+      document.removeEventListener('mouseup', _this.handleEnd);
+    };
+
+    _this.getPositionFromValue = function (value) {
+      var limit = _this.state.limit;
+      var _this$props = _this.props,
+          min = _this$props.min,
+          max = _this$props.max;
+
+      var diffMaxMin = max - min;
+      var diffValMin = value - min;
+      var percentage = diffValMin / diffMaxMin;
+      var pos = Math.round(percentage * limit);
+
+      return pos;
+    };
+
+    _this.getValueFromPosition = function (pos) {
+      var limit = _this.state.limit;
+      var _this$props2 = _this.props,
+          orientation = _this$props2.orientation,
+          min = _this$props2.min,
+          max = _this$props2.max,
+          step = _this$props2.step;
+
+      var percentage = (0, _utils.clamp)(pos, 0, limit) / (limit || 1);
+      var baseVal = step * Math.round(percentage * (max - min) / step);
+      var value = orientation === 'horizontal' ? baseVal + min : max - baseVal;
+
+      return (0, _utils.clamp)(value, min, max);
+    };
+
+    _this.position = function (e) {
+      var grab = _this.state.grab;
+      var _this$props3 = _this.props,
+          orientation = _this$props3.orientation,
+          reverse = _this$props3.reverse;
+
+
+      var node = _this.slider;
+      var coordinateStyle = constants.orientation[orientation].coordinate;
+      var directionStyle = reverse ? constants.orientation[orientation].reverseDirection : constants.orientation[orientation].direction;
+      var clientCoordinateStyle = 'client' + (0, _utils.capitalize)(coordinateStyle);
+      var coordinate = !e.touches ? e[clientCoordinateStyle] : e.touches[0][clientCoordinateStyle];
+      var direction = node.getBoundingClientRect()[directionStyle];
+      var pos = reverse ? direction - coordinate - grab : coordinate - direction - grab;
+      var value = _this.getValueFromPosition(pos);
+
+      return value;
+    };
+
+    _this.coordinates = function (pos) {
+      var _this$state = _this.state,
+          limit = _this$state.limit,
+          grab = _this$state.grab;
+      var orientation = _this.props.orientation;
+
+      var value = _this.getValueFromPosition(pos);
+      var handlePos = _this.getPositionFromValue(value);
+      var sumHandleposGrab = orientation === 'horizontal' ? handlePos + grab : handlePos;
+      var fillPos = orientation === 'horizontal' ? sumHandleposGrab : limit - sumHandleposGrab;
+
+      return {
+        fill: fillPos,
+        handle: handlePos,
+        label: handlePos
+      };
+    };
+
+    _this.state = {
+      limit: 0,
+      grab: 0
+    };
+    return _this;
+  }
+
+  _createClass(Slider, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.handleUpdate();
+      var resizeObserver = new _resizeObserverPolyfill2.default(this.handleUpdate);
+      resizeObserver.observe(this.slider);
+    }
+
+    /**
+     * Prevent default event and bubbling
+     * @param  {Object} e - Event object
+     * @return {void}
+     */
+
+
+    /**
+     * Format label/tooltip value
+     * @param  {Number} - value
+     * @return {Formatted Number}
+     */
+
+
+    /**
+     * Update slider state on change
+     * @return {void}
+     */
+
+
+    /**
+     * Attach event listeners to mousemove/mouseup events
+     * @return {void}
+     */
+
+
+    /**
+     * Handle drag/mousemove event
+     * @param  {Object} e - Event object
+     * @return {void}
+     */
+
+
+    /**
+     * Detach event listeners to mousemove/mouseup events
+     * @return {void}
+     */
+
+
+    /**
+     * Calculate position of slider based on its value
+     * @param  {number} value - Current value of slider
+     * @return {position} pos - Calculated position of slider based on value
+     */
+
+
+    /**
+     * Translate position of slider to slider value
+     * @param  {number} pos - Current position/coordinates of slider
+     * @return {number} value - Slider value
+     */
+
+
+    /**
+     * Calculate position of slider based on value
+     * @param  {Object} e - Event object
+     * @return {number} value - Slider value
+     */
+
+
+    /**
+     * Grab coordinates of slider
+     * @param  {Object} pos - Position object
+     * @return {Object} - Slider fill/handle coordinates
+     */
+
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _props = this.props,
+          value = _props.value,
+          orientation = _props.orientation,
+          className = _props.className,
+          tooltip = _props.tooltip,
+          reverse = _props.reverse;
+
+      var dimension = constants.orientation[orientation].dimension;
+      var direction = reverse ? constants.orientation[orientation].reverseDirection : constants.orientation[orientation].direction;
+      var position = this.getPositionFromValue(value);
+      var coords = this.coordinates(position);
+      var fillStyle = _defineProperty({}, dimension, coords.fill + 'px');
+      var handleStyle = _defineProperty({}, direction, coords.handle + 'px');
+      var labels = null;
+      var labelKeys = Object.keys(this.props.labels);
+
+      if (labelKeys.length > 0) {
+        var items = [];
+
+        labelKeys = labelKeys.sort(function (a, b) {
+          return reverse ? a - b : b - a;
+        });
+
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+          for (var _iterator = labelKeys[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var key = _step.value;
+
+            var labelPosition = this.getPositionFromValue(key);
+            var labelCoords = this.coordinates(labelPosition);
+            var labelStyle = _defineProperty({}, direction, labelCoords.label + 'px');
+            items.push(_react2.default.createElement(
+              'li',
+              {
+                key: key,
+                className: (0, _classnames2.default)('rangeslider__label'),
+                'data-value': key,
+                onMouseDown: this.handleDrag,
+                onTouchStart: this.handleDrag,
+                onTouchEnd: this.handleEnd,
+                style: labelStyle
+              },
+              this.props.labels[key]
+            ));
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+              _iterator.return();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
+          }
+        }
+
+        labels = _react2.default.createElement(
+          'ul',
+          {
+            ref: function ref(sl) {
+              _this2.labels = sl;
+            },
+            className: (0, _classnames2.default)('rangeslider__label-list')
+          },
+          items
+        );
+      }
+
+      return _react2.default.createElement(
+        'div',
+        {
+          ref: function ref(s) {
+            _this2.slider = s;
+          },
+          className: (0, _classnames2.default)('rangeslider', 'rangeslider-' + orientation, { 'rangeslider-reverse': reverse }, className),
+          onMouseDown: this.handleDrag,
+          onMouseUp: this.handleEnd,
+          onTouchStart: this.handleDrag,
+          onTouchEnd: this.handleEnd
+        },
+        _react2.default.createElement('div', { className: 'rangeslider__fill', style: fillStyle }),
+        _react2.default.createElement(
+          'div',
+          {
+            ref: function ref(sh) {
+              _this2.handle = sh;
+            },
+            className: 'rangeslider__handle',
+            onMouseDown: this.handleStart,
+            onTouchMove: this.handleDrag,
+            onTouchEnd: this.handleEnd,
+            style: handleStyle
+          },
+          tooltip && _react2.default.createElement(
+            'div',
+            {
+              ref: function ref(st) {
+                _this2.tooltip = st;
+              },
+              className: 'rangeslider__tooltip'
+            },
+            _react2.default.createElement(
+              'span',
+              null,
+              this.handleFormat(value)
+            )
+          )
+        ),
+        labels
+      );
+    }
+  }]);
+
+  return Slider;
+}(_react.Component);
+
+Slider.propTypes = {
+  min: _propTypes2.default.number,
+  max: _propTypes2.default.number,
+  step: _propTypes2.default.number,
+  value: _propTypes2.default.number,
+  orientation: _propTypes2.default.string,
+  tooltip: _propTypes2.default.bool,
+  reverse: _propTypes2.default.bool,
+  labels: _propTypes2.default.object,
+  format: _propTypes2.default.func,
+  onChangeStart: _propTypes2.default.func,
+  onChange: _propTypes2.default.func,
+  onChangeComplete: _propTypes2.default.func
+};
+Slider.defaultProps = {
+  min: 0,
+  max: 100,
+  step: 1,
+  value: 0,
+  orientation: 'horizontal',
+  tooltip: true,
+  reverse: false,
+  labels: {}
+};
+exports.default = Slider;
+
+/***/ }),
+/* 342 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Rangeslider = __webpack_require__(341);
+
+var _Rangeslider2 = _interopRequireDefault(_Rangeslider);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Rangeslider2.default;
+
+/***/ }),
+/* 343 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.capitalize = capitalize;
+exports.clamp = clamp;
+/**
+ * Capitalize first letter of string
+ * @private
+ * @param  {string} - String
+ * @return {string} - String with first letter capitalized
+ */
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.substr(1);
+}
+
+/**
+ * Clamp position between a range
+ * @param  {number} - Value to be clamped
+ * @param  {number} - Minimum value in range
+ * @param  {number} - Maximum value in range
+ * @return {number} - Clamped value
+ */
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
+
+/***/ }),
+/* 344 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/**
+ * A collection of shims that provide minimal functionality of the ES6 collections.
+ *
+ * These implementations are not meant to be used outside of the ResizeObserver
+ * modules as they cover only a limited range of use cases.
+ */
+/* eslint-disable require-jsdoc, valid-jsdoc */
+var MapShim = (function () {
+    if (typeof Map != 'undefined') {
+        return Map;
+    }
+
+    /**
+     * Returns index in provided array that matches the specified key.
+     *
+     * @param {Array<Array>} arr
+     * @param {*} key
+     * @returns {number}
+     */
+    function getIndex(arr, key) {
+        var result = -1;
+
+        arr.some(function (entry, index) {
+            if (entry[0] === key) {
+                result = index;
+
+                return true;
+            }
+
+            return false;
+        });
+
+        return result;
+    }
+
+    return (function () {
+        function anonymous() {
+            this.__entries__ = [];
+        }
+
+        var prototypeAccessors = { size: {} };
+
+        /**
+         * @returns {boolean}
+         */
+        prototypeAccessors.size.get = function () {
+            return this.__entries__.length;
+        };
+
+        /**
+         * @param {*} key
+         * @returns {*}
+         */
+        anonymous.prototype.get = function (key) {
+            var index = getIndex(this.__entries__, key);
+            var entry = this.__entries__[index];
+
+            return entry && entry[1];
+        };
+
+        /**
+         * @param {*} key
+         * @param {*} value
+         * @returns {void}
+         */
+        anonymous.prototype.set = function (key, value) {
+            var index = getIndex(this.__entries__, key);
+
+            if (~index) {
+                this.__entries__[index][1] = value;
+            } else {
+                this.__entries__.push([key, value]);
+            }
+        };
+
+        /**
+         * @param {*} key
+         * @returns {void}
+         */
+        anonymous.prototype.delete = function (key) {
+            var entries = this.__entries__;
+            var index = getIndex(entries, key);
+
+            if (~index) {
+                entries.splice(index, 1);
+            }
+        };
+
+        /**
+         * @param {*} key
+         * @returns {void}
+         */
+        anonymous.prototype.has = function (key) {
+            return !!~getIndex(this.__entries__, key);
+        };
+
+        /**
+         * @returns {void}
+         */
+        anonymous.prototype.clear = function () {
+            this.__entries__.splice(0);
+        };
+
+        /**
+         * @param {Function} callback
+         * @param {*} [ctx=null]
+         * @returns {void}
+         */
+        anonymous.prototype.forEach = function (callback, ctx) {
+            if ( ctx === void 0 ) ctx = null;
+
+            for (var i = 0, list = this.__entries__; i < list.length; i += 1) {
+                var entry = list[i];
+
+                callback.call(ctx, entry[1], entry[0]);
+            }
+        };
+
+        Object.defineProperties( anonymous.prototype, prototypeAccessors );
+
+        return anonymous;
+    }());
+})();
+
+/**
+ * Detects whether window and document objects are available in current environment.
+ */
+var isBrowser = typeof window != 'undefined' && typeof document != 'undefined' && window.document === document;
+
+/**
+ * A shim for the requestAnimationFrame which falls back to the setTimeout if
+ * first one is not supported.
+ *
+ * @returns {number} Requests' identifier.
+ */
+var requestAnimationFrame$1 = (function () {
+    if (typeof requestAnimationFrame === 'function') {
+        return requestAnimationFrame;
+    }
+
+    return function (callback) { return setTimeout(function () { return callback(Date.now()); }, 1000 / 60); };
+})();
+
+// Defines minimum timeout before adding a trailing call.
+var trailingTimeout = 2;
+
+/**
+ * Creates a wrapper function which ensures that provided callback will be
+ * invoked only once during the specified delay period.
+ *
+ * @param {Function} callback - Function to be invoked after the delay period.
+ * @param {number} delay - Delay after which to invoke callback.
+ * @returns {Function}
+ */
+var throttle = function (callback, delay) {
+    var leadingCall = false,
+        trailingCall = false,
+        lastCallTime = 0;
+
+    /**
+     * Invokes the original callback function and schedules new invocation if
+     * the "proxy" was called during current request.
+     *
+     * @returns {void}
+     */
+    function resolvePending() {
+        if (leadingCall) {
+            leadingCall = false;
+
+            callback();
+        }
+
+        if (trailingCall) {
+            proxy();
+        }
+    }
+
+    /**
+     * Callback invoked after the specified delay. It will further postpone
+     * invocation of the original function delegating it to the
+     * requestAnimationFrame.
+     *
+     * @returns {void}
+     */
+    function timeoutCallback() {
+        requestAnimationFrame$1(resolvePending);
+    }
+
+    /**
+     * Schedules invocation of the original function.
+     *
+     * @returns {void}
+     */
+    function proxy() {
+        var timeStamp = Date.now();
+
+        if (leadingCall) {
+            // Reject immediately following calls.
+            if (timeStamp - lastCallTime < trailingTimeout) {
+                return;
+            }
+
+            // Schedule new call to be in invoked when the pending one is resolved.
+            // This is important for "transitions" which never actually start
+            // immediately so there is a chance that we might miss one if change
+            // happens amids the pending invocation.
+            trailingCall = true;
+        } else {
+            leadingCall = true;
+            trailingCall = false;
+
+            setTimeout(timeoutCallback, delay);
+        }
+
+        lastCallTime = timeStamp;
+    }
+
+    return proxy;
+};
+
+// Minimum delay before invoking the update of observers.
+var REFRESH_DELAY = 20;
+
+// A list of substrings of CSS properties used to find transition events that
+// might affect dimensions of observed elements.
+var transitionKeys = ['top', 'right', 'bottom', 'left', 'width', 'height', 'size', 'weight'];
+
+// Detect whether running in IE 11 (facepalm).
+var isIE11 = typeof navigator != 'undefined' && /Trident\/.*rv:11/.test(navigator.userAgent);
+
+// MutationObserver should not be used if running in Internet Explorer 11 as it's
+// implementation is unreliable. Example: https://jsfiddle.net/x2r3jpuz/2/
+//
+// It's a real bummer that there is no other way to check for this issue but to
+// use the UA information.
+var mutationObserverSupported = typeof MutationObserver != 'undefined' && !isIE11;
+
+/**
+ * Singleton controller class which handles updates of ResizeObserver instances.
+ */
+var ResizeObserverController = function() {
+    /**
+     * Indicates whether DOM listeners have been added.
+     *
+     * @private {boolean}
+     */
+    this.connected_ = false;
+
+    /**
+     * Tells that controller has subscribed for Mutation Events.
+     *
+     * @private {boolean}
+     */
+    this.mutationEventsAdded_ = false;
+
+    /**
+     * Keeps reference to the instance of MutationObserver.
+     *
+     * @private {MutationObserver}
+     */
+    this.mutationsObserver_ = null;
+
+    /**
+     * A list of connected observers.
+     *
+     * @private {Array<ResizeObserverSPI>}
+     */
+    this.observers_ = [];
+
+    this.onTransitionEnd_ = this.onTransitionEnd_.bind(this);
+    this.refresh = throttle(this.refresh.bind(this), REFRESH_DELAY);
+};
+
+/**
+ * Adds observer to observers list.
+ *
+ * @param {ResizeObserverSPI} observer - Observer to be added.
+ * @returns {void}
+ */
+ResizeObserverController.prototype.addObserver = function (observer) {
+    if (!~this.observers_.indexOf(observer)) {
+        this.observers_.push(observer);
+    }
+
+    // Add listeners if they haven't been added yet.
+    if (!this.connected_) {
+        this.connect_();
+    }
+};
+
+/**
+ * Removes observer from observers list.
+ *
+ * @param {ResizeObserverSPI} observer - Observer to be removed.
+ * @returns {void}
+ */
+ResizeObserverController.prototype.removeObserver = function (observer) {
+    var observers = this.observers_;
+    var index = observers.indexOf(observer);
+
+    // Remove observer if it's present in registry.
+    if (~index) {
+        observers.splice(index, 1);
+    }
+
+    // Remove listeners if controller has no connected observers.
+    if (!observers.length && this.connected_) {
+        this.disconnect_();
+    }
+};
+
+/**
+ * Invokes the update of observers. It will continue running updates insofar
+ * it detects changes.
+ *
+ * @returns {void}
+ */
+ResizeObserverController.prototype.refresh = function () {
+    var changesDetected = this.updateObservers_();
+
+    // Continue running updates if changes have been detected as there might
+    // be future ones caused by CSS transitions.
+    if (changesDetected) {
+        this.refresh();
+    }
+};
+
+/**
+ * Updates every observer from observers list and notifies them of queued
+ * entries.
+ *
+ * @private
+ * @returns {boolean} Returns "true" if any observer has detected changes in
+ *  dimensions of it's elements.
+ */
+ResizeObserverController.prototype.updateObservers_ = function () {
+    // Collect observers that have active observations.
+    var activeObservers = this.observers_.filter(function (observer) {
+        return observer.gatherActive(), observer.hasActive();
+    });
+
+    // Deliver notifications in a separate cycle in order to avoid any
+    // collisions between observers, e.g. when multiple instances of
+    // ResizeObserver are tracking the same element and the callback of one
+    // of them changes content dimensions of the observed target. Sometimes
+    // this may result in notifications being blocked for the rest of observers.
+    activeObservers.forEach(function (observer) { return observer.broadcastActive(); });
+
+    return activeObservers.length > 0;
+};
+
+/**
+ * Initializes DOM listeners.
+ *
+ * @private
+ * @returns {void}
+ */
+ResizeObserverController.prototype.connect_ = function () {
+    // Do nothing if running in a non-browser environment or if listeners
+    // have been already added.
+    if (!isBrowser || this.connected_) {
+        return;
+    }
+
+    // Subscription to the "Transitionend" event is used as a workaround for
+    // delayed transitions. This way it's possible to capture at least the
+    // final state of an element.
+    document.addEventListener('transitionend', this.onTransitionEnd_);
+
+    window.addEventListener('resize', this.refresh);
+
+    if (mutationObserverSupported) {
+        this.mutationsObserver_ = new MutationObserver(this.refresh);
+
+        this.mutationsObserver_.observe(document, {
+            attributes: true,
+            childList: true,
+            characterData: true,
+            subtree: true
+        });
+    } else {
+        document.addEventListener('DOMSubtreeModified', this.refresh);
+
+        this.mutationEventsAdded_ = true;
+    }
+
+    this.connected_ = true;
+};
+
+/**
+ * Removes DOM listeners.
+ *
+ * @private
+ * @returns {void}
+ */
+ResizeObserverController.prototype.disconnect_ = function () {
+    // Do nothing if running in a non-browser environment or if listeners
+    // have been already removed.
+    if (!isBrowser || !this.connected_) {
+        return;
+    }
+
+    document.removeEventListener('transitionend', this.onTransitionEnd_);
+    window.removeEventListener('resize', this.refresh);
+
+    if (this.mutationsObserver_) {
+        this.mutationsObserver_.disconnect();
+    }
+
+    if (this.mutationEventsAdded_) {
+        document.removeEventListener('DOMSubtreeModified', this.refresh);
+    }
+
+    this.mutationsObserver_ = null;
+    this.mutationEventsAdded_ = false;
+    this.connected_ = false;
+};
+
+/**
+ * "Transitionend" event handler.
+ *
+ * @private
+ * @param {TransitionEvent} event
+ * @returns {void}
+ */
+ResizeObserverController.prototype.onTransitionEnd_ = function (ref) {
+        var propertyName = ref.propertyName;
+
+    // Detect whether transition may affect dimensions of an element.
+    var isReflowProperty = transitionKeys.some(function (key) {
+        return !!~propertyName.indexOf(key);
+    });
+
+    if (isReflowProperty) {
+        this.refresh();
+    }
+};
+
+/**
+ * Returns instance of the ResizeObserverController.
+ *
+ * @returns {ResizeObserverController}
+ */
+ResizeObserverController.getInstance = function () {
+    if (!this.instance_) {
+        this.instance_ = new ResizeObserverController();
+    }
+
+    return this.instance_;
+};
+
+/**
+ * Holds reference to the controller's instance.
+ *
+ * @private {ResizeObserverController}
+ */
+ResizeObserverController.instance_ = null;
+
+/**
+ * Defines non-writable/enumerable properties of the provided target object.
+ *
+ * @param {Object} target - Object for which to define properties.
+ * @param {Object} props - Properties to be defined.
+ * @returns {Object} Target object.
+ */
+var defineConfigurable = (function (target, props) {
+    for (var i = 0, list = Object.keys(props); i < list.length; i += 1) {
+        var key = list[i];
+
+        Object.defineProperty(target, key, {
+            value: props[key],
+            enumerable: false,
+            writable: false,
+            configurable: true
+        });
+    }
+
+    return target;
+});
+
+// Placeholder of an empty content rectangle.
+var emptyRect = createRectInit(0, 0, 0, 0);
+
+/**
+ * Converts provided string to a number.
+ *
+ * @param {number|string} value
+ * @returns {number}
+ */
+function toFloat(value) {
+    return parseFloat(value) || 0;
+}
+
+/**
+ * Extracts borders size from provided styles.
+ *
+ * @param {CSSStyleDeclaration} styles
+ * @param {...string} positions - Borders positions (top, right, ...)
+ * @returns {number}
+ */
+function getBordersSize(styles) {
+    var positions = Array.prototype.slice.call(arguments, 1);
+
+    return positions.reduce(function (size, position) {
+        var value = styles['border-' + position + '-width'];
+
+        return size + toFloat(value);
+    }, 0);
+}
+
+/**
+ * Extracts paddings sizes from provided styles.
+ *
+ * @param {CSSStyleDeclaration} styles
+ * @returns {Object} Paddings box.
+ */
+function getPaddings(styles) {
+    var positions = ['top', 'right', 'bottom', 'left'];
+    var paddings = {};
+
+    for (var i = 0, list = positions; i < list.length; i += 1) {
+        var position = list[i];
+
+        var value = styles['padding-' + position];
+
+        paddings[position] = toFloat(value);
+    }
+
+    return paddings;
+}
+
+/**
+ * Calculates content rectangle of provided SVG element.
+ *
+ * @param {SVGGraphicsElement} target - Element content rectangle of which needs
+ *      to be calculated.
+ * @returns {DOMRectInit}
+ */
+function getSVGContentRect(target) {
+    var bbox = target.getBBox();
+
+    return createRectInit(0, 0, bbox.width, bbox.height);
+}
+
+/**
+ * Calculates content rectangle of provided HTMLElement.
+ *
+ * @param {HTMLElement} target - Element for which to calculate the content rectangle.
+ * @returns {DOMRectInit}
+ */
+function getHTMLElementContentRect(target) {
+    // Client width & height properties can't be
+    // used exclusively as they provide rounded values.
+    var clientWidth = target.clientWidth;
+    var clientHeight = target.clientHeight;
+
+    // By this condition we can catch all non-replaced inline, hidden and
+    // detached elements. Though elements with width & height properties less
+    // than 0.5 will be discarded as well.
+    //
+    // Without it we would need to implement separate methods for each of
+    // those cases and it's not possible to perform a precise and performance
+    // effective test for hidden elements. E.g. even jQuery's ':visible' filter
+    // gives wrong results for elements with width & height less than 0.5.
+    if (!clientWidth && !clientHeight) {
+        return emptyRect;
+    }
+
+    var styles = getComputedStyle(target);
+    var paddings = getPaddings(styles);
+    var horizPad = paddings.left + paddings.right;
+    var vertPad = paddings.top + paddings.bottom;
+
+    // Computed styles of width & height are being used because they are the
+    // only dimensions available to JS that contain non-rounded values. It could
+    // be possible to utilize the getBoundingClientRect if only it's data wasn't
+    // affected by CSS transformations let alone paddings, borders and scroll bars.
+    var width = toFloat(styles.width),
+        height = toFloat(styles.height);
+
+    // Width & height include paddings and borders when the 'border-box' box
+    // model is applied (except for IE).
+    if (styles.boxSizing === 'border-box') {
+        // Following conditions are required to handle Internet Explorer which
+        // doesn't include paddings and borders to computed CSS dimensions.
+        //
+        // We can say that if CSS dimensions + paddings are equal to the "client"
+        // properties then it's either IE, and thus we don't need to subtract
+        // anything, or an element merely doesn't have paddings/borders styles.
+        if (Math.round(width + horizPad) !== clientWidth) {
+            width -= getBordersSize(styles, 'left', 'right') + horizPad;
+        }
+
+        if (Math.round(height + vertPad) !== clientHeight) {
+            height -= getBordersSize(styles, 'top', 'bottom') + vertPad;
+        }
+    }
+
+    // Following steps can't be applied to the document's root element as its
+    // client[Width/Height] properties represent viewport area of the window.
+    // Besides, it's as well not necessary as the <html> itself neither has
+    // rendered scroll bars nor it can be clipped.
+    if (!isDocumentElement(target)) {
+        // In some browsers (only in Firefox, actually) CSS width & height
+        // include scroll bars size which can be removed at this step as scroll
+        // bars are the only difference between rounded dimensions + paddings
+        // and "client" properties, though that is not always true in Chrome.
+        var vertScrollbar = Math.round(width + horizPad) - clientWidth;
+        var horizScrollbar = Math.round(height + vertPad) - clientHeight;
+
+        // Chrome has a rather weird rounding of "client" properties.
+        // E.g. for an element with content width of 314.2px it sometimes gives
+        // the client width of 315px and for the width of 314.7px it may give
+        // 314px. And it doesn't happen all the time. So just ignore this delta
+        // as a non-relevant.
+        if (Math.abs(vertScrollbar) !== 1) {
+            width -= vertScrollbar;
+        }
+
+        if (Math.abs(horizScrollbar) !== 1) {
+            height -= horizScrollbar;
+        }
+    }
+
+    return createRectInit(paddings.left, paddings.top, width, height);
+}
+
+/**
+ * Checks whether provided element is an instance of the SVGGraphicsElement.
+ *
+ * @param {Element} target - Element to be checked.
+ * @returns {boolean}
+ */
+var isSVGGraphicsElement = (function () {
+    // Some browsers, namely IE and Edge, don't have the SVGGraphicsElement
+    // interface.
+    if (typeof SVGGraphicsElement != 'undefined') {
+        return function (target) { return target instanceof SVGGraphicsElement; };
+    }
+
+    // If it's so, then check that element is at least an instance of the
+    // SVGElement and that it has the "getBBox" method.
+    // eslint-disable-next-line no-extra-parens
+    return function (target) { return target instanceof SVGElement && typeof target.getBBox === 'function'; };
+})();
+
+/**
+ * Checks whether provided element is a document element (<html>).
+ *
+ * @param {Element} target - Element to be checked.
+ * @returns {boolean}
+ */
+function isDocumentElement(target) {
+    return target === document.documentElement;
+}
+
+/**
+ * Calculates an appropriate content rectangle for provided html or svg element.
+ *
+ * @param {Element} target - Element content rectangle of which needs to be calculated.
+ * @returns {DOMRectInit}
+ */
+function getContentRect(target) {
+    if (!isBrowser) {
+        return emptyRect;
+    }
+
+    if (isSVGGraphicsElement(target)) {
+        return getSVGContentRect(target);
+    }
+
+    return getHTMLElementContentRect(target);
+}
+
+/**
+ * Creates rectangle with an interface of the DOMRectReadOnly.
+ * Spec: https://drafts.fxtf.org/geometry/#domrectreadonly
+ *
+ * @param {DOMRectInit} rectInit - Object with rectangle's x/y coordinates and dimensions.
+ * @returns {DOMRectReadOnly}
+ */
+function createReadOnlyRect(ref) {
+    var x = ref.x;
+    var y = ref.y;
+    var width = ref.width;
+    var height = ref.height;
+
+    // If DOMRectReadOnly is available use it as a prototype for the rectangle.
+    var Constr = typeof DOMRectReadOnly != 'undefined' ? DOMRectReadOnly : Object;
+    var rect = Object.create(Constr.prototype);
+
+    // Rectangle's properties are not writable and non-enumerable.
+    defineConfigurable(rect, {
+        x: x, y: y, width: width, height: height,
+        top: y,
+        right: x + width,
+        bottom: height + y,
+        left: x
+    });
+
+    return rect;
+}
+
+/**
+ * Creates DOMRectInit object based on the provided dimensions and the x/y coordinates.
+ * Spec: https://drafts.fxtf.org/geometry/#dictdef-domrectinit
+ *
+ * @param {number} x - X coordinate.
+ * @param {number} y - Y coordinate.
+ * @param {number} width - Rectangle's width.
+ * @param {number} height - Rectangle's height.
+ * @returns {DOMRectInit}
+ */
+function createRectInit(x, y, width, height) {
+    return { x: x, y: y, width: width, height: height };
+}
+
+/**
+ * Class that is responsible for computations of the content rectangle of
+ * provided DOM element and for keeping track of it's changes.
+ */
+var ResizeObservation = function(target) {
+    /**
+     * Broadcasted width of content rectangle.
+     *
+     * @type {number}
+     */
+    this.broadcastWidth = 0;
+
+    /**
+     * Broadcasted height of content rectangle.
+     *
+     * @type {number}
+     */
+    this.broadcastHeight = 0;
+
+    /**
+     * Reference to the last observed content rectangle.
+     *
+     * @private {DOMRectInit}
+     */
+    this.contentRect_ = createRectInit(0, 0, 0, 0);
+
+    /**
+     * Reference to the observed element.
+     *
+     * @type {Element}
+     */
+    this.target = target;
+};
+
+/**
+ * Updates content rectangle and tells whether it's width or height properties
+ * have changed since the last broadcast.
+ *
+ * @returns {boolean}
+ */
+ResizeObservation.prototype.isActive = function () {
+    var rect = getContentRect(this.target);
+
+    this.contentRect_ = rect;
+
+    return rect.width !== this.broadcastWidth || rect.height !== this.broadcastHeight;
+};
+
+/**
+ * Updates 'broadcastWidth' and 'broadcastHeight' properties with a data
+ * from the corresponding properties of the last observed content rectangle.
+ *
+ * @returns {DOMRectInit} Last observed content rectangle.
+ */
+ResizeObservation.prototype.broadcastRect = function () {
+    var rect = this.contentRect_;
+
+    this.broadcastWidth = rect.width;
+    this.broadcastHeight = rect.height;
+
+    return rect;
+};
+
+var ResizeObserverEntry = function(target, rectInit) {
+    var contentRect = createReadOnlyRect(rectInit);
+
+    // According to the specification following properties are not writable
+    // and are also not enumerable in the native implementation.
+    //
+    // Property accessors are not being used as they'd require to define a
+    // private WeakMap storage which may cause memory leaks in browsers that
+    // don't support this type of collections.
+    defineConfigurable(this, { target: target, contentRect: contentRect });
+};
+
+var ResizeObserverSPI = function(callback, controller, callbackCtx) {
+    if (typeof callback !== 'function') {
+        throw new TypeError('The callback provided as parameter 1 is not a function.');
+    }
+
+    /**
+     * Collection of resize observations that have detected changes in dimensions
+     * of elements.
+     *
+     * @private {Array<ResizeObservation>}
+     */
+    this.activeObservations_ = [];
+
+    /**
+     * Registry of the ResizeObservation instances.
+     *
+     * @private {Map<Element, ResizeObservation>}
+     */
+    this.observations_ = new MapShim();
+
+    /**
+     * Reference to the callback function.
+     *
+     * @private {ResizeObserverCallback}
+     */
+    this.callback_ = callback;
+
+    /**
+     * Reference to the associated ResizeObserverController.
+     *
+     * @private {ResizeObserverController}
+     */
+    this.controller_ = controller;
+
+    /**
+     * Public ResizeObserver instance which will be passed to the callback
+     * function and used as a value of it's "this" binding.
+     *
+     * @private {ResizeObserver}
+     */
+    this.callbackCtx_ = callbackCtx;
+};
+
+/**
+ * Starts observing provided element.
+ *
+ * @param {Element} target - Element to be observed.
+ * @returns {void}
+ */
+ResizeObserverSPI.prototype.observe = function (target) {
+    if (!arguments.length) {
+        throw new TypeError('1 argument required, but only 0 present.');
+    }
+
+    // Do nothing if current environment doesn't have the Element interface.
+    if (typeof Element === 'undefined' || !(Element instanceof Object)) {
+        return;
+    }
+
+    if (!(target instanceof Element)) {
+        throw new TypeError('parameter 1 is not of type "Element".');
+    }
+
+    var observations = this.observations_;
+
+    // Do nothing if element is already being observed.
+    if (observations.has(target)) {
+        return;
+    }
+
+    observations.set(target, new ResizeObservation(target));
+
+    this.controller_.addObserver(this);
+
+    // Force the update of observations.
+    this.controller_.refresh();
+};
+
+/**
+ * Stops observing provided element.
+ *
+ * @param {Element} target - Element to stop observing.
+ * @returns {void}
+ */
+ResizeObserverSPI.prototype.unobserve = function (target) {
+    if (!arguments.length) {
+        throw new TypeError('1 argument required, but only 0 present.');
+    }
+
+    // Do nothing if current environment doesn't have the Element interface.
+    if (typeof Element === 'undefined' || !(Element instanceof Object)) {
+        return;
+    }
+
+    if (!(target instanceof Element)) {
+        throw new TypeError('parameter 1 is not of type "Element".');
+    }
+
+    var observations = this.observations_;
+
+    // Do nothing if element is not being observed.
+    if (!observations.has(target)) {
+        return;
+    }
+
+    observations.delete(target);
+
+    if (!observations.size) {
+        this.controller_.removeObserver(this);
+    }
+};
+
+/**
+ * Stops observing all elements.
+ *
+ * @returns {void}
+ */
+ResizeObserverSPI.prototype.disconnect = function () {
+    this.clearActive();
+    this.observations_.clear();
+    this.controller_.removeObserver(this);
+};
+
+/**
+ * Collects observation instances the associated element of which has changed
+ * it's content rectangle.
+ *
+ * @returns {void}
+ */
+ResizeObserverSPI.prototype.gatherActive = function () {
+        var this$1 = this;
+
+    this.clearActive();
+
+    this.observations_.forEach(function (observation) {
+        if (observation.isActive()) {
+            this$1.activeObservations_.push(observation);
+        }
+    });
+};
+
+/**
+ * Invokes initial callback function with a list of ResizeObserverEntry
+ * instances collected from active resize observations.
+ *
+ * @returns {void}
+ */
+ResizeObserverSPI.prototype.broadcastActive = function () {
+    // Do nothing if observer doesn't have active observations.
+    if (!this.hasActive()) {
+        return;
+    }
+
+    var ctx = this.callbackCtx_;
+
+    // Create ResizeObserverEntry instance for every active observation.
+    var entries = this.activeObservations_.map(function (observation) {
+        return new ResizeObserverEntry(observation.target, observation.broadcastRect());
+    });
+
+    this.callback_.call(ctx, entries, ctx);
+    this.clearActive();
+};
+
+/**
+ * Clears the collection of active observations.
+ *
+ * @returns {void}
+ */
+ResizeObserverSPI.prototype.clearActive = function () {
+    this.activeObservations_.splice(0);
+};
+
+/**
+ * Tells whether observer has active observations.
+ *
+ * @returns {boolean}
+ */
+ResizeObserverSPI.prototype.hasActive = function () {
+    return this.activeObservations_.length > 0;
+};
+
+// Registry of internal observers. If WeakMap is not available use current shim
+// for the Map collection as it has all required methods and because WeakMap
+// can't be fully polyfilled anyway.
+var observers = typeof WeakMap != 'undefined' ? new WeakMap() : new MapShim();
+
+/**
+ * ResizeObserver API. Encapsulates the ResizeObserver SPI implementation
+ * exposing only those methods and properties that are defined in the spec.
+ */
+var ResizeObserver$1 = function(callback) {
+    if (!(this instanceof ResizeObserver$1)) {
+        throw new TypeError('Cannot call a class as a function');
+    }
+
+    if (!arguments.length) {
+        throw new TypeError('1 argument required, but only 0 present.');
+    }
+
+    var controller = ResizeObserverController.getInstance();
+    var observer = new ResizeObserverSPI(callback, controller, this);
+
+    observers.set(this, observer);
+};
+
+// Expose public methods of ResizeObserver.
+['observe', 'unobserve', 'disconnect'].forEach(function (method) {
+    ResizeObserver$1.prototype[method] = function () {
+        return (ref = observers.get(this))[method].apply(ref, arguments);
+        var ref;
+    };
+});
+
+var index = (function () {
+    // Export existing implementation if available.
+    if (typeof ResizeObserver != 'undefined') {
+        // eslint-disable-next-line no-undef
+        return ResizeObserver;
+    }
+
+    return ResizeObserver$1;
+})();
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
+
+
+/***/ }),
+/* 345 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(340);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(247)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../css-loader/index.js!./index.css", function() {
+			var newContent = require("!!../../css-loader/index.js!./index.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);
