@@ -27,11 +27,15 @@ const reactBuild = {
   },
   module: {
     loaders: [
-      { 
-        test: /\.scss$/, 
+      {
+        test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
-      { 
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader']
+      },
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader?presets[]=es2015&presets[]=react'

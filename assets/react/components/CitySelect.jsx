@@ -1,19 +1,23 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
 import Select from 'react-select'
+import css from 'react-select/dist/react-select.css'
 
 export default class CitySelect extends Component {
   constructor(props) {
     super(props)
     this.state = { value: '' }
     this.handleChange = (s) => this._handleChange(s)
+    this.handleInputChange = (s) => this._handleInputChange(s)
     this.populateCities = () => this._populateCities()
     this.filterCitiesFromResults = (r) => this._filterCitiesFromResults(r)
     this.populateCities();
   }
 
   _handleChange(selected) {
+    console.log('selected', selected)
     const query = selected ? selected.label : selected;
+
     this.props.handleSelect(query)
     this.setState({ value: selected })
   }
@@ -51,7 +55,7 @@ export default class CitySelect extends Component {
         className={ `city-select ${this.props.classes}` }
         value={ this.state.value }
         options={ this.state.cities }
-        onChange={ this.props.handleChange }
+        onChange={ this.handleChange }
         onInputChange={ this.props.handleInputChange }
         noResultsText='No results for this city'
       />

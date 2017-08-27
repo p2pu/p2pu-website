@@ -3,13 +3,31 @@ import SearchBar from './SearchBar'
 import FiltersSection from './FiltersSection'
 import ResultsDisplay from './ResultsDisplay'
 import { SEARCH_PROPS } from '../constants'
+import LearningCirclesSearch from '../helpers/LearningCirclesSearch'
 
 export default class Search extends Component {
   constructor(props) {
     super(props)
-    this.state = { value: '' }
+    this.state = { value: '', searchResults: [], distance: 300 }
     this.handleChange = (s) => this._handleChange(s);
     this.handleInputChange = () => this._handleInputChange();
+    this.handleSearchBarSubmit = (query) => this._handleSearchBarSubmit(query);
+    this.searchCallback = (response, opts) => this._searchCallback(response, opts);
+    this.updateQueryParams = (params) => this._updateQueryParams(params);
+    this.sendQuery = () => this._sendQuery();
+  }
+
+  _sendQuery() {
+    const params = this.state;
+    const opts = { params, callback: this.searchCallback }
+
+    console.log('params', params)
+
+    LearningCirclesSearch.fetchLearningCircles(opts);
+  }
+
+  _updateQueryParams(params) {
+    this.setState(params, this.sendQuery)
   }
 
   _handleChange(selected) {
@@ -22,6 +40,16 @@ export default class Search extends Component {
     this.props.clearResults()
   }
 
+  _searchCallback(response, opts) {
+    console.log(response)
+    const results = opts.appendResults ? this.state.searchResults.concat(response.items) : response.items;
+    this.setState({
+      searchResults: results,
+      currentQuery: opts.params,
+      totalResults: response.count
+    })
+  }
+
   render() {
     const filterCollection = SEARCH_PROPS[this.props.searchSubject].filters;
     const placeholder = SEARCH_PROPS[this.props.searchSubject].placeholder;
@@ -29,9 +57,9 @@ export default class Search extends Component {
 
     return(
       <div className="search-container">
-        <SearchBar placeholder={placeholder}/>
-        <FiltersSection filterCollection={filterCollection} />
-        <ResultsDisplay resultsSubtitle={resultsSubtitle} />
+        <SearchBar placeholder={placeholder} updateQueryParams={this.updateQueryParams} />
+        <FiltersSection filterCollection={filterCollection} updateQueryParams={this.updateQueryParams} />
+        <ResultsDisplay resultsSubtitle={resultsSubtitle} learningCircles={this.state.searchResults} />
       </div>
     )
   }

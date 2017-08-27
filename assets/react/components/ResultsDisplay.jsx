@@ -1,7 +1,7 @@
 import React from 'react'
 import BrowseLearningCircles from './BrowseLearningCircles'
 
-const ResultsDisplay = ({ resultsSubtitle }) => (
+const ResultsDisplay = ({ resultsSubtitle, learningCircles }) => (
   <div className="search-results">
     <header>
       <div className="subtitle">
@@ -12,7 +12,7 @@ const ResultsDisplay = ({ resultsSubtitle }) => (
     </header>
     <p className="centered large">{resultsSubtitle}</p>
 
-    <BrowseLearningCircles learningCircles={ [] }/>
+    <BrowseLearningCircles learningCircles={learningCircles}/>
   </div>
 )
 

@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
 import CheckboxWithLabel from './common/CheckboxWithLabel'
-import SelectWithLabel from './common/SelectWithLabel'
+import CitySelect from './CitySelect'
 
 export default class LocationFilterForm extends Component {
   constructor(props) {
     super(props)
     this.state = {}
-    this.getLocation = (checkboxValue) => this._getLocation(checkboxValue)
+    this.getLocation = (checkboxValue) => this._getLocation(checkboxValue);
+    this.handleCitySelect = (city) => this._handleCitySelect(city);
   }
 
   _getLocation(checkboxValue) {
     if (checkboxValue === false) {
-      this.setState({ lat: null, lon: null });
+      this.props.updateQueryParams({ latitude: null, longitude: null });
       return;
     }
 
     const success = (position) => {
-      this.setState({ lat: position.coords.latitude, lon: position.coords.longitude })
+      this.props.updateQueryParams({ latitude: position.coords.latitude, longitude: position.coords.longitude })
     }
 
     const error = () => {
@@ -35,30 +36,8 @@ export default class LocationFilterForm extends Component {
     }
   }
 
-  _populateCities() {
-    $.ajax({
-      url: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true&signup=open',
-      dataType: 'JSONP',
-      type: 'GET',
-      success: (res) => {
-        this.filterCitiesFromResults(res.items);
-      }
-    });
-  }
-
-  _filterCitiesFromResults(courses) {
-    let cities = courses.map(course => {
-      if (course.city.length > 0) {
-        const value = course.city.split(',')[0].toLowerCase().replace(/ /, '_')
-        return { label: course.city, value: value }
-      }
-    });
-
-    cities = _.compact(cities);
-    cities = _.uniqBy(cities, 'value');
-    cities = _.sortBy(cities, 'label');
-
-    this.setState({ cities });
+  _handleCitySelect(city) {
+    this.props.updateQueryParams({ city })
   }
 
   render() {
@@ -72,10 +51,11 @@ export default class LocationFilterForm extends Component {
           label='Use my current location'
           handleChange={this.getLocation}
         />
-        <SelectWithLabel
+        <CitySelect
           classes='col-sm-12'
           name='select-city'
           label="Select a location"
+          handleSelect={this.handleCitySelect}
         />
       </div>
     )
