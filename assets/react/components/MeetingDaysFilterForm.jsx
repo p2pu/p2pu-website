@@ -2,30 +2,28 @@ import React, { Component } from 'react'
 import CheckboxWithLabel from './common/CheckboxWithLabel'
 import { MEETING_DAYS } from '../constants'
 
-export default class MeetinDaysFilterForm extends Component {
+export default class MeetingDaysFilterForm extends Component {
   constructor(props) {
     super(props)
-    this.state = { days: [] };
+    this.state = { weekday: [] };
     this.generateChangeHandler = (day) => this._generateChangeHandler(day);
   }
 
   _generateChangeHandler(day) {
-    console.log('category', day);
     return (checked) => {
-      let newTopicList = this.state.topics;
+      let newWeekdayList = this.state.weekday;
 
       if (checked) {
-        newTopicList.push(day)
+        newWeekdayList.push(day)
       } else {
-        newTopicList = newTopicList.filter((topic) => { return topic !== day });
+        newWeekdayList = newWeekdayList.filter((weekday) => { return weekday !== day });
       }
 
-      this.setState({ topic: newTopicList }, () => {  this.props.updateQueryParams(this.state) })
+      this.setState({ weekday: newWeekdayList }, () => {  this.props.updateQueryParams(this.state) })
     }
   }
 
   render() {
-    console.log('MEETING_DAYS', MEETING_DAYS)
     return(
       <div>
         {

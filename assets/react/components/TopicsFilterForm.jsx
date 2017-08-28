@@ -10,9 +10,8 @@ export default class TopicsFilterForm extends Component {
   }
 
   _generateChangeHandler(category) {
-    console.log('category', category);
     return (checked) => {
-      let newTopicList = this.state.topics;
+      let newTopicList = this.state.topic;
 
       if (checked) {
         newTopicList.push(category)
@@ -25,7 +24,6 @@ export default class TopicsFilterForm extends Component {
   }
 
   render() {
-    console.log('COURSE_CATEGORIES', COURSE_CATEGORIES)
     return(
       <div>
         {

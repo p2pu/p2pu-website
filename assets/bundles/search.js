@@ -30413,7 +30413,7 @@ var LearningCirclesSearch = function () {
     key: 'generateUrl',
     value: function generateUrl(params) {
       console.log('params', params);
-      var validParams = ['q', 'topic', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup'];
+      var validParams = ['q', 'topic', 'weekday', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup'];
       var baseUrl = 'https://learningcircles.p2pu.org/api/learningcircles/?active=true';
 
       validParams.forEach(function (key) {
@@ -50531,6 +50531,10 @@ var _TopicsFilterForm = __webpack_require__(346);
 
 var _TopicsFilterForm2 = _interopRequireDefault(_TopicsFilterForm);
 
+var _MeetingDaysFilterForm = __webpack_require__(347);
+
+var _MeetingDaysFilterForm2 = _interopRequireDefault(_MeetingDaysFilterForm);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50561,6 +50565,8 @@ var FilterForm = function (_Component) {
           return _react2.default.createElement(_LocationFilterForm2.default, this.props);
         case 'topics':
           return _react2.default.createElement(_TopicsFilterForm2.default, this.props);
+        case 'meetingDays':
+          return _react2.default.createElement(_MeetingDaysFilterForm2.default, this.props);
       }
     }
   }, {
@@ -50804,7 +50810,7 @@ var LocationFilterForm = function (_Component) {
             'Or select a location:'
           ),
           _react2.default.createElement(_CitySelect2.default, {
-            classes: 'col-sm-12',
+            classes: '',
             name: 'select-city',
             label: 'Select a location',
             handleSelect: this.handleCitySelect
@@ -52704,9 +52710,8 @@ var TopicsFilterForm = function (_Component) {
     value: function _generateChangeHandler(category) {
       var _this2 = this;
 
-      console.log('category', category);
       return function (checked) {
-        var newTopicList = _this2.state.topics;
+        var newTopicList = _this2.state.topic;
 
         if (checked) {
           newTopicList.push(category);
@@ -52726,7 +52731,6 @@ var TopicsFilterForm = function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      console.log('COURSE_CATEGORIES', _constants.COURSE_CATEGORIES);
       return _react2.default.createElement(
         'div',
         null,
@@ -52747,6 +52751,99 @@ var TopicsFilterForm = function (_Component) {
 }(_react.Component);
 
 exports.default = TopicsFilterForm;
+
+/***/ }),
+/* 347 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _CheckboxWithLabel = __webpack_require__(270);
+
+var _CheckboxWithLabel2 = _interopRequireDefault(_CheckboxWithLabel);
+
+var _constants = __webpack_require__(109);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MeetingDaysFilterForm = function (_Component) {
+  _inherits(MeetingDaysFilterForm, _Component);
+
+  function MeetingDaysFilterForm(props) {
+    _classCallCheck(this, MeetingDaysFilterForm);
+
+    var _this = _possibleConstructorReturn(this, (MeetingDaysFilterForm.__proto__ || Object.getPrototypeOf(MeetingDaysFilterForm)).call(this, props));
+
+    _this.state = { weekday: [] };
+    _this.generateChangeHandler = function (day) {
+      return _this._generateChangeHandler(day);
+    };
+    return _this;
+  }
+
+  _createClass(MeetingDaysFilterForm, [{
+    key: '_generateChangeHandler',
+    value: function _generateChangeHandler(day) {
+      var _this2 = this;
+
+      return function (checked) {
+        var newWeekdayList = _this2.state.weekday;
+
+        if (checked) {
+          newWeekdayList.push(day);
+        } else {
+          newWeekdayList = newWeekdayList.filter(function (weekday) {
+            return weekday !== day;
+          });
+        }
+
+        _this2.setState({ weekday: newWeekdayList }, function () {
+          _this2.props.updateQueryParams(_this2.state);
+        });
+      };
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this3 = this;
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _constants.MEETING_DAYS.map(function (day, index) {
+          return _react2.default.createElement(_CheckboxWithLabel2.default, {
+            key: index,
+            classes: 'col-sm-12 col-md-6 col-lg-6',
+            name: day,
+            label: day,
+            handleChange: _this3.generateChangeHandler(day)
+          });
+        })
+      );
+    }
+  }]);
+
+  return MeetingDaysFilterForm;
+}(_react.Component);
+
+exports.default = MeetingDaysFilterForm;
 
 /***/ })
 /******/ ]);

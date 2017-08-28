@@ -70,7 +70,7 @@ export default class LocationFilterForm extends Component {
         <div className='select-with-label label-left col-sm-12' >
           <label htmlFor='select-city'>Or select a location:</label>
           <CitySelect
-            classes='col-sm-12'
+            classes=''
             name='select-city'
             label="Select a location"
             handleSelect={this.handleCitySelect}

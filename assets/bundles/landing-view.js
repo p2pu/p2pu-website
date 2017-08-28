@@ -30585,7 +30585,7 @@ var LearningCirclesSearch = function () {
     key: 'generateUrl',
     value: function generateUrl(params) {
       console.log('params', params);
-      var validParams = ['q', 'topic', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup'];
+      var validParams = ['q', 'topic', 'weekday', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup'];
       var baseUrl = 'https://learningcircles.p2pu.org/api/learningcircles/?active=true';
 
       validParams.forEach(function (key) {
