@@ -8,7 +8,7 @@ As an open source project, we invite contribution and collaboration from many an
 # Current Opportunities
 
 ### Open Source Business Development Research Fellowship
-#### *September - December 2017*
+#### *September - December 2017; apply by mid-September*
 
 #### Overview
 Peer 2 Peer University (P2PU) is seeking an individual to conduct business development research from September - December 2017. As our learning circle program continues to grow to libraries around the world, we are in the process of identifying reliable revenue streams that complement the open source and openly-licensed nature of our work. We hope to work with someone to audit existing services, refine opportunities, develop marketing and promotional materials, and help pitch the idea to potential partners.
