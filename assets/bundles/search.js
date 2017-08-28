@@ -30413,7 +30413,7 @@ var LearningCirclesSearch = function () {
     key: 'generateUrl',
     value: function generateUrl(params) {
       console.log('params', params);
-      var validParams = ['q', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup'];
+      var validParams = ['q', 'topic', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup'];
       var baseUrl = 'https://learningcircles.p2pu.org/api/learningcircles/?active=true';
 
       validParams.forEach(function (key) {
@@ -52678,8 +52678,6 @@ var _constants = __webpack_require__(109);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -52694,40 +52692,53 @@ var TopicsFilterForm = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (TopicsFilterForm.__proto__ || Object.getPrototypeOf(TopicsFilterForm)).call(this, props));
 
-    _this.state = {};
+    _this.state = { topic: [] };
+    _this.generateChangeHandler = function (category) {
+      return _this._generateChangeHandler(category);
+    };
     return _this;
   }
 
   _createClass(TopicsFilterForm, [{
-    key: 'generateChangeHandler',
-    value: function generateChangeHandler(category) {
+    key: '_generateChangeHandler',
+    value: function _generateChangeHandler(category) {
       var _this2 = this;
 
+      console.log('category', category);
       return function (checked) {
-        _this2.setState(_defineProperty({}, category, checked), function () {
-          console.log(_this2.state);
+        var newTopicList = _this2.state.topics;
+
+        if (checked) {
+          newTopicList.push(category);
+        } else {
+          newTopicList = newTopicList.filter(function (topic) {
+            return topic !== category;
+          });
+        }
+
+        _this2.setState({ topic: newTopicList }, function () {
+          _this2.props.updateQueryParams(_this2.state);
         });
       };
     }
   }, {
-    key: 'generateTopicCheckboxes',
-    value: function generateTopicCheckboxes() {
-      return _constants.COURSE_CATEGORIES.forEach(function (category) {
-        return _react2.default.createElement(_CheckboxWithLabel2.default, {
-          classes: 'col-sm-12 col-md-6 col-lg-6',
-          name: category,
-          label: category,
-          handleChange: generateChangeHandler(category)
-        });
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
+      var _this3 = this;
+
+      console.log('COURSE_CATEGORIES', _constants.COURSE_CATEGORIES);
       return _react2.default.createElement(
         'div',
         null,
-        generateTopicCheckboxes()
+        _constants.COURSE_CATEGORIES.map(function (category, index) {
+          return _react2.default.createElement(_CheckboxWithLabel2.default, {
+            key: index,
+            classes: 'col-sm-12 col-md-6 col-lg-6',
+            name: category,
+            label: category,
+            handleChange: _this3.generateChangeHandler(category)
+          });
+        })
       );
     }
   }]);

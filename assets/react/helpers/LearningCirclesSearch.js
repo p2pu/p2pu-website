@@ -1,7 +1,7 @@
 export default class LearningCirclesSearch {
   static generateUrl(params) {
     console.log('params', params)
-    const validParams = ['q', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup'];
+    const validParams = ['q', 'topic', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup'];
     let baseUrl = 'https://learningcircles.p2pu.org/api/learningcircles/?active=true';
 
     validParams.forEach((key) => {
