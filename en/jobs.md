@@ -10,6 +10,7 @@ As an open source project, we invite contribution and collaboration from many an
 ### Open Source Business Development Research Fellowship
 #### *September - December 2017; apply by mid-September*
 
+
 #### Overview
 Peer 2 Peer University (P2PU) is seeking an individual to conduct business development research from September - December 2017. As our learning circle program continues to grow to libraries around the world, we are in the process of identifying reliable revenue streams that complement the open source and openly-licensed nature of our work. We hope to work with someone to audit existing services, refine opportunities, develop marketing and promotional materials, and help pitch the idea to potential partners.
 Background
@@ -21,12 +22,14 @@ Learning circles have quickly become central to P2PU delivering on the organizat
 
 In this fellowship, we are hoping to enlist the support of an individual to help us identify, investigate, and pursue pathways towards financial sustainability, ensuring that we can continue to support inclusive, formative, and empowering learning experiences for people around the world. 
 
+
 #### Project Scope
 - Get to know P2PU. Familiarize yourself with P2PU financials, strategy, and revenue structure. In consultation with P2PU team and community, audit our stakeholder mapping and current strategies for revenue generation, identifying the most compelling components of P2PU’s current offerings, strategic areas we could grow into, and dead ends that we should stop pursuing.
 - Get to know libraries. Explore how U.S. public library finances are changing to reflect library’s role as community pillars, rather than just repositories of information. Is there potential alignment between P2PU services and changing patterns in libraries?
 - Construct growth models. Dig deep into 3-5 potential pathways for revenue generation, model potential growth with realistic revenue targets, and determine indicators for P2PU to be checking in against in next 5 years. 
 - Pilot promising growth models. Develop marketing and promotional materials, identify a few possible clients and make pitch with P2PU team.
 - Document and share your work with the P2PU team along the way.
+
 
 #### General Comments
 - We are open to candidates from many fields -- academia, research, business, non-profit management, open source operations, education -- what is important is that you think that the challenge that we are addressing is interesting and important.
@@ -35,6 +38,7 @@ In this fellowship, we are hoping to enlist the support of an individual to help
 - We’re looking to document this work publicly; everything generated will be openly licensed.
 - Compensation and project budget will be discussed individually with qualified candidates.
 
+
 #### To Apply
-Send a resume and short cover letter to team@p2pu.org, outlining why you’re excited about this project. Check out our ‘work with us page’ for an understanding of how learning circles are currently generating non-grant revenue.
+Send a resume and short cover letter to <team@p2pu.org>, outlining why you’re excited about this project. Check out our [work with us page](https://www.p2pu.org/en/workwithus/) for an understanding of how learning circles are currently generating non-grant revenue.
 
