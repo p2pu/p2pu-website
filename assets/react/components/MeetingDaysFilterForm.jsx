@@ -12,11 +12,12 @@ export default class MeetingDaysFilterForm extends Component {
   _generateChangeHandler(day) {
     return (checked) => {
       let newWeekdayList = this.state.weekday;
+      const meetingDayIndex = MEETING_DAYS.indexOf(day)
 
       if (checked) {
-        newWeekdayList.push(day)
+        newWeekdayList.push(meetingDayIndex)
       } else {
-        newWeekdayList = newWeekdayList.filter((weekday) => { return weekday !== day });
+        newWeekdayList = newWeekdayList.filter((weekday) => { return weekday !== meetingDayIndex });
       }
 
       this.setState({ weekday: newWeekdayList }, () => {  this.props.updateQueryParams(this.state) })
@@ -32,6 +33,7 @@ export default class MeetingDaysFilterForm extends Component {
               key={index}
               classes='col-sm-12 col-md-6 col-lg-6'
               name={day}
+              value={day}
               label={day}
               handleChange={this.generateChangeHandler(day)}
             />

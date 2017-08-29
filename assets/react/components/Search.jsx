@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import SearchBar from './SearchBar'
 import FiltersSection from './FiltersSection'
 import ResultsDisplay from './ResultsDisplay'
+import SearchTags from './SearchTags'
 import { SEARCH_PROPS } from '../constants'
 import LearningCirclesSearch from '../helpers/LearningCirclesSearch'
 
@@ -27,6 +28,7 @@ export default class Search extends Component {
   }
 
   _updateQueryParams(params) {
+    console.log(params)
     this.setState(params, this.sendQuery)
   }
 
@@ -59,6 +61,7 @@ export default class Search extends Component {
       <div className="search-container">
         <SearchBar placeholder={placeholder} updateQueryParams={this.updateQueryParams} />
         <FiltersSection filterCollection={filterCollection} updateQueryParams={this.updateQueryParams} {...this.state} />
+        <SearchTags {...this.state} updateQueryParams={this.updateQueryParams} />
         <ResultsDisplay resultsSubtitle={resultsSubtitle} learningCircles={this.state.searchResults} />
       </div>
     )

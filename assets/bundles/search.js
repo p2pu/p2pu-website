@@ -50352,6 +50352,10 @@ var _ResultsDisplay = __webpack_require__(267);
 
 var _ResultsDisplay2 = _interopRequireDefault(_ResultsDisplay);
 
+var _SearchTags = __webpack_require__(348);
+
+var _SearchTags2 = _interopRequireDefault(_SearchTags);
+
 var _constants = __webpack_require__(109);
 
 var _LearningCirclesSearch = __webpack_require__(110);
@@ -50409,6 +50413,7 @@ var Search = function (_Component) {
   }, {
     key: '_updateQueryParams',
     value: function _updateQueryParams(params) {
+      console.log(params);
       this.setState(params, this.sendQuery);
     }
   }, {
@@ -50446,6 +50451,7 @@ var Search = function (_Component) {
         { className: 'search-container' },
         _react2.default.createElement(_SearchBar2.default, { placeholder: placeholder, updateQueryParams: this.updateQueryParams }),
         _react2.default.createElement(_FiltersSection2.default, _extends({ filterCollection: filterCollection, updateQueryParams: this.updateQueryParams }, this.state)),
+        _react2.default.createElement(_SearchTags2.default, _extends({}, this.state, { updateQueryParams: this.updateQueryParams })),
         _react2.default.createElement(_ResultsDisplay2.default, { resultsSubtitle: resultsSubtitle, learningCircles: this.state.searchResults })
       );
     }
@@ -50653,7 +50659,7 @@ var FilterSection = function (_Component) {
         { className: 'filter-section' },
         _react2.default.createElement(
           'div',
-          { className: 'filters-bar col-sm-12' },
+          { className: 'filters-bar' },
           _react2.default.createElement(
             'div',
             { className: 'slider' },
@@ -52809,12 +52815,13 @@ var MeetingDaysFilterForm = function (_Component) {
 
       return function (checked) {
         var newWeekdayList = _this2.state.weekday;
+        var meetingDayIndex = _constants.MEETING_DAYS.indexOf(day);
 
         if (checked) {
-          newWeekdayList.push(day);
+          newWeekdayList.push(meetingDayIndex);
         } else {
           newWeekdayList = newWeekdayList.filter(function (weekday) {
-            return weekday !== day;
+            return weekday !== meetingDayIndex;
           });
         }
 
@@ -52836,6 +52843,7 @@ var MeetingDaysFilterForm = function (_Component) {
             key: index,
             classes: 'col-sm-12 col-md-6 col-lg-6',
             name: day,
+            value: day,
             label: day,
             handleChange: _this3.generateChangeHandler(day)
           });
@@ -52848,6 +52856,141 @@ var MeetingDaysFilterForm = function (_Component) {
 }(_react.Component);
 
 exports.default = MeetingDaysFilterForm;
+
+/***/ }),
+/* 348 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _SearchTag = __webpack_require__(349);
+
+var _SearchTag2 = _interopRequireDefault(_SearchTag);
+
+var _constants = __webpack_require__(109);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SearchTags = function SearchTags(props) {
+  var generateQueryTag = function generateQueryTag() {
+    if (props.q) {
+      return _react2.default.createElement(_SearchTag2.default, { propName: 'q', value: props.q, updateQueryParams: props.updateQueryParams });
+    }
+  };
+
+  var generateTopicsTags = function generateTopicsTags() {
+    if (props.topic && props.topic.length > 0) {
+      return _react2.default.createElement(
+        'div',
+        { className: 'search-tags' },
+        props.topic.map(function (item, index) {
+          return _react2.default.createElement(_SearchTag2.default, { propName: 'topic', value: item, key: index, updateQueryParams: props.updateQueryParams });
+        })
+      );
+    }
+  };
+
+  var generateLocationTag = function generateLocationTag() {
+    if (props.latitude && props.longitude) {
+      var text = 'Within ' + props.distance + 'km of your current location';
+      return _react2.default.createElement(_SearchTag2.default, { propName: 'location', value: text, updateQueryParams: props.updateQueryParams });
+    } else if (props.city) {
+      return _react2.default.createElement(_SearchTag2.default, { propName: 'city', value: props.city, updateQueryParams: props.updateQueryParams });
+    }
+  };
+
+  var generateMeetingDaysTags = function generateMeetingDaysTags() {
+    if (props.weekday && props.weekday.length > 0) {
+      return _react2.default.createElement(
+        'div',
+        { className: 'search-tags' },
+        props.weekday.map(function (day, index) {
+          var weekdayName = _constants.MEETING_DAYS[day];
+
+          return _react2.default.createElement(_SearchTag2.default, { propName: 'weekday', value: weekdayName, key: index, updateQueryParams: props.updateQueryParams });
+        })
+      );
+    }
+  };
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'search-tags' },
+    generateQueryTag(),
+    generateTopicsTags(),
+    generateLocationTag(),
+    generateMeetingDaysTags()
+  );
+};
+
+exports.default = SearchTags;
+
+/***/ }),
+/* 349 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var SearchTag = function SearchTag(_ref) {
+  var propName = _ref.propName,
+      value = _ref.value,
+      updateQueryParams = _ref.updateQueryParams;
+
+  var generateClickHandler = function generateClickHandler(propName, value) {
+    return function (e) {
+      console.log(propName, value);
+      switch (propName) {
+        case 'location':
+          updateQueryParams({ latitude: null, longitude: null, distance: 50 });
+          break;
+        case 'topic':
+          updateQueryParams({ topic: [] });
+          break;
+        case 'weekday':
+          updateQueryParams({ weekday: [] });
+          break;
+        default:
+          updateQueryParams(_defineProperty({}, propName, null));
+          break;
+      }
+    };
+  };
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'search-tag' },
+    value,
+    _react2.default.createElement(
+      'i',
+      { className: 'material-icons', onClick: generateClickHandler(propName, value) },
+      'clear'
+    )
+  );
+};
+
+exports.default = SearchTag;
 
 /***/ })
 /******/ ]);

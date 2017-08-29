@@ -16,7 +16,7 @@ export default class FilterSection extends Component {
   render() {
     return(
       <div className="filter-section">
-        <div className='filters-bar col-sm-12'>
+        <div className='filters-bar'>
           <div className='slider'>
             {
               this.props.filterCollection.map((filter, index) => (
