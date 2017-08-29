@@ -6,7 +6,7 @@ import css from 'react-select/dist/react-select.css'
 export default class CitySelect extends Component {
   constructor(props) {
     super(props)
-    this.state = { value: '' }
+    this.state = {}
     this.handleChange = (s) => this._handleChange(s)
     this.handleInputChange = (s) => this._handleInputChange(s)
     this.populateCities = () => this._populateCities()
@@ -15,7 +15,6 @@ export default class CitySelect extends Component {
   }
 
   _handleChange(selected) {
-    console.log('selected', selected)
     const query = selected ? selected.label : selected;
 
     this.props.handleSelect(query)
@@ -49,6 +48,8 @@ export default class CitySelect extends Component {
   }
 
   render() {
+    console.log('city select STATE value', this.state.value)
+    console.log('city select PROPS value', this.state.value)
     return(
       <Select
         name={ this.props.name }

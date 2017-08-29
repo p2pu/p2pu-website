@@ -30377,7 +30377,7 @@ var CitySelect = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (CitySelect.__proto__ || Object.getPrototypeOf(CitySelect)).call(this, props));
 
-    _this.state = { value: '' };
+    _this.state = {};
     _this.handleChange = function (s) {
       return _this._handleChange(s);
     };
@@ -30397,7 +30397,6 @@ var CitySelect = function (_Component) {
   _createClass(CitySelect, [{
     key: '_handleChange',
     value: function _handleChange(selected) {
-      console.log('selected', selected);
       var query = selected ? selected.label : selected;
 
       this.props.handleSelect(query);
@@ -30436,6 +30435,8 @@ var CitySelect = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      console.log('city select STATE value', this.state.value);
+      console.log('city select PROPS value', this.state.value);
       return _react2.default.createElement(_reactSelect2.default, {
         name: this.props.name,
         className: 'city-select ' + this.props.classes,

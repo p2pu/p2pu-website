@@ -6,20 +6,22 @@ import RangeSliderWithLabel from './common/RangeSliderWithLabel'
 export default class LocationFilterForm extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = { useLocation: false, city: null }
     this.getLocation = (checkboxValue) => this._getLocation(checkboxValue);
     this.handleCitySelect = (city) => this._handleCitySelect(city);
     this.handleRangeChange = (value) => this._handleRangeChange(value);
   }
 
   _getLocation(checkboxValue) {
+    this.setState({ useLocation: checkboxValue });
+
     if (checkboxValue === false) {
       this.props.updateQueryParams({ latitude: null, longitude: null });
       return;
     }
 
     const success = (position) => {
-      this.props.updateQueryParams({ latitude: position.coords.latitude, longitude: position.coords.longitude })
+      this.props.updateQueryParams({ latitude: position.coords.latitude, longitude: position.coords.longitude, city: null })
     }
 
     const error = () => {
@@ -39,7 +41,8 @@ export default class LocationFilterForm extends Component {
   }
 
   _handleCitySelect(city) {
-    this.props.updateQueryParams({ city })
+    this.setState({ useLocation: false })
+    this.props.updateQueryParams({ city, latitude: null, longitude: null, distance: 50 })
   }
 
   _handleRangeChange(value) {
@@ -47,14 +50,13 @@ export default class LocationFilterForm extends Component {
   }
 
   render() {
-    console.log('this.props.distance', this.props.distance);
-
     return(
       <div>
         <CheckboxWithLabel
           classes='col-sm-12 col-md-6 col-lg-6'
           name='geolocation'
           label='Use my current location'
+          checked={this.state.useLocation}
           handleChange={this.getLocation}
         />
         <RangeSliderWithLabel

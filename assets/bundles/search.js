@@ -30205,7 +30205,7 @@ var CitySelect = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (CitySelect.__proto__ || Object.getPrototypeOf(CitySelect)).call(this, props));
 
-    _this.state = { value: '' };
+    _this.state = {};
     _this.handleChange = function (s) {
       return _this._handleChange(s);
     };
@@ -30225,7 +30225,6 @@ var CitySelect = function (_Component) {
   _createClass(CitySelect, [{
     key: '_handleChange',
     value: function _handleChange(selected) {
-      console.log('selected', selected);
       var query = selected ? selected.label : selected;
 
       this.props.handleSelect(query);
@@ -30264,6 +30263,8 @@ var CitySelect = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      console.log('city select STATE value', this.state.value);
+      console.log('city select PROPS value', this.state.value);
       return _react2.default.createElement(_reactSelect2.default, {
         name: this.props.name,
         className: 'city-select ' + this.props.classes,
@@ -50725,7 +50726,7 @@ var LocationFilterForm = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (LocationFilterForm.__proto__ || Object.getPrototypeOf(LocationFilterForm)).call(this, props));
 
-    _this.state = {};
+    _this.state = { useLocation: false, city: null };
     _this.getLocation = function (checkboxValue) {
       return _this._getLocation(checkboxValue);
     };
@@ -50743,13 +50744,15 @@ var LocationFilterForm = function (_Component) {
     value: function _getLocation(checkboxValue) {
       var _this2 = this;
 
+      this.setState({ useLocation: checkboxValue });
+
       if (checkboxValue === false) {
         this.props.updateQueryParams({ latitude: null, longitude: null });
         return;
       }
 
       var success = function success(position) {
-        _this2.props.updateQueryParams({ latitude: position.coords.latitude, longitude: position.coords.longitude });
+        _this2.props.updateQueryParams({ latitude: position.coords.latitude, longitude: position.coords.longitude, city: null });
       };
 
       var error = function error() {
@@ -50770,7 +50773,8 @@ var LocationFilterForm = function (_Component) {
   }, {
     key: '_handleCitySelect',
     value: function _handleCitySelect(city) {
-      this.props.updateQueryParams({ city: city });
+      this.setState({ useLocation: false });
+      this.props.updateQueryParams({ city: city, latitude: null, longitude: null, distance: 50 });
     }
   }, {
     key: '_handleRangeChange',
@@ -50780,8 +50784,6 @@ var LocationFilterForm = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log('this.props.distance', this.props.distance);
-
       return _react2.default.createElement(
         'div',
         null,
@@ -50789,6 +50791,7 @@ var LocationFilterForm = function (_Component) {
           classes: 'col-sm-12 col-md-6 col-lg-6',
           name: 'geolocation',
           label: 'Use my current location',
+          checked: this.state.useLocation,
           handleChange: this.getLocation
         }),
         _react2.default.createElement(_RangeSliderWithLabel2.default, {
@@ -50954,7 +50957,8 @@ var CheckboxWithLabel = function CheckboxWithLabel(_ref) {
   var name = _ref.name,
       classes = _ref.classes,
       label = _ref.label,
-      handleChange = _ref.handleChange;
+      handleChange = _ref.handleChange,
+      checked = _ref.checked;
 
   var onChange = function onChange(e) {
     handleChange(e.currentTarget.checked);
@@ -50963,7 +50967,7 @@ var CheckboxWithLabel = function CheckboxWithLabel(_ref) {
   return _react2.default.createElement(
     "div",
     { className: "checkbox-with-label label-right " + classes },
-    _react2.default.createElement("input", { type: "checkbox", name: name, id: name, onChange: onChange }),
+    _react2.default.createElement("input", { type: "checkbox", name: name, id: name, onChange: onChange, checked: checked }),
     _react2.default.createElement(
       "label",
       { htmlFor: name },
