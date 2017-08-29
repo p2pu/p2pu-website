@@ -88,14 +88,9 @@ section.page-title {
   }
 
   .filter-form-dropdown {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
 
     &.open {
       padding: $padding-lg;
-      max-height: 250px;
-      overflow: scroll;
     }
   }
 }

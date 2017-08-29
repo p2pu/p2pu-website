@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import CheckboxWithLabel from './common/CheckboxWithLabel'
+import Select from 'react-select'
+import css from 'react-select/dist/react-select.css'
 import { COURSE_CATEGORIES } from '../constants'
 
 export default class TopicsFilterForm extends Component {
@@ -7,37 +9,30 @@ export default class TopicsFilterForm extends Component {
     super(props)
     this.state = { topic: [] };
     this.generateChangeHandler = (category) => this._generateChangeHandler(category);
+    this.handleSelect = (selected) => this._handleSelect(selected);
+    this.selectOptions = () => this._selectOptions();
   }
 
-  _generateChangeHandler(category) {
-    return (checked) => {
-      let newTopicList = this.state.topic;
-
-      if (checked) {
-        newTopicList.push(category)
-      } else {
-        newTopicList = newTopicList.filter((topic) => { return topic !== category });
-      }
-
-      this.setState({ topic: newTopicList }, () => {  this.props.updateQueryParams(this.state) })
-    }
+  _handleSelect(selected) {
+    console.log('selected', selected)
+    const newTopicList = selected.map(option => option.value)
+    console.log('newTopicList', newTopicList)
+    this.setState({ topic: selected }, this.props.updateQueryParams({ topic: newTopicList }))
   }
+
+  _selectOptions() {
+    return COURSE_CATEGORIES.map((cat) => ({ value: cat, label: cat }))
+  }
+
 
   render() {
     return(
-      <div>
-        {
-          COURSE_CATEGORIES.map((category, index) => (
-            <CheckboxWithLabel
-              key={index}
-              classes='col-sm-12 col-md-6 col-lg-6'
-              name={category}
-              label={category}
-              handleChange={this.generateChangeHandler(category)}
-            />
-          ))
-        }
-      </div>
+      <Select
+        options={this.selectOptions()}
+        multi={true}
+        value={this.state.topic}
+        onChange={this.handleSelect}
+      />
     )
   }
 }

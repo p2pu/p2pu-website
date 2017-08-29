@@ -52690,6 +52690,14 @@ var _CheckboxWithLabel = __webpack_require__(270);
 
 var _CheckboxWithLabel2 = _interopRequireDefault(_CheckboxWithLabel);
 
+var _reactSelect = __webpack_require__(36);
+
+var _reactSelect2 = _interopRequireDefault(_reactSelect);
+
+var _reactSelect3 = __webpack_require__(249);
+
+var _reactSelect4 = _interopRequireDefault(_reactSelect3);
+
 var _constants = __webpack_require__(109);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -52712,48 +52720,41 @@ var TopicsFilterForm = function (_Component) {
     _this.generateChangeHandler = function (category) {
       return _this._generateChangeHandler(category);
     };
+    _this.handleSelect = function (selected) {
+      return _this._handleSelect(selected);
+    };
+    _this.selectOptions = function () {
+      return _this._selectOptions();
+    };
     return _this;
   }
 
   _createClass(TopicsFilterForm, [{
-    key: '_generateChangeHandler',
-    value: function _generateChangeHandler(category) {
-      var _this2 = this;
-
-      return function (checked) {
-        var newTopicList = _this2.state.topic;
-
-        if (checked) {
-          newTopicList.push(category);
-        } else {
-          newTopicList = newTopicList.filter(function (topic) {
-            return topic !== category;
-          });
-        }
-
-        _this2.setState({ topic: newTopicList }, function () {
-          _this2.props.updateQueryParams(_this2.state);
-        });
-      };
+    key: '_handleSelect',
+    value: function _handleSelect(selected) {
+      console.log('selected', selected);
+      var newTopicList = selected.map(function (option) {
+        return option.value;
+      });
+      console.log('newTopicList', newTopicList);
+      this.setState({ topic: selected }, this.props.updateQueryParams({ topic: newTopicList }));
+    }
+  }, {
+    key: '_selectOptions',
+    value: function _selectOptions() {
+      return _constants.COURSE_CATEGORIES.map(function (cat) {
+        return { value: cat, label: cat };
+      });
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
-
-      return _react2.default.createElement(
-        'div',
-        null,
-        _constants.COURSE_CATEGORIES.map(function (category, index) {
-          return _react2.default.createElement(_CheckboxWithLabel2.default, {
-            key: index,
-            classes: 'col-sm-12 col-md-6 col-lg-6',
-            name: category,
-            label: category,
-            handleChange: _this3.generateChangeHandler(category)
-          });
-        })
-      );
+      return _react2.default.createElement(_reactSelect2.default, {
+        options: this.selectOptions(),
+        multi: true,
+        value: this.state.topic,
+        onChange: this.handleSelect
+      });
     }
   }]);
 
