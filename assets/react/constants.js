@@ -5,6 +5,11 @@ export const SEARCH_PROPS = {
     filters: ['location', 'topics', 'meetingDays'],
     placeholder: 'Search by city, organization, topic, and more... ',
     resultsSubtitle: 'Sign up below for a learning circle in your area, or create your own!'
+  },
+  courses: {
+    filters: ['topics'],
+    placeholder: 'Search by title, subject, description, and more... ',
+    resultsSubtitle: 'Select a course below or create your own!'
   }
 };
 

@@ -62,7 +62,7 @@ export default class Search extends Component {
         <SearchBar placeholder={placeholder} updateQueryParams={this.updateQueryParams} />
         <FiltersSection filterCollection={filterCollection} updateQueryParams={this.updateQueryParams} {...this.state} />
         <SearchTags {...this.state} updateQueryParams={this.updateQueryParams} />
-        <ResultsDisplay resultsSubtitle={resultsSubtitle} learningCircles={this.state.searchResults} />
+        <ResultsDisplay resultsSubtitle={resultsSubtitle} data={this.state.searchResults} {...this.props} />
       </div>
     )
   }
