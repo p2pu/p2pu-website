@@ -29,5 +29,5 @@ exclude:
 prose:
   media: assets/images
 
-gems:
+plugins:
   - octopress-autoprefixer

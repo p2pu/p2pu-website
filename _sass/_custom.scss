@@ -425,6 +425,33 @@ section.featured-work{
 	margin-top: $navbar-height;
 }
 
+.label-left {
+	label {
+		padding-right: $padding-sm;
+	}
+}
+
+.label-right {
+	label {
+		padding-left: $padding-sm;
+	}
+}
+
+.range-slider-with-label {
+	display: flex;
+	align-items: center;
+
+	.rangeslider {
+		flex-grow: 1;
+		margin-top: 0;
+		margin-bottom: 0;
+
+		.rangeslider__fill {
+			background-color: $p2pu-green;
+		}
+	}
+}
+
 .row {
 	margin-left: 0 !important;
 	margin-right: 0 !important;

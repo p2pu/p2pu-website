@@ -4,38 +4,48 @@ import SearchForm from './SearchForm'
 import BrowseLearningCircles from './BrowseLearningCircles'
 import LoadMoreResults from './LoadMoreResults'
 import { LEARNING_CIRCLES_LIMIT } from '../constants'
+import ApiHelper from '../helpers/ApiHelper'
 
 export default class LearningCircles extends Component {
 
   constructor(props) {
     super(props);
     this.state = { searchResults: [] };
+    this.api = new ApiHelper('learningCircles');
     this.searchByLocation = (q) => this._searchByLocation(q);
     this.populateLearningCircles = () => this._populateLearningCircles();
     this.showMoreResults = (q) => this._showMoreResults(q);
     this.clearResults = () => this._clearResults();
     this.generateUrl = (opts) => this._generateUrl(opts);
     this.fetchLearningCircles = (opts, append) => this._fetchLearningCircles(opts, append);
+    this.searchCallback = (response, args) => this._searchCallback(response, args);
     this.populateLearningCircles();
   }
 
   _populateLearningCircles() {
-    const urlOpts = {
+    const params = {
       active: true,
       signup: 'open',
       limit: LEARNING_CIRCLES_LIMIT
     }
-    this.fetchLearningCircles(urlOpts);
+
+    const opts = { params, callback: this.searchCallback }
+
+    this.api.fetchResource(opts);
   }
 
   _searchByLocation(query) {
-    const urlOpts = {
+    console.log('query', query)
+    const params = {
       active: true,
       signup: 'open',
       limit: LEARNING_CIRCLES_LIMIT,
       city: query
     }
-    this.fetchLearningCircles(urlOpts);
+
+    const opts = { params, callback: this.searchCallback }
+
+    this.api.fetchResource(opts);
   }
 
   _clearResults() {
@@ -45,52 +55,36 @@ export default class LearningCircles extends Component {
   }
 
   _showMoreResults() {
-    let urlOpts;
+    let params;
 
     if (this.state.currentQuery) {
       const optsCopy = Object.assign({}, this.state.currentQuery);
-      urlOpts = Object.assign(optsCopy, { offset: this.state.searchResults.length });
+      params = Object.assign(optsCopy, { offset: this.state.searchResults.length });
     } else {
-      urlOpts = {
+      params = {
         active: true,
         limit: LEARNING_CIRCLES_LIMIT,
         offset: this.state.searchResults.length
       }
     }
 
-    this.fetchLearningCircles(urlOpts, true);
+    const opts = {
+      params,
+      callback: this.searchCallback,
+      appendResults: true
+    }
+
+    this.api.fetchResource(opts);
   }
 
-  _generateUrl(opts) {
-    const validParams = ['active', 'limit', 'offset', 'city', 'signup'];
-    let baseUrl = `https://learningcircles.p2pu.org/api/learningcircles/?`;
-
-    validParams.forEach((param) => {
-      if (opts[param] && param.length > 2) {
-        baseUrl += `&${param}=${encodeURIComponent(opts[param])}`
-      }
+  _searchCallback(response, opts) {
+    console.log(response)
+    const results = opts.appendResults ? this.state.searchResults.concat(response.items) : response.items;
+    this.setState({
+      searchResults: results,
+      currentQuery: opts.params,
+      totalResults: response.count
     })
-
-    return baseUrl;
-  }
-
-  _fetchLearningCircles(opts, append=false) {
-    const url = this.generateUrl(opts)
-
-   $.ajax({
-      url,
-      dataType: 'JSONP',
-      type: 'GET',
-      success: (res) => {
-        console.log(res);
-        const results = append ? this.state.searchResults.concat(res.items) : res.items;
-        this.setState({
-          searchResults: results,
-          currentQuery: opts,
-          totalResults: res.count
-        })
-      }
-    });
   }
 
   render() {
