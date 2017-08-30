@@ -45,20 +45,20 @@ const SearchTags = (props) => {
   }
 
   const generateMeetingDaysTags = () => {
-    if (props.weekday && props.weekday.length > 0) {
+    if (props.weekdays && props.weekdays.length > 0) {
 
       const onDelete = (day) => {
         const dayIndex = MEETING_DAYS.indexOf(day);
-        props.updateQueryParams({ weekday: _.without(props.weekday, dayIndex) })
+        props.updateQueryParams({ weekdays: _.without(props.weekdays, dayIndex) })
       }
 
       return(
         <div className='search-tags'>
           {
-            props.weekday.map((dayIndex, index) => {
+            props.weekdays.map((dayIndex, index) => {
               const weekdayName = MEETING_DAYS[dayIndex];
 
-              return <SearchTag propName='weekday' value={weekdayName} key={index} onDelete={onDelete} />
+              return <SearchTag value={weekdayName} key={index} onDelete={onDelete} />
             })
           }
         </div>

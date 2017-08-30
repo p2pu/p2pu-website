@@ -11,7 +11,7 @@ export default class MeetingDaysFilterForm extends Component {
 
   _generateChangeHandler(dayIndex) {
     return (checked) => {
-      let newWeekdayList = this.props.weekday || [];
+      let newWeekdayList = this.props.weekdays || [];
 
       if (checked) {
         newWeekdayList.push(dayIndex)
@@ -20,7 +20,7 @@ export default class MeetingDaysFilterForm extends Component {
       }
 
       console.log('newWeekdayList', newWeekdayList)
-      this.props.updateQueryParams({ weekday: newWeekdayList})
+      this.props.updateQueryParams({ weekdays: newWeekdayList})
     }
   }
 
@@ -29,7 +29,7 @@ export default class MeetingDaysFilterForm extends Component {
       <div>
         {
           MEETING_DAYS.map((day, index) => {
-            const checked = this.props.weekday && (this.props.weekday.indexOf(index) !== -1);
+            const checked = this.props.weekdays && (this.props.weekdays.indexOf(index) !== -1);
             return(
               <CheckboxWithLabel
                 key={index}

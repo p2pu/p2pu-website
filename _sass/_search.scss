@@ -209,10 +209,18 @@ section.page-title {
         text-align: center;
       }
 
-      .feedback {
+      .actions {
         padding-top: $padding-sm;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+
+        .p2pu-btn {
+          margin: 0 4px;
+
+          &.submit {
+            font-size: 1em;
+          }
+        }
       }
     }
   }
