@@ -35,7 +35,7 @@ routing_rules:
 # Lernanta EN redirects 
   - condition:
       key_prefix_equals: en/courses/
-      http_error_code_returned_equals: 404
+      http_error_code_returned_equals: "404"
     redirect:
       host_name: courses.p2pu.org
       protocol: https
