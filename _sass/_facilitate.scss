@@ -195,6 +195,14 @@ section#lets-do-it {
       font-size: 3.6em;
     }
   }
+
+  @media (max-width: 768px) {
+    .callout {
+      .p2pu-btn {
+        font-size: 1em;
+      }
+    }
+  }
 }
 
 section#faqs {
@@ -295,8 +303,11 @@ section#faqs {
         }
       }
     }
-
-
   }
+}
+
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 

@@ -14,7 +14,7 @@ full_column:
       - text: Courses
         url: https://learningcircles.p2pu.org/en/courses/
       - text: Dashboard
-        url: https://learningcircles.p2pu.org/en/accounts/login/
+        url: https://learningcircles.p2pu.org/en/facilitator/
   - text: About
     url: /en/about/
     submenu:
@@ -27,15 +27,15 @@ full_column:
   - text: Stories
     url: http://info.p2pu.org/
     submenu:
+      - text: Citizenship Circles
+        date: August 14, 2017
+        url: http://info.p2pu.org/2017/08/14/citizenshipcircles/
       - text: Seekers and Rebels
         date: June 14, 2017
         url: http://info.p2pu.org/2017/06/14/when-seekers-and-rebels-meet-or-my-experience-studying-the-learning-circles/
       - text: Will People Show Up?
         date: June 2, 2017
         url: http://info.p2pu.org/2017/06/02/will-people-show-up/
-      - text: Coast 2 Coast
-        date: May 16, 2017
-        url: http://info.p2pu.org/2017/05/16/peer-2-peer-coast-2-coast/
   - text: Work with us
     url: /en/workwithus/
     submenu:
