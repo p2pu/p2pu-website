@@ -30,3 +30,14 @@ export const COURSE_CATEGORIES = [
   'Humanities',
   'Languages'
 ]
+
+export const API_ENDPOINTS = {
+  learningCircles: {
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true',
+    searchParams: ['q', 'topics', 'weekday', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
+  },
+  courses: {
+    baseUrl: 'https://learningcircles.p2pu.org/api/courses/?',
+    searchParams: ['q', 'topics']
+  }
+}

@@ -9,7 +9,7 @@ const LearningCircleCard = (props) => {
 
   return (
     <div className="result-item grid-item col-md-4 col-sm-12 col-xs-12">
-      <div className="card col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-xs-12" onClick={ goToUrl }>
+      <div className="card lc-card col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-xs-12" onClick={ goToUrl }>
         <h4 className="title">{ props.name }</h4>
         <p className="schedule">{ props.schedule }</p>
         <p className="city-country">{ props.city }</p>

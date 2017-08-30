@@ -32,7 +32,6 @@ export default class FilterSection extends Component {
         </div>
         <FilterForm
           activeFilter={this.state.activeFilter}
-          updateQueryParams={this.props.updateQueryParams}
           {...this.props}
         />
       </div>

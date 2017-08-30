@@ -35,6 +35,7 @@ export default class MeetingDaysFilterForm extends Component {
               name={day}
               value={day}
               label={day}
+              checked={this.state.weekday.indexOf(day) !== -1}
               handleChange={this.generateChangeHandler(day)}
             />
           ))

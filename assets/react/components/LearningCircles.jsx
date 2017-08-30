@@ -4,13 +4,14 @@ import SearchForm from './SearchForm'
 import BrowseLearningCircles from './BrowseLearningCircles'
 import LoadMoreResults from './LoadMoreResults'
 import { LEARNING_CIRCLES_LIMIT } from '../constants'
-import LearningCirclesSearch from '../helpers/LearningCirclesSearch'
+import ApiHelper from '../helpers/ApiHelper'
 
 export default class LearningCircles extends Component {
 
   constructor(props) {
     super(props);
     this.state = { searchResults: [] };
+    this.api = new ApiHelper('learningCircles');
     this.searchByLocation = (q) => this._searchByLocation(q);
     this.populateLearningCircles = () => this._populateLearningCircles();
     this.showMoreResults = (q) => this._showMoreResults(q);
@@ -30,7 +31,7 @@ export default class LearningCircles extends Component {
 
     const opts = { params, callback: this.searchCallback }
 
-    LearningCirclesSearch.fetchLearningCircles(opts);
+    this.api.fetchResource(opts);
   }
 
   _searchByLocation(query) {
@@ -44,7 +45,7 @@ export default class LearningCircles extends Component {
 
     const opts = { params, callback: this.searchCallback }
 
-    LearningCirclesSearch.fetchLearningCircles(opts);
+    this.api.fetchResource(opts);
   }
 
   _clearResults() {
@@ -73,7 +74,7 @@ export default class LearningCircles extends Component {
       appendResults: true
     }
 
-    LearningCirclesSearch.fetchLearningCircles(opts);
+    this.api.fetchResource(opts);
   }
 
   _searchCallback(response, opts) {

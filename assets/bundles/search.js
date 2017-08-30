@@ -6121,6 +6121,17 @@ var MEETING_DAYS = exports.MEETING_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Th
 
 var COURSE_CATEGORIES = exports.COURSE_CATEGORIES = ['Geography', 'Economics', 'Social Sciences', 'Humanities', 'Languages'];
 
+var API_ENDPOINTS = exports.API_ENDPOINTS = {
+  learningCircles: {
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true',
+    searchParams: ['q', 'topics', 'weekday', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
+  },
+  courses: {
+    baseUrl: 'https://learningcircles.p2pu.org/api/courses/?',
+    searchParams: ['q', 'topics']
+  }
+};
+
 /***/ }),
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -30782,7 +30793,7 @@ var LearningCircleCard = function LearningCircleCard(props) {
     { className: 'result-item grid-item col-md-4 col-sm-12 col-xs-12' },
     _react2.default.createElement(
       'div',
-      { className: 'card col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-xs-12', onClick: goToUrl },
+      { className: 'card lc-card col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-xs-12', onClick: goToUrl },
       _react2.default.createElement(
         'h4',
         { className: 'title' },
@@ -30835,64 +30846,7 @@ var LearningCircleCard = function LearningCircleCard(props) {
 exports.default = LearningCircleCard;
 
 /***/ }),
-/* 107 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var LearningCirclesSearch = function () {
-  function LearningCirclesSearch() {
-    _classCallCheck(this, LearningCirclesSearch);
-  }
-
-  _createClass(LearningCirclesSearch, null, [{
-    key: 'generateUrl',
-    value: function generateUrl(params) {
-      console.log('params', params);
-      var validParams = ['q', 'topic', 'weekday', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup'];
-      var baseUrl = 'https://learningcircles.p2pu.org/api/learningcircles/?active=true';
-
-      validParams.forEach(function (key) {
-        var value = params[key];
-        if (value) {
-          baseUrl += '&' + key + '=' + encodeURIComponent(value);
-        }
-      });
-
-      console.log('baseUrl', baseUrl);
-      return baseUrl;
-    }
-  }, {
-    key: 'fetchLearningCircles',
-    value: function fetchLearningCircles(opts) {
-      var url = this.generateUrl(opts.params);
-
-      $.ajax({
-        url: url,
-        dataType: 'JSONP',
-        type: 'GET',
-        success: function success(res) {
-          opts.callback(res, opts);
-        }
-      });
-    }
-  }]);
-
-  return LearningCirclesSearch;
-}();
-
-exports.default = LearningCirclesSearch;
-
-/***/ }),
+/* 107 */,
 /* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50381,9 +50335,9 @@ var _SearchTags2 = _interopRequireDefault(_SearchTags);
 
 var _constants = __webpack_require__(39);
 
-var _LearningCirclesSearch = __webpack_require__(107);
+var _ApiHelper = __webpack_require__(353);
 
-var _LearningCirclesSearch2 = _interopRequireDefault(_LearningCirclesSearch);
+var _ApiHelper2 = _interopRequireDefault(_ApiHelper);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -50420,23 +50374,37 @@ var Search = function (_Component) {
     _this.sendQuery = function () {
       return _this._sendQuery();
     };
+    _this.fetchCourseCategories = function () {
+      return _this._fetchCourseCategories();
+    };
+    _this.loadInitialData = function () {
+      return _this._loadInitialData();
+    };
     return _this;
   }
 
   _createClass(Search, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.loadInitialData();
+    }
+  }, {
+    key: '_loadInitialData',
+    value: function _loadInitialData() {
+      this.updateQueryParams({ active: true });
+    }
+  }, {
     key: '_sendQuery',
     value: function _sendQuery() {
       var params = this.state;
       var opts = { params: params, callback: this.searchCallback };
+      var api = new _ApiHelper2.default(this.props.searchSubject);
 
-      console.log('params', params);
-
-      _LearningCirclesSearch2.default.fetchLearningCircles(opts);
+      api.fetchResource(opts);
     }
   }, {
     key: '_updateQueryParams',
     value: function _updateQueryParams(params) {
-      console.log(params);
       this.setState(params, this.sendQuery);
     }
   }, {
@@ -50454,8 +50422,8 @@ var Search = function (_Component) {
   }, {
     key: '_searchCallback',
     value: function _searchCallback(response, opts) {
-      console.log(response);
       var results = opts.appendResults ? this.state.searchResults.concat(response.items) : response.items;
+
       this.setState({
         searchResults: results,
         currentQuery: opts.params,
@@ -50472,10 +50440,21 @@ var Search = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'search-container' },
-        _react2.default.createElement(_SearchBar2.default, { placeholder: placeholder, updateQueryParams: this.updateQueryParams }),
-        _react2.default.createElement(_FiltersSection2.default, _extends({ filterCollection: filterCollection, updateQueryParams: this.updateQueryParams }, this.state)),
-        _react2.default.createElement(_SearchTags2.default, _extends({}, this.state, { updateQueryParams: this.updateQueryParams })),
-        _react2.default.createElement(_ResultsDisplay2.default, _extends({ resultsSubtitle: resultsSubtitle, data: this.state.searchResults }, this.props))
+        _react2.default.createElement(_SearchBar2.default, {
+          placeholder: placeholder,
+          updateQueryParams: this.updateQueryParams
+        }),
+        _react2.default.createElement(_FiltersSection2.default, _extends({
+          filterCollection: filterCollection,
+          updateQueryParams: this.updateQueryParams
+        }, this.state)),
+        _react2.default.createElement(_SearchTags2.default, _extends({}, this.state, {
+          updateQueryParams: this.updateQueryParams
+        })),
+        _react2.default.createElement(_ResultsDisplay2.default, _extends({
+          resultsSubtitle: resultsSubtitle,
+          data: this.state.searchResults
+        }, this.props))
       );
     }
   }]);
@@ -50704,8 +50683,7 @@ var FilterSection = function (_Component) {
           )
         ),
         _react2.default.createElement(_FilterForm2.default, _extends({
-          activeFilter: this.state.activeFilter,
-          updateQueryParams: this.props.updateQueryParams
+          activeFilter: this.state.activeFilter
         }, this.props))
       );
     }
@@ -50946,6 +50924,7 @@ var MeetingDaysFilterForm = function (_Component) {
             name: day,
             value: day,
             label: day,
+            checked: _this3.state.weekday.indexOf(day) !== -1,
             handleChange: _this3.generateChangeHandler(day)
           });
         })
@@ -51092,32 +51071,10 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var SearchTag = function SearchTag(_ref) {
   var propName = _ref.propName,
       value = _ref.value,
-      updateQueryParams = _ref.updateQueryParams;
-
-  var generateClickHandler = function generateClickHandler(propName, value) {
-    return function (e) {
-      console.log(propName, value);
-      switch (propName) {
-        case 'location':
-          updateQueryParams({ latitude: null, longitude: null, distance: 50 });
-          break;
-        case 'topic':
-          updateQueryParams({ topic: [] });
-          break;
-        case 'weekday':
-          updateQueryParams({ weekday: [] });
-          break;
-        default:
-          updateQueryParams(_defineProperty({}, propName, null));
-          break;
-      }
-    };
-  };
+      onDelete = _ref.onDelete;
 
   return _react2.default.createElement(
     'div',
@@ -51125,7 +51082,9 @@ var SearchTag = function SearchTag(_ref) {
     value,
     _react2.default.createElement(
       'i',
-      { className: 'material-icons', onClick: generateClickHandler(propName, value) },
+      { className: 'material-icons', onClick: function onClick() {
+          return onDelete(value);
+        } },
       'clear'
     )
   );
@@ -51154,22 +51113,33 @@ var _SearchTag2 = _interopRequireDefault(_SearchTag);
 
 var _constants = __webpack_require__(39);
 
+var _lodash = __webpack_require__(103);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SearchTags = function SearchTags(props) {
   var generateQueryTag = function generateQueryTag() {
     if (props.q) {
-      return _react2.default.createElement(_SearchTag2.default, { propName: 'q', value: props.q, updateQueryParams: props.updateQueryParams });
+      var onDelete = function onDelete(value) {
+        props.updateQueryParams({ q: null });
+      };
+      return _react2.default.createElement(_SearchTag2.default, { value: props.q, onDelete: onDelete });
     }
   };
 
   var generateTopicsTags = function generateTopicsTags() {
-    if (props.topic && props.topic.length > 0) {
+    if (props.topics && props.topics.length > 0) {
+      var onDelete = function onDelete(value) {
+        props.updateQueryParams({ topics: _lodash2.default.without(props.topics, value) });
+      };
+
       return _react2.default.createElement(
         'div',
         { className: 'search-tags' },
-        props.topic.map(function (item, index) {
-          return _react2.default.createElement(_SearchTag2.default, { propName: 'topic', value: item, key: index, updateQueryParams: props.updateQueryParams });
+        props.topics.map(function (item, index) {
+          return _react2.default.createElement(_SearchTag2.default, { value: item, key: index, onDelete: onDelete });
         })
       );
     }
@@ -51178,21 +51148,32 @@ var SearchTags = function SearchTags(props) {
   var generateLocationTag = function generateLocationTag() {
     if (props.latitude && props.longitude) {
       var text = 'Within ' + props.distance + 'km of your current location';
-      return _react2.default.createElement(_SearchTag2.default, { propName: 'location', value: text, updateQueryParams: props.updateQueryParams });
+      var onDelete = function onDelete(value) {
+        props.updateQueryParams({ latitude: null, longitude: null, distance: 50 });
+      };
+      return _react2.default.createElement(_SearchTag2.default, { value: text, onDelete: onDelete });
     } else if (props.city) {
-      return _react2.default.createElement(_SearchTag2.default, { propName: 'city', value: props.city, updateQueryParams: props.updateQueryParams });
+      var _onDelete = function _onDelete(value) {
+        props.updateQueryParams({ city: null });
+      };
+      return _react2.default.createElement(_SearchTag2.default, { value: props.city, updateQueryParams: props.updateQueryParams });
     }
   };
 
   var generateMeetingDaysTags = function generateMeetingDaysTags() {
     if (props.weekday && props.weekday.length > 0) {
+
+      var onDelete = function onDelete(value) {
+        props.updateQueryParams({ weekday: _lodash2.default.without(props.weekday, value) });
+      };
+
       return _react2.default.createElement(
         'div',
         { className: 'search-tags' },
         props.weekday.map(function (day, index) {
           var weekdayName = _constants.MEETING_DAYS[day];
 
-          return _react2.default.createElement(_SearchTag2.default, { propName: 'weekday', value: weekdayName, key: index, updateQueryParams: props.updateQueryParams });
+          return _react2.default.createElement(_SearchTag2.default, { propName: 'weekday', value: weekdayName, key: index, onDelete: onDelete });
         })
       );
     }
@@ -51241,6 +51222,14 @@ var _reactSelect4 = _interopRequireDefault(_reactSelect3);
 
 var _constants = __webpack_require__(39);
 
+var _ApiHelper = __webpack_require__(353);
+
+var _ApiHelper2 = _interopRequireDefault(_ApiHelper);
+
+var _lodash = __webpack_require__(103);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51257,43 +51246,69 @@ var TopicsFilterForm = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (TopicsFilterForm.__proto__ || Object.getPrototypeOf(TopicsFilterForm)).call(this, props));
 
-    _this.state = { topic: [] };
+    _this.state = { topics: [], options: [] };
     _this.generateChangeHandler = function (category) {
       return _this._generateChangeHandler(category);
     };
     _this.handleSelect = function (selected) {
       return _this._handleSelect(selected);
     };
-    _this.selectOptions = function () {
-      return _this._selectOptions();
+    _this.fetchTopics = function () {
+      return _this._fetchTopics();
     };
     return _this;
   }
 
   _createClass(TopicsFilterForm, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.fetchTopics();
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      var topics = nextProps.topics ? nextProps.topics.map(function (topic) {
+        return { value: topic, label: topic };
+      }) : [];
+      this.setState({ topics: topics });
+    }
+  }, {
+    key: '_fetchTopics',
+    value: function _fetchTopics() {
+      var _this2 = this;
+
+      var api = new _ApiHelper2.default('courses');
+      var params = { active: true };
+      var callback = function callback(response) {
+        var topics = response.items.map(function (course) {
+          return course.topics;
+        });
+        topics = _lodash2.default.flatten(topics);
+        topics = _lodash2.default.uniq(topics);
+        topics = topics.map(function (topic) {
+          return { value: topic, label: topic };
+        });
+
+        _this2.setState({ options: topics });
+      };
+
+      api.fetchResource({ params: params, callback: callback });
+    }
+  }, {
     key: '_handleSelect',
     value: function _handleSelect(selected) {
-      console.log('selected', selected);
       var newTopicList = selected.map(function (option) {
         return option.value;
       });
-      console.log('newTopicList', newTopicList);
-      this.setState({ topic: selected }, this.props.updateQueryParams({ topic: newTopicList }));
-    }
-  }, {
-    key: '_selectOptions',
-    value: function _selectOptions() {
-      return _constants.COURSE_CATEGORIES.map(function (cat) {
-        return { value: cat, label: cat };
-      });
+      this.setState({ topics: selected }, this.props.updateQueryParams({ topics: newTopicList }));
     }
   }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(_reactSelect2.default, {
-        options: this.selectOptions(),
+        options: this.state.options,
         multi: true,
-        value: this.state.topic,
+        value: this.state.topics,
         onChange: this.handleSelect
       });
     }
@@ -53039,27 +53054,13 @@ var _CourseCard2 = _interopRequireDefault(_CourseCard);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var BrowseCourses = function BrowseCourses(props) {
-
   return _react2.default.createElement(
     _reactMasonryComponent2.default,
     { className: "search-results row grid" },
-    props.courses.map(function (circle, index) {
-      var startTime = circle.meeting_time.slice(0, -3);
-      var endTime = circle.end_time.slice(0, -3);
-      var startDate = new Date(circle.start_date).toLocaleDateString('en-US', { month: 'long', year: 'numeric', day: 'numeric' });
-      var schedule = circle.day + ' from ' + startTime + ' to ' + endTime + ' (' + circle.time_zone + ')';
-      var duration = circle.weeks + ' weeks starting ' + startDate;
-
+    props.courses.map(function (course, index) {
       return _react2.default.createElement(_CourseCard2.default, {
         key: index,
-        name: circle.course.title,
-        url: circle.url,
-        schedule: schedule,
-        facilitator: circle.facilitator,
-        location: circle.venue,
-        duration: duration,
-        image: circle.image_url,
-        city: circle.city
+        course: course
       });
     }),
     _react2.default.createElement(
@@ -53071,11 +53072,11 @@ var BrowseCourses = function BrowseCourses(props) {
         _react2.default.createElement(
           'p',
           null,
-          'Start your own learning circle'
+          'Create your own course'
         ),
         _react2.default.createElement(
           'a',
-          { href: '/en/facilitate', className: 'btn p2pu-btn dark arrow' },
+          { href: 'https://learningcircles.p2pu.org/en/course/create/', className: 'btn p2pu-btn dark arrow' },
           _react2.default.createElement('i', { className: 'fa fa-arrow-right', 'aria-hidden': 'true' })
         )
       )
@@ -53108,66 +53109,121 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var CourseCard = function CourseCard(props) {
 
-  var goToUrl = function goToUrl() {
-    window.location.href = props.url;
-  };
+  var feedbackPage = 'https://etherpad.p2pu.org/p/course-feedback-' + props.course.id;
+  var selectCourse = 'https://learningcircles.p2pu.org/en/facilitator/study_group/create/?course_id=' + props.course.id;
 
   return _react2.default.createElement(
     'div',
     { className: 'result-item grid-item col-md-4 col-sm-12 col-xs-12' },
     _react2.default.createElement(
       'div',
-      { className: 'card col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-xs-12', onClick: goToUrl },
+      { className: 'course-card col-xs-12' },
       _react2.default.createElement(
         'h4',
         { className: 'title' },
-        props.name
+        props.course.title
       ),
       _react2.default.createElement(
         'p',
-        { className: 'schedule' },
-        props.schedule
+        { className: 'caption' },
+        props.course.caption
       ),
       _react2.default.createElement(
         'p',
-        { className: 'city-country' },
-        props.city
+        { className: 'provider' },
+        'Provider: ' + props.course.provider
       ),
       _react2.default.createElement(
-        'div',
-        { className: 'show-on-hover' },
+        'p',
+        { className: 'learning-circles' },
+        'Learning circles: ' + props.course.learning_circles
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'feedback' },
         _react2.default.createElement(
-          'p',
-          { className: 'facilitator' },
-          'Facilitator: ',
-          props.facilitator
+          'a',
+          { href: props.course.link, className: 'btn p2pu-btn light', target: '_blank' },
+          'Course'
         ),
         _react2.default.createElement(
-          'p',
-          { className: 'location' },
-          'Location: ',
-          props.location
+          'a',
+          { href: feedbackPage, className: 'btn p2pu-btn light', target: '_blank' },
+          'Feedback'
         ),
         _react2.default.createElement(
-          'p',
-          { className: 'duration' },
-          props.duration
+          'a',
+          { href: selectCourse, className: 'btn p2pu-btn light' },
+          'Select'
         )
-      )
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'image-container col-xs-0 hidden-on-mobile' },
-      _react2.default.createElement(
-        'div',
-        { className: 'image' },
-        props.image && _react2.default.createElement('img', { src: props.image, alt: props.name })
       )
     )
   );
 };
 
 exports.default = CourseCard;
+
+/***/ }),
+/* 353 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _constants = __webpack_require__(39);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ApiHelper = function () {
+  function ApiHelper(resourceType) {
+    _classCallCheck(this, ApiHelper);
+
+    this.resourceType = resourceType;
+    this.baseUrl = _constants.API_ENDPOINTS[resourceType].baseUrl;
+    this.validParams = _constants.API_ENDPOINTS[resourceType].searchParams;
+  }
+
+  _createClass(ApiHelper, [{
+    key: 'generateUrl',
+    value: function generateUrl(params) {
+      var baseUrl = this.baseUrl;
+
+      this.validParams.forEach(function (key) {
+        var value = params[key];
+        if (value) {
+          baseUrl += '&' + key + '=' + encodeURIComponent(value);
+        }
+      });
+
+      console.log('baseUrl', baseUrl);
+      return baseUrl;
+    }
+  }, {
+    key: 'fetchResource',
+    value: function fetchResource(opts) {
+      var url = this.generateUrl(opts.params);
+
+      $.ajax({
+        url: url,
+        dataType: 'JSONP',
+        type: 'GET',
+        success: function success(res) {
+          opts.callback(res, opts);
+        }
+      });
+    }
+  }]);
+
+  return ApiHelper;
+}();
+
+exports.default = ApiHelper;
 
 /***/ })
 /******/ ]);

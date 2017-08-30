@@ -6121,6 +6121,17 @@ var MEETING_DAYS = exports.MEETING_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Th
 
 var COURSE_CATEGORIES = exports.COURSE_CATEGORIES = ['Geography', 'Economics', 'Social Sciences', 'Humanities', 'Languages'];
 
+var API_ENDPOINTS = exports.API_ENDPOINTS = {
+  learningCircles: {
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true',
+    searchParams: ['q', 'topics', 'weekday', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
+  },
+  courses: {
+    baseUrl: 'https://learningcircles.p2pu.org/api/courses/?',
+    searchParams: ['q', 'topics']
+  }
+};
+
 /***/ }),
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -30741,7 +30752,7 @@ var LearningCircleCard = function LearningCircleCard(props) {
     { className: 'result-item grid-item col-md-4 col-sm-12 col-xs-12' },
     _react2.default.createElement(
       'div',
-      { className: 'card col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-xs-12', onClick: goToUrl },
+      { className: 'card lc-card col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-xs-12', onClick: goToUrl },
       _react2.default.createElement(
         'h4',
         { className: 'title' },
@@ -30794,64 +30805,7 @@ var LearningCircleCard = function LearningCircleCard(props) {
 exports.default = LearningCircleCard;
 
 /***/ }),
-/* 107 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var LearningCirclesSearch = function () {
-  function LearningCirclesSearch() {
-    _classCallCheck(this, LearningCirclesSearch);
-  }
-
-  _createClass(LearningCirclesSearch, null, [{
-    key: 'generateUrl',
-    value: function generateUrl(params) {
-      console.log('params', params);
-      var validParams = ['q', 'topic', 'weekday', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup'];
-      var baseUrl = 'https://learningcircles.p2pu.org/api/learningcircles/?active=true';
-
-      validParams.forEach(function (key) {
-        var value = params[key];
-        if (value) {
-          baseUrl += '&' + key + '=' + encodeURIComponent(value);
-        }
-      });
-
-      console.log('baseUrl', baseUrl);
-      return baseUrl;
-    }
-  }, {
-    key: 'fetchLearningCircles',
-    value: function fetchLearningCircles(opts) {
-      var url = this.generateUrl(opts.params);
-
-      $.ajax({
-        url: url,
-        dataType: 'JSONP',
-        type: 'GET',
-        success: function success(res) {
-          opts.callback(res, opts);
-        }
-      });
-    }
-  }]);
-
-  return LearningCirclesSearch;
-}();
-
-exports.default = LearningCirclesSearch;
-
-/***/ }),
+/* 107 */,
 /* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -51029,9 +50983,9 @@ var _LoadMoreResults2 = _interopRequireDefault(_LoadMoreResults);
 
 var _constants = __webpack_require__(39);
 
-var _LearningCirclesSearch = __webpack_require__(107);
+var _ApiHelper = __webpack_require__(353);
 
-var _LearningCirclesSearch2 = _interopRequireDefault(_LearningCirclesSearch);
+var _ApiHelper2 = _interopRequireDefault(_ApiHelper);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51050,6 +51004,7 @@ var LearningCircles = function (_Component) {
     var _this = _possibleConstructorReturn(this, (LearningCircles.__proto__ || Object.getPrototypeOf(LearningCircles)).call(this, props));
 
     _this.state = { searchResults: [] };
+    _this.api = new _ApiHelper2.default('learningCircles');
     _this.searchByLocation = function (q) {
       return _this._searchByLocation(q);
     };
@@ -51086,7 +51041,7 @@ var LearningCircles = function (_Component) {
 
       var opts = { params: params, callback: this.searchCallback };
 
-      _LearningCirclesSearch2.default.fetchLearningCircles(opts);
+      this.api.fetchResource(opts);
     }
   }, {
     key: '_searchByLocation',
@@ -51101,7 +51056,7 @@ var LearningCircles = function (_Component) {
 
       var opts = { params: params, callback: this.searchCallback };
 
-      _LearningCirclesSearch2.default.fetchLearningCircles(opts);
+      this.api.fetchResource(opts);
     }
   }, {
     key: '_clearResults',
@@ -51132,7 +51087,7 @@ var LearningCircles = function (_Component) {
         appendResults: true
       };
 
-      _LearningCirclesSearch2.default.fetchLearningCircles(opts);
+      this.api.fetchResource(opts);
     }
   }, {
     key: '_searchCallback',
@@ -54000,6 +53955,70 @@ module.exports =
 
 /***/ }
 /******/ ]);
+
+/***/ }),
+/* 351 */,
+/* 352 */,
+/* 353 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _constants = __webpack_require__(39);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ApiHelper = function () {
+  function ApiHelper(resourceType) {
+    _classCallCheck(this, ApiHelper);
+
+    this.resourceType = resourceType;
+    this.baseUrl = _constants.API_ENDPOINTS[resourceType].baseUrl;
+    this.validParams = _constants.API_ENDPOINTS[resourceType].searchParams;
+  }
+
+  _createClass(ApiHelper, [{
+    key: 'generateUrl',
+    value: function generateUrl(params) {
+      var baseUrl = this.baseUrl;
+
+      this.validParams.forEach(function (key) {
+        var value = params[key];
+        if (value) {
+          baseUrl += '&' + key + '=' + encodeURIComponent(value);
+        }
+      });
+
+      console.log('baseUrl', baseUrl);
+      return baseUrl;
+    }
+  }, {
+    key: 'fetchResource',
+    value: function fetchResource(opts) {
+      var url = this.generateUrl(opts.params);
+
+      $.ajax({
+        url: url,
+        dataType: 'JSONP',
+        type: 'GET',
+        success: function success(res) {
+          opts.callback(res, opts);
+        }
+      });
+    }
+  }]);
+
+  return ApiHelper;
+}();
+
+exports.default = ApiHelper;
 
 /***/ })
 /******/ ]);

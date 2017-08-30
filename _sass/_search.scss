@@ -105,12 +105,12 @@ section.page-title {
     margin-bottom: $padding-sm;
 
     .card {
+      cursor: pointer;
       position: absolute;
       background: $p2pu-orange;
       padding: $padding-sm;
       text-align: center;
       color: #fff;
-      cursor: pointer;
       box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease-in-out;
       font-size: $font-size-small;
@@ -140,7 +140,7 @@ section.page-title {
     }
 
     &:nth-of-type(4n+1) {
-      .card {
+      .card, .course-card {
         background: $p2pu-orange;
       }
 
@@ -150,7 +150,7 @@ section.page-title {
     }
 
     &:nth-of-type(4n+2) {
-      .card {
+      .card, .course-card {
         background: $p2pu-blue;
       }
 
@@ -160,7 +160,7 @@ section.page-title {
     }
 
     &:nth-of-type(4n+3) {
-      .card {
+      .card, .course-card {
         background: $p2pu-green;
       }
 
@@ -170,7 +170,7 @@ section.page-title {
     }
 
     &:nth-of-type(4n+4) {
-      .card {
+      .card, .course-card {
         background: $p2pu-yellow;
       }
 
@@ -194,6 +194,24 @@ section.page-title {
         z-index: 10;
         left: 50%;
         transform: scale(1.1) translateX(-45%);
+      }
+    }
+
+    .course-card {
+      background: $p2pu-orange;
+      padding: $padding-sm;
+      color: #fff;
+      box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
+      font-size: $font-size-small;
+
+      h4 {
+        text-align: center;
+      }
+
+      .feedback {
+        padding-top: $padding-sm;
+        display: flex;
+        justify-content: space-evenly;
       }
     }
   }
