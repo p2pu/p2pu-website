@@ -77,6 +77,15 @@
     align-self: center;
   }
 
+  &.transparent {
+    background: transparent;
+    color: $white;
+    border: 2px solid $white;
+    &:before {
+      background: transparentize($white, 0.9);
+    }
+  }
+
   &:focus {
     outline: none;
   }

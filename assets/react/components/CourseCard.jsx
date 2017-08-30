@@ -13,10 +13,12 @@ const CourseCard = (props) => {
         <p className="caption">{ props.course.caption }</p>
         <p className="provider">{ `Provider: ${props.course.provider}` }</p>
         <p className="learning-circles">{ `Learning circles: ${props.course.learning_circles}`}</p>
-        <p className="feedback">
-          <a href={props.course.link} className='btn p2pu-btn light' target='_blank'>Course</a>
-          <a href={feedbackPage} className='btn p2pu-btn light' target='_blank'>Feedback</a>
-          <a href={selectCourse} className='btn p2pu-btn light'>Select</a>
+        <p className="actions">
+          <a href={props.course.link} className='btn p2pu-btn transparent' target='_blank'>Course</a>
+          <a href={feedbackPage} className='btn p2pu-btn transparent' target='_blank'>Feedback</a>
+        </p>
+        <p className="actions">
+          <a href={selectCourse} className='btn p2pu-btn light submit'>Start a learning circle</a>
         </p>
       </div>
     </div>

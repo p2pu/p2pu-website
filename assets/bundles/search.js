@@ -22002,7 +22002,7 @@ var COURSE_CATEGORIES = exports.COURSE_CATEGORIES = ['Geography', 'Economics', '
 var API_ENDPOINTS = exports.API_ENDPOINTS = {
   learningCircles: {
     baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?',
-    searchParams: ['q', 'topics', 'weekday', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
+    searchParams: ['q', 'topics', 'weekdays', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
   },
   courses: {
     baseUrl: 'https://learningcircles.p2pu.org/api/courses/?',
@@ -50655,21 +50655,25 @@ var CourseCard = function CourseCard(props) {
       ),
       _react2.default.createElement(
         'p',
-        { className: 'feedback' },
+        { className: 'actions' },
         _react2.default.createElement(
           'a',
-          { href: props.course.link, className: 'btn p2pu-btn light', target: '_blank' },
+          { href: props.course.link, className: 'btn p2pu-btn transparent', target: '_blank' },
           'Course'
         ),
         _react2.default.createElement(
           'a',
-          { href: feedbackPage, className: 'btn p2pu-btn light', target: '_blank' },
+          { href: feedbackPage, className: 'btn p2pu-btn transparent', target: '_blank' },
           'Feedback'
-        ),
+        )
+      ),
+      _react2.default.createElement(
+        'p',
+        { className: 'actions' },
         _react2.default.createElement(
           'a',
-          { href: selectCourse, className: 'btn p2pu-btn light' },
-          'Select'
+          { href: selectCourse, className: 'btn p2pu-btn light submit' },
+          'Start a learning circle'
         )
       )
     )
@@ -51103,7 +51107,7 @@ var MeetingDaysFilterForm = function (_Component) {
       var _this2 = this;
 
       return function (checked) {
-        var newWeekdayList = _this2.props.weekday || [];
+        var newWeekdayList = _this2.props.weekdays || [];
 
         if (checked) {
           newWeekdayList.push(dayIndex);
@@ -51112,7 +51116,7 @@ var MeetingDaysFilterForm = function (_Component) {
         }
 
         console.log('newWeekdayList', newWeekdayList);
-        _this2.props.updateQueryParams({ weekday: newWeekdayList });
+        _this2.props.updateQueryParams({ weekdays: newWeekdayList });
       };
     }
   }, {
@@ -51124,7 +51128,7 @@ var MeetingDaysFilterForm = function (_Component) {
         'div',
         null,
         _constants.MEETING_DAYS.map(function (day, index) {
-          var checked = _this3.props.weekday && _this3.props.weekday.indexOf(index) !== -1;
+          var checked = _this3.props.weekdays && _this3.props.weekdays.indexOf(index) !== -1;
           return _react2.default.createElement(_CheckboxWithLabel2.default, {
             key: index,
             classes: 'col-sm-12 col-md-6 col-lg-6',
@@ -51367,20 +51371,20 @@ var SearchTags = function SearchTags(props) {
   };
 
   var generateMeetingDaysTags = function generateMeetingDaysTags() {
-    if (props.weekday && props.weekday.length > 0) {
+    if (props.weekdays && props.weekdays.length > 0) {
 
       var onDelete = function onDelete(day) {
         var dayIndex = _constants.MEETING_DAYS.indexOf(day);
-        props.updateQueryParams({ weekday: _lodash2.default.without(props.weekday, dayIndex) });
+        props.updateQueryParams({ weekdays: _lodash2.default.without(props.weekdays, dayIndex) });
       };
 
       return _react2.default.createElement(
         'div',
         { className: 'search-tags' },
-        props.weekday.map(function (dayIndex, index) {
+        props.weekdays.map(function (dayIndex, index) {
           var weekdayName = _constants.MEETING_DAYS[dayIndex];
 
-          return _react2.default.createElement(_SearchTag2.default, { propName: 'weekday', value: weekdayName, key: index, onDelete: onDelete });
+          return _react2.default.createElement(_SearchTag2.default, { value: weekdayName, key: index, onDelete: onDelete });
         })
       );
     }
