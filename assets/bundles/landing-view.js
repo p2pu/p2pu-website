@@ -6123,7 +6123,7 @@ var COURSE_CATEGORIES = exports.COURSE_CATEGORIES = ['Geography', 'Economics', '
 
 var API_ENDPOINTS = exports.API_ENDPOINTS = {
   learningCircles: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true',
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?',
     searchParams: ['q', 'topics', 'weekday', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
   },
   courses: {
@@ -53973,6 +53973,12 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _constants = __webpack_require__(39);
 
+var _lodash = __webpack_require__(103);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var ApiHelper = function () {
@@ -53988,16 +53994,17 @@ var ApiHelper = function () {
     key: 'generateUrl',
     value: function generateUrl(params) {
       var baseUrl = this.baseUrl;
-
-      this.validParams.forEach(function (key) {
+      var encodedParams = this.validParams.map(function (key) {
         var value = params[key];
-        if (value) {
-          baseUrl += '&' + key + '=' + encodeURIComponent(value);
+        if (value && value.length > 0) {
+          return key + '=' + encodeURIComponent(value);
         }
       });
+      console.log('encodedParams', encodedParams);
+      var queryString = _lodash2.default.compact(encodedParams).join('&');
 
-      console.log('baseUrl', baseUrl);
-      return baseUrl;
+      console.log('url', '' + baseUrl + queryString);
+      return '' + baseUrl + queryString;
     }
   }, {
     key: 'fetchResource',

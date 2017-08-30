@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SearchTag = ({ propName, value, onDelete }) => {
+const SearchTag = ({ value, onDelete }) => {
   return(
     <div className='search-tag'>
       {value}

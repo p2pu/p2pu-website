@@ -1,4 +1,5 @@
 import { API_ENDPOINTS } from '../constants'
+import _ from 'lodash'
 
 export default class ApiHelper {
   constructor(resourceType) {
@@ -8,17 +9,18 @@ export default class ApiHelper {
   }
 
   generateUrl(params) {
-    let baseUrl = this.baseUrl;
-
-    this.validParams.forEach((key) => {
+    const baseUrl = this.baseUrl;
+    const encodedParams = this.validParams.map((key) => {
       const value = params[key];
-      if (value) {
-        baseUrl += `&${key}=${encodeURIComponent(value)}`
+      if (value && value.length > 0) {
+        return `${key}=${encodeURIComponent(value)}`
       }
     })
+    console.log('encodedParams', encodedParams)
+    const queryString = _.compact(encodedParams).join('&');
 
-    console.log('baseUrl', baseUrl)
-    return baseUrl;
+    console.log('url', `${baseUrl}${queryString}`)
+    return `${baseUrl}${queryString}`
   }
 
   fetchResource(opts) {

@@ -33,7 +33,7 @@ export const COURSE_CATEGORIES = [
 
 export const API_ENDPOINTS = {
   learningCircles: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true',
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?',
     searchParams: ['q', 'topics', 'weekday', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
   },
   courses: {

@@ -6123,7 +6123,7 @@ var COURSE_CATEGORIES = exports.COURSE_CATEGORIES = ['Geography', 'Economics', '
 
 var API_ENDPOINTS = exports.API_ENDPOINTS = {
   learningCircles: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?active=true',
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?',
     searchParams: ['q', 'topics', 'weekday', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
   },
   courses: {
@@ -50355,7 +50355,7 @@ var Search = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).call(this, props));
 
-    _this.state = { value: '', searchResults: [], distance: 50 };
+    _this.state = { searchResults: [], distance: 50 };
     _this.handleChange = function (s) {
       return _this._handleChange(s);
     };
@@ -50864,6 +50864,10 @@ var _CheckboxWithLabel2 = _interopRequireDefault(_CheckboxWithLabel);
 
 var _constants = __webpack_require__(39);
 
+var _lodash = __webpack_require__(103);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -50880,7 +50884,6 @@ var MeetingDaysFilterForm = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (MeetingDaysFilterForm.__proto__ || Object.getPrototypeOf(MeetingDaysFilterForm)).call(this, props));
 
-    _this.state = { weekday: [] };
     _this.generateChangeHandler = function (day) {
       return _this._generateChangeHandler(day);
     };
@@ -50889,24 +50892,20 @@ var MeetingDaysFilterForm = function (_Component) {
 
   _createClass(MeetingDaysFilterForm, [{
     key: '_generateChangeHandler',
-    value: function _generateChangeHandler(day) {
+    value: function _generateChangeHandler(dayIndex) {
       var _this2 = this;
 
       return function (checked) {
-        var newWeekdayList = _this2.state.weekday;
-        var meetingDayIndex = _constants.MEETING_DAYS.indexOf(day);
+        var newWeekdayList = _this2.props.weekday || [];
 
         if (checked) {
-          newWeekdayList.push(meetingDayIndex);
+          newWeekdayList.push(dayIndex);
         } else {
-          newWeekdayList = newWeekdayList.filter(function (weekday) {
-            return weekday !== meetingDayIndex;
-          });
+          newWeekdayList = _lodash2.default.pull(newWeekdayList, dayIndex);
         }
 
-        _this2.setState({ weekday: newWeekdayList }, function () {
-          _this2.props.updateQueryParams(_this2.state);
-        });
+        console.log('newWeekdayList', newWeekdayList);
+        _this2.props.updateQueryParams({ weekday: newWeekdayList });
       };
     }
   }, {
@@ -50918,14 +50917,15 @@ var MeetingDaysFilterForm = function (_Component) {
         'div',
         null,
         _constants.MEETING_DAYS.map(function (day, index) {
+          var checked = _this3.props.weekday && _this3.props.weekday.indexOf(index) !== -1;
           return _react2.default.createElement(_CheckboxWithLabel2.default, {
             key: index,
             classes: 'col-sm-12 col-md-6 col-lg-6',
             name: day,
-            value: day,
+            value: index,
             label: day,
-            checked: _this3.state.weekday.indexOf(day) !== -1,
-            handleChange: _this3.generateChangeHandler(day)
+            checked: checked,
+            handleChange: _this3.generateChangeHandler(index)
           });
         })
       );
@@ -51072,8 +51072,7 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SearchTag = function SearchTag(_ref) {
-  var propName = _ref.propName,
-      value = _ref.value,
+  var value = _ref.value,
       onDelete = _ref.onDelete;
 
   return _react2.default.createElement(
@@ -51163,15 +51162,16 @@ var SearchTags = function SearchTags(props) {
   var generateMeetingDaysTags = function generateMeetingDaysTags() {
     if (props.weekday && props.weekday.length > 0) {
 
-      var onDelete = function onDelete(value) {
-        props.updateQueryParams({ weekday: _lodash2.default.without(props.weekday, value) });
+      var onDelete = function onDelete(day) {
+        var dayIndex = _constants.MEETING_DAYS.indexOf(day);
+        props.updateQueryParams({ weekday: _lodash2.default.without(props.weekday, dayIndex) });
       };
 
       return _react2.default.createElement(
         'div',
         { className: 'search-tags' },
-        props.weekday.map(function (day, index) {
-          var weekdayName = _constants.MEETING_DAYS[day];
+        props.weekday.map(function (dayIndex, index) {
+          var weekdayName = _constants.MEETING_DAYS[dayIndex];
 
           return _react2.default.createElement(_SearchTag2.default, { propName: 'weekday', value: weekdayName, key: index, onDelete: onDelete });
         })
@@ -51181,7 +51181,7 @@ var SearchTags = function SearchTags(props) {
 
   return _react2.default.createElement(
     'div',
-    { className: 'search-tags' },
+    { className: 'search-tags container' },
     generateQueryTag(),
     generateTopicsTags(),
     generateLocationTag(),
@@ -53178,6 +53178,12 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _constants = __webpack_require__(39);
 
+var _lodash = __webpack_require__(103);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var ApiHelper = function () {
@@ -53193,16 +53199,17 @@ var ApiHelper = function () {
     key: 'generateUrl',
     value: function generateUrl(params) {
       var baseUrl = this.baseUrl;
-
-      this.validParams.forEach(function (key) {
+      var encodedParams = this.validParams.map(function (key) {
         var value = params[key];
-        if (value) {
-          baseUrl += '&' + key + '=' + encodeURIComponent(value);
+        if (value && value.length > 0) {
+          return key + '=' + encodeURIComponent(value);
         }
       });
+      console.log('encodedParams', encodedParams);
+      var queryString = _lodash2.default.compact(encodedParams).join('&');
 
-      console.log('baseUrl', baseUrl);
-      return baseUrl;
+      console.log('url', '' + baseUrl + queryString);
+      return '' + baseUrl + queryString;
     }
   }, {
     key: 'fetchResource',

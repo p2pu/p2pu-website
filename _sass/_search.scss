@@ -72,6 +72,7 @@ section.page-title {
         border-top: 2px solid $white;
         border-bottom: 2px solid $white;
         border-radius: 4px;
+        margin-bottom: $padding-sm;
 
         i.material-icons {
           color: $p2pu-blue;
@@ -90,7 +91,7 @@ section.page-title {
   .filter-form-dropdown {
 
     &.open {
-      padding: $padding-lg;
+      padding: $padding-sm;
     }
   }
 }
@@ -266,6 +267,11 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  &.container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
   .search-tag {
     background-color: #515665;

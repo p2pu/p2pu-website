@@ -1,26 +1,26 @@
 import React, { Component } from 'react'
 import CheckboxWithLabel from './common/CheckboxWithLabel'
 import { MEETING_DAYS } from '../constants'
+import _ from 'lodash'
 
 export default class MeetingDaysFilterForm extends Component {
   constructor(props) {
     super(props)
-    this.state = { weekday: [] };
     this.generateChangeHandler = (day) => this._generateChangeHandler(day);
   }
 
-  _generateChangeHandler(day) {
+  _generateChangeHandler(dayIndex) {
     return (checked) => {
-      let newWeekdayList = this.state.weekday;
-      const meetingDayIndex = MEETING_DAYS.indexOf(day)
+      let newWeekdayList = this.props.weekday || [];
 
       if (checked) {
-        newWeekdayList.push(meetingDayIndex)
+        newWeekdayList.push(dayIndex)
       } else {
-        newWeekdayList = newWeekdayList.filter((weekday) => { return weekday !== meetingDayIndex });
+        newWeekdayList = _.pull(newWeekdayList, dayIndex);
       }
 
-      this.setState({ weekday: newWeekdayList }, () => {  this.props.updateQueryParams(this.state) })
+      console.log('newWeekdayList', newWeekdayList)
+      this.props.updateQueryParams({ weekday: newWeekdayList})
     }
   }
 
@@ -28,17 +28,20 @@ export default class MeetingDaysFilterForm extends Component {
     return(
       <div>
         {
-          MEETING_DAYS.map((day, index) => (
-            <CheckboxWithLabel
-              key={index}
-              classes='col-sm-12 col-md-6 col-lg-6'
-              name={day}
-              value={day}
-              label={day}
-              checked={this.state.weekday.indexOf(day) !== -1}
-              handleChange={this.generateChangeHandler(day)}
-            />
-          ))
+          MEETING_DAYS.map((day, index) => {
+            const checked = this.props.weekday && (this.props.weekday.indexOf(index) !== -1);
+            return(
+              <CheckboxWithLabel
+                key={index}
+                classes='col-sm-12 col-md-6 col-lg-6'
+                name={day}
+                value={index}
+                label={day}
+                checked={checked}
+                handleChange={this.generateChangeHandler(index)}
+              />
+            )
+          })
         }
       </div>
     )

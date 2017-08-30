@@ -9,7 +9,7 @@ import ApiHelper from '../helpers/ApiHelper'
 export default class Search extends Component {
   constructor(props) {
     super(props)
-    this.state = { value: '', searchResults: [], distance: 50 }
+    this.state = { searchResults: [], distance: 50 }
     this.handleChange = (s) => this._handleChange(s);
     this.handleInputChange = () => this._handleInputChange();
     this.handleSearchBarSubmit = (query) => this._handleSearchBarSubmit(query);
