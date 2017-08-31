@@ -50654,25 +50654,43 @@ var CourseCard = function CourseCard(props) {
         'Learning circles: ' + props.course.learning_circles
       ),
       _react2.default.createElement(
-        'p',
+        'div',
         { className: 'actions' },
         _react2.default.createElement(
-          'a',
-          { href: props.course.link, className: 'btn p2pu-btn transparent', target: '_blank' },
-          'Course'
+          'p',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: props.course.link, className: '', target: '_blank' },
+            _react2.default.createElement(
+              'i',
+              { className: 'material-icons' },
+              'open_in_new'
+            ),
+            'See the course'
+          )
         ),
         _react2.default.createElement(
-          'a',
-          { href: feedbackPage, className: 'btn p2pu-btn transparent', target: '_blank' },
-          'Feedback'
+          'p',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: feedbackPage, className: '', target: '_blank' },
+            _react2.default.createElement(
+              'i',
+              { className: 'material-icons' },
+              'open_in_new'
+            ),
+            'Facilitator feedback'
+          )
         )
       ),
       _react2.default.createElement(
         'p',
-        { className: 'actions' },
+        { className: 'cta' },
         _react2.default.createElement(
           'a',
-          { href: selectCourse, className: 'btn p2pu-btn light submit' },
+          { href: selectCourse, className: 'btn p2pu-btn transparent' },
           'Start a learning circle'
         )
       )
@@ -50865,6 +50883,11 @@ var FilterSection = function (_Component) {
   }
 
   _createClass(FilterSection, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.setState({ activeFilter: this.props.filterCollection[0] });
+    }
+  }, {
     key: '_updateActiveFilter',
     value: function _updateActiveFilter(filter) {
       this.setState({ activeFilter: filter });
@@ -50880,18 +50903,14 @@ var FilterSection = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'filters-bar' },
-          _react2.default.createElement(
-            'div',
-            { className: 'slider' },
-            this.props.filterCollection.map(function (filter, index) {
-              return _react2.default.createElement(_Filter2.default, {
-                key: index,
-                filter: filter,
-                active: _this2.state.activeFilter === filter,
-                updateActiveFilter: _this2.updateActiveFilter
-              });
-            })
-          )
+          this.props.filterCollection.map(function (filter, index) {
+            return _react2.default.createElement(_Filter2.default, {
+              key: index,
+              filter: filter,
+              active: _this2.state.activeFilter === filter,
+              updateActiveFilter: _this2.updateActiveFilter
+            });
+          })
         ),
         _react2.default.createElement(_FilterForm2.default, _extends({
           activeFilter: this.state.activeFilter
@@ -51012,14 +51031,14 @@ var LocationFilterForm = function (_Component) {
         'div',
         null,
         _react2.default.createElement(_CheckboxWithLabel2.default, {
-          classes: 'col-sm-12 col-md-6 col-lg-6',
+          classes: 'col-sm-12',
           name: 'geolocation',
           label: 'Use my current location',
           checked: this.state.useLocation,
           handleChange: this.getLocation
         }),
         _react2.default.createElement(_RangeSliderWithLabel2.default, {
-          classes: 'col-sm-12 col-md-6 col-lg-6',
+          classes: 'col-sm-12',
           label: 'Within a distance of ' + this.props.distance + 'km',
           name: 'distance-slider',
           value: this.props.distance,
@@ -51392,7 +51411,7 @@ var SearchTags = function SearchTags(props) {
 
   return _react2.default.createElement(
     'div',
-    { className: 'search-tags container' },
+    { className: 'search-tags wrapper' },
     generateQueryTag(),
     generateTopicsTags(),
     generateLocationTag(),

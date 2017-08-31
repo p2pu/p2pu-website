@@ -53,14 +53,14 @@ export default class LocationFilterForm extends Component {
     return(
       <div>
         <CheckboxWithLabel
-          classes='col-sm-12 col-md-6 col-lg-6'
+          classes='col-sm-12'
           name='geolocation'
           label='Use my current location'
           checked={this.state.useLocation}
           handleChange={this.getLocation}
         />
         <RangeSliderWithLabel
-          classes='col-sm-12 col-md-6 col-lg-6'
+          classes='col-sm-12'
           label={`Within a distance of ${this.props.distance}km`}
           name='distance-slider'
           value={this.props.distance}

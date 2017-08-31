@@ -67,7 +67,7 @@ const SearchTags = (props) => {
   }
 
   return(
-    <div className='search-tags container'>
+    <div className='search-tags wrapper'>
       {generateQueryTag()}
       {generateTopicsTags()}
       {generateLocationTag()}
