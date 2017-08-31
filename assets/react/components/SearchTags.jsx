@@ -31,7 +31,7 @@ const SearchTags = (props) => {
 
   const generateLocationTag = () => {
     if (props.latitude && props.longitude) {
-      const text = `Within ${props.distance}km of your current location`;
+      const text = `Within ${props.distance}km of your location`;
       const onDelete = (value) => {
         props.updateQueryParams({ latitude: null, longitude: null, distance: 50 })
       }

@@ -22001,7 +22001,7 @@ var COURSE_CATEGORIES = exports.COURSE_CATEGORIES = ['Geography', 'Economics', '
 
 var API_ENDPOINTS = exports.API_ENDPOINTS = {
   learningCircles: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?',
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?limit=10&',
     searchParams: ['q', 'topics', 'weekdays', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
   },
   courses: {
@@ -30173,7 +30173,6 @@ var ApiHelper = function () {
           return key + '=' + encodeURIComponent(value);
         }
       });
-      console.log('encodedParams', encodedParams);
       var queryString = _lodash2.default.compact(encodedParams).join('&');
 
       console.log('url', '' + baseUrl + queryString);
@@ -30189,6 +30188,7 @@ var ApiHelper = function () {
         dataType: 'JSONP',
         type: 'GET',
         success: function success(res) {
+          console.log('RESPONSE', res);
           opts.callback(res, opts);
         }
       });
@@ -31109,8 +31109,6 @@ var CitySelect = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log('city select STATE value', this.state.value);
-      console.log('city select PROPS value', this.state.value);
       return _react2.default.createElement(_reactSelect2.default, {
         name: this.props.name,
         className: 'city-select ' + this.props.classes,
@@ -50897,6 +50895,8 @@ var FilterSection = function (_Component) {
     value: function render() {
       var _this2 = this;
 
+      var isMobile = screen.width < 768;
+
       return _react2.default.createElement(
         'div',
         { className: 'filter-section' },
@@ -50904,15 +50904,22 @@ var FilterSection = function (_Component) {
           'div',
           { className: 'filters-bar' },
           this.props.filterCollection.map(function (filter, index) {
-            return _react2.default.createElement(_Filter2.default, {
-              key: index,
-              filter: filter,
-              active: _this2.state.activeFilter === filter,
-              updateActiveFilter: _this2.updateActiveFilter
-            });
+            var isActive = _this2.state.activeFilter === filter;
+            return _react2.default.createElement(
+              'div',
+              { key: index, className: 'wrapper' },
+              _react2.default.createElement(_Filter2.default, {
+                filter: filter,
+                active: isActive,
+                updateActiveFilter: _this2.updateActiveFilter
+              }),
+              isMobile && isActive && _react2.default.createElement(_FilterForm2.default, _extends({
+                activeFilter: _this2.state.activeFilter
+              }, _this2.props))
+            );
           })
         ),
-        _react2.default.createElement(_FilterForm2.default, _extends({
+        !isMobile && _react2.default.createElement(_FilterForm2.default, _extends({
           activeFilter: this.state.activeFilter
         }, this.props))
       );
@@ -51039,7 +51046,7 @@ var LocationFilterForm = function (_Component) {
         }),
         _react2.default.createElement(_RangeSliderWithLabel2.default, {
           classes: 'col-sm-12',
-          label: 'Within a distance of ' + this.props.distance + 'km',
+          label: 'Within ' + this.props.distance + 'km',
           name: 'distance-slider',
           value: this.props.distance,
           handleChange: this.handleRangeChange,
@@ -51269,11 +51276,15 @@ var SearchBar = function SearchBar(_ref) {
     'form',
     { className: 'search-bar col-sm-12', onSubmit: onSubmit },
     _react2.default.createElement(
-      'i',
-      { className: 'material-icons' },
-      'search'
+      'div',
+      { className: 'wrapper' },
+      _react2.default.createElement(
+        'i',
+        { className: 'material-icons' },
+        'search'
+      ),
+      _react2.default.createElement('input', { className: 'search-input', placeholder: placeholder })
     ),
-    _react2.default.createElement('input', { className: 'search-input', placeholder: placeholder }),
     _react2.default.createElement(
       'button',
       { className: 'p2pu-btn light', type: 'submit' },
@@ -51376,7 +51387,7 @@ var SearchTags = function SearchTags(props) {
 
   var generateLocationTag = function generateLocationTag() {
     if (props.latitude && props.longitude) {
-      var text = 'Within ' + props.distance + 'km of your current location';
+      var text = 'Within ' + props.distance + 'km of your location';
       var onDelete = function onDelete(value) {
         props.updateQueryParams({ latitude: null, longitude: null, distance: 50 });
       };
@@ -51497,10 +51508,12 @@ var TopicsFilterForm = function (_Component) {
   }, {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      var topics = nextProps.topics ? nextProps.topics.map(function (topic) {
-        return { value: topic, label: topic };
-      }) : [];
-      this.setState({ topics: topics });
+      if (this.props !== nextProps) {
+        var topics = nextProps.topics ? nextProps.topics.map(function (topic) {
+          return { value: topic, label: topic };
+        }) : [];
+        this.setState({ topics: topics });
+      }
     }
   }, {
     key: '_fetchTopics',

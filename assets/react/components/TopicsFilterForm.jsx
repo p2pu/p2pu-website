@@ -20,8 +20,10 @@ export default class TopicsFilterForm extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const topics = nextProps.topics ? nextProps.topics.map((topic) => ({ value: topic, label: topic })) : [];
-    this.setState({ topics: topics })
+    if (this.props !== nextProps) {
+      const topics = nextProps.topics ? nextProps.topics.map((topic) => ({ value: topic, label: topic })) : [];
+      this.setState({ topics: topics })
+    }
   }
 
   _fetchTopics() {

@@ -27,22 +27,27 @@ section.page-title {
     display: flex;
     padding: $padding-sm;
 
-    i.material-icons {
-      position: absolute;
-      padding-top: 10px;
-      padding-left: 10px;
-    }
-
-    input.search-input {
+    .wrapper {
+      display: flex;
       flex-grow: 1;
-      border-radius: 2em;
       margin-right: $padding-sm;
-      padding-left: $padding-md;
-      padding-right: $padding-sm;
-      border: none;
 
-      &::placeholder {
-        font-style: italic;
+      i.material-icons {
+        position: absolute;
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+
+      input.search-input {
+        border-radius: 2em;
+        padding-left: $padding-md;
+        padding-right: $padding-sm;
+        border: none;
+        width: 100%;
+
+        &::placeholder {
+          font-style: italic;
+        }
       }
     }
   }
@@ -58,32 +63,39 @@ section.page-title {
     flex-basis: 50%;
     flex-direction: column;
 
-    .filter {
-      font-weight: bold;
-      flex-grow: 1;
-      background-color: $white;
-      color: $gray-darker;
-      text-transform: uppercase;
-      cursor: pointer;
-      padding: $padding-sm;
+    .wrapper {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      border-bottom: 2px solid $gray-lighter;
+      flex-grow: 1;
+
+      .filter {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid $gray-lighter;
+        font-weight: bold;
+        background-color: $white;
+        color: $gray-darker;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: $padding-sm;
+
+        i.material-icons {
+          color: $p2pu-blue;
+          font-weight: bold;
+          margin-left: $padding-sm;
+          font-size: 1em;
+        }
+
+        &.active {
+          background-color: $gray-lighter;
+        }
+      }
 
       &:last-of-type {
-        border-bottom: none;
-      }
-
-      i.material-icons {
-        color: $p2pu-blue;
-        font-weight: bold;
-        margin-left: $padding-sm;
-        font-size: 1em;
-      }
-
-      &.active {
-        background-color: $gray-lighter;
+        .filter {
+          border-bottom: none;
+        }
       }
     }
   }
@@ -317,5 +329,82 @@ header {
       font-size: 20px;
       cursor: pointer;
      }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  body {
+    font-size: $font-size-base-mobile;
+  }
+
+  section.page-title {
+    header {
+      h1 {
+        font-size: 2em;
+      }
+    }
+  }
+
+  .search-container {
+    .search-bar {
+      flex-direction: column;
+
+      .wrapper {
+        margin-right: 0;
+        margin-bottom: 4px;
+
+        input.search-input {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+
+      button.submit {
+        width: 100%;
+        background-color: $gray-lighter;
+      }
+    }
+
+  }
+
+
+  .filter-section {
+    flex-direction: column;
+
+    .filters-bar {
+      width: 100%;
+
+      .wrapper {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .search-results {
+    overflow: hidden;
+    .result-item {
+      padding: 8px 0;
+      margin-bottom: 0;
+      .card {
+        position: relative;
+        left: 0;
+        transform: translateX(0);
+      }
+
+      &:hover, &:focus {
+        .show-on-hover {
+          max-height: 0px;
+        }
+
+        .card {
+          left: 0;
+          transform: scale(1) translateX(0);
+        }
+      }
+    }
+  }
+
+  .hidden-on-mobile {
+    display: none !important;
   }
 }

@@ -22001,7 +22001,7 @@ var COURSE_CATEGORIES = exports.COURSE_CATEGORIES = ['Geography', 'Economics', '
 
 var API_ENDPOINTS = exports.API_ENDPOINTS = {
   learningCircles: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?',
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?limit=10&',
     searchParams: ['q', 'topics', 'weekdays', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
   },
   courses: {
@@ -30132,7 +30132,6 @@ var ApiHelper = function () {
           return key + '=' + encodeURIComponent(value);
         }
       });
-      console.log('encodedParams', encodedParams);
       var queryString = _lodash2.default.compact(encodedParams).join('&');
 
       console.log('url', '' + baseUrl + queryString);
@@ -30148,6 +30147,7 @@ var ApiHelper = function () {
         dataType: 'JSONP',
         type: 'GET',
         success: function success(res) {
+          console.log('RESPONSE', res);
           opts.callback(res, opts);
         }
       });
@@ -31068,8 +31068,6 @@ var CitySelect = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log('city select STATE value', this.state.value);
-      console.log('city select PROPS value', this.state.value);
       return _react2.default.createElement(_reactSelect2.default, {
         name: this.props.name,
         className: 'city-select ' + this.props.classes,

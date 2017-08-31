@@ -61,7 +61,7 @@ export default class LocationFilterForm extends Component {
         />
         <RangeSliderWithLabel
           classes='col-sm-12'
-          label={`Within a distance of ${this.props.distance}km`}
+          label={`Within ${this.props.distance}km`}
           name='distance-slider'
           value={this.props.distance}
           handleChange={this.handleRangeChange}
