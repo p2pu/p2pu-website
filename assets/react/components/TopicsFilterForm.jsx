@@ -31,7 +31,7 @@ export default class TopicsFilterForm extends Component {
       let topics = response.items.map((course) => course.topics);
       topics = _.flatten(topics);
       topics = _.uniq(topics);
-      topics = topics.map((topic) => ({ value: topic, label: topic }));
+      topics = topics.sort().map((topic) => ({ value: topic, label: topic }));
 
       this.setState({ options: topics })
     }

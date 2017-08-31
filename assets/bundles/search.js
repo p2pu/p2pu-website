@@ -51515,7 +51515,7 @@ var TopicsFilterForm = function (_Component) {
         });
         topics = _lodash2.default.flatten(topics);
         topics = _lodash2.default.uniq(topics);
-        topics = topics.map(function (topic) {
+        topics = topics.sort().map(function (topic) {
           return { value: topic, label: topic };
         });
 
