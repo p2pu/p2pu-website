@@ -16,7 +16,6 @@ export default class ApiHelper {
         return `${key}=${encodeURIComponent(value)}`
       }
     })
-    console.log('encodedParams', encodedParams)
     const queryString = _.compact(encodedParams).join('&');
 
     console.log('url', `${baseUrl}${queryString}`)
@@ -31,6 +30,7 @@ export default class ApiHelper {
       dataType: 'JSONP',
       type: 'GET',
       success: (res) => {
+        console.log('RESPONSE', res)
         opts.callback(res, opts);
       }
     });

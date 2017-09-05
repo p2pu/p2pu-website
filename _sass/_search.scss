@@ -2,8 +2,6 @@ section.page-title {
   display: flex;
   align-content: center;
   justify-content: center;
-  padding-top: $padding-md;
-  padding-bottom: $padding-md;
 
   header {
     display: flex;
@@ -14,7 +12,7 @@ section.page-title {
     text-align: center;
 
     h1 {
-      font-size: 4em;
+      font-size: 3.4em;
       color: $gray-light;
     }
   }
@@ -29,50 +27,58 @@ section.page-title {
     display: flex;
     padding: $padding-sm;
 
-    i.material-icons {
-      position: absolute;
-      padding-top: 10px;
-      padding-left: 10px;
-    }
-
-    input.search-input {
+    .wrapper {
+      display: flex;
       flex-grow: 1;
-      border-radius: 2em;
       margin-right: $padding-sm;
-      padding-left: $padding-md;
-      padding-right: $padding-sm;
-      border: none;
 
-      &::placeholder {
-        font-style: italic;
+      i.material-icons {
+        position: absolute;
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+
+      input.search-input {
+        border-radius: 2em;
+        padding-left: $padding-md;
+        padding-right: $padding-sm;
+        border: none;
+        width: 100%;
+
+        &::placeholder {
+          font-style: italic;
+        }
       }
     }
   }
 
+  .filter-section {
+    display: flex;
+    background-color: $gray-lighter;
+  }
+
   .filters-bar {
     display: flex;
+    flex-grow: 1;
+    flex-basis: 50%;
+    flex-direction: column;
 
-    .slider {
+    .wrapper {
       display: flex;
       flex-grow: 1;
 
       .filter {
-        font-weight: bold;
+        display: flex;
         flex-grow: 1;
-        background-color: $gray-lighter;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid $gray-lighter;
+        font-weight: bold;
+        background-color: $white;
         color: $gray-darker;
         text-transform: uppercase;
         cursor: pointer;
         padding: $padding-sm;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-left: 1px solid $white;
-        border-right: 1px solid $white;
-        border-top: 2px solid $white;
-        border-bottom: 2px solid $white;
-        border-radius: 4px;
-        margin-bottom: $padding-sm;
 
         i.material-icons {
           color: $p2pu-blue;
@@ -82,16 +88,24 @@ section.page-title {
         }
 
         &.active {
-          background-color: $white;
+          background-color: $gray-lighter;
+        }
+      }
+
+      &:last-of-type {
+        .filter {
+          border-bottom: none;
         }
       }
     }
   }
 
   .filter-form-dropdown {
+    flex-grow: 1;
+    flex-basis: 50%;
 
     &.open {
-      padding: $padding-sm;
+      padding: 14px;
     }
   }
 }
@@ -210,6 +224,22 @@ section.page-title {
       }
 
       .actions {
+        a {
+          color: $white;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          i.material-icons {
+            font-size: 18px;
+            vertical-align: middle;
+            margin-right: 4px;
+          }
+        }
+      }
+
+      .cta {
         padding-top: $padding-sm;
         display: flex;
         justify-content: center;
@@ -260,8 +290,11 @@ header {
   }
 }
 
+.range-slider-with-label {
+  margin: 10px 0;
+}
+
 .select-with-label {
-  margin: 20px 0;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -276,9 +309,10 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
 
-  &.container {
+  &.wrapper {
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: $padding-sm;
   }
 
   .search-tag {
@@ -295,5 +329,82 @@ header {
       font-size: 20px;
       cursor: pointer;
      }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  body {
+    font-size: $font-size-base-mobile;
+  }
+
+  section.page-title {
+    header {
+      h1 {
+        font-size: 2em;
+      }
+    }
+  }
+
+  .search-container {
+    .search-bar {
+      flex-direction: column;
+
+      .wrapper {
+        margin-right: 0;
+        margin-bottom: 4px;
+
+        input.search-input {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+
+      button.submit {
+        width: 100%;
+        background-color: $gray-lighter;
+      }
+    }
+
+  }
+
+
+  .filter-section {
+    flex-direction: column;
+
+    .filters-bar {
+      width: 100%;
+
+      .wrapper {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .search-results {
+    overflow: hidden;
+    .result-item {
+      padding: 8px 0;
+      margin-bottom: 0;
+      .card {
+        position: relative;
+        left: 0;
+        transform: translateX(0);
+      }
+
+      &:hover, &:focus {
+        .show-on-hover {
+          max-height: 0px;
+        }
+
+        .card {
+          left: 0;
+          transform: scale(1) translateX(0);
+        }
+      }
+    }
+  }
+
+  .hidden-on-mobile {
+    display: none !important;
   }
 }

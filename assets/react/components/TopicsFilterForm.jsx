@@ -20,8 +20,10 @@ export default class TopicsFilterForm extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const topics = nextProps.topics ? nextProps.topics.map((topic) => ({ value: topic, label: topic })) : [];
-    this.setState({ topics: topics })
+    if (this.props !== nextProps) {
+      const topics = nextProps.topics ? nextProps.topics.map((topic) => ({ value: topic, label: topic })) : [];
+      this.setState({ topics: topics })
+    }
   }
 
   _fetchTopics() {
@@ -31,7 +33,7 @@ export default class TopicsFilterForm extends Component {
       let topics = response.items.map((course) => course.topics);
       topics = _.flatten(topics);
       topics = _.uniq(topics);
-      topics = topics.map((topic) => ({ value: topic, label: topic }));
+      topics = topics.sort().map((topic) => ({ value: topic, label: topic }));
 
       this.setState({ options: topics })
     }

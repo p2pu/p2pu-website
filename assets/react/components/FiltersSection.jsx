@@ -9,31 +9,49 @@ export default class FilterSection extends Component {
     this.updateActiveFilter = (filter) => this._updateActiveFilter(filter);
   }
 
+  componentDidMount() {
+    this.setState({ activeFilter: this.props.filterCollection[0] })
+  }
+
   _updateActiveFilter(filter) {
     this.setState({ activeFilter: filter })
   }
 
   render() {
+    const isMobile = screen.width < 768;
+
     return(
       <div className="filter-section">
         <div className='filters-bar'>
-          <div className='slider'>
-            {
-              this.props.filterCollection.map((filter, index) => (
-                <Filter
-                  key={index}
-                  filter={filter}
-                  active={this.state.activeFilter === filter}
-                  updateActiveFilter={this.updateActiveFilter}
-                />
-              ))
-            }
-          </div>
+          {
+            this.props.filterCollection.map((filter, index) => {
+              const isActive = this.state.activeFilter === filter;
+              return(
+                <div key={index} className='wrapper'>
+                  <Filter
+                    filter={filter}
+                    active={isActive}
+                    updateActiveFilter={this.updateActiveFilter}
+                  />
+                  {
+                    isMobile && isActive &&
+                    <FilterForm
+                      activeFilter={this.state.activeFilter}
+                      {...this.props}
+                    />
+                  }
+                </div>
+              )
+            })
+          }
         </div>
-        <FilterForm
-          activeFilter={this.state.activeFilter}
-          {...this.props}
-        />
+        {
+          !isMobile &&
+          <FilterForm
+            activeFilter={this.state.activeFilter}
+            {...this.props}
+          />
+        }
       </div>
     )
   }

@@ -11,8 +11,10 @@ const SearchBar = ({ placeholder, updateQueryParams }) => {
 
   return(
     <form className='search-bar col-sm-12' onSubmit={onSubmit}>
-      <i className="material-icons">search</i>
-      <input className='search-input' placeholder={placeholder} />
+      <div className='wrapper'>
+        <i className="material-icons">search</i>
+        <input className='search-input' placeholder={placeholder} />
+      </div>
       <button className='p2pu-btn light' type='submit'>Search</button>
     </form>
   )
