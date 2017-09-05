@@ -18,16 +18,16 @@ exclude_from_upload:
 
 redirects:
     index.html: /en/
-    en/learning-circles/: /en/facilitate/
-    en/facilitate/background/: /en/handbook/background/
-    en/facilitate/starting/: /en/handbook/starting/
-    en/facilitate/running/: /en/handbook/running/
-    en/facilitate/downloads/: /en/handbook/downloads/
-    en/community/: https://groups.google.com/a/p2pu.org/forum/#!forum/community
+    en/learning-circles/index.html: /en/facilitate/
+    en/facilitate/background/index.html: /en/handbook/background/
+    en/facilitate/starting/index.html: /en/handbook/starting/
+    en/facilitate/running/index.html: /en/handbook/running/
+    en/facilitate/downloads/index.html: /en/handbook/downloads/
+    en/community/index.html: https://groups.google.com/a/p2pu.org/forum/#!forum/community
     About-P2PU: /en/about/
-    webcraft/: https://courses.p2pu.org/webcraft/
+    webcraft/index.html: https://courses.p2pu.org/webcraft/
     school-of-ed: https://courses.p2pu.org/school-of-ed
-    en/Janepark/: https://courses.p2pu.org/en/Janepark/
+    en/Janepark/index.html: https://courses.p2pu.org/en/Janepark/
     course/list: https://learningcircles.p2pu.org/en/courses/
     sosi: https://courses.p2pu.org/sosi
 
