@@ -48,8 +48,6 @@ export default class CitySelect extends Component {
   }
 
   render() {
-    console.log('city select STATE value', this.state.value)
-    console.log('city select PROPS value', this.state.value)
     return(
       <Select
         name={ this.props.name }
