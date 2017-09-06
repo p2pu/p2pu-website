@@ -4,8 +4,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "webpack --optimize-minimize --config webpack.prod.config.js",
-    "watch": "webpack --config webpack.base.config.js --watch"
+    "build": "webpack -p --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
