@@ -67,11 +67,14 @@ const SearchTags = (props) => {
   }
 
   return(
+    <div>
+    <p className="centered large">Showing {props.data.length} search results.</p>
     <div className='search-tags wrapper'>
       {generateQueryTag()}
       {generateTopicsTags()}
       {generateLocationTag()}
       {generateMeetingDaysTags()}
+    </div>
     </div>
   )
 }

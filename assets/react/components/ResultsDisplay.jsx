@@ -1,6 +1,7 @@
 import React from 'react'
 import BrowseLearningCircles from './BrowseLearningCircles'
 import BrowseCourses from './BrowseCourses'
+import SearchTags from './SearchTags'
 
 const ResultsDisplay = (props) => {
   const renderResults = () => {
@@ -20,7 +21,7 @@ const ResultsDisplay = (props) => {
           </div>
         </div>
       </header>
-      <p className="centered large">{props.resultsSubtitle}</p>
+      <SearchTags {...props} />
       { renderResults() }
     </div>
   )
