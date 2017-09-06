@@ -4,12 +4,10 @@ export const SEARCH_PROPS = {
   learningCircles: {
     filters: ['location', 'topics', 'meetingDays'],
     placeholder: 'Search by city, organization, topic, and more... ',
-    resultsSubtitle: 'Sign up below for a learning circle in your area, or create your own!'
   },
   courses: {
     filters: ['topics'],
     placeholder: 'Search by title, subject, description, and more... ',
-    resultsSubtitle: 'Select a course below or create your own!'
   }
 };
 
@@ -39,5 +37,9 @@ export const API_ENDPOINTS = {
   courses: {
     baseUrl: 'https://learningcircles.p2pu.org/api/courses/?',
     searchParams: ['q', 'topics']
+  },
+  topics: {
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/topics/?',
+    searchParams: []
   }
 }

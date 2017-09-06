@@ -1,5 +1,6 @@
 section.page-title {
   display: flex;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
 
@@ -15,6 +16,12 @@ section.page-title {
       font-size: 3.4em;
       color: $gray-light;
     }
+  }
+
+  p.centered.large {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -218,14 +225,42 @@ section.page-title {
       color: #fff;
       box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
       font-size: $font-size-small;
+      display: flex;
+      flex-direction: column;
+
+      .usage-badge {
+        align-self: flex-end;
+        position: absolute;
+        background: $gray-snow;
+        color: $gray-darker;
+        padding: 4px;
+        font-size: $font-size-xs;
+        border-radius: 6px;
+        box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
+        transform: translateY(-40px);
+
+        .text {
+          padding: 6px;
+          border: 1px dashed $gray-darker;
+          border-radius: 4px;
+        }
+
+        .big {
+          font-weight: 900;
+          font-size: 1.4em;
+        }
+      }
 
       h4 {
         text-align: center;
       }
 
       .actions {
+        display: flex;
+
         a {
           color: $white;
+          margin-right: 10px;
 
           &:hover {
             text-decoration: underline;
@@ -329,6 +364,41 @@ header {
       font-size: 20px;
       cursor: pointer;
      }
+  }
+}
+
+.alternate-cta {
+  background: $p2pu-light-blue;
+  padding: $padding-md;
+
+  .divider {
+    border-bottom: 1px dashed $gray-darker;
+    margin-top: $padding-sm;
+    margin-bottom: $padding-sm;
+  }
+
+  .add-course, .create-course {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .p2pu-btn {
+      font-size: 0.8em;
+      display: flex;
+
+      i.material-icons {
+        font-size: 18px;
+        padding-right: 10px;
+      }
+    }
   }
 }
 

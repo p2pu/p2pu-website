@@ -21985,13 +21985,11 @@ var LEARNING_CIRCLES_LIMIT = exports.LEARNING_CIRCLES_LIMIT = 11;
 var SEARCH_PROPS = exports.SEARCH_PROPS = {
   learningCircles: {
     filters: ['location', 'topics', 'meetingDays'],
-    placeholder: 'Search by city, organization, topic, and more... ',
-    resultsSubtitle: 'Sign up below for a learning circle in your area, or create your own!'
+    placeholder: 'Search by city, organization, topic, and more... '
   },
   courses: {
     filters: ['topics'],
-    placeholder: 'Search by title, subject, description, and more... ',
-    resultsSubtitle: 'Select a course below or create your own!'
+    placeholder: 'Search by title, subject, description, and more... '
   }
 };
 
@@ -22007,6 +22005,10 @@ var API_ENDPOINTS = exports.API_ENDPOINTS = {
   courses: {
     baseUrl: 'https://learningcircles.p2pu.org/api/courses/?',
     searchParams: ['q', 'topics']
+  },
+  topics: {
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/topics/?',
+    searchParams: []
   }
 };
 

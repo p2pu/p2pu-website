@@ -27,15 +27,11 @@ export default class TopicsFilterForm extends Component {
   }
 
   _fetchTopics() {
-    const api = new ApiHelper('courses');
-    const params = { active: true }
+    const api = new ApiHelper('topics');
+    const params = {};
     const callback = (response) => {
-      let topics = response.items.map((course) => course.topics);
-      topics = _.flatten(topics);
-      topics = _.uniq(topics);
-      topics = topics.sort().map((topic) => ({ value: topic, label: topic }));
-
-      this.setState({ options: topics })
+      const options = _.keys(response.topics).sort().map((topic) => ({ value: topic, label: topic }))
+      this.setState({ options })
     }
 
     api.fetchResource({ params, callback })

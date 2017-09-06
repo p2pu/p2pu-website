@@ -21985,13 +21985,11 @@ var LEARNING_CIRCLES_LIMIT = exports.LEARNING_CIRCLES_LIMIT = 11;
 var SEARCH_PROPS = exports.SEARCH_PROPS = {
   learningCircles: {
     filters: ['location', 'topics', 'meetingDays'],
-    placeholder: 'Search by city, organization, topic, and more... ',
-    resultsSubtitle: 'Sign up below for a learning circle in your area, or create your own!'
+    placeholder: 'Search by city, organization, topic, and more... '
   },
   courses: {
     filters: ['topics'],
-    placeholder: 'Search by title, subject, description, and more... ',
-    resultsSubtitle: 'Select a course below or create your own!'
+    placeholder: 'Search by title, subject, description, and more... '
   }
 };
 
@@ -22007,6 +22005,10 @@ var API_ENDPOINTS = exports.API_ENDPOINTS = {
   courses: {
     baseUrl: 'https://learningcircles.p2pu.org/api/courses/?',
     searchParams: ['q', 'topics']
+  },
+  topics: {
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/topics/?',
+    searchParams: []
   }
 };
 
@@ -50514,13 +50516,10 @@ var Search = function (_Component) {
           filterCollection: filterCollection,
           updateQueryParams: this.updateQueryParams
         }, this.state)),
-        _react2.default.createElement(_SearchTags2.default, _extends({}, this.state, {
-          updateQueryParams: this.updateQueryParams
-        })),
         _react2.default.createElement(_ResultsDisplay2.default, _extends({
           resultsSubtitle: resultsSubtitle,
           data: this.state.searchResults
-        }, this.props))
+        }, this.state, this.props))
       );
     }
   }]);
@@ -50575,25 +50574,7 @@ var BrowseCourses = function BrowseCourses(props) {
         key: index,
         course: course
       });
-    }),
-    _react2.default.createElement(
-      'div',
-      { className: 'result-item grid-item start-learning-circle col-md-4 col-sm-12 col-xs-12' },
-      _react2.default.createElement(
-        'div',
-        { className: 'circle' },
-        _react2.default.createElement(
-          'p',
-          null,
-          'Create your own course'
-        ),
-        _react2.default.createElement(
-          'a',
-          { href: 'https://learningcircles.p2pu.org/en/course/create/', className: 'btn p2pu-btn dark arrow' },
-          _react2.default.createElement('i', { className: 'fa fa-arrow-right', 'aria-hidden': 'true' })
-        )
-      )
-    )
+    })
   );
 };
 
@@ -50618,12 +50599,21 @@ var _reactDom = __webpack_require__(16);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _UsageBadge = __webpack_require__(353);
+
+var _UsageBadge2 = _interopRequireDefault(_UsageBadge);
+
+var _lodash = __webpack_require__(30);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CourseCard = function CourseCard(props) {
 
   var feedbackPage = 'https://etherpad.p2pu.org/p/course-feedback-' + props.course.id;
   var selectCourse = 'https://learningcircles.p2pu.org/en/facilitator/study_group/create/?course_id=' + props.course.id;
+  var topicsList = _lodash2.default.take(props.course.topics, 4).join(', ');
 
   return _react2.default.createElement(
     'div',
@@ -50631,6 +50621,7 @@ var CourseCard = function CourseCard(props) {
     _react2.default.createElement(
       'div',
       { className: 'course-card col-xs-12' },
+      _react2.default.createElement(_UsageBadge2.default, { number: props.course.learning_circles }),
       _react2.default.createElement(
         'h4',
         { className: 'title' },
@@ -50644,43 +50635,35 @@ var CourseCard = function CourseCard(props) {
       _react2.default.createElement(
         'p',
         { className: 'provider' },
-        'Provider: ' + props.course.provider
+        'Provided by ' + props.course.provider
       ),
       _react2.default.createElement(
         'p',
-        { className: 'learning-circles' },
-        'Learning circles: ' + props.course.learning_circles
+        { className: 'tags' },
+        'Topics: ' + topicsList
       ),
       _react2.default.createElement(
         'div',
         { className: 'actions' },
         _react2.default.createElement(
-          'p',
-          null,
+          'a',
+          { href: props.course.link, className: '', target: '_blank' },
           _react2.default.createElement(
-            'a',
-            { href: props.course.link, className: '', target: '_blank' },
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons' },
-              'open_in_new'
-            ),
-            'See the course'
-          )
+            'i',
+            { className: 'material-icons' },
+            'open_in_new'
+          ),
+          'See the course'
         ),
         _react2.default.createElement(
-          'p',
-          null,
+          'a',
+          { href: feedbackPage, className: '', target: '_blank' },
           _react2.default.createElement(
-            'a',
-            { href: feedbackPage, className: '', target: '_blank' },
-            _react2.default.createElement(
-              'i',
-              { className: 'material-icons' },
-              'open_in_new'
-            ),
-            'Facilitator feedback'
-          )
+            'i',
+            { className: 'material-icons' },
+            'open_in_new'
+          ),
+          'Facilitator feedback'
         )
       ),
       _react2.default.createElement(
@@ -51197,6 +51180,10 @@ var _BrowseCourses = __webpack_require__(246);
 
 var _BrowseCourses2 = _interopRequireDefault(_BrowseCourses);
 
+var _SearchTags = __webpack_require__(256);
+
+var _SearchTags2 = _interopRequireDefault(_SearchTags);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ResultsDisplay = function ResultsDisplay(props) {
@@ -51232,11 +51219,7 @@ var ResultsDisplay = function ResultsDisplay(props) {
         )
       )
     ),
-    _react2.default.createElement(
-      'p',
-      { className: 'centered large' },
-      props.resultsSubtitle
-    ),
+    _react2.default.createElement(_SearchTags2.default, props),
     renderResults()
   );
 };
@@ -51422,11 +51405,22 @@ var SearchTags = function SearchTags(props) {
 
   return _react2.default.createElement(
     'div',
-    { className: 'search-tags wrapper' },
-    generateQueryTag(),
-    generateTopicsTags(),
-    generateLocationTag(),
-    generateMeetingDaysTags()
+    null,
+    _react2.default.createElement(
+      'p',
+      { className: 'centered large' },
+      'Showing ',
+      props.data.length,
+      ' search results.'
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'search-tags wrapper' },
+      generateQueryTag(),
+      generateTopicsTags(),
+      generateLocationTag(),
+      generateMeetingDaysTags()
+    )
   );
 };
 
@@ -51520,19 +51514,13 @@ var TopicsFilterForm = function (_Component) {
     value: function _fetchTopics() {
       var _this2 = this;
 
-      var api = new _ApiHelper2.default('courses');
-      var params = { active: true };
+      var api = new _ApiHelper2.default('topics');
+      var params = {};
       var callback = function callback(response) {
-        var topics = response.items.map(function (course) {
-          return course.topics;
-        });
-        topics = _lodash2.default.flatten(topics);
-        topics = _lodash2.default.uniq(topics);
-        topics = topics.sort().map(function (topic) {
+        var options = _lodash2.default.keys(response.topics).sort().map(function (topic) {
           return { value: topic, label: topic };
         });
-
-        _this2.setState({ options: topics });
+        _this2.setState({ options: options });
       };
 
       api.fetchResource({ params: params, callback: callback });
@@ -53198,6 +53186,125 @@ var _Search2 = _interopRequireDefault(_Search);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(_Search2.default, { searchSubject: 'courses' }), document.getElementById('search-courses-component'));
+
+/***/ }),
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(16);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var UsageBadge = function UsageBadge(_ref) {
+  var number = _ref.number;
+
+  var display = number > 0;
+  var pluralizedText = number === 1 ? 'learning circle' : 'learning circles';
+
+  if (display) {
+    return _react2.default.createElement(
+      'div',
+      { className: 'usage-badge' },
+      _react2.default.createElement(
+        'div',
+        { className: 'text' },
+        'Used by ',
+        _react2.default.createElement(
+          'span',
+          { className: 'big' },
+          number
+        ),
+        ' ',
+        pluralizedText
+      )
+    );
+  } else {
+    return null;
+  }
+};
+
+exports.default = UsageBadge;
 
 /***/ })
 /******/ ]);

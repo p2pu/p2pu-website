@@ -76,13 +76,10 @@ export default class Search extends Component {
           updateQueryParams={this.updateQueryParams}
           {...this.state}
         />
-        <SearchTags
-          {...this.state}
-          updateQueryParams={this.updateQueryParams}
-        />
         <ResultsDisplay
           resultsSubtitle={resultsSubtitle}
           data={this.state.searchResults}
+          {...this.state}
           {...this.props}
         />
       </div>
