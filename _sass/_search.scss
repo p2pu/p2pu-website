@@ -228,6 +228,10 @@ section.page-title {
       display: flex;
       flex-direction: column;
 
+      p {
+        margin-bottom: 6px;
+      }
+
       .usage-badge {
         align-self: flex-end;
         position: absolute;
