@@ -20,7 +20,7 @@
 	{% elsif js contains 'http' %}
     <script src="{{ js }}"></script>
 	{% else %}
-		<script src="{{site.baseurl}}/assets/js/{{ js }}"></script>
+		<script src="{{site.baseurl}}/assets/{{ js }}"></script>
 	{% endif %}
 {% endfor %}
 

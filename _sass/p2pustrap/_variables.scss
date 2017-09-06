@@ -65,6 +65,7 @@ $font-family-base:        $font-family-sans-serif;
 $font-size-base:          18px;
 $font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
 $font-size-small:         ceil(($font-size-base * 0.75)); // ~12px
+$font-size-xs:            ceil(($font-size-base * 0.60)); // ~10px
 
 $font-size-base-mobile:   18px;
 
@@ -86,7 +87,7 @@ $base-font-family:        $font-family-sans-serif;
 $base-font-family-weight: normal;
 
 $headings-font-family:    "Arvo", Helvetica, Arial, sans-serif;
-$headings-font-weight:    400;
+$headings-font-weight:    700;
 $headings-line-height:    1.1;
 $headings-color:          inherit;
 

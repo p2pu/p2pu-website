@@ -4,8 +4,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "webpack --optimize-minimize --config webpack.prod.config.js",
-    "watch": "webpack --config webpack.base.config.js --watch"
+    "build": "webpack -p --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-masonry-component": "^5.0.7",
+    "react-rangeslider": "^2.1.0",
     "react-select": "^1.0.0-rc.5",
     "react-text-carousel": "^0.1.1",
     "sass-loader": "^6.0.3",

@@ -27,18 +27,26 @@ const reactBuild = {
   },
   module: {
     loaders: [
-      { 
-        test: /\.scss$/, 
+      {
+        test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
-      { 
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader']
+      },
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader?presets[]=es2015&presets[]=react'
       },
     ],
   },
-  plugins: [],
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common',
+    }),
+  ],
   resolve: {
     modules: ['node_modules'],
     extensions: ['.js', '.jsx', '.css'],
