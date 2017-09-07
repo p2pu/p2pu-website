@@ -22003,7 +22003,7 @@ var MEETING_DAYS = exports.MEETING_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Th
 var API_ENDPOINTS = exports.API_ENDPOINTS = {
   learningCircles: {
     baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?',
-    searchParams: ['q', 'topics', 'weekdays', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
+    searchParams: ['q', 'topics', 'weekdays', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup', 'team_id']
   },
   courses: {
     baseUrl: 'https://learningcircles.p2pu.org/api/courses/?',
@@ -31248,11 +31248,27 @@ var SearchTags = function SearchTags(props) {
       var onDelete = function onDelete(value) {
         props.updateQueryParams({ q: null });
       };
+
       return [_react2.default.createElement(
         'span',
         { key: 'queryTagIntro' },
         'the search query'
       ), _react2.default.createElement(_SearchTag2.default, { key: 'queryTag-0', value: props.q, onDelete: onDelete })];
+    }
+  };
+
+  var generateTeamNameTag = function generateTeamNameTag() {
+    if (props.teamName) {
+      var onDelete = function onDelete(value) {
+        props.updateQueryParams({ teamName: null, team_id: null });
+      };
+      var humanReadableName = decodeURIComponent(props.teamName);
+
+      return [_react2.default.createElement(
+        'span',
+        { key: 'queryTagIntro' },
+        'organized by'
+      ), _react2.default.createElement(_SearchTag2.default, { key: 'queryTag-0', value: humanReadableName, onDelete: onDelete })];
     }
   };
 
@@ -31353,6 +31369,8 @@ var SearchTags = function SearchTags(props) {
         return generateLocationTag();
       case 'meetingDays':
         return generateMeetingDaysTags();
+      case 'teamName':
+        return generateTeamNameTag();
     }
   };
 
@@ -31369,7 +31387,7 @@ var SearchTags = function SearchTags(props) {
       { key: 'resultsSummary-2' },
       'with'
     );
-    var tagsToDisplay = ['q', 'topics', 'location', 'meetingDays'];
+    var tagsToDisplay = ['q', 'topics', 'location', 'meetingDays', 'teamName'];
 
     var searchSummaryItems = [_react2.default.createElement(
       'span',
@@ -50627,7 +50645,13 @@ var Search = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).call(this, props));
 
-    _this.state = { searchResults: [], distance: 50 };
+    var urlParams = new URL(window.location.href).searchParams;
+    _this.state = {
+      searchResults: [],
+      distance: 50,
+      teamName: urlParams.get('team'),
+      team_id: urlParams.get('team_id')
+    };
     _this.handleChange = function (s) {
       return _this._handleChange(s);
     };
@@ -50663,7 +50687,7 @@ var Search = function (_Component) {
   }, {
     key: '_loadInitialData',
     value: function _loadInitialData() {
-      this.updateQueryParams({ active: true, order: 'title' });
+      this.updateQueryParams({ active: true, order: 'title', team_id: this.state.team_id });
     }
   }, {
     key: '_sendQuery',

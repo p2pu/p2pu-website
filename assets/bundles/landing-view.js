@@ -22003,7 +22003,7 @@ var MEETING_DAYS = exports.MEETING_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Th
 var API_ENDPOINTS = exports.API_ENDPOINTS = {
   learningCircles: {
     baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?',
-    searchParams: ['q', 'topics', 'weekdays', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
+    searchParams: ['q', 'topics', 'weekdays', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup', 'team_id']
   },
   courses: {
     baseUrl: 'https://learningcircles.p2pu.org/api/courses/?',

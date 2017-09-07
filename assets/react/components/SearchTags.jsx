@@ -7,7 +7,17 @@ const SearchTags = (props) => {
   const generateQueryTag = () => {
     if (props.q) {
       const onDelete = (value) => { props.updateQueryParams({ q: null }) }
+
       return [<span key='queryTagIntro'>the search query</span>, <SearchTag key='queryTag-0' value={props.q} onDelete={onDelete} />];
+    }
+  }
+
+  const generateTeamNameTag = () => {
+    if (props.teamName) {
+      const onDelete = (value) => { props.updateQueryParams({ teamName: null, team_id: null }) }
+      const humanReadableName = decodeURIComponent(props.teamName);
+
+      return [<span key='queryTagIntro'>organized by</span>, <SearchTag key='queryTag-0' value={humanReadableName} onDelete={onDelete} />];
     }
   }
 
@@ -84,6 +94,8 @@ const SearchTags = (props) => {
       return generateLocationTag();
       case 'meetingDays':
       return generateMeetingDaysTags();
+      case 'teamName':
+      return generateTeamNameTag();
     }
   }
 
@@ -91,7 +103,7 @@ const SearchTags = (props) => {
     const results = props.data.length === 1 ? 'result' : 'results';
     const forSearchSubject = <span key='resultsSummary-1'>for {SEARCH_SUBJECTS[props.searchSubject]}</span>;
     const withSpan = <span key='resultsSummary-2'>with</span>;
-    const tagsToDisplay = ['q', 'topics', 'location', 'meetingDays'];
+    const tagsToDisplay = ['q', 'topics', 'location', 'meetingDays', 'teamName'];
 
     let searchSummaryItems = [<span key='resultsSummary-0'>Showing {props.data.length} {results}</span>];
 
