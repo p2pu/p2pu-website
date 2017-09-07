@@ -26,17 +26,9 @@ export const MEETING_DAYS = [
   'Sunday'
 ]
 
-export const COURSE_CATEGORIES = [
-  'Geography',
-  'Economics',
-  'Social Sciences',
-  'Humanities',
-  'Languages'
-]
-
 export const API_ENDPOINTS = {
   learningCircles: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?limit=10&',
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?',
     searchParams: ['q', 'topics', 'weekdays', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
   },
   courses: {

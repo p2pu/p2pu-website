@@ -22000,11 +22000,9 @@ var SEARCH_SUBJECTS = exports.SEARCH_SUBJECTS = {
 
 var MEETING_DAYS = exports.MEETING_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-var COURSE_CATEGORIES = exports.COURSE_CATEGORIES = ['Geography', 'Economics', 'Social Sciences', 'Humanities', 'Languages'];
-
 var API_ENDPOINTS = exports.API_ENDPOINTS = {
   learningCircles: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?limit=10&',
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?',
     searchParams: ['q', 'topics', 'weekdays', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
   },
   courses: {
@@ -30127,7 +30125,7 @@ var CheckboxWithLabel = function CheckboxWithLabel(_ref) {
   return _react2.default.createElement(
     "div",
     { className: "checkbox-with-label label-right " + classes },
-    _react2.default.createElement("input", { type: "checkbox", name: name, id: name, onChange: onChange, checked: checked }),
+    _react2.default.createElement("input", { type: "checkbox", name: name, id: name, onChange: onChange, defaultChecked: false, checked: checked }),
     _react2.default.createElement(
       "label",
       { htmlFor: name },
@@ -30176,7 +30174,7 @@ var ApiHelper = function () {
       var baseUrl = this.baseUrl;
       var encodedParams = this.validParams.map(function (key) {
         var value = params[key];
-        if (value && value.length > 0) {
+        if (!!value) {
           return key + '=' + encodeURIComponent(value);
         }
       });
@@ -31261,7 +31259,9 @@ var SearchTags = function SearchTags(props) {
   var generateTopicsTags = function generateTopicsTags() {
     if (props.topics && props.topics.length > 0) {
       var onDelete = function onDelete(value) {
-        props.updateQueryParams({ topics: _lodash2.default.without(props.topics, value) });
+        var newTopicsArray = _lodash2.default.without(props.topics, value);
+        var topics = newTopicsArray.length > 0 ? newTopicsArray : null;
+        props.updateQueryParams({ topics: topics });
       };
 
       var introPhrase = props.topics.length === 1 ? 'the topic' : 'the topics';
@@ -31291,7 +31291,7 @@ var SearchTags = function SearchTags(props) {
     if (props.latitude && props.longitude) {
       var text = 'Within ' + props.distance + 'km of your location';
       var onDelete = function onDelete(value) {
-        props.updateQueryParams({ latitude: null, longitude: null, distance: 50 });
+        props.updateQueryParams({ latitude: null, longitude: null, distance: 50, useLocation: false });
       };
       return [_react2.default.createElement(
         'span',
@@ -31314,7 +31314,9 @@ var SearchTags = function SearchTags(props) {
     if (props.weekdays && props.weekdays.length > 0) {
       var onDelete = function onDelete(day) {
         var dayIndex = _constants.MEETING_DAYS.indexOf(day);
-        props.updateQueryParams({ weekdays: _lodash2.default.without(props.weekdays, dayIndex) });
+        var newWeekdayArray = _lodash2.default.without(props.weekdays, dayIndex);
+        var weekdays = newWeekdayArray.length > 0 ? newWeekdayArray : null;
+        props.updateQueryParams({ weekdays: weekdays });
       };
 
       var weekdayTagsArray = [_react2.default.createElement(
@@ -31360,8 +31362,12 @@ var SearchTags = function SearchTags(props) {
       'span',
       { key: 'resultsSummary-1' },
       'for ',
-      _constants.SEARCH_SUBJECTS[props.searchSubject],
-      ' with'
+      _constants.SEARCH_SUBJECTS[props.searchSubject]
+    );
+    var withSpan = _react2.default.createElement(
+      'span',
+      { key: 'resultsSummary-2' },
+      'with'
     );
     var tagsToDisplay = ['q', 'topics', 'location', 'meetingDays'];
 
@@ -31380,6 +31386,9 @@ var SearchTags = function SearchTags(props) {
       if (!!tagsArray) {
         if (searchSummaryItems.length === 1) {
           searchSummaryItems.push(forSearchSubject);
+          if (tag === 'q' || tag === 'topics') {
+            searchSummaryItems.push(withSpan);
+          }
         } else {
           searchSummaryItems.push(_react2.default.createElement(
             'span',
@@ -51168,7 +51177,7 @@ var LocationFilterForm = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (LocationFilterForm.__proto__ || Object.getPrototypeOf(LocationFilterForm)).call(this, props));
 
-    _this.state = { useLocation: false, city: null };
+    _this.state = { city: null };
     _this.getLocation = function (checkboxValue) {
       return _this._getLocation(checkboxValue);
     };
@@ -51178,6 +51187,9 @@ var LocationFilterForm = function (_Component) {
     _this.handleRangeChange = function (value) {
       return _this._handleRangeChange(value);
     };
+    _this.generateLocationLabel = function () {
+      return _this._generateLocationLabel();
+    };
     return _this;
   }
 
@@ -51186,15 +51198,17 @@ var LocationFilterForm = function (_Component) {
     value: function _getLocation(checkboxValue) {
       var _this2 = this;
 
-      this.setState({ useLocation: checkboxValue });
-
-      if (checkboxValue === false) {
-        this.props.updateQueryParams({ latitude: null, longitude: null });
+      if (checkboxValue === true) {
+        this.setState({ gettingLocation: true });
+        this.props.updateQueryParams({ useLocation: checkboxValue });
+      } else {
+        this.props.updateQueryParams({ latitude: null, longitude: null, useLocation: checkboxValue });
         return;
       }
 
       var success = function success(position) {
         _this2.props.updateQueryParams({ latitude: position.coords.latitude, longitude: position.coords.longitude, city: null });
+        _this2.setState({ gettingLocation: false });
       };
 
       var error = function error() {
@@ -51213,10 +51227,24 @@ var LocationFilterForm = function (_Component) {
       }
     }
   }, {
+    key: '_generateLocationLabel',
+    value: function _generateLocationLabel() {
+      var label = 'Use my current location';
+
+      if (this.state.error) {
+        label = this.state.error;
+      } else if (this.state.gettingLocation) {
+        label = 'Detecting your location...';
+      } else if (!this.state.gettingLocation && this.props.latitude && this.props.longitude) {
+        label = 'Using your current location';
+      }
+
+      return label;
+    }
+  }, {
     key: '_handleCitySelect',
     value: function _handleCitySelect(city) {
-      this.setState({ useLocation: false });
-      this.props.updateQueryParams({ city: city, latitude: null, longitude: null, distance: 50 });
+      this.props.updateQueryParams({ city: city, latitude: null, longitude: null, distance: 50, useLocation: false });
     }
   }, {
     key: '_handleRangeChange',
@@ -51226,14 +51254,15 @@ var LocationFilterForm = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      console.log('this.props.useLocation', this.props.useLocation);
       return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(_CheckboxWithLabel2.default, {
           classes: 'col-sm-12',
           name: 'geolocation',
-          label: 'Use my current location',
-          checked: this.state.useLocation,
+          label: this.generateLocationLabel(),
+          checked: this.props.useLocation,
           handleChange: this.getLocation
         }),
         _react2.default.createElement(_RangeSliderWithLabel2.default, {
@@ -51244,20 +51273,32 @@ var LocationFilterForm = function (_Component) {
           handleChange: this.handleRangeChange,
           min: 10,
           max: 150,
-          step: 10
+          step: 10,
+          disabled: !this.props.useLocation
         }),
+        _react2.default.createElement(
+          'div',
+          { className: 'divider col-sm-12' },
+          _react2.default.createElement('div', { className: 'divider-line' }),
+          _react2.default.createElement(
+            'div',
+            { className: 'divider-text' },
+            'or'
+          )
+        ),
         _react2.default.createElement(
           'div',
           { className: 'select-with-label label-left col-sm-12' },
           _react2.default.createElement(
             'label',
             { htmlFor: 'select-city' },
-            'Or select a location:'
+            'Select a location:'
           ),
           _react2.default.createElement(_CitySelect2.default, {
             classes: '',
             name: 'select-city',
             label: 'Select a location',
+            value: this.props.city,
             handleSelect: this.handleCitySelect
           })
         )
@@ -51725,9 +51766,12 @@ var _index2 = _interopRequireDefault(_index);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var RangeSliderWithLabel = function RangeSliderWithLabel(props) {
+  var disabledClass = props.disabled ? 'disabled' : '';
+  var onChangeFunction = props.disabled ? null : props.handleChange;
+
   return _react2.default.createElement(
     'div',
-    { className: 'range-slider-with-label label-left ' + props.classes },
+    { className: 'range-slider-with-label label-left ' + props.classes + ' ' + disabledClass },
     _react2.default.createElement(
       'label',
       { htmlFor: props.name },
@@ -51739,7 +51783,7 @@ var RangeSliderWithLabel = function RangeSliderWithLabel(props) {
       min: props.min,
       max: props.max,
       step: props.step,
-      onChange: props.handleChange
+      onChange: onChangeFunction
     })
   );
 };
@@ -53452,7 +53496,12 @@ var OrderCoursesForm = function OrderCoursesForm(props) {
 
   var defaultChecked = props.order && props.order === formValues.true.value;
 
-  return _react2.default.createElement(_reactSwitchButton2.default, (_React$createElement = { name: 'order-courses', label: 'Switch mode', mode: 'select', labelRight: formValues.true.label }, _defineProperty(_React$createElement, 'label', formValues.false.label), _defineProperty(_React$createElement, 'onChange', handleSelect), _defineProperty(_React$createElement, 'defaultChecked', defaultChecked), _React$createElement));
+  return _react2.default.createElement(_reactSwitchButton2.default, (_React$createElement = {
+    name: 'order-courses',
+    label: 'Switch mode',
+    mode: 'select',
+    labelRight: formValues.true.label
+  }, _defineProperty(_React$createElement, 'label', formValues.false.label), _defineProperty(_React$createElement, 'onChange', handleSelect), _defineProperty(_React$createElement, 'defaultChecked', defaultChecked), _React$createElement));
 };
 
 exports.default = OrderCoursesForm;

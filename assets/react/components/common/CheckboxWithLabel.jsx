@@ -7,7 +7,7 @@ const CheckboxWithLabel = ({ name, classes, label, handleChange, checked }) => {
 
   return(
     <div className={`checkbox-with-label label-right ${classes}`} >
-      <input type="checkbox" name={name} id={name} onChange={onChange} checked={checked} />
+      <input type="checkbox" name={name} id={name} onChange={onChange} defaultChecked={false} checked={checked} />
       <label htmlFor={name}>{label}</label>
     </div>
   )

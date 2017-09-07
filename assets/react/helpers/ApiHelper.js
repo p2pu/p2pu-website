@@ -12,7 +12,7 @@ export default class ApiHelper {
     const baseUrl = this.baseUrl;
     const encodedParams = this.validParams.map((key) => {
       const value = params[key];
-      if (value && value.length > 0) {
+      if (!!value) {
         return `${key}=${encodeURIComponent(value)}`
       }
     })

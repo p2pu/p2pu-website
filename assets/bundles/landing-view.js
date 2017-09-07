@@ -22000,11 +22000,9 @@ var SEARCH_SUBJECTS = exports.SEARCH_SUBJECTS = {
 
 var MEETING_DAYS = exports.MEETING_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-var COURSE_CATEGORIES = exports.COURSE_CATEGORIES = ['Geography', 'Economics', 'Social Sciences', 'Humanities', 'Languages'];
-
 var API_ENDPOINTS = exports.API_ENDPOINTS = {
   learningCircles: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?limit=10&',
+    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?',
     searchParams: ['q', 'topics', 'weekdays', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup']
   },
   courses: {
@@ -30135,7 +30133,7 @@ var ApiHelper = function () {
       var baseUrl = this.baseUrl;
       var encodedParams = this.validParams.map(function (key) {
         var value = params[key];
-        if (value && value.length > 0) {
+        if (!!value) {
           return key + '=' + encodeURIComponent(value);
         }
       });

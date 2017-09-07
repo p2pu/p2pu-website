@@ -14,7 +14,9 @@ const SearchTags = (props) => {
   const generateTopicsTags = () => {
     if (props.topics && props.topics.length > 0) {
       const onDelete = (value) => {
-        props.updateQueryParams({ topics: _.without(props.topics, value) })
+        const newTopicsArray =  _.without(props.topics, value);
+        const topics = newTopicsArray.length > 0 ? newTopicsArray : null
+        props.updateQueryParams({ topics })
       }
 
       const introPhrase = props.topics.length === 1 ? 'the topic' : 'the topics';
@@ -36,7 +38,7 @@ const SearchTags = (props) => {
     if (props.latitude && props.longitude) {
       const text = `Within ${props.distance}km of your location`;
       const onDelete = (value) => {
-        props.updateQueryParams({ latitude: null, longitude: null, distance: 50 })
+        props.updateQueryParams({ latitude: null, longitude: null, distance: 50, useLocation: false })
       }
       return [<span key='locationTagIntro'>located</span>, <SearchTag key='locationTag-0' value={text} onDelete={onDelete} />];
     } else if (props.city) {
@@ -51,7 +53,9 @@ const SearchTags = (props) => {
     if (props.weekdays && props.weekdays.length > 0) {
       const onDelete = (day) => {
         const dayIndex = MEETING_DAYS.indexOf(day);
-        props.updateQueryParams({ weekdays: _.without(props.weekdays, dayIndex) })
+        const newWeekdayArray = _.without(props.weekdays, dayIndex);
+        const weekdays = newWeekdayArray.length > 0 ? newWeekdayArray : null;
+        props.updateQueryParams({ weekdays })
       }
 
       let weekdayTagsArray = [<span key='weekdayTagIntro'>meeting on</span>]
@@ -85,7 +89,8 @@ const SearchTags = (props) => {
 
   const generateSearchSummary = () => {
     const results = props.data.length === 1 ? 'result' : 'results';
-    const forSearchSubject = <span key='resultsSummary-1'>for {SEARCH_SUBJECTS[props.searchSubject]} with</span>;
+    const forSearchSubject = <span key='resultsSummary-1'>for {SEARCH_SUBJECTS[props.searchSubject]}</span>;
+    const withSpan = <span key='resultsSummary-2'>with</span>;
     const tagsToDisplay = ['q', 'topics', 'location', 'meetingDays'];
 
     let searchSummaryItems = [<span key='resultsSummary-0'>Showing {props.data.length} {results}</span>];
@@ -96,6 +101,9 @@ const SearchTags = (props) => {
       if (!!tagsArray) {
         if (searchSummaryItems.length === 1) {
           searchSummaryItems.push(forSearchSubject)
+          if (tag === 'q' || tag === 'topics') {
+            searchSummaryItems.push(withSpan)
+          }
         } else {
           searchSummaryItems.push(<span key={`resultsSummary-${searchSummaryItems.length}`}>and</span>)
         }

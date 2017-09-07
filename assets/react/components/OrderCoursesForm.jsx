@@ -22,7 +22,15 @@ const OrderCoursesForm = (props) => {
   const defaultChecked = props.order && props.order === formValues.true.value;
 
   return(
-    <SwitchButton name="order-courses" label="Switch mode" mode="select" labelRight={formValues.true.label} label={formValues.false.label} onChange={handleSelect} defaultChecked={defaultChecked} />
+    <SwitchButton
+      name="order-courses"
+      label="Switch mode"
+      mode="select"
+      labelRight={formValues.true.label}
+      label={formValues.false.label}
+      onChange={handleSelect}
+      defaultChecked={defaultChecked}
+    />
   )
 }
 
