@@ -114,6 +114,22 @@ section.page-title {
     &.open {
       padding: 14px;
     }
+
+    .rsbc-switch-button.rsbc-switch-button-flat-round.rsbc-mode-select {
+      &:hover {
+        input[type="checkbox"]:checked + label {
+          background-color: $p2pu-blue !important;
+        }
+      }
+
+      input[type="checkbox"] + label {
+        background-color: $p2pu-blue !important;
+
+        &:after {
+          background-color: $p2pu-blue !important;
+        }
+      }
+    }
   }
 }
 
@@ -343,33 +359,47 @@ header {
   }
 }
 
-.search-tags {
+.results-summary {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
 
-  &.wrapper {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: $padding-sm;
-  }
-
-  .search-tag {
-    background-color: #515665;
-    border-radius: 2em;
-    padding: 6px 12px;
-    font-size: 0.8em;
-    color: white;
-    text-transform: uppercase;
-    margin: 10px;
+  .search-tags {
     display: flex;
-     i {
-      margin-left: 4px;
-      font-size: 20px;
-      cursor: pointer;
-     }
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    span {
+      margin-right: 0.4em;
+    }
+
+    &.wrapper {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: $padding-sm;
+      margin-bottom: $padding-sm;
+    }
+
+    .search-tag {
+      background-color: #515665;
+      border-radius: 2em;
+      padding: 6px 12px;
+      font-size: 0.8em;
+      color: white;
+      text-transform: uppercase;
+      margin-right: 10px;
+      margin-bottom: 2px;
+      margin-top: 2px;
+      display: flex;
+       i {
+        margin-left: 4px;
+        font-size: 20px;
+        cursor: pointer;
+       }
+    }
   }
 }
+
 
 .alternate-cta {
   background: $p2pu-light-blue;

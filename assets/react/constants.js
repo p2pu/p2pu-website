@@ -3,13 +3,18 @@ export const LEARNING_CIRCLES_LIMIT = 11;
 export const SEARCH_PROPS = {
   learningCircles: {
     filters: ['location', 'topics', 'meetingDays'],
-    placeholder: 'Search by city, organization, topic, and more... ',
+    placeholder: 'Search by keyword, organization, topic, and more... ',
   },
   courses: {
-    filters: ['topics'],
+    filters: ['topics', 'orderCourses'],
     placeholder: 'Search by title, subject, description, and more... ',
   }
 };
+
+export const SEARCH_SUBJECTS = {
+  learningCircles: 'learning circles',
+  courses: 'courses'
+}
 
 export const MEETING_DAYS = [
   'Monday',
@@ -36,7 +41,7 @@ export const API_ENDPOINTS = {
   },
   courses: {
     baseUrl: 'https://learningcircles.p2pu.org/api/courses/?',
-    searchParams: ['q', 'topics']
+    searchParams: ['q', 'topics', 'order']
   },
   topics: {
     baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/topics/?',

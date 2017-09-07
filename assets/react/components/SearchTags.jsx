@@ -1,13 +1,13 @@
 import React from 'react'
 import SearchTag from './SearchTag'
-import { TAGS_TO_DISPLAY, MEETING_DAYS } from '../constants'
+import { MEETING_DAYS, SEARCH_SUBJECTS } from '../constants'
 import _ from 'lodash'
 
 const SearchTags = (props) => {
   const generateQueryTag = () => {
     if (props.q) {
       const onDelete = (value) => { props.updateQueryParams({ q: null }) }
-      return <SearchTag value={props.q} onDelete={onDelete} />;
+      return [<span key='queryTagIntro'>the search query</span>, <SearchTag key='queryTag-0' value={props.q} onDelete={onDelete} />];
     }
   }
 
@@ -17,15 +17,18 @@ const SearchTags = (props) => {
         props.updateQueryParams({ topics: _.without(props.topics, value) })
       }
 
-      return(
-        <div className='search-tags'>
-          {
-            props.topics.map((item, index) => {
-              return <SearchTag value={item} key={index} onDelete={onDelete} />
-            })
-          }
-        </div>
-      )
+      const introPhrase = props.topics.length === 1 ? 'the topic' : 'the topics';
+      let topicsTagsArray = [<span key='topicTagIntro'>{introPhrase}</span>]
+
+      props.topics.map((item, index) => {
+        if (props.topics.length > 1 && index === (props.topics.length - 1)) {
+          topicsTagsArray.push(<span key={`topicTag-${index + 2}`}>or</span>)
+        }
+
+        topicsTagsArray.push(<SearchTag value={item} key={`topicTag-${index}`} onDelete={onDelete} />)
+      })
+
+      return topicsTagsArray;
     }
   }
 
@@ -35,46 +38,79 @@ const SearchTags = (props) => {
       const onDelete = (value) => {
         props.updateQueryParams({ latitude: null, longitude: null, distance: 50 })
       }
-      return <SearchTag value={text} onDelete={onDelete} />;
+      return [<span key='locationTagIntro'>located</span>, <SearchTag key='locationTag-0' value={text} onDelete={onDelete} />];
     } else if (props.city) {
       const onDelete = (value) => {
         props.updateQueryParams({ city: null })
       }
-      return <SearchTag value={props.city} updateQueryParams={props.updateQueryParams} />;
+      return [<span key='locationTagIntro'>located in</span>, <SearchTag key='locationTag-0' value={props.city} onDelete={onDelete} />];
     }
   }
 
   const generateMeetingDaysTags = () => {
     if (props.weekdays && props.weekdays.length > 0) {
-
       const onDelete = (day) => {
         const dayIndex = MEETING_DAYS.indexOf(day);
         props.updateQueryParams({ weekdays: _.without(props.weekdays, dayIndex) })
       }
 
-      return(
-        <div className='search-tags'>
-          {
-            props.weekdays.map((dayIndex, index) => {
-              const weekdayName = MEETING_DAYS[dayIndex];
+      let weekdayTagsArray = [<span key='weekdayTagIntro'>meeting on</span>]
 
-              return <SearchTag value={weekdayName} key={index} onDelete={onDelete} />
-            })
-          }
-        </div>
-      )
+      props.weekdays.map((dayIndex, index) => {
+        const weekdayName = MEETING_DAYS[dayIndex];
+
+        if (props.weekdays.length > 1 && index === props.weekdays.length - 1) {
+          weekdayTagsArray.push(<span key={`weekdayTag-${index + 2}`}>or</span>)
+        }
+
+        weekdayTagsArray.push(<SearchTag value={weekdayName} key={`weekdatTag-${index}`} onDelete={onDelete} />)
+      })
+
+      return weekdayTagsArray;
     }
   }
 
+  const generateTagsPhrase = (tag) => {
+    switch (tag) {
+      case 'q':
+      return generateQueryTag();
+      case 'topics':
+      return generateTopicsTags();
+      case 'location':
+      return generateLocationTag();
+      case 'meetingDays':
+      return generateMeetingDaysTags();
+    }
+  }
+
+  const generateSearchSummary = () => {
+    const results = props.data.length === 1 ? 'result' : 'results';
+    const forSearchSubject = <span key='resultsSummary-1'>for {SEARCH_SUBJECTS[props.searchSubject]} with</span>;
+    const tagsToDisplay = ['q', 'topics', 'location', 'meetingDays'];
+
+    let searchSummaryItems = [<span key='resultsSummary-0'>Showing {props.data.length} {results}</span>];
+
+    tagsToDisplay.map((tag) => {
+      const tagsArray = generateTagsPhrase(tag);
+
+      if (!!tagsArray) {
+        if (searchSummaryItems.length === 1) {
+          searchSummaryItems.push(forSearchSubject)
+        } else {
+          searchSummaryItems.push(<span key={`resultsSummary-${searchSummaryItems.length}`}>and</span>)
+        }
+        searchSummaryItems.push(tagsArray)
+      }
+    })
+
+    return searchSummaryItems;
+  }
+
   return(
-    <div>
-    <p className="centered large">Showing {props.data.length} search results.</p>
-    <div className='search-tags wrapper'>
-      {generateQueryTag()}
-      {generateTopicsTags()}
-      {generateLocationTag()}
-      {generateMeetingDaysTags()}
-    </div>
+    <div className='results-summary'>
+      <div className='search-tags wrapper'>
+        {generateSearchSummary()}
+      </div>
     </div>
   )
 }

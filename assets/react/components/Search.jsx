@@ -25,7 +25,7 @@ export default class Search extends Component {
   }
 
   _loadInitialData() {
-    this.updateQueryParams({ active: true });
+    this.updateQueryParams({ active: true, order: 'title' });
   }
 
   _sendQuery() {
@@ -79,6 +79,7 @@ export default class Search extends Component {
         <ResultsDisplay
           resultsSubtitle={resultsSubtitle}
           data={this.state.searchResults}
+          updateQueryParams={this.updateQueryParams}
           {...this.state}
           {...this.props}
         />

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import LocationFilterForm from './LocationFilterForm'
 import TopicsFilterForm from './TopicsFilterForm'
 import MeetingDaysFilterForm from './MeetingDaysFilterForm'
+import OrderCoursesForm from './OrderCoursesForm'
+
 
 export default class FilterForm extends Component {
   constructor(props) {
@@ -17,6 +19,8 @@ export default class FilterForm extends Component {
       return <TopicsFilterForm {...this.props} />;
       case 'meetingDays':
       return <MeetingDaysFilterForm { ...this.props} />;
+      case 'orderCourses':
+      return <OrderCoursesForm { ...this.props} />;
     }
   }
 

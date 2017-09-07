@@ -29,6 +29,7 @@
     "react-masonry-component": "^5.0.7",
     "react-rangeslider": "^2.1.0",
     "react-select": "^1.0.0-rc.5",
+    "react-switch-button": "^2.2.2",
     "react-text-carousel": "^0.1.1",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
