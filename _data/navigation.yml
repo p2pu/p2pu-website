@@ -12,7 +12,7 @@ full_column:
       - text: Community
         url: https://groups.google.com/a/p2pu.org/forum/#!forum/community
       - text: Courses
-        url: https://learningcircles.p2pu.org/en/courses/
+        url: https://www.p2pu.org/en/courses/
       - text: Dashboard
         url: https://learningcircles.p2pu.org/en/facilitator/
   - text: About
