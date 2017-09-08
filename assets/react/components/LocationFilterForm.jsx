@@ -11,6 +11,9 @@ export default class LocationFilterForm extends Component {
     this.handleCitySelect = (city) => this._handleCitySelect(city);
     this.handleRangeChange = (value) => this._handleRangeChange(value);
     this.generateLocationLabel = () => this._generateLocationLabel();
+    this.detectDistanceUnit = (lat, lon) => this._detectDistanceUnit(lat, lon);
+    this.generateDistanceValue = () => this._generateDistanceValue();
+    this.generateDistanceSliderLabel = () => this._generateDistanceSliderLabel();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -31,7 +34,8 @@ export default class LocationFilterForm extends Component {
 
     const success = (position) => {
       this.props.updateQueryParams({ latitude: position.coords.latitude, longitude: position.coords.longitude, city: null })
-      this.setState({ gettingLocation: false})
+      this.detectDistanceUnit(position.coords.latitude, position.coords.longitude)
+      this.setState({ gettingLocation: false })
     }
 
     const error = () => {
@@ -48,6 +52,16 @@ export default class LocationFilterForm extends Component {
     } else {
       this.setState({ error: 'Geolocation is not supported by this browser.'})
     }
+  }
+
+  _detectDistanceUnit(lat, lon) {
+    const countriesUsingMiles = ['US', 'GB', 'LR', 'MM'];
+    const url = `http://ws.geonames.org/countryCodeJSON?lat=${lat}&lng=${lon}&username=p2pu`;
+
+    $.getJSON(url, (res) => {
+      const useMiles = countriesUsingMiles.indexOf(res.countryCode) >= 0;
+      this.props.updateQueryParams({ useMiles })
+    });
   }
 
   _generateLocationLabel() {
@@ -70,10 +84,28 @@ export default class LocationFilterForm extends Component {
   }
 
   _handleRangeChange(value) {
-    this.props.updateQueryParams({ distance: value })
+    let distance = value;
+    if (this.props.useMiles) {
+      distance = value * 1.6
+    }
+    this.props.updateQueryParams({ distance })
+  }
+
+  _generateDistanceSliderLabel() {
+    const unit = this.props.useMiles ? 'miles' : 'km'
+    const value = this.generateDistanceValue();
+    return `Within ${value} ${unit}`
+  }
+
+  _generateDistanceValue() {
+    const value = this.props.useMiles ? this.props.distance * 0.62 : this.props.distance;
+    return Math.round(value / 10) * 10;
   }
 
   render() {
+    const distanceSliderLabel = this.generateDistanceSliderLabel();
+    const distanceValue = this.generateDistanceValue();
+
     return(
       <div>
         <CheckboxWithLabel
@@ -85,14 +117,14 @@ export default class LocationFilterForm extends Component {
         />
         <RangeSliderWithLabel
           classes='col-sm-12'
-          label={`Within ${this.props.distance}km`}
+          label={distanceSliderLabel}
           name='distance-slider'
-          value={this.props.distance}
+          value={distanceValue}
           handleChange={this.handleRangeChange}
           min={10}
           max={150}
           step={10}
-          disabled={!this.props.useLocation}
+          disabled={!this.state.useLocation}
         />
         <div className='divider col-sm-12'>
           <div className='divider-line'></div>
