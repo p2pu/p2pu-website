@@ -66,7 +66,6 @@ export default class LocationFilterForm extends Component {
   }
 
   render() {
-    console.log('this.props.useLocation', this.props.useLocation)
     return(
       <div>
         <CheckboxWithLabel

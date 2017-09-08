@@ -19,9 +19,34 @@ section.page-title {
   }
 
   p.centered.large {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    padding-left: $padding-sm;
+    padding-right: $padding-sm;
+    padding-bottom: $padding-sm;
+  }
+}
+
+#search-subtitle {
+  margin-bottom: $padding-sm;
+
+  p.centered.large.team-title {
+    margin-bottom: 0;
+
+    span.team-name {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: $headings-font-family;
+      color: $p2pu-orange;
+    }
+  }
+
+  p.centered.small {
+    a {
+      color: $gray;
+
+      &:hover {
+        color: $p2pu-orange;
+      }
+    }
   }
 }
 
@@ -32,7 +57,7 @@ section.page-title {
   .search-bar {
     background-color: $p2pu-blue;
     display: flex;
-    padding: $padding-sm;
+    padding: 10px $padding-sm;
 
     .wrapper {
       display: flex;
@@ -62,6 +87,7 @@ section.page-title {
   .filter-section {
     display: flex;
     background-color: $gray-lighter;
+    border-bottom: 2px dashed $p2pu-blue;
   }
 
   .filters-bar {
@@ -85,7 +111,7 @@ section.page-title {
         color: $gray-darker;
         text-transform: uppercase;
         cursor: pointer;
-        padding: $padding-sm;
+        padding: 16px;
 
         i.material-icons {
           color: $p2pu-blue;
@@ -398,7 +424,6 @@ header {
     &.wrapper {
       margin-left: 10px;
       margin-right: 10px;
-      margin-top: $padding-sm;
       margin-bottom: $padding-sm;
     }
 
