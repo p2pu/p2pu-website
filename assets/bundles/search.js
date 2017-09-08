@@ -30503,7 +30503,13 @@ var CheckboxWithLabel = function CheckboxWithLabel(_ref) {
   return _react2.default.createElement(
     "div",
     { className: "checkbox-with-label label-right " + classes },
-    _react2.default.createElement("input", { type: "checkbox", name: name, id: name, onChange: onChange, defaultChecked: false, checked: checked }),
+    _react2.default.createElement("input", {
+      type: "checkbox",
+      name: name,
+      id: name,
+      onChange: onChange,
+      checked: checked
+    }),
     _react2.default.createElement(
       "label",
       { htmlFor: name },
@@ -31066,6 +31072,9 @@ var CitySelect = function (_Component) {
     _this.populateCities = function () {
       return _this._populateCities();
     };
+    _this.convertCityToSelectOption = function (city) {
+      return _this._convertCityToSelectOption(city);
+    };
     _this.filterCitiesFromResults = function (r) {
       return _this._filterCitiesFromResults(r);
     };
@@ -31074,6 +31083,22 @@ var CitySelect = function (_Component) {
   }
 
   _createClass(CitySelect, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (this.props !== nextProps) {
+        var value = !nextProps.value ? null : this.convertCityToSelectOption(nextProps.value);
+        this.setState({ value: value });
+      }
+    }
+  }, {
+    key: '_convertCityToSelectOption',
+    value: function _convertCityToSelectOption(city) {
+      return {
+        label: city,
+        value: city.split(',')[0].toLowerCase().replace(/ /, '_')
+      };
+    }
+  }, {
     key: '_handleChange',
     value: function _handleChange(selected) {
       var query = selected ? selected.label : selected;
@@ -31098,10 +31123,11 @@ var CitySelect = function (_Component) {
   }, {
     key: '_filterCitiesFromResults',
     value: function _filterCitiesFromResults(courses) {
+      var _this3 = this;
+
       var cities = courses.map(function (course) {
         if (course.city.length > 0) {
-          var value = course.city.split(',')[0].toLowerCase().replace(/ /, '_');
-          return { label: course.city, value: value };
+          return _this3.convertCityToSelectOption(course.city);
         }
       });
 
@@ -31309,7 +31335,7 @@ var SearchTags = function SearchTags(props) {
     if (props.latitude && props.longitude) {
       var text = 'Within ' + props.distance + 'km of your location';
       var onDelete = function onDelete(value) {
-        props.updateQueryParams({ latitude: null, longitude: null, distance: 50, useLocation: false });
+        props.updateQueryParams({ latitude: null, longitude: null, distance: 50 });
       };
       return [_react2.default.createElement(
         'span',
@@ -51203,7 +51229,7 @@ var LocationFilterForm = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (LocationFilterForm.__proto__ || Object.getPrototypeOf(LocationFilterForm)).call(this, props));
 
-    _this.state = { city: null };
+    _this.state = { useLocation: false };
     _this.getLocation = function (checkboxValue) {
       return _this._getLocation(checkboxValue);
     };
@@ -51220,14 +51246,22 @@ var LocationFilterForm = function (_Component) {
   }
 
   _createClass(LocationFilterForm, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (this.props !== nextProps) {
+        if (nextProps.latitude === null && nextProps.longitude === null) {
+          this.setState({ useLocation: false });
+        }
+      }
+    }
+  }, {
     key: '_getLocation',
     value: function _getLocation(checkboxValue) {
       var _this2 = this;
 
-      if (checkboxValue === true) {
-        this.setState({ gettingLocation: true });
-        this.props.updateQueryParams({ useLocation: checkboxValue });
-      } else {
+      this.setState({ gettingLocation: checkboxValue, useLocation: checkboxValue });
+
+      if (checkboxValue === false) {
         this.props.updateQueryParams({ latitude: null, longitude: null, useLocation: checkboxValue });
         return;
       }
@@ -51270,7 +51304,8 @@ var LocationFilterForm = function (_Component) {
   }, {
     key: '_handleCitySelect',
     value: function _handleCitySelect(city) {
-      this.props.updateQueryParams({ city: city, latitude: null, longitude: null, distance: 50, useLocation: false });
+      this.props.updateQueryParams({ city: city, latitude: null, longitude: null, distance: 50 });
+      this.setState({ useLocation: false });
     }
   }, {
     key: '_handleRangeChange',
@@ -51287,7 +51322,7 @@ var LocationFilterForm = function (_Component) {
           classes: 'col-sm-12',
           name: 'geolocation',
           label: this.generateLocationLabel(),
-          checked: this.props.useLocation,
+          checked: this.state.useLocation,
           handleChange: this.getLocation
         }),
         _react2.default.createElement(_RangeSliderWithLabel2.default, {
@@ -51464,7 +51499,7 @@ var OrderCoursesForm = function OrderCoursesForm(props) {
 
   var formValues = {
     true: {
-      label: 'Usage in learning circles',
+      label: 'Use in learning circles',
       value: 'usage'
     },
     false: {

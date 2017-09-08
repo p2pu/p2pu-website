@@ -187,8 +187,8 @@ section.page-title {
     position: relative;
     display: flex;
     justify-content: center;
-    padding: $padding-sm 10px;
-    margin-bottom: $padding-sm;
+    padding: 10px;
+    margin-top: 15px;
 
     .card {
       cursor: pointer;
@@ -461,14 +461,19 @@ header {
   .add-course, .create-course {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     p {
       margin-bottom: 0;
       margin-right: 10px;
     }
 
-    a:hover {
-      text-decoration: none;
+    a {
+      margin: 10px 0;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     .p2pu-btn {
@@ -533,9 +538,12 @@ header {
 
   .search-results {
     overflow: hidden;
+
     .result-item {
       padding: 8px 0;
       margin-bottom: 0;
+      margin-top: 15px;
+
       .card {
         position: relative;
         left: 0;

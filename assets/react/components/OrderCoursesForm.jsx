@@ -5,7 +5,7 @@ import css from 'react-switch-button/dist/react-switch-button.css'
 const OrderCoursesForm = (props) => {
   const formValues = {
     true: {
-      label: 'Usage in learning circles',
+      label: 'Use in learning circles',
       value: 'usage'
     },
     false: {

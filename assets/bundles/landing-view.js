@@ -31025,6 +31025,9 @@ var CitySelect = function (_Component) {
     _this.populateCities = function () {
       return _this._populateCities();
     };
+    _this.convertCityToSelectOption = function (city) {
+      return _this._convertCityToSelectOption(city);
+    };
     _this.filterCitiesFromResults = function (r) {
       return _this._filterCitiesFromResults(r);
     };
@@ -31033,6 +31036,22 @@ var CitySelect = function (_Component) {
   }
 
   _createClass(CitySelect, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (this.props !== nextProps) {
+        var value = !nextProps.value ? null : this.convertCityToSelectOption(nextProps.value);
+        this.setState({ value: value });
+      }
+    }
+  }, {
+    key: '_convertCityToSelectOption',
+    value: function _convertCityToSelectOption(city) {
+      return {
+        label: city,
+        value: city.split(',')[0].toLowerCase().replace(/ /, '_')
+      };
+    }
+  }, {
     key: '_handleChange',
     value: function _handleChange(selected) {
       var query = selected ? selected.label : selected;
@@ -31057,10 +31076,11 @@ var CitySelect = function (_Component) {
   }, {
     key: '_filterCitiesFromResults',
     value: function _filterCitiesFromResults(courses) {
+      var _this3 = this;
+
       var cities = courses.map(function (course) {
         if (course.city.length > 0) {
-          var value = course.city.split(',')[0].toLowerCase().replace(/ /, '_');
-          return { label: course.city, value: value };
+          return _this3.convertCityToSelectOption(course.city);
         }
       });
 
