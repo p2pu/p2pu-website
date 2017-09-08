@@ -31261,6 +31261,8 @@ var SearchTags = function SearchTags(props) {
     if (props.teamName) {
       var onDelete = function onDelete(value) {
         props.updateQueryParams({ teamName: null, team_id: null });
+        document.getElementById('team-title').style.display = 'none';
+        document.getElementById('search-subtitle').style.display = 'block';
       };
       var humanReadableName = decodeURIComponent(props.teamName);
 

@@ -14,7 +14,11 @@ const SearchTags = (props) => {
 
   const generateTeamNameTag = () => {
     if (props.teamName) {
-      const onDelete = (value) => { props.updateQueryParams({ teamName: null, team_id: null }) }
+      const onDelete = (value) => {
+        props.updateQueryParams({ teamName: null, team_id: null })
+        document.getElementById('team-title').style.display = 'none';
+        document.getElementById('search-subtitle').style.display = 'block';
+      }
       const humanReadableName = decodeURIComponent(props.teamName);
 
       return [<span key='queryTagIntro'>organized by</span>, <SearchTag key='queryTag-0' value={humanReadableName} onDelete={onDelete} />];
