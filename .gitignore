@@ -7,3 +7,4 @@ node_modules/
 _config-dev.yml
 *.swp
 assets/bundles/
+_data/bundles.json

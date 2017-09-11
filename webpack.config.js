@@ -1,6 +1,7 @@
 var path = require("path");
 var webpack = require('webpack');
 var fs = require("fs");
+var AssetsPlugin = require('assets-webpack-plugin');
 
 const reactSrcDir = '/assets/react';
 
@@ -23,7 +24,8 @@ const reactBuild = {
   entry: getReactChunks(),
   output: {
     path: path.resolve('./assets/bundles/'),
-    filename: "[name].js",
+    filename: "[name]-[hash].js",
+    publicPath: '/assets/bundles/',
   },
   module: {
     loaders: [
@@ -43,6 +45,10 @@ const reactBuild = {
     ],
   },
   plugins: [
+    new AssetsPlugin({
+      filename: 'bundles.json',
+      path: path.resolve('./_data'),
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
     }),

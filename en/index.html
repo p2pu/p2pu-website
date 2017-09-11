@@ -8,6 +8,8 @@ headers:
     title: Stories
   - link: /en/workwithus/
     title: Work with us
+bundles:
+ - landing-view
 ---
 <!DOCTYPE html>{% include lang.html %}
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -141,11 +143,9 @@ headers:
 
 {% include new_footer_en.html %}
 
-{% include scripts.html %}
-
 <script src="{{ site.baseurl }}/assets/js/index.js"></script>
-<script src="{{ site.baseurl }}/assets/bundles/common.js"></script>
-<script src="{{ site.baseurl }}/assets/bundles/landing-view.js"></script>
+
+{% include scripts.html %}
 
 {% include ga.html %}
 

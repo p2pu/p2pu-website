@@ -20,6 +20,12 @@
 	{% endif %}
 {% endfor %}
 
+{% if page.bundles %}
+<script src="{{site.data.bundles['common']['js']}}"></script>
+{% endif %}
+{% for bundle in page.bundles %}<script src="{{site.data.bundles[bundle]['js']}}"></script>
+{% endfor %}
+
 {% if page.youtube_call %}
 <script type="text/javascript">
 	function list(){
