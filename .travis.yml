@@ -5,9 +5,13 @@ branches:
   only:
   - gh-pages
   - release
+sudo: required
+services:
+  - docker
 install: bundle install
 sudo: false
-script: 
+script:
+- docker run --rm -it --volume `pwd`:/opt/app --workdir /opt/app node:boron-alpine /bin/sh -c "npm install && npm run build"
 - bundle exec jekyll build
 - if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then echo "Deployments are only done
   for branches. "; exit 0; fi
