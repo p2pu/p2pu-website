@@ -3,8 +3,11 @@ import Slider from 'react-rangeslider'
 import css from 'react-rangeslider/lib/index.css'
 
 const RangeSliderWithLabel = (props) => {
+  const disabledClass = props.disabled ? 'disabled' : '';
+  const onChangeFunction = props.disabled ? null : props.handleChange;
+
   return (
-    <div className={`range-slider-with-label label-left ${props.classes}`} >
+    <div className={`range-slider-with-label label-left ${props.classes} ${disabledClass}`} >
       <label htmlFor={props.name}>{props.label}</label>
       <Slider
         value={props.value}
@@ -12,7 +15,7 @@ const RangeSliderWithLabel = (props) => {
         min={props.min}
         max={props.max}
         step={props.step}
-        onChange={props.handleChange}
+        onChange={onChangeFunction}
       />
     </div>
   )

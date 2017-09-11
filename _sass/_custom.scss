@@ -447,7 +447,15 @@ section.featured-work{
 		margin-bottom: 0;
 
 		.rangeslider__fill {
-			background-color: $p2pu-green;
+			background-color: $p2pu-blue;
+		}
+	}
+
+	&.disabled {
+		.rangeslider {
+			.rangeslider__fill {
+				background-color: $gray;
+			}
 		}
 	}
 }

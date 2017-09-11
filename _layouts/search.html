@@ -5,6 +5,7 @@ extra_css:
   - /assets/css/p2pu-search.css
 extra_js:
   - bundles/search.js
+  - js/team.js
 ---
 
 <main>
@@ -12,8 +13,10 @@ extra_js:
     <header>
       <h1>{{ page.title }}</h1>
     </header>
-    <p class="centered large">{{ page.subtitle }}</p>
+    <div id="search-subtitle">
+      <p class="centered large">{{ page.subtitle }}</p>
+    </div>
+    <div id="team-title"></div>
   </section>
-
    {{ content }}
 </main>

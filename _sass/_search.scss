@@ -19,9 +19,34 @@ section.page-title {
   }
 
   p.centered.large {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    padding-left: $padding-sm;
+    padding-right: $padding-sm;
+    padding-bottom: $padding-sm;
+  }
+}
+
+#team-title {
+  margin-bottom: $padding-sm;
+
+  p.centered.large {
+    margin-bottom: 0;
+
+    span.team-name {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: $headings-font-family;
+      color: $p2pu-orange;
+    }
+  }
+
+  p.centered.small {
+    a {
+      color: $gray;
+
+      &:hover {
+        color: $p2pu-orange;
+      }
+    }
   }
 }
 
@@ -32,7 +57,7 @@ section.page-title {
   .search-bar {
     background-color: $p2pu-blue;
     display: flex;
-    padding: $padding-sm;
+    padding: 10px $padding-sm;
 
     .wrapper {
       display: flex;
@@ -62,6 +87,7 @@ section.page-title {
   .filter-section {
     display: flex;
     background-color: $gray-lighter;
+    border-bottom: 2px dashed $p2pu-blue;
   }
 
   .filters-bar {
@@ -85,7 +111,7 @@ section.page-title {
         color: $gray-darker;
         text-transform: uppercase;
         cursor: pointer;
-        padding: $padding-sm;
+        padding: 16px;
 
         i.material-icons {
           color: $p2pu-blue;
@@ -114,6 +140,44 @@ section.page-title {
     &.open {
       padding: 14px;
     }
+
+    .rsbc-switch-button.rsbc-switch-button-flat-round.rsbc-mode-select {
+      &:hover {
+        input[type="checkbox"]:checked + label {
+          background-color: $p2pu-blue !important;
+        }
+      }
+
+      input[type="checkbox"] + label {
+        background-color: $p2pu-blue !important;
+
+        &:after {
+          background-color: $p2pu-blue !important;
+        }
+      }
+    }
+
+    .divider {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px 0;
+
+      .divider-line {
+        width: 50%;
+        border-bottom: 1px dashed $gray;
+      }
+
+      .divider-text {
+        font-size: 0.7em;
+        text-transform: uppercase;
+        font-weight: bolder;
+        background: $gray-lighter;
+        color: $gray-dark;
+        transform: translateY(-10px);
+        padding: 0 10px;
+      }
+    }
   }
 }
 
@@ -123,8 +187,8 @@ section.page-title {
     position: relative;
     display: flex;
     justify-content: center;
-    padding: $padding-sm 10px;
-    margin-bottom: $padding-sm;
+    padding: 10px;
+    margin-top: 15px;
 
     .card {
       cursor: pointer;
@@ -343,33 +407,46 @@ header {
   }
 }
 
-.search-tags {
+.results-summary {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
 
-  &.wrapper {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: $padding-sm;
-  }
-
-  .search-tag {
-    background-color: #515665;
-    border-radius: 2em;
-    padding: 6px 12px;
-    font-size: 0.8em;
-    color: white;
-    text-transform: uppercase;
-    margin: 10px;
+  .search-tags {
     display: flex;
-     i {
-      margin-left: 4px;
-      font-size: 20px;
-      cursor: pointer;
-     }
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    span {
+      margin-right: 0.4em;
+    }
+
+    &.wrapper {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: $padding-sm;
+    }
+
+    .search-tag {
+      background-color: #515665;
+      border-radius: 2em;
+      padding: 6px 12px;
+      font-size: 0.8em;
+      color: white;
+      text-transform: uppercase;
+      margin-right: 10px;
+      margin-bottom: 2px;
+      margin-top: 2px;
+      display: flex;
+       i {
+        margin-left: 4px;
+        font-size: 20px;
+        cursor: pointer;
+       }
+    }
   }
 }
+
 
 .alternate-cta {
   background: $p2pu-light-blue;
@@ -384,14 +461,19 @@ header {
   .add-course, .create-course {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     p {
       margin-bottom: 0;
       margin-right: 10px;
     }
 
-    a:hover {
-      text-decoration: none;
+    a {
+      margin: 10px 0;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     .p2pu-btn {
@@ -456,9 +538,12 @@ header {
 
   .search-results {
     overflow: hidden;
+
     .result-item {
       padding: 8px 0;
       margin-bottom: 0;
+      margin-top: 15px;
+
       .card {
         position: relative;
         left: 0;

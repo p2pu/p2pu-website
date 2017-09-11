@@ -10,10 +10,6 @@
 
 <script src="{{ site.baseurl }}/assets/js/vendor/scroll-magic.min.js"></script>
 
-<script>
-	P2PU.Splash.init();
-</script>
-
 {% for js in page.extra_js %}
 	{% if js contains '<script>' %}
 		{{ js }}

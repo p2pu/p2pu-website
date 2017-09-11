@@ -9,7 +9,14 @@ import ApiHelper from '../helpers/ApiHelper'
 export default class Search extends Component {
   constructor(props) {
     super(props)
-    this.state = { searchResults: [], distance: 50 }
+    const urlParams = new URL(window.location.href).searchParams;
+    this.state = {
+      searchResults: [],
+      distance: 50,
+      useMiles: false,
+      teamName: urlParams.get('team'),
+      team_id: urlParams.get('team_id')
+    }
     this.handleChange = (s) => this._handleChange(s);
     this.handleInputChange = () => this._handleInputChange();
     this.handleSearchBarSubmit = (query) => this._handleSearchBarSubmit(query);
@@ -25,7 +32,7 @@ export default class Search extends Component {
   }
 
   _loadInitialData() {
-    this.updateQueryParams({ active: true });
+    this.updateQueryParams({ active: true, order: 'title', team_id: this.state.team_id });
   }
 
   _sendQuery() {
@@ -79,6 +86,7 @@ export default class Search extends Component {
         <ResultsDisplay
           resultsSubtitle={resultsSubtitle}
           data={this.state.searchResults}
+          updateQueryParams={this.updateQueryParams}
           {...this.state}
           {...this.props}
         />
