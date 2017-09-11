@@ -182,18 +182,17 @@ section.page-title {
 }
 
 .search-results {
-
   .result-item {
     position: relative;
     display: flex;
     justify-content: center;
     padding: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 
     .card {
       cursor: pointer;
       position: absolute;
-      background: $p2pu-orange;
       padding: $padding-sm;
       text-align: center;
       color: #fff;
@@ -226,8 +225,24 @@ section.page-title {
     }
 
     &:nth-of-type(4n+1) {
-      .card, .course-card {
+      .card {
         background: $p2pu-orange;
+      }
+
+      .course-card {
+        .card-title {
+          background: $p2pu-orange;
+        }
+
+        .card-body {
+          background: $p2pu-light-orange;
+
+          .primary-cta {
+            button {
+              background: $p2pu-orange;
+            }
+          }
+        }
       }
 
       .image-container > .image {
@@ -236,8 +251,24 @@ section.page-title {
     }
 
     &:nth-of-type(4n+2) {
-      .card, .course-card {
+      .card {
         background: $p2pu-blue;
+      }
+
+      .course-card {
+        .card-title {
+          background: $p2pu-blue;
+        }
+
+        .card-body {
+          background: $p2pu-light-blue;
+
+          .primary-cta {
+            button {
+              background: $p2pu-blue;
+            }
+          }
+        }
       }
 
       .image-container > .image {
@@ -246,8 +277,24 @@ section.page-title {
     }
 
     &:nth-of-type(4n+3) {
-      .card, .course-card {
+      .card {
         background: $p2pu-green;
+      }
+
+      .course-card {
+        .card-title {
+          background: $p2pu-green;
+        }
+
+        .card-body {
+          background: $p2pu-light-green;
+
+          .primary-cta {
+            button {
+              background: $p2pu-green;
+            }
+          }
+        }
       }
 
       .image-container > .image {
@@ -256,8 +303,24 @@ section.page-title {
     }
 
     &:nth-of-type(4n+4) {
-      .card, .course-card {
+      .card {
         background: $p2pu-yellow;
+      }
+
+      .course-card {
+        .card-title {
+          background: $p2pu-yellow;
+        }
+
+        .card-body {
+          background: $p2pu-light-yellow;
+
+          .primary-cta {
+            button {
+              background: $p2pu-yellow;
+            }
+          }
+        }
       }
 
       .image-container > .image {
@@ -284,13 +347,26 @@ section.page-title {
     }
 
     .course-card {
-      background: $p2pu-orange;
-      padding: $padding-sm;
-      color: #fff;
       box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
       font-size: $font-size-small;
       display: flex;
       flex-direction: column;
+
+      .card-title {
+        padding: $padding-sm;
+        color: $white;
+      }
+
+      .card-body {
+        padding: $padding-sm;
+        color: $gray-darker;
+
+        p:not(.caption) {
+          text-transform: uppercase;
+          font-size: 0.8em;
+          display: flex;
+        }
+      }
 
       p {
         margin-bottom: 6px;
@@ -305,17 +381,35 @@ section.page-title {
         font-size: $font-size-xs;
         border-radius: 6px;
         box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
-        transform: translateY(-40px);
+        transform: translateY(-20px) translateX(-20px);
 
         .text {
           padding: 6px;
           border: 1px dashed $gray-darker;
           border-radius: 4px;
+          font-size: 1.2em;
+          font-weight: 900;
+
+          i.material-icons {
+            margin-right: 4px;
+          }
         }
 
-        .big {
-          font-weight: 900;
-          font-size: 1.4em;
+        .p2pu-tooltip {
+          background-color: $gray-darker !important;
+          padding: 8px !important;
+
+          &.place-bottom {
+            &:after {
+              border-bottom-color: $gray-darker !important;
+            }
+          }
+
+          &.place-left {
+            &:after {
+              border-left-color: $gray-darker !important;
+            }
+          }
         }
       }
 
@@ -325,21 +419,39 @@ section.page-title {
 
       .actions {
         display: flex;
+        flex-direction: column;
 
         a {
-          color: $white;
           margin-right: 10px;
+          flex-grow: 1;
+        }
 
-          &:hover {
-            text-decoration: underline;
-          }
+        .secondary-cta {
+          display: flex;
+        }
 
-          i.material-icons {
-            font-size: 18px;
-            vertical-align: middle;
-            margin-right: 4px;
+        .primary-cta {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 10px;
+          padding: 5px;
+
+          a {
+            position: absolute;
+
+            button {
+              box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
+              font-size: 1em;
+            }
           }
         }
+      }
+
+      i.material-icons {
+        font-size: 18px;
+        vertical-align: middle;
+        margin-right: 8px;
       }
 
       .cta {
@@ -353,6 +465,20 @@ section.page-title {
           &.submit {
             font-size: 1em;
           }
+        }
+      }
+
+      .divider {
+        border-bottom: 1px dashed $gray-darker;
+        margin-top: $padding-sm;
+        margin-bottom: $padding-sm;
+      }
+
+      a {
+        &:hover {
+          text-decoration: underline;
+          color: $gray-darker;
+          cursor: pointer;
         }
       }
     }
@@ -542,7 +668,6 @@ header {
     .result-item {
       padding: 8px 0;
       margin-bottom: 0;
-      margin-top: 15px;
 
       .card {
         position: relative;
