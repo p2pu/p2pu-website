@@ -57,7 +57,7 @@ section.page-title {
   .search-bar {
     background-color: $p2pu-blue;
     display: flex;
-    padding: 10px $padding-sm;
+    padding: $padding-xs $padding-sm;
 
     .wrapper {
       display: flex;
@@ -66,8 +66,8 @@ section.page-title {
 
       i.material-icons {
         position: absolute;
-        padding-top: 10px;
-        padding-left: 10px;
+        padding-top: $padding-xs;
+        padding-left: $padding-xs;
       }
 
       input.search-input {
@@ -161,7 +161,7 @@ section.page-title {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 10px 0;
+      margin: $padding-xs 0;
 
       .divider-line {
         width: 50%;
@@ -175,7 +175,7 @@ section.page-title {
         background: $gray-lighter;
         color: $gray-dark;
         transform: translateY(-10px);
-        padding: 0 10px;
+        padding: 0 $padding-xs;
       }
     }
   }
@@ -186,9 +186,9 @@ section.page-title {
     position: relative;
     display: flex;
     justify-content: center;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    padding: 15px;
+    margin-top: $padding-xs;
+    margin-bottom: $padding-xs;
 
     .card {
       cursor: pointer;
@@ -210,7 +210,7 @@ section.page-title {
     .image-container {
       width: 100%;
       height: auto;
-      margin-top: 40px;
+      margin-top: $padding-md;
       max-height: 300px;
       overflow: hidden;
 
@@ -351,9 +351,10 @@ section.page-title {
       font-size: $font-size-small;
       display: flex;
       flex-direction: column;
+      flex-grow: 1;
 
       .card-title {
-        padding: $padding-sm;
+        padding: $padding-xs;
         color: $white;
       }
 
@@ -422,7 +423,7 @@ section.page-title {
         flex-direction: column;
 
         a {
-          margin-right: 10px;
+          margin-right: $padding-xs;
           flex-grow: 1;
         }
 
@@ -434,7 +435,7 @@ section.page-title {
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin-top: 10px;
+          margin-top: $padding-xs;
           padding: 5px;
 
           a {
@@ -470,8 +471,8 @@ section.page-title {
 
       .divider {
         border-bottom: 1px dashed $gray-darker;
-        margin-top: $padding-sm;
-        margin-bottom: $padding-sm;
+        margin-top: $padding-xs;
+        margin-bottom: $padding-xs;
       }
 
       a {
@@ -520,7 +521,7 @@ header {
 }
 
 .range-slider-with-label {
-  margin: 10px 0;
+  margin: $padding-xs 0;
 }
 
 .select-with-label {
@@ -548,8 +549,8 @@ header {
     }
 
     &.wrapper {
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-left: $padding-xs;
+      margin-right: $padding-xs;
       margin-bottom: $padding-sm;
     }
 
@@ -560,7 +561,7 @@ header {
       font-size: 0.8em;
       color: white;
       text-transform: uppercase;
-      margin-right: 10px;
+      margin-right: $padding-xs;
       margin-bottom: 2px;
       margin-top: 2px;
       display: flex;
@@ -577,6 +578,7 @@ header {
 .alternate-cta {
   background: $p2pu-light-blue;
   padding: $padding-md;
+  margin-top: $padding-sm;
 
   .divider {
     border-bottom: 1px dashed $gray-darker;
@@ -591,11 +593,11 @@ header {
 
     p {
       margin-bottom: 0;
-      margin-right: 10px;
+      margin-right: $padding-xs;
     }
 
     a {
-      margin: 10px 0;
+      margin: $padding-xs 0;
 
       &:hover {
         text-decoration: none;
@@ -608,7 +610,7 @@ header {
 
       i.material-icons {
         font-size: 18px;
-        padding-right: 10px;
+        padding-right: $padding-xs;
       }
     }
   }
@@ -636,8 +638,8 @@ header {
         margin-bottom: 4px;
 
         input.search-input {
-          padding-top: 10px;
-          padding-bottom: 10px;
+          padding-top: $padding-xs;
+          padding-bottom: $padding-xs;
         }
       }
 
@@ -666,8 +668,9 @@ header {
     overflow: hidden;
 
     .result-item {
-      padding: 8px 0;
-      margin-bottom: 0;
+      padding: 15px 0;
+      margin-bottom: $padding-xs;
+      margin-top: $padding-xs;
 
       .card {
         position: relative;
@@ -686,6 +689,10 @@ header {
         }
       }
     }
+  }
+
+  .alternate-cta {
+    padding: $padding-sm;
   }
 
   .hidden-on-mobile {
