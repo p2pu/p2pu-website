@@ -18,6 +18,7 @@ exclude_from_upload:
 
 redirects:
     index.html: /en/
+    courses/index.html: /en/courses/
     en/learning-circles/index.html: /en/facilitate/
     en/facilitate/background/index.html: /en/handbook/background/
     en/facilitate/starting/index.html: /en/handbook/starting/
