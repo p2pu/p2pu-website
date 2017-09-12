@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import _ from 'lodash'
+import { compact, uniqBy, sortBy } from 'lodash'
 import Select from 'react-select'
 import css from 'react-select/dist/react-select.css'
 
@@ -54,9 +54,9 @@ export default class CitySelect extends Component {
       }
     });
 
-    cities = _.compact(cities);
-    cities = _.uniqBy(cities, 'value');
-    cities = _.sortBy(cities, 'label');
+    cities = compact(cities);
+    cities = uniqBy(cities, 'value');
+    cities = sortBy(cities, 'label');
 
     this.setState({ cities });
   }

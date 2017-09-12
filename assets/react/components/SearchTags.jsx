@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchTag from './SearchTag'
 import { MEETING_DAYS, SEARCH_SUBJECTS } from '../constants'
-import _ from 'lodash'
+import { without } from 'lodash'
 
 const SearchTags = (props) => {
   const generateQueryTag = () => {
@@ -28,7 +28,7 @@ const SearchTags = (props) => {
   const generateTopicsTags = () => {
     if (props.topics && props.topics.length > 0) {
       const onDelete = (value) => {
-        const newTopicsArray =  _.without(props.topics, value);
+        const newTopicsArray =  without(props.topics, value);
         const topics = newTopicsArray.length > 0 ? newTopicsArray : null
         props.updateQueryParams({ topics })
       }
@@ -70,7 +70,7 @@ const SearchTags = (props) => {
     if (props.weekdays && props.weekdays.length > 0) {
       const onDelete = (day) => {
         const dayIndex = MEETING_DAYS.indexOf(day);
-        const newWeekdayArray = _.without(props.weekdays, dayIndex);
+        const newWeekdayArray = without(props.weekdays, dayIndex);
         const weekdays = newWeekdayArray.length > 0 ? newWeekdayArray : null;
         props.updateQueryParams({ weekdays })
       }
