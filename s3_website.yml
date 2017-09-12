@@ -33,6 +33,94 @@ redirects:
     sosi: https://courses.p2pu.org/sosi
 
 routing_rules:
+
+# Learning circle team URL redirects
+  - condition:
+      key_prefix_equals: chicago
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=1&amp;team=Chicago Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: knls
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=2&amp;team=Kenya National Library Service
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals:  charlotte
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=5&amp;team=Charlotte Mecklenburg Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: sanjose
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=6&amp;team=San Jose Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: wichita
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=7&amp;team=Wichita Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: multnomahco
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=8&amp;team=Multnomah County Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: pierceco
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=9&amp;team=Pierce County Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: providence
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=10&amp;team=Providence Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: boston
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=11&amp;team=Boston Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: detroit
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=12&amp;team=Detroit Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: twinlakes
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=13&amp;team=Twin Lakes Library System
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: hcplc
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=14&amp;team=Tampa-Hillsborough County Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: cleveland
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=15&amp;team=Cleveland Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: kclearningcircles
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=16&amp;team=Kansas City Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: mdpls
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=17&amp;team=Miami-Dade Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: toronto
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=18&amp;team=Toronto Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: philadelphia
+    redirect:
+      replace_key_with: en/learning-circles/?team_id=19&amp;team=Free Library of Philadelphia
+      http_redirect_code: 302
+
 # Lernanta EN redirects 
   - condition:
       key_prefix_equals: en/courses/
