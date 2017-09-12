@@ -6,3 +6,5 @@ node_modules/
 # Development configuration
 _config-dev.yml
 *.swp
+assets/bundles/
+_data/bundles.json

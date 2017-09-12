@@ -1,5 +1,5 @@
 import { API_ENDPOINTS } from '../constants'
-import _ from 'lodash'
+import { compact } from 'lodash'
 
 export default class ApiHelper {
   constructor(resourceType) {
@@ -12,11 +12,11 @@ export default class ApiHelper {
     const baseUrl = this.baseUrl;
     const encodedParams = this.validParams.map((key) => {
       const value = params[key];
-      if (value && value.length > 0) {
+      if (!!value) {
         return `${key}=${encodeURIComponent(value)}`
       }
     })
-    const queryString = _.compact(encodedParams).join('&');
+    const queryString = compact(encodedParams).join('&');
 
     console.log('url', `${baseUrl}${queryString}`)
     return `${baseUrl}${queryString}`

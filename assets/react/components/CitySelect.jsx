@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import _ from 'lodash'
+import { compact, uniqBy, sortBy } from 'lodash'
 import Select from 'react-select'
 import css from 'react-select/dist/react-select.css'
 
@@ -10,8 +10,23 @@ export default class CitySelect extends Component {
     this.handleChange = (s) => this._handleChange(s)
     this.handleInputChange = (s) => this._handleInputChange(s)
     this.populateCities = () => this._populateCities()
+    this.convertCityToSelectOption = (city) => this._convertCityToSelectOption(city)
     this.filterCitiesFromResults = (r) => this._filterCitiesFromResults(r)
     this.populateCities();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props !== nextProps) {
+      const value = !nextProps.value ? null : this.convertCityToSelectOption(nextProps.value);
+      this.setState({ value })
+    }
+  }
+
+  _convertCityToSelectOption(city) {
+    return {
+      label: city,
+      value: city.split(',')[0].toLowerCase().replace(/ /, '_')
+    }
   }
 
   _handleChange(selected) {
@@ -35,14 +50,13 @@ export default class CitySelect extends Component {
   _filterCitiesFromResults(courses) {
     let cities = courses.map(course => {
       if (course.city.length > 0) {
-        const value = course.city.split(',')[0].toLowerCase().replace(/ /, '_')
-        return { label: course.city, value: value }
+        return this.convertCityToSelectOption(course.city)
       }
     });
 
-    cities = _.compact(cities);
-    cities = _.uniqBy(cities, 'value');
-    cities = _.sortBy(cities, 'label');
+    cities = compact(cities);
+    cities = uniqBy(cities, 'value');
+    cities = sortBy(cities, 'label');
 
     this.setState({ cities });
   }

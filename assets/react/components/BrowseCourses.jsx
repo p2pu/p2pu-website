@@ -11,7 +11,9 @@ const BrowseCourses = (props) => {
           return(
             <CourseCard
               key={index}
+              id={`course-card-${index}`}
               course={course}
+              updateQueryParams={props.updateQueryParams}
             />
           )
         })

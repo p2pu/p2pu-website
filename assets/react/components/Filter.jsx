@@ -4,7 +4,8 @@ const Filter = ({filter, active, updateActiveFilter}) => {
   const filterNames = {
     'location': 'Location',
     'topics': 'Topics',
-    'meetingDays': 'Meeting Day(s)'
+    'meetingDays': 'Meeting Day(s)',
+    'orderCourses': 'Order by'
   }
 
   const iconName = active ? 'remove' : 'add'
