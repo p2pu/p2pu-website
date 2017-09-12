@@ -81,6 +81,7 @@ export default class Search extends Component {
         <FiltersSection
           filterCollection={filterCollection}
           updateQueryParams={this.updateQueryParams}
+          searchSubject={this.props.searchSubject}
           {...this.state}
         />
         <ResultsDisplay
