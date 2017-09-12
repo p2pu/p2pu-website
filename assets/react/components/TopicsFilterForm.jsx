@@ -4,7 +4,7 @@ import Select from 'react-select'
 import css from 'react-select/dist/react-select.css'
 import { COURSE_CATEGORIES } from '../constants'
 import ApiHelper from '../helpers/ApiHelper'
-import _ from 'lodash'
+import { keys } from 'lodash'
 
 export default class TopicsFilterForm extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ export default class TopicsFilterForm extends Component {
     const api = new ApiHelper('topics');
     const params = {};
     const callback = (response) => {
-      const options = _.keys(response.topics).sort().map((topic) => ({ value: topic, label: topic }))
+      const options = keys(response.topics).sort().map((topic) => ({ value: topic, label: topic }))
       this.setState({ options })
     }
 

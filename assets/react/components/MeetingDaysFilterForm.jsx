@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CheckboxWithLabel from './common/CheckboxWithLabel'
 import { MEETING_DAYS } from '../constants'
-import _ from 'lodash'
+import { pull } from 'lodash'
 
 export default class MeetingDaysFilterForm extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ export default class MeetingDaysFilterForm extends Component {
       if (checked) {
         newWeekdayList.push(dayIndex)
       } else {
-        newWeekdayList = _.pull(newWeekdayList, dayIndex);
+        newWeekdayList = pull(newWeekdayList, dayIndex);
       }
 
       console.log('newWeekdayList', newWeekdayList)
