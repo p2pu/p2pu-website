@@ -13,6 +13,8 @@ const SelectWithLabel = (props) => {
         onChange={ props.onChange }
         onInputChange={ props.onInputChange }
         noResultsText={ props.noResultsText }
+        placeholder={ props.placeholder }
+        multi={ props.multi || false }
       />
     </div>
   )

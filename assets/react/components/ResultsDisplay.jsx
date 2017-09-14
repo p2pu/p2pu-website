@@ -22,6 +22,9 @@ const ResultsDisplay = (props) => {
         </div>
       </header>
       <SearchTags {...props} />
+      <p className="clear-search small centered">
+        <a href='/en/learning-circles'>Reset search form</a>
+      </p>
       { renderResults() }
     </div>
   )
