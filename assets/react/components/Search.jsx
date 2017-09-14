@@ -32,7 +32,7 @@ export default class Search extends Component {
   }
 
   _loadInitialData() {
-    this.updateQueryParams({ active: true, order: 'title', team_id: this.state.team_id });
+    this.updateQueryParams({ active: true, signup: 'open', order: 'title', team_id: this.state.team_id });
   }
 
   _sendQuery() {
