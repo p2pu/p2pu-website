@@ -71,6 +71,7 @@ export default class CitySelect extends Component {
         onChange={ this.handleChange }
         onInputChange={ this.props.handleInputChange }
         noResultsText='No results for this city'
+        placeholder='Start typing a city name...'
       />
     )
   }

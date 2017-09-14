@@ -63,6 +63,7 @@ export default class LearningCircles extends Component {
     } else {
       params = {
         active: true,
+        signup: 'open',
         limit: LEARNING_CIRCLES_LIMIT,
         offset: this.state.searchResults.length
       }

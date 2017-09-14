@@ -616,6 +616,16 @@ header {
   }
 }
 
+.clear-search {
+  a {
+    color: $gray;
+  }
+}
+
+.no-flex {
+  display: block !important;
+}
+
 @media (max-width: $screen-xs-max) {
   body {
     font-size: $font-size-base-mobile;

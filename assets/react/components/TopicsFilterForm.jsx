@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import CheckboxWithLabel from './common/CheckboxWithLabel'
-import Select from 'react-select'
+import SelectWithLabel from './common/SelectWithLabel'
 import css from 'react-select/dist/react-select.css'
 import { COURSE_CATEGORIES } from '../constants'
 import ApiHelper from '../helpers/ApiHelper'
@@ -9,8 +9,9 @@ import { keys } from 'lodash'
 export default class TopicsFilterForm extends Component {
   constructor(props) {
     super(props)
-    this.state = { topics: [], options: [] };
-    this.generateChangeHandler = (category) => this._generateChangeHandler(category);
+    this.state = { options: [] };
+    this.mapArrayToSelectOptions = (arr) => this._mapArrayToSelectOptions(arr);
+    this.extractTopicsArray = (opts) => this._extractTopicsArray(opts);
     this.handleSelect = (selected) => this._handleSelect(selected);
     this.fetchTopics = () => this._fetchTopics();
   }
@@ -27,10 +28,12 @@ export default class TopicsFilterForm extends Component {
   }
 
   _fetchTopics() {
-    const api = new ApiHelper('topics');
+    const resourceType = `${this.props.searchSubject}Topics`;
+    const api = new ApiHelper(resourceType);
     const params = {};
     const callback = (response) => {
-      const options = keys(response.topics).sort().map((topic) => ({ value: topic, label: topic }))
+      const topics = keys(response.topics).sort()
+      const options = this.mapArrayToSelectOptions(topics);
       this.setState({ options })
     }
 
@@ -38,17 +41,30 @@ export default class TopicsFilterForm extends Component {
   }
 
   _handleSelect(selected) {
-    const newTopicList = selected.map(option => option.value)
-    this.setState({ topics: selected }, this.props.updateQueryParams({ topics: newTopicList }))
+    const newTopicList = this.extractTopicsArray(selected);
+    this.props.updateQueryParams({ topics: newTopicList })
+  }
+
+  _mapArrayToSelectOptions(array) {
+    return array.map((topic) => ({ value: topic, label: topic }))
+  }
+
+  _extractTopicsArray(options) {
+    return options.map(option => option.value)
   }
 
   render() {
+    const value = this.mapArrayToSelectOptions(this.props.topics || []);
+
     return(
-      <Select
+      <SelectWithLabel
+        label='What topics are you interested in?'
+        classes='no-flex'
         options={this.state.options}
         multi={true}
-        value={this.state.topics}
+        value={value}
         onChange={this.handleSelect}
+        placeholder='Select as many topics as you want'
       />
     )
   }
