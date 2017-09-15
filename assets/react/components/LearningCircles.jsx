@@ -35,7 +35,6 @@ export default class LearningCircles extends Component {
   }
 
   _searchByLocation(query) {
-    console.log('query', query)
     const params = {
       active: true,
       signup: 'open',
@@ -79,7 +78,6 @@ export default class LearningCircles extends Component {
   }
 
   _searchCallback(response, opts) {
-    console.log(response)
     const results = opts.appendResults ? this.state.searchResults.concat(response.items) : response.items;
     this.setState({
       searchResults: results,
