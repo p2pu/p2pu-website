@@ -25,7 +25,7 @@ const CourseCard = (props) => {
         <div className="card-body">
           <p className="caption">{ props.course.caption }</p>
           <div className="divider"></div>
-          <p className="tags">
+          <p className="tags small-caps">
             <i className="material-icons">label_outline</i>
             <span className='topics-list'>
               { topicsList.map((topic, index) => {
@@ -33,11 +33,11 @@ const CourseCard = (props) => {
               })}
             </span>
           </p>
-          <p className="provider">
+          <p className="provider small-caps">
             <i className="material-icons">school</i>
             { `Provided by ${props.course.provider}` }
           </p>
-          <p className="availability">
+          <p className="availability small-caps">
             <i className="material-icons">schedule</i>
             { availability }
           </p>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Masonry from 'react-masonry-component'
 import LearningCircleCard from './LearningCircleCard.jsx'
+import moment from 'moment'
 
 const BrowseLearningCircles = (props) => {
 
@@ -9,11 +10,13 @@ const BrowseLearningCircles = (props) => {
     <Masonry className={"search-results row grid"}>
       {
         props.learningCircles.map((circle, index) => {
-          const startTime = circle.meeting_time.slice(0, -3)
-          const endTime = circle.end_time.slice(0, -3)
-          const startDate = new Date(circle.start_date).toLocaleDateString('en-US', {month: 'long', year: 'numeric', day: 'numeric'});
-          const schedule = `${circle.day} from ${startTime} to ${endTime} (${circle.time_zone})`;
-          const duration = `${circle.weeks} weeks starting ${startDate}`;
+          const startDate = moment(`${circle.start_date} ${circle.meeting_time}`);
+          const endDate = moment(`${circle.start_date} ${circle.end_time}`);
+          const formattedDate = startDate.format('MMMM Do, YYYY');
+          const formattedStartTime = startDate.format('h:mma');
+          const formattedEndTime = endDate.format('h:mma');
+          const schedule = `${circle.day} from ${formattedStartTime} to ${formattedEndTime} (${circle.time_zone})`;
+          const duration = `${circle.weeks} weeks starting ${formattedDate}`;
 
           return(
             <LearningCircleCard
@@ -30,7 +33,7 @@ const BrowseLearningCircles = (props) => {
           )
         })
       }
-      <div className="result-item grid-item start-learning-circle col-md-4 col-sm-12 col-xs-12">
+      <div className="result-item grid-item col-md-4 col-sm-12 col-xs-12 start-learning-circle">
         <div className="circle">
           <p>Start your own learning circle</p>
           <a href="/en/facilitate" className="btn p2pu-btn dark arrow"><i className="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -39,6 +42,5 @@ const BrowseLearningCircles = (props) => {
     </Masonry>
   );
 }
-
 
 export default BrowseLearningCircles

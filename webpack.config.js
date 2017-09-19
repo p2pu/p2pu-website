@@ -45,6 +45,7 @@ const reactBuild = {
     ],
   },
   plugins: [
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new AssetsPlugin({
       filename: 'bundles.json',
       path: path.resolve('./_data'),

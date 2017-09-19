@@ -192,31 +192,22 @@ section.page-title {
 
     .card {
       cursor: pointer;
-      position: absolute;
-      padding: $padding-sm;
-      text-align: center;
-      color: #fff;
-      box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-      font-size: $font-size-small;
-      left: 50%;
-      transform: translateX(-50%);
-
-      .title {
-        text-transform: uppercase;
-      }
     }
 
     .image-container {
       width: 100%;
       height: auto;
-      margin-top: $padding-md;
       max-height: 300px;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .image {
-        min-height: 200px;
-        background: $p2pu-light-orange;
+        width: 80%;
+        background-color: #fff;
+        margin-left: 45px;
+        margin-right: 45px;
 
         img {
           width: 100%;
@@ -225,11 +216,7 @@ section.page-title {
     }
 
     &:nth-of-type(4n+1) {
-      .card {
-        background: $p2pu-orange;
-      }
-
-      .course-card {
+      .course-card, .card {
         .card-title {
           background: $p2pu-orange;
         }
@@ -245,17 +232,13 @@ section.page-title {
         }
       }
 
-      .image-container > .image {
-        background: $p2pu-light-orange;
+      .image-container {
+        background-image: linear-gradient($p2pu-orange, $p2pu-orange 30%, $p2pu-light-orange 30%, $p2pu-light-orange);
       }
     }
 
     &:nth-of-type(4n+2) {
-      .card {
-        background: $p2pu-blue;
-      }
-
-      .course-card {
+      .course-card, .card {
         .card-title {
           background: $p2pu-blue;
         }
@@ -271,17 +254,13 @@ section.page-title {
         }
       }
 
-      .image-container > .image {
-        background: $p2pu-light-blue;
+      .image-container {
+        background-image: linear-gradient($p2pu-blue, $p2pu-blue 30%, $p2pu-light-blue 30%, $p2pu-light-blue);
       }
     }
 
     &:nth-of-type(4n+3) {
-      .card {
-        background: $p2pu-green;
-      }
-
-      .course-card {
+      .course-card, .card {
         .card-title {
           background: $p2pu-green;
         }
@@ -297,17 +276,13 @@ section.page-title {
         }
       }
 
-      .image-container > .image {
-        background: $p2pu-light-green;
+      .image-container {
+        background-image: linear-gradient($p2pu-green, $p2pu-green 30%, $p2pu-light-green 30%, $p2pu-light-green);
       }
     }
 
     &:nth-of-type(4n+4) {
-      .card {
-        background: $p2pu-yellow;
-      }
-
-      .course-card {
+      .course-card, .card {
         .card-title {
           background: $p2pu-yellow;
         }
@@ -323,30 +298,12 @@ section.page-title {
         }
       }
 
-      .image-container > .image {
-        background: $p2pu-light-yellow;
+      .image-container {
+        background-image: linear-gradient($p2pu-yellow, $p2pu-yellow 30%, $p2pu-light-yellow 30%, $p2pu-light-yellow);
       }
     }
 
-    .show-on-hover {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-in-out;
-    }
-
-    &:hover, &:focus {
-      .show-on-hover {
-        max-height: 200px;
-      }
-
-      .card {
-        z-index: 10;
-        left: 50%;
-        transform: scale(1.1) translateX(-45%);
-      }
-    }
-
-    .course-card {
+    .course-card, .card {
       box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
       font-size: $font-size-small;
       display: flex;
@@ -362,15 +319,15 @@ section.page-title {
         padding: $padding-sm;
         color: $gray-darker;
 
-        p:not(.caption) {
-          text-transform: uppercase;
-          font-size: 0.8em;
+        p {
+          margin-bottom: 6px;
           display: flex;
-        }
-      }
 
-      p {
-        margin-bottom: 6px;
+          &.small-caps {
+            text-transform: uppercase;
+            font-size: 0.8em;
+          }
+        }
       }
 
       .usage-badge {
