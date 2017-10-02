@@ -7,5 +7,5 @@ As an open source project, we invite contribution and collaboration from many an
 
 # Current Opportunities
 
-Nothing currently.
+Nothing at the moment.
 
