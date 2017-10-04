@@ -8,7 +8,6 @@ const SearchForm = (props) => (
       name="search-form"
       classes="col-md-6 col-sm-8 col-xs-12"
       handleSelect={ props.searchByLocation }
-      handleInputChange={ props.clearResults }
     />
   </div>
 )
