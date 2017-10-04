@@ -89,7 +89,10 @@ export default class LearningCircles extends Component {
   render() {
     return (
       <div className="search-and-results">
-        <SearchForm searchByLocation={ this.searchByLocation } clearResults={ this.clearResults } />
+        <SearchForm
+          searchByLocation={ this.searchByLocation }
+          clearResults={ this.clearResults }
+        />
         <BrowseLearningCircles
           learningCircles={ this.state.searchResults }
           showMoreResults={ this.showMoreResults }
