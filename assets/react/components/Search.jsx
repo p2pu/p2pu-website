@@ -13,7 +13,7 @@ export default class Search extends Component {
     this.state = {
       searchResults: [],
       distance: 50,
-      useMiles: false,
+      useMiles: true,
       teamName: urlParams.get('team'),
       team_id: urlParams.get('team_id')
     }
