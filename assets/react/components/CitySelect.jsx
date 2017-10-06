@@ -17,7 +17,7 @@ export default class CitySelect extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props !== nextProps) {
-      const value = !nextProps.value ? null : this.convertCityToSelectOption(nextProps.value);
+      const value = !nextProps.value ? this.state.value : this.convertCityToSelectOption(nextProps.value);
       this.setState({ value })
     }
   }
