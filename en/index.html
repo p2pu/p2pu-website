@@ -33,6 +33,8 @@ bundles:
 	<link rel="stylesheet" href="{{ "/assets/css/p2pu-index.css" | prepend: site.baseurl }}">
 	<link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
 	<link rel="stylesheet" href="https://unpkg.com/react-select/dist/react-select.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 
 	<script src="{{ "/assets/js/vendor/modernizr-2.6.2.min.js" | prepend: site.baseurl }}"></script>
 </head>
@@ -82,34 +84,54 @@ bundles:
 
 		<div id="preview"></div>
 
-		<div id="testimonials">
-
-		</div>
-
 	</section>
+
+	<div id="testimonials">
+		<div class="slide-container">
+			{% for testimonial in site.data.testimonials %}
+			<div class="slide">
+				<div class="testimonial-card">
+					<div class="quote">
+						<p class="large centered">"{{ testimonial.quote }}"</p>
+					</div>
+					<div class="attribution">
+						<div class="image">
+							<img src="{{ site.baseurl }}/assets/images/testimonials/{{ testimonial.img }}" alt="{{ testimonial.name }}">
+						</div>
+						<div class="text">
+							<div class="name">{{ testimonial.name }}</div>
+							<div class="role">{{ testimonial.role }}</div>
+							<div class="organization">{{ testimonial.organization }}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
 
 	<div class="full-width-image"></div>
 
 	<section id="about" class="background-blue">
 		<header>
-			<h2 class="headline">P2PU facilitates learning outside of institutional walls. <span class="hidden-on-mobile">Designing and leveraging open education tools and resources, P2PU strives to cultivate high-quality, low-cost models for lifelong learning.</span></h2>
+			<h3 class="headline">P2PU facilitates learning outside of institutional walls. <span class="hidden-on-mobile">Designing and leveraging open education tools and resources, P2PU strives to cultivate high-quality, low-cost models for lifelong learning.</span></h3>
 		</header>
 
 		<div class="columns row">
 			<div class="col-md-4 col-sm-12 col-xs-12 column">
-				<p class="large">Whether or not you are interested in facilitating a learning circle yourself, we have resources you can use to try and start a learning circle program locally.</p>
+				<p>Whether or not you are interested in facilitating a learning circle yourself, we have resources you can use to try and start a learning circle program locally.</p>
 				<a href="/en/facilitate/">
 					<button class="btn p2pu-btn light">get learning circles started</button>
 				</a>
 			</div>
 			<div class="col-md-4 col-sm-12 col-xs-12 column">
-				<p class="large">P2PU represents a growing movement of educators, librarians, activists, policy-makers, and technologists around the globe; we use a community listserv to share ideas, celebrate victories, and support one another.</p>
+				<p>P2PU represents a growing movement of educators, librarians, activists, policy-makers, and technologists around the globe; we use a community listserv to share ideas, celebrate victories, and support one another.</p>
 				<a href="https://groups.google.com/a/p2pu.org/forum/#!forum/community">
 					<button class="btn p2pu-btn light">join the community</button>
 				</a>
 			</div>
 			<div class="col-md-4 col-sm-12 col-xs-12 column">
-				<p class="large">Beyond our openly-licensed toolkit, there are lots of other services we can provide, including hosting facilitator workshops, developing online courses, and customizing tool development.</p>
+				<p>Beyond our openly-licensed toolkit, there are lots of other services we can provide, including hosting facilitator workshops, developing online courses, and customizing tool development.</p>
 				<a href="/en/workwithus/">
 					<button class="btn p2pu-btn light">work with us</button>
 				</a>
@@ -156,6 +178,8 @@ bundles:
 
 
 {% include scripts.html %}
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 
 <script src="{{ site.baseurl }}/assets/js/index.js"></script>
 

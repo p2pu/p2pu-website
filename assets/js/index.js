@@ -8,3 +8,25 @@ $(function() {
     }, delay * (index + 1))
   });
 })
+
+$('#testimonials .slide-container').slick({
+  centerMode: true,
+  variableWidth: true,
+  dots: false,
+  arrows: true,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  pauseOnHover: true,
+  swipe: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        pauseOnHover: false
+      }
+    },
+  ]
+})

@@ -40,6 +40,11 @@ export default class LearningCirclesPreview extends Component {
           learningCircles={ this.state.learningCircles }
           showStartYourOwn={ false }
         />
+        <div className="search-button">
+          <a href="/en/learning-circles/">
+            <button className="btn p2pu-btn dark">Search All Learning Circles</button>
+          </a>
+        </div>
       </div>
     );
   }

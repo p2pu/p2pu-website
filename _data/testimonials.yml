@@ -1,0 +1,18 @@
+# for the testimonial images, place them in the /assets/images/testimonials folder
+# make sure the images are square (otherwise they will look distorted)
+
+- quote: "For me, learning circles and peer learning means that every opinion counts and is valid. We are only humans, and challenges make us strong."
+  img: kaltuma-sama.jpg
+  name: Kaltuma Sama
+  role: Learning Circle Facilitator
+  organization: Buru Buru Library, Nairobi, Kenya
+- quote: "For me, learning circles and peer learning means that every opinion counts and is valid. We are only humans, and challenges make us strong."
+  img: kaltuma-sama.jpg
+  name: Kaltuma Sama
+  role: Learning Circle Facilitator
+  organization: Buru Buru Library, Nairobi, Kenya
+- quote: "For me, learning circles and peer learning means that every opinion counts and is valid. We are only humans, and challenges make us strong."
+  img: kaltuma-sama.jpg
+  name: Kaltuma Sama
+  role: Learning Circle Facilitator
+  organization: Buru Buru Library, Nairobi, Kenya
