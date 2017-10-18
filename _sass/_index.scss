@@ -106,41 +106,70 @@ main {
 		}
 	}
 
-	section#search {
+	section#learning-circles {
+		.overview {
+	    display: flex;
 
-		.course-search {
-			display: flex;
-	    flex-direction: row;
-	    justify-content: center;
-	    align-items: center;
-	    margin-top: $padding-md;
-	    margin-bottom: $padding-md;
-	    flex-wrap: wrap;
+			#stats {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 
-			.label {
-				color: $gray-darker;
-				font-size: 1.4em;
-		    margin-right: 8px;
+				.stat {
+					text-align: center;
+					margin-bottom: $padding-md;
+
+					.number {
+						.title {
+							font-size: $font-size-h1;
+						}
+					}
+
+					.label {
+						text-transform: uppercase;
+						font-size: $font-size-xs;
+						color: $gray-darker;
+					}
+
+					&:nth-of-type(1) {
+						.title {
+							color: $p2pu-orange;
+						}
+					}
+
+					&:nth-of-type(2) {
+						.title {
+							color: $p2pu-yellow;
+						}
+					}
+
+					&:nth-of-type(3) {
+						.title {
+							color: $p2pu-blue;
+						}
+					}
+
+					&:nth-of-type(4) {
+						.title {
+							color: $p2pu-green;
+						}
+					}
+				}
 			}
 
-			.Select-control {
-    		border: none;
-    		border-radius: 0;
-    		border-bottom: 1px solid $gray-darker;
-    	}
+			#definition {
+				display: flex;
+				align-items: center;
+			}
+		}
 
-    	.city-select {
-    		&.is-focused {
-    			> .Select-control {
-						box-shadow: none;
-    			}
-    		}
+		.preview {
 
-    		&:focus {
-    			outline: none;
-    			box-shadow: none;
-    		}
-    	}
+		}
+
+		.testimonials {
+
 		}
 	}
 

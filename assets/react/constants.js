@@ -1,4 +1,5 @@
 export const LEARNING_CIRCLES_LIMIT = 11;
+export const PREVIEW_LIMIT = 3;
 
 export const SEARCH_PROPS = {
   learningCircles: {
