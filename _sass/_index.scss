@@ -121,9 +121,8 @@ main {
 					margin-bottom: $padding-md;
 
 					.number {
-						.title {
-							font-size: $font-size-h1;
-						}
+						font-size: $font-size-h1;
+						font-weight: bolder;
 					}
 
 					.label {
@@ -133,25 +132,25 @@ main {
 					}
 
 					&:nth-of-type(1) {
-						.title {
+						.number {
 							color: $p2pu-orange;
 						}
 					}
 
 					&:nth-of-type(2) {
-						.title {
+						.number {
 							color: $p2pu-yellow;
 						}
 					}
 
 					&:nth-of-type(3) {
-						.title {
+						.number {
 							color: $p2pu-blue;
 						}
 					}
 
 					&:nth-of-type(4) {
-						.title {
+						.number {
 							color: $p2pu-green;
 						}
 					}
@@ -163,9 +162,30 @@ main {
 				align-items: center;
 			}
 		}
+	}
 
-		.preview {
+	#preview {
+		background: $gray-lighter;
+    margin-bottom: $padding-lg;
 
+    .preview-container {
+    	padding-top: $padding-sm;
+
+    	.sub-title {
+    		display: flex;
+    		justify-content: center;
+
+    		.text {
+			    color: $gray-darker;
+	    		border-bottom: 2px solid $p2pu-blue;
+    		}
+    	}
+    }
+
+		.search-button {
+	    display: flex;
+	    justify-content: center;
+	    transform: translateY(20px);
 		}
 	}
 
@@ -292,22 +312,22 @@ main {
 		}
 	}
 
-	.full-width-image {
+	> div.full-width-image {
 		height: 90vh;
 		min-height: 250px;
 		width: 100%;
 
-		&:nth-of-type(1) {
+		&.header {
 			background: url('../images/header.jpg') no-repeat center center;
 			background-size: cover;
 		}
 
-		&:nth-of-type(2) {
+		&.finance {
 			background: url('../images/finance_for_everyone.jpg') no-repeat center center;
 			background-size: cover;
 		}
 
-		&:nth-of-type(3) {
+		&.about {
 			background: url('../images/about.jpg') no-repeat center center;
 			background-size: cover;
 		}

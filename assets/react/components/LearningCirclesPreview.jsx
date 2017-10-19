@@ -36,13 +36,16 @@ export default class LearningCirclesPreview extends Component {
   render() {
     return (
       <div className="preview-container">
+        <div className="sub-title">
+          <div className="text"><h4>Upcoming Meetings</h4></div>
+        </div>
         <BrowseLearningCircles
           learningCircles={ this.state.learningCircles }
           showStartYourOwn={ false }
         />
         <div className="search-button">
           <a href="/en/learning-circles/">
-            <button className="btn p2pu-btn dark">Search All Learning Circles</button>
+            <button className="btn p2pu-btn blue">Search All Learning Circles</button>
           </a>
         </div>
       </div>

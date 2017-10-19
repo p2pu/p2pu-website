@@ -12,8 +12,7 @@ $(function() {
 $('#testimonials .slide-container').slick({
   centerMode: true,
   variableWidth: true,
-  dots: false,
-  arrows: true,
+  dots: true,
   autoplay: true,
   autoplaySpeed: 4000,
   pauseOnHover: true,
