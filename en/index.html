@@ -76,8 +76,8 @@ bundles:
 		</header>
 
 		<div class="overview">
-			<div id="stats" class="col-md-4 col-sm-4 col-xs-12"></div>
-			<div id="definition" class="col-md-8 col-sm-8 col-xs-12">
+			<div id="stats" class="col-md-4 col-sm-12 col-xs-12"></div>
+			<div id="definition" class="col-md-8 col-sm-12 col-xs-12">
 				<p class="large">Learning circles are study groups for people who want to take online classes together and in-person.</p>
 
 				  <figure class="chart" data-percent="75">
@@ -182,7 +182,7 @@ bundles:
 		</header>
 		<div class="funders row">
 			{% for funder in site.data.funders %}
-			<div class="funder col-md-3 col-sm-6 col-xs-6">
+			<div class="funder col-md-4 col-sm-6 col-xs-12">
 				<a href="{{ funder.url }}">
 					<img src="{{ site.baseurl }}{{ funder.logo }}" alt="{{ funder.name }}">
 				</a>

@@ -315,6 +315,7 @@ main {
 
 		    img {
 		    	max-width: 200px;
+		    	filter: grayscale(1);
 		    }
 	    }
 		}
@@ -441,25 +442,33 @@ main {
 
 				#stats {
 					order: 2;
+					align-items: unset;
+
+					.stacked-numbers {
+						display: flex;
+						justify-content: space-evenly;
+					}
 
 					.stat {
 						margin-bottom: $padding-sm;
 					}
 				}
 			}
+		}
 
-			#testimonials {
-				.slide {
-					width: 95vw;
+		#testimonials {
+			.slide {
+				width: 95vw;
 
-					.testimonial-card {
-						.attribution {
-							flex-direction: column;
-							text-align: center;
+				.testimonial-card {
+					padding: 10px;
 
-							.image {
-								margin-right: 0;
-							}
+					.attribution {
+						flex-direction: column;
+						text-align: center;
+
+						.image {
+							margin-right: 0;
 						}
 					}
 				}
@@ -521,6 +530,18 @@ main {
 
 			header {
 				margin: 12px 4px;
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-xs-max) {
+	section#learning-circles {
+		.overview {
+			#stats {
+				.stacked-numbers {
+					flex-direction: column;
+				}
 			}
 		}
 	}
