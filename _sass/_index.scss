@@ -109,6 +109,7 @@ main {
 	section#learning-circles {
 		.overview {
 	    display: flex;
+      margin-top: 80px;
 
 			#stats {
 				display: flex;
@@ -160,6 +161,12 @@ main {
 			#definition {
 				display: flex;
 				align-items: center;
+				justify-content: flex-end;
+				margin-right: 50px;
+
+				p.large {
+					padding-right: 100px;
+				}
 			}
 		}
 	}
@@ -473,3 +480,166 @@ main {
 		}
 	}
 }
+
+.chart {
+  position: absolute;
+  display: inline-block;
+  color: #999;
+  font-size: 20px;
+  text-align: center;
+}
+
+.chart figcaption {
+  padding: 50px 25px;
+  width: 100px;
+  height: 50px;
+  border: 20px solid #f0f0f0;
+  border-radius: 100px;
+  line-height: 50px;
+}
+
+.chart img {
+  position: absolute;
+  max-width: 100px;
+  max-height: 100px;
+  background: white;
+}
+/* END Container styles */
+
+
+svg .outer.red {
+  stroke: $p2pu-orange;
+}
+
+svg .outer.blue {
+  stroke: $p2pu-blue;
+}
+
+svg .outer.yellow {
+  stroke: $p2pu-yellow;
+}
+
+.outer {
+  fill: transparent;
+  stroke: #333;
+  stroke-width: 20;
+  stroke-dasharray: 1445;
+  transition: stroke-dashoffset 1s;
+  -webkit-animation-play-state: running;
+
+  /* firefox bug fix - won't rotate at 90deg angles */
+  -moz-transform: rotate(-89deg) translateX(-190px);
+}
+
+#definition:hover .outer {
+  stroke-dashoffset: 1445 !important;
+  -webkit-animation-play-state: paused;
+}
+
+/* Set the initial values for the animation */
+.chart[data-percent='100'] .outer {
+  stroke-dashoffset: 0;
+  -webkit-animation: show100 2s;
+  animation: show100 2s;
+}
+
+.chart[data-percent='75'] .outer {
+  stroke-dashoffset: 723;
+  -webkit-animation: show75 2s;
+  animation: show75 2s;
+}
+
+.chart[data-percent='50'] .outer {
+  stroke-dashoffset: 550;
+  -webkit-animation: show50 2s;
+  animation: show50 2s;
+}
+
+.chart[data-percent='25'] .outer {
+  stroke-dashoffset: 500;
+  -webkit-animation: show25 2s;
+  animation: show25 2s;
+}
+/* END set initial animation values */
+
+/* Keyframes for the initial animation */
+@-webkit-keyframes show100 {
+  from {
+    stroke-dashoffset: 537;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes show100 {
+  from {
+    stroke-dashoffset: 537;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes show75 {
+  from {
+    stroke-dashoffset: 1445;
+  }
+
+  to {
+    stroke-dashoffset: 723;
+  }
+}
+
+@keyframes show75 {
+  from {
+    stroke-dashoffset: 1445;
+  }
+
+  to {
+    stroke-dashoffset: 723;
+  }
+}
+
+@-webkit-keyframes show50 {
+  from {
+    stroke-dashoffset: 1445;
+  }
+
+  to {
+    stroke-dashoffset: 550;
+  }
+}
+
+@keyframes show50 {
+  from {
+    stroke-dashoffset: 1445;
+  }
+
+  to {
+    stroke-dashoffset: 550;
+  }
+}
+
+@-webkit-keyframes show25 {
+  from {
+    stroke-dashoffset: 1445;
+  }
+
+  to {
+    stroke-dashoffset: 500;
+  }
+}
+
+@keyframes show25 {
+  from {
+    stroke-dashoffset: 1445;
+  }
+
+  to {
+    stroke-dashoffset: 500;
+  }
+}
+/* END Keyframes for the initial animation */
