@@ -86,6 +86,7 @@
 		var controller = new ScrollMagic.Controller();
 		var subtitles = document.querySelectorAll('.subtitle');
 		var footerSubtitles = document.querySelectorAll('footer .subtitle');
+		var learningCirclesDefinition = document.getElementById('definition');
 
 		subtitles.forEach(function(subtitle) {
 		  new ScrollMagic.Scene({
@@ -105,6 +106,14 @@
 			.setClassToggle(subtitle, "active")
 	    .addTo(controller);
 		});
+
+		new ScrollMagic.Scene({
+			triggerElement: definition,
+			triggerHook: 'onEnter',
+			offset: 200
+		})
+		.setClassToggle(definition, "play-animation")
+    .addTo(controller);
 </script>
 
 

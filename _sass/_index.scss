@@ -123,7 +123,8 @@ main {
 
 					.number {
 						font-size: $font-size-h1;
-						font-weight: bolder;
+						font-family: $headings-font-family;
+						font-weight: $headings-font-weight;
 					}
 
 					.label {
@@ -368,7 +369,6 @@ main {
 	}
 
 	main {
-
 		section {
 			padding: 4px;
 
@@ -414,6 +414,51 @@ main {
 						.line {
 							&.expanded {
 								width: 40vw;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		section#learning-circles {
+			.overview {
+				margin-top: $padding-sm;
+				flex-direction: column;
+
+				#definition {
+					order: 1;
+					text-align: center;
+
+					p.large {
+						padding-right: 0;
+					}
+
+					figure.chart {
+						display: none;
+					}
+				}
+
+				#stats {
+					order: 2;
+
+					.stat {
+						margin-bottom: $padding-sm;
+					}
+				}
+			}
+
+			#testimonials {
+				.slide {
+					width: 95vw;
+
+					.testimonial-card {
+						.attribution {
+							flex-direction: column;
+							text-align: center;
+
+							.image {
+								margin-right: 0;
 							}
 						}
 					}
@@ -489,24 +534,6 @@ main {
   text-align: center;
 }
 
-.chart figcaption {
-  padding: 50px 25px;
-  width: 100px;
-  height: 50px;
-  border: 20px solid #f0f0f0;
-  border-radius: 100px;
-  line-height: 50px;
-}
-
-.chart img {
-  position: absolute;
-  max-width: 100px;
-  max-height: 100px;
-  background: white;
-}
-/* END Container styles */
-
-
 svg .outer.red {
   stroke: $p2pu-orange;
 }
@@ -526,61 +553,34 @@ svg .outer.yellow {
   stroke-dasharray: 1445;
   transition: stroke-dashoffset 1s;
   -webkit-animation-play-state: running;
-
-  /* firefox bug fix - won't rotate at 90deg angles */
   -moz-transform: rotate(-89deg) translateX(-190px);
 }
 
-#definition:hover .outer {
-  stroke-dashoffset: 1445 !important;
-  -webkit-animation-play-state: paused;
-}
+#definition {
+	.outer {
+	  stroke-dashoffset: 1445;
+	  -webkit-animation-play-state: paused;
+	}
 
-/* Set the initial values for the animation */
-.chart[data-percent='100'] .outer {
-  stroke-dashoffset: 0;
-  -webkit-animation: show100 2s;
-  animation: show100 2s;
-}
+	&.play-animation {
+		.chart[data-percent='75'] .outer {
+		  stroke-dashoffset: 723;
+		  -webkit-animation: show75 2s;
+		  animation: show75 2s;
+		}
 
-.chart[data-percent='75'] .outer {
-  stroke-dashoffset: 723;
-  -webkit-animation: show75 2s;
-  animation: show75 2s;
-}
+		.chart[data-percent='50'] .outer {
+		  stroke-dashoffset: 550;
+		  -webkit-animation: show50 2s;
+		  animation: show50 2s;
+		}
 
-.chart[data-percent='50'] .outer {
-  stroke-dashoffset: 550;
-  -webkit-animation: show50 2s;
-  animation: show50 2s;
-}
-
-.chart[data-percent='25'] .outer {
-  stroke-dashoffset: 500;
-  -webkit-animation: show25 2s;
-  animation: show25 2s;
-}
-/* END set initial animation values */
-
-/* Keyframes for the initial animation */
-@-webkit-keyframes show100 {
-  from {
-    stroke-dashoffset: 537;
-  }
-
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes show100 {
-  from {
-    stroke-dashoffset: 537;
-  }
-
-  to {
-    stroke-dashoffset: 0;
-  }
+		.chart[data-percent='25'] .outer {
+		  stroke-dashoffset: 500;
+		  -webkit-animation: show25 2s;
+		  animation: show25 2s;
+		}
+	}
 }
 
 @-webkit-keyframes show75 {
@@ -642,4 +642,3 @@ svg .outer.yellow {
     stroke-dashoffset: 500;
   }
 }
-/* END Keyframes for the initial animation */
