@@ -9,7 +9,7 @@ export default class LearningCirclesPreview extends Component {
   constructor(props) {
     super(props);
     this.state = { learningCircles: [] };
-    this.api = new ApiHelper('learningCircles');
+    this.api = new ApiHelper('meetings');
     this.populateLearningCircles = () => this._populateLearningCircles();
     this.searchCallback = (response, args) => this._searchCallback(response, args);
     this.populateLearningCircles();
@@ -17,8 +17,6 @@ export default class LearningCirclesPreview extends Component {
 
   _populateLearningCircles() {
     const params = {
-      active: true,
-      signup: 'open',
       limit: PREVIEW_LIMIT
     }
 
