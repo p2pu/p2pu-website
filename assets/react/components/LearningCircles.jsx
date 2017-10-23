@@ -15,8 +15,6 @@ export default class LearningCircles extends Component {
     this.searchByLocation = (q) => this._searchByLocation(q);
     this.populateLearningCircles = () => this._populateLearningCircles();
     this.showMoreResults = (q) => this._showMoreResults(q);
-    this.generateUrl = (opts) => this._generateUrl(opts);
-    this.fetchLearningCircles = (opts, append) => this._fetchLearningCircles(opts, append);
     this.searchCallback = (response, args) => this._searchCallback(response, args);
     this.populateLearningCircles();
   }
@@ -87,7 +85,7 @@ export default class LearningCircles extends Component {
         />
         <BrowseLearningCircles
           learningCircles={ this.state.searchResults }
-          showMoreResults={ this.showMoreResults }
+          showStartYourOwn={ true }
         />
         <LoadMoreResults
           visibleSearchResults={ this.state.searchResults.length }
