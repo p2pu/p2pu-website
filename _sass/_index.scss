@@ -475,37 +475,6 @@ main {
 			}
 		}
 
-		section#search {
-			.search-form {
-		    font-size: 1.4em;
-		    margin: $padding-sm;
-		  }
-
-		  .search-results {
-		  	overflow: hidden;
-				.result-item {
-					padding: 8px 0;
-					margin-bottom: 0;
-			    .card {
-			    	position: relative;
-			    	left: 0;
-				    transform: translateX(0);
-			    }
-
-			    &:hover, &:focus {
-			    	.show-on-hover {
-				    	max-height: 0px;
-			    	}
-
-			    	.card {
-			    		left: 0;
-					    transform: scale(1) translateX(0);
-			    	}
-			    }
-			  }
-			}
-		}
-
 		section#partners-and-funders {
 			.funders {
 				padding: $padding-sm;
@@ -553,6 +522,7 @@ main {
   color: #999;
   font-size: 20px;
   text-align: center;
+  top: -50px;
 }
 
 svg .outer.red {
@@ -574,7 +544,6 @@ svg .outer.yellow {
   stroke-dasharray: 1445;
   transition: stroke-dashoffset 1s;
   -webkit-animation-play-state: running;
-  -moz-transform: rotate(-89deg) translateX(-190px);
 }
 
 #definition {
@@ -584,19 +553,19 @@ svg .outer.yellow {
 	}
 
 	&.play-animation {
-		.chart[data-percent='75'] .outer {
+		.outer[data-percent='75'] {
 		  stroke-dashoffset: 723;
 		  -webkit-animation: show75 2s;
 		  animation: show75 2s;
 		}
 
-		.chart[data-percent='50'] .outer {
+		.outer[data-percent='50'] {
 		  stroke-dashoffset: 550;
 		  -webkit-animation: show50 2s;
 		  animation: show50 2s;
 		}
 
-		.chart[data-percent='25'] .outer {
+		.outer[data-percent='25'] {
 		  stroke-dashoffset: 500;
 		  -webkit-animation: show25 2s;
 		  animation: show25 2s;

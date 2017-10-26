@@ -1,5 +1,4 @@
 export const LEARNING_CIRCLES_LIMIT = 11;
-export const PREVIEW_LIMIT = 3;
 
 export const SEARCH_PROPS = {
   learningCircles: {
@@ -48,8 +47,8 @@ export const API_ENDPOINTS = {
     baseUrl: 'https://learningcircles.p2pu.org/api/landing-page-stats/?',
     searchParams: []
   },
-  meetings: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/meetings/?',
-    searchParams: ['limit']
+  landingPage: {
+    baseUrl: 'https://learningcircles.p2pu.org/api/landing-page-learning-circles/?',
+    searchParams: []
   }
 }

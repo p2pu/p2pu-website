@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import BrowseLearningCircles from './BrowseLearningCircles'
-import { PREVIEW_LIMIT } from '../constants'
 import ApiHelper from '../helpers/ApiHelper'
 
 export default class LearningCirclesPreview extends Component {
@@ -9,18 +8,14 @@ export default class LearningCirclesPreview extends Component {
   constructor(props) {
     super(props);
     this.state = { learningCircles: [] };
-    this.api = new ApiHelper('meetings');
+    this.api = new ApiHelper('landingPage');
     this.populateLearningCircles = () => this._populateLearningCircles();
     this.searchCallback = (response, args) => this._searchCallback(response, args);
     this.populateLearningCircles();
   }
 
   _populateLearningCircles() {
-    const params = {
-      limit: PREVIEW_LIMIT
-    }
-
-    const opts = { params, callback: this.searchCallback }
+    const opts = { parms: {}, callback: this.searchCallback }
 
     this.api.fetchResource(opts);
   }
