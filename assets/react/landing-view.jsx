@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import LearningCirclesStats from './components/LearningCirclesStats'
-import LearningCirclesPreview from './components/LearningCirclesPreview'
+import MeetingsPreview from './components/MeetingsPreview'
 import HeaderTextCarousel from './components/HeaderTextCarousel'
 
 
@@ -14,7 +14,7 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-  <LearningCirclesPreview />, document.getElementById('preview')
+  <MeetingsPreview />, document.getElementById('preview')
 );
 
 

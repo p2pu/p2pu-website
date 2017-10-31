@@ -99,6 +99,7 @@ bundles:
 			{% for testimonial in site.data.testimonials %}
 			<div class="slide">
 				<div class="testimonial-card">
+					<div class="role">{{ testimonial.role }}</div>
 					<div class="quote">
 						<p class="large centered">"{{ testimonial.quote }}"</p>
 					</div>
@@ -108,7 +109,6 @@ bundles:
 						</div>
 						<div class="text">
 							<div class="name">{{ testimonial.name }}</div>
-							<div class="role">{{ testimonial.role }}</div>
 							<div class="organization">{{ testimonial.organization }}</div>
 						</div>
 					</div>
@@ -117,8 +117,6 @@ bundles:
 			{% endfor %}
 		</div>
 	</div>
-
-	<div class="full-width-image finance"></div>
 
 	<section id="about" class="background-blue">
 		<header>
@@ -188,7 +186,7 @@ bundles:
 {% include scripts.html %}
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-
+<script src="{{ site.baseurl }}/assets/js/vendor/countup.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/index.js"></script>
 
 {% include ga.html %}
