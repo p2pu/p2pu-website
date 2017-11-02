@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import CountUp from 'react-countup';
 
 const NumberWithLabel = (props) => {
 
   return (
     <div className="stat">
-      <div className="number">
-        <CountUp start={ 0 } end={ props.number } useEasing={true} />
+      <div className="number" data-value={ props.number }>
+        { props.number }
       </div>
 
       <div className='label'>

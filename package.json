@@ -27,7 +27,6 @@
     "moment": "^2.18.1",
     "node-sass": "^4.5.2",
     "react": "^15.5.4",
-    "react-countup": "^2.3.0",
     "react-dom": "^15.5.4",
     "react-masonry-component": "^5.0.7",
     "react-rangeslider": "^2.1.0",

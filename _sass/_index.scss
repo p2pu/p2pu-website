@@ -175,26 +175,81 @@ main {
 	#preview {
 		background: $gray-lighter;
     margin-bottom: $padding-lg;
+    margin-top: $padding-lg;
+    display: flex;
 
     .preview-container {
-    	padding-top: $padding-sm;
+    	padding: $padding-sm 0;
+    	display: flex;
 
-    	.sub-title {
+    	.meetings-section {
+		    padding-left: $padding-sm;
+		    padding-right: $padding-sm;
+
+	    	.sub-title {
+	    		display: flex;
+  		    padding-left: 20px;
+
+	    		.text {
+				    color: $gray-darker;
+		    		border-bottom: 2px solid $p2pu-blue;
+	    		}
+	    	}
+
+	    	.meetings {
+			    padding: $padding-sm;
+
+	    		.meeting-card {
+				    padding: 10px 0;
+				    border-bottom: 2px solid white;
+
+				    &:last-of-type {
+							border-bottom: none;
+				    }
+
+						p {
+							margin-bottom: 0.4em;
+						}
+
+						h4 {
+					    margin-top: 0.4em;
+					    margin-bottom: 0.4em;
+						}
+
+						.date {
+							text-transform: uppercase;
+					    font-size: $font-size-small;
+					    color: $p2pu-orange;
+						}
+
+						.title {
+							font-size: bold;
+						}
+
+						.location {
+							font-size: $font-size-small;
+						}
+
+						.bold {
+				    	font-weight: bold
+				    }
+	    		}
+	    	}
+
+    	}
+
+    	.learning-circles-cta {
     		display: flex;
-    		justify-content: center;
+		    justify-content: center;
+		    align-items: center;
 
-    		.text {
-			    color: $gray-darker;
-	    		border-bottom: 2px solid $p2pu-blue;
-    		}
+	    	.circle {
+			    @include circle-cta;
+			    background-color: $p2pu-blue;
+			    color: white;
+			  }
     	}
     }
-
-		.search-button {
-	    display: flex;
-	    justify-content: center;
-	    transform: translateY(20px);
-		}
 	}
 
 	#testimonials {
@@ -210,7 +265,7 @@ main {
 		.slide {
 			display: flex;
 			justify-content: center;
-			align-content: center;
+			align-content: flex-start;
 			width: 680px;
 			margin: 6px;
 
@@ -224,6 +279,12 @@ main {
 				flex-direction: column;
 				padding: $padding-md;
 				z-index: 0;
+
+				.role {
+					font-size: $font-size-small;
+					text-transform: uppercase;
+					text-align: center;
+				}
 
 				.quote {
 					margin: $padding-sm;
@@ -250,11 +311,6 @@ main {
 						.name {
 							font-weight: 700;
 							padding-bottom: 6px;
-						}
-
-						.role {
-							font-size: $font-size-small;
-							text-transform: uppercase;
 						}
 
 						.organization {
@@ -475,37 +531,6 @@ main {
 			}
 		}
 
-		section#search {
-			.search-form {
-		    font-size: 1.4em;
-		    margin: $padding-sm;
-		  }
-
-		  .search-results {
-		  	overflow: hidden;
-				.result-item {
-					padding: 8px 0;
-					margin-bottom: 0;
-			    .card {
-			    	position: relative;
-			    	left: 0;
-				    transform: translateX(0);
-			    }
-
-			    &:hover, &:focus {
-			    	.show-on-hover {
-				    	max-height: 0px;
-			    	}
-
-			    	.card {
-			    		left: 0;
-					    transform: scale(1) translateX(0);
-			    	}
-			    }
-			  }
-			}
-		}
-
 		section#partners-and-funders {
 			.funders {
 				padding: $padding-sm;
@@ -553,6 +578,7 @@ main {
   color: #999;
   font-size: 20px;
   text-align: center;
+  top: -50px;
 }
 
 svg .outer.red {
@@ -574,7 +600,6 @@ svg .outer.yellow {
   stroke-dasharray: 1445;
   transition: stroke-dashoffset 1s;
   -webkit-animation-play-state: running;
-  -moz-transform: rotate(-89deg) translateX(-190px);
 }
 
 #definition {
@@ -584,19 +609,19 @@ svg .outer.yellow {
 	}
 
 	&.play-animation {
-		.chart[data-percent='75'] .outer {
+		.outer[data-percent='75'] {
 		  stroke-dashoffset: 723;
 		  -webkit-animation: show75 2s;
 		  animation: show75 2s;
 		}
 
-		.chart[data-percent='50'] .outer {
+		.outer[data-percent='50'] {
 		  stroke-dashoffset: 550;
 		  -webkit-animation: show50 2s;
 		  animation: show50 2s;
 		}
 
-		.chart[data-percent='25'] .outer {
+		.outer[data-percent='25'] {
 		  stroke-dashoffset: 500;
 		  -webkit-animation: show25 2s;
 		  animation: show25 2s;
