@@ -19,6 +19,7 @@ bundles:
 <html lang="en" class="no-js"> <!--<![endif]-->
 
 <head>
+	{% include tag_manager_head.html %}
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -192,4 +193,6 @@ bundles:
 {% include ga.html %}
 
 </body>
+
+{% include tag_manager_foot.html %}
 </html>
