@@ -51,7 +51,7 @@ body {
         font-family: $headings-font-family;
         font-weight: bold;
         text-transform: uppercase;
-        transform: translateY(0.1em);
+        transform: translateY(0.3em);
       }
 
       &:before {
@@ -62,7 +62,7 @@ body {
         right: 100%;
         bottom: 0;
         background: $gray-light;
-        height: 0.8em;
+        height: 0.6em;
         -webkit-transition-property: right;
         transition-property: right;
         -webkit-transition-duration: 0.3s;
@@ -79,7 +79,7 @@ body {
 
       &.dark {
         &:before {
-          background: transparentize($gray-darker, 0.6);
+          background: transparentize($gray-darker, 0.8);
         }
       }
     }

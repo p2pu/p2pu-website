@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SwitchButton from 'react-switch-button'
+import SwitchButton from 'react-switch-button/dist/react-switch-button'
 import css from 'react-switch-button/dist/react-switch-button.css'
 
 const OrderCoursesForm = (props) => {

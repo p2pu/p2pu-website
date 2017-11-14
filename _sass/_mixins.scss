@@ -60,3 +60,14 @@
 	min-width: 200px;
 	padding: $padding-base-horizontal;
 }
+
+@mixin circle-cta {
+  @include flex-column-centered;
+  height: 200px;
+  width: 200px;
+  background: $p2pu-light-blue;
+  border-radius: 50%;
+  text-align: center;
+  padding: $padding-sm;
+  color: $gray-darker;
+}

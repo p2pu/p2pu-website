@@ -13,3 +13,7 @@
 - name: Open Society Foundations
   logo: /assets/images/index/funders/osf.png
   url: https://www.opensocietyfoundations.org/
+
+- name: Siegel Family Endowment
+  logo: /assets/images/index/funders/sfe.jpg
+  url: http://www.siegelendowment.org/

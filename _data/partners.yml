@@ -22,6 +22,9 @@
 - name: eIFL
   url: www.eifl.net/
 
+- name: Free Library of Philadelphia
+  url: https://www.freelibrary.org/
+
 - name: Hillsborough County Public Library Cooperative
   url: www.hcplc.org/
 
@@ -33,6 +36,9 @@
 
 - name: Libraries without Borders
   url: https://www.librarieswithoutborders.org/
+
+- name: Miami-Dade Public Library System
+  url: http://www.mdpls.org/
 
 - name: MIT Media Lab
   url: https://www.media.mit.edu/

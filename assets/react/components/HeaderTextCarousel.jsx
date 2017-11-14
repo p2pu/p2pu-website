@@ -26,7 +26,7 @@ const HeaderTextCarousel = () => {
   return (
     <h1 className="bold centered">
       <TextCarousel phrases={ phrases } typistProps={ typistProps } />
-      <span>in your neighbourhood, for free. </span>
+      <span>in your neighborhood, for free. </span>
     </h1>
   );
 }
