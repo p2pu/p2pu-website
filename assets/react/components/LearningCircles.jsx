@@ -85,7 +85,6 @@ export default class LearningCircles extends Component {
         />
         <BrowseLearningCircles
           learningCircles={ this.state.searchResults }
-          showStartYourOwn={ true }
         />
         <LoadMoreResults
           visibleSearchResults={ this.state.searchResults.length }
