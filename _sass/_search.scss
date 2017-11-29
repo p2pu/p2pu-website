@@ -141,18 +141,55 @@ section.page-title {
       padding: 14px;
     }
 
-    .rsbc-switch-button.rsbc-switch-button-flat-round.rsbc-mode-select {
-      &:hover {
-        input[type="checkbox"]:checked + label {
-          background-color: $p2pu-blue !important;
-        }
+    .switch-container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+      label {
+        margin-left: 10px;
+        margin-right: 10px;
       }
 
-      input[type="checkbox"] + label {
-        background-color: $p2pu-blue !important;
+      span {
+        cursor: pointer;
+      }
 
-        &:after {
-          background-color: $p2pu-blue !important;
+      input[type="checkbox"].switch {
+        position: absolute;
+        opacity: 0;
+
+        + div.switch-background {
+          vertical-align: middle;
+          width: 47px;
+          height: 25px;
+          border-radius: 999px;
+          background-color: $p2pu-blue;
+          cursor: pointer;
+
+          > div.switch-button {
+            float: left;
+            width: 23px;
+            height: 23px;
+            border-radius: inherit;
+            background: $white;
+            transition-timing-function: cubic-bezier(1,0,0,1);
+            transition-duration: 0.4s;
+            transition-property: transform;
+            pointer-events: none;
+            margin-top: 1px;
+            margin-left: 1px;
+          }
+        }
+
+        &:checked {
+          + div.switch-background {
+            background-position: 0 0;
+
+            > div.switch-button {
+              transform: translate3d(22px, 0, 0);
+            }
+          }
         }
       }
     }

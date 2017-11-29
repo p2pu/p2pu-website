@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import SwitchButton from 'react-switch-button/dist/react-switch-button'
-import css from 'react-switch-button/dist/react-switch-button.css'
+import SwitchWithLabels from './common/SwitchWithLabels'
 
 const OrderCoursesForm = (props) => {
   const formValues = {
@@ -14,20 +13,18 @@ const OrderCoursesForm = (props) => {
     }
   }
 
-  const handleSelect = (e) => {
-    const order = formValues[e.currentTarget.checked].value
+  const handleSelect = (value) => {
+    const order = formValues[value].value
     props.updateQueryParams({ order })
   }
 
   const defaultChecked = props.order && props.order === formValues.true.value;
 
   return(
-    <SwitchButton
+    <SwitchWithLabels
       name="order-courses"
-      label="Switch mode"
-      mode="select"
       labelRight={formValues.true.label}
-      label={formValues.false.label}
+      labelLeft={formValues.false.label}
       onChange={handleSelect}
       defaultChecked={defaultChecked}
     />
