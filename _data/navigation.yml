@@ -27,15 +27,15 @@ full_column:
   - text: Stories
     url: http://info.p2pu.org/
     submenu:
+      - text: Empowering Volunteers in Kenya
+        date: September 28, 2017
+        url: http://info.p2pu.org/2017/09/28/empowering-volunteers/
       - text: Citizenship Circles
         date: August 14, 2017
         url: http://info.p2pu.org/2017/08/14/citizenshipcircles/
       - text: Seekers and Rebels
         date: June 14, 2017
         url: http://info.p2pu.org/2017/06/14/when-seekers-and-rebels-meet-or-my-experience-studying-the-learning-circles/
-      - text: Will People Show Up?
-        date: June 2, 2017
-        url: http://info.p2pu.org/2017/06/02/will-people-show-up/
   - text: Work with us
     url: /en/workwithus/
     submenu:
