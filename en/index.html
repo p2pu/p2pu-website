@@ -77,17 +77,19 @@ bundles:
 		</header>
 
 		<div class="overview">
-			<div id="stats" class="col-md-4 col-sm-12 col-xs-12"></div>
-			<div id="definition" class="col-md-8 col-sm-12 col-xs-12">
-				<p class="large">Learning circles are study groups for people who want to take online classes together and in-person.</p>
+			<div class="container">
+				<div id="stats" class="col-md-4 col-sm-12 col-xs-12"></div>
+				<div id="definition" class="col-md-8 col-sm-12 col-xs-12">
+					<p class="large">Learning circles are study groups for people who want to take online classes together and in-person.</p>
 
-			  <figure class="chart">
-			    <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-			      <circle class="outer red" data-percent="75" cx="240" cy="240" r="230" transform="rotate(-140, 240, 240)"/>
-			      <circle class="outer yellow" data-percent="50" cx="240" cy="240" r="210" transform="rotate(-140, 240, 240)"/>
-			      <circle class="outer blue" data-percent="25" cx="240" cy="240" r="190" transform="rotate(-140, 240, 240)"/>
-			    </svg>
-			  </figure>
+					<div class="svg-container">
+					    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+					      <circle class="outer red" data-percent="75" cx="240" cy="240" r="230" transform="rotate(-140, 240, 240)"/>
+					      <circle class="outer yellow" data-percent="50" cx="240" cy="240" r="210" transform="rotate(-140, 240, 240)"/>
+					      <circle class="outer blue" data-percent="25" cx="240" cy="240" r="190" transform="rotate(-140, 240, 240)"/>
+					    </svg>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -120,28 +122,30 @@ bundles:
 	</div>
 
 	<section id="about" class="background-blue">
-		<header>
-			<h3 class="headline">P2PU facilitates learning outside of institutional walls. <span class="hidden-on-mobile">Designing and leveraging open education tools and resources, P2PU strives to cultivate high-quality, low-cost models for lifelong learning.</span></h3>
-		</header>
+		<div class="container">
+			<header>
+				<h3 class="headline">P2PU facilitates learning outside of institutional walls. <span class="hidden-on-mobile">Designing and leveraging open education tools and resources, P2PU strives to cultivate high-quality, low-cost models for lifelong learning.</span></h3>
+			</header>
 
-		<div class="columns row">
-			<div class="col-md-4 col-sm-12 col-xs-12 column">
-				<p>Whether or not you are interested in facilitating a learning circle yourself, we have resources you can use to try and start a learning circle program locally.</p>
-				<a href="/en/facilitate/">
-					<button class="btn p2pu-btn light">get learning circles started</button>
-				</a>
-			</div>
-			<div class="col-md-4 col-sm-12 col-xs-12 column">
-				<p>P2PU represents a growing movement of educators, librarians, activists, policy-makers, and technologists around the globe; we use a community listserv to share ideas, celebrate victories, and support one another.</p>
-				<a href="https://groups.google.com/a/p2pu.org/forum/#!forum/community">
-					<button class="btn p2pu-btn light">join the community</button>
-				</a>
-			</div>
-			<div class="col-md-4 col-sm-12 col-xs-12 column">
-				<p>Beyond our openly-licensed toolkit, there are lots of other services we can provide, including hosting facilitator workshops, developing online courses, and customizing tool development.</p>
-				<a href="/en/workwithus/">
-					<button class="btn p2pu-btn light">work with us</button>
-				</a>
+			<div class="columns row">
+				<div class="col-md-4 col-sm-12 col-xs-12 column">
+					<p>Whether or not you are interested in facilitating a learning circle yourself, we have resources you can use to try and start a learning circle program locally.</p>
+					<a href="/en/facilitate/">
+						<button class="btn p2pu-btn light">get learning circles started</button>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-12 col-xs-12 column">
+					<p>P2PU represents a growing movement of educators, librarians, activists, policy-makers, and technologists around the globe; we use a community listserv to share ideas, celebrate victories, and support one another.</p>
+					<a href="https://groups.google.com/a/p2pu.org/forum/#!forum/community">
+						<button class="btn p2pu-btn light">join the community</button>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-12 col-xs-12 column">
+					<p>Beyond our openly-licensed toolkit, there are lots of other services we can provide, including hosting facilitator workshops, developing online courses, and customizing tool development.</p>
+					<a href="/en/workwithus/">
+						<button class="btn p2pu-btn light">work with us</button>
+					</a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -149,34 +153,36 @@ bundles:
 	<div class="full-width-image about"></div>
 
 	<section id="partners-and-funders">
-		<header>
-			<div class="subtitle">
-				<div class="underline">
-					<div class="text"><h3>Partners</h3></div>
+		<div class="container">
+			<header>
+				<div class="subtitle">
+					<div class="underline">
+						<div class="text"><h3>Partners</h3></div>
+					</div>
 				</div>
+			</header>
+			<div class="partners row">
+				{% for partner in site.data.partners %}
+					<div class="col-md-4 col-sm-12 col-xs-12"><a href="{{ partner.url }}">{{ partner.name }}</a></div>
+				{% endfor %}
 			</div>
-		</header>
-		<div class="partners row">
-			{% for partner in site.data.partners %}
-				<div class="col-md-4 col-sm-12 col-xs-12"><a href="{{ partner.url }}">{{ partner.name }}</a></div>
-			{% endfor %}
-		</div>
 
-		<header>
-			<div class="subtitle">
-				<div class="underline">
-					<div class="text"><h3>Funders</h3></div>
+			<header>
+				<div class="subtitle">
+					<div class="underline">
+						<div class="text"><h3>Funders</h3></div>
+					</div>
 				</div>
+			</header>
+			<div class="funders row">
+				{% for funder in site.data.funders %}
+				<div class="funder col-md-4 col-sm-6 col-xs-12">
+					<a href="{{ funder.url }}">
+						<img src="{{ site.baseurl }}{{ funder.logo }}" alt="{{ funder.name }}">
+					</a>
+				</div>
+				{% endfor %}
 			</div>
-		</header>
-		<div class="funders row">
-			{% for funder in site.data.funders %}
-			<div class="funder col-md-4 col-sm-6 col-xs-12">
-				<a href="{{ funder.url }}">
-					<img src="{{ site.baseurl }}{{ funder.logo }}" alt="{{ funder.name }}">
-				</a>
-			</div>
-			{% endfor %}
 		</div>
 	</section>
 </main>
