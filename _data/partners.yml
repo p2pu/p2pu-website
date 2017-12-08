@@ -17,22 +17,22 @@
   url: https://cri-paris.org/
 
 - name: Detroit Public Library
-  url: www.detroitpubliclibrary.org/
+  url: http://www.detroitpubliclibrary.org/
 
-- name: eIFL
-  url: www.eifl.net/
+- name: EIFL
+  url: http://www.eifl.net/
 
 - name: Free Library of Philadelphia
   url: https://www.freelibrary.org/
 
 - name: Hillsborough County Public Library Cooperative
-  url: www.hcplc.org/
+  url: http://www.hcplc.org/
 
 - name: Kansas City Public Library
-  url: www.kclibrary.org/
+  url: https://www.kclibrary.org/
 
 - name: Kenya National Library Services
-  url: www.knls.ac.ke/
+  url: http://www.knls.ac.ke/
 
 - name: Libraries without Borders
   url: https://www.librarieswithoutborders.org/
@@ -53,7 +53,7 @@
   url: https://oeru.org/
 
 - name: Open University
-  url: www.open.ac.uk/
+  url: https://www.open.ac.uk/
 
 - name: Pierce County Library
   url: https://www.piercecountylibrary.org/
@@ -62,22 +62,22 @@
   url: https://pittsburghkids.org/
 
 - name: Providence Public Library
-  url: www.provlib.org/
+  url: http://www.provlib.org/
 
 - name: Richland County Library
-  url: www.richlandlibrary.com/
+  url: https://www.richlandlibrary.com/
 
 - name: San Jose Public Library
   url: https://www.sjpl.org/
 
 - name: TASCHA
-  url: tascha.uw.edu/
+  url: http://tascha.uw.edu/
 
 - name: Twin Lakes Library System
-  url: tllsga.org/
+  url: http://tllsga.org/
 
 - name: Wichita Public Library
-  url: www.wichitalibrary.org/
+  url: http://www.wichitalibrary.org/
 
 - name: World Education
-  url: www.worlded.org/
+  url: http://www.worlded.org/
