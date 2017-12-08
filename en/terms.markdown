@@ -10,7 +10,7 @@ THIS IS A LEGAL AGREEMENT BETWEEN YOU AND P2PU. PLEASE READ THIS DOCUMENT AND AL
 THE SERVICE IS NOT FOR PERSONS UNDER THE AGE OF 13. IF YOU ARE UNDER 13 YEARS OF AGE, THEN PLEASE DO NOT USE THE SERVICE. FURTHER, IF YOU ARE OVER 13 BUT ARE UNDER THE AGE OF CONSENT WHERE YOU LIVE, THEN YOU MUST GET THE CONSENT OF YOUR PARENTS PRIOR TO USING THE SERVICE.
 
 ## 1. Privacy.
-Your privacy is important to us. Please read our Privacy Notice (available at https://p2pu.org/en/pages/privacy/) carefully for details relating to the collection, use, and disclosure of your personal information. Our Privacy Notice is hereby incorporated into these Terms by reference.
+Your privacy is important to us. Please read our Privacy Notice (available at https://p2pu.org/en/privacy/) carefully for details relating to the collection, use, and disclosure of your personal information. Our Privacy Notice is hereby incorporated into these Terms by reference.
 
 ## 2. Trademarks.
 Your use of any trademarks, trade names or other indicia of origin of P2PU will be governed by our trademark policy, as updated from time to time (the “P2PU Trademark Policy”). Any material protected by a trademark is excluded from the CC BY-SA 4.0 license applying to this site.
