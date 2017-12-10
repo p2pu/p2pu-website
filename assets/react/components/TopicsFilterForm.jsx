@@ -57,15 +57,17 @@ export default class TopicsFilterForm extends Component {
     const value = this.mapArrayToSelectOptions(this.props.topics || []);
 
     return(
-      <SelectWithLabel
-        label='What topics are you interested in?'
-        classes='no-flex'
-        options={this.state.options}
-        multi={true}
-        value={value}
-        onChange={this.handleSelect}
-        placeholder='Select as many topics as you want'
-      />
+      <div className="col-sm-12">
+        <SelectWithLabel
+          label='What topics are you interested in?'
+          classes='no-flex'
+          options={this.state.options}
+          multi={true}
+          value={value}
+          onChange={this.handleSelect}
+          placeholder='Select as many topics as you want'
+        />
+      </div>
     )
   }
 }

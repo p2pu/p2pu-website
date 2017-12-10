@@ -59,6 +59,7 @@ export default class LocationFilterForm extends Component {
     const url = `http://ws.geonames.org/countryCodeJSON?lat=${lat}&lng=${lon}&username=p2pu`;
 
     $.getJSON(url, (res) => {
+      console.log("country_code", res.countryCode)
       const useMiles = countriesUsingMiles.indexOf(res.countryCode) >= 0;
       this.props.updateQueryParams({ useMiles })
     });

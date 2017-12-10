@@ -18,8 +18,6 @@ export default class FilterSection extends Component {
   }
 
   render() {
-    const isMobile = screen.width < 768;
-
     return(
       <div className="filter-section">
         <div className='filters-bar'>
@@ -34,7 +32,7 @@ export default class FilterSection extends Component {
                     updateActiveFilter={this.updateActiveFilter}
                   />
                   {
-                    isMobile && isActive &&
+                    isActive &&
                     <FilterForm
                       activeFilter={this.state.activeFilter}
                       {...this.props}
@@ -45,13 +43,6 @@ export default class FilterSection extends Component {
             })
           }
         </div>
-        {
-          !isMobile &&
-          <FilterForm
-            activeFilter={this.state.activeFilter}
-            {...this.props}
-          />
-        }
       </div>
     )
   }

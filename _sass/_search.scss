@@ -11,11 +11,10 @@ section.page-title {
     justify-content: center;
     text-transform: uppercase;
     text-align: center;
+  }
 
-    h1 {
-      font-size: 3.4em;
-      color: $gray-light;
-    }
+  #search-subtitle {
+    margin: 0 auto;
   }
 
   p.centered.large {
@@ -50,19 +49,26 @@ section.page-title {
   }
 }
 
+.page {
+  display: flex;
+}
+
 .search-container {
   display: flex;
   flex-direction: column;
+  padding-left: 0;
 
   .search-bar {
     background-color: $p2pu-blue;
     display: flex;
+    flex-direction: column;
     padding: $padding-xs $padding-sm;
 
     .wrapper {
       display: flex;
       flex-grow: 1;
-      margin-right: $padding-sm;
+      margin-right: 0;
+      margin-bottom: 4px;
 
       i.material-icons {
         position: absolute;
@@ -72,13 +78,14 @@ section.page-title {
 
       input.search-input {
         border-radius: 2em;
+        padding: $padding-xs;
         padding-left: $padding-md;
-        padding-right: $padding-sm;
         border: none;
         width: 100%;
 
         &::placeholder {
           font-style: italic;
+          font-size: 0.8em;
         }
       }
     }
@@ -86,6 +93,7 @@ section.page-title {
 
   .filter-section {
     display: flex;
+    flex-direction: column;
     background-color: $gray-lighter;
     border-bottom: 2px dashed $p2pu-blue;
   }
@@ -93,17 +101,16 @@ section.page-title {
   .filters-bar {
     display: flex;
     flex-grow: 1;
-    flex-basis: 50%;
     flex-direction: column;
 
     .wrapper {
       display: flex;
+      flex-direction: column;
       flex-grow: 1;
 
       .filter {
         display: flex;
         flex-grow: 1;
-        justify-content: center;
         align-items: center;
         border-bottom: 2px solid $gray-lighter;
         font-weight: bold;
@@ -111,7 +118,8 @@ section.page-title {
         color: $gray-darker;
         text-transform: uppercase;
         cursor: pointer;
-        padding: 16px;
+        padding: 10px;
+        padding-left: 26px;
 
         i.material-icons {
           color: $p2pu-blue;
@@ -216,6 +224,10 @@ section.page-title {
       }
     }
   }
+}
+
+.results-container {
+  display: flex;
 }
 
 .search-results {
@@ -523,7 +535,6 @@ header {
 
 .results-summary {
   display: flex;
-  justify-content: center;
 
   .search-tags {
     display: flex;
@@ -624,28 +635,6 @@ header {
         font-size: 2em;
       }
     }
-  }
-
-  .search-container {
-    .search-bar {
-      flex-direction: column;
-
-      .wrapper {
-        margin-right: 0;
-        margin-bottom: 4px;
-
-        input.search-input {
-          padding-top: $padding-xs;
-          padding-bottom: $padding-xs;
-        }
-      }
-
-      button.submit {
-        width: 100%;
-        background-color: $gray-lighter;
-      }
-    }
-
   }
 
 

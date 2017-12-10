@@ -12,21 +12,9 @@ const ResultsDisplay = (props) => {
     }
   }
 
-  const resetUrl = props.searchSubject === 'courses' ? '/en/courses' : '/en/learning-circles';
-
   return(
     <div className="search-results col-sm-12">
-      <header>
-        <div className="subtitle">
-          <div className="underline dark">
-            <div className="text"><h3>Results</h3></div>
-          </div>
-        </div>
-      </header>
       <SearchTags {...props} />
-      <p className="clear-search small centered">
-        <a href={resetUrl}>Reset search form</a>
-      </p>
       { renderResults() }
     </div>
   )

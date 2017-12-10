@@ -73,24 +73,28 @@ export default class Search extends Component {
     const resultsSubtitle = SEARCH_PROPS[this.props.searchSubject].resultsSubtitle;
 
     return(
-      <div className="search-container">
-        <SearchBar
-          placeholder={placeholder}
-          updateQueryParams={this.updateQueryParams}
-        />
-        <FiltersSection
-          filterCollection={filterCollection}
-          updateQueryParams={this.updateQueryParams}
-          searchSubject={this.props.searchSubject}
-          {...this.state}
-        />
-        <ResultsDisplay
-          resultsSubtitle={resultsSubtitle}
-          data={this.state.searchResults}
-          updateQueryParams={this.updateQueryParams}
-          {...this.state}
-          {...this.props}
-        />
+      <div className="page">
+        <div className="search-container col-xs-12 col-sm-4">
+          <SearchBar
+            placeholder={placeholder}
+            updateQueryParams={this.updateQueryParams}
+          />
+          <FiltersSection
+            filterCollection={filterCollection}
+            updateQueryParams={this.updateQueryParams}
+            searchSubject={this.props.searchSubject}
+            {...this.state}
+          />
+        </div>
+        <div className="results-container col-xs-12 col-sm-8">
+          <ResultsDisplay
+            resultsSubtitle={resultsSubtitle}
+            data={this.state.searchResults}
+            updateQueryParams={this.updateQueryParams}
+            {...this.state}
+            {...this.props}
+          />
+        </div>
       </div>
     )
   }
