@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import SearchBar from './SearchBar'
-import FiltersSection from './FiltersSection'
+import SearchAndFilter from './SearchAndFilter'
 import ResultsDisplay from './ResultsDisplay'
 import SearchTags from './SearchTags'
 import { SEARCH_PROPS } from '../constants'
@@ -74,27 +73,20 @@ export default class Search extends Component {
 
     return(
       <div className="page">
-        <div className="search-container col-xs-12 col-sm-4">
-          <SearchBar
-            placeholder={placeholder}
-            updateQueryParams={this.updateQueryParams}
-          />
-          <FiltersSection
-            filterCollection={filterCollection}
-            updateQueryParams={this.updateQueryParams}
-            searchSubject={this.props.searchSubject}
-            {...this.state}
-          />
-        </div>
-        <div className="results-container col-xs-12 col-sm-8">
-          <ResultsDisplay
-            resultsSubtitle={resultsSubtitle}
-            data={this.state.searchResults}
-            updateQueryParams={this.updateQueryParams}
-            {...this.state}
-            {...this.props}
-          />
-        </div>
+        <SearchAndFilter
+          placeholder={placeholder}
+          updateQueryParams={this.updateQueryParams}
+          filterCollection={filterCollection}
+          searchSubject={this.props.searchSubject}
+          {...this.state}
+        />
+        <ResultsDisplay
+          resultsSubtitle={resultsSubtitle}
+          data={this.state.searchResults}
+          updateQueryParams={this.updateQueryParams}
+          {...this.state}
+          {...this.props}
+        />
       </div>
     )
   }

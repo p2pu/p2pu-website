@@ -51,41 +51,52 @@ section.page-title {
 
 .page {
   display: flex;
+  flex-direction: column;
 }
 
 .search-container {
   display: flex;
-  flex-direction: column;
-  padding-left: 0;
+  box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
+
+  .label {
+    text-transform: uppercase;
+    color: $gray-dark;
+    background-color: $gray-lighter;
+    padding: $padding-xs $padding-sm;
+  }
 
   .search-bar {
-    background-color: $p2pu-blue;
     display: flex;
+    flex: 1 1 50%;
     flex-direction: column;
-    padding: $padding-xs $padding-sm;
 
-    .wrapper {
+    .input {
       display: flex;
-      flex-grow: 1;
-      margin-right: 0;
-      margin-bottom: 4px;
+      padding: $padding-xs;
 
-      i.material-icons {
-        position: absolute;
-        padding-top: $padding-xs;
-        padding-left: $padding-xs;
-      }
+      .wrapper {
+        display: flex;
+        flex-grow: 1;
+        margin-right: 0;
 
-      input.search-input {
-        border-radius: 2em;
-        padding: $padding-xs;
-        padding-left: $padding-md;
-        border: none;
-        width: 100%;
+        i.material-icons {
+          position: absolute;
+          padding-top: $padding-xs;
+          padding-left: $padding-xs;
+        }
 
-        &::placeholder {
-          font-style: italic;
-          font-size: 0.8em;
+        input.search-input {
+          border-radius: 2em;
+          padding: 0.4em;
+          padding-left: $padding-md;
+          border: 2px solid $p2pu-blue;
+          width: 100%;
+          margin-right: 0.4em;
+
+          &::placeholder {
+            font-style: italic;
+            font-size: 0.8em;
+          }
         }
       }
     }
@@ -93,30 +104,24 @@ section.page-title {
 
   .filter-section {
     display: flex;
+    flex: 1 1 50%;
     flex-direction: column;
-    background-color: $gray-lighter;
-    border-bottom: 2px dashed $p2pu-blue;
+    border-left: 2px solid $white;
   }
 
   .filters-bar {
     display: flex;
     flex-grow: 1;
-    flex-direction: column;
 
     .wrapper {
       display: flex;
-      flex-direction: column;
-      flex-grow: 1;
 
       .filter {
         display: flex;
         flex-grow: 1;
-        align-items: center;
-        border-bottom: 2px solid $gray-lighter;
         font-weight: bold;
         background-color: $white;
         color: $gray-darker;
-        text-transform: uppercase;
         cursor: pointer;
         padding: 10px;
         padding-left: 26px;
@@ -126,10 +131,6 @@ section.page-title {
           font-weight: bold;
           margin-left: $padding-sm;
           font-size: 1em;
-        }
-
-        &.active {
-          background-color: $gray-lighter;
         }
       }
 

@@ -20,6 +20,9 @@ export default class FilterSection extends Component {
   render() {
     return(
       <div className="filter-section">
+        <div className='label'>
+          Filter
+        </div>
         <div className='filters-bar'>
           {
             this.props.filterCollection.map((filter, index) => {
@@ -32,7 +35,7 @@ export default class FilterSection extends Component {
                     updateActiveFilter={this.updateActiveFilter}
                   />
                   {
-                    isActive &&
+                    false &&
                     <FilterForm
                       activeFilter={this.state.activeFilter}
                       {...this.props}

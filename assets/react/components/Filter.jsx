@@ -19,8 +19,10 @@ const Filter = ({filter, active, updateActiveFilter}) => {
 
   return(
     <div className={`filter ${activeClass}`} onClick={handleClick} >
-      {filterNames[filter]}
-      <i className="material-icons">{iconName}</i>
+      <button className='p2pu-btn light'>
+        {filterNames[filter]}
+        <i className="material-icons">{iconName}</i>
+      </button>
     </div>
   )
 }
