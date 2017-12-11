@@ -66,6 +66,16 @@ section.page-title {
   display: flex;
   box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    opacity: 0.8;
+  }
 
   .label {
     text-transform: uppercase;
@@ -77,6 +87,7 @@ section.page-title {
   .search-bar {
     display: flex;
     flex: 1 1 50%;
+    min-width: 300px;
     flex-direction: column;
 
     .input {
@@ -114,18 +125,20 @@ section.page-title {
   .filter-section {
     display: flex;
     flex: 1 1 50%;
+    min-width: 300px;
     flex-direction: column;
     border-left: 2px solid $white;
   }
 
   .filters-bar {
     display: flex;
+    padding: $padding-xs;
 
     .wrapper {
 
       .filter {
         position: relative;
-        padding: $padding-xs;
+        margin-right: 0.4em;
 
         i.material-icons {
           color: $p2pu-blue;
@@ -165,10 +178,10 @@ section.page-title {
     box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
     width: 48%;
     right: 2%;
-    transform: translateY(10px);
+    transform: translateY(20px);
 
     &.open {
-      padding: 14px;
+      padding: $padding-sm;
     }
 
     .switch-container {
@@ -253,6 +266,15 @@ section.page-title {
 }
 
 .search-results {
+
+  .clear-search {
+    padding-top: $padding-xs;
+
+    button.p2pu-btn {
+      padding: 6px 12px;
+    }
+  }
+
   .result-item {
     position: relative;
     display: flex;
@@ -556,7 +578,8 @@ header {
 }
 
 .results-summary {
-  display: flex;
+  padding-left: $padding-sm;
+  padding-right: $padding-sm;
 
   .search-tags {
     display: flex;
@@ -570,8 +593,6 @@ header {
 
     &.wrapper {
       margin-top: $padding-sm;
-      margin-left: $padding-sm;
-      margin-right: $padding-sm;
     }
 
     .search-tag {
@@ -670,8 +691,6 @@ header {
         flex-direction: column;
 
         .filter {
-          padding: 10px 4px;
-
           &.active {
             button {
               &:after {

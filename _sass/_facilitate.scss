@@ -126,7 +126,7 @@ section#get-started {
       margin-bottom: $padding-md;
 
       p {
-        padding: $padding-md $padding-sm;
+        padding: $padding-sm;
       }
     }
 
@@ -175,7 +175,6 @@ section#get-started {
 
 section#lets-do-it {
   padding: 0;
-  margin: $padding-md 0;
 
   .callout {
     @include flex-column-centered;
