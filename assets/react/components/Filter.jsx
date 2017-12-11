@@ -18,10 +18,11 @@ const Filter = ({filter, active, updateActiveFilter}) => {
   }
 
   return(
-    <div className={`filter ${activeClass}`} onClick={handleClick} >
-      <button className='p2pu-btn light'>
-        {filterNames[filter]}
-        <i className="material-icons">{iconName}</i>
+    <div className={`filter ${activeClass}`} >
+      <button className='p2pu-btn light with-outline' onClick={handleClick}>
+        <span style={{ display: 'flex',flexWrap: 'nowrap' }}>
+          {filterNames[filter]}
+        </span>
       </button>
     </div>
   )

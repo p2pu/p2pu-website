@@ -26,9 +26,13 @@ export default class FilterForm extends Component {
 
   render() {
     const openClass = this.props.activeFilter ? 'open' : '';
+    const closeFilter = () => { this.props.updateActiveFilter(null) };
 
     return(
-      <div className={`filter-form-dropdown col-sm-12 ${openClass}`}>
+      <div className={`filter-form-dropdown ${openClass}`}>
+        <div className='close' style={{ textAlign: 'right', float: 'none' }}>
+          <i className="material-icons" onClick={closeFilter}>close</i>
+        </div>
         {this.generateFilterForm()}
       </div>
     )

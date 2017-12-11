@@ -103,7 +103,13 @@
     outline: none;
   }
 
-  @media (max-width: $screen-sm-max) {
+  &.with-outline {
+    border: 2px solid $gray-lighter;;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    padding: 0.4em 1em;
+
     &.dark {
       background: $gray-darker;
       color: $white;

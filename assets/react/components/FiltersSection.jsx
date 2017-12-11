@@ -9,10 +9,6 @@ export default class FilterSection extends Component {
     this.updateActiveFilter = (filter) => this._updateActiveFilter(filter);
   }
 
-  componentDidMount() {
-    this.setState({ activeFilter: this.props.filterCollection[0] })
-  }
-
   _updateActiveFilter(filter) {
     this.setState({ activeFilter: filter })
   }
@@ -35,9 +31,10 @@ export default class FilterSection extends Component {
                     updateActiveFilter={this.updateActiveFilter}
                   />
                   {
-                    false &&
+                    isActive &&
                     <FilterForm
                       activeFilter={this.state.activeFilter}
+                      updateActiveFilter={this.updateActiveFilter}
                       {...this.props}
                     />
                   }
