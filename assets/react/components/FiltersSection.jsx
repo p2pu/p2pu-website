@@ -9,19 +9,16 @@ export default class FilterSection extends Component {
     this.updateActiveFilter = (filter) => this._updateActiveFilter(filter);
   }
 
-  componentDidMount() {
-    this.setState({ activeFilter: this.props.filterCollection[0] })
-  }
-
   _updateActiveFilter(filter) {
     this.setState({ activeFilter: filter })
   }
 
   render() {
-    const isMobile = screen.width < 768;
-
     return(
       <div className="filter-section">
+        <div className='label'>
+          Filter
+        </div>
         <div className='filters-bar'>
           {
             this.props.filterCollection.map((filter, index) => {
@@ -34,9 +31,10 @@ export default class FilterSection extends Component {
                     updateActiveFilter={this.updateActiveFilter}
                   />
                   {
-                    isMobile && isActive &&
+                    isActive &&
                     <FilterForm
                       activeFilter={this.state.activeFilter}
+                      updateActiveFilter={this.updateActiveFilter}
                       {...this.props}
                     />
                   }
@@ -45,13 +43,6 @@ export default class FilterSection extends Component {
             })
           }
         </div>
-        {
-          !isMobile &&
-          <FilterForm
-            activeFilter={this.state.activeFilter}
-            {...this.props}
-          />
-        }
       </div>
     )
   }

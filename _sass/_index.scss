@@ -7,7 +7,7 @@ main {
 
 	header {
 		@include flex-column-centered;
-	  margin: $padding-sm;
+	  margin-bottom: $padding-sm;
 
 	  .subtitle {
 	  	text-align: center;

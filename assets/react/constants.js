@@ -3,11 +3,11 @@ export const LEARNING_CIRCLES_LIMIT = 11;
 export const SEARCH_PROPS = {
   learningCircles: {
     filters: ['location', 'topics', 'meetingDays'],
-    placeholder: 'Search by keyword, organization, topic, and more... ',
+    placeholder: 'Keyword, organization, facilitator, etc...',
   },
   courses: {
     filters: ['topics', 'orderCourses'],
-    placeholder: 'Search by title, subject, description, and more... ',
+    placeholder: 'Title, subject, etc...',
   }
 };
 

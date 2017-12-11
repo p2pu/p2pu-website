@@ -44,6 +44,13 @@ const LearningCircleCard = (props) => {
             <i className="material-icons">store</i>
             Meeting at { props.location }
           </p>
+          <div className='actions'>
+            <div className="primary-cta">
+              <a href={ props.url } className=''>
+                <button className="btn p2pu-btn transparent">Sign up</button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
