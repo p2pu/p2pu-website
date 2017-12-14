@@ -8,7 +8,7 @@ const NumberWithLabel = (props) => {
         { props.number }
       </div>
 
-      <div className='label'>
+      <div className='text'>
         { props.label }
       </div>
     </div>

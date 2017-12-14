@@ -95,6 +95,24 @@
     }
   }
 
+  &.yellow {
+    background: $p2pu-yellow;
+    color: $white;
+
+    &:before {
+      background: lighten($p2pu-yellow, 3%);
+    }
+  }
+
+  &.green {
+    background: $p2pu-green;
+    color: $white;
+
+    &:before {
+      background: lighten($p2pu-green, 1%);
+    }
+  }
+
   &:focus {
     outline: none;
   }

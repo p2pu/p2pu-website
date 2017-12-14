@@ -1,13 +1,4 @@
 
-$(function() {
-  var delay = 100;
-  $('.nav-item .line').each(function(index) {
-    var el = this;
-    window.setTimeout(function() {
-      $(el).addClass('expanded');
-    }, delay * (index + 1))
-  });
-})
 
 $('#testimonials .slide-container').slick({
   centerMode: true,
@@ -34,14 +25,23 @@ $('#testimonials .slide-container').slick({
 $(function() {
   var controller = new ScrollMagic.Controller();
   var learningCirclesDefinition = document.getElementById('definition');
+  var imageBgLine = document.querySelectorAll('.image-container .bg-line');
 
   var startNumberAnimations = function() {
     document.querySelectorAll('.number').forEach(function(number) {
       var endVal = number.dataset.value;
-      var countup = new CountUp(number, 0, endVal);
+      var countup = new CountUp(number, 0, endVal, 0, 2.5);
       countup.start();
     })
   }
+
+  new ScrollMagic.Scene({
+    triggerElement: imageBgLine,
+    triggerHook: 'onEnter',
+    offset: 100,
+  })
+  .setClassToggle(imageBgLine, 'expand')
+  .addTo(controller);
 
   new ScrollMagic.Scene({
       triggerElement: learningCirclesDefinition,
@@ -49,7 +49,7 @@ $(function() {
       offset: 200
     })
     .on('start', startNumberAnimations)
-    .addTo(controller)
+    .addTo(controller);
 
   new ScrollMagic.Scene({
       triggerElement: learningCirclesDefinition,

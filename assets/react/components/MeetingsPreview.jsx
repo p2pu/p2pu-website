@@ -28,19 +28,17 @@ export default class MeetingsPreview extends Component {
     return (
       <div className="container">
         <div className="preview-container">
-          <div className="meetings-section col-xs-12 col-md-8">
-            <div className="sub-title">
-              <div className="text"><h4>What's On</h4></div>
-            </div>
+          <div className="meetings-section col-xs-12">
+            <header>
+              <div class="subtitle">
+                <div class="underline">
+                  <div class="text"><h3>Upcoming Meetings</h3></div>
+                </div>
+              </div>
+            </header>
             <BrowseMeetings
               meetings={ this.state.meetings }
             />
-          </div>
-          <div className="learning-circles-cta col-xs-12 col-md-4">
-            <div className="circle">
-              <p>Find the right learning circle for you</p>
-              <a href="/en/learning-circles" className="btn p2pu-btn light arrow"><i className="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
           </div>
         </div>
       </div>
