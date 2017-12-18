@@ -4,13 +4,13 @@ const NumberWithLabel = (props) => {
 
   return (
     <div className="stat">
-      <div className="number" data-value={ props.number }>
+      <span className="number" data-value={ props.number }>
         { props.number }
-      </div>
+      </span>
 
-      <div className='text'>
+      <span className='text'>
         { props.label }
-      </div>
+      </span>
     </div>
   );
 }

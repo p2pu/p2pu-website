@@ -26,22 +26,9 @@ export default class MeetingsPreview extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="preview-container">
-          <div className="meetings-section col-xs-12">
-            <header>
-              <div class="subtitle">
-                <div class="underline">
-                  <div class="text"><h3>Upcoming Meetings</h3></div>
-                </div>
-              </div>
-            </header>
-            <BrowseMeetings
-              meetings={ this.state.meetings }
-            />
-          </div>
-        </div>
-      </div>
+      <BrowseMeetings
+        meetings={ this.state.meetings }
+      />
     );
   }
 }

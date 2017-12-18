@@ -62,24 +62,24 @@ bundles:
 				<div id="stats"></div>
 			</div>
 		</div>
-		<div class="image-container">
-			<div class="bg-line"></div>
-			<div class="image">
-				<img src="{{ site.baseurl }}/assets/images/facilitate/profile_2_1.jpg" alt="Learning circle selfie">
-			</div>
-		</div>
-
 	</section>
 
-	<div id="preview"></div>
+	<section id="upcoming-meetings">
+		<div class="container">
+	    <div class="preview-container">
+	      <div class="meetings-section col-xs-12">
+	        <div id="preview"></div>
+	      </div>
+	    </div>
+	  </div>
+	 </section>
 
 	<section id="call-to-action">
 		<div class="container">
 			<div class="block col-xs-12 col-sm-6">
-				<div class="circle">
-					<div class="content create">
-						<i class="material-icons">add_circle_outline</i>
-	            <p>Create and facilitate a learning circle</p>
+				<div class="circle create">
+					<div class="content">
+	            <p class="large">Create and facilitate a learning circle</p>
 	            <a href="/facilitate">
 	            	<button class="p2pu-btn yellow">Create</button>
 	            </a>
@@ -88,16 +88,16 @@ bundles:
 			</div>
 
 			<div class="block col-xs-12 col-sm-6">
-				<div class="circle">
-					<div class="content join">
-						<i class="material-icons">group</i>
-	            <p>Join a learning circle near you</p>
+				<div class="circle join">
+					<div class="content">
+	            <p class="large">Join a learning circle near you</p>
 	            <a href="/learning-circles">
 	            	<button class="p2pu-btn green">Join</button>
 	            </a>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</section>
 
@@ -133,19 +133,21 @@ bundles:
 
 			<div class="columns row">
 				<div class="col-md-4 col-sm-12 col-xs-12 column">
-					<p>Read about P2PU</p>
+					<p>Have we met? <a href="/en/about/" class="light bold">Read about</a> our history, our values, and our community.</p>
 					<a href="/en/about/">
 						<button class="btn p2pu-btn light">About us</button>
 					</a>
 				</div>
+
 				<div class="col-md-4 col-sm-12 col-xs-12 column">
-					<p>Hear from our community</p>
+					<p><a href="https://info.p2pu.org" class="light bold">Check out our blog</a> for stories and updates from P2PU friends and affiliates around the world.</p>
 					<a href="https://info.p2pu.org">
 						<button class="btn p2pu-btn light">Stories</button>
 					</a>
 				</div>
+
 				<div class="col-md-4 col-sm-12 col-xs-12 column">
-					<p>Let’s work together</p>
+					<p>Want us to run a training? Can we help kickstart a new program? <a href="/en/workwithus/" class="light bold">Hire us to work with you.</a></p>
 					<a href="/en/workwithus/">
 						<button class="btn p2pu-btn light">Hire us</button>
 					</a>
@@ -154,7 +156,14 @@ bundles:
 		</div>
 	</section>
 
-	<div class="full-width-image about"></div>
+			<div class="image-container">
+			<div class="bg-line"></div>
+			<div class="image">
+				<img src="{{ site.baseurl }}/assets/images/facilitate/profile_2_1.jpg" alt="Learning circle selfie">
+			</div>
+		</div>
+
+
 
 	<section id="partners-and-funders">
 		<div class="container">
@@ -167,7 +176,7 @@ bundles:
 			</header>
 			<div class="partners row">
 				{% for partner in site.data.partners %}
-					<div class="col-md-4 col-sm-12 col-xs-12"><a href="{{ partner.url }}">{{ partner.name }}</a></div>
+					<div class="col-md-4 col-sm-12 col-xs-12"><a href="{{ partner.url }}" class="dark">{{ partner.name }}</a></div>
 				{% endfor %}
 			</div>
 
@@ -193,21 +202,15 @@ bundles:
 
 {% include new_footer_en.html %}
 
-
 {% include scripts.html %}
 
-<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/vendor/countup.min.js"></script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+
 <script src="{{ site.baseurl }}/assets/js/index.js"></script>
 
 {% include ga.html %}
-
-<script type="text/javascript">
-	window.sr = ScrollReveal({ reset: true, distance: '20vh', viewFactor: 0.3, viewOffset: { top: 64, right: 0, bottom: 0, left: 0 },
- });
-	sr.reveal('.card', 100);
-	sr.reveal('#about button', 100);
-</script>
 
 </body>
 
