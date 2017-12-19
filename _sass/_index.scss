@@ -14,6 +14,43 @@ main {
 	  }
 	}
 
+  .header-text {
+		text-align: center;
+
+    h1 {
+	    margin-bottom: 1em;
+	    line-height: normal;
+    }
+  }
+
+  .image-container {
+		@include flex-column-centered;
+    margin-top: 3em;
+
+		.image {
+			flex-grow: 1;
+		  max-width: 680px;
+
+		  img {
+		  	width: 100%;
+		  	height: auto;
+		  }
+		}
+
+		.bg-line {
+			height: 14px;
+			transition: width 1s ease-in-out;
+			width: 0;
+			background-color: $p2pu-blue;
+	    position: absolute;
+	    z-index: -1;
+
+	    &.expand {
+	    	width: 100vw;
+	    }
+		}
+  }
+
 	section#landing {
 		display: flex;
 	  flex-direction: column;
@@ -21,171 +58,77 @@ main {
 	  text-align: center;
 		min-height: 90vh;
 		padding: $padding-sm 0;
-		transition: all 2s ease-in-out;
-
-    .header-text {
-			text-align: center;
-
-	    h1 {
-		    margin-bottom: 1em;
-		    line-height: normal;
-	    }
-    }
-
-		.secondary-nav {
-	    margin-top: 10vh;
-	    margin-bottom: 10vh;
-
-	    .nav-item {
-	    	position: relative;
-	    	display: flex;
-		    align-items: center;
-
-				.title {
-					font-size: 1.2em;
-					padding-left: 5px;
-
-					a {
-						color: $gray-darker;
-			    	text-transform: uppercase;
-
-						&:hover {
-							font-weight: bold;
-						}
-					}
-				}
-
-				&:nth-of-type(1) {
-					.line {
-						width: 0;
-						transition: width 1s ease-in-out;
-						border: 0.6em solid $p2pu-blue;
-						background: $p2pu-blue;
-						&.expanded {
-							width: 20vw;
-						}
-					}
-				}
-
-				&:nth-of-type(2) {
-					.line {
-						width: 0;
-						transition: width 1s ease-in-out;
-						border: 0.6em solid $p2pu-green;
-						background: $p2pu-green;
-						&.expanded {
-							width: 35vw;
-						}
-					}
-				}
-
-				&:nth-of-type(3) {
-					.line {
-						width: 0;
-						transition: width 1s ease-in-out;
-						border: 0.6em solid $p2pu-yellow;
-						background: $p2pu-yellow;
-						&.expanded {
-							width: 50vw;
-						}
-					}
-				}
-
-				&:nth-of-type(4) {
-					.line {
-						width: 0;
-						transition: width 1s ease-in-out;
-						border: 0.6em solid $p2pu-orange;
-						background: $p2pu-orange;
-						&.expanded {
-							width: 65vw;
-						}
-					}
-				}
-	    }
-		}
 	}
 
 	section#learning-circles {
 		.overview {
-	    display: flex;
-      margin-top: 80px;
+			margin-bottom: $padding-sm;
 
       .container {
       	display: flex;
 
 				#stats {
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
+					flex-grow: 1;
 
-					.stat {
-						text-align: center;
-						margin-bottom: $padding-md;
+					.card {
+						@include flex-column-centered;
 
-						.number {
-							font-size: $font-size-h1;
-							font-family: $headings-font-family;
-							font-weight: $headings-font-weight;
+						h4 {
+							padding: $padding-sm 0;
 						}
 
-						.label {
-							text-transform: uppercase;
-							font-size: $font-size-xs;
-							color: $gray-darker;
+						.material-icons {
+							font-size: 5em;
 						}
 
-						&:nth-of-type(1) {
-							.number {
-								color: $p2pu-orange;
+						&:hover {
+							.material-icons {
+								@include grow-on-hover;
 							}
 						}
 
-						&:nth-of-type(2) {
+						.stat {
+							text-align: center;
+
 							.number {
-								color: $p2pu-yellow;
+								font-weight: bold;
+							}
+
+							.text {
+								margin-left: 6px;
 							}
 						}
 
-						&:nth-of-type(3) {
-							.number {
-								color: $p2pu-blue;
-							}
+						p {
+							text-align: center;
 						}
 
-						&:nth-of-type(4) {
-							.number {
-								color: $p2pu-green;
-							}
-						}
-					}
-				}
+						&:nth-of-type(4n+1) {
+			        .material-icons {
+			          color: $p2pu-green;
+			        }
+				    }
 
-				#definition {
-					display: flex;
-					align-items: center;
-					justify-content: flex-end;
-					margin-right: 50px;
+				    &:nth-of-type(4n+2) {
+			        .material-icons {
+			          color: $p2pu-yellow;
+			        }
+				    }
 
-					p.large {
-						padding-right: 100px;
-					}
-
-					.svg-container {
-						position: absolute;
-				    width: 60%;
+				    &:nth-of-type(4n+3) {
+			        .material-icons {
+			          color: $p2pu-orange;
+			        }
+				    }
 					}
 				}
       }
 		}
 	}
 
-	#preview {
-		background: $gray-lighter;
-    margin-bottom: $padding-lg;
-    margin-top: $padding-lg;
-    display: flex;
+	section#upcoming-meetings {
+    padding: 0;
+    background-color: $gray-lighter;
 
     .preview-container {
     	padding: $padding-sm 0;
@@ -196,71 +139,113 @@ main {
     	.meetings-section {
 		    padding-left: $padding-sm;
 		    padding-right: $padding-sm;
-
-	    	.sub-title {
-	    		display: flex;
-  		    padding-left: 20px;
-
-	    		.text {
-				    color: $gray-darker;
-		    		border-bottom: 2px solid $p2pu-blue;
-	    		}
-	    	}
+		    padding-top: $padding-sm;
 
 	    	.meetings {
-			    padding: $padding-sm;
-
 	    		.meeting-card {
-				    padding: 10px 0;
-				    border-bottom: 2px solid white;
+	    			.content {
+							.date {
+								color: $p2pu-blue;
+								text-transform: uppercase;
+						    font-size: $font-size-small;
+						    display: flex;
+						    align-items: center;
+						    margin-bottom: $padding-xs;
 
-				    &:last-of-type {
-							border-bottom: none;
-				    }
+						    p {
+						    	margin-bottom: 0;
+						    }
 
-						p {
-							margin-bottom: 0.4em;
-						}
+						    i {
+						    	margin-right: 6px;
+						    }
+							}
 
-						h4 {
-					    margin-top: 0.4em;
-					    margin-bottom: 0.4em;
-						}
+							.info {
+								color: $gray-darker;
 
-						.date {
-							text-transform: uppercase;
-					    font-size: $font-size-small;
-					    color: $p2pu-orange;
-						}
+								.title {
+									font-size: bold;
+								}
 
-						.title {
-							font-size: bold;
-						}
+								.location {
+									font-size: $font-size-small;
+								}
 
-						.location {
-							font-size: $font-size-small;
-						}
-
-						.bold {
-				    	font-weight: bold
-				    }
+								.bold {
+						    	font-weight: bold
+						    }
+							}
+	    			}
 	    		}
 	    	}
-
-    	}
-
-    	.learning-circles-cta {
-    		display: flex;
-		    justify-content: center;
-		    align-items: center;
-
-	    	.circle {
-			    @include circle-cta;
-			    background-color: $p2pu-blue;
-			    color: white;
-			  }
     	}
     }
+	}
+
+	section#call-to-action {
+		display: flex;
+		margin-bottom: $padding-lg;
+		background: url('../images/cta_bg.jpg') no-repeat center center;
+		background-size: cover;
+
+		.block {
+			display: flex;
+			justify-content: center;
+			margin-top: $padding-sm;
+			margin-bottom: $padding-sm;
+		}
+
+		.circle {
+			padding: $padding-md;
+			border-radius: 999px;
+			background-color: $white;
+			height: 90vw;
+			width: 90vw;
+			max-height: 300px;
+	    max-width: 300px;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+		  transition: box-shadow 0.4s ease-in-out;
+
+			&.create {
+				box-shadow: 0px 0px 0px 0px $p2pu-yellow;
+
+				&:hover {
+					box-shadow: 0px 0px 0px 10px $p2pu-yellow;
+				}
+
+				i.material-icons {
+					color: $p2pu-yellow;
+				}
+			}
+
+			&.join {
+				box-shadow: 0px 0px 0px 0px $p2pu-green;
+
+				&:hover {
+					box-shadow: 0px 0px 0px 10px $p2pu-green;
+				}
+
+				i.material-icons {
+					color: $p2pu-green;
+				}
+			}
+
+			.content {
+				text-align: center;
+
+				p {
+					padding-top: $padding-xs;
+					padding-bottom: $padding-xs;
+				}
+
+				i.material-icons {
+					font-size: 4em;
+				}
+			}
+		}
 	}
 
 	#testimonials {
@@ -356,10 +341,9 @@ main {
 		    text-align: center;
 				margin-bottom: $padding-md;
 
-		    p {
-		    	margin-bottom: $padding-sm;
-    	    padding: $padding-sm;
-		    }
+				p {
+					padding-bottom: $padding-xs;
+				}
 			}
 		}
 	}
@@ -410,6 +394,11 @@ main {
 	}
 }
 
+.join-cta {
+	@include flex-column-centered;
+	padding: $padding-sm;
+}
+
 .background-yellow {
 	background-color: $p2pu-yellow;
 }
@@ -424,6 +413,10 @@ main {
 
 .background-orange {
 	background-color: $p2pu-orange;
+}
+
+.background-dark {
+	background-color: $gray-darker;
 }
 
 .row {
@@ -514,11 +507,6 @@ main {
 						order: 2;
 						align-items: unset;
 
-						.stacked-numbers {
-							display: flex;
-							justify-content: space-evenly;
-						}
-
 						.stat {
 							margin-bottom: $padding-sm;
 						}
@@ -588,6 +576,14 @@ main {
 				.stacked-numbers {
 					flex-direction: column;
 				}
+			}
+		}
+	}
+
+	main {
+		.header-text {
+			h1 {
+				font-size: 1.8em;
 			}
 		}
 	}

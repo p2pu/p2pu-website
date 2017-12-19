@@ -7,9 +7,18 @@ body {
   }
 
   a {
-    color: $gray-darker;
+    color: $p2pu-blue;
+
+    &.light {
+      color: $white;
+    }
+
+    &.dark {
+      color: $gray-darker;
+    }
+
     &:hover, &:focus, &:active {
-      color: $p2pu-orange;
+      opacity: 0.9;
     }
   }
 

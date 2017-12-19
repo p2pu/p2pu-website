@@ -1,13 +1,4 @@
-
-$(function() {
-  var delay = 100;
-  $('.nav-item .line').each(function(index) {
-    var el = this;
-    window.setTimeout(function() {
-      $(el).addClass('expanded');
-    }, delay * (index + 1))
-  });
-})
+// Initialize slick on testimonial slides
 
 $('#testimonials .slide-container').slick({
   centerMode: true,
@@ -31,31 +22,69 @@ $('#testimonials .slide-container').slick({
   ]
 })
 
+// Initialize slick on upcoming meetings slides
+
+$(function() {
+  $('#preview .slide-container').slick({
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: false,
+    swipe: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 480,
+      },
+    ]
+  })
+})
+
+// Initialize ScrollReveal to animate entrance of elements
+
+window.sr = ScrollReveal({ reset: true, distance: '25vh', viewFactor: 0.3, viewOffset: { top: 64, right: 0, bottom: 0, left: 0 },
+ });
+  sr.reveal('.card', 100);
+  sr.reveal('.meeting-card', 100);
+  sr.reveal('#about button', 100);
+  sr.reveal('#call-to-action .circle', 100);
+
+
+// Initialize additional scroll-based animations with ScrollMagic
+
 $(function() {
   var controller = new ScrollMagic.Controller();
   var learningCirclesDefinition = document.getElementById('definition');
+  var imageBgLines = document.querySelectorAll('.image-container .bg-line');
+  var countUpNumbers = document.querySelectorAll('.number');
 
-  var startNumberAnimations = function() {
-    document.querySelectorAll('.number').forEach(function(number) {
+  var startNumberAnimation = function(number) {
+    return function() {
       var endVal = number.dataset.value;
-      var countup = new CountUp(number, 0, endVal);
+      var countup = new CountUp(number, 0, endVal, 0, 2);
       countup.start();
-    })
+    }
   }
 
-  new ScrollMagic.Scene({
-      triggerElement: learningCirclesDefinition,
+  countUpNumbers.forEach(function(number) {
+    new ScrollMagic.Scene({
+      triggerElement: number,
       triggerHook: 'onEnter',
       offset: 200
     })
-    .on('start', startNumberAnimations)
-    .addTo(controller)
-
-  new ScrollMagic.Scene({
-      triggerElement: learningCirclesDefinition,
-      triggerHook: 'onEnter',
-      offset: 200
-    })
-    .setClassToggle(learningCirclesDefinition, "play-animation")
+    .on('start', startNumberAnimation(number))
     .addTo(controller);
+  })
+
+  imageBgLines.forEach(function(line) {
+    new ScrollMagic.Scene({
+      triggerElement: line,
+      triggerHook: 'onEnter',
+      offset: 100,
+    })
+    .setClassToggle(line, 'expand')
+    .addTo(controller);
+  })
 })
