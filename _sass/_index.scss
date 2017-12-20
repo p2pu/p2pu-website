@@ -269,6 +269,10 @@ main {
 				outline: none;
 			}
 
+			.slick-slide:not(.slick-current) {
+				cursor: pointer;
+			}
+
 			.testimonial-card {
 				transition: all 0.4s ease-in-out;
 				transform: scale(0.8);
