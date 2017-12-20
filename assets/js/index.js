@@ -9,6 +9,7 @@ $('#testimonials .slide-container').slick({
   autoplaySpeed: 4000,
   pauseOnHover: true,
   swipe: true,
+  focusOnSelect: true,
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -22,25 +23,13 @@ $('#testimonials .slide-container').slick({
   ]
 })
 
-// Initialize slick on upcoming meetings slides
+
+// Initialize SmoothScroll
 
 $(function() {
-  $('#preview .slide-container').slick({
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    pauseOnHover: false,
-    swipe: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 480,
-      },
-    ]
-  })
-})
+  new SmoothScroll('a[href*="#"]');
+});
+
 
 // Initialize ScrollReveal to animate entrance of elements
 

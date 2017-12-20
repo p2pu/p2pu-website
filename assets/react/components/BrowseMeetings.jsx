@@ -34,6 +34,7 @@ const BrowseMeetings = (props) => {
               facilitator={ meeting.facilitator }
               location={ meeting.venue }
               city={ formattedCity }
+              url={ meeting.url }
             />
           )
         })

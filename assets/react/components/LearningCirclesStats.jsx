@@ -32,23 +32,23 @@ export default class LearningCirclesStats extends Component {
           <div className="col-sm-12 col-md-4 card">
             <i className="material-icons">group</i>
             <h4 className="bold">
-              <NumberWithLabel number={this.state.stats.active_learning_circles} label='active learning circles' />
-              </h4>
-            <p>Learning circles meet in person once a week to study together.</p>
+              <NumberWithLabel number={this.state.stats.active_learning_circles} label='learning circles' />
+            </h4>
+            <p>{`${this.state.stats.active_learning_circles} peers have met face-to-face to learn together in their neighborhoods.`}</p>
           </div>
           <div className="col-sm-12 col-md-4 card">
-            <i className="material-icons">computer</i>
+            <i className="material-icons">important_devices</i>
             <h4 className="bold">
-              <NumberWithLabel number={this.state.stats.facilitators} label='online course options' />
+              <NumberWithLabel number={this.state.stats.facilitators} label='courses' />
             </h4>
-            <p>The learning circle facilitator chooses a course for the group to study.</p>
+            <p>Community members use free, online courses from around the web.</p>
           </div>
           <div className="col-sm-12 col-md-4 card">
             <i className="material-icons">pin_drop</i>
             <h4 className="bold">
-              <NumberWithLabel number={this.state.stats.cities} label='cities participating globally' />
+              <NumberWithLabel number={this.state.stats.cities} label='participating cities' />
             </h4>
-            <p>Learning circles meet locally, in places like a library or community center.</p>
+            <p>Learning circles meet in public spaces like libraries and community centers.</p>
           </div>
         </div>
       );

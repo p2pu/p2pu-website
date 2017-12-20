@@ -20,6 +20,7 @@ main {
     h1 {
 	    margin-bottom: 1em;
 	    line-height: normal;
+	    font-size: 2em;
     }
   }
 
@@ -79,12 +80,7 @@ main {
 
 						.material-icons {
 							font-size: 5em;
-						}
-
-						&:hover {
-							.material-icons {
-								@include grow-on-hover;
-							}
+							cursor: default;
 						}
 
 						.stat {
@@ -184,10 +180,14 @@ main {
 	}
 
 	section#call-to-action {
-		display: flex;
 		margin-bottom: $padding-lg;
-		background: url('../images/cta_bg.jpg') no-repeat center center;
-		background-size: cover;
+		padding: 0;
+
+		.background-image {
+			background: url('../images/cta_bg.jpg') no-repeat center center;
+			background-size: cover;
+			padding: $padding-md;
+		}
 
 		.block {
 			display: flex;
@@ -265,6 +265,10 @@ main {
 			width: 680px;
 			margin: 6px;
 
+			&:focus {
+				outline: none;
+			}
+
 			.testimonial-card {
 				transition: all 0.4s ease-in-out;
 				transform: scale(0.8);
@@ -275,12 +279,6 @@ main {
 				flex-direction: column;
 				padding: $padding-md;
 				z-index: 0;
-
-				.role {
-					font-size: $font-size-small;
-					text-transform: uppercase;
-					text-align: center;
-				}
 
 				.quote {
 					margin: $padding-sm;
@@ -329,8 +327,14 @@ main {
 	section#about {
 		color: $white;
 
-		.headline {
-			padding: 0;
+		.header-text {
+			h1 {
+				margin-bottom: $padding-xs;
+			}
+
+			p.large {
+				margin-bottom: $padding-md;
+			}
 		}
 
 		.columns {
@@ -338,7 +342,6 @@ main {
 			margin-left: 0;
 
 			.column {
-		    text-align: center;
 				margin-bottom: $padding-md;
 
 				p {
@@ -490,25 +493,13 @@ main {
 				.container {
 					flex-direction: column;
 
-					#definition {
-						order: 1;
-						text-align: center;
-
-						p.large {
-							padding-right: 0;
-						}
-
-						svg {
-							display: none;
-						}
-					}
-
 					#stats {
-						order: 2;
-						align-items: unset;
-
-						.stat {
+						.card {
 							margin-bottom: $padding-sm;
+
+							h4 {
+								padding: 0;
+							}
 						}
 					}
 				}
@@ -589,121 +580,26 @@ main {
 	}
 }
 
-.chart {
-  position: absolute;
-  display: inline-block;
-  color: #999;
-  font-size: 20px;
-  text-align: center;
-  top: -50px;
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; }
 }
 
-svg .outer.red {
-  stroke: $p2pu-orange;
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; }
 }
 
-svg .outer.blue {
-  stroke: $p2pu-blue;
+.Typist .Cursor--blinking {
+  opacity: 1;
+  animation: blink 1s linear infinite;
 }
 
-svg .outer.yellow {
-  stroke: $p2pu-yellow;
-}
-
-.outer {
-  fill: transparent;
-  stroke: #333;
-  stroke-width: 20;
-  stroke-dasharray: 1445;
-  transition: stroke-dashoffset 1s;
-  -webkit-animation-play-state: running;
-}
-
-#definition {
-	position: relative;
-
-	.outer {
-	  stroke-dashoffset: 1445;
-	  -webkit-animation-play-state: paused;
-	}
-
-	&.play-animation {
-		.outer[data-percent='75'] {
-		  stroke-dashoffset: 723;
-		  -webkit-animation: show75 2s;
-		  animation: show75 2s;
-		}
-
-		.outer[data-percent='50'] {
-		  stroke-dashoffset: 550;
-		  -webkit-animation: show50 2s;
-		  animation: show50 2s;
-		}
-
-		.outer[data-percent='25'] {
-		  stroke-dashoffset: 500;
-		  -webkit-animation: show25 2s;
-		  animation: show25 2s;
-		}
-	}
-}
-
-@-webkit-keyframes show75 {
-  from {
-    stroke-dashoffset: 1445;
-  }
-
-  to {
-    stroke-dashoffset: 723;
-  }
-}
-
-@keyframes show75 {
-  from {
-    stroke-dashoffset: 1445;
-  }
-
-  to {
-    stroke-dashoffset: 723;
-  }
-}
-
-@-webkit-keyframes show50 {
-  from {
-    stroke-dashoffset: 1445;
-  }
-
-  to {
-    stroke-dashoffset: 550;
-  }
-}
-
-@keyframes show50 {
-  from {
-    stroke-dashoffset: 1445;
-  }
-
-  to {
-    stroke-dashoffset: 550;
-  }
-}
-
-@-webkit-keyframes show25 {
-  from {
-    stroke-dashoffset: 1445;
-  }
-
-  to {
-    stroke-dashoffset: 500;
-  }
-}
-
-@keyframes show25 {
-  from {
-    stroke-dashoffset: 1445;
-  }
-
-  to {
-    stroke-dashoffset: 500;
-  }
-}

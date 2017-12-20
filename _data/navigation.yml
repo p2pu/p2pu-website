@@ -4,6 +4,8 @@ full_column:
     submenu:
       - text: Join a learning circle
         url: /en/learning-circles
+      - text: Create a learning circle
+        url: /en/facilitate
   - text: Facilitate
     url: /en/facilitate/
     submenu:
@@ -12,7 +14,7 @@ full_column:
       - text: Community
         url: https://groups.google.com/a/p2pu.org/forum/#!forum/community
       - text: Courses
-        url: https://www.p2pu.org/en/courses/
+        url: /en/courses/
       - text: Dashboard
         url: https://learningcircles.p2pu.org/en/facilitator/
   - text: Stories

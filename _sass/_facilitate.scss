@@ -10,7 +10,7 @@ section#facilitator-landing {
 
     .facilitator-profile-images {
       .half-page-image {
-        height: 75vh;
+        height: 60vh;
         min-height: 250px;
         padding: 0;
         margin: 0;
@@ -31,7 +31,7 @@ section#facilitator-landing {
       background: $p2pu-blue;
       color: $white;
       padding: $padding-md;
-      transform: translateY(-100px);
+      transform: translateY(-60px);
       right: -30%;
 
       &:before {
@@ -46,18 +46,12 @@ section#facilitator-landing {
       }
 
       .text {
-        line-height: 2em;
-
-        h2 {
+        h3 {
           margin-top: 0;
         }
 
         .tagline {
           font-style: italic;
-        }
-
-        .quote {
-          font-size: $font-size-large;
         }
       }
     }
