@@ -340,9 +340,14 @@ main {
 		.columns {
 			margin-right: 0;
 			margin-left: 0;
+			display: flex;
+	    align-items: stretch;
 
 			.column {
 				margin-bottom: $padding-md;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: space-between;
 
 				p {
 					padding-bottom: $padding-xs;
