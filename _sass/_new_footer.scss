@@ -2,18 +2,16 @@ footer.home-footer {
   background: $gray-darker;
   color: $white;
   font-size: $font-size-small;
+  padding-left: $padding-md;
+  padding-right: $padding-md;
+  padding-top: $padding-sm;
 
   a {
     color: $white;
   }
 
-  .columns-container {
-    .column-item {
-      padding: $padding-md;
-      .content {
-        padding-top: $padding-sm;
-      }
-    }
+  header {
+    padding-bottom: $padding-sm;
   }
 
   .social {
@@ -63,7 +61,8 @@ footer.home-footer {
 
   .toc {
     text-align: center;
-    padding: $padding-sm;
+    padding-bottom: $padding-sm;
+    padding-top: $padding-md;
   }
 
   .row {

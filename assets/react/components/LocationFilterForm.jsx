@@ -34,8 +34,9 @@ export default class LocationFilterForm extends Component {
 
     const success = (position) => {
       this.props.updateQueryParams({ latitude: position.coords.latitude, longitude: position.coords.longitude, city: null })
-      this.detectDistanceUnit(position.coords.latitude, position.coords.longitude)
-      this.setState({ gettingLocation: false })
+      this.detectDistanceUnit(position.coords.latitude, position.coords.longitude);
+      this.setState({ gettingLocation: false });
+      this.props.closeFilter();
     }
 
     const error = () => {
@@ -80,8 +81,9 @@ export default class LocationFilterForm extends Component {
   }
 
   _handleCitySelect(city) {
-    this.props.updateQueryParams({ city, latitude: null, longitude: null, distance: 50 })
-    this.setState({ useLocation: false })
+    this.props.updateQueryParams({ city, latitude: null, longitude: null, distance: 50 });
+    this.setState({ useLocation: false });
+    this.props.closeFilter();
   }
 
   _handleRangeChange(value) {

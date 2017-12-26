@@ -28,6 +28,7 @@ bundles:
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	<script src="{{ "/assets/js/vendor/smooth-scroll.min.js" | prepend: site.baseurl }}"></script>
 
 	<script src="{{ "/assets/js/vendor/modernizr-2.6.2.min.js" | prepend: site.baseurl }}"></script>
 </head>
@@ -41,20 +42,27 @@ bundles:
 	<section id="landing">
 		<div class="header-text">
 			<div id="header-text-carousel"></div>
-			<a href="#learning-circles" class="btn p2pu-btn blue">Learn more</a>
+			<a data-scroll href="#learning-circles">
+				<button class="btn p2pu-btn blue">Learn more</button>
+			</a>
 		</div>
 
 		<div class="image-container">
 			<div class="bg-line"></div>
 			<div class="image">
-				<img src="{{ site.baseurl }}/assets/images/learning-circle.jpg" alt="Learning circle in Chicago">
+				<a href="http://info.p2pu.org/2016/12/20/p2pu-in-detroit/" class="undecorated">
+					<img src="{{ site.baseurl }}/assets/images/learning-circle.jpg" alt="Learning circle in Chicago">
+				</a>
+			</div>
+			<div class="caption">
+				<small>Detroit Public Library (Parkman Branch) user innovation and entrepreneurship learning circle</small>
 			</div>
 		</div>
 	</section>
 
 	<section id="learning-circles">
 		<div class="header-text">
-			<h1 class="bold centered">Learning circles are study groups for people who want to take online classes together and in-person.</h1>
+			<h1 class="bold centered">Learning circles are free study groups for people who want to take online classes together and in-person.</h1>
 		</div>
 
 		<div class="overview">
@@ -75,29 +83,34 @@ bundles:
 	 </section>
 
 	<section id="call-to-action">
-		<div class="container">
-			<div class="block col-xs-12 col-sm-6">
-				<div class="circle create">
-					<div class="content">
-	            <p class="large">Create and facilitate a learning circle</p>
-	            <a href="/facilitate">
+		<div class="background-image">
+			<div class="container">
+				<div class="block col-xs-12 col-sm-6">
+					<a href="/en/facilitate" class="undecorated">
+						<div class="circle create">
+							<div class="content">
+		            <p class="large">Create and facilitate a learning circle</p>
 	            	<button class="p2pu-btn yellow">Create</button>
-	            </a>
-					</div>
+							</div>
+						</div>
+	        </a>
 				</div>
-			</div>
 
-			<div class="block col-xs-12 col-sm-6">
-				<div class="circle join">
-					<div class="content">
-	            <p class="large">Join a learning circle near you</p>
-	            <a href="/learning-circles">
+				<div class="block col-xs-12 col-sm-6">
+	        <a href="/en/learning-circles" class="undecorated">
+						<div class="circle join">
+							<div class="content">
+		            <p class="large">Join a learning circle near you</p>
 	            	<button class="p2pu-btn green">Join</button>
-	            </a>
-					</div>
+							</div>
+						</div>
+	        </a>
 				</div>
 			</div>
+		</div>
 
+		<div class="caption centered">
+			<small>Kansas City Public Library “Making the Internet Work For You!” learning circle</small>
 		</div>
 	</section>
 
@@ -106,7 +119,7 @@ bundles:
 			{% for testimonial in site.data.testimonials %}
 			<div class="slide">
 				<div class="testimonial-card">
-					<div class="role">{{ testimonial.role }}</div>
+					<div class="minicaps">{{ testimonial.role }}</div>
 					<div class="quote">
 						<p class="large centered">"{{ testimonial.quote }}"</p>
 					</div>
@@ -128,42 +141,52 @@ bundles:
 	<section id="about" class="background-blue">
 		<div class="container">
 			<div class="header-text">
-				<h1 class="bold centered">P2PU supports equitable, social learning experiences beyond institutional walls.</h1>
+				<h1 class="bold centered">Learning doesn’t have to end at school</h1>
+				<p class="large">P2PU supports equitable, social learning experiences beyond institutional walls.</p>
 			</div>
 
 			<div class="columns row">
 				<div class="col-md-4 col-sm-12 col-xs-12 column">
-					<p>Have we met? <a href="/en/about/" class="light bold">Read about</a> our history, our values, and our community.</p>
-					<a href="/en/about/">
-						<button class="btn p2pu-btn light">About us</button>
-					</a>
+					<p>Have we met? <a href="/en/about/" class="light bold underline">Read about</a> our history, our values, and our community.</p>
+					<div>
+						<a href="/en/about/">
+							<button class="btn p2pu-btn light">About us</button>
+						</a>
+					</div>
 				</div>
 
 				<div class="col-md-4 col-sm-12 col-xs-12 column">
-					<p><a href="https://info.p2pu.org" class="light bold">Check out our blog</a> for stories and updates from P2PU friends and affiliates around the world.</p>
-					<a href="https://info.p2pu.org">
-						<button class="btn p2pu-btn light">Stories</button>
-					</a>
+					<p><a href="https://info.p2pu.org" class="light bold underline">Check out our blog</a> for stories and updates from P2PU friends and affiliates around the world.</p>
+					<div>
+						<a href="https://info.p2pu.org">
+							<button class="btn p2pu-btn light">Stories</button>
+						</a>
+					</div>
 				</div>
 
 				<div class="col-md-4 col-sm-12 col-xs-12 column">
-					<p>Want us to run a training? Can we help kickstart a new program? <a href="/en/workwithus/" class="light bold">Hire us to work with you.</a></p>
-					<a href="/en/workwithus/">
-						<button class="btn p2pu-btn light">Hire us</button>
-					</a>
+					<p>Want us to run a training? Can we help kickstart a new program? <a href="/en/workwithus/" class="light bold underline">Hire us to work with you.</a></p>
+					<div>
+						<a href="/en/workwithus/">
+							<button class="btn p2pu-btn light">Hire us</button>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-			<div class="image-container">
-			<div class="bg-line"></div>
-			<div class="image">
+	<div class="image-container">
+		<div class="bg-line"></div>
+		<div class="image">
+			<a href="http://www.eifl.net/news/learning-circles-hit-kenya-public-libraries" class="undecorated">
 				<img src="{{ site.baseurl }}/assets/images/facilitate/profile_2_1.jpg" alt="Learning circle selfie">
-			</div>
+			</a>
 		</div>
-
-
+		<div class="caption">
+			<small>Kenya National Library Service learning circle training</small>
+		</div>
+	</div>
 
 	<section id="partners-and-funders">
 		<div class="container">
@@ -202,9 +225,8 @@ bundles:
 
 {% include new_footer_en.html %}
 
-{% include scripts.html %}
 
-<script src="{{ site.baseurl }}/assets/js/vendor/countup.min.js"></script>
+{% include scripts.html %}
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 
@@ -215,4 +237,5 @@ bundles:
 </body>
 
 {% include tag_manager_foot.html %}
+
 </html>

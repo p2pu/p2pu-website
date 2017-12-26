@@ -1,11 +1,16 @@
 ---
-title: Learning Circles
+title: Facilitate
 layout: facilitate
 extra_js:
   - js/facilitate.js
 ---
 
 <main>
+  <section>
+    <header class="page-title">
+      <h1>{{ page.title }}</h1>
+    </header>
+  </section>
 
   <section id="facilitator-landing" class="row">
     {% for facilitator in site.data.facilitators %}
@@ -20,7 +25,7 @@ extra_js:
         </div>
         <div class="facilitator-profile col-md-5 col-sm-8 col-xs-12">
           <div class="text">
-            <h2 class="name">{{ facilitator.name }}</h2>
+            <h3 class="name">{{ facilitator.name }}</h3>
             <p class="tagline">{{ facilitator.description }}</p>
             <p class="quote">"{{ facilitator.quote }}"</p>
           </div>
@@ -72,7 +77,7 @@ extra_js:
   <section id="lets-do-it">
     <div class="callout">
       <h1>Let's do it!</h1>
-      <a href="https://learningcircles.p2pu.org/en/facilitator/signup/">
+      <a href="https://learningcircles.p2pu.org/en/facilitator/signup/" class="undecorated">
         <button class="btn p2pu-btn light">Start a learning circle</button>
       </a>
     </div>
