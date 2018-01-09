@@ -612,3 +612,18 @@ main {
   animation: blink 1s linear infinite;
 }
 
+.image, .background-image {
+	position: relative;
+
+	.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: transparentize(black, 0.5);
+    color: white;
+    padding: 5px 15px;
+    text-align: left;
+	}
+}
+
