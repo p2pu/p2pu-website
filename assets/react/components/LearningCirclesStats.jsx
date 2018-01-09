@@ -35,7 +35,7 @@ export default class LearningCirclesStats extends Component {
             <i className="material-icons">group</i>
             <h4 className="bold">
               <NumberWithLabel
-                number={stats.active_learning_circles}
+                number={stats.learning_circle_count}
                 label='learning circles'
               />
             </h4>
