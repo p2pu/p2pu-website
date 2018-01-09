@@ -124,6 +124,8 @@ section#get-started {
   }
 
   .resource {
+    display: flex;
+
     h1 {
       .material-icons {
         font-size: 120px;
@@ -159,6 +161,17 @@ section#get-started {
         .material-icons {
           color: $p2pu-green;
         }
+      }
+    }
+
+    > a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        flex-grow: 1;
       }
     }
   }

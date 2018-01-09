@@ -39,7 +39,7 @@ export default class LearningCirclesStats extends Component {
                 label='learning circles'
               />
             </h4>
-            <p>{`${stats.active_learning_circles} peers have met face-to-face to learn together in their neighborhoods.`}</p>
+            <p>Learn together in a small group with your neighbors.</p>
           </div>
           <div className="col-sm-12 col-md-4 card">
             <i className="material-icons">important_devices</i>
@@ -49,7 +49,7 @@ export default class LearningCirclesStats extends Component {
                 label='courses'
               />
             </h4>
-            <p>Community members use free, online courses from around the web.</p>
+            <p>Use free, online courses from around the web.</p>
           </div>
           <div className="col-sm-12 col-md-4 card">
             <i className="material-icons">pin_drop</i>
@@ -59,7 +59,7 @@ export default class LearningCirclesStats extends Component {
                 label='participating cities'
               />
             </h4>
-            <p>Learning circles meet in public spaces like libraries and community centers.</p>
+            <p>Meet weekly in public spaces like libraries and community centers.</p>
           </div>
         </div>
       );

@@ -60,14 +60,27 @@ footer.home-footer {
   }
 
   .toc {
-    text-align: center;
     padding-bottom: $padding-sm;
-    padding-top: $padding-md;
+    padding-top: $padding-sm;
+    border-top: 1px solid $gray;
+    display: flex;
+    flex-wrap: wrap;
+    color: $gray;
+    font-size: $font-size-small;
+
+    > div {
+      padding: 0 10px;
+
+      a {
+        color: $gray;
+      }
+    }
   }
 
   .row {
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: $padding-md;
   }
 
 }
