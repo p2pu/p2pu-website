@@ -43,17 +43,27 @@ window.sr = ScrollReveal({ reset: false, distance: '20vh', viewFactor: 0.3, view
 
 // Initialize additional scroll-based animations with ScrollMagic
 
+function expandImageBgLines(event) {
+  var delay = 100;
+  var lines = event.currentTarget.triggerElement();
+  $(lines).children('.bg-line').each(function(index) {
+    var el = this;
+    window.setTimeout(function() {
+      $(el).addClass('expand');
+    }, delay * (index + 1))
+  });
+}
+
 $(function() {
   var controller = new ScrollMagic.Controller();
   var learningCirclesDefinition = document.getElementById('definition');
-  var imageBgLines = document.querySelectorAll('.image-container .bg-line');
+  var imageBgLines = document.querySelectorAll('.image-container .lines');
 
-  imageBgLines.forEach(function(line) {
+  imageBgLines.forEach(function(lineSection) {
     new ScrollMagic.Scene({
-      triggerElement: line,
-      triggerHook: 'onEnter'
+      triggerElement: lineSection
     })
-    .setClassToggle(line, 'expand')
+    .on('enter', expandImageBgLines)
     .addTo(controller);
   })
 })
