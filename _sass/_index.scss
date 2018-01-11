@@ -30,7 +30,7 @@ main {
 
 		.image {
 			flex-grow: 1;
-		  max-width: 680px;
+		  max-width: 740px;
 
 		  img {
 		  	width: 100%;
@@ -38,16 +38,36 @@ main {
 		  }
 		}
 
+		.lines {
+	    position: absolute;
+	    z-index: -1;
+		}
+
 		.bg-line {
 			height: 14px;
 			transition: width 1s ease-in-out;
 			width: 0;
-			background-color: $p2pu-blue;
-	    position: absolute;
-	    z-index: -1;
+			background-color: $gray;
+			margin-bottom: 20px;
 
 	    &.expand {
 	    	width: 100vw;
+	    }
+
+	    &.green {
+				background-color: $p2pu-green;
+	    }
+
+	    &.orange {
+				background-color: $p2pu-orange;
+	    }
+
+	    &.yellow {
+				background-color: $p2pu-yellow;
+	    }
+
+	    &.blue {
+				background-color: $p2pu-blue;
 	    }
 		}
   }
