@@ -48,11 +48,11 @@ main {
 		}
 
 		.bg-line {
-			height: 14px;
+			height: 1.2em;
 			transition: width 1s ease-in-out;
 			width: 0;
 			background-color: $gray;
-			margin-bottom: 20px;
+			margin-bottom: 8px;
 
 	    &.expand {
 	    	width: 100vw;
