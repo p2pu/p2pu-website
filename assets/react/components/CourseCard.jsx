@@ -44,15 +44,15 @@ const CourseCard = (props) => {
           <div className="divider"></div>
           <div className='actions'>
             <div className="secondary-cta">
-              <a href={props.course.link} className='' target='_blank'>
+              <a href={props.course.link} target='_blank'>
                 <i className="material-icons">open_in_new</i>See the course
               </a>
-              <a href={feedbackPage} className='' target='_blank'>
+              <a href={feedbackPage} target='_blank'>
                 <i className="material-icons">open_in_new</i>Facilitator feedback
               </a>
             </div>
             <div className="primary-cta">
-              <a href={selectCourse} className=''>
+              <a href={selectCourse}>
                 <button className="btn p2pu-btn transparent">Start a learning circle</button>
               </a>
             </div>

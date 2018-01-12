@@ -17,10 +17,10 @@ const HeaderTextCarousel = () => {
   ]
 
   const typistProps = {
+    blink: true,
     avgTypingDelay: 70,
     cursor: {
-      hideWhenDone: true,
-      hideWhenDoneDelay: 400
+      hideWhenDone: false
     }
   }
   return (

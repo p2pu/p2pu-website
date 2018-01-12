@@ -4,33 +4,31 @@ import TopicsFilterForm from './TopicsFilterForm'
 import MeetingDaysFilterForm from './MeetingDaysFilterForm'
 import OrderCoursesForm from './OrderCoursesForm'
 
+const FilterForm = (props) => {
+  const closeFilter = () => { props.updateActiveFilter(null) };
+  const openClass = props.activeFilter ? 'open' : '';
 
-export default class FilterForm extends Component {
-  constructor(props) {
-    super(props)
-    this.generateFilterForm = () => this._generateFilterForm()
-  }
-
-  _generateFilterForm() {
-    switch (this.props.activeFilter) {
+  const internalForm = () => {
+    switch (props.activeFilter) {
       case 'location':
-      return <LocationFilterForm {...this.props} />;
+      return <LocationFilterForm {...props} closeFilter={closeFilter} />;
       case 'topics':
-      return <TopicsFilterForm {...this.props} />;
+      return <TopicsFilterForm {...props} />;
       case 'meetingDays':
-      return <MeetingDaysFilterForm { ...this.props} />;
+      return <MeetingDaysFilterForm { ...props} />;
       case 'orderCourses':
-      return <OrderCoursesForm { ...this.props} />;
+      return <OrderCoursesForm { ...props} />;
     }
   }
 
-  render() {
-    const openClass = this.props.activeFilter ? 'open' : '';
-
-    return(
-      <div className={`filter-form-dropdown col-sm-12 ${openClass}`}>
-        {this.generateFilterForm()}
+  return(
+    <div className={`filter-form-dropdown ${openClass}`}>
+      <div className='close' style={{ textAlign: 'right', float: 'none' }}>
+        <i className="material-icons" onClick={closeFilter}>close</i>
       </div>
-    )
-  }
+      {internalForm()}
+    </div>
+  )
 }
+
+export default FilterForm;

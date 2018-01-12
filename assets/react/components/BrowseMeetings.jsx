@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom'
 import Masonry from 'react-masonry-component'
 import MeetingCard from './MeetingCard.jsx'
 import moment from 'moment'
-import  { MEETING_DAYS } from '../constants'
+import { MEETING_DAYS } from '../constants'
+import Slider from 'react-slick'
 
 const BrowseMeetings = (props) => {
   const generateFormattedMeetingDate = (nextMeeting) => {
@@ -15,9 +16,24 @@ const BrowseMeetings = (props) => {
       return nextMeeting.format('dddd, MMM Do')
     }
   }
+  const settings = {
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: false,
+    swipe: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 480,
+      },
+    ]
+  }
 
   return (
-    <div className={`meetings ${props.classes}`}>
+    <Slider {...settings} className={`meetings slide-container ${props.classes}`}>
       {
         props.meetings.map((meeting, index) => {
           const nextMeeting = moment(`${meeting.next_meeting_date} ${meeting.meeting_time}`);
@@ -26,19 +42,21 @@ const BrowseMeetings = (props) => {
           const formattedCity = meeting.city.replace(/United States of America/, 'USA')
 
           return(
-            <MeetingCard
-              key={index}
-              title={ meeting.course.title }
-              date={formattedMeetingDate}
-              time={formattedStartTime}
-              facilitator={ meeting.facilitator }
-              location={ meeting.venue }
-              city={ formattedCity }
-            />
+            <div key={index}>
+              <MeetingCard
+                title={ meeting.course.title }
+                date={formattedMeetingDate}
+                time={formattedStartTime}
+                facilitator={ meeting.facilitator }
+                location={ meeting.venue }
+                city={ formattedCity }
+                url={ meeting.url }
+              />
+            </div>
           )
         })
       }
-    </div>
+    </Slider>
   );
 }
 

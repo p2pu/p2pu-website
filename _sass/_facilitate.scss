@@ -10,7 +10,7 @@ section#facilitator-landing {
 
     .facilitator-profile-images {
       .half-page-image {
-        height: 75vh;
+        height: 60vh;
         min-height: 250px;
         padding: 0;
         margin: 0;
@@ -31,7 +31,7 @@ section#facilitator-landing {
       background: $p2pu-blue;
       color: $white;
       padding: $padding-md;
-      transform: translateY(-100px);
+      transform: translateY(-60px);
       right: -30%;
 
       &:before {
@@ -46,18 +46,12 @@ section#facilitator-landing {
       }
 
       .text {
-        line-height: 2em;
-
-        h2 {
+        h3 {
           margin-top: 0;
         }
 
         .tagline {
           font-style: italic;
-        }
-
-        .quote {
-          font-size: $font-size-large;
         }
       }
     }
@@ -104,10 +98,7 @@ section#get-started {
   .grow-on-hover:hover, .grow-on-hover:focus, .grow-on-hover:active {
 
     h1 {
-      animation-name: pulse-grow;
-      animation-duration: 0.5s;
-      animation-timing-function: linear;
-      animation-iteration-count: 1;
+      @include grow-on-hover
     }
   }
 
@@ -126,13 +117,15 @@ section#get-started {
       margin-bottom: $padding-md;
 
       p {
-        padding: $padding-md $padding-sm;
+        padding: $padding-sm;
       }
     }
 
   }
 
   .resource {
+    display: flex;
+
     h1 {
       .material-icons {
         font-size: 120px;
@@ -170,12 +163,22 @@ section#get-started {
         }
       }
     }
+
+    > a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        flex-grow: 1;
+      }
+    }
   }
 }
 
 section#lets-do-it {
   padding: 0;
-  margin: $padding-md 0;
 
   .callout {
     @include flex-column-centered;

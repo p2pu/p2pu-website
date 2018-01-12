@@ -4,6 +4,8 @@ full_column:
     submenu:
       - text: Join a learning circle
         url: /en/learning-circles
+      - text: Create a learning circle
+        url: /en/facilitate
   - text: Facilitate
     url: /en/facilitate/
     submenu:
@@ -12,18 +14,9 @@ full_column:
       - text: Community
         url: https://groups.google.com/a/p2pu.org/forum/#!forum/community
       - text: Courses
-        url: https://www.p2pu.org/en/courses/
+        url: /en/courses/
       - text: Dashboard
         url: https://learningcircles.p2pu.org/en/facilitator/
-  - text: About
-    url: /en/about/
-    submenu:
-      - text: People
-        url: /en/about/people/
-      - text: Values
-        url: /en/about/values/
-      - text: Job openings
-        url: /en/jobs/
   - text: Stories
     url: http://info.p2pu.org/
     submenu:
@@ -36,12 +29,16 @@ full_column:
       - text: Seekers and Rebels
         date: June 14, 2017
         url: http://info.p2pu.org/2017/06/14/when-seekers-and-rebels-meet-or-my-experience-studying-the-learning-circles/
-  - text: Work with us
-    url: /en/workwithus/
+  - text: About P2PU
+    url: /en/about/
     submenu:
+      - text: Job openings
+        url: /en/jobs/
+      - text: Get involved
+        url: /en/workwithus/
       - text: Donate
         url: /en/donate/
-      - text: Connect
+      - text: Contact us
         url: /en/connect/
 
 # currently there are no half columns but the code for them is still in the template
