@@ -32,10 +32,6 @@ full_column:
   - text: About P2PU
     url: /en/about/
     submenu:
-      - text: People
-        url: /en/about/people/
-      - text: Values
-        url: /en/about/values/
       - text: Job openings
         url: /en/jobs/
       - text: Get involved
