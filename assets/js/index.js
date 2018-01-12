@@ -57,13 +57,24 @@ function expandImageBgLines(event) {
 $(function() {
   var controller = new ScrollMagic.Controller();
   var learningCirclesDefinition = document.getElementById('definition');
-  var imageBgLines = document.querySelectorAll('.image-container .lines');
+  var bgImageLines = document.querySelectorAll('main > .image-container .lines');
 
-  imageBgLines.forEach(function(lineSection) {
-    new ScrollMagic.Scene({
-      triggerElement: lineSection
-    })
-    .on('enter', expandImageBgLines)
-    .addTo(controller);
+  new ScrollMagic.Scene({
+    triggerElement: bgImageLines
   })
+  .on('enter', expandImageBgLines)
+  .addTo(controller);
+})
+
+// Start landing page line animation on page load
+
+$(window).on("load", function() {
+  var delay = 100;
+  var lines = $('#landing .lines')
+  $(lines).children('.bg-line').each(function(index) {
+    var el = this;
+    window.setTimeout(function() {
+      $(el).addClass('expand');
+    }, delay * (index + 1))
+  });
 })
