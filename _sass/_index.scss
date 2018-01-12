@@ -386,6 +386,10 @@ main {
 
 	section#partners-and-funders {
 		.partners {
+			display: flex;
+	    flex-wrap: wrap;
+	    align-items: center;
+
 			> div {
 				text-align: center;
 				margin-bottom: $padding-sm;
