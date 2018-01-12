@@ -7,9 +7,31 @@ body {
   }
 
   a {
-    color: $gray-darker;
+    color: $p2pu-blue;
+
+    &.light {
+      color: $white;
+    }
+
+    &.dark {
+      color: $gray-darker;
+    }
+
+    &.underline {
+      text-decoration: underline;
+    }
+
     &:hover, &:focus, &:active {
-      color: $p2pu-orange;
+      opacity: 0.9;
+    }
+
+    &.undecorated {
+      color: inherit;
+
+      &:hover, &:focus, &:active {
+        opacity: 1;
+        text-decoration: none;
+      }
     }
   }
 
@@ -106,5 +128,30 @@ body {
     text-align: center;
     padding-top: $padding-sm;
     padding-bottom: $padding-sm;
+  }
+
+  .caption {
+    small {
+      font-size: $font-size-small;
+    }
+  }
+
+  .minicaps {
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  header.page-title {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 0;
+    }
   }
 }

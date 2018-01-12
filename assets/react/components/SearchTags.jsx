@@ -107,12 +107,12 @@ const SearchTags = (props) => {
   }
 
   const generateSearchSummary = () => {
-    const results = props.data.length === 1 ? 'result' : 'results';
+    const results = props.searchResults.length === 1 ? 'result' : 'results';
     const forSearchSubject = <span key='resultsSummary-1'>for {SEARCH_SUBJECTS[props.searchSubject]}</span>;
     const withSpan = <span key='resultsSummary-2'>with</span>;
     const tagsToDisplay = ['q', 'topics', 'location', 'meetingDays', 'teamName'];
 
-    let searchSummaryItems = [<span key='resultsSummary-0'>Showing {props.data.length} {results}</span>];
+    let searchSummaryItems = [<span key='resultsSummary-0'>Showing {props.searchResults.length} {results}</span>];
 
     tagsToDisplay.map((tag) => {
       const tagsArray = generateTagsPhrase(tag);
@@ -133,11 +133,18 @@ const SearchTags = (props) => {
     return searchSummaryItems;
   }
 
+  const noResults = props.searchResults.length === 0;
+
   return(
     <div className='results-summary'>
       <div className='search-tags wrapper'>
         {generateSearchSummary()}
       </div>
+      { noResults &&
+        <div className='clear-search'>
+        To see more results, either remove some filters or <button onClick={() => {window.location.reload()}} className='p2pu-btn light with-outline'>reset the search form</button>
+        </div>
+      }
     </div>
   )
 }

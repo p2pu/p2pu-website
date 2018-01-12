@@ -10,7 +10,9 @@ export default class LearningCirclesStats extends Component {
     this.state = {};
     this.api = new ApiHelper('stats');
     this.populateStats = () => this._populateStats();
-    this.populateStats()
+    this.triggerCountup = () => this._triggerCountup();
+    this.resetCountup = () => this._resetCountup();
+    this.populateStats();
   }
 
   _populateStats() {
@@ -24,14 +26,41 @@ export default class LearningCirclesStats extends Component {
     this.api.fetchResource(opts);
   }
 
-
   render() {
-    if (this.state.stats) {
+    const stats = this.state.stats;
+    if (stats) {
       return (
         <div className="stacked-numbers">
-          <NumberWithLabel number={this.state.stats.active_learning_circles} label='Active learning circles' />
-          <NumberWithLabel number={this.state.stats.cities} label='Cities participating globally' />
-          <NumberWithLabel number={this.state.stats.facilitators} label='Learning circle facilitators' />
+          <div className="col-sm-12 col-md-4 card">
+            <i className="material-icons">group</i>
+            <h4 className="bold">
+              <NumberWithLabel
+                number={stats.learning_circle_count}
+                label='learning circles'
+              />
+            </h4>
+            <p>Learn together in a small group with your neighbors.</p>
+          </div>
+          <div className="col-sm-12 col-md-4 card">
+            <i className="material-icons">important_devices</i>
+            <h4 className="bold">
+              <NumberWithLabel
+                number={stats.facilitators}
+                label='courses'
+              />
+            </h4>
+            <p>Use free, online courses from around the web.</p>
+          </div>
+          <div className="col-sm-12 col-md-4 card">
+            <i className="material-icons">pin_drop</i>
+            <h4 className="bold">
+              <NumberWithLabel
+                number={stats.cities}
+                label='participating cities'
+              />
+            </h4>
+            <p>Meet weekly in public spaces like libraries and community centers.</p>
+          </div>
         </div>
       );
     } else {

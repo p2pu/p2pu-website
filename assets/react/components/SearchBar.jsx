@@ -10,12 +10,17 @@ const SearchBar = ({ placeholder, updateQueryParams }) => {
   }
 
   return(
-    <form className='search-bar col-sm-12' onSubmit={onSubmit}>
-      <div className='wrapper'>
-        <i className="material-icons">search</i>
-        <input className='search-input' placeholder={placeholder} />
+    <form className='search-bar' onSubmit={onSubmit}>
+      <div className='label'>
+        Search
       </div>
-      <button className='p2pu-btn light' type='submit'>Search</button>
+      <div className="input">
+        <div className='wrapper'>
+          <i className="material-icons">search</i>
+          <input className='search-input' placeholder={placeholder} />
+        </div>
+        <button className='p2pu-btn blue' type='submit'>Search</button>
+      </div>
     </form>
   )
 }

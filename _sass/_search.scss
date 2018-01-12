@@ -13,8 +13,15 @@ section.page-title {
     text-align: center;
 
     h1 {
-      font-size: 3.4em;
-      color: $gray-light;
+      margin-bottom: 0;
+    }
+  }
+
+  #search-subtitle {
+    margin: 0 auto;
+
+    p.centered.large {
+      padding-bottom: 0;
     }
   }
 
@@ -50,35 +57,66 @@ section.page-title {
   }
 }
 
-.search-container {
+.page {
   display: flex;
   flex-direction: column;
+}
+
+.search-container {
+  display: flex;
+  box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    opacity: 0.8;
+  }
+
+  .label {
+    text-transform: uppercase;
+    color: $gray-darker;
+    background-color: $gray-lighter;
+    padding: $padding-xs $padding-sm;
+  }
 
   .search-bar {
-    background-color: $p2pu-blue;
     display: flex;
-    padding: $padding-xs $padding-sm;
+    flex: 1 1 50%;
+    min-width: 300px;
+    flex-direction: column;
 
-    .wrapper {
+    .input {
       display: flex;
-      flex-grow: 1;
-      margin-right: $padding-sm;
+      padding: $padding-xs;
 
-      i.material-icons {
-        position: absolute;
-        padding-top: $padding-xs;
-        padding-left: $padding-xs;
-      }
+      .wrapper {
+        display: flex;
+        flex-grow: 1;
+        margin-right: 0;
 
-      input.search-input {
-        border-radius: 2em;
-        padding-left: $padding-md;
-        padding-right: $padding-sm;
-        border: none;
-        width: 100%;
+        i.material-icons {
+          position: absolute;
+          padding-top: $padding-xs;
+          padding-left: $padding-xs;
+        }
 
-        &::placeholder {
-          font-style: italic;
+        input.search-input {
+          border-radius: 2em;
+          padding: 0.4em;
+          padding-left: $padding-md;
+          border: 2px solid $p2pu-blue;
+          width: 100%;
+          margin-right: 0.4em;
+
+          &::placeholder {
+            font-style: italic;
+            font-size: 0.8em;
+          }
         }
       }
     }
@@ -86,48 +124,44 @@ section.page-title {
 
   .filter-section {
     display: flex;
-    background-color: $gray-lighter;
-    border-bottom: 2px dashed $p2pu-blue;
+    flex: 1 1 50%;
+    min-width: 300px;
+    flex-direction: column;
+    border-left: 2px solid $white;
   }
 
   .filters-bar {
     display: flex;
-    flex-grow: 1;
-    flex-basis: 50%;
-    flex-direction: column;
+    padding: $padding-xs;
 
     .wrapper {
-      display: flex;
-      flex-grow: 1;
 
       .filter {
-        display: flex;
-        flex-grow: 1;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 2px solid $gray-lighter;
-        font-weight: bold;
-        background-color: $white;
-        color: $gray-darker;
-        text-transform: uppercase;
-        cursor: pointer;
-        padding: 16px;
+        position: relative;
+        margin-right: 0.4em;
 
         i.material-icons {
           color: $p2pu-blue;
           font-weight: bold;
-          margin-left: $padding-sm;
+          margin-left: $padding-xs;
           font-size: 1em;
         }
 
         &.active {
-          background-color: $gray-lighter;
-        }
-      }
-
-      &:last-of-type {
-        .filter {
-          border-bottom: none;
+          button {
+            &:after {
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 0;
+              top: 40px;
+              right: 50%;
+              transform: translateX(20px);
+              border-left: 20px solid transparent;
+              border-right: 20px solid transparent;
+              border-top: 20px solid $gray-lighter;
+            }
+          }
         }
       }
     }
@@ -136,9 +170,18 @@ section.page-title {
   .filter-form-dropdown {
     flex-grow: 1;
     flex-basis: 50%;
+    position: absolute;
+    border: 2px solid $gray-lighter;
+    z-index: 100;
+    background-color: $white;
+    border-radius: 1em;
+    box-shadow: -2px 2px 6px 1px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    right: 2%;
+    transform: translateY(20px);
 
     &.open {
-      padding: 14px;
+      padding: $padding-sm;
     }
 
     .switch-container {
@@ -209,7 +252,7 @@ section.page-title {
         font-size: 0.7em;
         text-transform: uppercase;
         font-weight: bolder;
-        background: $gray-lighter;
+        background: $white;
         color: $gray-dark;
         transform: translateY(-10px);
         padding: 0 $padding-xs;
@@ -218,7 +261,20 @@ section.page-title {
   }
 }
 
+.results-container {
+  display: flex;
+}
+
 .search-results {
+
+  .clear-search {
+    padding-top: $padding-xs;
+
+    button.p2pu-btn {
+      padding: 6px 12px;
+    }
+  }
+
   .result-item {
     position: relative;
     display: flex;
@@ -522,8 +578,8 @@ header {
 }
 
 .results-summary {
-  display: flex;
-  justify-content: center;
+  padding-left: $padding-sm;
+  padding-right: $padding-sm;
 
   .search-tags {
     display: flex;
@@ -536,13 +592,11 @@ header {
     }
 
     &.wrapper {
-      margin-left: $padding-xs;
-      margin-right: $padding-xs;
-      margin-bottom: $padding-sm;
+      margin-top: $padding-sm;
     }
 
     .search-tag {
-      background-color: #515665;
+      background-color: $gray-darker;
       border-radius: 2em;
       padding: 6px 12px;
       font-size: 0.8em;
@@ -626,28 +680,6 @@ header {
     }
   }
 
-  .search-container {
-    .search-bar {
-      flex-direction: column;
-
-      .wrapper {
-        margin-right: 0;
-        margin-bottom: 4px;
-
-        input.search-input {
-          padding-top: $padding-xs;
-          padding-bottom: $padding-xs;
-        }
-      }
-
-      button.submit {
-        width: 100%;
-        background-color: $gray-lighter;
-      }
-    }
-
-  }
-
 
   .filter-section {
     flex-direction: column;
@@ -657,7 +689,21 @@ header {
 
       .wrapper {
         flex-direction: column;
+
+        .filter {
+          &.active {
+            button {
+              &:after {
+                top: 2.2em;
+              }
+            }
+          }
+        }
       }
+    }
+
+    .filter-form-dropdown {
+      width: 96%;
     }
   }
 
