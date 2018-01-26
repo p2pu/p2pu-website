@@ -568,6 +568,12 @@ main {
 			}
 		}
 
+		section#about {
+			.columns {
+				display: block;
+			}
+		}
+
 		section#partners-and-funders {
 			.funders {
 				padding: $padding-sm;
