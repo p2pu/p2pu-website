@@ -421,6 +421,10 @@ section.page-title {
             font-size: 0.8em;
           }
         }
+
+        a {
+          color: $gray-darker;
+        }
       }
 
       .usage-badge {
