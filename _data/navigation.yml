@@ -20,15 +20,18 @@ full_column:
   - text: Stories
     url: http://info.p2pu.org/
     submenu:
+      - text: Learning about learning circles
+        date: February 6, 2018
+        url: http://info.p2pu.org/2018/02/05/learning/
+      - text: Learn To Write Fiction: Creating My Own Online Course
+        date: February 1, 2018
+        url: http://info.p2pu.org/2018/01/31/fictioncourse/
       - text: Open learning and financial sustainability
         date: January 30, 2018
         url: http://info.p2pu.org/2018/01/30/p2pu-business-models/
       - text: Empowering Volunteers in Kenya
         date: September 28, 2017
         url: http://info.p2pu.org/2017/09/28/empowering-volunteers/
-      - text: Citizenship Circles
-        date: August 14, 2017
-        url: http://info.p2pu.org/2017/08/14/citizenshipcircles/
   - text: About P2PU
     url: /en/about/
     submenu:
