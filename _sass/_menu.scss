@@ -31,6 +31,40 @@ nav {
   &.collapsed {
     display: none !important;
   }
+
+  .nav-items {
+    display: flex;
+    align-items: center;
+
+    > .nav-item {
+      margin: 0 15px;
+      cursor: pointer;
+
+      > a {
+        color: $gray-darker;
+      }
+
+      i {
+        margin-right: 6px;
+      }
+
+      li {
+        a {
+          color: $gray-darker;
+
+          &:hover {
+            color: $p2pu-yellow;
+            background-color: transparent;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        padding: 10px;
+      }
+    }
+  }
 }
 
 #full-page-menu {

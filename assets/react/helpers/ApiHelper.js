@@ -10,16 +10,20 @@ export default class ApiHelper {
 
   generateUrl(params) {
     const baseUrl = this.baseUrl;
-    const encodedParams = this.validParams.map((key) => {
-      const value = params[key];
-      if (!!value) {
-        return `${key}=${encodeURIComponent(value)}`
-      }
-    })
-    const queryString = compact(encodedParams).join('&');
+    if (this.validParams && params) {
+      const encodedParams = this.validParams.map((key) => {
+        const value = params[key];
+        if (!!value) {
+          return `${key}=${encodeURIComponent(value)}`
+        }
+      })
+      const queryString = compact(encodedParams).join('&');
 
-    console.log('url', `${baseUrl}${queryString}`)
-    return `${baseUrl}${queryString}`
+      console.log('url', `${baseUrl}${queryString}`)
+      return `${baseUrl}${queryString}`
+    }
+
+    return baseUrl;
   }
 
   fetchResource(opts) {
