@@ -14,7 +14,7 @@ export const SEARCH_PROPS = {
 export const SEARCH_SUBJECTS = {
   learningCircles: 'learning circles',
   courses: 'courses'
-}
+};
 
 export const MEETING_DAYS = [
   'Monday',
@@ -24,31 +24,37 @@ export const MEETING_DAYS = [
   'Friday',
   'Saturday',
   'Sunday'
-]
+];
+
+export const API_BASE_URL = 'https://learningcircles.p2pu.org'
+// export const API_BASE_URL = 'http://localhost:8000';
 
 export const API_ENDPOINTS = {
   learningCircles: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/?',
+    baseUrl: `${API_BASE_URL}/api/learningcircles/?`,
     searchParams: ['q', 'topics', 'weekdays', 'latitude', 'longitude', 'distance', 'active', 'limit', 'offset', 'city', 'signup', 'team_id']
   },
   courses: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/courses/?',
+    baseUrl: `${API_BASE_URL}/api/courses/?`,
     searchParams: ['q', 'topics', 'order']
   },
   learningCirclesTopics: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/learningcircles/topics/?',
+    baseUrl: `${API_BASE_URL}/api/learningcircles/topics/?`,
     searchParams: []
   },
   coursesTopics: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/courses/topics/?',
+    baseUrl: `${API_BASE_URL}/api/courses/topics/?`,
     searchParams: []
   },
   stats: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/landing-page-stats/?',
+    baseUrl: `${API_BASE_URL}/api/landing-page-stats/?`,
     searchParams: []
   },
   landingPage: {
-    baseUrl: 'https://learningcircles.p2pu.org/api/landing-page-learning-circles/?',
+    baseUrl: `${API_BASE_URL}/api/landing-page-learning-circles/?`,
     searchParams: []
+  },
+  whoami: {
+    baseUrl: `${API_BASE_URL}/en/accounts/fe/whoami/`
   }
 }
