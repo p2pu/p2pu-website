@@ -6,7 +6,7 @@ import { take } from 'lodash'
 const CourseCard = (props) => {
 
   const feedbackPage = `https://etherpad.p2pu.org/p/course-feedback-${props.course.id}`;
-  const selectCourse = `https://learningcircles.p2pu.org/en/facilitator/study_group/create/?course_id=${props.course.id}`;
+  const selectCourse = `https://learningcircles.p2pu.org/en/studygroup/create/?course_id=${props.course.id}`;
   const availability = props.course.on_demand ? 'Course available on demand' : 'Check course availability';
   const handleFilterClick = (topic) => {
     return () => { props.updateQueryParams({ topics: [topic] }) }
