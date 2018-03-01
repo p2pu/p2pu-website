@@ -5,7 +5,7 @@ full_column:
       - text: Join a learning circle
         url: /en/learning-circles
       - text: Create a learning circle
-        url: /en/facilitate
+        url: https://learningcircles.p2pu.org/en/studygroup/create/
   - text: Facilitate
     url: /en/facilitate/
     submenu:
