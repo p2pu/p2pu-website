@@ -19,11 +19,19 @@ staff:
    bio: "Dirk makes sure that just the right amount of tech is developed at P2PU. After travelling through South and Central America, he is now back home in South Africa and based in Cape Town. When he is not writing code, he is most likely hiking Table mountain, surfing the Atlantic or tinkering with a Raspberry Pi."
    twitter: riskycud
    url: "http://thebacklog.net"
- 
+
  - name: Ryan George
    image: ryan_george.jpg
    role: Financial Administrator
    bio: "Ryan oversees Financing and Accounting for P2PU. He is a vibrant and energetic person who has been with P2PU since 2012. He loves culture, innovative ideas, people and numbers. He is based in Cape Town, South Africa."
+
+ - name: Sharon Kennedy
+   image: sharon.jpg
+   role: Web developer
+   bio: "Sharon is a web developer and designer based in Toronto, Canada. She's working on making the this website a beautiful and useful resource for the P2PU community. When she's not fused to her laptop, she leads wilderness camping and hiking tours."
+   twitter: codeandcanoes
+   url: "https://www.followthewhitesquirrel.ca"
+
 
 board:
  - name: Philipp Schmidt
@@ -55,7 +63,7 @@ board:
    role: Gunner the Facilitator
    bio: "It is not without reason that Gunner is our workshop facilitator of choice. He is Executive Director at Aspiration, helping NGOs, activists, foundations and software developers make more effective use of technology for social change."
    twitter: allengunn
-   
+
  - name: Neeru Paharia
    image: neeru_paharia.jpg
    role: Co-founder, Assistant Professor, Georgetown University
@@ -160,7 +168,7 @@ collaborators:
    bio: "Vanessa built many learning communities on the web for P2PU. Much of the slang spoken by the team was inspired by her."
    twitter: mozzadrella
    url: "http://mozzadrella.me"
-   
+
  - name: Stian Haklev
    image: stian_haklev.jpg
    role: Co-founder
