@@ -3,6 +3,7 @@ title: Facilitate
 layout: facilitate
 extra_js:
   - js/facilitate.js
+  - js/accordion.js
 ---
 
 <main>
@@ -91,19 +92,19 @@ extra_js:
         </div>
       </div>
     </header>
-    <div class="faq-questions">
+    <div class="accordion">
       {% for faq in site.data.faqs %}
         {% if forloop.first %}
-        <div class="faq-container open">
+        <div class="accordion-item open">
         {% else %}
-        <div class="faq-container">
+        <div class="accordion-item">
         {% endif %}
-          <div class="question">
-            <h3>{{ faq.question }}</h3>
-            <a class="show-answer"><i class="fa fa-plus" aria-hidden="true"></i></a>
-            <a class="hide-answer"><i class="fa fa-minus" aria-hidden="true"></i></a>
+          <div class="heading">
+            <h4>{{ faq.question }}</h4>
+            <a class="show-content"><i class="fa fa-plus" aria-hidden="true"></i></a>
+            <a class="hide-content"><i class="fa fa-minus" aria-hidden="true"></i></a>
           </div>
-          <div class="answer">
+          <div class="content">
             {% for paragraph in faq.answer.paragraphs %}
               {% if paragraph.list %}
               <ul>

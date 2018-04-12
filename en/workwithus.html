@@ -1,7 +1,12 @@
 ---
 layout: base
 title: Work With Us
+extra_css:
+  - /assets/css/p2pu-workwithus.css
+extra_js:
+  - js/accordion.js
 ---
+
 <div class="post">
 
   <header class="page-header">
@@ -9,52 +14,32 @@ title: Work With Us
   </header>
 
   <article class="container">
-  	<p>
-	<i>P2PU is a grassroots, open source community, and we invite participation at many levels, including <a href="https://p2pu.org/facilitate">running a learning circle</a> or <a href="https://groups.google.com/a/p2pu.org/forum/#!forum/community">joining our community</a>. Below, you’ll find a number of other ways that we can give you a boost as you get started with learning circles.</i>
-	</p>
-	</br>
+  	<i>
+	  	<p>P2PU offers a number of services designed to support thriving learning circle communities. Your financial contribution to our organization allows us to keep the learning circle toolkit and community <strong>free and open source forever</strong>.</p>
 
-	<h4>Build a network in your town</h4>
-	<p>
-	Want to get learning circles started in your community? We have <a href="https://drive.google.com/open?id=0B3PxZrm3B5zHNXRaSC1yS2Yxb3M">a number of free resources</a> you can use to introduce learning circles to your local library or community center. 
-	</p>
-	</br>
+			<p>You can also support our work by making a <a href="https://www.p2pu.org/en/donate/">tax-exempt donation</a> or <a href="http://shop.spreadshirt.com/p2pu/">purchasing some P2PU gear</a>.</p>
 
-	<h4>Host a facilitator training workshop</h4>
-	<p>
-	Let us come train your team to be expert learning circle facilitators. We can help you identify relevant online courses, make sure you’re comfortable with our software, and help you evaluate the program. We regularly run these workshops, most recently in Toronto, Chicago, Kansas City, Charlotte, Detroit, Nairobi, and Paris.
-	</p>
-	</br>
+			<p>All services are priced on a sliding scale, and we are available to help write these services into grant proposals. Reach out to <a href="mailto:thepeople@p2pu.org">thepeople@p2pu.org</a> with inquiries.</p>
+		</i>
+		</br>
 
-	<h4>Create an open course</h4>
-	<p>
-	Can’t find the right online course for your community? Or maybe you have an idea for a course that you’d like others to run as a learning circle? Then let’s build an open course together using <a href="http://howto.p2pu.org">P2PU’s Course in a Box tool</a>. Check out some recent courses we’ve built: <a href="http://p2pu.github.io/makingandlearning/">Making and Learning</a> (with Pittsburgh Children’s Museum) and <a href="http://exploerercourse.org">Learning to (Re)Use Open Educational Resources</a> (with Open University and Creative Commons).
-	</p>
-	</br>
-
-	<h4>Integrate learning circles with your site</h4>
-	<p>
-	If you already have a website where people come to sign up for programs, we can integrate the learning circle software into your existing website. We can also white label our site and provide hosting services, giving you to complete creative control over how people experience learning circles in your community.
-	</p>
-	</br>
-
-	<h4>Design and develop new features</h4>
-	<p>
-	Something missing from our learning circle tools? We can build it with you. Much of the existing learning circle toolkit was built in partnership with organizations in the US and Kenya. 
-	</p>
-	</br>
-
-	<h4>Translate our tools into your language</h4>
-	<p>
-	We can also help you get started translating learning circle materials into any language <a href="https://learningcircles.p2pu.org/fr/">(French is already completed!)</a>
-	</p>
-	</br>
-
-	<h4>Team up</h4>
-	<p>
-	We’ve spoken at many conferences and events, brainstormed new programs with organizations around the world, and invited students, professors, and professionals to join our team, start learning circles, and conduct research. The P2PU community is willing and able to stand beside you as you fight for a number of important issues, including equity in online learning, empowering adult education programs, and the future of public libraries -- let us know how we can help!
-	</p>
+		{% for section in site.data.workwithus %}
+		<div class="accordion">
+    	<h2>{{ section.title }}</h2>
+      {% for item in section.items %}
+	      <div class="accordion-item">
+	      	<div class="heading">
+	          <h4>{{ item.subtitle }}</h4>
+	          <a class="show-content"><i class="fa fa-plus" aria-hidden="true"></i></a>
+	          <a class="hide-content"><i class="fa fa-minus" aria-hidden="true"></i></a>
+	        </div>
+	        <div class="content">
+	        {{ item.description }}
+		      </div>
+				</div>
+		  {% endfor %}
+	  </div>
+	  {% endfor %}
 
   </article>
-
 </div>
