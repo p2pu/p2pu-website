@@ -47,16 +47,27 @@
 
 <script>
 	$(function() {
+		$('#full-page-menu a, #full-page-menu button').each(function() {
+			$(this).attr('tabindex', '-1')
+		})
+
 		function openMenu() {
 			$('#full-page-menu').removeClass('collapsed');
 			$('#full-page-menu').attr('aria-hidden', 'false')
 			$('body').addClass('freeze');
+			$('#full-page-menu a, #full-page-menu button').each(function() {
+				$(this).attr('tabindex', '0')
+			})
 		}
 
 		function closeMenu() {
 			$('#full-page-menu').addClass('collapsed');
 			$('#full-page-menu').attr('aria-hidden', 'true')
 			$('body').removeClass('freeze');
+			$('#full-page-menu a, #full-page-menu button').each(function() {
+				$(this).attr('tabindex', '-1')
+			})
+			$('main').focus();
 		}
 
 		$('nav .menu').on('click', function() {
