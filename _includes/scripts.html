@@ -49,11 +49,13 @@
 	$(function() {
 		function openMenu() {
 			$('#full-page-menu').removeClass('collapsed');
+			$('#full-page-menu').attr('aria-hidden', 'false')
 			$('body').addClass('freeze');
 		}
 
 		function closeMenu() {
 			$('#full-page-menu').addClass('collapsed');
+			$('#full-page-menu').attr('aria-hidden', 'true')
 			$('body').removeClass('freeze');
 		}
 
