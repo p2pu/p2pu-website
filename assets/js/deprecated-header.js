@@ -13,7 +13,7 @@ function deprecatedHeader(){
         display: flex;
         justify-content: center;
       }
- 
+
       #deprecated-site-alert > div[role="alert"] {
         padding: 10px 20px;
         background: #FC7100;
@@ -23,12 +23,12 @@ function deprecatedHeader(){
         border-radius: 8px;
         display: flex;
       }
- 
+
       #deprecated-site-alert.showDeprecationAlert {
         bottom: 0;
         opacity: 1;
       }
- 
+
       #deprecated-alert-close {
         background: transparent;
         border: none;
@@ -36,18 +36,18 @@ function deprecatedHeader(){
         margin-left: 6px;
       }
     </style>
- 
+
     <div id="deprecated-site-alert" aria-hidden="true">
       <div role="alert" tabindex="1">
         <div>
           We are no longer maintaining this page. Please visit our new website at <a href="https://www.p2pu.org/en/" style="color: #fff; text-decoration: underline;">www.p2pu.org</a>.
         </div>
         <div>
-          <button id="deprecated-alert-close"><i class="fa fa-close" aria-label="Close"></i></button>
+          <button id="deprecated-alert-close" aria-label="Close">&times;</button>
         </div>
       </div>
     </div>
- 
+
   `;
 }
 
