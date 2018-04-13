@@ -1,14 +1,8 @@
 section.page-title {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
+  @include flex-column-centered;
 
   header {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
+    @include flex-column-centered;
     text-transform: uppercase;
     text-align: center;
 
