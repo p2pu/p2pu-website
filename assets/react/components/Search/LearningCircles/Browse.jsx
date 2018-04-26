@@ -3,10 +3,10 @@ import Masonry from 'react-masonry-component'
 
 import LearningCircleCard from './LearningCircleCard.jsx'
 
-const BrowseLearningCircles = ({ learningCircles }) => (
+const BrowseLearningCircles = ({ results }) => (
   <Masonry className={"search-results row grid"}>
     {
-      learningCircles.map((circle, index) => (
+      results.map((circle, index) => (
         <LearningCircleCard
           key={`learning-circle-${index}`}
           learningCircle={circle}

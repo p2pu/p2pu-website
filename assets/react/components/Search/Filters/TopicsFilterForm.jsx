@@ -3,7 +3,6 @@ import { keys } from 'lodash'
 
 import CheckboxWithLabel from '../../common/CheckboxWithLabel'
 import SelectWithLabel from '../../common/SelectWithLabel'
-import { COURSE_CATEGORIES } from '../../../constants'
 import ApiHelper from '../../../helpers/ApiHelper'
 
 export default class TopicsFilterForm extends Component {

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import SearchAndFilter from './SearchAndFilter'
-import ResultsDisplay from './ResultsDisplay'
+import SearchTags from './SearchTags'
 import { SEARCH_PROPS } from '../../constants'
-import ApiHelper from '../../helpers/ApiHelper'
+import c from '../../helpers/ApiHelper'
 
 export default class Search extends Component {
   constructor(props) {
@@ -21,7 +21,6 @@ export default class Search extends Component {
     this.searchCallback = (response, opts) => this._searchCallback(response, opts);
     this.updateQueryParams = (params) => this._updateQueryParams(params);
     this.sendQuery = () => this._sendQuery();
-    this.fetchCourseCategories = () => this._fetchCourseCategories();
     this.loadInitialData = () => this._loadInitialData();
   }
 
@@ -69,6 +68,7 @@ export default class Search extends Component {
     const filterCollection = SEARCH_PROPS[this.props.searchSubject].filters;
     const placeholder = SEARCH_PROPS[this.props.searchSubject].placeholder;
     const resultsSubtitle = SEARCH_PROPS[this.props.searchSubject].resultsSubtitle;
+    const { Browse } = this.props;
 
     return(
       <div className="page">
@@ -79,11 +79,14 @@ export default class Search extends Component {
           searchSubject={this.props.searchSubject}
           {...this.state}
         />
-        <ResultsDisplay
-          resultsSubtitle={resultsSubtitle}
+        <SearchTags
           updateQueryParams={this.updateQueryParams}
           {...this.state}
           {...this.props}
+        />
+        <Browse
+          results={this.state.searchResults}
+          updateQueryParams={this.updateQueryParams}
         />
       </div>
     )
