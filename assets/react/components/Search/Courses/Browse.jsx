@@ -12,6 +12,8 @@ const BrowseCourses = ({ results, updateQueryParams }) => {
             id={`course-card-${index}`}
             course={course}
             updateQueryParams={updateQueryParams}
+            onSelectResult={onSelectResult}
+            buttonText='Start a Learning Circle'
           />
         ))
       }

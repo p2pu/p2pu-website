@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import SearchAndFilter from './SearchAndFilter'
 import SearchTags from './SearchTags'
 import { SEARCH_PROPS } from '../../constants'
-import c from '../../helpers/ApiHelper'
+import ApiHelper from '../../helpers/ApiHelper'
+import { debounce } from 'lodash';
 
 export default class Search extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ export default class Search extends Component {
   }
 
   _updateQueryParams(params) {
-    this.setState(params, this.sendQuery);
+    this.setState(params, debounce(this.sendQuery), 300);
   }
 
   _handleChange(selected) {
@@ -87,8 +88,10 @@ export default class Search extends Component {
         <Browse
           results={this.state.searchResults}
           updateQueryParams={this.updateQueryParams}
+          onSelectResult={this.props.onSelectResult}
         />
       </div>
     )
   }
 }
+
