@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import SearchAndFilter from './SearchAndFilter'
 import ResultsDisplay from './ResultsDisplay'
-import SearchTags from './SearchTags'
-import { SEARCH_PROPS } from '../constants'
-import ApiHelper from '../helpers/ApiHelper'
+import { SEARCH_PROPS } from '../../constants'
+import ApiHelper from '../../helpers/ApiHelper'
 
 export default class Search extends Component {
   constructor(props) {

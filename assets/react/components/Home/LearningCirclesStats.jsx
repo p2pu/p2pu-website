@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import ApiHelper from '../helpers/ApiHelper'
-import NumberWithLabel from './common/NumberWithLabel'
+import ApiHelper from '../../helpers/ApiHelper'
+import NumberWithLabel from '../common/NumberWithLabel'
 
 export default class LearningCirclesStats extends Component {
 

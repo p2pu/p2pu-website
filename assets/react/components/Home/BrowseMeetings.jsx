@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
 import Masonry from 'react-masonry-component'
-import MeetingCard from './MeetingCard.jsx'
-import moment from 'moment'
-import { MEETING_DAYS } from '../constants'
 import Slider from 'react-slick'
+import moment from 'moment'
+
+import MeetingCard from './MeetingCard.jsx'
+import { MEETING_DAYS } from '../../constants'
 
 const BrowseMeetings = (props) => {
   const generateFormattedMeetingDate = (nextMeeting) => {

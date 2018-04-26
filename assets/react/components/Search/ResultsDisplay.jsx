@@ -1,6 +1,6 @@
 import React from 'react'
-import BrowseLearningCircles from './BrowseLearningCircles'
-import BrowseCourses from './BrowseCourses'
+import BrowseLearningCircles from './LearningCircles/Browse'
+import BrowseCourses from './Courses/Browse'
 import SearchTags from './SearchTags'
 
 const ResultsDisplay = (props) => {
@@ -11,8 +11,6 @@ const ResultsDisplay = (props) => {
       return <BrowseLearningCircles learningCircles={props.searchResults} />
     }
   }
-
-  const resetSearch = () => { window.location.reload() };
 
   return(
     <div className="search-results col-sm-12">

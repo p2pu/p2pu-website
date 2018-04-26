@@ -1,6 +1,8 @@
 import React from 'react'
 import Select from 'react-select'
 
+import 'react-select/dist/react-select.css'
+
 const SelectWithLabel = (props) => {
   return(
     <div className={`select-with-label ${props.classes}`} >

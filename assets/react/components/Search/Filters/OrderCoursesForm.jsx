@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import SwitchWithLabels from './common/SwitchWithLabels'
+import React from 'react'
+import SwitchWithLabels from '../../common/SwitchWithLabels'
 
 const OrderCoursesForm = (props) => {
   const formValues = {

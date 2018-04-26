@@ -1,7 +1,16 @@
 import React from 'react'
-import SearchTag from './SearchTag'
-import { MEETING_DAYS, SEARCH_SUBJECTS } from '../constants'
 import { without } from 'lodash'
+import { MEETING_DAYS, SEARCH_SUBJECTS } from '../../constants'
+
+
+const SearchTag = ({ value, onDelete }) => {
+  return(
+    <div className='search-tag'>
+      {value}
+      <i className="material-icons" onClick={ () => onDelete(value) }>clear</i>
+    </div>
+  )
+}
 
 const SearchTags = (props) => {
   const generateQueryTag = () => {

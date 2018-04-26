@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Filter from './Filter'
+import FilterButton from './FilterButton'
 import FilterForm from './FilterForm'
 
 export default class FilterSection extends Component {
@@ -25,7 +25,7 @@ export default class FilterSection extends Component {
               const isActive = this.state.activeFilter === filter;
               return(
                 <div key={index} className='wrapper'>
-                  <Filter
+                  <FilterButton
                     filter={filter}
                     active={isActive}
                     updateActiveFilter={this.updateActiveFilter}

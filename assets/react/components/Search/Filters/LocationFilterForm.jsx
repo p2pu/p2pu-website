@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import CheckboxWithLabel from './common/CheckboxWithLabel'
-import CitySelect from './CitySelect'
-import RangeSliderWithLabel from './common/RangeSliderWithLabel'
+import CheckboxWithLabel from '../../common/CheckboxWithLabel'
+import RangeSliderWithLabel from '../../common/RangeSliderWithLabel'
+import CitySelect from '../../common/CitySelect'
 
 export default class LocationFilterForm extends Component {
   constructor(props) {

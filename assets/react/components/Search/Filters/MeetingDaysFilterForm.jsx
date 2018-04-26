@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import CheckboxWithLabel from './common/CheckboxWithLabel'
-import { MEETING_DAYS } from '../constants'
 import { pull } from 'lodash'
+
+import CheckboxWithLabel from '../../common/CheckboxWithLabel'
+import { MEETING_DAYS } from '../../../constants'
 
 export default class MeetingDaysFilterForm extends Component {
   constructor(props) {

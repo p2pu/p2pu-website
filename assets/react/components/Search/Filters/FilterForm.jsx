@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import LocationFilterForm from './LocationFilterForm'
 import TopicsFilterForm from './TopicsFilterForm'
 import MeetingDaysFilterForm from './MeetingDaysFilterForm'

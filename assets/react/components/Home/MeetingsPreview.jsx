@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import BrowseMeetings from './BrowseMeetings'
-import ApiHelper from '../helpers/ApiHelper'
+import ApiHelper from '../../helpers/ApiHelper'
 
 export default class MeetingsPreview extends Component {
 
