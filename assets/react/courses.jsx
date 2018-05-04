@@ -1,7 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Search from './components/Search/Search'
-import BrowseCourses from './components/Search/Courses/Browse'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Search, BrowseCourses } from 'p2pu-search-cards';
 
 const handleSelectResult = course => {
   const selectCourse = `https://learningcircles.p2pu.org/en/studygroup/create/?course_id=${course.id}`;

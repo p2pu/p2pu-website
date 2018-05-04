@@ -38,6 +38,5 @@ export default class NumberWithLabel extends Component {
       </VisibilitySensor>
     );
   }
-
 }
 
