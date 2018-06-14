@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import LearningCirclesStats from './components/Home/LearningCirclesStats'
-import MeetingsPreview from './components/Home/MeetingsPreview'
-import HeaderTextCarousel from './components/Home/HeaderTextCarousel'
+import LearningCirclesStats from './components/LearningCirclesStats'
+import MeetingsPreview from './components/MeetingsPreview'
+import HeaderTextCarousel from './components/HeaderTextCarousel'
 
 
 ReactDOM.render(

@@ -143,7 +143,10 @@ body {
   }
 
   header.page-title {
-    @include flex-column-centered;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
     text-transform: uppercase;
     text-align: center;
 

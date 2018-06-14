@@ -1,5 +1,5 @@
-import { API_ENDPOINTS } from '../constants';
-import { compact } from 'lodash';
+import { API_ENDPOINTS } from '../constants'
+import { compact } from 'lodash'
 
 export default class ApiHelper {
   constructor(resourceType) {

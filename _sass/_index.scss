@@ -39,9 +39,12 @@ main {
 		}
 
 		.lines {
-			@include flex-column-centered;
 	    position: absolute;
 	    z-index: -1;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
 		}
 
 		.bg-line {
@@ -74,7 +77,10 @@ main {
   }
 
 	section#landing {
-		@include flex-column-centered;
+		display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  text-align: center;
 		min-height: 90vh;
 		padding: $padding-sm 0;
 	}
@@ -405,6 +411,27 @@ main {
 	    }
 		}
 	}
+
+	> div.full-width-image {
+		height: 90vh;
+		min-height: 250px;
+		width: 100%;
+
+		&.header {
+			background: url('../images/header.jpg') no-repeat center center;
+			background-size: cover;
+		}
+
+		&.finance {
+			background: url('../images/finance_for_everyone.jpg') no-repeat center center;
+			background-size: cover;
+		}
+
+		&.about {
+			background: url('../images/about.jpg') no-repeat center center;
+			background-size: cover;
+		}
+	}
 }
 
 .join-cta {
@@ -449,6 +476,12 @@ main {
 			header {
 				margin: 12px 4px;
 			}
+		}
+
+		.full-width-image {
+			height: auto;
+			min-height: 50vh;
+			width: auto;
 		}
 
 		section#landing {

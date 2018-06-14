@@ -2,10 +2,8 @@ nav {
   z-index: $zindex-navbar-fixed;
   font-family: $headings-font-family;
 
-  button.menu {
+  .menu {
     cursor: pointer;
-    background: transparent;
-    border: none;
 
     i {
       margin-right: 12px;
@@ -106,16 +104,10 @@ nav {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: none;
+    transition: transform 0.3s ease-in-out;
 
     &:hover {
       transform: rotate(90deg);
-    }
-
-    &:focus {
-      box-shadow: 0px 0px 0px 4px $p2pu-light-blue;
-      outline: none;
     }
   }
 
