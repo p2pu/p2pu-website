@@ -184,6 +184,243 @@ section.featured-work{
 	}
 }
 
+.splash.learning-circles {
+	background: transparent;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 3em;
+
+	@media (min-width: $screen-sm-min) {
+
+	}
+
+	@media (min-width: $screen-md-min) {
+		margin-top: -44px;
+	}
+
+	.background {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		/*background: url("../images/bgtr.svg") top right no-repeat, url("../images/learning-circles/overlay.png")top right repeat, url($hero-img-mobile) top left no-repeat, linear-gradient($gray-dark, $gray-light);*/
+			background-size: auto,auto, cover,auto;
+
+		@media (min-width: $screen-xs-min) {
+
+		}
+
+		@media (min-width: $screen-sm-min) {
+			/*background: url("../images/bgbl.svg") bottom left no-repeat, url("../images/bgbl.svg") bottom left no-repeat, url("../images/learning-circles/overlay.png")top right repeat, url($hero-img) top left no-repeat, linear-gradient($gray-dark, $gray-light);*/
+			background-size: auto,auto,auto, cover,auto;
+		}
+
+		@media (min-width: $screen-md-min) {
+			/*background: url("../images/bgtr.svg") top right no-repeat, url("../images/bgbl.svg") bottom left no-repeat, url("../images/bgbl.svg") bottom left no-repeat, url("../images/learning-circles/overlay.png")top right repeat, url($hero-img) top left no-repeat, linear-gradient($gray-dark, $gray-light);*/
+			background-size: auto,auto,auto,auto, cover,auto;
+		}
+	}
+
+	.banner {
+		position: relative;
+		z-index: 1;
+		padding-bottom: 20px;
+		height: 600px;
+
+		@media (min-width: 350px ) {
+			height: 500px;
+		}
+
+		@media (min-width: $screen-sm-min) {
+			height: 550px;
+		}
+
+		@media (min-width: $grid-float-breakpoint-max) {
+			height: 600px;
+		}
+
+		.banner-graphic{
+			img{
+				max-width: 100%;
+			}
+
+			@media (min-width: $screen-xs-min) {
+				padding-top: 250px;
+			}
+
+			@media (min-width: $screen-sm-min) {
+				padding-top: 0;
+			}
+		}
+
+		header {
+			position: relative;
+			color: $white;
+			float: none;
+			line-height: 1.2;
+			text-align: center;
+			font-family: $headings-font-family;
+			margin: 1em 0 0.8em 0;
+			font-variant: small-caps;
+
+			&:before, &:after {
+			  -moz-transition: width 0.85s ease;
+			  -webkit-transition: width 0.85s ease;
+			  -ms-transition: width 0.85s ease;
+			  transition: width 0.85s ease;
+			  -moz-transition-delay: 0.25s;
+			  -webkit-transition-delay: 0.25s;
+			  -ms-transition-delay: 0.25s;
+			  transition-delay: 0.25s;
+			  background: $white;
+			  content: '';
+			  display: block;
+			  height: 2px;
+			  position: absolute;
+			  width: 100%;
+			}
+
+			&:before {
+				top: 7.5px;
+				left: 0;
+			}
+
+			&:after {
+				bottom: 0;
+				right: 0;
+			}
+
+			@media (min-width: $screen-xs-min) {
+				text-align: left;
+				display: inline-block;
+				top: -31px;
+			}
+
+			@media (min-width: $screen-sm-min) {
+				text-align: left;
+				display: inline-block;
+			}
+		}
+
+		.subheader {
+			color: $white;
+			font-family: $font-family-base;
+			font-size: 1em;
+			text-align: left;
+			line-height: 1.4;
+			bottom: 11%;
+			left: 0;
+			margin-bottom: 1em;
+
+			@media (min-width: $screen-xs-min) {
+
+
+			}
+
+			@media (min-width: $screen-sm-min) {
+				font-size: 1.4em;
+			}
+		}
+
+		.subheader-list{
+			list-style-type: none;
+			color: $white;
+			padding: 0;
+
+			li{
+				font-size: 0.9em;
+
+				&:before{
+					content: "\f00c";
+					font-family: FontAwesome;
+					padding: 0 0.5em 0 0;
+				}
+
+				@media (min-width: $screen-sm-min) {
+					font-size: 1.2em;
+				}
+			}
+		}
+
+		.btn-cta, .btn-subcta {
+			border-color: $p2pu-orange;
+			border-radius: 5px;
+			text-transform: uppercase;
+			font-family: $font-family-base;
+			font-size: 1em;
+			color: $white;
+			-webkit-transition: all 0.2s ease-out;
+		  -moz-transition: all 0.2s ease-out;
+		  -o-transition: all 0.2s ease-out;
+		  transition: all 0.2s ease-out;
+
+			&:hover {
+				background-color: $white;
+				color: $p2pu-blue;
+				border-color: transparent;
+			}
+		}
+
+		.btn-cta{
+			color: $white;
+			background-color: $p2pu-orange;
+			margin-top: 1.8em;
+
+			&:hover {
+				color: $white;
+				background-color: darken($p2pu-orange, 10%);
+				border-color: darken($p2pu-orange, 10%);
+			}
+		}
+
+
+		.featured-headline {
+			background-color: $brand-primary;
+			color: $white;
+			padding: 1em 0;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+
+			header {
+				font-family: $headings-font-family;
+				padding: 1em 0;
+
+				@media (min-width: $screen-xs-min) {
+					font-size: 1.5em;
+					line-height: 1.2;
+				}
+
+				@media (min-width: $screen-sm-min) {
+					font-size: 2.5em;
+				}
+			}
+
+			.body {
+				@media (min-width: $screen-xs-min) {
+					font-size: 1em;
+					line-height: 1.5;
+				}
+
+				@media (min-width: $screen-sm-min) {
+					font-size: 1.5em;
+				}
+			}
+
+		}
+
+		.banner-graphic{
+			padding-top: 30px;
+		}
+
+		.actions{
+			  padding-top: 30px;
+		}
+	}
+}
+
 .page-content {
 	margin-top: $navbar-height;
 }
