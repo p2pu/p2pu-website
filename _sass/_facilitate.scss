@@ -177,6 +177,141 @@ section#get-started {
   }
 }
 
+section#facilitator-resources {
+  .category-title {
+    display: flex;
+
+    .step-number {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+
+      .number {
+        background: #515564;
+        height: 28px;
+        width: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 50%;
+      }
+    }
+
+    .step-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-grow: 1;
+      border-bottom: 1px solid $gray-darker;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .title {
+        font-family: $font-family-sans-serif-bold;
+      }
+
+      .link {
+        a {
+          color: $gray-darker;
+        }
+      }
+    }
+  }
+
+  .resources {
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    .resource-card {
+      .image {
+        img {
+          width: 100%;
+          height: 180px;
+          object-fit: cover;
+          background-color: $p2pu-light-blue;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 10px;
+          display: flex;
+
+          button {
+            margin-left: 6px;
+            background: $gray-darker;
+            color: $white;
+            border: none;
+            height: 24px;
+            width: 24px;
+            line-height: 1;
+          }
+
+          .topic-type {
+            background: $gray-darker;
+            color: $white;
+            height: 24px;
+            padding-left: 4px;
+            padding-right: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+
+      .title {
+        margin-top: 10px;
+        font-family: $font-family-sans-serif-bold;
+
+        a {
+          color: $gray-darker;
+        }
+      }
+    }
+  }
+}
+
+section#discourse-community {
+  .topics {
+    margin-top: 3rem;
+
+    table {
+      font-size: $font-size-small;
+      color: $gray;
+    }
+
+    .topic-title {
+      color: $gray-darker;
+    }
+
+    .users {
+      width: 164px;
+    }
+
+    .category-name {
+      color: $gray-darker;
+      font-family: $font-family-sans-serif-bold;
+      font-size: 0.8em
+    }
+
+    .avatar {
+      margin-right: 4px;
+      float: left;
+
+      img {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        vertical-align: center;
+      }
+    }
+  }
+}
+
 section#lets-do-it {
   padding: 0;
 

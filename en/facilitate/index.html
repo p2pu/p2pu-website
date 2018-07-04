@@ -4,36 +4,33 @@ layout: facilitate
 extra_js:
   - js/facilitate.js
   - js/accordion.js
+bundles:
+  - facilitator-resources
 ---
 
 <main>
-  <section>
     <header class="page-title">
       <h1>{{ page.title }}</h1>
     </header>
-    <h3 class="headline">With a little practice and training, anybody can facilitate a learning circle. Whether you want to run a single learning circle in your home or organize dozens across a library system, you've come to the right place.</h3>
+    <section>
+    <div class="welcome-video centered">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/s8w9IKiuyys" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
   </section>
 
-  <section id="facilitator-landing" class="row">
-    {% for facilitator in site.data.facilitators %}
-      <div class="profile-container profile_{{ forloop.index }}">
-        <div class="facilitator-profile-images">
-          <div class="half-page-image col-md-6">
-            <img src="{{ site.baseurl }}/assets/images/facilitate/{{ facilitator.image_1 }}" alt="{{ facilitator.name }}">
-          </div>
-          <div class="half-page-image col-md-6 hide-on-mobile">
-            <img src="{{ site.baseurl }}/assets/images/facilitate/{{ facilitator.image_2 }}" alt="{{ facilitator.name }}">
-          </div>
-        </div>
-        <div class="facilitator-profile col-md-5 col-sm-8 col-xs-12">
-          <div class="text">
-            <h3 class="name">{{ facilitator.name }}</h3>
-            <p class="tagline">{{ facilitator.description }}</p>
-            <p class="quote">"{{ facilitator.quote }}"</p>
-          </div>
+  <section>
+    <header>
+      <div class="subtitle">
+        <div class="underline">
+          <div class="text"><h3>Welcome</h3></div>
         </div>
       </div>
-    {% endfor %}
+    </header>
+    <p class="large">With a little practice and training, anybody can facilitate a learning circle. Whether you want to run a single learning circle in your home or organize dozens across a library system, you've come to the right place.</p>
+  </section>
+
+  <section id="facilitator-resources" class="row">
+
   </section>
 
   <section id="get-started" class="row">
@@ -59,75 +56,10 @@ extra_js:
         </div>
       {% endfor %}
     </div>
-    <div class="resources row">
-      {% for resource in site.data.facilitator_resources limit:3 offset: 3 %}
-        <div class="col-md-4 col-sm-12 col-xs-12 resource grow-on-hover">
-          <a href="{{ resource.button_url }}">
-            <div class="jumbo-number">
-              <h1><i class="material-icons">{{ resource.icon }}</i></h1>
-            </div>
-            <h3>{{ resource.heading }}</h3>
-            <p class="large">{{ resource.text }}</p>
-            <button class="btn p2pu-btn dark">{{ resource.button_text }}</button>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
   </section>
 
-  <section id="lets-do-it">
-    <div class="callout">
-      <h1>Let's do it!</h1>
-      <a href="https://learningcircles.p2pu.org/en/studygroup/create/" class="undecorated">
-        <button class="btn p2pu-btn light">Start a learning circle</button>
-      </a>
-    </div>
-  </section>
+  <section id="discourse-community" class="row">
 
-  <section id="faqs">
-    <header>
-      <div class="subtitle">
-        <div class="underline">
-          <div class="text"><h3>Frequently Asked Questions</h3></div>
-        </div>
-      </div>
-    </header>
-    <div class="accordion">
-      {% for faq in site.data.faqs %}
-        {% if forloop.first %}
-        <div class="accordion-item open">
-        {% else %}
-        <div class="accordion-item">
-        {% endif %}
-          <div class="heading">
-            <h4>{{ faq.question }}</h4>
-            <a class="show-content"><i class="fa fa-plus" aria-hidden="true"></i></a>
-            <a class="hide-content"><i class="fa fa-minus" aria-hidden="true"></i></a>
-          </div>
-          <div class="content">
-            {% for paragraph in faq.answer.paragraphs %}
-              {% if paragraph.list %}
-              <ul>
-                {% for list_item in paragraph.list %}
-                  {% if list_item.sublist %}
-                  <ul>
-                    {% for sublist_item in list_item.sublist %}
-                      <li>{{ sublist_item }}</li>
-                    {% endfor %}
-                  </ul>
-                  {% else %}
-                  <li>{{ list_item }}</li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-              {% else %}
-              <p class="large">{{ paragraph }}</p>
-              {% endif %}
-            {% endfor %}
-          </div>
-        </div>
-      {% endfor %}
-    </div>
   </section>
 
 </main>
