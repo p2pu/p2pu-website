@@ -6,10 +6,9 @@ import { DISCOURSE_API_URL } from '../constants'
 const DiscourseCategory = props => {
   const { category, topics, step } = props;
   const categoryUrl = `${DISCOURSE_API_URL}/c/learning-circles/${category.slug}`
-
   return (
-    <div>
-      <div className="category-title">
+    <div className="row">
+      <div className="category-title col-xs-12">
         <div className="step-number">
           <div className="number">{step}</div>
         </div>

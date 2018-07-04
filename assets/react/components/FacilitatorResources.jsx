@@ -3,12 +3,27 @@ import ReactDOM from "react-dom";
 import axios from "axios";
 import { DISCOURSE_API_URL, DISCOURSE_CATEGORIES } from "../constants";
 import DiscourseCategory from "./DiscourseCategory";
-import * as topicJSON from "../fixtures/featuredTopics.json";
+import * as gettingStartedTopics from "../fixtures/gettingStartedTopics.json";
+import * as coursesTopics from "../fixtures/coursesTopics.json";
+import * as promotionTopics from "../fixtures/promotionTopics.json";
+import * as facilitationTipsTopics from "../fixtures/facilitationTipsTopics.json";
+import * as activitiesTopics from "../fixtures/activitiesTopics.json";
+import * as wrappingUpTopics from "../fixtures/wrappingUpTopics.json";
+
 
 export default class FacilitatorResources extends Component {
   constructor(props) {
     super(props);
-    this.state = { topics: { "getting-started": topicJSON.topics } };
+    this.state = {
+      topics: {
+        "getting-started": gettingStartedTopics.topic_list.topics,
+        "courses": coursesTopics.topic_list.topics,
+        "promotion": promotionTopics.topic_list.topics,
+        "facilitation-tips": facilitationTipsTopics.topic_list.topics,
+        "activities": activitiesTopics.topic_list.topics,
+        "wrapping-up": wrappingUpTopics.topic_list.topics,
+      }
+    };
     this.populateResources = () => this._populateResources();
   }
 
@@ -47,8 +62,6 @@ export default class FacilitatorResources extends Component {
         </header>
         {DISCOURSE_CATEGORIES.map((category, index) => {
           const topics = this.state.topics[category.slug];
-          console.log("category", category);
-          console.log("topics", topics);
           if (topics && !!topics.length) {
             return (
               <DiscourseCategory

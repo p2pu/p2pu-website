@@ -63,8 +63,8 @@ export const DISCOURSE_API_URL = 'https://community.p2pu.org'
 
 export const DISCOURSE_CATEGORIES = [
   { title: 'Getting Started', slug: 'getting-started' },
-  { title: 'Courses', slug: 'courses' },
-  { title: 'Promotion', slug: 'promotion' },
+  { title: 'Choosing a Course', slug: 'courses' },
+  { title: 'Promotion and Outreach', slug: 'promotion' },
   { title: 'Facilitation Tips', slug: 'facilitation-tips' },
   { title: 'Activities', slug: 'activities' },
   { title: 'Wrapping Up', slug: 'wrapping-up' }
