@@ -1,18 +1,35 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { DISCOURSE_API_URL } from '../constants'
+import { DISCOURSE_API_URL, FACILITATOR_RESOURCE_TYPES } from '../constants';
+import { find } from 'lodash';
 
 const ResourceCard = props => {
 
   const { topic } = props;
-  const url = `${DISCOURSE_API_URL}/t/${topic.slug}`
+  const url = `${DISCOURSE_API_URL}/t/${topic.slug}`;
+  const resourceType = find(topic.tags, (tag) => FACILITATOR_RESOURCE_TYPES.includes(tag));
+
+  const getImageUrl = () => {
+    if (topic.image_url) {
+      return topic.image_url;
+    };
+
+    if ((!!topic.featured_link) && (topic.featured_link_root_domain === "youtube.com")) {
+      const videoId = topic.featured_link.split('?v=')[1];
+      return `https://img.youtube.com/vi/${videoId}/0.jpg`;
+    };
+
+    return null
+  };
+
+  const imgUrl = getImageUrl();
 
   return (
       <div className="resource-card col-md-4 col-sm-12 col-xs-12">
         <div className="image">
-          <img src={topic.image_url} />
+          { imgUrl && <img src={imgUrl} /> }
           <div className="overlay">
-            <div className="topic-type minicaps">video</div>
+            {resourceType && <div className="topic-type minicaps">{resourceType}</div>}
             <button className="bookmark-btn">+</button>
           </div>
         </div>

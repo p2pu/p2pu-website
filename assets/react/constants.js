@@ -69,3 +69,7 @@ export const DISCOURSE_CATEGORIES = [
   { title: 'Activities', slug: 'activities' },
   { title: 'Wrapping Up', slug: 'wrapping-up' }
 ]
+
+export const FACILITATOR_RESOURCE_TYPES = [
+  'video', 'activity', 'blog', 'template'
+]

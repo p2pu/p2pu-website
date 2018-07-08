@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 import { DISCOURSE_API_URL, DISCOURSE_CATEGORIES } from "../constants";
-import DiscourseCategory from "./DiscourseCategory";
+import ResourceCategory from "./ResourceCategory";
 import * as gettingStartedTopics from "../fixtures/gettingStartedTopics.json";
 import * as coursesTopics from "../fixtures/coursesTopics.json";
 import * as promotionTopics from "../fixtures/promotionTopics.json";
@@ -16,12 +16,12 @@ export default class FacilitatorResources extends Component {
     super(props);
     this.state = {
       topics: {
-        "getting-started": gettingStartedTopics.topic_list.topics,
-        "courses": coursesTopics.topic_list.topics,
-        "promotion": promotionTopics.topic_list.topics,
-        "facilitation-tips": facilitationTipsTopics.topic_list.topics,
-        "activities": activitiesTopics.topic_list.topics,
-        "wrapping-up": wrappingUpTopics.topic_list.topics,
+        "getting-started": [],
+        "courses": [],
+        "promotion": [],
+        "facilitation-tips": [],
+        "activities": [],
+        "wrapping-up": [],
       }
     };
     this.populateResources = () => this._populateResources();
@@ -38,10 +38,11 @@ export default class FacilitatorResources extends Component {
       }.json?tags=featured`;
 
       axios.get(apiEndpoint).then(res => {
+        console.log('res', res)
         this.setState({
           topics: {
-            ...topics,
-            [category.slug]: res.topic_list.topics
+            ...this.state.topics,
+            [category.slug]: res.data.topic_list.topics
           }
         });
       });
@@ -64,7 +65,7 @@ export default class FacilitatorResources extends Component {
           const topics = this.state.topics[category.slug];
           if (topics && !!topics.length) {
             return (
-              <DiscourseCategory
+              <ResourceCategory
                 topics={topics}
                 category={category}
                 key={category.slug}

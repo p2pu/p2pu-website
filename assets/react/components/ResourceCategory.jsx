@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom'
 import ResourceCard from './ResourceCard'
 import { DISCOURSE_API_URL } from '../constants'
 
-const DiscourseCategory = props => {
+const ResourceCategory = props => {
   const { category, topics, step } = props;
   const categoryUrl = `${DISCOURSE_API_URL}/c/learning-circles/${category.slug}`
+  console.log('topics', topics)
   return (
     <div className="row">
       <div className="category-title col-xs-12">
@@ -28,4 +29,4 @@ const DiscourseCategory = props => {
   )
 }
 
-export default DiscourseCategory
+export default ResourceCategory

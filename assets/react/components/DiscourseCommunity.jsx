@@ -20,8 +20,8 @@ export default class FacilitatorResources extends Component {
   }
 
   componentWillMount() {
-    // this.populateResources();
-    // this.populateCategories();
+    this.populateResources();
+    this.populateCategories();
 
   }
 
@@ -29,7 +29,7 @@ export default class FacilitatorResources extends Component {
     const apiEndpoint = `${DISCOURSE_API_URL}/latest.json`;
 
     axios.get(apiEndpoint).then(res => {
-      this.setState({ topics: res.topic_list.topics, users: res.users });
+      this.setState({ topics: res.data.topic_list.topics, users: res.data.users });
     });
   }
 
@@ -37,7 +37,7 @@ export default class FacilitatorResources extends Component {
     const apiEndpoint = `${DISCOURSE_API_URL}/site.json`;
 
     axios.get(apiEndpoint).then(res => {
-      this.setState({ categories: res.categories });
+      this.setState({ categories: res.data.categories });
     });
   }
 
@@ -74,8 +74,6 @@ export default class FacilitatorResources extends Component {
                 const category = find(this.state.categories, [
                   'id', topic.category_id
                 ]);
-                console.log('categories', this.state.categories)
-                console.log("topic.category_id", topic.category_id);
 
                 return (
                   <DiscourseTopic
