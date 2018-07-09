@@ -4,16 +4,15 @@ import axios from "axios";
 import { filter, find } from "lodash";
 import { DISCOURSE_API_URL } from "../constants";
 import DiscourseTopic from "./DiscourseTopic";
-import * as topicJSON from "../fixtures/latestTopics.json";
-import * as siteJSON from '../fixtures/site.json';
+
 
 export default class FacilitatorResources extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      topics: topicJSON.topic_list.topics,
-      users: topicJSON.users,
-      categories: siteJSON.categories
+      topics: [],
+      users: [],
+      categories: [],
     };
     this.populateResources = () => this._populateResources();
     this.populateCategories = () => this._populateCategories();

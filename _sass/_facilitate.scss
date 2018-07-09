@@ -1,3 +1,11 @@
+main {
+  section {
+      padding: 0 $padding-md;
+      margin-top: $padding-md;
+      margin-bottom: $padding-md;
+  }
+}
+
 section#facilitator-landing {
   .centered {
     display: flex;
@@ -116,9 +124,10 @@ section#get-started {
 section#facilitator-resources {
   .category-title {
     display: flex;
+    border-bottom: 1px solid $gray-darker;
 
     .step-number {
-      padding: 10px;
+      margin-right: 10px;
       display: flex;
       align-items: center;
 
@@ -139,7 +148,6 @@ section#facilitator-resources {
       justify-content: space-between;
       align-items: center;
       flex-grow: 1;
-      border-bottom: 1px solid $gray-darker;
       padding-top: 10px;
       padding-bottom: 10px;
 
@@ -218,6 +226,7 @@ section#facilitator-resources {
 section#discourse-community {
   .topics {
     margin-top: 3rem;
+    overflow: scroll;
 
     table {
       font-size: $font-size-small;

@@ -3,13 +3,6 @@ import ReactDOM from "react-dom";
 import axios from "axios";
 import { DISCOURSE_API_URL, DISCOURSE_CATEGORIES } from "../constants";
 import ResourceCategory from "./ResourceCategory";
-import * as gettingStartedTopics from "../fixtures/gettingStartedTopics.json";
-import * as coursesTopics from "../fixtures/coursesTopics.json";
-import * as promotionTopics from "../fixtures/promotionTopics.json";
-import * as facilitationTipsTopics from "../fixtures/facilitationTipsTopics.json";
-import * as activitiesTopics from "../fixtures/activitiesTopics.json";
-import * as wrappingUpTopics from "../fixtures/wrappingUpTopics.json";
-
 
 export default class FacilitatorResources extends Component {
   constructor(props) {
@@ -38,7 +31,6 @@ export default class FacilitatorResources extends Component {
       }.json?tags=featured`;
 
       axios.get(apiEndpoint).then(res => {
-        console.log('res', res)
         this.setState({
           topics: {
             ...this.state.topics,
