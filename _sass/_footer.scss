@@ -1,0 +1,83 @@
+footer.home-footer {
+  background: $gray-darker;
+  color: $white;
+  font-size: $font-size-small;
+  padding-left: $padding-md;
+  padding-right: $padding-md;
+  padding-top: $padding-sm;
+
+  a {
+    color: $white;
+  }
+
+  header {
+    padding-bottom: $padding-sm;
+  }
+
+  .social {
+    .content {
+      > div {
+        margin-bottom: 10px;
+      }
+
+      span {
+        i {
+          margin-right: $padding-sm;
+          width: 14px;
+        }
+      }
+    }
+  }
+
+  .newsletter {
+    float: right;
+
+    form {
+      @include flex-column-centered;
+
+      div {
+        width: 100%;
+        text-align: center;
+      }
+
+      input[type="email"] {
+        border: none;
+        background: none;
+        border-bottom: 2px solid $white;
+        width: 100%;
+        margin-bottom: $padding-sm;
+
+        &::placeholder {
+          font-style: italic;
+          color: $gray-lighter;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .toc {
+    padding-bottom: $padding-sm;
+    padding-top: $padding-sm;
+    border-top: 1px solid $gray;
+    display: flex;
+    flex-wrap: wrap;
+    color: $gray;
+    font-size: $font-size-small;
+
+    > div {
+      padding: 0 10px;
+
+      a {
+        color: $gray;
+      }
+    }
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: $padding-md;
+  }
+
+}
