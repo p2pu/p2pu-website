@@ -32,8 +32,8 @@
     "moment": "^2.22.1",
     "moment-timezone": "^0.5.16",
     "node-sass": "^4.5.2",
-    "p2pu-input-fields": "^0.4.6",
-    "p2pu-search-cards": "^0.7.1",
+    "p2pu-input-fields": "^0.5.6",
+    "p2pu-search-cards": "^0.7.5",
     "rc-time-picker": "^3.3.1",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
@@ -47,6 +47,7 @@
     "smooth-scroll": "^12.1.5",
     "style-loader": "^0.16.1",
     "webpack": "^2.4.1",
+    "webpack-bundle-analyzer": "^2.13.1",
     "whatwg-url": "^6.2.1"
   },
   "devDependencies": {
