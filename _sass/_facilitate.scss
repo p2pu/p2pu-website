@@ -1,80 +1,24 @@
-section#facilitator-landing {
-  padding: 0;
-
-  .profile-container {
-    position: relative;
-
-    &:not(.selected-profile) {
-      display: none;
-    }
-
-    .facilitator-profile-images {
-      .half-page-image {
-        height: 60vh;
-        min-height: 250px;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        background-color: $p2pu-light-blue;
-
-        img {
-          max-width: 100%;
-          height: auto;
-        }
-      }
-    }
-
-    .facilitator-profile {
-      background: $p2pu-blue;
-      color: $white;
-      padding: $padding-md;
-      transform: translateY(-60px);
-      right: -30%;
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: -30px;
-        width: 0;
-        height: 0;
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 30px solid $p2pu-blue;
-      }
-
-      .text {
-        h3 {
-          margin-top: 0;
-        }
-
-        .tagline {
-          font-style: italic;
-        }
-      }
-    }
+main {
+  section {
+      padding: 0 $padding-md;
+      margin-top: $padding-md;
+      margin-bottom: $padding-md;
   }
-  @media (max-width: 992px) {
-    .profile-container {
-      .facilitator-profile-images {
-        .hide-on-mobile {
-          display: none;
-        }
-      }
+}
 
-      .facilitator-profile {
-        right: -25%;
-      }
-    }
+section#facilitator-landing {
+  .centered {
+    display: flex;
+    justify-content: center;
+  }
+
+  .welcome-video {
+    height: 430px;
   }
 
   @media (max-width: 768px) {
-    .profile-container {
-      .facilitator-profile {
-        right: 0;
-      }
+    .welcome-video {
+      height: 315px;
     }
   }
 }
@@ -172,6 +116,146 @@ section#get-started {
 
       p {
         flex-grow: 1;
+      }
+    }
+  }
+}
+
+section#facilitator-resources {
+  .category-title {
+    display: flex;
+    border-bottom: 1px solid $gray-darker;
+
+    .step-number {
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+
+      .number {
+        background: #515564;
+        height: 28px;
+        width: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 50%;
+      }
+    }
+
+    .step-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-grow: 1;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .title {
+        font-family: $font-family-sans-serif-bold;
+      }
+
+      .link {
+        a {
+          color: $gray-darker;
+        }
+      }
+    }
+  }
+
+  .resources {
+    display: flex;
+    flex-wrap: wrap;
+
+    .resource-card {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      .image {
+        background-color: $p2pu-light-blue;
+        min-height: 200px;
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 10px;
+          display: flex;
+
+          button {
+            margin-left: 6px;
+            background: $gray-darker;
+            color: $white;
+            border: none;
+            height: 24px;
+            width: 24px;
+            line-height: 1;
+          }
+
+          .topic-type {
+            background: $gray-darker;
+            color: $white;
+            height: 24px;
+            padding-left: 4px;
+            padding-right: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+
+      .title {
+        margin-top: 10px;
+        font-family: $font-family-sans-serif-bold;
+
+        a {
+          color: $gray-darker;
+        }
+      }
+    }
+  }
+}
+
+section#discourse-community {
+  .topics {
+    margin-top: 3rem;
+    overflow: scroll;
+
+    table {
+      font-size: $font-size-small;
+      color: $gray;
+    }
+
+    .topic-title {
+      color: $gray-darker;
+    }
+
+    .users {
+      width: 164px;
+    }
+
+    .category-name {
+      color: $gray-darker;
+      font-family: $font-family-sans-serif-bold;
+      font-size: 0.8em
+    }
+
+    .avatar {
+      margin-right: 4px;
+      float: left;
+
+      img {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        vertical-align: center;
       }
     }
   }

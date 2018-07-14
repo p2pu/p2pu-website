@@ -1,6 +1,6 @@
-- heading: Check out the handbook
-  icon: local_library
-  text: Uncover the practical details of starting and running a learning circle.
+- heading: Start a learning circle
+  icon: add_to_queue
+  text: Create your own learning circle on the P2PU platform.
   button_text: Handbook
   button_url: /en/handbook
   link_target:
@@ -14,17 +14,5 @@
   icon: record_voice_over
   text: Read about how others are using learning circles in our blog.
   button_text: Blog
-  button_url: http://info.p2pu.org/
-  link_target:
-- heading: Browse the courses
-  icon: list
-  text: See what online courses are most popular for learning circles.
-  button_text: Courses
-  button_url: https://learningcircles.p2pu.org/en/courses/
-  link_target:
-- heading: Work with us
-  icon: room
-  text: Explore how collaborating with P2PU can give your project a boost.
-  button_text: Organizer Tools
-  link_target:
-  button_url: /en/workwithus/
+  button_url: https://medium.com/p2pu
+  link_target: _blank

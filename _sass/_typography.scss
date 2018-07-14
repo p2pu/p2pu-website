@@ -152,3 +152,16 @@ body {
     }
   }
 }
+
+@media (max-width: 768px) {
+  body {
+    .subtitle {
+      font-size: $font-size-h3;
+
+      .underline {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+    }
+  }
+}
