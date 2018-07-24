@@ -7,13 +7,73 @@ main {
 }
 
 section#facilitator-landing {
-  .centered {
-    display: flex;
-    justify-content: center;
+  padding-top: $padding-md;
+  padding-bottom: $padding-md;
+
+  .welcome-text {
+    margin: $padding-md 0;
   }
 
   .welcome-video {
     height: 430px;
+  }
+
+  .video {
+    position: relative;
+
+    .media {
+      background-color: $p2pu-light-blue;
+      position: relative;
+      height: 360px;
+      overflow: hidden;
+
+      img, iframe {
+        position: absolute;
+      }
+
+      iframe {
+        display: none;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      #play-video {
+        background: transparent;
+        outline: none;
+        border: none;
+        color: #ffffffab;
+
+        .material-icons {
+          font-size: 120px;
+        }
+      }
+    }
+  }
+
+  .modal.fade.in {
+    background: #fff;
+  }
+
+  .modal-dialog {
+    width: 80vw;
+
+    .modal-body {
+      height: 90vh;
+    }
   }
 
   @media (max-width: 768px) {

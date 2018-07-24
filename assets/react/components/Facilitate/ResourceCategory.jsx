@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import ResourceCard from './ResourceCard'
-import { DISCOURSE_API_URL } from '../constants'
+import { DISCOURSE_API_URL } from '../../constants'
 
 const ResourceCategory = props => {
   const { category, topics, step } = props;

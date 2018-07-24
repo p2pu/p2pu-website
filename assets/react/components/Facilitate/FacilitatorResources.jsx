@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
-import { DISCOURSE_API_URL, DISCOURSE_CATEGORIES } from "../constants";
+import { DISCOURSE_API_URL, DISCOURSE_CATEGORIES } from "../../constants";
 import ResourceCategory from "./ResourceCategory";
 
 export default class FacilitatorResources extends Component {

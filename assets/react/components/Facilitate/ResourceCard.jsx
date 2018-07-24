@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { DISCOURSE_API_URL, FACILITATOR_RESOURCE_TYPES } from '../constants';
+import { DISCOURSE_API_URL, FACILITATOR_RESOURCE_TYPES } from '../../constants';
 import { find } from 'lodash';
 
 const ResourceCard = props => {
@@ -16,7 +16,7 @@ const ResourceCard = props => {
 
     if ((!!topic.featured_link) && (topic.featured_link_root_domain === "youtube.com")) {
       const videoId = topic.featured_link.split('?v=')[1];
-      return `https://img.youtube.com/vi/${videoId}/0.jpg`;
+      return `https://img.youtube.com/vi/${videoId}/hq2.jpg`;
     };
 
     return null

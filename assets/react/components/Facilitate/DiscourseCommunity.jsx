@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 import { filter, find } from "lodash";
-import { DISCOURSE_API_URL } from "../constants";
+import { DISCOURSE_API_URL } from "../../constants";
 import DiscourseTopic from "./DiscourseTopic";
 
 
