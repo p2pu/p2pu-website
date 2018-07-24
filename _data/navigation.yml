@@ -32,7 +32,6 @@ full_column:
     - text: Learning about learning circles
         date: February 6, 2018
         url: http://info.p2pu.org/2018/02/05/learning/
-
   - text: About P2PU
     url: /en/about/
     submenu:
