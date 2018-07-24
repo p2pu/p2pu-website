@@ -20,18 +20,19 @@ full_column:
   - text: Stories
     url: http://info.p2pu.org/
     submenu:
-      - text: Learning about learning circles
+    - text: Learning about learning circles
+        date: July 10, 2018
+        url: http://info.p2pu.org/2018/07/24/online-learning-at-the-library/
+    - text: What happened in Kansas City? P2PU Gathering Recap!
+        date: June 10, 2018
+        url: http://info.p2pu.org/2018/06/10/kc2018/
+    - text: Advice for Learners from Learners 
+        date: March 6, 2018
+        url: http://info.p2pu.org/2018/03/06/tips/
+    - text: Learning about learning circles
         date: February 6, 2018
         url: http://info.p2pu.org/2018/02/05/learning/
-      - text: "Learn To Write Fiction: Creating My Own Online Course"
-        date: February 1, 2018
-        url: http://info.p2pu.org/2018/01/31/fictioncourse/
-      - text: Open learning and financial sustainability
-        date: January 30, 2018
-        url: http://info.p2pu.org/2018/01/30/p2pu-business-models/
-      - text: Empowering Volunteers in Kenya
-        date: September 28, 2017
-        url: http://info.p2pu.org/2017/09/28/empowering-volunteers/
+
   - text: About P2PU
     url: /en/about/
     submenu:
