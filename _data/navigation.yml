@@ -20,7 +20,7 @@ full_column:
   - text: Stories
     url: http://info.p2pu.org/
     submenu:
-    - text: Learning about learning circles
+    - text: Online learning at the library
         date: July 10, 2018
         url: http://info.p2pu.org/2018/07/24/online-learning-at-the-library/
     - text: What happened in Kansas City? P2PU Gathering Recap!
