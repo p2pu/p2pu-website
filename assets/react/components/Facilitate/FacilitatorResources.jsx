@@ -44,23 +44,14 @@ export default class FacilitatorResources extends Component {
   render() {
     return (
       <div>
-        <header>
-          <div className="subtitle">
-            <div className="underline">
-              <div className="text">
-                <h3>Resources for Facilitators</h3>
-              </div>
-            </div>
-          </div>
-        </header>
         {DISCOURSE_CATEGORIES.map((category, index) => {
           const topics = this.state.topics[category.slug];
           if (topics && !!topics.length) {
             return (
               <ResourceCategory
+                key={category.slug}
                 topics={topics}
                 category={category}
-                key={category.slug}
                 step={index + 1}
               />
             );

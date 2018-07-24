@@ -2,33 +2,36 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import ResourceCard from './ResourceCard'
 import { DISCOURSE_API_URL } from '../../constants'
+import IntroText from './IntroText'
 
-const ResourceCategory = props => {
-  const { category, topics, step } = props;
+const ResourceCategory = ({ category, topics, step }) => {
   const categoryUrl = `${DISCOURSE_API_URL}/c/learning-circles/${category.slug}`
   return (
-    <div>
-      <div className="row">
-        <div className="col-xs-12">
-          <div className="category-title">
-            <div className="step-number">
-              <div className="number">{step}</div>
-            </div>
-            <div className="step-title">
-              <div className="title large">{category.title}</div>
-              <div className="link"><a href={categoryUrl}>See more</a></div>
+    <div className="resource-category">
+      <div className="content">
+        <div className="row">
+          <div className="col-xs-12">
+            <div className="category-title">
+              <div className="step-number">
+                <h2>{`Step ${step}`}</h2>
+              </div>
+              <div className="step-title">
+                {category.title}
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="row">
-        <div className="resources">
-          {
-            topics.map(topic => (
-              <ResourceCard topic={topic} key={topic.id} />
-            ))
-          }
+        <IntroText section={category.slug}/>
+
+        <div className="row">
+          <div className="resources">
+            {
+              topics.map(topic => (
+                <ResourceCard topic={topic} key={topic.id} />
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

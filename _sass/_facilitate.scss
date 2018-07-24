@@ -1,14 +1,25 @@
 main {
   section {
-      padding: 0 $padding-md;
-      margin-top: $padding-md;
-      margin-bottom: $padding-md;
+    padding: 0 $padding-md;
   }
 }
 
 section#facilitator-landing {
-  padding-top: $padding-md;
-  padding-bottom: $padding-md;
+  padding-top: $padding-lg;
+  padding-bottom: $padding-lg;
+  border-bottom: 4px solid $p2pu-yellow;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 50%;
+    transform: translateX(24px) translateY(62px);
+    border-left: 24px solid transparent;
+    border-right: 24px solid transparent;
+    border-top: 18px solid #FFBC1A;
+  }
 
   .welcome-text {
     margin: $padding-md 0;
@@ -182,44 +193,40 @@ section#get-started {
 }
 
 section#facilitator-resources {
-  .category-title {
+  background: $gray-lighter;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 0;
+
+  .resource-category {
+    background: $white;
+    padding: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height: 80vh;
+    box-shadow: -2px 2px 6px 1px rgba(0,0,0,0.1);
     display: flex;
-    border-bottom: 1px solid $gray-darker;
+    align-items: center;
+  }
 
-    .step-number {
-      margin-right: 10px;
-      display: flex;
-      align-items: center;
+  .resource-category-intro {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 
-      .number {
-        background: #515564;
-        height: 28px;
-        width: 28px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        border-radius: 50%;
-      }
+  .category-title {
+    text-align: center;
+
+    .step-number h2 {
+      font-size: 60px;
+      font-family: $font-family-sans-serif-bold;
     }
 
     .step-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-grow: 1;
-      padding-top: 10px;
-      padding-bottom: 10px;
-
-      .title {
-        font-family: $font-family-sans-serif-bold;
-      }
-
-      .link {
-        a {
-          color: $gray-darker;
-        }
-      }
+      font-family: $font-family-sans-serif-bold;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: $p2pu-yellow
     }
   }
 
@@ -323,6 +330,7 @@ section#discourse-community {
 
 section#lets-do-it {
   padding: 0;
+  margin: 0;
 
   .callout {
     @include flex-column-centered;
@@ -350,6 +358,11 @@ section#lets-do-it {
       }
     }
   }
+}
+
+section#discourse-community {
+  margin-top: $padding-md;
+  margin-bottom: $padding-md;
 }
 
 .row {
