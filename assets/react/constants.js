@@ -66,7 +66,7 @@ export const DISCOURSE_CATEGORIES = [
   { title: 'Choosing a Course', slug: 'courses' },
   { title: 'Promotion and Outreach', slug: 'promotion' },
   { title: 'Facilitation Tips', slug: 'facilitation-tips' },
-  { title: 'Activities', slug: 'activities' },
+  { title: 'Group Activities', slug: 'activities' },
   { title: 'Wrapping Up', slug: 'wrapping-up' }
 ]
 

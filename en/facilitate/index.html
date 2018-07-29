@@ -4,11 +4,12 @@ layout: facilitate
 extra_js:
   - js/facilitate.js
   - js/accordion.js
+  - js/vendor/smooth-scroll.min.js
 bundles:
   - facilitator-resources
 ---
 
-<main>
+<main data-spy="scroll" data-target="#resource-categories-menu">
   <section id="facilitator-landing">
     <div class="row">
       <div class="col-xs-12 col-md-6">
@@ -19,7 +20,7 @@ bundles:
           <p>With a little practice and training, anybody can facilitate a learning circle. Whether you want to run a single learning circle in your home or organize dozens across a library system, you've come to the right place.</p>
           <p>We've put together a collection of resources for you, created by experienced facilitators and the team at P2PU. If you're new to learning circles, we suggest you start by watching our introductory video.</p>
         </div>
-        <button class="btn p2pu-btn blue" data-toggle="modal" data-target="#video-modal">
+        <button class="btn p2pu-btn blue hidden-on-mobile" data-toggle="modal" data-target="#video-modal">
           Watch the video
         </button>
       </div>
@@ -41,7 +42,7 @@ bundles:
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-body">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/s8w9IKiuyys?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/s8w9IKiuyys?rel=0&amp;showinfo=0&version=3&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen id="youtube-player"></iframe>
             </div>
           </div>
         </div>

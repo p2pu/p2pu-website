@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
 import ResourceCard from './ResourceCard'
 import { DISCOURSE_API_URL } from '../../constants'
 import IntroText from './IntroText'
@@ -7,7 +6,7 @@ import IntroText from './IntroText'
 const ResourceCategory = ({ category, topics, step }) => {
   const categoryUrl = `${DISCOURSE_API_URL}/c/learning-circles/${category.slug}`
   return (
-    <div className="resource-category">
+    <div className="resource-category" id={category.slug}>
       <div className="content">
         <div className="row">
           <div className="col-xs-12">

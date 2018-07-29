@@ -1,4 +1,6 @@
 main {
+  position: relative;
+
   section {
     padding: 0 $padding-md;
   }
@@ -37,6 +39,7 @@ section#facilitator-landing {
       position: relative;
       height: 360px;
       overflow: hidden;
+      margin-top: 10px;
 
       img, iframe {
         position: absolute;
@@ -49,6 +52,7 @@ section#facilitator-landing {
       img {
         height: 100%;
         width: 100%;
+        object-fit: cover;
       }
     }
 
@@ -198,12 +202,38 @@ section#facilitator-resources {
   padding-bottom: 40px;
   margin-bottom: 0;
 
+  #resource-categories-menu {
+    margin-top: 60px;
+
+    .nav {
+      li {
+        a {
+          color: $gray-darker;
+          text-align: left;
+        }
+
+        &.active {
+          a {
+            color: $p2pu-blue;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+  }
+
+  .affix {
+    top: 60px;
+    max-width: 200px;
+  }
+
   .resource-category {
     background: $white;
     padding: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
-    min-height: 80vh;
+    min-height: 70vh;
     box-shadow: -2px 2px 6px 1px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
@@ -211,7 +241,7 @@ section#facilitator-resources {
 
   .resource-category-intro {
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .category-title {
@@ -350,14 +380,6 @@ section#lets-do-it {
       font-size: 3.6em;
     }
   }
-
-  @media (max-width: 768px) {
-    .callout {
-      .p2pu-btn {
-        font-size: 1em;
-      }
-    }
-  }
 }
 
 section#discourse-community {
@@ -370,3 +392,24 @@ section#discourse-community {
   margin-left: 0 !important;
 }
 
+@media (max-width: 768px) {
+  section#facilitator-landing, section#facilitator-resources, section#discourse-community {
+    padding: 10px;
+  }
+
+  section#facilitator-landing {
+    &:after {
+      transform: translateX(24px) translateY(12px);
+    }
+
+    .welcome-text {
+      margin: 10px 0;
+    }
+  }
+
+  section#facilitator-resources {
+    .resource-category {
+      padding: 10px;
+    }
+  }
+}
