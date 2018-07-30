@@ -31,6 +31,12 @@ const ResourceCategory = ({ category, topics, step }) => {
               ))
             }
           </div>
+          <div className="see-more col-xs-12 minicaps">
+            <a href={categoryUrl}>
+              More resources
+              <i className="material-icons">arrow_forward</i>
+            </a>
+          </div>
         </div>
       </div>
     </div>

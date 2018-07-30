@@ -25,12 +25,11 @@ const ResourceCard = props => {
   const imgUrl = getImageUrl();
 
   return (
-      <div className="resource-card col-md-4 col-sm-12 col-xs-12">
+      <div className="resource-card col-md-4 col-sm-12 col-xs-12" onClick={() => window.location.href = url}>
         <div className="image">
           { imgUrl && <img src={imgUrl} /> }
           <div className="overlay">
             {resourceType && <div className="topic-type minicaps">{resourceType}</div>}
-            <button className="bookmark-btn">+</button>
           </div>
         </div>
         <div className="title"><a href={url}>{topic.title}</a></div>

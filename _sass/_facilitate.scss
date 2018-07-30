@@ -27,10 +27,6 @@ section#facilitator-landing {
     margin: $padding-md 0;
   }
 
-  .welcome-video {
-    height: 430px;
-  }
-
   .video {
     position: relative;
 
@@ -92,106 +88,8 @@ section#facilitator-landing {
   }
 
   @media (max-width: 768px) {
-    .welcome-video {
-      height: 315px;
-    }
-  }
-}
-
-section#get-started {
-  padding-top: 0;
-
-  @keyframes pulse-grow {
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  .grow-on-hover {
-    transform: perspective(1px) translateZ(0);
-  }
-
-  .grow-on-hover:hover, .grow-on-hover:focus, .grow-on-hover:active {
-
-    h1 {
-      @include grow-on-hover
-    }
-  }
-
-  .resources {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .resource {
-      text-align: center;
-      margin-bottom: $padding-md;
-
-      p {
-        padding: $padding-sm;
-      }
-    }
-
-  }
-
-  .resource {
-    display: flex;
-
-    h1 {
-      .material-icons {
-        font-size: 120px;
-      }
-    }
-
-    &:nth-of-type(4n+1) {
-      h1 {
-        .material-icons {
-          color: $p2pu-blue;
-        }
-      }
-    }
-
-    &:nth-of-type(4n+2) {
-      h1 {
-        .material-icons {
-          color: $p2pu-yellow;
-        }
-      }
-    }
-
-    &:nth-of-type(4n+3) {
-      h1 {
-        .material-icons {
-          color: $p2pu-orange;
-        }
-      }
-    }
-
-    &:nth-of-type(4n+4) {
-      h1 {
-        .material-icons {
-          color: $p2pu-green;
-        }
-      }
-    }
-
-    > a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-
-      p {
-        flex-grow: 1;
-      }
+    .modal-dialog {
+      width: unset;
     }
   }
 }
@@ -247,11 +145,6 @@ section#facilitator-resources {
 
   }
 
-  .affix {
-    top: 60px;
-    max-width: 200px;
-  }
-
   .resource-category {
     background: $white;
     padding: 40px;
@@ -291,6 +184,12 @@ section#facilitator-resources {
     .resource-card {
       margin-top: 20px;
       margin-bottom: 20px;
+      cursor: pointer;
+
+      &:hover {
+        @include grow-on-hover;
+      }
+
       .image {
         background-color: $p2pu-light-blue;
         min-height: 200px;
@@ -342,9 +241,18 @@ section#facilitator-resources {
       }
     }
   }
+
+  .see-more, .see-more > a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 section#discourse-community {
+  margin-top: $padding-md;
+  margin-bottom: $padding-md;
+
   .topics {
     margin-top: 3rem;
     overflow: scroll;
@@ -404,11 +312,6 @@ section#lets-do-it {
       font-size: 3.6em;
     }
   }
-}
-
-section#discourse-community {
-  margin-top: $padding-md;
-  margin-bottom: $padding-md;
 }
 
 .row {
