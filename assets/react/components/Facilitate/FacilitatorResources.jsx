@@ -47,8 +47,8 @@ export default class FacilitatorResources extends Component {
   render() {
     return (
       <div className="row">
-        <div className="col-md-2">
-          <Affix container={document.getElementById('facilitator-resources')}>
+        <div className="col-md-2 hidden-on-mobile">
+          <Affix container={document.getElementById('facilitator-resources')} offsetTop={64}>
             <ResourceCategoriesMenu />
           </Affix>
         </div>

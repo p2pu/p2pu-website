@@ -17,6 +17,7 @@ const ResourceCategoriesMenu = () => {
         { DISCOURSE_CATEGORIES.map(category => {
           return(
             <li key={category.slug}>
+              <span className="bullet" />
               <a href={`#${category.slug}`} data-scroll className="minicaps">{category.title}</a>
             </li>
           )

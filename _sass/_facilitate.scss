@@ -207,15 +207,39 @@ section#facilitator-resources {
 
     .nav {
       li {
+        display: flex;
+        align-items: center;
+
         a {
           color: $gray-darker;
           text-align: left;
+          transition: all 0.5s ease-in-out;
+
+          &:hover, &:focus {
+            background: transparent;
+            text-decoration: underline;
+          }
+        }
+
+        span.bullet {
+          height: 5px;
+          width: 0px;
+          background: $p2pu-yellow;
+          border-radius: 5px;
+          transition: all 0.5s ease-in-out;
+          display: block;
         }
 
         &.active {
+          span.bullet {
+            width: 10px;
+            transform: translateX(15px);
+          }
+
           a {
-            color: $p2pu-blue;
-            font-weight: bold;
+            transform: translateX(15px);
+            font-weight: 900;
+            color: #000;
           }
         }
       }

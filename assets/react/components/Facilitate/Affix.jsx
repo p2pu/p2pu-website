@@ -80,52 +80,62 @@ class Affix extends Component {
         const { top, left } = container.getBoundingClientRect()
 
         this.setState({
-            top: top + this.state.marginTop,
-            left: left + this.state.marginLeft,
+            top: top,
+            left: left,
             containerHeight: container.offsetHeight,
             containerWidth: container.offsetWidth,
         })
 
-        if (this.state.top <= this.props.offsetTop) {
+        if (this.state.top < this.props.offsetTop) {
             if ( this.state.affixed == false) {
                 this.props.onChange({ affixed: true, event: evt})
             }
             this.setState({ affixed: true })
         }
 
-        if (this.state.top > this.props.offsetTop) {
+        if (this.state.top >= this.props.offsetTop) {
             if ( this.state.affixed == true) {
                 this.props.onChange({ affixed: false, event: evt})
             }
             this.setState({ affixed: false })
         }
 
+        if ((this.state.containerHeight + this.state.top) < (this.state.height + this.state.marginTop + this.props.offsetTop + this.state.marginTop)) {
+          this.setState({ affixedBottom: true })
+        } else {
+          this.setState({ affixedBottom: false })
+        }
+
         this.props.onTargetChange(this.state)
     }
 
     calculate() {
-        let h = (this.state.top - this.state.marginTop + this.state.containerHeight) - this.state.height;
         let fixStyle = {};
-        if (this.state.top < this.props.offsetTop) {
-            fixStyle = {
-                position: "fixed",
-                top: h < 0 ? h : Math.min(h, this.props.offsetTop),
-                left: this.props.horizontal ? this.state.initLeft : this.state.left,
-                height: this.state.height,
-                width: this.state.width,
-                zIndex: this.props.zIndex,
-            }
+        if (this.state.affixed) {
+          fixStyle = {
+              position: "fixed",
+              top: this.state.marginTop,
+              left: this.props.horizontal ? this.state.initLeft : this.state.left + this.state.marginLeft,
+              height: this.state.height,
+              width: this.state.width,
+              zIndex: this.props.zIndex,
+          }
         }
-        return {fixStyle}
+
+        if (this.state.affixedBottom) {
+          fixStyle.top = (this.state.containerHeight + this.state.top) - (this.state.height + this.state.marginTop + this.props.offsetTop);
+        }
+
+        return fixStyle
     }
 
     render() {
-        const { fixStyle } = this.calculate()
-        return (
-          <div style={fixStyle}>
-              {this.props.children}
-          </div>
-        )
+      const fixStyle = this.calculate()
+      return (
+        <div style={fixStyle}>
+            {this.props.children}
+        </div>
+      )
     }
 }
 
