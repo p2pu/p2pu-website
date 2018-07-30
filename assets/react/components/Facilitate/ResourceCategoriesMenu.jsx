@@ -18,7 +18,7 @@ const ResourceCategoriesMenu = () => {
           return(
             <li key={category.slug}>
               <span className="bullet" />
-              <a href={`#${category.slug}`} data-scroll className="minicaps">{category.title}</a>
+              <a href={`#${category.slug}`} className="minicaps">{category.title}</a>
             </li>
           )
         })}
