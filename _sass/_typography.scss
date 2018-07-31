@@ -153,6 +153,22 @@ body {
   }
 }
 
+.blue-text {
+  color: $p2pu-blue;
+}
+
+.green-text {
+  color: $p2pu-green;
+}
+
+.orange-text {
+  color: $p2pu-orange;
+}
+
+.yellow-text {
+  color: $p2pu-yellow;
+}
+
 @media (max-width: 768px) {
   body {
     .subtitle {

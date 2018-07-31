@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { DISCOURSE_API_URL } from "../constants";
+import { DISCOURSE_API_URL } from "../../constants";
 import moment from "moment";
 
 const DiscourseTopic = props => {

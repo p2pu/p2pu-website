@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
-import { DISCOURSE_API_URL, DISCOURSE_CATEGORIES } from "../constants";
+import { DISCOURSE_API_URL, DISCOURSE_CATEGORIES } from "../../constants";
 import ResourceCategory from "./ResourceCategory";
+import ResourceCategoriesMenu from "./ResourceCategoriesMenu";
+import Affix from './Affix';
+
 
 export default class FacilitatorResources extends Component {
   constructor(props) {
@@ -43,31 +46,29 @@ export default class FacilitatorResources extends Component {
 
   render() {
     return (
-      <div>
-        <header>
-          <div className="subtitle">
-            <div className="underline">
-              <div className="text">
-                <h3>Resources for Facilitators</h3>
-              </div>
-            </div>
-          </div>
-        </header>
-        {DISCOURSE_CATEGORIES.map((category, index) => {
-          const topics = this.state.topics[category.slug];
-          if (topics && !!topics.length) {
-            return (
-              <ResourceCategory
-                topics={topics}
-                category={category}
-                key={category.slug}
-                step={index + 1}
-              />
-            );
-          }
+      <div className="row">
+        <div className="col-md-2 hidden-on-mobile">
+          <Affix container={document.getElementById('facilitator-resources')} offsetTop={64}>
+            <ResourceCategoriesMenu />
+          </Affix>
+        </div>
+        <div className="col-md-10">
+          {DISCOURSE_CATEGORIES.map((category, index) => {
+            const topics = this.state.topics[category.slug];
+            if (topics && !!topics.length) {
+              return (
+                <ResourceCategory
+                  key={category.slug}
+                  topics={topics}
+                  category={category}
+                  step={index + 1}
+                />
+              );
+            }
 
-          return <div key={category.slug} />;
-        })}
+            return <div key={category.slug} />;
+          })}
+        </div>
       </div>
     );
   }
