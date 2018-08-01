@@ -5,7 +5,7 @@ const GettingStarted = () => (
 )
 
 const Courses = () => (
-  <p>If you’ll be working with learners who aren’t fully employed, you may want to choose a course that supports finding new work or skilling up (such as resume writing, public speaking, or academic writing). Be sure to look at the prerequisites for the courses and make sure the content isn’t too basic or too advanced and advertise appropriately.</p>
+  <p>If you’ll be working with learners who aren’t fully employed, you may want to choose a course that supports finding new work or skilling up (such as resume writing, public speaking, or academic writing). Be sure to look at the prerequisites for the courses and make sure the content isn’t too basic or too advanced and advertise appropriately. Visit the <a href="/en/courses/" className="bold">Courses Page</a> to browse our full list of courses.</p>
 )
 
 const Promotion = () => (

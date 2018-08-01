@@ -62,14 +62,14 @@ export const API_ENDPOINTS = {
 export const DISCOURSE_API_URL = 'https://community.p2pu.org'
 
 export const DISCOURSE_CATEGORIES = [
-  { title: 'Getting Started', slug: 'getting-started' },
-  { title: 'Choosing a Course', slug: 'courses' },
-  { title: 'Promotion and Outreach', slug: 'promotion' },
-  { title: 'Facilitation Tips', slug: 'facilitation-tips' },
-  { title: 'Group Activities', slug: 'activities' },
-  { title: 'Wrapping Up', slug: 'wrapping-up' }
+  { title: 'Getting Started', slug: 'getting-started', defaultImagePath: '/assets/images/facilitate/profile_1_1.jpg' },
+  { title: 'Choosing a Course', slug: 'courses', defaultImagePath: '/assets/images/facilitate/profile_5_1.jpg' },
+  { title: 'Promotion and Outreach', slug: 'promotion', defaultImagePath: '/assets/images/facilitate/profile_4_2.jpg' },
+  { title: 'Facilitation Tips', slug: 'facilitation-tips', defaultImagePath: '/assets/images/facilitate/profile_5_2.jpg' },
+  { title: 'Group Activities', slug: 'activities', defaultImagePath: '/assets/images/facilitate/profile_3_1.jpg' },
+  { title: 'Wrapping Up', slug: 'wrapping-up', defaultImagePath: '/assets/images/finance_for_everyone.jpg' }
 ]
 
 export const FACILITATOR_RESOURCE_TYPES = [
-  'video', 'activity', 'blog', 'template'
+  'video', 'activity', 'blog', 'template', 'thread'
 ]

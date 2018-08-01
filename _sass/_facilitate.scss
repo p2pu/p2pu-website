@@ -100,6 +100,23 @@ section#facilitator-resources {
   padding-bottom: 40px;
   margin-bottom: 0;
 
+  .resources-container {
+    display: flex;
+
+    .handbook-container {
+      border: 1px solid $gray-dark;
+      padding: $padding-sm;
+    }
+
+    .menu-container {
+      order: 1;
+    }
+
+    .categories-container {
+      order: 2;
+    }
+  }
+
   #resource-categories-menu {
     margin-top: 60px;
 
@@ -157,23 +174,23 @@ section#facilitator-resources {
   }
 
   .resource-category-intro {
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 10px;
   }
 
   .category-title {
     text-align: center;
 
-    .step-number h2 {
-      font-size: 60px;
-      font-family: $font-family-sans-serif-bold;
-    }
-
-    .step-title {
+    .step-number {
       font-family: $font-family-sans-serif-bold;
       font-size: 24px;
       text-transform: uppercase;
       color: $p2pu-yellow
+    }
+
+    .step-title h2 {
+      font-family: $font-family-sans-serif-bold;
+      font-size: 44px;
+      margin-top: 10px;
     }
   }
 
@@ -182,8 +199,8 @@ section#facilitator-resources {
     flex-wrap: wrap;
 
     .resource-card {
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       cursor: pointer;
 
       &:hover {
@@ -192,12 +209,12 @@ section#facilitator-resources {
 
       .image {
         background-color: $p2pu-light-blue;
-        min-height: 200px;
+        min-height: 150px;
         width: 100%;
 
         img {
           width: 100%;
-          height: 200px;
+          height: 150px;
           object-fit: cover;
         }
 
@@ -337,6 +354,17 @@ section#lets-do-it {
   section#facilitator-resources {
     .resource-category {
       padding: 10px;
+
+      .resources {
+        .resource-card {
+          .image {
+            min-height: 250px;
+            img {
+              height: 250px;
+            }
+          }
+        }
+      }
     }
   }
 }
