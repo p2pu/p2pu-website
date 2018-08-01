@@ -12,10 +12,10 @@ const ResourceCategory = ({ category, topics, step }) => {
           <div className="col-xs-12">
             <div className="category-title">
               <div className="step-number">
-                <h2>{`Step ${step}`}</h2>
+                {`Step ${step}`}
               </div>
               <div className="step-title">
-                {category.title}
+                <h2>{category.title}</h2>
               </div>
             </div>
           </div>
@@ -27,7 +27,7 @@ const ResourceCategory = ({ category, topics, step }) => {
           <div className="resources">
             {
               topics.map(topic => (
-                <ResourceCard topic={topic} key={topic.id} />
+                <ResourceCard topic={topic} key={topic.id} defaultImagePath={category.defaultImagePath} />
               ))
             }
           </div>

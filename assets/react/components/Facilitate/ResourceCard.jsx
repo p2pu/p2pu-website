@@ -5,7 +5,7 @@ import { find } from 'lodash';
 
 const ResourceCard = props => {
 
-  const { topic } = props;
+  const { topic, defaultImagePath } = props;
   const url = `${DISCOURSE_API_URL}/t/${topic.slug}`;
   const resourceType = find(topic.tags, (tag) => FACILITATOR_RESOURCE_TYPES.includes(tag));
 
@@ -19,7 +19,7 @@ const ResourceCard = props => {
       return `https://img.youtube.com/vi/${videoId}/hq2.jpg`;
     };
 
-    return null
+    return defaultImagePath;
   };
 
   const imgUrl = getImageUrl();

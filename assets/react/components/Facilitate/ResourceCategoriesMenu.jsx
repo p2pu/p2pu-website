@@ -12,7 +12,7 @@ const ResourceCategoriesMenu = () => {
         className="nav nav-stacked"
         items={menuItems}
         currentClassName="active"
-        offset={-40}
+        offset={-64} // top nav height
       >
         { DISCOURSE_CATEGORIES.map(category => {
           return(
