@@ -82,8 +82,13 @@ section#facilitator-landing {
   .modal-dialog {
     width: 80vw;
 
+    .modal-header {
+      display: flex;
+      justify-content: flex-end;
+    }
+
     .modal-body {
-      height: 90vh;
+      height: 80vh;
     }
   }
 
@@ -174,7 +179,7 @@ section#facilitator-resources {
   }
 
   .resource-category-intro {
-    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .category-title {

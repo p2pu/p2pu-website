@@ -12,12 +12,11 @@ export default class FacilitatorResources extends Component {
     super(props);
     this.state = {
       topics: {
-        "getting-started": [],
-        "courses": [],
-        "promotion": [],
-        "facilitation-tips": [],
-        "activities": [],
-        "wrapping-up": [],
+        "orientation": [],
+        "creating-a-learning-circle": [],
+        "promotion-and-outreach": [],
+        "facilitation": [],
+        "reflection": [],
       }
     };
     this.populateResources = () => this._populateResources();
@@ -46,7 +45,7 @@ export default class FacilitatorResources extends Component {
 
   render() {
     return (
-      <div className="row resources-container">
+      <div className="row resources-container" id="resources-container">
         <div className="col-md-10 categories-container">
           {DISCOURSE_CATEGORIES.map((category, index) => {
             const topics = this.state.topics[category.slug];
@@ -76,7 +75,7 @@ export default class FacilitatorResources extends Component {
           </div>
         </div>
         <div className="col-md-2 hidden-on-mobile menu-container">
-          <Affix container={document.getElementById('facilitator-resources')} offsetTop={64}>
+          <Affix container={document.getElementById('resources-steps')} offsetTop={64}>
             <ResourceCategoriesMenu />
           </Affix>
         </div>
