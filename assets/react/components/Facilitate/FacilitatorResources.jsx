@@ -16,7 +16,8 @@ export default class FacilitatorResources extends Component {
         "creating-a-learning-circle": [],
         "promotion-and-outreach": [],
         "facilitation": [],
-        "reflection": [],
+        "reflection-and-wrapping-up": [],
+        "testimony": [],
       }
     };
     this.populateResources = () => this._populateResources();

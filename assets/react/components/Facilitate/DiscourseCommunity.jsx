@@ -25,7 +25,7 @@ export default class FacilitatorResources extends Component {
   }
 
   _populateResources() {
-    const apiEndpoint = `${DISCOURSE_API_URL}/latest.json`;
+    const apiEndpoint = `${DISCOURSE_API_URL}/tags/faq.json`;
 
     axios.get(apiEndpoint).then(res => {
       this.setState({ topics: res.data.topic_list.topics, users: res.data.users });
@@ -48,7 +48,7 @@ export default class FacilitatorResources extends Component {
           <div className="subtitle">
             <div className="underline">
               <div className="text">
-                <h3>Recent Discussions</h3>
+                <h3>Frequently Asked Questions</h3>
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default class FacilitatorResources extends Component {
           </table>
         </div>
         <div className="col-xs-12">
-          <button className="btn p2pu-btn blue">Go to the forum</button>
+          <button className="btn p2pu-btn blue">Go to the community</button>
         </div>
       </div>
     );
