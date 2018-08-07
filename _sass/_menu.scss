@@ -1,3 +1,9 @@
+body {
+  &.freeze {
+    overflow: hidden;
+  }
+}
+
 nav {
   z-index: $zindex-navbar-fixed;
   font-family: $headings-font-family;
@@ -34,40 +40,6 @@ nav {
   &.collapsed {
     display: none !important;
   }
-
-  .nav-items {
-    display: flex;
-    align-items: center;
-
-    > .nav-item {
-      margin: 0 15px;
-      cursor: pointer;
-
-      > a {
-        color: $gray-darker;
-      }
-
-      i {
-        margin-right: 6px;
-      }
-
-      li {
-        a {
-          color: $gray-darker;
-
-          &:hover {
-            color: $p2pu-yellow;
-            background-color: transparent;
-            text-decoration: underline;
-          }
-        }
-      }
-
-      .dropdown-menu {
-        padding: 10px;
-      }
-    }
-  }
 }
 
 #full-page-menu {
@@ -75,8 +47,6 @@ nav {
   width: 100vw;
   position: fixed;
   background: rgba(255,255,255,0.97);
-  display: flex;
-  padding-bottom: 60px;
   top: 0;
   left: 0;
   transition: left 0.5s ease-in-out;
@@ -84,9 +54,71 @@ nav {
   box-shadow: -2px 2px 10px 1px rgba(0,0,0,0.2);
 
   .content-container {
-    display: flex;
     width: inherit;
     height: inherit;
+    display: flex;
+
+    .half-page {
+      flex-basis: 50%;
+      flex-grow: 1;
+      flex-shrink: 0;
+      padding: 5%;
+      padding-top: 40px;
+      overflow-y: scroll;
+
+      header {
+        .minicaps {
+          text-align: left;
+        }
+      }
+
+      &.socials {
+        background-color: $p2pu-blue;
+        color: $white;
+
+        .menu-section {
+          &.top-level {
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+          }
+        }
+
+        .menu-item {
+          span.text {
+            color: $white;
+          }
+
+          i.fa {
+            height: 18px;
+            width: 0px;
+            color: $white;
+            transition: all 0.2s ease-in-out;
+            display: block;
+            overflow: hidden;
+          }
+
+          span.text {
+            color: $white;
+            transition: transform 0.2s ease-in-out;
+          }
+
+          &:hover {
+            i.fa {
+              width: 18px;
+            }
+
+            span.text {
+              color: $white;
+              transform: translateX(18px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav-container {
+/*    display: flex;*/
+    align-items: center;
   }
 
   &.collapsed {
@@ -109,6 +141,7 @@ nav {
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border: none;
+    z-index: 1;
 
     &:hover {
       transform: rotate(90deg);
@@ -120,64 +153,55 @@ nav {
     }
   }
 
-  h2 {
-    font-size: $font-size-base;
-    margin-bottom: 60px;
-
-    a {
-      color: $p2pu-blue;
-
-      i {
-        margin-left: 6px;
-        font-size: 0.8em;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-
+  a {
     &:hover {
-      i {
-        transform: translateX(10px);
-      }
-    }
-  }
-
-  p {
-    font-size: $font-size-base;
-
-    a:hover, a:focus {
-      color: $p2pu-yellow;
+      text-decoration: none;
     }
   }
 
   .menu-section {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    &.full-column {
-      height: 100%;
-      flex: 1 0 25%;
-      border-right: 1px solid $p2pu-light-blue;
-
-      .nav-container {
-        height: 40vh;
-        margin-left: 20px;
-        margin-right: 20px;
-      }
+    &.top-level {
+      border-bottom: 1px solid $p2pu-light-blue;
     }
 
-    &.parent-column {
-      flex-direction: column;
-      flex: 1 0 20%;
-      padding-left: 40px;
-      padding-right: 40px;
+    .menu-item {
+      font-size: $font-size-base;
+      transition: transform 0.2s ease-in-out;
+      padding: 8px;
+      display: flex;
+      align-items: center;
 
-      .half-column {
-        flex: 1 1 50%;
-        width: 100%;
+      span.bullet {
+        height: 5px;
+        width: 0px;
+        background: $p2pu-yellow;
+        border-radius: 5px;
+        transition: all 0.2s ease-in-out;
+        display: block;
+      }
 
-        &:nth-of-type(1) {
-          border-bottom: 1px solid $p2pu-light-blue;
+      span.text {
+        color: $p2pu-blue;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &:hover {
+        span.bullet {
+          width: 10px;
+        }
+
+        span.text {
+          transform: translateX(15px);
+        }
+      }
+
+      &.submenu {
+        font-size: $font-size-small;
+        padding: 4px;
+        padding-left: 40px;
+
+        span.text {
+          color: $gray-darker;
         }
       }
     }
@@ -200,31 +224,41 @@ nav {
 
     .content-container {
       position: static;
-      display: block;
-    }
+      display: flex;
+      flex-direction: column;
+      height: auto;
 
-    h2 {
-      margin-bottom: 20px;
+      .half-page {
+        order: 1;
+
+        &.socials {
+          order: 2;
+
+          .menu-item {
+            i.fa {
+              width: 18px;
+            }
+
+            span.text {
+              transform: translateX(18px);
+            }
+          }
+        }
+      }
     }
 
     .menu-section {
-      text-align: center;
       border-bottom: 1px solid $p2pu-light-blue;
 
       &:last-of-type {
         border-bottom: none;
       }
 
-      &.full-column, &.parent-column {
+      &.top-level {
         flex: 1 1 auto;
         height: auto;
         padding-left: 0;
         padding-right: 0;
-
-        .half-column {
-          flex: 1 1 auto;
-          border-bottom: none;
-        }
 
         .nav-container {
           height: auto;

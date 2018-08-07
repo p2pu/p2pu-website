@@ -8,22 +8,14 @@
           </div>
         </div>
       </header>
-      <div class="content">
-        <div class="twitter">
-          <a href="https://twitter.com/p2pu">
-            <span><i class="fa fa-twitter" aria-hidden="true"></i>@P2PU</span>
-          </a>
-        </div>
-        <div class="facebook">
-          <a href="https://www.facebook.com/P2PUniversity">
-            <span><i class="fa fa-facebook" aria-hidden="true"></i>P2PUniversity</span>
-          </a>
-        </div>
-        <div class="email">
-          <a href="mailto:thepeople@p2pu.org">
-            <span><i class="fa fa-envelope" aria-hidden="true"></i>thepeople@p2pu.org</span>
-          </a>
-        </div>
+      <div class="content row">
+        {% for link in site.data.navigation.socials %}
+          <div class="social-link col-xs-6 centered">
+            <a href="{{ link.url }}">
+              <span><i class="{{ link.icon_class }}" aria-hidden="true"></i>{{ link.text }}</span>
+            </a>
+          </div>
+        {% endfor %}
       </div>
     </div>
 
