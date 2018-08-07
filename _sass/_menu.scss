@@ -1,6 +1,7 @@
 nav {
   z-index: $zindex-navbar-fixed;
   font-family: $headings-font-family;
+  font-size: $font-size-base;
 
   button.menu {
     cursor: pointer;

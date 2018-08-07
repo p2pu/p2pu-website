@@ -4,42 +4,80 @@ layout: facilitate
 extra_js:
   - js/facilitate.js
   - js/accordion.js
+  - js/vendor/smooth-scroll.min.js
 bundles:
   - facilitator-resources
 ---
 
-<main>
-  <header class="page-title">
-    <h1>{{ page.title }}</h1>
-  </header>
+<main data-spy="scroll" data-target="#resource-categories-menu">
   <section id="facilitator-landing">
-    <div class="row centered">
-      <div class="welcome-video col-xs-12 col-sm-8">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/s8w9IKiuyys" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <div>
+          <h1 class="blue-text">Welcome</h1>
+        </div>
+        <div class="welcome-text">
+          <p>With a little practice and training, anybody can facilitate a learning circle. Whether you want to run a single learning circle in your home or organize dozens across a library system, you've come to the right place.</p>
+          <p>We've put together a collection of resources for you, created by experienced facilitators and the team at P2PU. If you're new to learning circles, we suggest you start by watching our introductory video.</p>
+        </div>
+        <button class="btn p2pu-btn blue hidden-on-mobile" data-toggle="modal" data-target="#video-modal">
+          Watch the video
+        </button>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="video">
+          <div class="media">
+            <img src="https://media.giphy.com/media/vcnOjlxG7jxrsBoxyT/giphy.gif">
+          </div>
+          <div class="overlay">
+            <button id="play-video" data-toggle="modal" data-target="#video-modal">
+              <i class="material-icons">
+                play_circle_outline
+              </i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" tabindex="-1" role="dialog" id="video-modal">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <div id="youtube-player"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <header>
-      <div class="subtitle">
-        <div class="underline">
-          <div class="text"><h3>Welcome</h3></div>
+  <section id="facilitator-resources">
+    <div className="row">
+      <div className="col-xs-12">
+        <header>
+          <div className="subtitle">
+            <div className="underline">
+              <div className="text">
+                <h3>Facilitator Resources</h3>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div className="margin-sm">
+          <p>At our core we are a community working together. We have lots of resources, created by the P2PU team and the community. This is essential. We’ve grouped resources to give an overview of what you need to run a successful program. This site is a guided introduction into those resources.</p>
         </div>
       </div>
-    </header>
-    <p class="large centered">With a little practice and training, anybody can facilitate a learning circle. Whether you want to run a single learning circle in your home or organize dozens across a library system, you've come to the right place.</p>
-  </section>
-
-  <section id="facilitator-resources" class="row">
-
+    </div>
+    <div id="resources-steps" class="row"></div>
   </section>
 
   <section id="lets-do-it">
     <div class="callout">
       <h1>Let's do it!</h1>
       <a href="https://learningcircles.p2pu.org/en/studygroup/create/" class="undecorated">
-        <button class="btn p2pu-btn light">Start a learning circle</button>
+        <button class="btn p2pu-btn light">Create a learning circle</button>
       </a>
     </div>
   </section>

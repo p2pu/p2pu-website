@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 import { filter, find } from "lodash";
-import { DISCOURSE_API_URL } from "../constants";
+import { DISCOURSE_API_URL } from "../../constants";
 import DiscourseTopic from "./DiscourseTopic";
 
 
@@ -41,13 +41,14 @@ export default class FacilitatorResources extends Component {
   }
 
   render() {
+    const top10topics = this.state.topics.slice(0,10);
     return (
       <div>
         <header>
           <div className="subtitle">
             <div className="underline">
               <div className="text">
-                <h3>Join the Community</h3>
+                <h3>Recent Discussions</h3>
               </div>
             </div>
           </div>
@@ -65,7 +66,7 @@ export default class FacilitatorResources extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.state.topics.map(topic => {
+              {top10topics.map(topic => {
                 const posters = topic.posters.map(poster => poster.user_id);
                 const users = filter(this.state.users, user => {
                   return posters.includes(user.id);
