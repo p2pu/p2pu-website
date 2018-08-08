@@ -88,7 +88,7 @@ export default class FacilitatorResources extends Component {
           </table>
         </div>
         <div className="col-xs-12">
-          <button className="btn p2pu-btn blue">Go to the community</button>
+          <a className="btn p2pu-btn blue" href="https://community.p2pu.org/">Go to the community</a>
         </div>
       </div>
     );
