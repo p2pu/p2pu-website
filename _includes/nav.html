@@ -17,23 +17,7 @@
 <div id="full-page-menu" class="collapsed" aria-hidden="true" role="navigation">
   <button id="close-menu" role="button" aria-label="Close"><i class="fa fa-times"></i></button>
   <div class="content-container row">
-    <div class="half-page socials col-md-6 col-sm-12">
-      <div class="content">
-        {% for link in site.data.navigation.socials %}
-        <div class="menu-section top-level">
-          <div class="nav-container">
-            <a href="{{ link.url }}">
-              <div class="menu-item">
-                <i class="{{ link.icon_class }}"></i>
-                <span class="text">{{ link.text }}</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="half-page col-md-6 col-sm-12">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
       <div class="content">
         {% for link in site.data.navigation.top_level %}
           <div class="menu-section top-level">
