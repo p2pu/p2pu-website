@@ -9,7 +9,7 @@ nav {
   font-family: $headings-font-family;
   font-size: $font-size-base;
 
-  button.menu {
+  button.nav-item {
     cursor: pointer;
     background: transparent;
     border: none;
@@ -39,6 +39,62 @@ nav {
 
   &.collapsed {
     display: none !important;
+  }
+
+  .nav-items {
+    display: flex;
+    align-items: center;
+
+     > .nav-item {
+      margin: 0 15px;
+      cursor: pointer;
+
+      > a {
+        color: $gray-darker;
+      }
+
+      i {
+        margin-right: 6px;
+      }
+
+      li {
+        a {
+          color: $gray-darker;
+          display: flex;
+          align-items: center;
+
+          span.bullet {
+            height: 5px;
+            width: 0px;
+            background: $p2pu-yellow;
+            border-radius: 5px;
+            transition: all 0.2s ease-in-out;
+            display: block;
+          }
+
+          span.text {
+            transition: transform 0.2s ease-in-out;
+          }
+
+          &:hover, &:focus {
+            background-color: transparent;
+
+            span.bullet {
+              width: 10px;
+            }
+
+            span.text {
+              transform: translateX(15px);
+            }
+          }
+        }
+      }
+
+      .dropdown-menu {
+        padding: 10px;
+        min-width: 250px;
+      }
+    }
   }
 }
 
