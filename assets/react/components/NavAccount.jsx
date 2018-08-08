@@ -29,13 +29,22 @@ export default class NavAccount extends Component {
       return(
         <div className="dropdown">
           <div className="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            <i className="fa fa-user" aria-hidden="true"></i>
-            <span className="uppercase hidden-xs">{this.state.user}</span>
+            <button className="nav-item">
+              <i className="fa fa-user" aria-hidden="true"></i>
+              <span className="uppercase hidden-xs">{this.state.user}</span>
+            </button>
           </div>
           <ul className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
             {
               this.state.links.map((link, index) => {
-                return <li key={index}><a href={`${API_BASE_URL}${link.url}`}>{link.text}</a></li>
+                return (
+                  <li key={index}>
+                    <a href={`${API_BASE_URL}${link.url}`}>
+                      <span className="bullet" />
+                      <span className="text">{link.text}</span>
+                    </a>
+                  </li>
+                )
               })
             }
           </ul>
