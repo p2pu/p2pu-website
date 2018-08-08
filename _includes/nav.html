@@ -15,31 +15,47 @@
   </div>
 
 <div id="full-page-menu" class="collapsed" aria-hidden="true" role="navigation">
-  <div class="content-container">
-    <button id="close-menu" role="button" aria-label="Close"><i class="fa fa-times"></i></button>
-    {% for link in site.data.navigation.full_column %}
-      <div class="menu-section full-column">
-        <div class="nav-container">
-          <h2>
+  <button id="close-menu" role="button" aria-label="Close"><i class="fa fa-times"></i></button>
+  <div class="content-container row">
+    <div class="half-page socials col-md-6 col-sm-12">
+      <div class="content">
+        {% for link in site.data.navigation.socials %}
+        <div class="menu-section top-level">
+          <div class="nav-container">
             <a href="{{ link.url }}">
-              {{ link.text }}
-              <i class="fa fa-arrow-right"></i>
+              <div class="menu-item">
+                <i class="{{ link.icon_class }}"></i>
+                <span class="text">{{ link.text }}</span>
+              </div>
             </a>
-          </h2>
-          {% for sub_link in link.submenu %}
-            <p><a href="{{ sub_link.url }}" class="dark">{{ sub_link.text }}</a></p>
-          {% endfor %}
+          </div>
         </div>
+        {% endfor %}
       </div>
-    {% endfor %}
-    <div class="menu-section parent-column">
-    {% for link in site.data.navigation.half_column %}
-      <div class="menu-section half-column">
-        <div class="nav-container">
-          <h2><a href="{{ link.url }}" class="dark">{{ link.text }}<i class="fa fa-arrow-right"></i></a></h2>
-        </div>
+    </div>
+    <div class="half-page col-md-6 col-sm-12">
+      <div class="content">
+        {% for link in site.data.navigation.top_level %}
+          <div class="menu-section top-level">
+            <div class="nav-container">
+              <a href="{{ link.url }}">
+                <div class="menu-item">
+                  <span class="bullet"></span>
+                  <span class="text">{{ link.text }}</span>
+                </div>
+              </a>
+              {% for sub_link in link.submenu %}
+                <a href="{{ sub_link.url }}" class="dark">
+                  <div class="menu-item submenu">
+                    <span class="bullet"></span>
+                    <span class="text">{{ sub_link.text }}</span>
+                  </div>
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
       </div>
-    {% endfor %}
     </div>
   </div>
 </div>
