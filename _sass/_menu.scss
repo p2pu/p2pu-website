@@ -98,6 +98,34 @@ nav {
   }
 }
 
+#close-menu {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: $p2pu-blue;
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none;
+  z-index: 1;
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px $p2pu-light-blue;
+    outline: none;
+  }
+}
+
 #full-page-menu {
   height: 100vh;
   width: 100vw;
@@ -113,67 +141,19 @@ nav {
     width: inherit;
     height: inherit;
     display: flex;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: fixed;
+    overflow-y: scroll;
 
-    .half-page {
-      flex-basis: 50%;
-      flex-grow: 1;
-      flex-shrink: 0;
-      padding: 5%;
+    .content {
       padding-top: 40px;
-      overflow-y: scroll;
-
-      header {
-        .minicaps {
-          text-align: left;
-        }
-      }
-
-      &.socials {
-        background-color: $p2pu-blue;
-        color: $white;
-
-        .menu-section {
-          &.top-level {
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-          }
-        }
-
-        .menu-item {
-          span.text {
-            color: $white;
-          }
-
-          i.fa {
-            height: 18px;
-            width: 0px;
-            color: $white;
-            transition: all 0.2s ease-in-out;
-            display: block;
-            overflow: hidden;
-          }
-
-          span.text {
-            color: $white;
-            transition: transform 0.2s ease-in-out;
-          }
-
-          &:hover {
-            i.fa {
-              width: 18px;
-            }
-
-            span.text {
-              color: $white;
-              transform: translateX(18px);
-            }
-          }
-        }
-      }
+      padding-bottom: 20px;
     }
   }
 
   .nav-container {
-/*    display: flex;*/
     align-items: center;
   }
 
@@ -181,36 +161,8 @@ nav {
     left: 105%;
   }
 
-  #close-menu {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: $p2pu-blue;
-    color: white;
-    font-size: 28px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: none;
-    z-index: 1;
-
-    &:hover {
-      transform: rotate(90deg);
-    }
-
-    &:focus {
-      box-shadow: 0px 0px 0px 4px $p2pu-light-blue;
-      outline: none;
-    }
-  }
-
   a {
-    &:hover {
+    &:hover, &:focus {
       text-decoration: none;
     }
   }
@@ -221,17 +173,18 @@ nav {
     }
 
     .menu-item {
-      font-size: $font-size-base;
+      font-size: calc(14px + 1vh);
       transition: transform 0.2s ease-in-out;
       padding: 8px;
       display: flex;
       align-items: center;
 
       span.bullet {
-        height: 5px;
-        width: 0px;
+        height: calc(5px + 0.1vh);
+        min-height: 5px;
+        width: 0;
         background: $p2pu-yellow;
-        border-radius: 5px;
+        border-radius: 100px;
         transition: all 0.2s ease-in-out;
         display: block;
       }
@@ -243,7 +196,7 @@ nav {
 
       &:hover {
         span.bullet {
-          width: 10px;
+          width: calc(5px + 0.5vh);
         }
 
         span.text {
@@ -252,73 +205,12 @@ nav {
       }
 
       &.submenu {
-        font-size: $font-size-small;
+        font-size: calc(14px + 0.5vh);
         padding: 4px;
         padding-left: 40px;
 
         span.text {
           color: $gray-darker;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: $screen-sm-max) {
-  body {
-    &.freeze {
-      overflow: hidden;
-    }
-  }
-
-  #full-page-menu {
-    flex-direction: column;
-    width: 100vw;
-    padding-top: 60px;
-    position: fixed;
-    overflow-y: scroll;
-
-    .content-container {
-      position: static;
-      display: flex;
-      flex-direction: column;
-      height: auto;
-
-      .half-page {
-        order: 1;
-
-        &.socials {
-          order: 2;
-
-          .menu-item {
-            i.fa {
-              width: 18px;
-            }
-
-            span.text {
-              transform: translateX(18px);
-            }
-          }
-        }
-      }
-    }
-
-    .menu-section {
-      border-bottom: 1px solid $p2pu-light-blue;
-
-      &:last-of-type {
-        border-bottom: none;
-      }
-
-      &.top-level {
-        flex: 1 1 auto;
-        height: auto;
-        padding-left: 0;
-        padding-right: 0;
-
-        .nav-container {
-          height: auto;
-          width: 100%;
         }
       }
     }
