@@ -1,6 +1,9 @@
 - name: Boston Public Library
   url: https://www.bpl.org/
 
+- name: Carnegie Library of Pittsburgh
+  url: https://www.carnegielibrary.org/
+  
 - name: Charlotte Mecklenburg Public Library
   url: https://www.cmlibrary.org/
 
@@ -25,9 +28,6 @@
 - name: Free Library of Philadelphia
   url: https://www.freelibrary.org/
 
-- name: Hillsborough County Public Library Cooperative
-  url: http://www.hcplc.org/
-
 - name: Kansas City Public Library
   url: https://www.kclibrary.org/
 
@@ -49,12 +49,18 @@
 - name: Multnomah County Library
   url: https://multcolib.org/
 
+- name: Notre Dame Education Center
+  url: http://www.ndecboston.org/
+  
 - name: OERu
   url: https://oeru.org/
 
 - name: Open University
   url: https://www.open.ac.uk/
 
+- name: Partners Bridging the Digital Divide
+  url: http://pbdd.org/
+  
 - name: Pierce County Library
   url: https://www.piercecountylibrary.org/
 
@@ -70,8 +76,17 @@
 - name: San Jose Public Library
   url: https://www.sjpl.org/
 
+- name: Tampa-Hillsborough County Public Library Cooperative
+  url: http://www.hcplc.org/
+
 - name: TASCHA
   url: http://tascha.uw.edu/
+  
+- name: Topeka & Shawnee County Public Library
+  url: https://tscpl.org/
+  
+- name: Toronto Public Library
+  url: https://www.torontopubliclibrary.ca/
 
 - name: Twin Lakes Library System
   url: http://tllsga.org/

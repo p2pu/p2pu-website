@@ -1,43 +1,29 @@
-full_column:
+top_level:
   - text: Home
     url: /en/
-    submenu:
-      - text: Join a learning circle
-        url: /en/learning-circles
-      - text: Create a learning circle
-        url: https://learningcircles.p2pu.org/en/studygroup/create/
+  - text: Learning Circles
+    url: /en/learning-circles/
   - text: Facilitate
     url: /en/facilitate/
     submenu:
-      - text: Handbook
-        url: /en/handbook/
-      - text: Community
-        url: https://groups.google.com/a/p2pu.org/forum/#!forum/community
       - text: Courses
         url: /en/courses/
       - text: Dashboard
         url: https://learningcircles.p2pu.org/en/facilitator/
-  - text: Stories
+      - text: Create a learning circle
+        url: https://learningcircles.p2pu.org/en/studygroup/create/
+      - text: FAQ
+        url: https://community.p2pu.org/tags/faq/
+  - text: Community
+    url: https://community.p2pu.org/
+  - text: Blog
     url: http://info.p2pu.org/
-    submenu:
-      - text: Learning about learning circles
-        date: February 6, 2018
-        url: http://info.p2pu.org/2018/02/05/learning/
-      - text: "Learn To Write Fiction: Creating My Own Online Course"
-        date: February 1, 2018
-        url: http://info.p2pu.org/2018/01/31/fictioncourse/
-      - text: Open learning and financial sustainability
-        date: January 30, 2018
-        url: http://info.p2pu.org/2018/01/30/p2pu-business-models/
-      - text: Empowering Volunteers in Kenya
-        date: September 28, 2017
-        url: http://info.p2pu.org/2017/09/28/empowering-volunteers/
   - text: About P2PU
     url: /en/about/
     submenu:
       - text: Hire us
         url: /en/workwithus/
-      - text: Job openings
+      - text: Jobs
         url: /en/jobs/
       - text: Shop
         url: https://shop.spreadshirt.com/p2pu/
@@ -45,7 +31,25 @@ full_column:
         url: /en/donate/
       - text: Contact
         url: /en/connect/
-
-# currently there are no half columns but the code for them is still in the template
-# in case you decide to add them back someday
-
+socials:
+  - text: Medium
+    url: https://medium.com/p2pu
+    icon_class: fa fa-medium
+  - text: YouTube
+    url: https://www.youtube.com/channel/UCJH3nTAgEAGljjTB5B8PjFw
+    icon_class: fa fa-youtube
+  - text: Flickr
+    url: https://www.flickr.com/groups/p2pu/
+    icon_class: fa fa-flickr
+  - text: Instagram
+    url: https://www.instagram.com/p2puniversity/
+    icon_class: fa fa-instagram
+  - text: Twitter
+    url: https://twitter.com/P2PU
+    icon_class: fa fa-twitter
+  - text: Facebook
+    url: https://www.facebook.com/P2PUniversity
+    icon_class: fa fa-facebook
+  - text: Email
+    url: mailto:thepeople@p2pu.org
+    icon_class: fa fa-envelope
