@@ -1,10 +1,5 @@
 footer.home-footer {
   font-size: $font-size-small;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
 
   .title {
     padding-bottom: 10px;
@@ -114,6 +109,8 @@ footer.home-footer {
     background: $white;
 
     .container {
+      display: flex;
+
       > div {
         padding-top: $padding-sm;
         padding-bottom: $padding-sm;
@@ -122,6 +119,10 @@ footer.home-footer {
         flex-wrap: wrap;
         color: $gray-darker;
         font-size: $font-size-small;
+
+        > div span {
+          margin-right: 5px;
+        }
       }
     }
 
