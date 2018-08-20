@@ -79,6 +79,8 @@
 		})
 
 		$('#full-page-menu a').click(closeMenu);
+
+		$('body').css("padding-bottom", $('footer').height());
 	})
 </script>
 
@@ -106,6 +108,11 @@
 			.setClassToggle(subtitle, "active")
 	    .addTo(controller);
 		});
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ offset: 150 });
 </script>
 
 
