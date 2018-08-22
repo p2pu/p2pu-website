@@ -8,15 +8,13 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    autoprefixer-rails (9.1.1)
-      execjs
-    aws-sdk (2.11.110)
-      aws-sdk-resources (= 2.11.110)
-    aws-sdk-core (2.11.110)
+    aws-sdk (2.11.113)
+      aws-sdk-resources (= 2.11.113)
+    aws-sdk-core (2.11.113)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.11.110)
-      aws-sdk-core (= 2.11.110)
+    aws-sdk-resources (2.11.113)
+      aws-sdk-core (= 2.11.113)
     aws-sigv4 (1.0.3)
     coffee-script (2.4.1)
       coffee-script-source
@@ -208,7 +206,7 @@ GEM
       html-pipeline (~> 2.2)
       jekyll (~> 3.0)
     jmespath (1.4.0)
-    json (1.8.3)
+    json (2.0.2)
     kramdown (1.17.0)
     liquid (4.0.0)
     listen (3.1.5)
@@ -227,9 +225,6 @@ GEM
       mini_portile2 (~> 2.3.0)
     octokit (4.10.0)
       sawyer (~> 0.8.0, >= 0.5.3)
-    octopress-autoprefixer (2.0.1)
-      autoprefixer-rails
-      jekyll (~> 3.0)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -271,7 +266,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages (= 191)
   json
-  octopress-autoprefixer
   s3_website
 
 BUNDLED WITH
