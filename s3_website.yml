@@ -19,11 +19,12 @@ exclude_from_upload:
 redirects:
     index.html: /en/
     courses/index.html: /en/courses/
+    en/community/index.html: https://community.p2pu.org/
     en/facilitate/background/index.html: /en/handbook/background/
     en/facilitate/starting/index.html: /en/handbook/starting/
     en/facilitate/running/index.html: /en/handbook/running/
     en/facilitate/downloads/index.html: /en/handbook/downloads/
-    en/community/index.html: https://community.p2pu.org/
+    en/workwithus/index.html: /en/work-with-us/
     About-P2PU: /en/about/
     webcraft/index.html: https://courses.p2pu.org/webcraft/
     school-of-ed: https://courses.p2pu.org/school-of-ed
@@ -219,6 +220,13 @@ routing_rules:
       replace_key_prefix_with: en/connect
       http_redirect_code: 301
   - condition:
+      key_prefix_equals: courses
+    redirect:
+      host_name: www.p2pu.org
+      protocol: https
+      replace_key_prefix_with: en/courses
+      http_redirect_code: 301
+  - condition:
       key_prefix_equals: donate
     redirect:
       host_name: www.p2pu.org
@@ -233,6 +241,13 @@ routing_rules:
       replace_key_prefix_with: en/facilitate
       http_redirect_code: 301
   - condition:
+      key_prefix_equals: handbook
+    redirect:
+      host_name: www.p2pu.org
+      protocol: https
+      replace_key_prefix_with: en/handbook
+      http_redirect_code: 301
+  - condition:
       key_prefix_equals: jobs
     redirect:
       host_name: www.p2pu.org
@@ -240,11 +255,25 @@ routing_rules:
       replace_key_prefix_with: en/jobs
       http_redirect_code: 301
   - condition:
+      key_prefix_equals: learning-circles
+    redirect:
+      host_name: www.p2pu.org
+      protocol: https
+      replace_key_prefix_with: en/learning-circles
+      http_redirect_code: 301
+  - condition:
       key_prefix_equals: our-work
     redirect:
       host_name: www.p2pu.org
       protocol: https
       replace_key_prefix_with: en/our-work
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: privacy
+    redirect:
+      host_name: www.p2pu.org
+      protocol: https
+      replace_key_prefix_with: en/privacy
       http_redirect_code: 301
   - condition:
       key_prefix_equals: publications
@@ -260,5 +289,13 @@ routing_rules:
       protocol: https
       replace_key_prefix_with: en/terms
       http_redirect_code: 301
+  - condition:
+      key_prefix_equals: workwithus
+    redirect:
+      host_name: www.p2pu.org
+      protocol: https
+      replace_key_prefix_with: en/workwithus
+      http_redirect_code: 301
+
 
 

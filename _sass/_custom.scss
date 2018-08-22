@@ -1,3 +1,17 @@
+html {
+	height: 100%
+}
+
+body {
+	min-height: 100%;
+	position: relative;
+}
+
+main {
+	padding-top: $navbar-height;
+	background-color: $white;
+}
+
 .people-img {
     max-width: 150px;
     max-height: 150px;
@@ -93,31 +107,6 @@
 	margin: 2em 0;
 }
 
-.social-footer {
-	a {
-		padding: 3px 10px;
-		border-radius: 2px;
-		margin-top: -18px;
-		font-size: 0.8em;
-
-		&.tw {
-			background-color: #00BBF5;
-			border-color: #00BBF5;
-			&:hover {
-				background-color: darken(#00BBF5, 5%);
-			}
-		}
-
-		&.fb {
-			background-color: #415E9B;
-			border-color: #415E9B;
-			&:hover {
-				background-color: darken(#415E9B, 5%);
-			}
-		}
-	}
-}
-
 .connect-icons-wrapper {
 	margin: 50px 0;
 
@@ -182,10 +171,6 @@ section.featured-work{
 	.affix {
 			top: 3em;
 	}
-}
-
-.page-content {
-	margin-top: $navbar-height;
 }
 
 .label-left {

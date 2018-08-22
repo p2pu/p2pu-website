@@ -22,7 +22,7 @@ top_level:
     url: /en/about/
     submenu:
       - text: Hire us
-        url: /en/workwithus/
+        url: /en/work-with-us/
       - text: Jobs
         url: /en/jobs/
       - text: Shop

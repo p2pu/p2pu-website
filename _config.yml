@@ -28,6 +28,3 @@ exclude:
 
 prose:
   media: assets/images
-
-plugins:
-  - octopress-autoprefixer
