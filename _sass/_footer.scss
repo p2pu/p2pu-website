@@ -10,7 +10,7 @@ footer.home-footer {
   }
 
   .contact-info {
-    background: #000;
+    background: $gray-darker;
     color: $white;
     padding-top: $padding-sm;
     padding-bottom: $padding-md;
@@ -48,7 +48,7 @@ footer.home-footer {
           background: $white;
 
           i {
-            color: #000;
+            color: $gray-darker;
           }
         }
 
@@ -98,7 +98,7 @@ footer.home-footer {
 
       input[type="submit"]:hover {
         background: $white;
-        color: #000;
+        color: $gray-darker;
       }
 
       input[type="submit"]:focus {

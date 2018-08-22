@@ -130,7 +130,7 @@ nav {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background: $p2pu-blue;
+  background: transparentize($p2pu-blue, 0.03);
   top: 0;
   left: 0;
   transition: left 0.5s ease-in-out;
