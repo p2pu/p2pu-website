@@ -9,10 +9,11 @@ nav {
   font-family: $headings-font-family;
   font-size: $font-size-base;
 
-  button.nav-item {
+  .nav-item {
     cursor: pointer;
     background: transparent;
     border: none;
+    color: $gray-darker
 
     i {
       margin-right: 12px;
