@@ -40,7 +40,7 @@ function deprecatedHeader(){
     <div id="deprecated-site-alert" aria-hidden="true">
       <div role="alert" tabindex="1">
         <div>
-          We are no longer maintaining this page. Please visit our new website at <a href="https://www.p2pu.org/en/" style="color: #fff; text-decoration: underline;">www.p2pu.org</a>.
+          Thanks for visiting P2PU. This domain is no longer being updated. Head to p2pu.org for the latest information. If you’re looking to create an open online courses, we now support <a href="howto.p2pu.org">howto.p2pu.org</a>
         </div>
         <div>
           <button id="deprecated-alert-close" aria-label="Close">&times;</button>
