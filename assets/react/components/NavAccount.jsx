@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ApiHelper from '../helpers/ApiHelper';
-import  { API_BASE_URL } from '../constants';
+import  { API_BASE_URL, LOGIN_REDIRECT_URL } from '../constants';
 
 export default class NavAccount extends Component {
   constructor(props) {
@@ -28,13 +28,13 @@ export default class NavAccount extends Component {
     if (this.state.user) {
       return(
         <div className="dropdown">
-          <div className="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <div className="dropdown-toggle" id="account-menu-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             <button className="nav-item">
               <i className="fa fa-user" aria-hidden="true"></i>
               <span className="uppercase hidden-xs">{this.state.user}</span>
             </button>
           </div>
-          <ul className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+          <ul className="dropdown-menu dropdown-menu-right" aria-labelledby="account-menu-dropdown">
             {
               this.state.links.map((link, index) => {
                 return (
@@ -51,7 +51,14 @@ export default class NavAccount extends Component {
         </div>
       )
     } else {
-      return <div></div>
+      return (
+        <div>
+          <a className="nav-item" href={LOGIN_REDIRECT_URL}>
+            <i className="fa fa-user" aria-hidden="true"></i>
+            <span className="uppercase hidden-xs">Log in</span>
+          </a>
+        </div>
+      )
     }
   }
 }

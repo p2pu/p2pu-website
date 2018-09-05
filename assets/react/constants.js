@@ -59,7 +59,8 @@ export const API_ENDPOINTS = {
   }
 }
 
-export const DISCOURSE_API_URL = 'https://community.p2pu.org'
+export const DISCOURSE_API_URL = 'https://community.p2pu.org';
+export const LOGIN_REDIRECT_URL = "https://learningcircles.p2pu.org/en/login_redirect/";
 
 export const DISCOURSE_CATEGORIES = [
   { title: 'Orientation', slug: 'orientation', defaultImagePath: '/assets/images/facilitate/profile_1_1.jpg' },
