@@ -13,7 +13,7 @@ function getReactChunks(){
 
   var entries = {};
   files.forEach(function(f){
-    entries[f.replace(/.jsx/, '')] = './' + f;
+    entries[f.replace(/.jsx/, '')] = ['babel-polyfill', './' + f];
   });
   return entries;
 }

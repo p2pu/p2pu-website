@@ -53,6 +53,7 @@
     "whatwg-url": "^6.2.1"
   },
   "devDependencies": {
+    "babel-polyfill": "^6.26.0",
     "prop-types": "^15.6.1"
   }
 }
