@@ -14,7 +14,7 @@ export default class MeetingsPreview extends Component {
   }
 
   _populateMeetings() {
-    const opts = { parms: {}, callback: this.searchCallback }
+    const opts = { params: {}, callback: this.searchCallback }
 
     this.api.fetchResource(opts);
   }
