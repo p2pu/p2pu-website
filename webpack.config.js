@@ -52,7 +52,7 @@ const reactBuild = {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
-    }),
+    })
   ],
   resolve: {
     modules: ['node_modules'],

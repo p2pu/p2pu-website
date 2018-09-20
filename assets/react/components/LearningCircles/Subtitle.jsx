@@ -1,10 +1,11 @@
 import React from 'react'
-import { URL } from 'whatwg-url';
+import queryString from 'query-string';
 
 class Subtitle extends React.Component {
   constructor(props) {
     super(props)
-    const team = new URL(window.location.href).searchParams.get('team')
+    const parsedParams = queryString.parse(window.location.search);
+    const team = parsedParams.team;
     this.state = { team }
   }
 
