@@ -36,11 +36,11 @@ body {
   }
 
   .small {
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
   }
 
   .large {
-    font-size: $font-size-large;
+    font-size: $font-size-lg;
   }
 
   .bold {
@@ -56,7 +56,7 @@ body {
   }
 
   .subtitle {
-    font-size: $font-size-h3;
+    font-size: $h3-font-size;
 
     .underline {
       padding-left: 2em;
@@ -107,7 +107,7 @@ body {
     }
 
     &.small {
-      font-size: $font-size-h4;
+      font-size: $h4-font-size;
 
       .text {
         transform: translateY(0.2em);
@@ -132,12 +132,12 @@ body {
 
   .caption {
     small {
-      font-size: $font-size-small;
+      font-size: $font-size-sm;
     }
   }
 
   .minicaps {
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     font-family: $font-family-sans-serif;
     text-transform: uppercase;
     text-align: center;
@@ -173,7 +173,7 @@ body {
 @media (max-width: 768px) {
   body {
     .subtitle {
-      font-size: $font-size-h3;
+      font-size: $h3-font-size;
 
       .underline {
         padding-left: 1em;

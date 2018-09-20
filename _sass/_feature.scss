@@ -16,29 +16,29 @@
 		padding: 1em 1em 1.5em 1em;
 		vertical-align: middle;
 
-		@media (min-width: $screen-xs-min) {
+		@media (min-width: map-get($grid-breakpoints, "xs")) {
 			font-size: 1em;
 		}
-		@media (min-width: $screen-sm-min) {
+		@media (min-width: map-get($grid-breakpoints, "sm")) {
 			width: 50%;
 			padding-top: 0;
 			font-size: 0.8em;
 		}
-		@media (min-width: $screen-md-min) {
+		@media (min-width: map-get($grid-breakpoints, "md")) {
 			padding-top: 1em;
 			font-size: 1em;
 		}
 
 		.header {
 			margin-top: 10px;
-			@media (min-width: $screen-md-min) {
+			@media (min-width: map-get($grid-breakpoints, "md")) {
 				margin-top: 21px;
 				font-size: 19px;
 			}
-			@media (min-width: $screen-sm-min) {
+			@media (min-width: map-get($grid-breakpoints, "sm")) {
 				font-size: 1.5em;
 			}
-			@media (min-width: $screen-md-min) {
+			@media (min-width: map-get($grid-breakpoints, "md")) {
 				font-size: 19px;
 			}
 		}
@@ -47,14 +47,14 @@
 
 	&.left {
 		text-align: center;
-		@media (min-width: $screen-sm-min) {
+		@media (min-width: map-get($grid-breakpoints, "sm")) {
 			text-align: left;
 		}
 
 		.image {
 			padding: 0;
 			/*@include feature-overlay();*/
-			@media (min-width: $screen-sm-min) {
+			@media (min-width: map-get($grid-breakpoints, "sm")) {
 				width: 50%;
 			    float: left;
 			}
@@ -67,14 +67,14 @@
 
 	&.right {
 		text-align: center;
-		@media (min-width: $screen-sm-min) {
+		@media (min-width: map-get($grid-breakpoints, "sm")) {
 			text-align: right;
 		}
 
 		.image {
 			padding: 0;
 			/*@include feature-overlay();*/
-			@media (min-width: $screen-sm-min) {
+			@media (min-width: map-get($grid-breakpoints, "sm")) {
 				width: 50%;
 			    float: right;
 			}

@@ -161,7 +161,7 @@ main {
 							.date {
 								color: $p2pu-blue;
 								text-transform: uppercase;
-						    font-size: $font-size-small;
+						    font-size: $font-size-sm;
 						    display: flex;
 						    align-items: center;
 						    margin-bottom: $padding-xs;
@@ -183,7 +183,7 @@ main {
 								}
 
 								.location {
-									font-size: $font-size-small;
+									font-size: $font-size-sm;
 								}
 
 								.bold {
@@ -330,7 +330,7 @@ main {
 						}
 
 						.organization {
-							font-size: $font-size-small;
+							font-size: $font-size-sm;
 						}
 					}
 				}
@@ -437,9 +437,9 @@ main {
 	margin-left: 0 !important;
 }
 
-@media (max-width: $screen-sm-max) {
+@media (max-width: map-get($grid-breakpoints, "md")) {
 	body {
-		font-size: $font-size-base-mobile;
+		font-size: $font-size-base;
 	}
 
 	main {
@@ -526,7 +526,7 @@ main {
 	}
 }
 
-@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+@media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
 	main {
 		section {
 			padding: $padding-sm;
@@ -538,7 +538,7 @@ main {
 	}
 }
 
-@media (max-width: $screen-xs) {
+@media (max-width: map-get($grid-breakpoints, "sm")) {
 	section#learning-circles {
 		.overview {
 			#stats {

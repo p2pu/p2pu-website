@@ -1,5 +1,5 @@
 footer.home-footer {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -122,7 +122,7 @@ footer.home-footer {
         justify-content: space-between;
         flex-wrap: wrap;
         color: $gray-darker;
-        font-size: $font-size-small;
+        font-size: $font-size-sm;
 
         > div span {
           margin-right: 5px;
@@ -142,7 +142,7 @@ footer.home-footer {
   }
 }
 
-@media (max-width: $screen-sm-max) {
+@media (max-width: map-get($grid-breakpoints, "md")) {
   .newsletter {
     margin-bottom: 20px;
   }
