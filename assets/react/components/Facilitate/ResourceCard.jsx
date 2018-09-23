@@ -25,7 +25,7 @@ const ResourceCard = props => {
   const imgUrl = getImageUrl();
 
   return (
-      <div className="resource-card col-md-4 col-sm-12 col-xs-12" onClick={() => window.location.href = url}>
+      <div className="resource-card col-md-4 col-sm-12 col-12" onClick={() => window.location.href = url}>
         <div className="image">
           { imgUrl && <img src={imgUrl} /> }
           <div className="overlay">

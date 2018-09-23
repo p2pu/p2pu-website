@@ -1,5 +1,6 @@
 import { API_ENDPOINTS } from '../constants';
 import { compact } from 'lodash';
+import $ from 'jquery';
 
 export default class ApiHelper {
   constructor(resourceType) {

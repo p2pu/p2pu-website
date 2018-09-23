@@ -95,11 +95,7 @@ section.page-title {
   }
 }
 
-@media (max-width: $screen-xs-max) {
-  body {
-    font-size: $font-size-base-mobile;
-  }
-
+@media (max-width: map-get($grid-breakpoints, "sm")) {
   section.page-title {
     header {
       h1 {
