@@ -1,2 +1,2 @@
 import "bootstrap";
-import "p2pustrap-theme/src/js/base.js";
+import "p2pu-theme/src/js/base.js";
