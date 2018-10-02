@@ -35,7 +35,7 @@
     "node-sass": "^4.5.2",
     "p2pu-input-fields": "^0.5.6",
     "p2pu-search-cards": "^0.8.7",
-    "p2pu-theme": "^1.0.0",
+    "p2pu-theme": "^1.0.1",
     "query-string": "^5.1.1",
     "rc-time-picker": "^3.3.1",
     "react": "^15.6.2",
