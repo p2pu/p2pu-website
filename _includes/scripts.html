@@ -86,11 +86,8 @@
 
 <script type="text/javascript">
 		var controller = new ScrollMagic.Controller();
-		var subtitles = document.querySelectorAll('.subtitle');
-		var footerSubtitles = document.querySelectorAll('footer .subtitle');
-		var learningCirclesDefinition = document.getElementById('definition');
 
-		subtitles.forEach(function(subtitle) {
+		$('.subtitle').each(function(index, subtitle) {
 		  new ScrollMagic.Scene({
         triggerElement: subtitle,
         triggerHook: 0.6
@@ -99,15 +96,6 @@
 	    .addTo(controller);
 		});
 
-		footerSubtitles.forEach(function(subtitle) {
-			new ScrollMagic.Scene({
-				triggerElement: subtitle,
-				triggerHook: 'onEnter',
-				offset: 200
-			})
-			.setClassToggle(subtitle, "active")
-	    .addTo(controller);
-		});
 </script>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
