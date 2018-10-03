@@ -44,12 +44,12 @@ const reactBuild = {
       },
     ],
   },
+  externals: {
+    jquery: 'jQuery',
+    $: 'jQuery'
+  },
   plugins: [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    }),
     new AssetsPlugin({
       filename: 'bundles.json',
       path: path.resolve('./_data'),
