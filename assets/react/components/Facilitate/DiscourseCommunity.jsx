@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
-import { filter, find } from "lodash";
 import { DISCOURSE_API_URL } from "../../constants";
 import DiscourseTopic from "./DiscourseTopic";
 
@@ -68,13 +67,8 @@ export default class FacilitatorResources extends Component {
             <tbody>
               {top10topics.map(topic => {
                 const posters = topic.posters.map(poster => poster.user_id);
-                const users = filter(this.state.users, user => {
-                  return posters.includes(user.id);
-                });
-                const category = find(this.state.categories, [
-                  'id', topic.category_id
-                ]);
-
+                const users = this.state.users.filter(user => posters.includes(user.id));
+                const category = this.state.categories.find(cat => ca.id == topic.category_id);
                 return (
                   <DiscourseTopic
                     topic={topic}
