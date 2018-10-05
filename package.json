@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack -p --config webpack.config.js",
     "build:debug": "webpack --config webpack.config.js",
-    "watch": "webpack --config webpack.config.js --watch"
+    "watch": "webpack --config webpack.config.js --watch",
+    "profile": "webpack -p --config webpack.config.profile.js --watch"
   },
   "repository": {
     "type": "git",
