@@ -56,6 +56,7 @@ const reactBuild = {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
+      minChunks: 3,
     })
   ],
   resolve: {
