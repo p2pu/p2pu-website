@@ -1,10 +1,7 @@
 ---
 ---
-@import "p2pustrap/p2pustrap";
-@import "mixins";
-@import "typography";
-@import "footer";
+
+@import "p2pu-theme/src/scss/base";
 @import "custom";
 @import "index";
 @import "facilitate";
-@import "accordion";

@@ -1,15 +1,12 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-    window.jQuery || document.write('<script src="{{ site.baseurl }}/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')
-</script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<script src="{{ site.baseurl }}/assets/js/vendor/bootstrap/collapse.js"></script>
-<script src="{{ site.baseurl }}/assets/js/vendor/bootstrap/dropdown.js"></script>
-<script src="{{ site.baseurl }}/assets/js/vendor/bootstrap/affix.js"></script>
-<script src="{{ site.baseurl }}/assets/js/vendor/bootstrap/modal.js"></script>
-
-<script src="{{ site.baseurl }}/assets/js/vendor/scroll-magic.min.js"></script>
 <script src="{{site.data.bundles['common']['js']}}"></script>
+<script src="{{site.data.bundles['p2pu-theme']['js']}}"></script>
 <script src="{{site.data.bundles['navbar']['js']}}"></script>
 
 {% for js in page.extra_js %}
@@ -44,63 +41,4 @@
 {% if site.env == 'dev' %}
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 {% endif %}
-
-<script>
-	$(function() {
-		$('#full-page-menu a, #full-page-menu button').each(function() {
-			$(this).attr('tabindex', '-1')
-		})
-
-		function openMenu() {
-			$('#full-page-menu').removeClass('collapsed');
-			$('#full-page-menu').attr('aria-hidden', 'false')
-			$('body').addClass('freeze');
-			$('#full-page-menu a, #full-page-menu button').each(function() {
-				$(this).attr('tabindex', '0')
-			})
-		}
-
-		function closeMenu() {
-			$('#full-page-menu').addClass('collapsed');
-			$('#full-page-menu').attr('aria-hidden', 'true')
-			$('body').removeClass('freeze');
-			$('#full-page-menu a, #full-page-menu button').each(function() {
-				$(this).attr('tabindex', '-1')
-			})
-			$('main').focus();
-		}
-
-		$('nav .menu').on('click', function() {
-			openMenu();
-		})
-
-		$('#close-menu').on('click', function() {
-			closeMenu();
-		})
-
-		$('#full-page-menu a').click(closeMenu);
-
-		$('body').css("padding-bottom", $('footer').height());
-	})
-</script>
-
-<script type="text/javascript">
-		var controller = new ScrollMagic.Controller();
-
-		$('.subtitle').each(function(index, subtitle) {
-		  new ScrollMagic.Scene({
-        triggerElement: subtitle,
-        triggerHook: 0.6
-	    })
-	    .setClassToggle(subtitle, "active")
-	    .addTo(controller);
-		});
-
-</script>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ offset: 150 });
-</script>
-
 

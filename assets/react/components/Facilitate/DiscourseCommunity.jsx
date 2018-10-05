@@ -53,7 +53,7 @@ export default class FacilitatorResources extends Component {
             </div>
           </div>
         </header>
-        <div className="topics col-xs-12">
+        <div className="topics col-12">
           <table className="table">
             <thead>
               <tr>
@@ -87,7 +87,7 @@ export default class FacilitatorResources extends Component {
             </tbody>
           </table>
         </div>
-        <div className="col-xs-12">
+        <div className="col-12">
           <a className="btn p2pu-btn blue" href="https://community.p2pu.org/">Go to the community</a>
         </div>
       </div>

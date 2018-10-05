@@ -134,6 +134,7 @@ section#facilitator-resources {
           color: $gray-darker;
           text-align: left;
           transition: all 0.25s ease-in-out;
+          padding: 10px 15px;
 
           &:hover, &:focus {
             background: transparent;
@@ -186,14 +187,16 @@ section#facilitator-resources {
     text-align: center;
 
     .step-number {
-      font-family: $font-family-sans-serif-bold;
+      font-weight: $font-weight-bold;
+      font-family: $font-family-sans-serif;
       font-size: 24px;
       text-transform: uppercase;
       color: $p2pu-yellow
     }
 
     .step-title h2 {
-      font-family: $font-family-sans-serif-bold;
+      font-weight: $font-weight-bold;
+      font-family: $font-family-sans-serif;
       font-size: 44px;
       margin-top: 10px;
     }
@@ -255,7 +258,8 @@ section#facilitator-resources {
 
       .title {
         margin-top: 10px;
-        font-family: $font-family-sans-serif-bold;
+        font-weight: $font-weight-bold;
+        font-family: $font-family-sans-serif;
 
         a {
           color: $gray-darker;
@@ -280,7 +284,7 @@ section#discourse-community {
     overflow: scroll;
 
     table {
-      font-size: $font-size-small;
+      font-size: $font-size-sm;
       color: $gray;
     }
 
@@ -294,8 +298,9 @@ section#discourse-community {
 
     .category-name {
       color: $gray-darker;
-      font-family: $font-family-sans-serif-bold;
-      font-size: 0.8em
+      font-weight: $font-weight-bold;
+      font-family: $font-family-sans-serif;
+      font-size: 0.8em;
     }
 
     .avatar {

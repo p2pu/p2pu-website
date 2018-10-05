@@ -8,12 +8,12 @@ const reactSrcDir = '/assets/react';
 function getReactChunks(){
   // Add all jsx files in /assets/react as entries
   var files = fs.readdirSync(__dirname + reactSrcDir).filter(function(f){
-    return f.endsWith('.jsx');
+    return f.endsWith('.jsx') || f.endsWith('.js');
   })
 
   var entries = {};
   files.forEach(function(f){
-    entries[f.replace(/.jsx/, '')] = './' + f;
+    entries[f.replace(/\.(jsx|js)$/, '')] = './' + f;
   });
   return entries;
 }
@@ -38,11 +38,15 @@ const reactBuild = {
         loaders: ['style-loader', 'css-loader']
       },
       {
-        test: /\.jsx?$/,
+        test: /\.(jsx|js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader?presets[]=env&presets[]=react&presets[]=stage-2'
       },
     ],
+  },
+  externals: {
+    jquery: 'jQuery',
+    $: 'jQuery'
   },
   plugins: [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
