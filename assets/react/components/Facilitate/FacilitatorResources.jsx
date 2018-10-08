@@ -66,7 +66,7 @@ export default class FacilitatorResources extends Component {
           <div className="handbook-container">
             <div className="content">
               <div className="row">
-                <div className="col-xs-12">
+                <div className="col-12">
                   <p className="large bold">Are you looking for the Facilitator Handbook?</p>
                   <p>You may prefer to use the offline, printable version of our facilitator resources. The content is a bit different (no videos) and it may not be as up-to-date as the online resources.</p>
                   <p><a href="https://www.p2pu.org/assets/uploads/learning_circle_downloads/facilitator_handbook.pdf">Click here to download the Faciliator Handbook (PDF)</a></p>

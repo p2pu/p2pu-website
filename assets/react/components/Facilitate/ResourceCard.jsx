@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { DISCOURSE_API_URL, FACILITATOR_RESOURCE_TYPES } from '../../constants';
-import { find } from 'lodash';
 
 const ResourceCard = props => {
 
   const { topic, defaultImagePath } = props;
   const url = `${DISCOURSE_API_URL}/t/${topic.slug}`;
-  const resourceType = find(topic.tags, (tag) => FACILITATOR_RESOURCE_TYPES.includes(tag));
+  const resourceType = topic.tags.find(tag => FACILITATOR_RESOURCE_TYPES.includes(tag));
 
   const getImageUrl = () => {
     if (topic.image_url) {
@@ -25,7 +24,7 @@ const ResourceCard = props => {
   const imgUrl = getImageUrl();
 
   return (
-      <div className="resource-card col-md-4 col-sm-12 col-xs-12" onClick={() => window.location.href = url}>
+      <div className="resource-card col-md-4 col-sm-12 col-12" onClick={() => window.location.href = url}>
         <div className="image">
           { imgUrl && <img src={imgUrl} /> }
           <div className="overlay">

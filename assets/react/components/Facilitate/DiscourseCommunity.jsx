@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
-import { filter, find } from "lodash";
 import { DISCOURSE_API_URL } from "../../constants";
 import DiscourseTopic from "./DiscourseTopic";
 
@@ -42,6 +41,21 @@ export default class FacilitatorResources extends Component {
 
   render() {
     const top10topics = this.state.topics.slice(0,10);
+    let topicNodes = top10topics.map(topic => {
+      const posters = topic.posters.map(poster => poster.user_id);
+      const users = this.state.users.filter(user => posters.includes(user.id));
+      const category = this.state.categories.find(cat => cat.id == topic.category_id);
+      return (
+        <DiscourseTopic
+          topic={topic}
+          key={topic.id}
+          users={users}
+          category={category}
+        />
+      );
+    });
+
+
     return (
       <div>
         <header>
@@ -53,7 +67,7 @@ export default class FacilitatorResources extends Component {
             </div>
           </div>
         </header>
-        <div className="topics col-xs-12">
+        <div className="topics col-12">
           <table className="table">
             <thead>
               <tr>
@@ -66,28 +80,11 @@ export default class FacilitatorResources extends Component {
               </tr>
             </thead>
             <tbody>
-              {top10topics.map(topic => {
-                const posters = topic.posters.map(poster => poster.user_id);
-                const users = filter(this.state.users, user => {
-                  return posters.includes(user.id);
-                });
-                const category = find(this.state.categories, [
-                  'id', topic.category_id
-                ]);
-
-                return (
-                  <DiscourseTopic
-                    topic={topic}
-                    key={topic.id}
-                    users={users}
-                    category={category}
-                  />
-                );
-              })}
+              {topicNodes}
             </tbody>
           </table>
         </div>
-        <div className="col-xs-12">
+        <div className="col-12">
           <a className="btn p2pu-btn blue" href="https://community.p2pu.org/">Go to the community</a>
         </div>
       </div>

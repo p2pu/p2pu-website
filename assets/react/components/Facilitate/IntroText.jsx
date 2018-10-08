@@ -51,7 +51,7 @@ const IntroText = ({ section }) => {
 
   return (
     <div className="resource-category-intro row">
-      <div className="col-xs-12">
+      <div className="col-12">
         <Content />
       </div>
     </div>

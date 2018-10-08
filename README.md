@@ -6,13 +6,13 @@ Deploy status: [![](https://travis-ci.org/p2pu/p2pu-website.svg?branch=release)]
 
 Built using Jekyll and deployed to AWS Cloudfront using TravisCI
 
-gh-pages branch is staging and is deployed to [http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/](http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/)
+master branch is staging and is deployed to [http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/](http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/)
 
 Live website is deployed to [www.p2pu.org](https://www.p2pu.org/en/)
 
 ## Contributing
 
-To make changes, fork this repo and update your fork. Once done, submit a pull request to the gh-pages branch.
+To make changes, fork this repo and update your fork. Once done, submit a pull request to the master branch.
 
 ## Editing content
 

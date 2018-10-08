@@ -29,8 +29,8 @@ export default class LearningCirclesStats extends Component {
     const stats = this.state.stats;
     if (stats) {
       return (
-        <div className="stacked-numbers">
-          <div className="col-sm-12 col-md-4 card">
+        <div className="stacked-numbers row">
+          <div className="col-sm-12 col-md-4 card border-0">
             <i className="material-icons">group</i>
             <h4 className="bold">
               <NumberWithLabel
@@ -40,7 +40,7 @@ export default class LearningCirclesStats extends Component {
             </h4>
             <p>Learn together in a small group with your neighbors.</p>
           </div>
-          <div className="col-sm-12 col-md-4 card">
+          <div className="col-sm-12 col-md-4 card border-0">
             <i className="material-icons">important_devices</i>
             <h4 className="bold">
               <NumberWithLabel
@@ -50,7 +50,7 @@ export default class LearningCirclesStats extends Component {
             </h4>
             <p>Use free, online courses from around the web.</p>
           </div>
-          <div className="col-sm-12 col-md-4 card">
+          <div className="col-sm-12 col-md-4 card border-0">
             <i className="material-icons">pin_drop</i>
             <h4 className="bold">
               <NumberWithLabel
