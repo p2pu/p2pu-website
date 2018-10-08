@@ -3,7 +3,7 @@ rvm:
 - 2.5
 branches:
   only:
-  - gh-pages
+  - master
   - release
 sudo: required
 services:
