@@ -41,6 +41,21 @@ export default class FacilitatorResources extends Component {
 
   render() {
     const top10topics = this.state.topics.slice(0,10);
+    let topicNodes = top10topics.map(topic => {
+      const posters = topic.posters.map(poster => poster.user_id);
+      const users = this.state.users.filter(user => posters.includes(user.id));
+      const category = this.state.categories.find(cat => cat.id == topic.category_id);
+      return (
+        <DiscourseTopic
+          topic={topic}
+          key={topic.id}
+          users={users}
+          category={category}
+        />
+      );
+    });
+
+
     return (
       <div>
         <header>
@@ -65,19 +80,7 @@ export default class FacilitatorResources extends Component {
               </tr>
             </thead>
             <tbody>
-              {top10topics.map(topic => {
-                const posters = topic.posters.map(poster => poster.user_id);
-                const users = this.state.users.filter(user => posters.includes(user.id));
-                const category = this.state.categories.find(cat => ca.id == topic.category_id);
-                return (
-                  <DiscourseTopic
-                    topic={topic}
-                    key={topic.id}
-                    users={users}
-                    category={category}
-                  />
-                );
-              })}
+              {topicNodes}
             </tbody>
           </table>
         </div>
