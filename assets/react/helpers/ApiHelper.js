@@ -1,5 +1,4 @@
 import { API_ENDPOINTS } from '../constants';
-import $ from 'jquery';
 
 export default class ApiHelper {
   constructor(resourceType) {
