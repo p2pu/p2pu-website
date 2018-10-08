@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack -p --config webpack.config.js",
     "build:debug": "webpack --config webpack.config.js",
-    "watch": "webpack --config webpack.config.js --watch"
+    "watch": "webpack --config webpack.config.js --watch",
+    "profile": "webpack -p --config webpack.config.profile.js --watch"
   },
   "repository": {
     "type": "git",
@@ -28,13 +29,14 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.0",
-    "jquery": "^3.2.1",
     "jsonp": "^0.2.1",
     "moment": "^2.22.1",
     "moment-timezone": "^0.5.16",
     "node-sass": "^4.5.2",
     "p2pu-input-fields": "^0.5.6",
-    "p2pu-search-cards": "^0.8.0",
+    "p2pu-search-cards": "^0.8.7",
+    "p2pu-theme": "^1.0.5",
+    "query-string": "^5.1.1",
     "rc-time-picker": "^3.3.1",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
@@ -48,9 +50,9 @@
     "sass-loader": "^6.0.3",
     "smooth-scroll": "^12.1.5",
     "style-loader": "^0.16.1",
+    "url-polyfill": "^1.1.0",
     "webpack": "^2.4.1",
-    "webpack-bundle-analyzer": "^2.13.1",
-    "whatwg-url": "^6.2.1"
+    "webpack-bundle-analyzer": "^2.13.1"
   },
   "devDependencies": {
     "prop-types": "^15.6.1"

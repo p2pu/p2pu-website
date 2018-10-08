@@ -21,16 +21,19 @@ bundles:
 	      href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="{{ "/assets/css/p2pu-index.css" | prepend: site.baseurl }}">
 	<link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	<script src="{{ "/assets/js/vendor/smooth-scroll.min.js" | prepend: site.baseurl }}"></script>
 
-	<script src="{{ "/assets/js/vendor/modernizr-2.6.2.min.js" | prepend: site.baseurl }}"></script>
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 
 <body>
@@ -41,7 +44,9 @@ bundles:
 <main class="page-content">
 	<section id="landing">
 		<div class="header-text">
-			<div id="header-text-carousel"></div>
+			<div id="header-text-carousel">
+				<h1 className="bold centered">Master public speaking <br> in your neighbourhood, for free.</h1>
+			</div>
 			<a data-scroll href="#learning-circles">
 				<button class="btn p2pu-btn dark">Learn more</button>
 			</a>
@@ -80,7 +85,7 @@ bundles:
 	<section id="upcoming-meetings" data-aos="fade-up">
 		<div class="container">
 	    <div class="preview-container">
-	      <div class="meetings-section col-xs-12">
+	      <div class="meetings-section">
 	        <div id="preview"></div>
 	      </div>
 	    </div>
@@ -90,26 +95,28 @@ bundles:
 	<section id="call-to-action" data-aos="fade-up">
 		<div class="background-image">
 			<div class="container">
-				<div class="block col-xs-12 col-sm-6">
-					<a href="/en/facilitate" class="undecorated">
-						<div class="circle create">
-							<div class="content">
-		            <p class="large">Facilitate a learning circle</p>
-	            	<button class="p2pu-btn yellow">Facilitate</button>
+				<div class="row">
+					<div class="block col-12 col-sm-6">
+						<a href="/en/facilitate" class="undecorated">
+							<div class="circle create">
+								<div class="content">
+			            <p class="large">Facilitate a learning circle</p>
+		            	<button class="p2pu-btn yellow">Facilitate</button>
+								</div>
 							</div>
-						</div>
-	        </a>
-				</div>
+		        </a>
+					</div>
 
-				<div class="block col-xs-12 col-sm-6">
-	        <a href="/en/learning-circles" class="undecorated">
-						<div class="circle join">
-							<div class="content">
-		            <p class="large">Join a learning circle near you</p>
-	            	<button class="p2pu-btn green">Join</button>
+					<div class="block col-12 col-sm-6">
+		        <a href="/en/learning-circles" class="undecorated">
+							<div class="circle join">
+								<div class="content">
+			            <p class="large">Join a learning circle near you</p>
+		            	<button class="p2pu-btn green">Join</button>
+								</div>
 							</div>
-						</div>
-	        </a>
+		        </a>
+					</div>
 				</div>
 			</div>
 			<div class="caption centered">
@@ -151,7 +158,7 @@ bundles:
 			</div>
 
 			<div class="columns row">
-				<div class="col-md-4 col-sm-12 col-xs-12 column">
+				<div class="col-md-4 col-sm-12 col-12 column">
 					<p>Have we met? <a href="/en/about/" class="light bold underline">Read about</a> our history, our values, and our community.</p>
 					<div>
 						<a href="/en/about/">
@@ -160,7 +167,7 @@ bundles:
 					</div>
 				</div>
 
-				<div class="col-md-4 col-sm-12 col-xs-12 column">
+				<div class="col-md-4 col-sm-12 col-12 column">
 					<p><a href="https://info.p2pu.org" class="light bold underline">Check out our blog</a> for stories and updates from P2PU friends and affiliates around the world.</p>
 					<div>
 						<a href="https://info.p2pu.org">
@@ -169,7 +176,7 @@ bundles:
 					</div>
 				</div>
 
-				<div class="col-md-4 col-sm-12 col-xs-12 column">
+				<div class="col-md-4 col-sm-12 col-12 column">
 					<p>Want us to run a training? Can we help kickstart a new program? <a href="/en/work-with-us/" class="light bold underline">Hire us to work with you.</a></p>
 					<div>
 						<a href="/en/work-with-us/">
@@ -209,7 +216,7 @@ bundles:
 			</header>
 			<div class="partners row">
 				{% for partner in site.data.partners %}
-					<div class="col-md-4 col-sm-12 col-xs-12"><a href="{{ partner.url }}" class="dark">{{ partner.name }}</a></div>
+					<div class="col-md-4 col-sm-12 col-12"><a href="{{ partner.url }}" class="dark">{{ partner.name }}</a></div>
 				{% endfor %}
 			</div>
 
@@ -222,7 +229,7 @@ bundles:
 			</header>
 			<div class="funders row">
 				{% for funder in site.data.funders %}
-				<div class="funder col-md-4 col-sm-6 col-xs-12">
+				<div class="funder col-md-4 col-sm-6 col-12">
 					<a href="{{ funder.url }}">
 						<img src="{{ site.baseurl }}{{ funder.logo }}" alt="{{ funder.name }}">
 					</a>
@@ -239,6 +246,7 @@ bundles:
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 
+<script src="{{ site.baseurl }}/assets/js/vendor/scroll-magic.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/index.js"></script>
 
 {% include ga.html %}

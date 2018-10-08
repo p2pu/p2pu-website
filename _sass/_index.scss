@@ -21,6 +21,8 @@ main {
 	    margin-bottom: 1em;
 	    line-height: normal;
 	    font-size: 2em;
+	    font-family: $font-family-sans-serif;
+	    font-weight: $font-weight-bold;
     }
   }
 
@@ -94,6 +96,7 @@ main {
 
 						h4 {
 							padding: $padding-sm 0;
+							font-family: $font-family-sans-serif;
 						}
 
 						.material-icons {
@@ -154,6 +157,7 @@ main {
 		    padding-left: $padding-sm;
 		    padding-right: $padding-sm;
 		    padding-top: $padding-sm;
+		    width: 100%;
 
 	    	.meetings {
 	    		.meeting-card {
@@ -161,7 +165,7 @@ main {
 							.date {
 								color: $p2pu-blue;
 								text-transform: uppercase;
-						    font-size: $font-size-small;
+						    font-size: $font-size-sm;
 						    display: flex;
 						    align-items: center;
 						    margin-bottom: $padding-xs;
@@ -183,7 +187,7 @@ main {
 								}
 
 								.location {
-									font-size: $font-size-small;
+									font-size: $font-size-sm;
 								}
 
 								.bold {
@@ -330,7 +334,7 @@ main {
 						}
 
 						.organization {
-							font-size: $font-size-small;
+							font-size: $font-size-sm;
 						}
 					}
 				}
@@ -437,9 +441,9 @@ main {
 	margin-left: 0 !important;
 }
 
-@media (max-width: $screen-sm-max) {
+@media (max-width: map-get($grid-breakpoints, "md")) {
 	body {
-		font-size: $font-size-base-mobile;
+		font-size: $font-size-base;
 	}
 
 	main {
@@ -526,7 +530,7 @@ main {
 	}
 }
 
-@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+@media (min-width: map-get($grid-breakpoints, "sm")) and (max-width: map-get($grid-breakpoints, "md")) {
 	main {
 		section {
 			padding: $padding-sm;
@@ -538,7 +542,7 @@ main {
 	}
 }
 
-@media (max-width: $screen-xs) {
+@media (max-width: map-get($grid-breakpoints, "sm")) {
 	section#learning-circles {
 		.overview {
 			#stats {

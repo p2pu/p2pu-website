@@ -6,11 +6,10 @@
     <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     {% include tag_manager_head.html %}
 
@@ -29,9 +28,13 @@
         {% endfor %}
     {% endif %}
 
-		<link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
-		<script src="{{ "/assets/js/vendor/modernizr-2.6.2.min.js" | prepend: site.baseurl }}"></script>
-	          <script type="text/javascript">window.liveSettings={api_key:"3cb3a6db697c4b138c1378204e79a8a3"};</script>
-          <script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+	<link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
+    <script type="text/javascript">window.liveSettings={api_key:"3cb3a6db697c4b138c1378204e79a8a3"};</script>
+    <script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
 </head>

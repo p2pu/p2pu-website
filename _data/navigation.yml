@@ -34,22 +34,22 @@ top_level:
 socials:
   - text: Medium
     url: https://medium.com/p2pu
-    icon_class: fa fa-medium
+    icon_class: fab fa-medium-m
   - text: YouTube
     url: https://www.youtube.com/channel/UCJH3nTAgEAGljjTB5B8PjFw
-    icon_class: fa fa-youtube
+    icon_class: fab fa-youtube
   - text: Flickr
     url: https://www.flickr.com/groups/p2pu/
-    icon_class: fa fa-flickr
+    icon_class: fab fa-flickr
   - text: Instagram
     url: https://www.instagram.com/p2puniversity/
-    icon_class: fa fa-instagram
+    icon_class: fab fa-instagram
   - text: Twitter
     url: https://twitter.com/P2PU
-    icon_class: fa fa-twitter
+    icon_class: fab fa-twitter
   - text: Facebook
     url: https://www.facebook.com/P2PUniversity
-    icon_class: fa fa-facebook
+    icon_class: fab fa-facebook
   - text: Email
     url: mailto:thepeople@p2pu.org
-    icon_class: fa fa-envelope
+    icon_class: fas fa-envelope
