@@ -23,14 +23,12 @@ const ResourceCategory = ({ category, topics, step }) => {
 
         <IntroText section={category.slug}/>
 
-        <div className="row">
-          <div className="resources">
+        <div className="row resources">
             {
               topics.map(topic => (
                 <ResourceCard topic={topic} key={topic.id} defaultImagePath={category.defaultImagePath} />
               ))
             }
-          </div>
           <div className="see-more col-12 minicaps">
             <a href={categoryUrl}>
               More resources
