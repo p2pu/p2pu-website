@@ -68,4 +68,41 @@
     });
   })
 
+  // Initialize mapbox map
+
+  var url = 'https://learningcircles.p2pu.org/api/learningcircles/?active=true'
+
+  mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ';
+  var map = new mapboxgl.Map({
+    container: 'global-map',
+    style: 'mapbox://styles/sharon-nomadic-labs/cjokl5im306372rnzp5rsykzw',
+    zoom: 1.6,
+    scrollZoom: false,
+    center: [-31.949833, 27.947533],
+  });
+
+  var nav = new mapboxgl.NavigationControl();
+  map.addControl(nav, 'bottom-right');
+
+  $.ajax({
+      url,
+      dataType: 'JSONP',
+      type: 'GET',
+      success: (res) => {
+        $.each(res.items, function(index, item) {
+          if (item.latitude && item.longitude) {
+            // create a HTML element for each feature
+            var el = document.createElement('div');
+            el.className = 'marker';
+            el.setAttribute('title', item.course_title);
+
+            // make a marker for each feature and add to the map
+            new mapboxgl.Marker(el)
+            .setLngLat([item.longitude, item.latitude])
+            .addTo(map);
+          }
+        })
+      }
+    });
+
 })(jQuery)

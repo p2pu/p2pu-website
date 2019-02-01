@@ -441,6 +441,25 @@ main {
 	margin-left: 0 !important;
 }
 
+#global-map {
+  height: 420px;
+}
+
+.marker {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $p2pu-blue;
+  cursor: default;
+
+  &.with-popup {
+    cursor: pointer;
+    background-color: $p2pu-orange;
+    width: 15px;
+    height: 15px;
+  }
+}
+
 @media (max-width: map-get($grid-breakpoints, "md")) {
 	body {
 		font-size: $font-size-base;
