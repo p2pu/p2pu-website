@@ -70,7 +70,7 @@
 
   // Initialize mapbox map
 
-  var url = 'https://learningcircles.p2pu.org/api/learningcircles/?active=true'
+  var url = 'http://localhost:8000/api/learningcircles/'
 
   mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ';
   var map = new mapboxgl.Map({
@@ -91,9 +91,13 @@
       success: (res) => {
         $.each(res.items, function(index, item) {
           if (item.latitude && item.longitude) {
+
             // create a HTML element for each feature
             var el = document.createElement('div');
-            el.className = 'marker';
+            var active = Date.parse(item.end_date) > Date.now()
+            console.log('active', active)
+            var classes = active ? "marker active" : "marker";
+            el.className = classes;
             el.setAttribute('title', item.course_title);
 
             // make a marker for each feature and add to the map

@@ -452,6 +452,10 @@ main {
   background-color: $p2pu-blue;
   cursor: default;
 
+  &.active {
+  	background-color: $p2pu-orange;
+  }
+
   &.with-popup {
     cursor: pointer;
     background-color: $p2pu-orange;
