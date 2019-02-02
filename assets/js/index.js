@@ -82,7 +82,7 @@
   });
 
   var nav = new mapboxgl.NavigationControl();
-  map.addControl(nav, 'bottom-right');
+  map.addControl(nav, 'top-right');
 
   $.ajax({
       url,
@@ -94,9 +94,8 @@
 
             // create a HTML element for each feature
             var el = document.createElement('div');
-            var active = Date.parse(item.end_date) > Date.now()
-            console.log('active', active)
-            var classes = active ? "marker active" : "marker";
+            var year = item.start_date.substr(0,4)
+            var classes = "marker year" + year
             el.className = classes;
             el.setAttribute('title', item.course_title);
 
