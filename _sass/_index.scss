@@ -77,8 +77,27 @@ main {
 
 	section#landing {
 		@include flex-column-centered;
-		min-height: 90vh;
 		padding: $padding-sm 0;
+
+		.image-container {
+			margin-top: 2em;
+
+			.video {
+				position: relative;
+		    padding-bottom: 56.25%;
+		    height: 0;
+		    max-width: 740px;
+		    width: 100vw;
+
+				iframe {
+					position: absolute;
+			    left: 0;
+			    top: 0;
+			    width: 100%;
+			    height: 100%;
+				}
+			}
+		}
 	}
 
 	section#learning-circles {
@@ -457,7 +476,7 @@ main {
 
 		section#landing {
 			#header-text-carousel {
-				height: 200px;
+				height: 180px;
 			}
 		}
 
