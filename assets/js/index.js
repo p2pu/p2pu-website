@@ -72,40 +72,32 @@
 
   var url = 'http://localhost:8000/api/learningcircles/'
 
-  mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ';
-  var map = new mapboxgl.Map({
-    container: 'global-map',
-    style: 'mapbox://styles/sharon-nomadic-labs/cjokl5im306372rnzp5rsykzw',
-    zoom: 1.6,
-    scrollZoom: false,
-    center: [-31.949833, 27.947533],
-  });
+  var accessToken = 'pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ';
 
-  var nav = new mapboxgl.NavigationControl();
-  map.addControl(nav, 'top-right');
+  var mymap = L.map('global-map').setView([60, -0.09], 2);
+
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + accessToken, {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox.streets',
+      accessToken: accessToken
+  }).addTo(mymap);
+
+  var markerClusters = L.markerClusterGroup();
 
   $.ajax({
-      url,
-      dataType: 'JSONP',
-      type: 'GET',
-      success: (res) => {
-        $.each(res.items, function(index, item) {
-          if (item.latitude && item.longitude) {
-
-            // create a HTML element for each feature
-            var el = document.createElement('div');
-            var year = item.start_date.substr(0,4)
-            var classes = "marker year" + year
-            el.className = classes;
-            el.setAttribute('title', item.course_title);
-
-            // make a marker for each feature and add to the map
-            new mapboxgl.Marker(el)
-            .setLngLat([item.longitude, item.latitude])
-            .addTo(map);
-          }
-        })
-      }
-    });
+    url,
+    dataType: 'JSONP',
+    type: 'GET',
+    success: (res) => {
+      $.each(res.items, function(index, item) {
+        if (item.latitude && item.longitude) {
+          var m = L.marker( [item.latitude, item.longitude] )
+          markerClusters.addLayer( m );
+        }
+      })
+      mymap.addLayer( markerClusters );
+    }
+  });
 
 })(jQuery)
