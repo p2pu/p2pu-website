@@ -458,19 +458,19 @@ main {
   background-color: $gray-darker;
   cursor: default;
 
-  &.year2019 {
+  &.orange {
   	background-color: $p2pu-orange;
   }
 
-  &.year2018 {
+  &.yellow {
   	background-color: $p2pu-yellow;
   }
 
-  &.year2017 {
+  &.green {
   	background-color: $p2pu-green;
   }
 
-  &.year2016 {
+  &.blue {
   	background-color: $p2pu-blue;
   }
 
@@ -479,6 +479,30 @@ main {
     background-color: $p2pu-orange;
     width: 15px;
     height: 15px;
+  }
+}
+
+.marker-cluster {
+
+  &.marker-cluster-small {
+		background-color: transparentize($p2pu-green, 0.4);
+		> div {
+			background-color: transparentize($p2pu-green, 0.4);
+		}
+  }
+
+  &.marker-cluster-medium {
+		background-color: transparentize($p2pu-yellow, 0.4);
+		> div {
+			background-color: transparentize($p2pu-yellow, 0.4);
+		}
+  }
+
+  &.marker-cluster-large {
+		background-color: transparentize($p2pu-orange, 0.4);
+		> div {
+			background-color: transparentize($p2pu-orange, 0.4);
+		}
   }
 }
 

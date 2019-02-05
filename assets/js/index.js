@@ -73,10 +73,11 @@
   var url = 'http://localhost:8000/api/learningcircles/'
 
   var accessToken = 'pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ';
+  var tileLayer = "https://api.mapbox.com/styles/v1/sharon-nomadic-labs/cjokl5im306372rnzp5rsykzw/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjamtoM255YTQwMGw2M3dtcnNqd2FibTk5In0.mlkvZ9zSFY0kJBd9HEG2rg"
 
-  var mymap = L.map('global-map').setView([60, -0.09], 2);
+  var mymap = L.map('global-map').setView([22, -26], 2.2);
 
-  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + accessToken, {
+  L.tileLayer(tileLayer, {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
       id: 'mapbox.streets',
@@ -84,6 +85,7 @@
   }).addTo(mymap);
 
   var markerClusters = L.markerClusterGroup();
+  var markerIcon = L.divIcon({className: 'marker blue'});
 
   $.ajax({
     url,
@@ -92,7 +94,7 @@
     success: (res) => {
       $.each(res.items, function(index, item) {
         if (item.latitude && item.longitude) {
-          var m = L.marker( [item.latitude, item.longitude] )
+          var m = L.marker( [item.latitude, item.longitude], { icon: markerIcon } )
           markerClusters.addLayer( m );
         }
       })
