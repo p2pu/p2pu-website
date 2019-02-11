@@ -14,6 +14,7 @@ export default class FacilitatorResources extends Component {
       topics: {
         "orientation": [],
         "creating-a-learning-circle": [],
+        "courses-and-topics": [],
         "promotion-and-outreach": [],
         "facilitation": [],
         "reflection-and-wrapping-up": [],
@@ -32,8 +33,10 @@ export default class FacilitatorResources extends Component {
       const apiEndpoint = `${DISCOURSE_API_URL}/c/learning-circles/${
         category.slug
       }.json?tags=featured`;
+      console.log('apiEndpoint', apiEndpoint)
 
       axios.get(apiEndpoint).then(res => {
+        console.log("res.data", res.data)
         this.setState({
           topics: {
             ...this.state.topics,
