@@ -70,10 +70,10 @@
 
   // Initialize mapbox map
 
-  var url = 'http://localhost:8000/api/learningcircles/'
+  var url = 'http://localhost:8000/api/learning-circles-map/'
 
   var accessToken = 'pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ';
-  var tileLayer = "https://api.mapbox.com/styles/v1/sharon-nomadic-labs/cjokl5im306372rnzp5rsykzw/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjamtoM255YTQwMGw2M3dtcnNqd2FibTk5In0.mlkvZ9zSFY0kJBd9HEG2rg"
+  var tileLayer = "https://api.mapbox.com/styles/v1/sharon-nomadic-labs/cjokl5im306372rnzp5rsykzw/tiles/256/{z}/{x}/{y}@2x?access_token=" + accessToken;
 
   var mymap = L.map('global-map').setView([22, -26], 2.2);
 
