@@ -442,13 +442,17 @@ main {
 }
 
 #map-section {
+	padding-top: 0;
+
 	.container {
 		position: relative;
+		margin-bottom: $padding-sm;
 	}
 }
 
 #global-map {
-  height: 420px;
+  height: 500px;
+  max-height: calc(100vh - 52px);
 }
 
 .marker {
@@ -456,34 +460,14 @@ main {
   height: 15px;
   border-radius: 50%;
   background-color: $gray-darker;
-  cursor: default;
+  cursor: pointer;
 
-  &.orange {
-  	background-color: $p2pu-orange;
-  }
-
-  &.yellow {
-  	background-color: $p2pu-yellow;
-  }
-
-  &.green {
-  	background-color: $p2pu-green;
-  }
-
-  &.blue {
+  &.active {
   	background-color: $p2pu-blue;
-  }
-
-  &.with-popup {
-    cursor: pointer;
-    background-color: $p2pu-orange;
-    width: 15px;
-    height: 15px;
   }
 }
 
 .marker-cluster {
-
   &.marker-cluster-small {
 		background-color: transparentize($p2pu-green, 0.4);
 		> div {
@@ -511,7 +495,6 @@ main {
   bottom: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.8);
-  margin-right: 20px;
   overflow: auto;
   border-radius: 3px;
 }
@@ -520,8 +503,9 @@ main {
   padding: 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   line-height: 18px;
-  margin-bottom: 40px;
-  width: 100px;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  z-index: 99999;
 }
 
 .legend-key {
@@ -530,20 +514,9 @@ main {
   width: 10px;
   height: 10px;
   margin-right: 5px;
+  background-color: $gray-darker;
 
-  &.year2019 {
-  	background-color: $p2pu-orange;
-  }
-
-  &.year2018 {
-  	background-color: $p2pu-yellow;
-  }
-
-  &.year2017 {
-  	background-color: $p2pu-green;
-  }
-
-  &.year2016 {
+  &.active {
   	background-color: $p2pu-blue;
   }
 }

@@ -68,38 +68,4 @@
     });
   })
 
-  // Initialize mapbox map
-
-  var url = 'http://localhost:8000/api/learning-circles-map/'
-
-  var accessToken = 'pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ';
-  var tileLayer = "https://api.mapbox.com/styles/v1/sharon-nomadic-labs/cjokl5im306372rnzp5rsykzw/tiles/256/{z}/{x}/{y}@2x?access_token=" + accessToken;
-
-  var mymap = L.map('global-map').setView([22, -26], 2.2);
-
-  L.tileLayer(tileLayer, {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
-      id: 'mapbox.streets',
-      accessToken: accessToken
-  }).addTo(mymap);
-
-  var markerClusters = L.markerClusterGroup();
-  var markerIcon = L.divIcon({className: 'marker blue'});
-
-  $.ajax({
-    url,
-    dataType: 'JSONP',
-    type: 'GET',
-    success: (res) => {
-      $.each(res.items, function(index, item) {
-        if (item.latitude && item.longitude) {
-          var m = L.marker( [item.latitude, item.longitude], { icon: markerIcon } )
-          markerClusters.addLayer( m );
-        }
-      })
-      mymap.addLayer( markerClusters );
-    }
-  });
-
 })(jQuery)
