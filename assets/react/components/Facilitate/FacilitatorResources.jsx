@@ -14,6 +14,7 @@ export default class FacilitatorResources extends Component {
       topics: {
         "orientation": [],
         "creating-a-learning-circle": [],
+        "courses-and-topics": [],
         "promotion-and-outreach": [],
         "facilitation": [],
         "reflection-and-wrapping-up": [],

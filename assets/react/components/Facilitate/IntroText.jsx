@@ -12,6 +12,12 @@ const CreateLearningCircle = () => (
   </div>
 )
 
+const CoursesAndTopics = () => (
+  <div className="margin-sm">
+    <p>This is the space to discuss specific course topics in more detail. Found a great new resource for web design learning circles? Post it here! Not satisfied with finance-related online courses? Ask for help finding something better! This space helps the community find and create new and better resources to help future learning circles succeed.</p>
+  </div>
+)
+
 const Promotion = () => (
   <div className="margin-sm">
     <p>After you have created your learning circle, you will need to conduct promotion and outreach. Here you can find flyer templates, sample messages to promote your learning circle, and discussion with other facilitators about how they get folks to show up.</p>
@@ -40,6 +46,7 @@ const Testimony = () => (
 const introMap = {
   "orientation": Orientation,
   "creating-a-learning-circle": CreateLearningCircle,
+  "courses-and-topics": CoursesAndTopics,
   "promotion-and-outreach": Promotion,
   "facilitation": Facilitation,
   "reflection-and-wrap-up": Reflection,

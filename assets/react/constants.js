@@ -65,6 +65,7 @@ export const LOGIN_REDIRECT_URL = "https://learningcircles.p2pu.org/en/login_red
 export const DISCOURSE_CATEGORIES = [
   { title: 'Orientation', slug: 'orientation', defaultImagePath: '/assets/images/facilitate/profile_1_1.jpg' },
   { title: 'Creating a learning circle', slug: 'creating-a-learning-circle', defaultImagePath: '/assets/images/facilitate/profile_5_1.jpg' },
+  { title: 'Courses and Topics', slug: 'courses-and-topics', defaultImagePath: '/assets/images/facilitate/courses_topics.jpg' },
   { title: 'Promotion and outreach', slug: 'promotion-and-outreach', defaultImagePath: '/assets/images/facilitate/profile_4_2.jpg' },
   { title: 'Facilitation', slug: 'facilitation', defaultImagePath: '/assets/images/facilitate/profile_5_2.jpg' },
   { title: 'Reflection and wrap up', slug: 'reflection-and-wrap-up', defaultImagePath: '/assets/images/finance_for_everyone.jpg' },
