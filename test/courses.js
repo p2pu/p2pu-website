@@ -1,4 +1,5 @@
 const fs = require('fs');
+const url = require('url');
 
 describe('when opening the courses page', function () {
   let page;
@@ -11,13 +12,17 @@ describe('when opening the courses page', function () {
     let apiData = fs.readFileSync('./test/fixtures/courses.json');
     page.on('request', interceptedRequest => {
       if (interceptedRequest.url().startsWith(apiUrl)) {
-        let url = interceptedRequest.url();
-        let callback = url.slice(url.lastIndexOf('=')+1)
+        let requestUrl = new url.URL(interceptedRequest.url());
+        let callback = requestUrl.searchParams.get('callback');
+        let body = apiData;
+        if (callback) {
+          body = `${callback}(${apiData});`;
+        }
         console.log(callback);
         interceptedRequest.respond({
           status: 200,
           contentType: 'application/json',
-          body: `${callback}(${apiData});`,
+          body: body,
         });
       } else {
         interceptedRequest.continue();
