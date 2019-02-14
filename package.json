@@ -59,6 +59,7 @@
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
     "prop-types": "^15.6.1",
-    "puppeteer": "^1.12.2"
+    "puppeteer": "^1.12.2",
+    "serve": "^10.1.2"
   }
 }
