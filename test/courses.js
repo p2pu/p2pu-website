@@ -13,6 +13,7 @@ describe('when opening the courses page', function () {
       if (interceptedRequest.url().startsWith(apiUrl)) {
         let url = interceptedRequest.url();
         let callback = url.slice(url.lastIndexOf('=')+1)
+        console.log(callback);
         interceptedRequest.respond({
           status: 200,
           contentType: 'application/json',
