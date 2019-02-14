@@ -1,10 +1,6 @@
 language: ruby
 rvm:
 - 2.5
-branches:
-  only:
-  - master
-  - release
 sudo: required
 services:
   - docker
@@ -18,6 +14,7 @@ script:
 
 after_success:
 - if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then echo "Deployments are only done for branches. "; exit 0; fi
+- if [[ "$TRAVIS_BRANCH" != "release"]] && [["$TRAVIS_BRANCH" != "master"]]; then echo "Only release and master branches are deployed"; exit 0; fi
 - echo "Deploying commit $TRAVIS_COMMIT"
 - bundle exec s3_website cfg apply --headless
 - bundle exec s3_website push
