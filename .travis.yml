@@ -1,10 +1,6 @@
 language: ruby
 rvm:
 - 2.5
-branches:
-  only:
-  - master
-  - release
 sudo: required
 services:
   - docker
@@ -13,9 +9,12 @@ sudo: false
 
 script:
 - docker run --rm -it --volume `pwd`:/opt/app --workdir /opt/app node:carbon-alpine /bin/sh -c "npm install && npm run build" && bundle exec jekyll build
+- docker run --name=site -d --volume `pwd`/_site:/var/www node:carbon-alpine /bin/sh -c "npm i serve && npx serve /var/www"
+- docker run --rm -it --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
 
 after_success:
 - if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then echo "Deployments are only done for branches. "; exit 0; fi
+- if [[ "$TRAVIS_BRANCH" != "release" ]] && [[ "$TRAVIS_BRANCH" != "master" ]]; then echo "Only release and master branches are deployed"; exit 0; fi
 - echo "Deploying commit $TRAVIS_COMMIT"
 - bundle exec s3_website cfg apply --headless
 - bundle exec s3_website push
