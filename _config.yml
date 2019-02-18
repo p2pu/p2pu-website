@@ -20,8 +20,8 @@ sass:
 
 env: prod
 
-mapbox_access_token: 'pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ'
-default_base_api_endpoint: 'http://localhost:8000'
+mapbox_access_token: pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ
+default_base_api_endpoint: 'https://learningcircles.p2pu.org'
 
 exclude:
   - Guardfile
