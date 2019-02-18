@@ -460,6 +460,86 @@ main {
 	margin-left: 0 !important;
 }
 
+#map-section {
+	padding-top: 0;
+
+	.container {
+		position: relative;
+		margin-bottom: $padding-sm;
+	}
+}
+
+#global-map {
+  height: 500px;
+  max-height: calc(100vh - 52px);
+}
+
+.marker {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $gray-darker;
+  cursor: pointer;
+
+  &.active {
+  	background-color: $p2pu-blue;
+  }
+}
+
+.marker-cluster {
+  &.marker-cluster-small {
+		background-color: transparentize($p2pu-green, 0.4);
+		> div {
+			background-color: transparentize($p2pu-green, 0.4);
+		}
+  }
+
+  &.marker-cluster-medium {
+		background-color: transparentize($p2pu-yellow, 0.4);
+		> div {
+			background-color: transparentize($p2pu-yellow, 0.4);
+		}
+  }
+
+  &.marker-cluster-large {
+		background-color: transparentize($p2pu-orange, 0.4);
+		> div {
+			background-color: transparentize($p2pu-orange, 0.4);
+		}
+  }
+}
+
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  overflow: auto;
+  border-radius: 3px;
+}
+
+#legend {
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 18px;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  z-index: 99999;
+}
+
+.legend-key {
+  display: inline-block;
+  border-radius: 20%;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  background-color: $gray-darker;
+
+  &.active {
+  	background-color: $p2pu-blue;
+  }
+}
+
 @media (max-width: map-get($grid-breakpoints, "md")) {
 	body {
 		font-size: $font-size-base;
