@@ -5,7 +5,7 @@ sudo: false
 services:
 - docker
 install: bundle install
-script: ./script/ciscript.sh
+script: ./script/cibuild.sh
 after_success:
 - if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then echo "Deployments are only done
   for branches. "; exit 0; fi
