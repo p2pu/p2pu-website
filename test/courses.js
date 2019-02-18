@@ -12,15 +12,12 @@ describe('when opening the courses page', function () {
     let apiData = fs.readFileSync('./test/fixtures/courses.json');
     page.on('request', interceptedRequest => {
       if (interceptedRequest.url().startsWith(apiUrl)) {
-        console.log(interceptedRequest.url());
         let requestUrl = new url.URL(interceptedRequest.url());
         let callback = requestUrl.searchParams.get('callback');
         let body = apiData;
-        console.log(body);
         if (callback) {
           body = `${callback}(${apiData});`;
         }
-        console.log(callback);
         interceptedRequest.respond({
           status: 200,
           contentType: 'application/json',
