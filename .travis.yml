@@ -5,15 +5,7 @@ sudo: false
 services:
 - docker
 install: bundle install
-script:
-- echo "mapbox_access_token: '$MAPBOX_ACCESS_TOKEN'" > ./_production.yml
-- docker run --rm -it --volume `pwd`:/opt/app --workdir /opt/app node:carbon-alpine
-  /bin/sh -c "npm install && npm run build"
-- bundle exec jekyll build --config _config.yml,_production.yml
-- docker run --name=site -d --volume `pwd`/_site:/var/www node:carbon-alpine /bin/sh
-  -c "npm i serve && npx serve /var/www"
-- docker run --rm -it --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000
-  p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
+script: ./script/ciscript.sh
 after_success:
 - if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then echo "Deployments are only done
   for branches. "; exit 0; fi
