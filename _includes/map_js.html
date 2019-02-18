@@ -1,0 +1,51 @@
+<script type="text/javascript">
+  var url = "{{ site.default_base_api_endpoint }}/api/learning-circles-map/"
+
+  var accessToken = "{{ site.mapbox_access_token }}"
+  var tileLayer = "https://api.mapbox.com/styles/v1/sharon-nomadic-labs/cjokl5im306372rnzp5rsykzw/tiles/256/{z}/{x}/{y}@2x?access_token=" + accessToken;
+
+  var mymap = L.map('global-map', {
+    scrollWheelZoom: false,
+  }).setView([20, 10], 2.2);
+
+  L.tileLayer(tileLayer, {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox.streets',
+      accessToken: accessToken,
+  }).addTo(mymap);
+
+  var markerClusters = L.markerClusterGroup();
+
+  $.ajax({
+    url,
+    dataType: 'JSONP',
+    type: 'GET',
+    success: (res) => {
+      $.each(res.items, function(index, item) {
+        if (item.latitude && item.longitude) {
+          var classes = item.active ? "marker active" : "marker";
+          var markerIcon = L.divIcon({className: classes});
+          var m = L.marker( [item.latitude, item.longitude], { icon: markerIcon } )
+
+          var popupContent = "";
+          var title = "<div><strong>" + item.title + "</strong></div>";
+          var year = "<div>" + item.city + ", " + item.start_date.substring(0,4) + "</div>";
+
+          popupContent += title
+          popupContent += year
+
+          if (item.url) {
+            var anchorText = item.active ? "Signup page" : "Final report";
+            var link = "<div><a href='" + item.url + "' target='_blank'>" + anchorText + "</a></div>"
+            popupContent += link
+          }
+
+          m.bindPopup(popupContent)
+          markerClusters.addLayer( m );
+        }
+      })
+      mymap.addLayer( markerClusters );
+    }
+  });
+</script>
