@@ -36,8 +36,12 @@
           popupContent += year
 
           if (item.url) {
-            var anchorText = item.active ? "Signup page" : "Final report";
-            var link = "<div><a href='" + item.url + "' target='_blank'>" + anchorText + "</a></div>"
+            var link = "<div><a href='" + item.url + "' target='_blank'>Signup page</a></div>"
+            popupContent += link
+          }
+
+          if (item.report_url) {
+            var link = "<div><a href='" + item.report_url + "' target='_blank'>Final report</a></div>"
             popupContent += link
           }
 
