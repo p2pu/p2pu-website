@@ -137,6 +137,31 @@ routing_rules:
       host_name: www.p2pu.org
       replace_key_with: en/learning-circles/?team_id=19&team=Free Library of Philadelphia
       http_redirect_code: 302
+  - condition:
+      key_prefix_equals: richlandcounty
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=20&team=Richland County
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: cambridgepl 
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=21&team=Cambridge Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: lapl
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=22&team=Los Angeles Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: oflibrary
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=23&team=Onondaga Free Library
+      http_redirect_code: 302
+
 
 # Lernanta EN redirects 
   - condition:
