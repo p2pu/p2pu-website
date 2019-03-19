@@ -24,8 +24,7 @@
     success: (res) => {
       $.each(res.items, function(index, item) {
         if (item.latitude && item.longitude) {
-          var classes = item.active ? "marker active" : "marker";
-          var markerIcon = L.divIcon({className: classes});
+          var markerIcon = L.divIcon({className: "marker"});
           var m = L.marker( [item.latitude, item.longitude], { icon: markerIcon } )
 
           var popupContent = "";
