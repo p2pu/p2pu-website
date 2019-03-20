@@ -266,5 +266,8 @@ DEPENDENCIES
   github-pages
   s3_website
 
+RUBY VERSION
+   ruby 2.5.1p57
+
 BUNDLED WITH
-   1.16.1
+   1.17.3
