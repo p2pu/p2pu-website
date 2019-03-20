@@ -77,8 +77,27 @@ main {
 
 	section#landing {
 		@include flex-column-centered;
-		min-height: 90vh;
 		padding: $padding-sm 0;
+
+		.image-container {
+			margin-top: 2em;
+
+			.video {
+				position: relative;
+		    padding-bottom: 56.25%;
+		    height: 0;
+		    max-width: 740px;
+		    width: 100vw;
+
+				iframe {
+					position: absolute;
+			    left: 0;
+			    top: 0;
+			    width: 100%;
+			    height: 100%;
+				}
+			}
+		}
 	}
 
 	section#learning-circles {
@@ -441,6 +460,51 @@ main {
 	margin-left: 0 !important;
 }
 
+#map-section {
+	padding-top: 0;
+
+	.container {
+		position: relative;
+		margin-bottom: $padding-sm;
+	}
+}
+
+#global-map {
+  height: 500px;
+  max-height: calc(100vh - 52px);
+}
+
+.marker {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $p2pu-blue;
+  cursor: pointer;
+}
+
+.marker-cluster {
+  &.marker-cluster-small {
+		background-color: transparentize($p2pu-green, 0.4);
+		> div {
+			background-color: transparentize($p2pu-green, 0.4);
+		}
+  }
+
+  &.marker-cluster-medium {
+		background-color: transparentize($p2pu-yellow, 0.4);
+		> div {
+			background-color: transparentize($p2pu-yellow, 0.4);
+		}
+  }
+
+  &.marker-cluster-large {
+		background-color: transparentize($p2pu-orange, 0.4);
+		> div {
+			background-color: transparentize($p2pu-orange, 0.4);
+		}
+  }
+}
+
 @media (max-width: map-get($grid-breakpoints, "md")) {
 	body {
 		font-size: $font-size-base;
@@ -457,7 +521,7 @@ main {
 
 		section#landing {
 			#header-text-carousel {
-				height: 200px;
+				height: 180px;
 			}
 		}
 

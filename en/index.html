@@ -22,6 +22,16 @@ bundles:
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!-- Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+
+
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="{{ "/assets/css/p2pu-index.css" | prepend: site.baseurl }}">
 	<link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
@@ -59,27 +69,30 @@ bundles:
 				<div class="bg-line yellow"></div>
 				<div class="bg-line orange"></div>
 			</div>
-			<div class="image">
-				<a href="http://info.p2pu.org/2016/12/20/p2pu-in-detroit/" class="undecorated">
-					<img src="{{ site.baseurl }}/assets/images/learning-circle-cropped.jpg" alt="Learning circle in Chicago">
-				</a>
-				<div class="caption">
-					<small>Detroit Public Library (Parkman Branch) user innovation and entrepreneurship learning circle</small>
-				</div>
+			<div class="video">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/bQqmIS7WQa8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 	</section>
 
 	<section id="learning-circles">
-		<div class="header-text">
-			<h1 class="bold centered">Learning circles are free study groups for people who want to take online classes together and in-person.</h1>
-		</div>
+		<div class="container">
+			<div class="header-text">
+				<h1 class="bold centered">Learning circles are free study groups for people who want to take online classes together and in-person.</h1>
+			</div>
 
-		<div class="overview">
-			<div class="container">
-				<div id="stats"></div>
+			<div class="overview">
+				<div class="container">
+					<div id="stats"></div>
+				</div>
 			</div>
 		</div>
+	</section>
+
+	<section id="map-section">
+	  <div class="container">
+	    <div id="global-map"></div>
+	  </div>
 	</section>
 
 	<section id="upcoming-meetings" data-aos="fade-up">
@@ -248,6 +261,13 @@ bundles:
 
 <script src="{{ site.baseurl }}/assets/js/vendor/scroll-magic.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/index.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+  crossorigin=""></script>
+<script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+{% include map_js.html %}
 
 {% include ga.html %}
 
