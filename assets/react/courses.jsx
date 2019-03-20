@@ -16,4 +16,3 @@ ReactDOM.render(
     onSelectResult={handleSelectResult}
   />, document.getElementById('search-courses-component')
 );
-

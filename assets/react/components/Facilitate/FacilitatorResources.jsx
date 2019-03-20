@@ -24,7 +24,7 @@ export default class FacilitatorResources extends Component {
     this.populateResources = () => this._populateResources();
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.populateResources();
   }
 
