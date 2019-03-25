@@ -1,9 +1,14 @@
 language: ruby
+cache:
+- bundler
 rvm:
-- 2.5
+- 2.6
 sudo: false
 services:
 - docker
+before_install:
+    - gem update --system
+    - gem install bundler
 install: bundle install
 script: ./script/cibuild.sh
 after_success:
