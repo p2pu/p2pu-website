@@ -44,7 +44,8 @@ export default class FacilitatorResources extends Component {
     let topicNodes = top10topics.map(topic => {
       const posters = topic.posters.map(poster => poster.user_id);
       const users = this.state.users.filter(user => posters.includes(user.id));
-      const category = this.state.categories.find(cat => cat.id == topic.category_id);
+      const category = this.state.categories.find(cat => cat.id == topic.category_id) || {};
+
       return (
         <DiscourseTopic
           topic={topic}

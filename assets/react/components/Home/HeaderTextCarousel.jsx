@@ -15,7 +15,7 @@ const phrases = [
   'Become a better writer',
 ]
 
-const typistProps = {
+const defaultTypistProps = {
   blink: true,
   avgTypingDelay: 70,
   cursor: {
@@ -36,8 +36,14 @@ class HeaderTextCarousel extends React.Component {
     this.renderTypistToContainer()
   };
 
+  componentWillUnmount() {
+    clearTimeout(this.timerId);
+    const domNode = this.phraseContainer.current;
+    ReactDOM.unmountComponentAtNode(domNode);
+  }
+
   loopPhrase = () => {
-    const nextPhraseIndex = this.state.currentPhraseIndex == (phrases.length - 1) ? 0 : this.state.currentPhraseIndex + 1
+    const nextPhraseIndex = this.state.currentPhraseIndex === (phrases.length - 1) ? 0 : this.state.currentPhraseIndex + 1
     this.setState({ currentPhraseIndex: nextPhraseIndex })
   };
 
@@ -49,7 +55,7 @@ class HeaderTextCarousel extends React.Component {
 
   renderTypistToContainer = () => {
     const domNode = this.phraseContainer.current;
-    const typistProps = { ...typistProps, onTypingDone: this.handleTypingDone }
+    const typistProps = { ...defaultTypistProps, onTypingDone: this.handleTypingDone }
     const phrase = phrases[this.state.currentPhraseIndex];
 
     ReactDOM.unmountComponentAtNode(domNode);
