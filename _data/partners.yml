@@ -3,7 +3,7 @@
 
 - name: Carnegie Library of Pittsburgh
   url: https://www.carnegielibrary.org/
-  
+
 - name: Charlotte Mecklenburg Public Library
   url: https://www.cmlibrary.org/
 
@@ -12,6 +12,9 @@
 
 - name: Chicago Public Library
   url: https://www.chipublib.org/
+
+- name: Cologne Public Library
+  url: https://www.stadt-koeln.de/leben-in-koeln/stadtbibliothek/
 
 - name: Creative Commons
   url: https://creativecommons.org/
@@ -22,11 +25,20 @@
 - name: Detroit Public Library
   url: http://www.detroitpubliclibrary.org/
 
+- name: Dokk1
+  url: https://dokk1.dk/english
+
 - name: EIFL
   url: http://www.eifl.net/
 
+- name: Finnish eLearning Centre
+  url: https://eoppimiskeskus.fi/en/
+
 - name: Free Library of Philadelphia
   url: https://www.freelibrary.org/
+
+- name: Information Society Development Foundation
+  url: http://frsi.org.pl/en/
 
 - name: Kansas City Public Library
   url: https://www.kclibrary.org/
@@ -37,8 +49,14 @@
 - name: Libraries without Borders
   url: https://www.librarieswithoutborders.org/
 
+- name: Los Angeles Public Library
+  url: https://www.lapl.org/
+
 - name: Miami-Dade Public Library System
   url: http://www.mdpls.org/
+
+- name: Mid-Continent Public Library
+  url: https://www.mymcpl.org/
 
 - name: MIT Media Lab
   url: https://www.media.mit.edu/
@@ -51,18 +69,24 @@
 
 - name: Notre Dame Education Center
   url: http://www.ndecboston.org/
-  
+
 - name: OERu
   url: https://oeru.org/
+
+- name: Onondaga Free Library
+  url: https://oflibrary.org/
 
 - name: Open University
   url: https://www.open.ac.uk/
 
 - name: Partners Bridging the Digital Divide
   url: http://pbdd.org/
-  
+
 - name: Pierce County Library
   url: https://www.piercecountylibrary.org/
+
+- name: Progress Foundation
+  url: http://www.progressfoundation.ro/en/
 
 - name: Children's Museum of Pittsburgh
   url: https://pittsburghkids.org/
@@ -81,15 +105,18 @@
 
 - name: TASCHA
   url: http://tascha.uw.edu/
-  
+
 - name: Topeka & Shawnee County Public Library
   url: https://tscpl.org/
-  
+
 - name: Toronto Public Library
   url: https://www.torontopubliclibrary.ca/
 
 - name: Twin Lakes Library System
   url: http://tllsga.org/
+
+- name: West Vancouver Memorial
+  url: Library https://westvanlibrary.ca/
 
 - name: Wichita Public Library
   url: http://www.wichitalibrary.org/
