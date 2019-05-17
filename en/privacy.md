@@ -75,6 +75,6 @@ As used in this policy, “personally-identifying information” means informati
 
 ## n. For More Information
 
-1. If you would like to know what data P2PU has about you, would like a copy of all of this data, or would like to have your personally-identifying information deleted from P2PU, please contact our Data Protection Officer by emailing privacy@p2pu.org or writing to PO Box 7775 #44971, San Francisco, CA 94120, USA.
+1. P2PU will make efforts to communicate security breaches and changes to privacy policy directly to those who are affected. If at any time you would like to know what data P2PU has about you, would like a copy of all of this data, or would like to have your personally-identifying information deleted from P2PU, please contact our Data Protection Officer by emailing privacy@p2pu.org or writing to PO Box 7775 #44971, San Francisco, CA 94120, USA.
 
 Last updated 3 May 2019
