@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "build": "webpack -p --config webpack.config.js",
-    "build:debug": "webpack --config webpack.config.js",
+    "build:dev": "webpack --config webpack.config.js",
     "watch": "webpack --config webpack.config.js --watch",
     "profile": "webpack -p --config webpack.config.profile.js --watch",
     "test": "mocha test/bootstrap.js --timeout 10000 --recursive test"
@@ -34,8 +34,8 @@
     "moment": "^2.22.1",
     "moment-timezone": "^0.5.16",
     "node-sass": "^4.11.0",
-    "p2pu-input-fields": "^0.5.22",
-    "p2pu-search-cards": "^0.12.0",
+    "p2pu-input-fields": "0.5.24",
+    "p2pu-search-cards": "0.14.1",
     "p2pu-theme": "^1.1.2",
     "prop-types": "^15.7.2",
     "query-string": "^5.1.1",
