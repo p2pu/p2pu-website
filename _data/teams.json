@@ -1,0 +1,377 @@
+[
+   {
+      "id":20,
+      "name":"Richland County",
+      "page_slug":"richlandcounty",
+      "member_count":1,
+      "studygroup_count":0,
+      "organizer":{
+         "first_name":"Susan"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -80.882611,
+         "latitude": 34.126276
+      },
+   },
+   {
+      "id":11,
+      "name":"Boston Public Library",
+      "page_slug":"boston",
+      "member_count":5,
+      "studygroup_count":16,
+      "organizer":{
+         "first_name":"Jessica"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -71.07794225,
+         "latitude": 42.34960525
+      },
+   },
+   {
+      "id":4,
+      "name":"p2pu testing",
+      "page_slug":"test",
+      "member_count":1,
+      "studygroup_count":0,
+      "organizer":{
+         "first_name":"Dirk"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -80.505293,
+         "latitude": 43.455764
+      }
+   },
+   {
+      "id":9,
+      "name":"Pierce County Library",
+      "page_slug":"pierceco",
+      "member_count":7,
+      "studygroup_count":9,
+      "organizer":{
+         "first_name":"Jaime"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -122.387362,
+         "latitude": 47.155314
+       },
+   },
+   {
+      "id":15,
+      "name":"Cleveland Public Library",
+      "page_slug":"cleveland",
+      "member_count":7,
+      "studygroup_count":6,
+      "organizer":{
+         "first_name":"Denise"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -81.690829,
+         "latitude": 41.501488
+       },
+   },
+   {
+      "id":8,
+      "name":"Multnomah County Library",
+      "page_slug":"multnomahco",
+      "member_count":1,
+      "studygroup_count":0,
+      "organizer":{
+         "first_name":"Steph"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -122.682795,
+         "latitude": 45.519184
+       },
+   },
+   {
+      "id":7,
+      "name":"Wichita Public Library",
+      "page_slug":"wichita",
+      "member_count":13,
+      "studygroup_count":22,
+      "organizer":{
+         "first_name":"Cynthia"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -97.338627,
+         "latitude": 37.68423
+       },
+   },
+   {
+      "id":13,
+      "name":"Twin Lakes Library System",
+      "page_slug":"twinlakes",
+      "member_count":2,
+      "studygroup_count":2,
+      "organizer":{
+         "first_name":"Stephen"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -83.2321,
+         "latitude": 33.0801
+       }
+   },
+   {
+      "id":21,
+      "name":"Cambridge Public Library",
+      "page_slug":"cambridgepl",
+      "member_count":1,
+      "studygroup_count":6,
+      "organizer":{
+         "first_name":"Susannah"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -71.1104495,
+         "latitude": 42.374016999999995
+       },
+   },
+   {
+      "id":2,
+      "name":"Kenya National Library Service",
+      "page_slug":"knls",
+      "member_count":38,
+      "studygroup_count":189,
+      "organizer":{
+         "first_name":"Juliana"
+      },
+      "zoom": 4,
+      "coordinates": {
+         "longitude": 37.85,
+         "latitude": 0.4
+       }
+   },
+   {
+      "id":18,
+      "name":"Toronto Public Library",
+      "page_slug":"toronto",
+      "member_count":12,
+      "studygroup_count":17,
+      "organizer":{
+         "first_name":"Alex"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -79.386944,
+         "latitude": 43.671795
+       },
+   },
+   {
+      "id":10,
+      "name":"Providence Public Library",
+      "page_slug":"providence",
+      "member_count":8,
+      "studygroup_count":15,
+      "organizer":{
+         "first_name":"Sherry"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -71.416875,
+         "latitude": 41.8218965
+       },
+   },
+   {
+      "id":3,
+      "name":"EnglishNow",
+      "page_slug":"englishnow",
+      "member_count":9,
+      "studygroup_count":38,
+      "organizer":{
+         "first_name":"Nico"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -77.0366,
+         "latitude": 38.895
+       }
+   },
+   {
+      "id":12,
+      "name":"Detroit Public Library",
+      "page_slug":"detroit",
+      "member_count":10,
+      "studygroup_count":30,
+      "organizer":{
+         "first_name":"Qumisha"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -83.06679349999999,
+         "latitude": 42.358500500000005
+       },
+   },
+   {
+      "id":17,
+      "name":"Miami-Dade Public Library",
+      "page_slug":"mdpls",
+      "member_count":4,
+      "studygroup_count":5,
+      "organizer":{
+         "first_name":"Jennifer"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -80.189994,
+         "latitude": 25.940876
+       },
+   },
+   {
+      "id":19,
+      "name":"Free Library of Philadelphia",
+      "page_slug":"philadelphia",
+      "member_count":3,
+      "studygroup_count":3,
+      "organizer":{
+         "first_name":"Kalela"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -75.171042,
+         "latitude": 39.959276
+       },
+   },
+   {
+      "id":6,
+      "name":"San Jose Public Library",
+      "page_slug":"sanjose",
+      "member_count":15,
+      "studygroup_count":15,
+      "organizer":{
+         "first_name":"Marsha"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -121.881242,
+         "latitude": 37.335196
+      }
+   },
+   {
+      "id":14,
+      "name":"Tampa-Hillsborough County Public Library",
+      "page_slug":"hcplc",
+      "member_count":18,
+      "studygroup_count":13,
+      "organizer":{
+         "first_name":"Megan"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -82.462383,
+         "latitude": 27.950848
+       }
+   },
+   {
+      "id":16,
+      "name":"Kansas City Public Library",
+      "page_slug":"kclearningcircles",
+      "member_count":10,
+      "studygroup_count":34,
+      "organizer":{
+         "first_name":"Wendy"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -94.584019,
+         "latitude": 39.102424
+       },
+   },
+   {
+      "id":1,
+      "name":"Chicago Public Library",
+      "page_slug":"chicago",
+      "member_count":39,
+      "studygroup_count":92,
+      "organizer":{
+         "first_name":"Kate"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -87.660791,
+         "latitude": 41.97152
+       },
+   },
+   {
+      "id":22,
+      "name":"Los Angeles Public Library",
+      "page_slug":"lapl",
+      "member_count":2,
+      "studygroup_count":0,
+      "organizer":{
+         "first_name":"Christina"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -118.255366,
+         "latitude": 34.050562
+       },
+   },
+   {
+      "id":23,
+      "name":"Onondaga Free Library",
+      "page_slug":"oflibrary",
+      "member_count":1,
+      "studygroup_count":12,
+      "organizer":{
+         "first_name":"Al"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -76.181275,
+         "latitude": 43.004846
+       },
+   },
+   {
+      "id":24,
+      "name":"Mid-Continent Public Library",
+      "page_slug":"Sq1MCPL",
+      "member_count":1,
+      "studygroup_count":0,
+      "organizer":{
+         "first_name":"Morgan"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -94.418987,
+         "latitude": 39.100605
+       },
+   },
+   {
+      "id":5,
+      "name":"Charlotte Mecklenburg Library",
+      "page_slug":"charlotte",
+      "member_count":32,
+      "studygroup_count":23,
+      "organizer":{
+         "first_name":"Martha"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -80.839914,
+         "latitude": 35.228143
+       },
+   },
+   {
+      "id":25,
+      "name":"Spokane County Library District",
+      "page_slug":"scld",
+      "member_count":3,
+      "studygroup_count":0,
+      "organizer":{
+         "first_name":"Stacey"
+      },
+      "zoom": 7,
+      "coordinates": {
+         "longitude": -117.28194,
+         "latitude": 47.696407
+       },
+   }
+]

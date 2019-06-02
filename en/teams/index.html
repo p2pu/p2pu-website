@@ -1,0 +1,82 @@
+---
+title: Teams
+subtitle: Nisl rhoncus mattis rhoncus urna. Nec nam aliquam sem et tortor consequat id. Integer quis auctor elit sed. Etiam sit amet nisl purus in mollis. Eget mi proin sed libero enim sed faucibus turpis. At quis risus sed vulputate odio ut enim blandit volutpat.
+layout: base
+extra_css:
+ - /assets/css/p2pu-teams.css
+extra_js:
+- js/vendor/smooth-scroll.min.js
+- js/teams.js
+---
+
+<div data-spy="scroll" data-target="#team-menu" class="bg-light" id="top">
+  <section class="page-title mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <header class="pt-4 pb-3">
+            <h1 class="text-center">{{ page.title }}</h1>
+          </header>
+          <p class="centered large">{{ page.subtitle }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <nav id="team-menu" class="nav nav-stacked">
+            <ul class="sidebar-nav">
+            {% for team in site.data.teams %}
+              <li class="nav-item">
+                <span class="bullet"></span>
+                <a data-scroll href="#{{ team.page_slug }}" class="minicaps">{{ team.name }}</a>
+              </li>
+            {% endfor %}
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-sm-9">
+          {% for team in site.data.teams %}
+            <div class="card mb-4" id="{{ team.page_slug}}">
+              <div class="card-image">
+                <img src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
+              </div>
+
+              <div class="card-body">
+                <a href="/{{ team.page_slug }}">
+                  <h2 class="mb-3">{{ team.name }}</h2>
+                </a>
+
+                <div class="d-sm-block d-lg-flex mb-3">
+                  <div class="minicaps text-xs d-flex align-items-center mr-4">
+                    <i class="material-icons pr-1">group</i>
+                    <span class="bold">Team members: {{ team.member_count }}</span>
+                  </div>
+
+                  <div class="minicaps text-xs d-flex align-items-center mr-4">
+                    <i class="material-icons pr-1">list</i>
+                    <span class="bold">Active learning circles: {{ team.studygroup_count }}</span>
+                  </div>
+
+                  <div class="minicaps text-xs d-flex align-items-center">
+                    <i class="material-icons pr-1">face</i>
+                    <span class="bold">Organizer: {{ team.organizer.first_name }}</span>
+                  </div>
+                </div>
+
+                <a class="btn p2pu-btn blue btn-small" href="/{{ team.page_slug }}">See learning circles</a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<a href="#top" id="scroll-to-top">
+  <i class="material-icons">keyboard_arrow_up</i>
+</a>
+
