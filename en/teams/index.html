@@ -41,9 +41,11 @@ extra_js:
         <div class="col-sm-9">
           {% for team in site.data.teams %}
             <div class="card mb-4" id="{{ team.page_slug}}">
+              {% if team.coordinates %}
               <div class="card-image">
-                <img src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
+                <img class="card-img-top" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
               </div>
+              {% endif %}
 
               <div class="card-body">
                 <a href="/{{ team.page_slug }}">
@@ -61,10 +63,12 @@ extra_js:
                     <span class="bold">Active learning circles: {{ team.studygroup_count }}</span>
                   </div>
 
+                  {% if team.organizer %}
                   <div class="minicaps text-xs d-flex align-items-center">
                     <i class="material-icons pr-1">face</i>
                     <span class="bold">Organizer: {{ team.organizer.first_name }}</span>
                   </div>
+                  {% endif %}
                 </div>
 
                 <a class="btn p2pu-btn blue btn-small" href="/{{ team.page_slug }}">See learning circles</a>
