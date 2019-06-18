@@ -5,8 +5,13 @@
       "page_slug":"richlandcounty",
       "member_count":1,
       "studygroup_count":0,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Susan"
+         "first_name":"Susan",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -20,8 +25,13 @@
       "page_slug":"boston",
       "member_count":5,
       "studygroup_count":16,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Jessica"
+         "first_name":"Jessica",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -35,8 +45,14 @@
       "page_slug":"test",
       "member_count":1,
       "studygroup_count":0,
-      "organizer":{
-         "first_name":"Dirk"
+      "date_established": "June 2019",
+      "organizer": {
+         "first_name": "Sharon",
+         "city": "Kitchener, Ontario, Canada",
+         "bio": "Sharon is a web developer and designer based in Toronto, Canada. She's working on making the this website a beautiful and useful resource for the P2PU community.",
+         "contact_url": "https://www.nomadiclabs.ca/",
+         "avatar_url": "http://localhost:8000/media/avatar2_eC4A85d.jpg",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -50,8 +66,13 @@
       "page_slug":"pierceco",
       "member_count":7,
       "studygroup_count":9,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Jaime"
+         "first_name":"Jaime",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -65,8 +86,13 @@
       "page_slug":"cleveland",
       "member_count":7,
       "studygroup_count":6,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Denise"
+         "first_name":"Denise",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -80,8 +106,13 @@
       "page_slug":"multnomahco",
       "member_count":1,
       "studygroup_count":0,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Steph"
+         "first_name":"Steph",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -95,8 +126,13 @@
       "page_slug":"wichita",
       "member_count":13,
       "studygroup_count":22,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Cynthia"
+         "first_name":"Cynthia",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -110,8 +146,13 @@
       "page_slug":"twinlakes",
       "member_count":2,
       "studygroup_count":2,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Stephen"
+         "first_name":"Stephen",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -125,8 +166,13 @@
       "page_slug":"cambridgepl",
       "member_count":1,
       "studygroup_count":6,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Susannah"
+         "first_name":"Susannah",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -140,8 +186,13 @@
       "page_slug":"knls",
       "member_count":38,
       "studygroup_count":189,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Juliana"
+         "first_name":"Juliana",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 4,
       "coordinates": {
@@ -155,8 +206,13 @@
       "page_slug":"toronto",
       "member_count":12,
       "studygroup_count":17,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Alex"
+         "first_name":"Alex",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -170,8 +226,13 @@
       "page_slug":"providence",
       "member_count":8,
       "studygroup_count":15,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Sherry"
+         "first_name":"Sherry",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -185,8 +246,13 @@
       "page_slug":"englishnow",
       "member_count":9,
       "studygroup_count":38,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Nico"
+         "first_name":"Nico",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -200,8 +266,13 @@
       "page_slug":"detroit",
       "member_count":10,
       "studygroup_count":30,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Qumisha"
+         "first_name":"Qumisha",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -215,8 +286,13 @@
       "page_slug":"mdpls",
       "member_count":4,
       "studygroup_count":5,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Jennifer"
+         "first_name":"Jennifer",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -230,8 +306,13 @@
       "page_slug":"philadelphia",
       "member_count":3,
       "studygroup_count":3,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Kalela"
+         "first_name":"Kalela",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -245,8 +326,13 @@
       "page_slug":"sanjose",
       "member_count":15,
       "studygroup_count":15,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Marsha"
+         "first_name":"Marsha",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -260,8 +346,13 @@
       "page_slug":"hcplc",
       "member_count":18,
       "studygroup_count":13,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Megan"
+         "first_name":"Megan",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -275,8 +366,13 @@
       "page_slug":"kclearningcircles",
       "member_count":10,
       "studygroup_count":34,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Wendy"
+         "first_name":"Wendy",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -290,8 +386,13 @@
       "page_slug":"chicago",
       "member_count":39,
       "studygroup_count":92,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Kate"
+         "first_name":"Kate",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -305,8 +406,13 @@
       "page_slug":"lapl",
       "member_count":2,
       "studygroup_count":0,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Christina"
+         "first_name":"Christina",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -320,8 +426,13 @@
       "page_slug":"oflibrary",
       "member_count":1,
       "studygroup_count":12,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Al"
+         "first_name":"Al",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -335,8 +446,13 @@
       "page_slug":"Sq1MCPL",
       "member_count":1,
       "studygroup_count":0,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Morgan"
+         "first_name":"Morgan",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -350,8 +466,13 @@
       "page_slug":"charlotte",
       "member_count":32,
       "studygroup_count":23,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Martha"
+         "first_name":"Martha",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
@@ -365,8 +486,13 @@
       "page_slug":"scld",
       "member_count":3,
       "studygroup_count":0,
+      "date_established": "June 2019",
       "organizer":{
-         "first_name":"Stacey"
+         "first_name":"Stacey",
+         "city": "",
+         "bio": "",
+         "contact_url": "",
+         "organizer_since": "June 2019"
       },
       "zoom": 7,
       "coordinates": {
