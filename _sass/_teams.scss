@@ -61,7 +61,9 @@
     font-size: $h5-font-size;
   }
 
-
+  .card-header {
+    border-bottom: none;
+  }
 
   .card-image {
     height: 200px;
@@ -148,3 +150,23 @@
 .pos-absolute {
   position: absolute;
 }
+
+
+.arrows {
+  height: 30px;
+
+  .slick-arrow {
+    &.slick-prev {
+      left: 0;
+    }
+
+    &.slick-next {
+      right: 0;
+    }
+
+    &:before {
+      color: $p2pu-blue;
+    }
+  }
+}
+

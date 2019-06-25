@@ -201,56 +201,36 @@ bundles:
 		</div>
 	</section>
 
-	<div class="image-container" data-aos="fade-up">
-		<div class="lines">
-			<div class="bg-line blue"></div>
-			<div class="bg-line green"></div>
-			<div class="bg-line yellow"></div>
-			<div class="bg-line orange"></div>
-		</div>
-		<div class="image">
-			<a href="http://www.eifl.net/news/learning-circles-hit-kenya-public-libraries" class="undecorated">
-				<img src="{{ site.baseurl }}/assets/images/facilitate/profile_2_1.jpg" alt="Learning circle selfie">
-			</a>
-			<div class="caption">
-				<small>Kansas City Public Library “Making the Internet Work For You!” learning circle</small>
-			</div>
-		</div>
-	</div>
+	<section id="teams" class="background-secondary" data-aos="fade-up">
+		<div class="container my-4">
 
-	<section id="partners-and-funders" data-aos="fade-up">
-		<div class="container">
-			<header>
-				<div class="subtitle">
-					<div class="underline">
-						<div class="text"><h3>Partners</h3></div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="image-container" data-aos="fade-up">
+						<div class="image">
+							<a href="http://www.eifl.net/news/learning-circles-hit-kenya-public-libraries" class="undecorated">
+								<img src="{{ site.baseurl }}/assets/images/facilitate/profile_2_1.jpg" alt="Learning circle selfie">
+							</a>
+							<div class="caption">
+								<small>Kansas City Public Library “Making the Internet Work For You!” learning circle</small>
+							</div>
+						</div>
 					</div>
 				</div>
-			</header>
-			<div class="partners row">
-				{% for partner in site.data.partners %}
-					<div class="col-md-4 col-sm-12 col-12"><a href="{{ partner.url }}" class="dark">{{ partner.name }}</a></div>
-				{% endfor %}
-			</div>
 
-			<header>
-				<div class="subtitle">
-					<div class="underline">
-						<div class="text"><h3>Funders</h3></div>
-					</div>
-				</div>
-			</header>
-			<div class="funders row">
-				{% for funder in site.data.funders %}
-				<div class="funder col-md-4 col-sm-6 col-12">
-					<a href="{{ funder.url }}">
-						<img src="{{ site.baseurl }}{{ funder.logo }}" alt="{{ funder.name }}">
+				<div class="col-md-6">
+					<h2 class="bold mt-md-0 mb-3">Better together</h2>
+					<p class="large">Around the world, facilitators are organizing themselves into teams. Teams are regional networks of learning circles led by a local organizer and supported by P2PU.</p>
+					<p class="large pb-2">If you want to start a team in your area, don't hesitate to get in touch with us!</p>
+					<a data-scroll href="/en/teams">
+						<button class="btn p2pu-btn blue">Check out our teams</button>
 					</a>
 				</div>
-				{% endfor %}
+
 			</div>
 		</div>
 	</section>
+
 </main>
 
 {% include footer.html %}

@@ -6,13 +6,15 @@
       "member_count":1,
       "studygroup_count":0,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Susan",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Susan",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -80.882611,
@@ -26,13 +28,15 @@
       "member_count":5,
       "studygroup_count":16,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Jessica",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Jessica",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -71.07794225,
@@ -46,14 +50,24 @@
       "member_count":1,
       "studygroup_count":0,
       "date_established": "June 2019",
-      "organizer": {
-         "first_name": "Sharon",
-         "city": "Kitchener, Ontario, Canada",
-         "bio": "Sharon is a web developer and designer based in Toronto, Canada. She's working on making the this website a beautiful and useful resource for the P2PU community.",
-         "contact_url": "https://www.nomadiclabs.ca/",
-         "avatar_url": "http://localhost:8000/media/avatar2_eC4A85d.jpg",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name": "Sharon",
+            "city": "Kitchener, Ontario, Canada",
+            "bio": "Sharon is a web developer and designer based in Kitchener, Canada. She's working on making the this website a beautiful and useful resource for the P2PU community.",
+            "contact_url": "https://www.nomadiclabs.ca/",
+            "avatar_url": "http://localhost:8000/media/avatar2_eC4A85d.jpg",
+            "organizer_since": "June 2019"
+         },
+         {
+            "first_name": "Bowie",
+            "city": "Kitchener, Ontario, Canada",
+            "bio": "Bowie is the best dog in the entire universe and that is an empirically proven fact.",
+            "contact_url": "https://www.nomadiclabs.ca/",
+            "avatar_url": "http://localhost:8000/media/avatar2_eC4A85d.jpg",
+            "organizer_since": "June 2019"
+         },
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -80.505293,
@@ -67,13 +81,15 @@
       "member_count":7,
       "studygroup_count":9,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Jaime",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Jaime",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -122.387362,
@@ -87,13 +103,15 @@
       "member_count":7,
       "studygroup_count":6,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Denise",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Denise",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -81.690829,
@@ -107,13 +125,15 @@
       "member_count":1,
       "studygroup_count":0,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Steph",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Steph",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -122.682795,
@@ -127,13 +147,15 @@
       "member_count":13,
       "studygroup_count":22,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Cynthia",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Cynthia",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -97.338627,
@@ -147,13 +169,15 @@
       "member_count":2,
       "studygroup_count":2,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Stephen",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Stephen",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -83.2321,
@@ -167,13 +191,15 @@
       "member_count":1,
       "studygroup_count":6,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Susannah",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Susannah",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -71.1104495,
@@ -187,13 +213,15 @@
       "member_count":38,
       "studygroup_count":189,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Juliana",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Juliana",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 4,
       "coordinates": {
          "longitude": 37.85,
@@ -207,13 +235,15 @@
       "member_count":12,
       "studygroup_count":17,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Alex",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Alex",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -79.386944,
@@ -227,13 +257,15 @@
       "member_count":8,
       "studygroup_count":15,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Sherry",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Sherry",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -71.416875,
@@ -247,13 +279,15 @@
       "member_count":9,
       "studygroup_count":38,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Nico",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Nico",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -77.0366,
@@ -267,13 +301,15 @@
       "member_count":10,
       "studygroup_count":30,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Qumisha",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Qumisha",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -83.06679349999999,
@@ -287,13 +323,15 @@
       "member_count":4,
       "studygroup_count":5,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Jennifer",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Jennifer",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -80.189994,
@@ -307,13 +345,15 @@
       "member_count":3,
       "studygroup_count":3,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Kalela",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Kalela",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -75.171042,
@@ -327,13 +367,15 @@
       "member_count":15,
       "studygroup_count":15,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Marsha",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Marsha",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -121.881242,
@@ -347,13 +389,15 @@
       "member_count":18,
       "studygroup_count":13,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Megan",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Megan",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -82.462383,
@@ -367,13 +411,15 @@
       "member_count":10,
       "studygroup_count":34,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Wendy",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Wendy",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -94.584019,
@@ -387,13 +433,15 @@
       "member_count":39,
       "studygroup_count":92,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Kate",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Kate",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -87.660791,
@@ -407,13 +455,15 @@
       "member_count":2,
       "studygroup_count":0,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Christina",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Christina",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -118.255366,
@@ -427,13 +477,15 @@
       "member_count":1,
       "studygroup_count":12,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Al",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Al",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -76.181275,
@@ -447,13 +499,15 @@
       "member_count":1,
       "studygroup_count":0,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Morgan",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Morgan",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -94.418987,
@@ -467,13 +521,15 @@
       "member_count":32,
       "studygroup_count":23,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Martha",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Martha",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -80.839914,
@@ -487,13 +543,15 @@
       "member_count":3,
       "studygroup_count":0,
       "date_established": "June 2019",
-      "organizer":{
-         "first_name":"Stacey",
-         "city": "",
-         "bio": "",
-         "contact_url": "",
-         "organizer_since": "June 2019"
-      },
+      "organizers": [
+         {
+            "first_name":"Stacey",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -117.28194,

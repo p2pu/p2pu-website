@@ -401,6 +401,19 @@ main {
 		}
 	}
 
+	section#teams {
+	  .image-container {
+	    margin-top: unset;
+	  }
+
+	  h2 {
+	    line-height: normal;
+	    font-size: 1.8em;
+	    font-family: $font-family-sans-serif;
+	    font-weight: $font-weight-bold;
+    }
+	}
+
 	section#partners-and-funders {
 		.partners {
 			display: flex;
