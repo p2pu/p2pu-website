@@ -9,11 +9,13 @@ top_level:
       - text: Courses
         url: /en/courses/
       - text: Dashboard
-        url: https://learningcircles.p2pu.org/en/facilitator/
+        url: https://learningcircles.p2pu.org/en/
       - text: Create a learning circle
         url: https://learningcircles.p2pu.org/en/studygroup/create/
       - text: FAQ
         url: https://community.p2pu.org/tags/faq/
+  - text: Teams
+    url: /en/teams/
   - text: Community
     url: https://community.p2pu.org/
   - text: Blog
