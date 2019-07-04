@@ -121,12 +121,16 @@ extra_js:
                             </div>
                           </div>
                           <div class="profile-info">
-                            <a href="{{ organizer.contact_url }}">
-                              <h4 class="mt-0 mb-2">{{ organizer.first_name }}</h4>
-                            </a>
+                            <h4 class="mt-0 mb-2">{{ organizer.first_name }}</h4>
 
-                            {% if organizer.city %}
+                            {% if organizer.city.size > 0%}
                             <p class="minicaps text-left mb-1">{{ organizer.city }}</p>
+                            {% endif %}
+
+                            {% if organizer.contact_url.size > 0 %}
+                            <p class="minicaps text-left mb-1">
+                              <a href="{{ organizer.contact_url }}">Contact page</a>
+                            </p>
                             {% endif %}
                           </div>
                         </div>
