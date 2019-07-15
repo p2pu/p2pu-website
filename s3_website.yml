@@ -173,6 +173,12 @@ routing_rules:
       host_name: www.p2pu.org
       replace_key_with: en/learning-circles/?team_id=24&team=Mid-Continent Public Library
       http_redirect_code: 302
+  - condition:
+      key_prefix_equals: scld
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=25&team=Spokane County Library District
+      http_redirect_code: 302
 
 
 # Lernanta EN redirects 
