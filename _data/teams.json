@@ -5,9 +5,16 @@
       "page_slug":"richlandcounty",
       "member_count":1,
       "studygroup_count":0,
-      "organizer":{
-         "first_name":"Susan"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Susan",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -80.882611,
@@ -20,9 +27,16 @@
       "page_slug":"boston",
       "member_count":5,
       "studygroup_count":16,
-      "organizer":{
-         "first_name":"Jessica"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Jessica",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -71.07794225,
@@ -35,9 +49,25 @@
       "page_slug":"test",
       "member_count":1,
       "studygroup_count":0,
-      "organizer":{
-         "first_name":"Dirk"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name": "Sharon",
+            "city": "Kitchener, Ontario, Canada",
+            "bio": "Sharon is a web developer and designer based in Kitchener, Canada. She's working on making the this website a beautiful and useful resource for the P2PU community.",
+            "contact_url": "https://www.nomadiclabs.ca/",
+            "avatar_url": "http://localhost:8000/media/avatar2_eC4A85d.jpg",
+            "organizer_since": "June 2019"
+         },
+         {
+            "first_name": "Bowie",
+            "city": "Kitchener, Ontario, Canada",
+            "bio": "Bowie is the best dog in the entire universe and that is an empirically proven fact.",
+            "contact_url": "https://www.nomadiclabs.ca/",
+            "avatar_url": "http://localhost:8000/media/avatar2_eC4A85d.jpg",
+            "organizer_since": "June 2019"
+         },
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -80.505293,
@@ -50,9 +80,16 @@
       "page_slug":"pierceco",
       "member_count":7,
       "studygroup_count":9,
-      "organizer":{
-         "first_name":"Jaime"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Jaime",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -122.387362,
@@ -65,9 +102,16 @@
       "page_slug":"cleveland",
       "member_count":7,
       "studygroup_count":6,
-      "organizer":{
-         "first_name":"Denise"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Denise",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -81.690829,
@@ -80,9 +124,16 @@
       "page_slug":"multnomahco",
       "member_count":1,
       "studygroup_count":0,
-      "organizer":{
-         "first_name":"Steph"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Steph",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -122.682795,
@@ -95,9 +146,16 @@
       "page_slug":"wichita",
       "member_count":13,
       "studygroup_count":22,
-      "organizer":{
-         "first_name":"Cynthia"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Cynthia",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -97.338627,
@@ -110,9 +168,16 @@
       "page_slug":"twinlakes",
       "member_count":2,
       "studygroup_count":2,
-      "organizer":{
-         "first_name":"Stephen"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Stephen",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -83.2321,
@@ -125,9 +190,16 @@
       "page_slug":"cambridgepl",
       "member_count":1,
       "studygroup_count":6,
-      "organizer":{
-         "first_name":"Susannah"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Susannah",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -71.1104495,
@@ -140,9 +212,16 @@
       "page_slug":"knls",
       "member_count":38,
       "studygroup_count":189,
-      "organizer":{
-         "first_name":"Juliana"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Juliana",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 4,
       "coordinates": {
          "longitude": 37.85,
@@ -155,9 +234,16 @@
       "page_slug":"toronto",
       "member_count":12,
       "studygroup_count":17,
-      "organizer":{
-         "first_name":"Alex"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Alex",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -79.386944,
@@ -170,9 +256,16 @@
       "page_slug":"providence",
       "member_count":8,
       "studygroup_count":15,
-      "organizer":{
-         "first_name":"Sherry"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Sherry",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -71.416875,
@@ -185,9 +278,16 @@
       "page_slug":"englishnow",
       "member_count":9,
       "studygroup_count":38,
-      "organizer":{
-         "first_name":"Nico"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Nico",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -77.0366,
@@ -200,9 +300,16 @@
       "page_slug":"detroit",
       "member_count":10,
       "studygroup_count":30,
-      "organizer":{
-         "first_name":"Qumisha"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Qumisha",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -83.06679349999999,
@@ -215,9 +322,16 @@
       "page_slug":"mdpls",
       "member_count":4,
       "studygroup_count":5,
-      "organizer":{
-         "first_name":"Jennifer"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Jennifer",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -80.189994,
@@ -230,9 +344,16 @@
       "page_slug":"philadelphia",
       "member_count":3,
       "studygroup_count":3,
-      "organizer":{
-         "first_name":"Kalela"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Kalela",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -75.171042,
@@ -245,9 +366,16 @@
       "page_slug":"sanjose",
       "member_count":15,
       "studygroup_count":15,
-      "organizer":{
-         "first_name":"Marsha"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Marsha",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -121.881242,
@@ -260,9 +388,16 @@
       "page_slug":"hcplc",
       "member_count":18,
       "studygroup_count":13,
-      "organizer":{
-         "first_name":"Megan"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Megan",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -82.462383,
@@ -275,9 +410,16 @@
       "page_slug":"kclearningcircles",
       "member_count":10,
       "studygroup_count":34,
-      "organizer":{
-         "first_name":"Wendy"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Wendy",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -94.584019,
@@ -290,9 +432,16 @@
       "page_slug":"chicago",
       "member_count":39,
       "studygroup_count":92,
-      "organizer":{
-         "first_name":"Kate"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Kate",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -87.660791,
@@ -305,9 +454,16 @@
       "page_slug":"lapl",
       "member_count":2,
       "studygroup_count":0,
-      "organizer":{
-         "first_name":"Christina"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Christina",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -118.255366,
@@ -320,9 +476,16 @@
       "page_slug":"oflibrary",
       "member_count":1,
       "studygroup_count":12,
-      "organizer":{
-         "first_name":"Al"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Al",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -76.181275,
@@ -335,9 +498,16 @@
       "page_slug":"Sq1MCPL",
       "member_count":1,
       "studygroup_count":0,
-      "organizer":{
-         "first_name":"Morgan"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Morgan",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -94.418987,
@@ -350,9 +520,16 @@
       "page_slug":"charlotte",
       "member_count":32,
       "studygroup_count":23,
-      "organizer":{
-         "first_name":"Martha"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Martha",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -80.839914,
@@ -365,9 +542,16 @@
       "page_slug":"scld",
       "member_count":3,
       "studygroup_count":0,
-      "organizer":{
-         "first_name":"Stacey"
-      },
+      "date_established": "June 2019",
+      "organizers": [
+         {
+            "first_name":"Stacey",
+            "city": "",
+            "bio": "",
+            "contact_url": "",
+            "organizer_since": "June 2019"
+         }
+      ],
       "zoom": 7,
       "coordinates": {
          "longitude": -117.28194,

@@ -1,10 +1,13 @@
 ---
 title: Teams
-subtitle: Nisl rhoncus mattis rhoncus urna. Nec nam aliquam sem et tortor consequat id. Integer quis auctor elit sed. Etiam sit amet nisl purus in mollis. Eget mi proin sed libero enim sed faucibus turpis. At quis risus sed vulputate odio ut enim blandit volutpat.
+subtitle: Teams are regional networks of learning circles led by a local organizer and supported by P2PU. You can apply to join an existing team through <a href="https://learning-circles.p2pu.org/en/">your dashboard</a>. If you’d like to launch a new team in your area, you can start by reviewing our organizer materials.
 layout: base
 extra_css:
- - /assets/css/p2pu-teams.css
+- /assets/css/vendor/slick.css
+- /assets/css/vendor/slick-theme.css
+- /assets/css/p2pu-teams.css
 extra_js:
+- js/vendor/slick.min.js
 - js/vendor/smooth-scroll.min.js
 - js/teams.js
 ---
@@ -40,40 +43,115 @@ extra_js:
 
         <div class="col-sm-9">
           {% for team in site.data.teams %}
-            <div class="card mb-4" id="{{ team.page_slug}}">
-              {% if team.coordinates %}
-              <div class="card-image">
-                <img class="card-img-top" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
-              </div>
+            <div class="card mb-4 pos-relative" id="{{team.page_slug}}">
+              {% if team.image_url %}
+                <div class="card-image">
+                  <img class="card-img-top" src="{{team.image_url}}" />
+                </div>
+              {% else if team.coordinates %}
+                <div class="card-image">
+                  <img class="card-img-top" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
+                </div>
               {% endif %}
 
               <div class="card-body">
-                <a href="/{{ team.page_slug }}">
-                  <h2 class="mb-3">{{ team.name }}</h2>
-                </a>
+                <div class="col-lg-6">
+                  <a href="/{{ team.page_slug }}">
+                    <h2 class="mb-3">{{ team.name }}</h2>
+                  </a>
 
-                <div class="d-sm-block d-lg-flex mb-3">
-                  <div class="minicaps text-xs d-flex align-items-center mr-4">
-                    <i class="material-icons pr-1">group</i>
-                    <span class="bold">Team members: {{ team.member_count }}</span>
+                  <div class="mb-3">
+                    <div class="text-xs d-flex align-items-center mb-2">
+                      <i class="material-icons pr-2">group</i>
+                      <p class="mb-0">Team members: <span class="bold">{{ team.member_count }}</span></p>
+                    </div>
+
+                    <div class="text-xs d-flex align-items-center mb-2">
+                      <i class="material-icons pr-2">list</i>
+                      <p class="mb-0">Total learning circles: <span class="bold">{{ team.studygroup_count }}</span></p>
+                    </div>
+
+                    <div class="text-xs d-flex align-items-center mb-2">
+                      <i class="material-icons pr-2">event</i>
+                      <p class="mb-0">Established: <span class="bold">{{ team.date_established }}</span></p>
+                    </div>
+
+                    {% if team.organizers %}
+                    <div class="text-xs d-flex d-lg-none align-items-center mb-2">
+                      <i class="material-icons pr-2">face</i>
+                      <p class="mb-0">Organizers: <span class="bold">
+                        {% for organizer in team.organizers %}
+                          {% if organizer == team.organizers.last %}
+                          {{ organizer.first_name }}
+                          {% else %}
+                          {{ organizer.first_name | append: ", " }}
+                          {% endif %}
+                        {% endfor %}
+                      </span></p>
+                    </div>
+                    {% endif %}
                   </div>
 
-                  <div class="minicaps text-xs d-flex align-items-center mr-4">
-                    <i class="material-icons pr-1">list</i>
-                    <span class="bold">Active learning circles: {{ team.studygroup_count }}</span>
-                  </div>
-
-                  {% if team.organizer %}
-                  <div class="minicaps text-xs d-flex align-items-center">
-                    <i class="material-icons pr-1">face</i>
-                    <span class="bold">Organizer: {{ team.organizer.first_name }}</span>
-                  </div>
-                  {% endif %}
+                  <a class="btn p2pu-btn blue btn-small" href="/{{ team.page_slug }}">Go to team page</a>
                 </div>
-
-                <a class="btn p2pu-btn blue btn-small" href="/{{ team.page_slug }}">See learning circles</a>
               </div>
+
+              {% if team.organizers.size > 0 %}
+              <div class="pos-absolute profile mx-4 p-0 col-sm-5 d-none d-lg-flex align-items-center">
+              <div class="card">
+                  <div class="card-header bg-secondary">
+                    <p class="minicaps text-right mb-0 text-muted">Organizer</p>
+                  </div>
+
+
+                  <div class="card-body">
+                    <div class="slide-container">
+
+                    {% for organizer in team.organizers %}
+
+                      <div class="slide">
+                        <div class="d-flex align-items-center">
+                          <div class="profile-image mr-2">
+                            <div class="img-container">
+                              {% if organizer.avatar_url %}
+                              <img class="" src="{{ organizer.avatar_url }}" />
+                              {% else %}
+                              <img class="" src="{{ site.baseurl }}/assets/images/default_avatar.png" />
+                              {% endif %}
+                            </div>
+                          </div>
+                          <div class="profile-info">
+                            <h4 class="mt-0 mb-2">{{ organizer.first_name }}</h4>
+
+                            {% if organizer.city.size > 0%}
+                            <p class="minicaps text-left mb-1">{{ organizer.city }}</p>
+                            {% endif %}
+
+                            {% if organizer.contact_url.size > 0 %}
+                            <p class="minicaps text-left mb-1">
+                              <a href="{{ organizer.contact_url }}">Contact page</a>
+                            </p>
+                            {% endif %}
+                          </div>
+                        </div>
+
+                        {% if organizer.bio %}
+                        <p class="small mb-0 mt-3">{{ organizer.bio }}</p>
+                        {% endif %}
+
+                      </div>
+                    {% endfor %}
+
+                    </div>
+                    <div class="arrows pos-relative d-flex justify-content-center"></div>
+                  </div>
+
+                </div>
+              </div>
+              {% endif %}
+
             </div>
+
           {% endfor %}
         </div>
       </div>
