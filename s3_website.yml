@@ -190,7 +190,7 @@ routing_rules:
     redirect:
       host_name: berlin.p2pu.org
       protocol: https
-      http_redirect_code: 301
+      http_redirect_code: 302
 
 
 # Lernanta EN redirects
