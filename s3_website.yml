@@ -144,7 +144,7 @@ routing_rules:
       replace_key_with: en/learning-circles/?team_id=20&team=Richland County
       http_redirect_code: 302
   - condition:
-      key_prefix_equals: cambridgepl 
+      key_prefix_equals: cambridgepl
     redirect:
       host_name: www.p2pu.org
       replace_key_with: en/learning-circles/?team_id=21&team=Cambridge Public Library
@@ -179,9 +179,21 @@ routing_rules:
       host_name: www.p2pu.org
       replace_key_with: en/learning-circles/?team_id=25&team=Spokane County Library District
       http_redirect_code: 302
+  - condition:
+      key_prefix_equals: ascpl
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=27&team=Akron-Summit County Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: berlin
+    redirect:
+      host_name: berlin.p2pu.org
+      protocol: https
+      http_redirect_code: 301
 
 
-# Lernanta EN redirects 
+# Lernanta EN redirects
   - condition:
       key_prefix_equals: en/courses/
       http_error_code_returned_equals: "404"

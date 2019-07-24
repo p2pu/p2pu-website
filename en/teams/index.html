@@ -1,6 +1,6 @@
 ---
 title: Teams
-subtitle: Teams are regional networks of learning circles led by a local organizer and supported by P2PU. You can apply to join an existing team through <a href="https://learning-circles.p2pu.org/en/">your dashboard</a>. If you’d like to launch a new team in your area, you can start by reviewing our organizer materials.
+subtitle: Teams are regional networks of learning circles led by a local organizer and supported by P2PU. You can apply to join an existing team through <a href="https://learningcircles.p2pu.org/en/">your dashboard</a>. If you’d like to launch a new team in your area, you can start by reviewing our organizer materials.
 layout: base
 extra_css:
 - /assets/css/vendor/slick.css
@@ -50,7 +50,7 @@ extra_js:
                 </div>
               {% else if team.coordinates %}
                 <div class="card-image">
-                  <img class="card-img-top" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
+                  <img class="card-img-top" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x280?access_token={{ site.mapbox_access_token }}&logo=false" />
                 </div>
               {% endif %}
 
