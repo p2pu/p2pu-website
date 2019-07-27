@@ -215,6 +215,20 @@ section#facilitator-resources {
         @include grow-on-hover;
       }
 
+      &.organize {
+        .image {
+          min-height: 250px;
+
+          img {
+            height: 250px;
+          }
+        }
+
+        a {
+          color: $gray-darker;
+        }
+      }
+
       .image {
         background-color: $p2pu-light-blue;
         min-height: 150px;
@@ -337,6 +351,14 @@ section#lets-do-it {
     h1 {
       margin-bottom: $padding-md;
       font-size: 3.6em;
+    }
+
+    &.alt {
+      background: linear-gradient( 160deg, $p2pu-orange 0%, $p2pu-orange 50%, $p2pu-yellow 50%, $p2pu-yellow 100%);
+
+      .p2pu-btn {
+        color: $p2pu-orange;
+      }
     }
   }
 }

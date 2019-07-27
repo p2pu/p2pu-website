@@ -1,0 +1,78 @@
+---
+title: Organize
+layout: facilitate
+---
+
+<section id="facilitator-landing">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div>
+        <h1 class="blue-text">Organize</h1>
+      </div>
+      <div class="welcome-text">
+        <p class="large">Organizers are responsible for coordinating teams, which are networks of learning circles happening across a single city or region. Organizers work closely with P2PU to ensure that new facilitators are trained, and they serve as an ambassador of sorts between their hometown and the wider P2PU community.</p>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="media d-flex justify-content-center">
+        <img src="{{ site.baseurl }}/assets/images/organize/organize-header.jpg" alt="Organizers group photo" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="facilitator-resources" data-aos="fade-up">
+  <div class="row">
+    <div class="col-12">
+      <div class="margin-sm">
+        <p class="large">If a team doesn’t already exist in your area, you can reach out to get a free copy of our organizer guide and we will help you set up your team. Below are some of the resources and tools that will help you get started.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="resource-category">
+    <div class="content">
+      <div class="row">
+        <div class="col-12">
+          <div class="category-title">
+            <div class="step-title mb-4">
+              <h2>Organizer Resources</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row resources">
+
+      {% for resource in site.data.organizer_resources %}
+
+        <div class="resource-card organize col-12 col-md-6 col-lg-4 p-md-3">
+          <a href="{{ resource.url }}">
+            <div class="image">
+              <img src="{{ resource.image }}" />
+              {% if resource.tag %}
+              <div class="overlay">
+                <div class="topic-type minicaps">{{ resource.tag }}</div>
+              </div>
+              {% endif %}
+            </div>
+            <div class="title">{{ resource.title }}</div>
+          </a>
+        </div>
+
+      {% endfor %}
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section id="lets-do-it" data-aos="fade-up">
+  <div class="callout alt p-3 text-center">
+    <h1>I want to start a team!</h1>
+    <a href="https://learningcircles.p2pu.org/en/studygroup/create/" class="undecorated">
+      <button class="btn p2pu-btn light">Your email address</button>
+    </a>
+  </div>
+</section>
