@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import { API_BASE_URL } from '../constants'
 
 
 const FeaturedCommunityEvent = ({event}) => {
@@ -88,7 +89,7 @@ class CommunityCalendar extends React.Component {
   }
 
   componentDidMount() {
-    let apiUrl = 'http://localhost:8000/api/community_calendar/events/?format=json'
+    let apiUrl = `${API_BASE_URL}/api/community_calendar/events/?format=json`
     fetch(apiUrl).then( resp => resp.json()).then( data => {
       console.log(data.results)
       this.setState({events: data.results});
