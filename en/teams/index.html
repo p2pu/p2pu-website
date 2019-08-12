@@ -31,7 +31,7 @@ extra_js:
         <div class="col-sm-3">
           <nav id="team-menu" class="nav nav-stacked">
             <ul class="sidebar-nav">
-            {% for team in site.data.teams %}
+            {% for team in site.data.teams.items %}
               <li class="nav-item">
                 <span class="bullet"></span>
                 <a data-scroll href="#{{ team.page_slug }}" class="minicaps">{{ team.name }}</a>
@@ -42,7 +42,7 @@ extra_js:
         </div>
 
         <div class="col-sm-9">
-          {% for team in site.data.teams %}
+          {% for team in site.data.teams.items %}
             <div class="card mb-4 pos-relative" id="{{team.page_slug}}">
               {% if team.image_url %}
                 <div class="card-image">
