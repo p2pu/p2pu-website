@@ -29,7 +29,7 @@ const FeaturedCommunityEvent = ({event}) => {
                 <div className="minicaps text-left text-muted bold mb-3">
                   <span>{`${eventDate.format('LT')}`}</span>
                   { event.city && <span>{` | ${event.city}`}</span> }
-                  <span>{` | Added by ${event.created_by.first_name} ${event.created_by.last_name}`}</span>
+                  <span>{` | Added by ${event.created_by.first_name}`}</span>
                 </div>
                 <p className='card-text text-white'>{event.description}</p>
                 <a href={event.link} className="p2pu-btn btn-primary blue" target="_blank" rel="nofollow">More info</a>
@@ -66,7 +66,7 @@ const CommunityEvent = ({event}) => {
           <div className="minicaps text-left text-muted bold">
             <span>{`${eventDate.format('LT')}`}</span>
             { event.city && <span>{` | ${event.city}`}</span> }
-            <span>{` | Added by ${event.created_by.first_name} ${event.created_by.last_name}`}</span>
+            <span>{` | Added by ${event.created_by.first_name}`}</span>
           </div>
           <h4 className='card-title'>{event.title}</h4>
           <p className='card-text'>{event.description}</p>
