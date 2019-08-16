@@ -14,6 +14,8 @@ main {
 	  }
 	}
 
+
+
   .header-text {
 		text-align: center;
 
@@ -162,62 +164,78 @@ main {
 		}
 	}
 
-	section#upcoming-meetings {
-    padding: 0;
-    background-color: $gray-lighter;
+	.cta-section {
 
-    .preview-container {
-    	padding: $padding-sm 0;
-    	display: flex;
-			width: 100%;
+		h2 {
+			font-size: 3em;
+			font-family: $font-family-sans-serif;
+			margin-bottom: $padding-sm;
+		}
+
+		h3, h4, h5 {
+			font-family: $font-family-sans-serif;
+			margin-bottom: $padding-sm;
+		}
+
+		.cta-button {
+			position: relative;
+			margin-top: $padding-md;
+
+			a {
+				font-size: 1.4em;
+				z-index: 1;
+			}
+
+			.line {
+				height: 1px;
+				width: 100%;
+				background-color: $gray-darker;
+		    position: absolute;
+		    top: 50%;
+			}
+		}
+	}
 
 
-    	.meetings-section {
-		    padding-left: $padding-sm;
-		    padding-right: $padding-sm;
-		    padding-top: $padding-sm;
-		    width: 100%;
+	.meeting-card {
+		padding-top: $padding-sm;
+		padding-bottom: $padding-sm;
+		border-bottom: 1px solid $gray;
 
-	    	.meetings {
-	    		.meeting-card {
-	    			.content {
-							.date {
-								color: $p2pu-blue;
-								text-transform: uppercase;
-						    font-size: $font-size-sm;
-						    display: flex;
-						    align-items: center;
-						    margin-bottom: $padding-xs;
+		.content {
+			.date {
+				color: $p2pu-blue;
+				text-transform: uppercase;
+		    font-size: $font-size-sm;
+		    display: flex;
+		    align-items: center;
+		    margin-bottom: $padding-xs;
 
-						    p {
-						    	margin-bottom: 0;
-						    }
+		    p {
+		    	margin-bottom: 0;
+		    }
 
-						    i {
-						    	margin-right: 6px;
-						    }
-							}
+		    i {
+		    	margin-right: 6px;
+		    }
+			}
 
-							.info {
-								color: $gray-darker;
+			.info {
+				color: $gray-darker;
 
-								.title {
-									font-size: bold;
-								}
+				.title {
+					font-size: bold;
+				}
 
-								.location {
-									font-size: $font-size-sm;
-								}
+				.location {
+					font-size: $font-size-sm;
+				}
 
-								.bold {
-						    	font-weight: bold
-						    }
-							}
-	    			}
-	    		}
-	    	}
-    	}
-    }
+				.bold {
+		    	font-weight: bold
+		    }
+			}
+		}
 	}
 
 	section#call-to-action {
@@ -289,15 +307,12 @@ main {
 		}
 	}
 
-	#testimonials {
-		margin-bottom: $padding-md;
-
-		.slide-container {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-		}
+	.p2pu-slide-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
 
 		.slide {
 			display: flex;
@@ -316,23 +331,34 @@ main {
 
 			.testimonial-card {
 				transition: all 0.4s ease-in-out;
-				transform: scale(0.8);
-				background: $gray-lighter;
-				border-radius: 20px;
-				box-shadow: -1px 1px 3px 1px rgba(0,0,0,0.1);
 				display: flex;
 				flex-direction: column;
-				padding: $padding-md;
-				z-index: 0;
+				padding-top: $padding-sm;
 
 				.quote {
-					margin: $padding-sm;
+					position: relative;
+
+					i {
+						font-size: 4em;
+						position: absolute;
+						opacity: 0.1;
+
+						&.fa-quote-right {
+							right: 0;
+							bottom: 0;
+						}
+					}
+
+					p {
+						padding: $padding-sm;
+						margin-bottom: 0;
+					}
 				}
 
 				.attribution {
 					display: flex;
 					align-items: center;
-			    justify-content: center;
+					padding: $padding-sm;
 
 					.image {
 						height: 100px;
@@ -358,16 +384,7 @@ main {
 					}
 				}
 			}
-
-			&.slick-current.slick-active.slick-center {
-				.testimonial-card {
-					transform: scale(1);
-					background: white;
-					z-index: 1;
-				}
-			}
 		}
-	}
 
 	section#about {
 		color: $white;
@@ -515,6 +532,43 @@ main {
 		> div {
 			background-color: transparentize($p2pu-orange, 0.4);
 		}
+  }
+}
+
+.discourse-topics {
+  margin-top: 3rem;
+  overflow: scroll;
+
+  table {
+    font-size: $font-size-sm;
+    color: $gray;
+  }
+
+  .topic-title {
+    color: $gray-darker;
+  }
+
+  .users {
+    width: 164px;
+  }
+
+  .category-name {
+    color: $gray-darker;
+    font-weight: $font-weight-bold;
+    font-family: $font-family-sans-serif;
+    font-size: 0.8em;
+  }
+
+  .avatar {
+    margin-right: 4px;
+    float: left;
+
+    img {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      vertical-align: center;
+    }
   }
 }
 

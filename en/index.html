@@ -31,6 +31,9 @@ bundles:
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
 
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="{{ "/assets/css/p2pu-index.css" | prepend: site.baseurl }}">
@@ -95,52 +98,45 @@ bundles:
 	  </div>
 	</section>
 
-	<section id="upcoming-meetings" data-aos="fade-up">
+	<section id="join" class="bg-secondary py-5 cta-section">
 		<div class="container">
-	    <div class="preview-container">
-	      <div class="meetings-section">
-	        <div id="preview"></div>
-	      </div>
-	    </div>
-	  </div>
-	 </section>
+			<h2>Find a learning circle near you</h2>
 
-
-		<section id="join" class="bg-secondary py-5">
-		<div class="container">
 	  	<div class="row">
 	      <div class="col-12 col-md-6" data-aos="fade-up">
-			    <div id="header-text-carousel">
-						<h2 class="bold">Master public speaking <br> in your neighborhood, for free.</h2>
-					</div>
-					<p class="large my-4">Learning circles generally meet for 2 hours a week for 6-8 weeks. See what’s currently happening around the world.</p>
-					<a href="/en/learning-circles/" class="btn p2pu-btn blue">Join</a>
+					<p class="large my-5">Learning circles generally meet for 2 hours a week for 6-8 weeks. See what’s currently happening around the world.</p>
 			  </div>
+		  </div>
 
-			  <div class="col-12 col-md-6">
+
+			<div class="row justify-content-end">
+			  <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="300">
+		      <div class="meetings-section">
+		      	<h4>Upcoming meetings</h4>
+		        <div id="preview"></div>
+		      </div>
+				</div>
+			</div>
+
+			<div class="row">
+	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="300">
 			    <div class="p2pu-slide-container">
 						{% for testimonial in site.data.testimonials.learners %}
-						<div class="slide">
-							<div class="testimonial-card card">
-								<div class="quote mb-4">
-									<p class="large">"{{ testimonial.quote }}"</p>
-								</div>
-								<div class="attribution">
-									<div class="image">
-										<img src="{{ site.baseurl }}/assets/images/testimonials/{{ testimonial.img }}" alt="{{ testimonial.name }}">
-									</div>
-									<div class="text">
-										<div class="name">{{ testimonial.name }}</div>
-										<div class="organization">{{ testimonial.role }}</div>
-										<div class="organization">{{ testimonial.organization }}</div>
-									</div>
-								</div>
-							</div>
-						</div>
+							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
 					</div>
 			  </div>
 		  </div>
+
+			<div class="row">
+				<div class="col-12" data-aos="fade-in">
+					<div class="cta-button text-center">
+						<a href="/en/learning-circles/" class="btn p2pu-btn blue">Explore learning circles</a>
+						<div class="line"></div>
+					</div>
+				</div>
+		  </div>
+
 	  </div>
 	</section>
 
@@ -151,23 +147,7 @@ bundles:
 			  <div class="col-12 col-md-6">
 			    <div class="p2pu-slide-container">
 						{% for testimonial in site.data.testimonials.facilitators %}
-						<div class="slide">
-							<div class="testimonial-card card">
-								<div class="quote mb-4">
-									<p class="large">"{{ testimonial.quote }}"</p>
-								</div>
-								<div class="attribution">
-									<div class="image">
-										<img src="{{ site.baseurl }}/assets/images/testimonials/{{ testimonial.img }}" alt="{{ testimonial.name }}">
-									</div>
-									<div class="text">
-										<div class="name">{{ testimonial.name }}</div>
-										<div class="organization">{{ testimonial.role }}</div>
-										<div class="organization">{{ testimonial.organization }}</div>
-									</div>
-								</div>
-							</div>
-						</div>
+							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
 					</div>
 			  </div>
@@ -195,23 +175,7 @@ bundles:
 			  <div class="col-12 col-md-6">
 			    <div class="p2pu-slide-container">
 						{% for testimonial in site.data.testimonials.organizers %}
-						<div class="slide">
-							<div class="testimonial-card card">
-								<div class="quote mb-4">
-									<p class="large">"{{ testimonial.quote }}"</p>
-								</div>
-								<div class="attribution">
-									<div class="image">
-										<img src="{{ site.baseurl }}/assets/images/testimonials/{{ testimonial.img }}" alt="{{ testimonial.name }}">
-									</div>
-									<div class="text">
-										<div class="name">{{ testimonial.name }}</div>
-										<div class="organization">{{ testimonial.role }}</div>
-										<div class="organization">{{ testimonial.organization }}</div>
-									</div>
-								</div>
-							</div>
-						</div>
+							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
 					</div>
 			  </div>
@@ -226,23 +190,7 @@ bundles:
 			  <div class="col-12 col-md-6">
 			    <div class="p2pu-slide-container">
 						{% for testimonial in site.data.testimonials.grantmakers %}
-						<div class="slide">
-							<div class="testimonial-card card">
-								<div class="quote mb-4">
-									<p class="large">"{{ testimonial.quote }}"</p>
-								</div>
-								<div class="attribution">
-									<div class="image">
-										<img src="{{ site.baseurl }}/assets/images/testimonials/{{ testimonial.img }}" alt="{{ testimonial.name }}">
-									</div>
-									<div class="text">
-										<div class="name">{{ testimonial.name }}</div>
-										<div class="organization">{{ testimonial.role }}</div>
-										<div class="organization">{{ testimonial.organization }}</div>
-									</div>
-								</div>
-							</div>
-						</div>
+							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
 					</div>
 			  </div>
@@ -257,7 +205,14 @@ bundles:
 	  </div>
 	</section>
 
-	<section id="discourse-community" data-aos="fade-up">
+	<section id="community" data-aos="fade-up">
+		<div class="container">
+			<h2 className="bold">Community</h2>
+			<p class="large my-4">We offer a variety of services beyond our free facilitation tools to help you develop equitable, social learning experiences in your community.</p>
+			<div id="discourse-community"></div>
+			<a href="https://community.p2pu.org/" class="btn p2pu-btn blue">Go to the community forum</a>
+		</div>
+	</section>
 
 
 </main>
