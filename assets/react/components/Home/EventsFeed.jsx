@@ -33,7 +33,7 @@ class EventsFeed extends React.Component {
   }
 
   componentDidMount() {
-    let apiUrl = `${API_BASE_URL}/api/community_calendar/events/?format=json`
+    let apiUrl = `${API_BASE_URL}/api/community_calendar/events/?format=json&limit=3`
     fetch(apiUrl).then( resp => resp.json()).then( data => {
       this.setState({events: data.results});
     });
