@@ -100,26 +100,24 @@ bundles:
 
 	<section id="join" class="bg-secondary py-5 cta-section">
 		<div class="container">
-			<h2>Find a learning circle near you</h2>
 
 	  	<div class="row">
 	      <div class="col-12 col-md-6" data-aos="fade-up">
+					<h2>Find a learning circle near you</h2>
 					<p class="large my-5">Learning circles generally meet for 2 hours a week for 6-8 weeks. See what’s currently happening around the world.</p>
 			  </div>
 		  </div>
 
 
 			<div class="row justify-content-end">
-			  <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="300">
-		      <div class="meetings-section">
-		      	<h4>Upcoming meetings</h4>
-		        <div id="preview"></div>
-		      </div>
+			  <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="100">
+	      	<h5 class="mt-0 mb-2">Upcoming meetings</h5>
+	        <div id="meetings-feed"></div>
 				</div>
 			</div>
 
 			<div class="row">
-	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="300">
+	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
 			    <div class="p2pu-slide-container">
 						{% for testimonial in site.data.testimonials.learners %}
 							{% include testimonial.html testimonial=testimonial %}
@@ -129,7 +127,7 @@ bundles:
 		  </div>
 
 			<div class="row">
-				<div class="col-12" data-aos="fade-in">
+				<div class="col-12" data-aos="zoom-in" data-aos-offset="200">
 					<div class="cta-button text-center">
 						<a href="/en/learning-circles/" class="btn p2pu-btn blue">Explore learning circles</a>
 						<div class="line"></div>
@@ -141,38 +139,65 @@ bundles:
 	</section>
 
 
-	<section id="facilitate" class="bg-white py-5">
+	<section id="facilitate" class="bg-white py-5 cta-section">
 		<div class="container">
+
 	  	<div class="row">
-			  <div class="col-12 col-md-6">
+	      <div class="col-12 col-md-6" data-aos="fade-up">
+					<h2>Anybody can create their own learning circle</h2>
+					<p class="large my-5">We maintain software tools, facilitation resources, and a global community forum to help you succeed.</p>
+			  </div>
+		  </div>
+
+
+			<div class="row justify-content-end">
+			  <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="100">
+	        <div id="events-feed"></div>
+				</div>
+			</div>
+
+			<div class="row">
+	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
 			    <div class="p2pu-slide-container">
 						{% for testimonial in site.data.testimonials.facilitators %}
 							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
 					</div>
 			  </div>
-
-	      <div class="col-12 col-md-6" data-aos="fade-up">
-					<h2 className="bold">Anybody can create their own learning circle</h2>
-					<p class="large my-4">We maintain software tools, facilitation resources, and a global community forum to help you succeed.</p>
-					<a href="/en/facilitate/" class="btn p2pu-btn blue">Facilitate</a>
-			  </div>
-
 		  </div>
+
+			<div class="row">
+				<div class="col-12" data-aos="zoom-in" data-aos-offset="200">
+					<div class="cta-button text-center">
+						<a href="/en/facilitate" class="btn p2pu-btn blue">Facilitate</a>
+						<div class="line"></div>
+					</div>
+				</div>
+		  </div>
+
 	  </div>
 	</section>
 
 
-	<section id="organize" class="bg-secondary py-5">
+	<section id="organize" class="bg-secondary py-5 cta-section">
 		<div class="container">
+
 	  	<div class="row">
 	      <div class="col-12 col-md-6" data-aos="fade-up">
-					<h2 className="bold">Organize your learning circles into teams</h2>
-					<p class="large my-4">Around the world, facilitators are organizing themselves into regional learning circle networks supported by P2PU. You don’t need to facilitate learning circles in order to organize a team.</p>
-					<a href="/en/organize/" class="btn p2pu-btn blue">Organize</a>
+					<h2>Organize your learning circles into teams</h2>
+					<p class="large my-5">Around the world, facilitators are organizing themselves into regional learning circle networks supported by P2PU. You don’t need to facilitate learning circles in order to organize a team.</p>
 			  </div>
+		  </div>
 
-			  <div class="col-12 col-md-6">
+
+			<div class="row justify-content-end">
+			  <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="100">
+	        <div id="teams-feed"></div>
+				</div>
+			</div>
+
+			<div class="row">
+	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
 			    <div class="p2pu-slide-container">
 						{% for testimonial in site.data.testimonials.organizers %}
 							{% include testimonial.html testimonial=testimonial %}
@@ -180,35 +205,57 @@ bundles:
 					</div>
 			  </div>
 		  </div>
+
+			<div class="row">
+				<div class="col-12" data-aos="zoom-in" data-aos-offset="200">
+					<div class="cta-button text-center">
+						<a href="/en/organize/" class="btn p2pu-btn blue">Organize</a>
+						<div class="line"></div>
+					</div>
+				</div>
+		  </div>
+
 	  </div>
 	</section>
 
 
-	<section id="about" class="background-blue py-5">
+	<section id="about" class="bg-blue py-5 cta-section">
 		<div class="container">
+
 	  	<div class="row">
-			  <div class="col-12 col-md-6">
+	      <div class="col-12 col-md-6" data-aos="fade-up">
+					<h2>Learning doesn’t have to end at school</h2>
+					<p class="large my-5">We offer a variety of services beyond our free facilitation tools to help you develop equitable, social learning experiences in your community.</p>
+			  </div>
+		  </div>
+
+			<div class="row justify-content-end">
+	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
 			    <div class="p2pu-slide-container">
 						{% for testimonial in site.data.testimonials.grantmakers %}
 							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
 					</div>
 			  </div>
-
-	      <div class="col-12 col-md-6" data-aos="fade-up">
-					<h2 className="bold">Learning doesn’t have to end at school</h2>
-					<p class="large my-4">We offer a variety of services beyond our free facilitation tools to help you develop equitable, social learning experiences in your community.</p>
-					<a href="/en/work-with-us/" class="btn p2pu-btn light">Work with us</a>
-			  </div>
-
 		  </div>
+
+			<div class="row">
+				<div class="col-12">
+					<div class="cta-button text-center">
+						<a href="/en/work-with-us/" class="btn p2pu-btn light" data-aos="zoom-in" data-aos-offset="200">Work with us</a>
+						<div class="line light"></div>
+					</div>
+				</div>
+		  </div>
+
 	  </div>
 	</section>
+
 
 	<section id="community" data-aos="fade-up">
 		<div class="container">
 			<h2 className="bold">Community</h2>
-			<p class="large my-4">We offer a variety of services beyond our free facilitation tools to help you develop equitable, social learning experiences in your community.</p>
+			<p class="large my-4">This is the space for facilitators, learners, and other affiliates to discuss learning circle practices and P2PU organizational strategy.</p>
 			<div id="discourse-community"></div>
 			<a href="https://community.p2pu.org/" class="btn p2pu-btn blue">Go to the community forum</a>
 		</div>

@@ -8,7 +8,6 @@
     var slider = $(this);
 
     slider.slick({
-      arrows: false,
       autoplay: true,
       autoplaySpeed: 4000,
       pauseOnHover: true,
@@ -41,11 +40,10 @@
     });
   }
 
-  // SmoothMagic
+  // ScrollMagic
 
   var controller = new ScrollMagic.Controller();
-  var learningCirclesDefinition = document.getElementById('definition');
-  var bgImageLines = document.querySelectorAll('main > .image-container .lines');
+  var bgImageLines = document.querySelectorAll('main .lines');
 
   new ScrollMagic.Scene({
     triggerElement: bgImageLines
