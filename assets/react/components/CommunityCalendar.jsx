@@ -1,17 +1,18 @@
 import React from 'react';
-import moment from 'moment';
 import { API_BASE_URL } from '../constants'
 
 
 const FeaturedCommunityEvent = ({event}) => {
-  const eventDate = moment(event.local_datetime);
+  const dateObj = new Date(event.local_datetime)
+  const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+  const timeOptions = { hour: 'numeric', minute: 'numeric' }
 
   return(
     <div className="featured-event bg-dark mt-2 mb-5 pb-5">
       <div className="container">
         <div className="d-flex justify-content-end">
           <div className="featured-tag p-2">
-            <span>Next event:</span><span className="bold">{eventDate.format('MMM DD, YYYY')}</span>
+            <span>Next event:</span><span className="bold">{dateObj.toLocaleDateString('default', dateOptions)}</span>
           </div>
         </div>
         <div className="row">
@@ -27,7 +28,7 @@ const FeaturedCommunityEvent = ({event}) => {
               <div className='info'>
                 <h2 className='card-title text-white'>{event.title}</h2>
                 <div className="minicaps text-left text-muted bold mb-3">
-                  <span>{`${eventDate.format('LT')}`}</span>
+                  <span>{`${dateObj.toLocaleTimeString('default', timeOptions)}`}</span>
                   { event.city && <span>{` | ${event.city}`}</span> }
                   <span>{` | Added by ${event.created_by.first_name} ${event.created_by.last_name}`}</span>
                 </div>
@@ -43,28 +44,30 @@ const FeaturedCommunityEvent = ({event}) => {
 }
 
 const CommunityEvent = ({event}) => {
-  const eventDate = moment(event.local_datetime);
+  const dateObj = new Date(event.local_datetime)
+  const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+  const timeOptions = { hour: 'numeric', minute: 'numeric' }
 
   return(
     <div className="card mb-4">
       <div className="event-card d-block d-md-flex">
         <div className='date p-3'>
           <div className="day">
-            {eventDate.format('DD')}
+            {dateObj.toLocaleString('default', { day: '2-digit' })}
           </div>
           <div className="month-year">
             <div className="month">
-              {eventDate.format('MMM')}
+              {dateObj.toLocaleString('default', { month: 'short' })}
             </div>
             <div className="year">
-              {eventDate.format('YYYY')}
+              {dateObj.toLocaleString('default', { year: 'numeric' })}
             </div>
           </div>
         </div>
 
         <div className='info p-3'>
           <div className="minicaps text-left text-muted bold">
-            <span>{`${eventDate.format('LT')}`}</span>
+            <span>{`${dateObj.toLocaleTimeString('default', timeOptions)}`}</span>
             { event.city && <span>{` | ${event.city}`}</span> }
             <span>{` | Added by ${event.created_by.first_name} ${event.created_by.last_name}`}</span>
           </div>
@@ -91,7 +94,6 @@ class CommunityCalendar extends React.Component {
   componentDidMount() {
     let apiUrl = `${API_BASE_URL}/api/community_calendar/events/?format=json`
     fetch(apiUrl).then( resp => resp.json()).then( data => {
-      console.log(data.results)
       this.setState({events: data.results});
     });
   }
