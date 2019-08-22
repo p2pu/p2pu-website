@@ -31,7 +31,7 @@ const BrowseMeetings = (props) => {
   }
 
   return (
-    <div>
+    <div className="row">
       {
         props.meetings.map((meeting, index) => {
           const nextMeeting = moment(`${meeting.next_meeting_date} ${meeting.meeting_time}`);
@@ -40,7 +40,7 @@ const BrowseMeetings = (props) => {
           const formattedCity = meeting.city.replace(/United States of America/, 'USA')
 
           return(
-            <div key={index}>
+            <div className="col-12 col-md-4" key={index}>
               <MeetingCard
                 title={ meeting.course.title }
                 date={formattedMeetingDate}
