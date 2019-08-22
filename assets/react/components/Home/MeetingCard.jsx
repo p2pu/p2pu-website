@@ -11,7 +11,7 @@ const MeetingCard = (props) => {
             <p><span className="bold">{props.date}</span> at <span className="bold">{props.time}</span></p>
           </div>
           <div className="info">
-            <p className='meeting-info'>
+            <p className='meeting-info mb-0'>
               <span className="bold">{props.facilitator}</span> is facilitating a learning circle on <span className="bold">{props.title}</span> at { props.location } in { props.city }
             </p>
           </div>
