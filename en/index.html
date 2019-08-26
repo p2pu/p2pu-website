@@ -31,6 +31,9 @@ bundles:
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
 
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="{{ "/assets/css/p2pu-index.css" | prepend: site.baseurl }}">
@@ -95,141 +98,149 @@ bundles:
 	  </div>
 	</section>
 
-	<section id="upcoming-meetings" data-aos="fade-up">
+  <section>
+			<div class="row justify-content-end">
+			  <div class="col-12" data-aos="fade-up" data-aos-offset="100">
+	      	<h5 class="mt-0 mb-2">Upcoming meetings</h5>
+	        <div id="meetings-feed"></div>
+				</div>
+			</div>
+  </section>
+
+
+	<section id="join" class="bg-secondary py-5 cta-section">
 		<div class="container">
-	    <div class="preview-container">
-	      <div class="meetings-section">
-	        <div id="preview"></div>
-	      </div>
-	    </div>
-	  </div>
-	 </section>
 
-	<section id="call-to-action" data-aos="fade-up">
-		<div class="background-image">
-			<div class="container">
-				<div class="row">
-					<div class="block col-12 col-sm-6">
-						<a href="/en/facilitate" class="undecorated">
-							<div class="circle create">
-								<div class="content">
-			            <p class="large">Facilitate a learning circle</p>
-		            	<button class="p2pu-btn yellow">Facilitate</button>
-								</div>
-							</div>
-		        </a>
+	  	<div class="row">
+	      <div class="col-12 col-md-6" data-aos="fade-up">
+					<h2>Find a learning circle near you</h2>
+					<p class="large my-5">Learning circles generally meet for 2 hours a week for 6-8 weeks. See what’s currently happening around the world.</p>
+			  </div>
+
+	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
+			    <div class="p2pu-slide-container">
+						{% for testimonial in site.data.testimonials.learners %}
+							{% include testimonial.html testimonial=testimonial %}
+						{% endfor %}
 					</div>
-
-					<div class="block col-12 col-sm-6">
-		        <a href="/en/learning-circles" class="undecorated">
-							<div class="circle join">
-								<div class="content">
-			            <p class="large">Join a learning circle near you</p>
-		            	<button class="p2pu-btn green">Join</button>
-								</div>
-							</div>
-		        </a>
-					</div>
-				</div>
-			</div>
-			<div class="caption centered">
-				<small>Kenya National Library Service facilitator training workshop in Nairobi</small>
-			</div>
-		</div>
-
-	</section>
-
-	<div id="testimonials" data-aos="fade-up">
-		<div class="slide-container">
-			{% for testimonial in site.data.testimonials %}
-			<div class="slide">
-				<div class="testimonial-card">
-					<div class="minicaps">{{ testimonial.role }}</div>
-					<div class="quote">
-						<p class="large centered">"{{ testimonial.quote }}"</p>
-					</div>
-					<div class="attribution">
-						<div class="image">
-							<img src="{{ site.baseurl }}/assets/images/testimonials/{{ testimonial.img }}" alt="{{ testimonial.name }}">
-						</div>
-						<div class="text">
-							<div class="name">{{ testimonial.name }}</div>
-							<div class="organization">{{ testimonial.organization }}</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			{% endfor %}
-		</div>
-	</div>
-
-	<section id="about" class="background-blue" data-aos="fade-up">
-		<div class="container">
-			<div class="header-text">
-				<h1 class="bold centered">Learning doesn’t have to end at school</h1>
-				<p class="large">P2PU supports equitable, social learning experiences beyond institutional walls.</p>
-			</div>
-
-			<div class="columns row">
-				<div class="col-md-4 col-sm-12 col-12 column">
-					<p>Have we met? <a href="/en/about/" class="light bold underline">Read about</a> our history, our values, and our community.</p>
-					<div>
-						<a href="/en/about/">
-							<button class="btn p2pu-btn light">About us</button>
-						</a>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-sm-12 col-12 column">
-					<p><a href="https://info.p2pu.org" class="light bold underline">Check out our blog</a> for stories and updates from P2PU friends and affiliates around the world.</p>
-					<div>
-						<a href="https://info.p2pu.org">
-							<button class="btn p2pu-btn light">Stories</button>
-						</a>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-sm-12 col-12 column">
-					<p>Want us to run a training? Can we help kickstart a new program? <a href="/en/work-with-us/" class="light bold underline">Hire us to work with you.</a></p>
-					<div>
-						<a href="/en/work-with-us/">
-							<button class="btn p2pu-btn light">Hire us</button>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="teams" class="background-secondary" data-aos="fade-up">
-		<div class="container my-4">
+			  </div>
+		  </div>
 
 			<div class="row">
-				<div class="col-md-6">
-					<div class="image-container" data-aos="fade-up">
-						<div class="image">
-							<a href="http://www.eifl.net/news/learning-circles-hit-kenya-public-libraries" class="undecorated">
-								<img src="{{ site.baseurl }}/assets/images/facilitate/profile_2_1.jpg" alt="Learning circle selfie">
-							</a>
-							<div class="caption">
-								<small>Kansas City Public Library “Making the Internet Work For You!” learning circle</small>
-							</div>
-						</div>
+				<div class="col-12" data-aos="zoom-in" data-aos-offset="200">
+					<div class="cta-button text-center">
+						<a href="/en/learning-circles/" class="btn p2pu-btn blue">Explore learning circles</a>
+						<div class="line"></div>
 					</div>
 				</div>
+		  </div>
 
-				<div class="col-md-6">
-					<h2 class="bold mt-md-0 mb-3">Better together</h2>
-					<p class="large">Around the world, facilitators are organizing themselves into teams. Teams are regional networks of learning circles led by a local organizer and supported by P2PU.</p>
-					<p class="large pb-2">If you want to start a team in your area, don't hesitate to get in touch with us!</p>
-					<a data-scroll href="/en/teams">
-						<button class="btn p2pu-btn blue">Check out our teams</button>
-					</a>
+	  </div>
+	</section>
+
+
+	<section id="facilitate" class="bg-white py-5 cta-section">
+		<div class="container">
+
+	  	<div class="row">
+	      <div class="col-12 col-md-6" data-aos="fade-up">
+					<h2>Anybody can create their own learning circle</h2>
+					<p class="large my-5">We maintain software tools, facilitation resources, and a global community forum to help you succeed.</p>
+			  </div>
+
+
+	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
+			    <div class="p2pu-slide-container">
+						{% for testimonial in site.data.testimonials.facilitators %}
+							{% include testimonial.html testimonial=testimonial %}
+						{% endfor %}
+					</div>
+			  </div>
+		  </div>
+
+			<div class="row">
+				<div class="col-12" data-aos="zoom-in" data-aos-offset="200">
+					<div class="cta-button text-center">
+						<a href="/en/facilitate" class="btn p2pu-btn blue">Facilitate</a>
+						<div class="line"></div>
+					</div>
 				</div>
+		  </div>
 
-			</div>
+	  </div>
+	</section>
+
+
+	<section id="organize" class="bg-secondary py-5 cta-section">
+		<div class="container">
+
+	  	<div class="row">
+	      <div class="col-12 col-md-6" data-aos="fade-up">
+					<h2>Organize your learning circles into teams</h2>
+					<p class="large my-5">Around the world, facilitators are organizing themselves into regional learning circle networks supported by P2PU. You don’t need to facilitate learning circles in order to organize a team.</p>
+			  </div>
+
+	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
+			    <div class="p2pu-slide-container">
+						{% for testimonial in site.data.testimonials.organizers %}
+							{% include testimonial.html testimonial=testimonial %}
+						{% endfor %}
+					</div>
+			  </div>
+		  </div>
+
+			<div class="row">
+				<div class="col-12" data-aos="zoom-in" data-aos-offset="200">
+					<div class="cta-button text-center">
+						<a href="/en/organize/" class="btn p2pu-btn blue">Organize</a>
+						<div class="line"></div>
+					</div>
+				</div>
+		  </div>
+
+	  </div>
+	</section>
+
+
+	<section id="about" class="bg-blue py-5 cta-section">
+		<div class="container">
+
+	  	<div class="row">
+	      <div class="col-12 col-md-6" data-aos="fade-up">
+					<h2>Learning doesn’t have to end at school</h2>
+					<p class="large my-5">We offer a variety of services beyond our free facilitation tools to help you develop equitable, social learning experiences in your community.</p>
+			  </div>
+	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
+			    <div class="p2pu-slide-container">
+						{% for testimonial in site.data.testimonials.grantmakers %}
+							{% include testimonial.html testimonial=testimonial %}
+						{% endfor %}
+					</div>
+			  </div>
+		  </div>
+
+			<div class="row">
+				<div class="col-12">
+					<div class="cta-button text-center">
+						<a href="/en/work-with-us/" class="btn p2pu-btn light" data-aos="zoom-in" data-aos-offset="200">Work with us</a>
+						<div class="line light"></div>
+					</div>
+				</div>
+		  </div>
+
+	  </div>
+	</section>
+
+
+	<section id="community" data-aos="fade-up">
+		<div class="container">
+			<h2 className="bold">Community</h2>
+			<p class="large my-4">This is the space for facilitators, learners, and other affiliates to discuss learning circle practices and P2PU organizational strategy.</p>
+			<div id="discourse-community"></div>
+			<a href="https://community.p2pu.org/" class="btn p2pu-btn blue">Go to the community forum</a>
 		</div>
 	</section>
+
 
 </main>
 

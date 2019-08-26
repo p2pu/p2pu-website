@@ -56,6 +56,10 @@ export const API_ENDPOINTS = {
   },
   whoami: {
     baseUrl: `${API_BASE_URL}/en/accounts/fe/whoami/`
+  },
+  teams: {
+    baseUrl: `${API_BASE_URL}/api/teams/?`,
+    searchParams: ['limit', 'image']
   }
 }
 

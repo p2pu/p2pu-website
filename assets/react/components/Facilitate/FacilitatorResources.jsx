@@ -68,9 +68,17 @@ export default class FacilitatorResources extends Component {
             <div className="content">
               <div className="row">
                 <div className="col-12">
+                  <p className="large bold">Are you looking for the online course?</p>
+                  <p>If you’re in a group, you can access these resources in the format of an open online course. This way, you get to explore learning circles while experiencing what it’s like to participate in a learning circle.</p>
+                  <p><a href="https://p2pu.github.io/facilitate-course/">Click here to access the online course</a></p>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-12">
                   <p className="large bold">Are you looking for the Facilitator Handbook?</p>
                   <p>You may prefer to use the offline, printable version of our facilitator resources. The content is a bit different (no videos) and it may not be as up-to-date as the online resources.</p>
-                  <p><a href="https://www.p2pu.org/assets/uploads/learning_circle_downloads/facilitator_handbook.pdf">Click here to download the Faciliator Handbook (PDF)</a></p>
+                  <p><a href="https://www.p2pu.org/assets/uploads/learning_circle_downloads/facilitator_handbook.pdf">Click here to download the Facilitator Handbook (PDF)</a></p>
                 </div>
               </div>
             </div>
