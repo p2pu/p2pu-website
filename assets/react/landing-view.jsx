@@ -22,7 +22,7 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-  <DiscourseCommunity discourse_path={'/latest.json'} />, document.getElementById('discourse-community')
+  <DiscourseCommunity discourse_path={'/top/yearly.json'} />, document.getElementById('discourse-community')
 );
 
 ReactDOM.render(
