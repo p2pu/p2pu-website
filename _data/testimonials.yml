@@ -30,6 +30,11 @@ facilitators:
     name: Manny
     role: Learning Circle Facilitator
     organization: Notre Dame Education Center (Boston)
+  - quote: "People want to learn how to use computers but they haven't had success sitting in a class listening to an \"expert\" tell them how. Learning circles have been a great way to attract digital literacy learners by offering something new and peer-centered."
+    img: wendy-pearson.jpg
+    name: Wendy
+    role: Learning Circle Organizer
+    organization: Kansas City Public Library
 
 grantmakers:
   - quote: "P2PU neatly connects open educational resources to career pathways in an equitable and empowering way that few other organizations are even considering."
@@ -39,9 +44,8 @@ grantmakers:
     organization: Siegel Family Endowment
 
 organizers:
-  - quote: "People want to learn how to use computers but they haven't had success sitting in a class listening to an \"expert\" tell them how. Learning circles have been a great way to attract digital literacy learners by offering something new and peer-centered."
-    img: wendy-pearson.jpg
-    name: Wendy
+  - quote:
+    img: juliana.jpg
+    name: Juliana
     role: Learning Circle Organizer
-    organization: Kansas City Public Library
-
+    organization: Kenya National Library Service

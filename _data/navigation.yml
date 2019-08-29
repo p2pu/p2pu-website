@@ -7,26 +7,25 @@ top_level:
     url: /en/facilitate/
   - text: Organize
     url: /en/organize/
+  - text: Events
+    url: /en/events/
   - text: Community
     url: https://community.p2pu.org/
     external: true
+  - text: Hire us
+    url: /en/work-with-us/
+  - text: About P2PU
+    url: /en/about/
   - text: Blog
     url: http://info.p2pu.org/
     external: true
-  - text: About
-    url: /en/about/
-    submenu:
-      - text: Hire us
-        url: /en/work-with-us/
-      - text: Job opportunities
-        url: /en/jobs/
-      - text: Shop
-        url: https://shop.spreadshirt.com/p2pu/
-        external: true
-      - text: Donate
-        url: /en/donate/
-      - text: Contact us
-        url: /en/connect/
+  - text: Shop
+    url: https://shop.spreadshirt.com/p2pu/
+    external: true
+  - text: Donate
+    url: /en/donate/
+  - text: Contact
+    url: /en/connect/
 socials:
   - text: Medium
     url: https://medium.com/p2pu
