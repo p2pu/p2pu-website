@@ -178,7 +178,16 @@ bundles:
 					<h2>Create a learning circle course</h2>
 					<p class="large my-5">We can help you adapt your expertise into learning circle materials, providing pathways for new communities to engage with topics that matter to you.</p>
 			  </div>
+
+        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
+			    <div class="p2pu-slide-container">
+						{% for testimonial in site.data.testimonials.network %}
+							{% include testimonial.html testimonial=testimonial %}
+						{% endfor %}
+					</div>
+			  </div>
 		  </div>
+
 
 			<div class="row">
 				<div class="col-12">

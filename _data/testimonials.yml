@@ -8,6 +8,11 @@ learners:
     name: Lloyd
     role: Learning Circle Participant
     organization: Boston Public Library
+  - quote: "To have such a program here in Detroit is a valuable resource for us to participate in...if it was not for Peer 2 Peer University I would probably still be working on finishing my book."
+    img: melvin.jpg
+    name: Melvin
+    role: Learning Circle Participant
+    organization: Detroit Public Library
 
 facilitators:
   - quote: "The very act of making education accessible, free, and learner-driven is the heart of democracy. Here in Chicago, an incredibly segregated city, I've seen learning circles be agents of social justice: they have brought people of all races, ages, and social classes, and helped them form bonds they might otherwise not have the opportunity to form."
@@ -36,7 +41,7 @@ facilitators:
     role: Learning Circle Organizer
     organization: Kansas City Public Library
 
-grantmakers:
+network:
   - quote: "P2PU neatly connects open educational resources to career pathways in an equitable and empowering way that few other organizations are even considering."
     img: laura.png
     name: Laura
@@ -44,8 +49,8 @@ grantmakers:
     organization: Siegel Family Endowment
 
 organizers:
-  - quote:
-    img: juliana.jpg
-    name: Juliana
-    role: Learning Circle Organizer
-    organization: Kenya National Library Service
+  - quote: "Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."
+    img: ramune.png
+    name: Ramune
+    role: Manager of Public Libraries Innovation Programme
+    organization: EIFL
