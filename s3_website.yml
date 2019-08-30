@@ -17,7 +17,7 @@ exclude_from_upload:
   - README.md
 
 redirects:
-    <%= File.read('_data/page_redirects.txt') %>
+<%= File.read('_data/page_redirects.txt') %>
     index.html: /en/
     courses/index.html: /en/courses/
     en/community/index.html: https://community.p2pu.org/
