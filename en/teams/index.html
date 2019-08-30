@@ -32,10 +32,13 @@ extra_js:
           <nav id="team-menu" class="nav nav-stacked">
             <ul class="sidebar-nav">
             {% for team in site.data.teams.items %}
-              <li class="nav-item">
-                <span class="bullet"></span>
-                <a data-scroll href="#{{ team.page_slug }}" class="minicaps">{{ team.name }}</a>
-              </li>
+              {% if team.id == 3 %}
+              {% else %}
+                <li class="nav-item">
+                  <span class="bullet"></span>
+                  <a data-scroll href="#{{ team.page_slug }}" class="minicaps">{{ team.name }}</a>
+                </li>
+              {% endif %}
             {% endfor %}
             </ul>
           </nav>
@@ -43,6 +46,8 @@ extra_js:
 
         <div class="col-sm-9">
           {% for team in site.data.teams.items %}
+          {% if team.id == 3 %}
+          {% else %}
             <div class="card mb-4 pos-relative" id="{{team.page_slug}}">
               {% if team.image_url %}
                 <div class="card-image">
@@ -107,7 +112,9 @@ extra_js:
                   <div class="card-body">
                     <div class="slide-container">
 
-                    {% for organizer in team.organizers %}
+
+                    {% assign organizers = team.organizers | sort: 'bio' | reverse %}
+                    {% for organizer in organizers %}
 
                       <div class="slide">
                         <div class="d-flex align-items-center">
@@ -151,7 +158,7 @@ extra_js:
               {% endif %}
 
             </div>
-
+          {% endif %}
           {% endfor %}
         </div>
       </div>
