@@ -17,6 +17,7 @@ exclude_from_upload:
   - README.md
 
 redirects:
+<%= File.read('_data/page_redirects.txt') %>
     index.html: /en/
     courses/index.html: /en/courses/
     en/community/index.html: https://community.p2pu.org/
@@ -189,6 +190,7 @@ routing_rules:
       key_prefix_equals: berlin
     redirect:
       host_name: berlin.p2pu.org
+      replace_key_prefix_with: ''
       protocol: https
       replace_key_prefix_with: ''
       http_redirect_code: 302

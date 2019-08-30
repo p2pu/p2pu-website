@@ -17,6 +17,8 @@ after_success:
 - if [[ "$TRAVIS_BRANCH" != "release" ]] && [[ "$TRAVIS_BRANCH" != "master" ]]; then
   echo "Only release and master branches are deployed"; exit 0; fi
 - echo "Deploying commit $TRAVIS_COMMIT"
+- ./script/en_redirects.sh > _data/page_redirects.txt
+- cat _data/page_redirects.txt
 - bundle exec s3_website cfg apply --headless
 - bundle exec s3_website push
 env:

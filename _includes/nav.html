@@ -25,14 +25,22 @@
               <a href="{{ link.url }}">
                 <div class="menu-item">
                   <span class="bullet"></span>
-                  <span class="text">{{ link.text }}</span>
+                  <span class="text">{{ link.text }}
+                    {% if link.external %}
+                      <i class="material-icons ml-1" style="font-size: inherit; line-height: inherit; vertical-align: top;">open_in_new</i>
+                    {% endif %}
+                  </span>
                 </div>
               </a>
               {% for sub_link in link.submenu %}
                 <a href="{{ sub_link.url }}" class="dark">
                   <div class="menu-item submenu">
                     <span class="bullet"></span>
-                    <span class="text">{{ sub_link.text }}</span>
+                    <span class="text">{{ sub_link.text }}
+                      {% if sub_link.external %}
+                        <i class="material-icons ml-1" style="font-size: inherit; line-height: inherit; vertical-align: top;">open_in_new</i>
+                      {% endif %}
+                    </span>
                   </div>
                 </a>
               {% endfor %}

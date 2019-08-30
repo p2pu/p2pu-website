@@ -1,6 +1,4 @@
 import React from 'react'
-import Masonry from 'react-masonry-component'
-import Slider from 'react-slick'
 import moment from 'moment'
 
 import MeetingCard from './MeetingCard.jsx'
@@ -33,7 +31,7 @@ const BrowseMeetings = (props) => {
   }
 
   return (
-    <Slider {...settings} className={`meetings slide-container ${props.classes}`}>
+    <div className="row">
       {
         props.meetings.map((meeting, index) => {
           const nextMeeting = moment(`${meeting.next_meeting_date} ${meeting.meeting_time}`);
@@ -42,7 +40,7 @@ const BrowseMeetings = (props) => {
           const formattedCity = meeting.city.replace(/United States of America/, 'USA')
 
           return(
-            <div key={index}>
+            <div className="col-12 col-md-4" key={index}>
               <MeetingCard
                 title={ meeting.course.title }
                 date={formattedMeetingDate}
@@ -56,7 +54,7 @@ const BrowseMeetings = (props) => {
           )
         })
       }
-    </Slider>
+    </div>
   );
 }
 

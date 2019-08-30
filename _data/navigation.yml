@@ -1,38 +1,31 @@
 top_level:
   - text: Home
     url: /en/
-  - text: Learning Circles
+  - text: Join a learning circle
     url: /en/learning-circles/
   - text: Facilitate
     url: /en/facilitate/
-    submenu:
-      - text: Courses
-        url: /en/courses/
-      - text: Dashboard
-        url: https://learningcircles.p2pu.org/en/
-      - text: Create a learning circle
-        url: https://learningcircles.p2pu.org/en/studygroup/create/
-      - text: FAQ
-        url: https://community.p2pu.org/tags/faq/
-  - text: Teams
-    url: /en/teams/
+  - text: Organize
+    url: /en/organize/
+  - text: Events
+    url: /en/events/
   - text: Community
     url: https://community.p2pu.org/
-  - text: Blog
-    url: http://info.p2pu.org/
+    external: true
+  - text: Hire us
+    url: /en/work-with-us/
   - text: About P2PU
     url: /en/about/
-    submenu:
-      - text: Hire us
-        url: /en/work-with-us/
-      - text: Jobs
-        url: /en/jobs/
-      - text: Shop
-        url: https://shop.spreadshirt.com/p2pu/
-      - text: Donate
-        url: /en/donate/
-      - text: Contact
-        url: /en/connect/
+  - text: Blog
+    url: http://info.p2pu.org/
+    external: true
+  - text: Shop
+    url: https://shop.spreadshirt.com/p2pu/
+    external: true
+  - text: Donate
+    url: /en/donate/
+  - text: Contact
+    url: /en/connect/
 socials:
   - text: Medium
     url: https://medium.com/p2pu
