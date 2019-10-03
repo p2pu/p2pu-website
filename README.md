@@ -26,7 +26,7 @@ To change the facilitor profiles, edit the text in the file `/_data/facilitators
 
 The corresponding images are in `assets/images/facilitate`. The images should have a *maximum width of 2160px and a minimum width of 660px*.
 
-The number of facilitator profiles available in the rotation should be updated in `assets/js/facilitate.js`.
+The number of facilitator profiles available in the rotation should be updated in `assets/js/facilitate.js`. 
 
 
 
