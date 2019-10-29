@@ -14,5 +14,6 @@ ReactDOM.render(
     searchSubject={'courses'}
     Browse={BrowseCourses}
     onSelectResult={handleSelectResult}
+    initialState={{languages:['en']}}
   />, document.getElementById('search-courses-component')
 );
