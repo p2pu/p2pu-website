@@ -20,7 +20,17 @@ after_success:
 - ./script/en_redirects.sh > _data/page_redirects.txt
 - cat _data/page_redirects.txt
 - bundle exec s3_website cfg apply --headless
-- bundle exec s3_website push
+- docker build -t utils/s3_website s3_website/
+- docker run --rm 
+    --name s3_website 
+    -it 
+    -v `pwd`:/app
+    -e AWS_ACCESS_KEY
+    -e AWS_SECRET_KEY
+    -e TRAVIS_BRANCH
+    utils/s3_website
+    s3_website push
+#- bundle exec s3_website push
 env:
   global:
   - secure: aCvpyjljg3FDHvwgNKHzGLS4m9JKEZ2fBdTc2SO+iVEb7q/hvmOCb9M3xyhzug0dIXjCnrjCsAF3MnQ/BQLQVjCnL9+2IH0rxRcx7fIAAsuZ6FCgL/ohzPGZVK2qqdXhujMDu3t3O+auA8T3vN3siG1ophXKHcqe9/spve/WmwU=

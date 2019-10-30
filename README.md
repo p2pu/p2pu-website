@@ -28,6 +28,4 @@ The corresponding images are in `assets/images/facilitate`. The images should ha
 
 The number of facilitator profiles available in the rotation should be updated in `assets/js/facilitate.js`.
 
-
-
-
+.
