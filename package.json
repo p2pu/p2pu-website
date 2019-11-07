@@ -54,7 +54,7 @@
     "style-loader": "^0.16.1",
     "url-polyfill": "^1.1.0",
     "webpack": "^2.4.1",
-    "webpack-bundle-analyzer": "^2.13.1"
+    "webpack-bundle-analyzer": "^3.3.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
