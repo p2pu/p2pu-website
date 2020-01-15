@@ -22,7 +22,7 @@
   "homepage": "https://github.com/p2pu/p2pu-website#readme",
   "dependencies": {
     "assets-webpack-plugin": "^3.5.1",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.7.0",
@@ -35,7 +35,7 @@
     "moment-timezone": "^0.5.16",
     "node-sass": "^4.11.0",
     "p2pu-input-fields": "0.5.24",
-    "p2pu-search-cards": "0.14.10",
+    "p2pu-search-cards": "0.14.18",
     "p2pu-theme": "^1.1.2",
     "prop-types": "^15.7.2",
     "query-string": "^5.1.1",
@@ -47,6 +47,7 @@
     "react-scrollspy": "^3.3.5",
     "react-select": "^1.0.0-rc.5",
     "react-slick": "^0.16.0",
+    "react-telephone-input": "^4.73.4",
     "react-tooltip": "^3.3.0",
     "react-typist": "^2.0.5",
     "sass-loader": "^6.0.3",
@@ -54,7 +55,7 @@
     "style-loader": "^0.16.1",
     "url-polyfill": "^1.1.0",
     "webpack": "^2.4.1",
-    "webpack-bundle-analyzer": "^2.13.1"
+    "webpack-bundle-analyzer": "^3.3.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
