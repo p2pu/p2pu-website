@@ -47,6 +47,7 @@
     "react-scrollspy": "^3.3.5",
     "react-select": "^1.0.0-rc.5",
     "react-slick": "^0.16.0",
+    "react-telephone-input": "^4.73.4",
     "react-tooltip": "^3.3.0",
     "react-typist": "^2.0.5",
     "sass-loader": "^6.0.3",
