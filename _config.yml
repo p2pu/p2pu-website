@@ -3,7 +3,7 @@ title: P2PU
 email: admin@p2pu.org
 description: "Taking online courses together, in libraries, for free."
 baseurl:
-url: "http://p2pu.org"
+url: "https://www.p2pu.org"
 languages: ['en']
 default_language: 'en'
 
