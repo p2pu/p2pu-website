@@ -7,6 +7,8 @@ top_level:
     url: /en/facilitate/
   - text: Organize
     url: /en/organize/
+  - text: Courses
+    url: /en/courses/
   - text: Events
     url: /en/events/
   - text: Community
@@ -16,11 +18,10 @@ top_level:
     url: /en/work-with-us/
   - text: About P2PU
     url: /en/about/
+  - text: Job opportunities
+    url: /en/jobs/
   - text: Blog
     url: http://info.p2pu.org/
-    external: true
-  - text: Shop
-    url: https://shop.spreadshirt.com/p2pu/
     external: true
   - text: Donate
     url: /en/donate/
