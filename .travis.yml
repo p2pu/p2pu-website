@@ -19,6 +19,8 @@ after_success:
 - echo "Deploying commit $TRAVIS_COMMIT"
 - ./script/en_redirects.sh > _data/page_redirects.txt
 - cat _data/page_redirects.txt
+- cat _data/teams.json | python3 script/team_redirects.py >> _data/team_redirects.txt
+- cat _data/team_redirects.txt
 - bundle exec s3_website cfg apply --headless
 - docker build -t utils/s3_website s3_website/
 - docker run --rm 
