@@ -7,10 +7,10 @@ As an open source project, we invite contribution and collaboration from many an
 
 # Current Opportunities
 
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">{{site.data.jobs.title}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Remote position</h6>
-    <a href="{{"/en/jobs/production-lead/" | relative_url}}" class="card-link">See more</a>
-  </div>
-</div>
+<p>
+<dl class="row">
+  <dt class="col-sm-3"><a href="{{"/en/jobs/production-lead/" | relative_url}}">Production Lead</a></dt>
+
+  <dd class="col-sm-9"><span class="mb-2 text-muted">(remote position)</span></dd>
+</dl>
+</p>
