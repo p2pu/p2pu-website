@@ -7,5 +7,10 @@ As an open source project, we invite contribution and collaboration from many an
 
 # Current Opportunities
 
-Nothing at the moment.
+<p>
+<dl class="row">
+  <dt class="col-sm-3"><a href="{{"/en/jobs/production-lead/" | relative_url}}">Production Lead</a></dt>
 
+  <dd class="col-sm-9"><span class="mb-2 text-muted">(remote position)</span></dd>
+</dl>
+</p>
