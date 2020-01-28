@@ -23,6 +23,9 @@ top_level:
   - text: Blog
     url: http://info.p2pu.org/
     external: true
+  - text: Shop
+    url: https://shop.spreadshirt.com/p2pu/
+    external: true
   - text: Donate
     url: /en/donate/
   - text: Contact
