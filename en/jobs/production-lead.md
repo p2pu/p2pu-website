@@ -67,7 +67,24 @@ text: |
             "unitText": "YEAR"
         }
     },
-    "jobLocationType": "TELECOMMUTE"
+    "jobLocationType": "TELECOMMUTE",
+    "applicantLocationRequirements": [
+  		{
+    		"@type": "Country",
+    		"sameAs": "https://www.wikidata.org/wiki/Q30",
+    		"name": "USA"
+  		},
+  		{
+    		"@type": "Country",
+    		"sameAs": "https://www.wikidata.org/wiki/Q458",
+    		"name": "European Union"
+  		},
+  		{
+          	"@type": "Country",
+    		"sameAs": "https://www.wikidata.org/wiki/Q19464773",
+          	"name": "Northern America and Mexico"
+  		}
+	]
 }
 </script>
 {{page.text}}
