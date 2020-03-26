@@ -8,7 +8,7 @@ text: |
 
   P2PU’s role supporting learning circles is multi-faceted: we build open source software to support in-person learning communities, we train individuals to facilitate learning circles and maintain a virtual facilitator community of practice, we develop and curate open educational resources, and we help our partners build new pathways for community-based learning in their towns and cities. 
 
-  We work closely alongside librarians, designers, researchers, and educators, but operationally we are a distributed 3-person team, based in Boston, Kingston (ON), and Cape Town. You will be the fourth team member. This is a full-time (40 hours/week) position funded for one year with the hope and intent to extend. You can be based anywhere, and salary starts at USD $60,000. To learn more about P2PU, [visit our homepage](https://www.p2pu.org/en/).
+  We work closely alongside librarians, designers, researchers, and educators, but operationally we are a distributed 3-person team, based in Boston, Kingston (ON), and Cape Town. You will be the fourth team member. This is a full-time (40 hours/week) position funded for one year with the hope and intent to extend. You can be based anywhere. To learn more about P2PU, [visit our homepage](https://www.p2pu.org/en/).
 
   ### Responsibilities
 
