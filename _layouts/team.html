@@ -1,0 +1,22 @@
+---
+layout: base
+extra_css:
+  - /assets/css/p2pu-search.css
+bundles:
+  - search
+---
+
+{% assign team = site.data.teams.items | where: "page_slug", page.slug | first %}
+<div>
+  <section class="page-title">
+    <header>
+      <h1>{{ page.slug }}</h1>
+    </header>
+    <div id="search-subtitle">
+      <p class="centered large">{{ team.name }}</p>
+    </div>
+  </section>
+  <section class="search">
+    <div id="search-lc-component" data-team-id="{{team.id}}"></div>
+  </section>
+</div>

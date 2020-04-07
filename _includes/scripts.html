@@ -19,6 +19,10 @@
 	{% endif %}
 {% endfor %}
 
+{% for bundle in layout.bundles %}
+	<script src="{{site.data.bundles[bundle]['js']}}"></script>
+{% endfor %}
+
 {% for bundle in page.bundles %}
 	<script src="{{site.data.bundles[bundle]['js']}}"></script>
 {% endfor %}

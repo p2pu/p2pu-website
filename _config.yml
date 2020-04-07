@@ -11,6 +11,18 @@ default_language: 'en'
 markdown: kramdown
 permalink: pretty
 
+collections:
+  teams:
+    output: true
+defaults:
+  -
+    scope:
+      path: ""
+      type: "teams"
+    values:
+      layout: "team"
+      permalink: "/:title"
+
 #SASS settings
 sass:
   load_paths:
