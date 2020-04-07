@@ -21,7 +21,7 @@ defaults:
       type: "teams"
     values:
       layout: "team"
-      permalink: "/:title"
+      permalink: "/:title/"
 
 #SASS settings
 sass:
