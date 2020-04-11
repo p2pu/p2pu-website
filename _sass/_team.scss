@@ -1,0 +1,106 @@
+#team-intro {
+  border-bottom: 1px solid $gray-lighter;
+}
+
+.team-image {
+  position: absolute;
+  padding-right: 30px;
+}
+
+.team-logo {
+  position: absolute;
+  bottom: -30px;
+  padding: 5px;
+  box-shadow: -4px 4px 15px rgba(0,0,0,.15);
+  background: white;
+}
+
+.hidden {
+  display: none;
+}
+
+#faq {
+  .faq-container {
+    &:nth-of-type(4n+1) {
+      .question {
+        border-bottom: 4px solid $p2pu-yellow;
+      }
+    }
+
+    &:nth-of-type(4n+2) {
+      .question {
+        border-bottom: 4px solid $p2pu-blue;
+      }
+    }
+
+    &:nth-of-type(4n+3) {
+      .question {
+        border-bottom: 4px solid $p2pu-orange;
+      }
+    }
+
+    &:nth-of-type(4n+4) {
+      .question {
+        border-bottom: 4px solid $p2pu-green;
+      }
+    }
+  }
+
+  .question {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+      font-family: "Open Sans";
+      font-size: 1.25rem;
+    }
+  }
+
+  .answer {
+    margin: 15px 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+}
+
+.Collapsible {
+  .trigger-header {
+    background-color: $gray-darker;
+    transition: all 0.4s linear;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $gray-lighter;
+    cursor: pointer;
+
+    h2 {
+      margin: 0;
+      color: $white;
+      font-weight: 400;
+      font-size: 1.25rem;
+      transition: all 0.4s linear;
+    }
+  }
+  .is-open {
+    .trigger-header {
+      background-color: $gray-lighter;
+      border-bottom: 1px solid $gray-darker;
+
+      h2 {
+        color: $gray-darker;
+      }
+    }
+  }
+
+  .Collapsible__contentInner {
+    border-bottom: 1px solid $gray-darker;
+  }
+
+  .contact {
+    i {
+      width: 20px;
+      margin-right: 20px;
+    }
+  }
+}

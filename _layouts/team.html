@@ -1,22 +1,79 @@
 ---
 layout: base
 extra_css:
-  - /assets/css/p2pu-search.css
+  - /assets/css/vendor/slick.css
+  - /assets/css/vendor/slick-theme.css
+  - /assets/css/p2pu-team.css
+  - /assets/css/p2pu-teams.css
 bundles:
-  - search
+  - team
+extra_js:
+- js/vendor/slick.min.js
+- js/teams.js
 ---
 
 {% assign team = site.data.teams.items | where: "page_slug", page.slug | first %}
+
 <div>
-  <section class="page-title">
-    <header>
-      <h1>{{ page.slug }}</h1>
-    </header>
-    <div id="search-subtitle">
-      <p class="centered large">{{ team.name }}</p>
+  <section id="team-intro">
+    <div class="featured-event bg-light pt-5">
+      <div class="container">
+        <div class="row">
+          {% if team.image_url %}
+            <div class="col-md-4">
+              <img src="{{ team.image_url }}" class="img-fluid rounded team-image" />
+            </div>
+          {% endif %}
+            <div class="col-md-7">
+              <div class="minicaps text-left text-muted bold">
+                Learning circles hosted by
+              </div>
+              <h1 class='mb-3'>{{ team.name }}</h1>
+            </div>
+            <div class="col-md-1">
+              <img src="{{ team.image_url }}" class="img-fluid rounded team-logo" />
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured-event bg-dark pt-4 pb-4">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-7 offset-md-4">
+            <div class="event-card d-block d-md-flex">
+              <div class='info'>
+                {% if team.intro_text %}
+                <p class='card-text text-white'>{{ team.intro_text}}</p>
+                {% else %}
+                <p class='card-text text-white'>Join your neighbors at the library to learn something together. Learning circles meet weekly for 6-8 weeks, and are free to join.</p>
+                {% endif %}
+                <div class="text-xs d-flex align-items-center mb-2 text-white minicaps">
+                  <i class="material-icons pr-2">group</i>
+                  <p class="mb-0">Team members: <span class="bold">{{ team.member_count }}</span></p>
+                </div>
+
+                <div class="text-xs d-flex align-items-center mb-2 text-white minicaps">
+                  <i class="material-icons pr-2">list</i>
+                  <p class="mb-0">Total learning circles: <span class="bold">{{ team.studygroup_count }}</span></p>
+                </div>
+
+                <div class="text-xs d-flex align-items-center mb-2 text-white minicaps">
+                  <i class="material-icons pr-2">event</i>
+                  <p class="mb-0">Established: <span class="bold">{{ team.date_established }}</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <section class="search">
-    <div id="search-lc-component" data-team-id="{{team.id}}"></div>
-  </section>
+
+  <div class="hidden" id="team-data">
+    {{ team|jsonify }}
+  </div>
+  <div id="team-collapsible"></div>
 </div>
+
