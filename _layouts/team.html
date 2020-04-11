@@ -1,15 +1,10 @@
 ---
 layout: base
 extra_css:
-  - /assets/css/vendor/slick.css
-  - /assets/css/vendor/slick-theme.css
   - /assets/css/p2pu-team.css
   - /assets/css/p2pu-teams.css
 bundles:
   - team
-extra_js:
-- js/vendor/slick.min.js
-- js/teams.js
 ---
 
 {% assign team = site.data.teams.items | where: "page_slug", page.slug | first %}

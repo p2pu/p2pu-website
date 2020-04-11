@@ -1,8 +1,11 @@
 import React from "react"
 import Collapsible from 'react-collapsible';
 import { Search, BrowseLearningCircles } from 'p2pu-search-cards';
+import Slider from "react-slick";
 
 import 'p2pu-search-cards/dist/build.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Header = ({ title }) => (
   <div className="trigger-header">
@@ -117,10 +120,30 @@ class TeamInfo extends React.Component {
   render() {
     const { teamData } = this.props;
     const organizers = teamData.organizers
+    const sliderSettings = {
+      arrows: true,
+      // appendArrows: slider.parent().find(".arrows"),
+      autoplay: false,
+      autoplaySpeed: 4000,
+      pauseOnHover: true,
+      focusOnSelect: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            pauseOnHover: false,
+            swipe: true,
+          }
+        },
+      ]
+    }
 
     return(
       <div>
-        <Collapsible trigger={<Header title="Organization and Contact Information" />}>
+        <Collapsible trigger={<Header title="Organization and Contact Information" />} key="contact">
           <div className="container pt-4 pb-4 contact">
             <div className="row">
               <div className="col-lg-8">
@@ -156,14 +179,14 @@ class TeamInfo extends React.Component {
                 </div>
               </div>
 
-              <div className="col-lg-4 profile mx-4 p-0 d-none d-lg-flex align-items-center">
+              <div className="col-lg-4 profile d-none d-lg-flex align-items-center">
                 <div className="card">
                   <div className="card-header bg-secondary">
                     <p className="minicaps text-right mb-0 text-muted">Organizer</p>
                   </div>
 
                   <div className="card-body">
-                    <div className="slide-container">
+                    <Slider className="slide-container" settings={sliderSettings}>
 
                     {
                       organizers.map(organizer => (
@@ -191,7 +214,7 @@ class TeamInfo extends React.Component {
                       ))
                     }
 
-                    </div>
+                    </Slider>
                     <div className="arrows pos-relative d-flex justify-content-center"></div>
                   </div>
 
@@ -202,7 +225,7 @@ class TeamInfo extends React.Component {
           </div>
         </Collapsible>
 
-        <Collapsible trigger={<Header title="Frequently Asked Questions" />}>
+        <Collapsible trigger={<Header title="Frequently Asked Questions" />} key="faq">
           <div className="container pt-4 pb-4" id="faq">
             <div className="row">
               <div className="col-12">
@@ -212,7 +235,7 @@ class TeamInfo extends React.Component {
           </div>
         </Collapsible>
 
-        <Collapsible trigger={<Header title={`Learning Circles at ${teamData.name}`} />} open={true}>
+        <Collapsible trigger={<Header title={`Learning Circles at ${teamData.name}`} />} open={true} key="search">
           <div className="container pt-4 pb-4">
             <div className="row">
               <div className="col-12">
