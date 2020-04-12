@@ -111,6 +111,28 @@ const DefaultFAQ = props => (
   </div>
 )
 
+const NextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", bottom: "-3rem", right: "0" }}
+      onClick={onClick}
+    />
+  );
+}
+
+const PrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", bottom: "-3rem", left: "0" }}
+      onClick={onClick}
+    />
+  );
+}
+
 class TeamInfo extends React.Component {
   constructor(props) {
     super(props)
@@ -122,7 +144,6 @@ class TeamInfo extends React.Component {
     const organizers = teamData.organizers
     const sliderSettings = {
       arrows: true,
-      // appendArrows: slider.parent().find(".arrows"),
       autoplay: false,
       autoplaySpeed: 4000,
       pauseOnHover: true,

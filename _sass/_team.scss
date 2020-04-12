@@ -144,3 +144,26 @@
     }
   }
 }
+
+.slick-arrow {
+
+  &.slick-prev {
+    left: 0;
+    top: unset;
+    bottom: -3rem;
+
+    &:before {
+      color: $p2pu-blue;
+    }
+  }
+
+  &.slick-next {
+    right: 0;
+    top: unset;
+    bottom: -3rem;
+
+    &:before {
+      color: $p2pu-blue;
+    }
+  }
+}
