@@ -215,7 +215,7 @@ main {
 			background-size: cover;
 		}
 	}
-  
+
   .bg-blue {
     color: $white;
   }
@@ -380,7 +380,6 @@ main {
 			display: flex;
 			justify-content: center;
 			align-content: flex-start;
-			width: 680px;
 			margin: 6px;
 
 			&:focus {
@@ -429,8 +428,8 @@ main {
 
 						img {
 							border-radius: 50%;
-							height: 100%;
-							width: 100%;
+							height: 100px;
+							width: 100px;
 						}
 					}
 
