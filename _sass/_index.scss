@@ -606,7 +606,9 @@ main {
   }
 
   .topic-title {
-    color: $gray-darker;
+  	a {
+			color: $gray-darker;
+  	}
   }
 
   .users {
@@ -713,6 +715,12 @@ main {
 						max-width: 160px;
 					}
 				}
+			}
+		}
+
+		.discourse-topics {
+			.topic-title {
+				min-width: 180px;
 			}
 		}
 	}

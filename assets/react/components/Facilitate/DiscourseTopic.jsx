@@ -13,8 +13,8 @@ const DiscourseTopic = props => {
 
   return (
     <tr key={topic.id} className="table-row">
-      <td>
-        <a href={topicUrl} className="topic-title">{topic.title}</a>
+      <td className="topic-title">
+        <a href={topicUrl}>{topic.title}</a>
       </td>
       <td><a href={categoryUrl} className="category-name">{category.name}</a></td>
       <td className="users">
