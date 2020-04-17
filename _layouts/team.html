@@ -3,62 +3,145 @@ layout: base
 extra_css:
   - /assets/css/p2pu-team.css
   - /assets/css/p2pu-teams.css
+  - /assets/css/p2pu-search.css
+extra_js:
+  - js/vendor/rellax.min.js
+  - js/team.js
 bundles:
-  - team
+  - search
 ---
 
 {% assign team = site.data.teams.items | where: "page_slug", page.slug | first %}
 
 <div>
-  <section id="team-intro">
-    <div class="featured-event bg-light pt-5">
+  <section id="team-intro" class="bg-dark">
+    <div class="featured-event pt-5">
       <div class="container">
         <div class="row">
           {% if team.image_url %}
-            <div class="col-md-4">
-              <img src="{{ team.image_url }}" class="img-fluid rounded team-image" />
+            <div class="col-lg-6 col-md-10 col-sm-12 order-2 order-lg-1 mt-md-5 mt-lg-0">
+              <div class="header-image pos-relative rellax" data-rellax-speed="8">
+                <div class="img-circle">
+                  <img src="{{ team.image_url }}" class="img-fluid" />
+                </div>
+                <div class="team-logo">
+                  <img src="{{ site.baseurl }}/assets/images/p2pu-logo.png" alt="P2PU logo" class="img-fluid">
+                </div>
+              </div>
             </div>
           {% endif %}
-            <div class="col-md-7">
-              <div class="minicaps text-left text-muted bold">
-                Learning circles hosted by
+            <div class="col-lg-6 col-md-12 order-1 order-lg-2">
+              <div class="header-text">
+                <div class="rellax" data-rellax-speed="-4">
+                  <div class="minicaps text-left text-white bold">
+                    Learning circles hosted by
+                  </div>
+                  <h1 class='mb-3 text-white'>{{ team.name }}</h1>
+                  {% if team.intro_text %}
+                  <p class='card-text text-white'>{{ team.intro_text}}</p>
+                  {% else %}
+                  <p class='card-text text-white'>Join your neighbors at the library to learn something together. Learning circles meet weekly for 6-8 weeks, and are free to join.</p>
+                  {% endif %}
+                  <div class='info'>
+                    <div class="text-xs d-flex align-items-center mb-2 text-white">
+                      <i class="material-icons pr-2">email</i>
+                      <p class="mb-0">hello@ministryofmagic.gov.uk</p>
+                    </div>
+
+                    <div class="text-xs d-flex align-items-center mb-2 text-white">
+                      <i class="material-icons pr-2">launch</i>
+                      <p class="mb-0">www.ministryofmagic.gov.uk</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h1 class='mb-3'>{{ team.name }}</h1>
-            </div>
-            <div class="col-md-1">
-              <img src="{{ team.image_url }}" class="img-fluid rounded team-logo" />
             </div>
         </div>
-      </div>
-    </div>
 
-    <div class="featured-event bg-dark pt-4 pb-4">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-md-7 offset-md-4">
-            <div class="event-card d-block d-md-flex">
-              <div class='info'>
-                {% if team.intro_text %}
-                <p class='card-text text-white'>{{ team.intro_text}}</p>
-                {% else %}
-                <p class='card-text text-white'>Join your neighbors at the library to learn something together. Learning circles meet weekly for 6-8 weeks, and are free to join.</p>
-                {% endif %}
-                <div class="text-xs d-flex align-items-center mb-2 text-white minicaps">
-                  <i class="material-icons pr-2">group</i>
-                  <p class="mb-0">Team members: <span class="bold">{{ team.member_count }}</span></p>
+        <div class="row mt-5">
+          <div class="col-lg-6 col-md-12 text-white">
+            <h2 class="mb-3">About Us</h2>
+            <p>Join your neighbors from across the community as we gather to learn something together. We Learn programs meet at a variety of library locations throughout Pittsburgh, and are free to join.</p>
+            <p>Interested in helping us organize learning groups and other We Learn Programs? Check out our facilitation resources to learn more.</p>
+            <div class="team-stats">
+              <div class="stat orange">
+                <div class="circle">
+                  {{ team.studygroup_count }}
                 </div>
-
-                <div class="text-xs d-flex align-items-center mb-2 text-white minicaps">
-                  <i class="material-icons pr-2">list</i>
-                  <p class="mb-0">Total learning circles: <span class="bold">{{ team.studygroup_count }}</span></p>
-                </div>
-
-                <div class="text-xs d-flex align-items-center mb-2 text-white minicaps">
-                  <i class="material-icons pr-2">event</i>
-                  <p class="mb-0">Established: <span class="bold">{{ team.date_established }}</span></p>
-                </div>
+                <div class="line"></div>
+                <div class="text minicaps bold text-white text-left">total learning circles</div>
               </div>
+
+              <div class="stat yellow align-right">
+                <div class="circle">
+                  {{ team.member_count }}
+                </div>
+                <div class="line"></div>
+                <div class="text minicaps bold text-white text-left">team members</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-none d-lg-flex">
+            <div class="organizers pos-relative h-100 d-flex justify-content-center align-items-center">
+              <div class="circle-1"></div>
+              <div class="circle-2"></div>
+
+                {% if team.organizers.size > 0 %}
+                <div class="profile mx-4 p-0 align-items-center">
+                <div class="card">
+                    <div class="card-header bg-secondary">
+                      <p class="minicaps text-right mb-0 text-muted">Organizer</p>
+                    </div>
+
+
+                    <div class="card-body">
+                      <div class="slide-container">
+
+
+                      {% assign organizers = team.organizers | sort: 'bio' | reverse %}
+                      {% for organizer in organizers %}
+
+                        <div class="slide">
+                          <div class="d-flex align-items-center">
+                            <div class="profile-image mr-2">
+                              <div class="img-container">
+                                {% if organizer.avatar_url %}
+                                <img class="" src="{{ organizer.avatar_url }}" />
+                                {% else %}
+                                <img class="" src="{{ site.baseurl }}/assets/images/default_avatar.png" />
+                                {% endif %}
+                              </div>
+                            </div>
+                            <div class="profile-info">
+                              <h4 class="mt-0 mb-2">{{ organizer.first_name }}</h4>
+
+                              {% if organizer.city.size > 0%}
+                              <p class="minicaps text-left mb-1">{{ organizer.city }}</p>
+                              {% endif %}
+
+                              {% if organizer.contact_url.size > 0 %}
+                              <p class="minicaps text-left mb-1">
+                                <a href="{{ organizer.contact_url }}">Contact page</a>
+                              </p>
+                              {% endif %}
+                            </div>
+                          </div>
+
+                          {% if organizer.bio %}
+                          <p class="small mb-0 mt-3">{{ organizer.bio }}</p>
+                          {% endif %}
+
+                        </div>
+                      {% endfor %}
+
+                      </div>
+                      <div class="arrows pos-relative d-flex justify-content-center"></div>
+                    </div>
+
+                  </div>
+                </div>
+                {% endif %}
+
             </div>
           </div>
         </div>
@@ -66,9 +149,38 @@ bundles:
     </div>
   </section>
 
-  <div class="hidden" id="team-data">
-    {{ team|jsonify }}
-  </div>
-  <div id="team-collapsible"></div>
+  <section id="about-learning-circles" class="bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card p-4">
+            <h2>What is a learning circle?</h2>
+            <p>A learning circle is a group of people who meet to learn something together. Learning circles are:</p>
+            <ul>
+              <li>Open to the public</li>
+              <li>Free for participants</li>
+              <li>Recurring (generally between 6-8 times)</li>
+            </ul>
+            <p>Additionally, learning circles are led by a facilitator, rather than a teacher. This means that the person who is organizing your learning circle is not an expert in the subject that you are learning. They are there to help guide the group through the course and ensure that the meeting space is ready each week.</p>
+
+            <div>
+              <a href="/faqs" class="btn p2pu-btn blue">Read the FAQ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="search" class="bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="mb-3">Learning Circles at {{ team.name }}</h2>
+          <div id="search-lc-component" data-team-id={{ team.id }}></div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 
