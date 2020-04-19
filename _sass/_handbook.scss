@@ -122,7 +122,7 @@
   padding-top: 28px;}
 
   h3{
-    font-size: 24px;  
+    font-size: 24px;
     padding-top: 20px
   }
 
@@ -162,7 +162,7 @@
 
   .template{
     padding-left: 15px;
-    color:#78b60b 
+    color:#78b60b
   }
 
   .bold{
@@ -189,7 +189,7 @@
     padding-top: 15px;
   }
 
-  .list-below{ 
+  .list-below{
   margin-bottom: -14px}
 
   #lc-container {
@@ -378,7 +378,7 @@
   .jumbotron-button {
     color:#ffffff;
     text-transform:uppercase;
-    padding:15px; 
+    padding:15px;
     border-radius:8px;
     border-color:#04b0aa;
     border-style:solid;
@@ -398,7 +398,7 @@
   /* Call to action*/
 
   #lc-container a.call-to-action:link, #lc-container a.call-to-action:visited {
-    padding:15px; 
+    padding:15px;
     background-color:#04b0aa;
     border-radius:8px;
     color:#ffffff;
@@ -447,6 +447,8 @@
   #handbook-nav ul{
     padding: 0 0 15px 0;
     font-size:16px;
+    display: flex;
+    flex-direction: column;
   }
 
   #handbook-nav li > a{
@@ -503,13 +505,13 @@
 
   /*Downloads*/
 
-  a.downloads-links { 
+  a.downloads-links {
     padding:15px 0 25px 50px;
     position:relative;
     display:block;
   }
 
-  a.downloads-links:before { 
+  a.downloads-links:before {
     font-family: FontAwesome;
     content: "\f019";
     font-size:26px;
@@ -518,7 +520,7 @@
     left:15px;
   }
 
-  a.downloads-links:last-of-type { 
+  a.downloads-links:last-of-type {
     margin-bottom:90px;
   }
 
@@ -535,12 +537,12 @@
     font-size:17px;
   }
 
-  p.highlightp { 
+  p.highlightp {
     position:relative;
     margin-left:40px;
   }
 
-  p.highlightp:before { 
+  p.highlightp:before {
     font-family: FontAwesome;
     content: "\f108";
     font-size:24px;

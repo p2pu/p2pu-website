@@ -5,9 +5,9 @@
 					"{{ "/assets/images/people/" |append: person.image |prepend: site.baseurl }}"
 			     alt="{{ person.name }} Image">
 
-			<h3>{{ person.name }}<br>
+			<h4>{{ person.name }}<br>
 				<small class="text-muted">{{ person.role }}</small>
-			</h3>
+			</h4>
 			<p>{{ person.bio }}</p>
 			{% if person.twitter %}
 				<span><a href="https://twitter.com/{{ person.twitter }}" target="_blank"><i

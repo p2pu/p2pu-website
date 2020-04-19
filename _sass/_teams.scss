@@ -1,3 +1,6 @@
+@import 'organizer_profile';
+
+
 .sidebar-nav {
   padding-left: 0;
 
@@ -76,46 +79,6 @@
       object-fit: cover;
     }
   }
-
-  .profile {
-    right: 0;
-    top: 0;
-    height: 100%;
-
-    .card {
-      &:hover {
-        box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.10);
-      }
-
-      .profile-image {
-        width: 90px;
-
-        .img-container {
-          background: $gray-lighter;
-          border-radius: 50%;
-          display: flex;
-          flex-shrink: 0;
-          justify-content: center;
-          overflow: hidden;
-          padding-top: 100%;
-          position: relative;
-          width: 100%;
-
-          img {
-            bottom: 0;
-            height: 100%;
-            left: 0;
-            -o-object-fit: cover;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            width: 100%;
-          }
-
-        }
-      }
-    }
-  }
 }
 
 #scroll-to-top {
@@ -140,33 +103,6 @@
 
   &:hover {
     box-shadow: -3px 3px 6px 1px rgba(0, 0, 0, 0.2);
-  }
-}
-
-.pos-relative {
-  position: relative;
-}
-
-.pos-absolute {
-  position: absolute;
-}
-
-
-.arrows {
-  height: 30px;
-
-  .slick-arrow {
-    &.slick-prev {
-      left: 0;
-    }
-
-    &.slick-next {
-      right: 0;
-    }
-
-    &:before {
-      color: $p2pu-blue;
-    }
   }
 }
 
