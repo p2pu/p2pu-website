@@ -4,64 +4,66 @@ layout: facilitate
 ---
 
 <section id="facilitator-landing">
-  <div class="row">
-    <div class="col-12 col-lg-6">
-      <div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6">
         <h1 class="blue-text">Organize</h1>
+        <div class="welcome-text">
+          <p class="large">Organizers are responsible for coordinating teams, which are networks of learning circles happening across a single city or region. Organizers work closely with P2PU to ensure that new facilitators in their area have everything they need to run learning circles, while also representing their hometown and contributing local insights as part of the P2PU community.</p>
+        </div>
       </div>
-      <div class="welcome-text">
-        <p class="large">Organizers are responsible for coordinating teams, which are networks of learning circles happening across a single city or region. Organizers work closely with P2PU to ensure that new facilitators in their area have everything they need to run learning circles, while also representing their hometown and contributing local insights as part of the P2PU community.</p>
-      </div>
-    </div>
-    <div class="col-12 col-lg-6">
-      <div class="media d-flex justify-content-center">
-        <img src="{{ site.baseurl }}/assets/images/organize/organize-header.jpg" alt="Organizers group photo" class="img-fluid">
+      <div class="col-12 col-lg-6">
+        <div class="media d-flex justify-content-center">
+          <img src="{{ site.baseurl }}/assets/images/organize/organize-header.jpg" alt="Organizers group photo" class="img-fluid">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <section id="facilitator-resources" data-aos="fade-up">
-  <div class="row">
-    <div class="col-12">
-      <div class="margin-sm">
-        <p class="large">Anybody can start a team. Learn more about what organizers do by reviewing these resources and downloading a free copy of our learning circle organizer guide.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="margin-sm">
+          <p class="large">Anybody can start a team. Learn more about what organizers do by reviewing these resources and downloading a free copy of our learning circle organizer guide.</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="resource-category">
-    <div class="content">
-      <div class="row">
-        <div class="col-12">
-          <div class="category-title">
-            <div class="step-title mb-4">
-              <h2>Organizer Resources</h2>
+    <div class="resource-category">
+      <div class="content">
+        <div class="row">
+          <div class="col-12">
+            <div class="category-title">
+              <div class="step-title mb-4">
+                <h2>Organizer Resources</h2>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row resources">
+        <div class="row resources">
 
-      {% for resource in site.data.organizer_resources %}
+        {% for resource in site.data.organizer_resources %}
 
-        <div class="resource-card organize col-12 col-md-6 col-lg-4 p-md-3">
-          <a href="{{ resource.url }}">
-            <div class="image">
-              <img src="{{ resource.image }}" />
-              {% if resource.tag %}
-              <div class="overlay">
-                <div class="topic-type minicaps">{{ resource.tag }}</div>
+          <div class="resource-card organize col-12 col-md-6 col-lg-4 p-md-3">
+            <a href="{{ resource.url }}">
+              <div class="image">
+                <img src="{{ resource.image }}" />
+                {% if resource.tag %}
+                <div class="overlay">
+                  <div class="topic-type minicaps">{{ resource.tag }}</div>
+                </div>
+                {% endif %}
               </div>
-              {% endif %}
-            </div>
-            <div class="title">{{ resource.title }}</div>
-          </a>
+              <div class="title">{{ resource.title }}</div>
+            </a>
+          </div>
+
+        {% endfor %}
+
         </div>
-
-      {% endfor %}
-
       </div>
     </div>
   </div>

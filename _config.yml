@@ -8,7 +8,7 @@ languages: ['en']
 default_language: 'en'
 
 # Build settings
-markdown: kramdown
+markdown: CommonMark
 permalink: pretty
 
 collections:
