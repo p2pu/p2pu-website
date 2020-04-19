@@ -46,7 +46,7 @@
     "react-dom": "^16.0.0",
     "react-masonry-component": "^5.0.7",
     "react-rangeslider": "^2.1.0",
-    "react-scrollspy": "^3.3.5",
+    "react-scrollspy": "^3.4.2",
     "react-select": "^1.0.0-rc.5",
     "react-slick": "^0.25.2",
     "react-telephone-input": "^4.73.4",
