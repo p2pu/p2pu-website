@@ -13,7 +13,7 @@
       width: 90px;
 
       .img-container {
-        background: $gray-lighter;
+        background: $gray-darker;
         border-radius: 50%;
         display: flex;
         flex-shrink: 0;
@@ -32,8 +32,50 @@
           position: absolute;
           top: 0;
           width: 100%;
+          opacity: 0.8;
         }
+      }
+    }
+  }
+}
 
+.card {
+  &:nth-of-type(4n+1) {
+    .profile {
+      .profile-image {
+        .img-container {
+          background: $p2pu-green;
+        }
+      }
+    }
+  }
+
+  &:nth-of-type(4n+2) {
+    .profile {
+      .profile-image {
+        .img-container {
+          background: $p2pu-yellow;
+        }
+      }
+    }
+  }
+
+  &:nth-of-type(4n+3) {
+    .profile {
+      .profile-image {
+        .img-container {
+          background: $p2pu-orange;
+        }
+      }
+    }
+  }
+
+  &:nth-of-type(4n+4) {
+    .profile {
+      .profile-image {
+        .img-container {
+          background: $p2pu-blue;
+        }
       }
     }
   }

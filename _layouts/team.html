@@ -16,29 +16,25 @@ bundles:
 {% assign team = site.data.teams.items | where: "page_slug", page.slug | first %}
 
 <div>
-  <section id="team-intro" class="bg-dark">
+  <section id="team-intro" class="bg-pattern-dark">
     <div class="pt-5">
       <div class="container">
         <div class="row">
 
             <div class="col-lg-6 col-md-10 col-sm-12 order-2 order-lg-1 mt-md-5 mt-lg-0">
-              <div class="header-image pos-relative rellax" data-rellax-speed="4">
+              <div class="header-image pos-relative">
                 {% if team.image_url %}
-                  <div class="img-circle">
+                  <div class="img-circle rellax" data-rellax-speed="4">
                     <img src="{{ team.image_url }}" class="img-fluid" />
                   </div>
                 {% else if team.coordinates %}
-                  <div class="img-circle">
+                  <div class="img-circle rellax" data-rellax-speed="4">
                     <img class="img-fluid" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
-                  </div>
-                {% else %}
-                  <div class="img-circle">
-                    <img src="{{ site.baseurl }}/assets/images/bgtr.svg" class="img-fluid" />
                   </div>
                 {% endif %}
 
                 {% if team.logo_url %}
-                <div class="team-logo">
+                <div class="team-logo rellax" data-rellax-speed="8">
                   <img src="{{ team.logo_url }}" alt="{{ team.name }} logo" class="img-fluid">
                 </div>
                 {% endif %}
@@ -89,8 +85,8 @@ bundles:
           {% endif %}
 
           <div class="col-lg-6 d-none d-lg-flex">
-            <div class="circle-1"></div>
-            <div class="circle-2"></div>
+            <div class="circle-1 rellax" data-rellax-speed="-3"></div>
+            <div class="circle-2 rellax" data-rellax-speed="2"></div>
 
             {% assign facilitators = team.facilitators | sort: 'bio' | reverse %}
             {% for facilitator in facilitators %}
