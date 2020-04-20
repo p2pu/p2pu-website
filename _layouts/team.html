@@ -17,21 +17,35 @@ bundles:
 
 <div>
   <section id="team-intro" class="bg-dark">
-    <div class="featured-event pt-5">
+    <div class="pt-5">
       <div class="container">
         <div class="row">
-          {% if team.image_url %}
+
             <div class="col-lg-6 col-md-10 col-sm-12 order-2 order-lg-1 mt-md-5 mt-lg-0">
               <div class="header-image pos-relative rellax" data-rellax-speed="4">
-                <div class="img-circle">
-                  <img src="{{ team.image_url }}" class="img-fluid" />
-                </div>
+                {% if team.image_url %}
+                  <div class="img-circle">
+                    <img src="{{ team.image_url }}" class="img-fluid" />
+                  </div>
+                {% else if team.coordinates %}
+                  <div class="img-circle">
+                    <img class="img-fluid" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
+                  </div>
+                {% else %}
+                  <div class="img-circle">
+                    <img src="{{ site.baseurl }}/assets/images/bgtr.svg" class="img-fluid" />
+                  </div>
+                {% endif %}
+
+                {% if team.logo_url %}
                 <div class="team-logo">
-                  <img src="{{ site.baseurl }}/assets/images/p2pu-logo.png" alt="P2PU logo" class="img-fluid">
+                  <img src="{{ team.logo_url }}" alt="{{ team.name }} logo" class="img-fluid">
                 </div>
+                {% endif %}
+
               </div>
             </div>
-          {% endif %}
+
             <div class="col-lg-6 col-md-12 order-1 order-lg-2">
               <div class="header-text">
                 <div class="rellax" data-rellax-speed="-2">
@@ -39,93 +53,72 @@ bundles:
                     Learning circles hosted by
                   </div>
                   <h1 class='mb-3 text-white'>{{ team.name }}</h1>
-                  {% if team.intro_text %}
-                  <p class='card-text text-white'>{{ team.intro_text}}</p>
+                  {% if team.location %}
+                  <p class='card-text text-white'>Join your neighbors at the library to learn something together. Learning circles meet weekly at a variety of locations across {{ team.location }} for 6-8 weeks, and are free to join.</p>
                   {% else %}
-                  <p class='card-text text-white'>Join your neighbors at the library to learn something together. Learning circles meet weekly for 6-8 weeks, and are free to join.</p>
+                  <p class='card-text text-white'>Join your neighbors at the library to learn something together. Learning circles meet weekly in person for 6-8 weeks, and are free to join.</p>
                   {% endif %}
                   <div class='info'>
+                    {% if team.email_address.size > 0 %}
                     <div class="text-xs d-flex align-items-center mb-2 text-white">
                       <i class="material-icons pr-2">email</i>
-                      <p class="mb-0">hello@ministryofmagic.gov.uk</p>
+                      <p class="mb-0"><a href="mailto:{{team.email_address}}" class="text-white">{{team.email_address}}</a></p>
                     </div>
+                    {% endif %}
 
+                    {% if team.website.size > 0 %}
                     <div class="text-xs d-flex align-items-center mb-2 text-white">
                       <i class="material-icons pr-2">launch</i>
-                      <p class="mb-0">www.ministryofmagic.gov.uk</p>
+                      <p class="mb-0"><a target="_blank" rel="noopener noreferrer" href="{{team.website}}" class="text-white">{{team.website}}</a></p>
                     </div>
+                    {% endif %}
                   </div>
                 </div>
               </div>
             </div>
         </div>
 
-        <div class="row mt-5">
+        <div class="row mt-5 justify-content-center">
+          {% if team.intro_text.size > 0 %}
           <div class="col-lg-6 col-md-12 text-white">
-            <h2 class="mb-3">About Us</h2>
-            <p>Join your neighbors from across the community as we gather to learn something together. We Learn programs meet at a variety of library locations throughout Pittsburgh, and are free to join.</p>
-            <p>Interested in helping us organize learning groups and other We Learn Programs? Check out our facilitation resources to learn more.</p>
+            <div class="rellax" data-rellax-speed="-1">
+              <h2 class="mb-3">About Us</h2>
+              <p class='card-text text-white'>{{ team.intro_text}}</p>
+            </div>
           </div>
+          {% endif %}
+
           <div class="col-lg-6 d-none d-lg-flex">
-            <div class="rellax" data-rellax-speed="1">
-              <div class="organizers pos-relative h-100 d-flex justify-content-center align-items-center">
-                <div class="circle-1"></div>
-                <div class="circle-2"></div>
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
 
-                  {% if team.organizers.size > 0 %}
-                  <div class="profile mx-4 p-0 align-items-center">
+            {% assign facilitators = team.facilitators | sort: 'bio' | reverse %}
+            {% for facilitator in facilitators %}
+                <div class="card-container">
                   <div class="card">
-                      <div class="card-header bg-secondary">
-                        <p class="minicaps text-right mb-0 text-muted">Organizer</p>
-                      </div>
+                    <div class="card-header">
+                      <p class="minicaps text-center mb-0 text-muted">{{ facilitator.role }}</p>
+                    </div>
+                    <div class="card-img-top">
+                      {% if facilitator.avatar_url %}
+                      <img class="img-fluid card-img" src="{{ facilitator.avatar_url }}" alt="Facilitator image">
+                      {% else %}
+                      <img class="img-fluid card-img" src="{{ site.baseurl }}/assets/images/default_avatar.png" />
+                      {% endif %}
+                    </div>
+                    <div class="card-body">
 
-
-                      <div class="card-body">
-                        <div class="slide-container">
-
-
-                        {% assign organizers = team.organizers | sort: 'bio' | reverse %}
-                        {% for organizer in organizers %}
-
-                          <div class="slide">
-                            <div class="d-flex align-items-center">
-                              <div class="profile-image mr-2">
-                                <div class="img-container">
-                                  {% if organizer.avatar_url %}
-                                  <img class="" src="{{ organizer.avatar_url }}" />
-                                  {% else %}
-                                  <img class="" src="{{ site.baseurl }}/assets/images/default_avatar.png" />
-                                  {% endif %}
-                                </div>
-                              </div>
-                              <div class="profile-info">
-                                <h4 class="mt-0 mb-2">{{ organizer.first_name }}</h4>
-
-                                {% if organizer.city.size > 0%}
-                                <p class="minicaps text-left mb-1">{{ organizer.city }}</p>
-                                {% endif %}
-
-                                {% if organizer.contact_url.size > 0 %}
-                                <p class="minicaps text-left mb-1">
-                                  <a href="{{ organizer.contact_url }}">Contact page</a>
-                                </p>
-                                {% endif %}
-                              </div>
-                            </div>
-
-                          </div>
-                        {% endfor %}
-
-                        </div>
-                        <div class="arrows pos-relative d-flex justify-content-center"></div>
+                      <div class="profile-info text-center">
+                        <h4 class="my-1">{{ facilitator.first_name }}</h4>
                       </div>
 
                     </div>
                   </div>
-                  {% endif %}
+                </div>
+            {% endfor %}
 
-              </div>
-            </div>
+            <div class="arrows pos-relative d-flex justify-content-center"></div>
+
           </div>
         </div>
       </div>
@@ -136,7 +129,10 @@ bundles:
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="mb-3">Learning Circles at {{ team.name }}</h2>
+          <h2 class="mb-3">Find a learning circle near you</h2>
+          <div id="search-subtitle">
+            <p class="large mb-4">For more information, <a href="/en/learning-circles-faq">check out the FAQ</a>.</p>
+          </div>
           <div id="search-lc-component" data-team-id={{ team.id }}></div>
         </div>
       </div>

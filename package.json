@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/p2pu/p2pu-website#readme",
   "dependencies": {
+    "@babel/runtime": "^7.9.2",
     "assets-webpack-plugin": "^3.5.1",
     "axios": "^0.18.1",
     "babel-core": "^6.26.3",

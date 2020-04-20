@@ -73,215 +73,25 @@ section {
   left: 10px;
 }
 
-.team-stats {
+.facilitators {
+  width: 100%;
+}
+
+.card-container {
   display: flex;
-  flex-direction: column;
-
-  .stat {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    margin: 10px 20px;
-
-    &.align-right {
-      align-self: flex-end;
-    }
-
-    .circle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: $padding-md;
-      border-radius: 100%;
-      font-size: 2rem;
-      font-weight: 900;
-      color: $white;
-      height: 60px;
-      width: 60px;
-    }
-
-    .line {
-      height: 2px;
-      flex: 1 0 auto;
-      margin-right: 1rem;
-    }
-
-    &.orange {
-      .circle {
-        background: $p2pu-orange;
-      }
-      .line {
-        background: $p2pu-orange;
-      }
-
-    }
-
-    &.yellow {
-      .circle {
-        background: $p2pu-yellow;
-      }
-
-      .line {
-        background: $p2pu-yellow;
-      }
-    }
-  }
-}
-
-.hidden {
-  display: none;
-}
-
-#faq {
-  .faq-container {
-    &:nth-of-type(4n+1) {
-      .question {
-        border-bottom: 4px solid $p2pu-yellow;
-      }
-    }
-
-    &:nth-of-type(4n+2) {
-      .question {
-        border-bottom: 4px solid $p2pu-blue;
-      }
-    }
-
-    &:nth-of-type(4n+3) {
-      .question {
-        border-bottom: 4px solid $p2pu-orange;
-      }
-    }
-
-    &:nth-of-type(4n+4) {
-      .question {
-        border-bottom: 4px solid $p2pu-green;
-      }
-    }
-  }
-
-  .question {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    h3 {
-      font-family: "Open Sans";
-      font-size: 1.25rem;
-    }
-  }
-
-  .answer {
-    margin: 15px 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-  }
-}
-
-.Collapsible {
-  .trigger-header {
-    background-color: $gray-darker;
-    transition: all 0.4s linear;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid $gray-lighter;
-    cursor: pointer;
-
-    h2 {
-      margin: 0;
-      color: $white;
-      font-weight: 400;
-      font-size: 1.25rem;
-      transition: all 0.4s linear;
-    }
-  }
-  .is-open {
-    .trigger-header {
-      background-color: $gray-lighter;
-      border-bottom: 1px solid $gray-darker;
-
-      h2 {
-        color: $gray-darker;
-      }
-    }
-  }
-
-  .Collapsible__contentInner {
-    border-bottom: 1px solid $gray-darker;
-  }
-
-  .contact {
-    i {
-      width: 20px;
-      margin-right: 20px;
-    }
-  }
-}
-
-.profile {
-  width: 80%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
   .card {
-    &:hover {
-      box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.10);
-    }
+    margin: 5vw;
+    width: 100%;
+  }
 
-    .profile-image {
-      width: 90px;
-
-      .img-container {
-        background: $gray-lighter;
-        border-radius: 50%;
-        display: flex;
-        flex-shrink: 0;
-        justify-content: center;
-        overflow: hidden;
-        padding-top: 100%;
-        position: relative;
-        width: 100%;
-
-        img {
-          bottom: 0;
-          height: 100%;
-          left: 0;
-          -o-object-fit: cover;
-          object-fit: cover;
-          position: absolute;
-          top: 0;
-          width: 100%;
-        }
-
-      }
-    }
+  .card-img {
+    object-fit: cover;
+    max-height: 250px;
   }
 }
 
-.slick-arrow {
-
-  &.slick-prev {
-    left: 0;
-    top: unset;
-    bottom: -3rem;
-
-    &:before {
-      color: $p2pu-blue;
-    }
-  }
-
-  &.slick-next {
-    right: 0;
-    top: unset;
-    bottom: -3rem;
-
-    &:before {
-      color: $p2pu-blue;
-    }
-  }
-}
-
-.bg-light {
-  background: $gray-lighter;
-}
 

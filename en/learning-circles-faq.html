@@ -1,0 +1,29 @@
+---
+layout: page
+title: Frequently Asked Questions
+extra_css:
+  - /assets/css/p2pu-workwithus.css
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="accordion">
+
+      {% for item in site.data.learning_circles_faq %}
+          <div class="accordion-item">
+            <div class="heading">
+              <label id="section-{{forloop.index}}" class="bold large">{{ item.question }}</label>
+              <a class="show-content"><i class="fa fa-plus" aria-hidden="true"></i></a>
+              <a class="hide-content"><i class="fa fa-minus" aria-hidden="true"></i></a>
+            </div>
+            <div class="content" aria-labelledby="section-{{forloop.index}}">
+            {{ item.answer }}
+            </div>
+          </div>
+      {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>
