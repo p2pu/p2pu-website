@@ -1,4 +1,3 @@
-var rellax = new Rellax('.rellax');
 
 
 (function($) {
@@ -32,6 +31,8 @@ var rellax = new Rellax('.rellax');
 
   // Initialize Rellax
 
-   var rellax = new Rellax('.rellax');
+  var rellax = new Rellax('.rellax', {
+    breakpoints: [576, 768, 992]
+  });
 
 })(jQuery)

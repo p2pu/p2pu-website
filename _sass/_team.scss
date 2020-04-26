@@ -78,20 +78,31 @@ section {
 }
 
 .card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 5vw;
+  background: white;
+  position: relative;
+
+  .arrows {
+    .slick-arrow.slick-prev {
+      left: 20px;
+      top: 25%;
+    }
+
+    .slick-arrow.slick-next {
+      right: 20px;
+      top: 25%;
+    }
+  }
+}
+
+.card {
   width: 100%;
+  border: none;
+}
 
-  .card {
-    margin: 5vw;
-    width: 100%;
-  }
-
-  .card-img {
-    object-fit: cover;
-    max-height: 250px;
-  }
+.card-img {
+  object-fit: cover;
+  max-height: 250px;
 }
 
 .bg-pattern-dark {
@@ -101,4 +112,7 @@ section {
   background-size: cover;
 }
 
+.modal-dialog {
+  max-width: 900px;
+}
 
