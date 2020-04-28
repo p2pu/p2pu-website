@@ -19,6 +19,16 @@
 	{% endif %}
 {% endfor %}
 
+{% for js in layout.extra_js %}
+  {% if js contains '<script>' %}
+    {{ js }}
+  {% elsif js contains 'http' %}
+    <script src="{{ js }}"></script>
+  {% else %}
+    <script src="{{site.baseurl}}/assets/{{ js }}"></script>
+  {% endif %}
+{% endfor %}
+
 {% for bundle in layout.bundles %}
 	<script src="{{site.data.bundles[bundle]['js']}}"></script>
 {% endfor %}
