@@ -1,0 +1,79 @@
+@import 'organizer_profile';
+
+section {
+  padding-top: $padding-lg;
+  padding-bottom: $padding-lg;
+}
+
+#team-intro {
+  border-bottom: 1px solid $gray-lighter;
+}
+
+.header-image {
+  width: 100%;
+  display: flex;
+
+  .img-circle {
+    display: flex;
+    border-radius: 100%;
+    overflow: hidden;
+    height: 450px;
+    width: 450px;
+    max-width: 100vw;
+    max-height: 100vw;
+    justify-content: center;
+    border: 20px solid $p2pu-yellow;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .team-logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    box-shadow: -4px 4px 15px rgba(0,0,0,0.15);
+    background: white;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.header-text {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.circle-1 {
+  height: 200px;
+  width: 200px;
+  border: 40px solid $p2pu-blue;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.circle-2 {
+  height: 300px;
+  width: 300px;
+  background: $p2pu-green;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+
+

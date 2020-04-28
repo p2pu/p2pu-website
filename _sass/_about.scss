@@ -1,0 +1,30 @@
+.people-img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  > div {
+    text-align: center;
+    margin-bottom: $padding-sm;
+  }
+}
+
+.funders {
+  padding: $padding-md;
+
+  .funder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 200px;
+      filter: grayscale(1);
+    }
+  }
+}
