@@ -99,12 +99,14 @@ bundles:
 	</section>
 
   <section>
-			<div class="row justify-content-end">
-			  <div class="col-12" data-aos="fade-up" data-aos-offset="100">
+  	<div class="container">
+			<div class="row justify-content-end" data-aos="fade-up" data-aos-offset="100">
+			  <div class="col-12">
 	      	<h5 class="mt-0 mb-2">Upcoming meetings</h5>
-	        <div id="meetings-feed"></div>
 				</div>
+        <div id="meetings-feed"></div>
 			</div>
+		</div>
   </section>
 
 
@@ -118,7 +120,11 @@ bundles:
 			  </div>
 
 	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
-			    <div class="p2pu-slide-container">
+			    {% if site.data.testimonials.learners.size > 1 %}
+				    <div class="p2pu-slide-container slick-init">
+		    	{% else %}
+				    <div class="p2pu-slide-container">
+		    	{% endif %}
 						{% for testimonial in site.data.testimonials.learners %}
 							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
@@ -150,7 +156,11 @@ bundles:
 
 
 	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
-			    <div class="p2pu-slide-container">
+			    {% if site.data.testimonials.facilitators.size > 1 %}
+				    <div class="p2pu-slide-container slick-init">
+		    	{% else %}
+				    <div class="p2pu-slide-container">
+		    	{% endif %}
 						{% for testimonial in site.data.testimonials.facilitators %}
 							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
@@ -180,7 +190,11 @@ bundles:
 			  </div>
 
         <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
-			    <div class="p2pu-slide-container">
+			    {% if site.data.testimonials.network.size > 1 %}
+				    <div class="p2pu-slide-container slick-init">
+		    	{% else %}
+				    <div class="p2pu-slide-container">
+		    	{% endif %}
 						{% for testimonial in site.data.testimonials.network %}
 							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
@@ -212,7 +226,11 @@ bundles:
 			  </div>
 
 	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
-			    <div class="p2pu-slide-container">
+	      	{% if site.data.testimonials.organizers.size > 1 %}
+				    <div class="p2pu-slide-container slick-init">
+		    	{% else %}
+				    <div class="p2pu-slide-container">
+		    	{% endif %}
 						{% for testimonial in site.data.testimonials.organizers %}
 							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}

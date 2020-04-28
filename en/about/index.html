@@ -68,7 +68,7 @@ extra_css:
       {% for person in site.data.people.staff %}
       {% assign multi_three=forloop.index0|modulo:3 %}
       {% if multi_three == 0 %}
-      <div class="row">{% endif %}
+      <div class="row mx-2">{% endif %}
         {% include person.html %}
         {% if multi_three == 2 or forloop.last %}</div>{% endif %}
       {% endfor %}
@@ -108,7 +108,7 @@ extra_css:
       </header>
       <div class="partners row">
         {% for partner in site.data.partners %}
-          <div class="col-md-4 col-sm-12 col-12"><a href="{{ partner.url }}" class="dark">{{ partner.name }}</a></div>
+          <div class="col-md-6 col-lg-4 col-12"><a href="{{ partner.url }}" class="dark">{{ partner.name }}</a></div>
         {% endfor %}
       </div>
 
@@ -121,7 +121,7 @@ extra_css:
       </header>
       <div class="funders row">
         {% for funder in site.data.funders %}
-        <div class="funder col-md-4 col-sm-6 col-12">
+        <div class="funder col-md-6 col-lg-4 col-12">
           <a href="{{ funder.url }}">
             <img src="{{ site.baseurl }}{{ funder.logo }}" alt="{{ funder.name }}">
           </a>
