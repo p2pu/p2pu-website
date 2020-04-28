@@ -9,3 +9,4 @@ _config-dev.yml
 _teams/*.md
 assets/bundles/
 _data/bundles.json
+.jekyll-metadata
