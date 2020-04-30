@@ -29,7 +29,7 @@ bundles:
                   </div>
                 {% else if team.coordinates %}
                   <div class="img-circle rellax mt-5 mt-lg-0" data-rellax-speed="0" data-rellax-desktop-speed="4">
-                    <img class="img-fluid" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
+                    <img class="img-fluid" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/450x450?access_token={{ site.mapbox_access_token }}&logo=false" />
                   </div>
                 {% endif %}
 
@@ -89,32 +89,31 @@ bundles:
 
           <div class="col-lg-6 d-none d-lg-block">
             <div class="circle-1 rellax" data-rellax-speed="0" data-rellax-desktop-speed="-3"></div>
-            <div class="circle-2 rellax" data-rellax-speed="0" data-rellax-desktop-speed="2"></div>
 
-            <div class="card-container">
+            <div class="profile-container">
               <div class="slide-container">
 
               {% assign facilitators = team.facilitators | sort: 'image_url' | reverse %}
               {% for facilitator in facilitators %}
 
-                    <div class="card">
-                      <div class="card-header">
-                        <p class="minicaps text-center mb-0 text-muted">{{ facilitator.role }}</p>
-                      </div>
-                      <div class="card-img-top">
-                        {% if facilitator.avatar_url %}
-                        <img class="img-fluid card-img" src="{{ facilitator.avatar_url }}" alt="Facilitator image">
-                        {% else %}
-                        <img class="img-fluid card-img" src="{{ site.baseurl }}/assets/images/default_avatar.png" />
-                        {% endif %}
-                      </div>
-                      <div class="card-body pb-0">
+                  <div class="pos-relative card-outer">
+                    <div class="pos-relative card-upper">
+                      <div class="circle-2"></div>
+                      {% if facilitator.avatar_url %}
+                      <img class="img-fluid card-img" src="{{ facilitator.avatar_url }}" alt="Facilitator image">
+                      {% else %}
+                      <img class="img-fluid card-img" src="{{ site.baseurl }}/assets/images/avatars/p2pu_avatar_{{ page.theme_color }}.png" />
+                      {% endif %}
+                    </div>
 
+                    <div class="card card-lower">
+                      <div class="card-body">
                         <div class="profile-info text-center">
                           <h4 class="my-1">{{ facilitator.first_name }}</h4>
+                          <p class="minicaps text-center mb-0 text-muted">{{ facilitator.role }}</p>
                         </div>
-
                       </div>
+                    </div>
                   </div>
               {% endfor %}
               </div>

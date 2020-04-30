@@ -1,0 +1,210 @@
+  - condition:
+      key_prefix_equals: ascpl
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=27&team=Akron-Summit County Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: blcs
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=36&team=BLCS
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: boston
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=11&team=Boston Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: cambridgepl
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=21&team=Cambridge Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: pittsburgh
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=28&team=Carnegie Library of Pittsburgh
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: cerculdeinvatare
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=37&team=Cercul de învățare
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: charlotte
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=5&team=Charlotte Mecklenburg Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: chicago
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=1&team=Chicago Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: cleveland
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=15&team=Cleveland Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: detroit
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=12&team=Detroit Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: philadelphia
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=19&team=Free Library of Philadelphia
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: gpl
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=31&team=Greensboro Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: hogwarts
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=38&team=Hogwarts School of Witchcraft and Wizardry
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: kclearningcircles
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=16&team=Kansas City Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: knls
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=2&team=Kenya National Library Service
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: klubywiedzy
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=33&team=Klub Wiedzy
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: koeln
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=35&team=Koeln
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: lvpl
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=32&team=La Veta Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: lapl
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=22&team=Los Angeles Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: mdpls
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=17&team=Miami-Dade Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: Sq1MCPL
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=24&team=Mid-Continent Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: multnomahco
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=8&team=Multnomah County Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: OCC
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=30&team=Onondaga Community College
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: oflibrary
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=23&team=Onondaga Free Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: opintopiirit
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=34&team=Opintopiirit
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: pierceco
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=9&team=Pierce County Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: providence
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=10&team=Providence Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: richlandcounty
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=20&team=Richland County
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: sppl
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=29&team=Saint Paul Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: sanjose
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=6&team=San Jose Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: scld
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=25&team=Spokane County Library District
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: hcplc
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=14&team=Tampa-Hillsborough County Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: toronto
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=18&team=Toronto Public Library
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: twinlakes
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=13&team=Twin Lakes Library System
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: wichita
+    redirect:
+      host_name: www.p2pu.org
+      replace_key_with: en/learning-circles/?team_id=7&team=Wichita Public Library
+      http_redirect_code: 302

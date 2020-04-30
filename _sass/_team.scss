@@ -54,9 +54,9 @@ section {
 }
 
 .circle-1 {
-  height: 200px;
-  width: 200px;
-  border: 40px solid $p2pu-blue;
+  height: 320px;
+  width: 320px;
+  border: 40px solid $p2pu-green;
   border-radius: 100%;
   position: absolute;
   top: -20px;
@@ -64,46 +64,83 @@ section {
 }
 
 .circle-2 {
-  height: 300px;
-  width: 300px;
-  background: $p2pu-green;
+  height: 280px;
+  width: 280px;
+  background: $p2pu-blue;
   border-radius: 100%;
   position: absolute;
-  bottom: -20px;
-  left: 10px;
+  top: 0;
+  left: 1rem;
+  z-index: 1;
 }
 
 .facilitators {
   width: 100%;
 }
 
-.card-container {
+.profile-container {
   margin: 5vw;
-  background: white;
   position: relative;
 
   .arrows {
-    .slick-arrow.slick-prev {
-      left: 20px;
+    position: absolute;
+    height: 30px;
+    top: calc(250px);
+    width: 100%;
+
+    .slick-arrow {
       top: 25%;
+      background-color: $gray-darker;
+      height: 40px;
+      width: 40px;
+      border-radius: 30px;
+      border: 2px solid $white;
+
+      &:before {
+        color: $white;
+        font-weight: bold;
+        font-size: 24px;
+      }
+    }
+
+    .slick-arrow.slick-prev {
+      left: -30px;
     }
 
     .slick-arrow.slick-next {
-      right: 20px;
-      top: 25%;
+      right: -30px;
     }
   }
 }
 
-.card {
-  width: 100%;
-  border: none;
+.card-outer {
+  .card-upper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    z-index: 1;
+  }
+
+  .card-lower {
+    margin-top: -4rem;
+    padding-top: 4rem;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    z-index: 0;
+  }
+
+  .card-img {
+    object-fit: cover;
+    height: 250px;
+    width: 250px;
+    border-radius: 6px;
+    z-index: 2;
+    box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.10);
+  }
 }
 
-.card-img {
-  object-fit: cover;
-  max-height: 250px;
-}
 
 .bg-pattern-dark {
   background-color: $gray-darker;
