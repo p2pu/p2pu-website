@@ -3,7 +3,7 @@
 
   // Initialize slick on testimonial slides
 
-  $('.p2pu-slide-container').each(function() {
+  $('.slick-init').each(function() {
 
     var slider = $(this);
 

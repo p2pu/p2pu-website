@@ -217,6 +217,10 @@ main {
 		}
 	}
 
+  .bg-blue {
+    color: $white;
+  }
+
 
 	.meeting-card, .team-card {
 		padding-top: $padding-sm;
@@ -280,14 +284,17 @@ main {
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-	}
 
-	.slide {
-		display: flex;
-		justify-content: center;
-		align-content: flex-start;
-		width: 680px;
-		margin: 6px;
+		.slide {
+			display: flex;
+			justify-content: center;
+			align-content: flex-start;
+			margin: 6px;
+
+			&:focus {
+				outline: none;
+			}
+		}
 
 		&:focus {
 			outline: none;
@@ -319,7 +326,29 @@ main {
 
 				p {
 					padding: $padding-sm;
-					margin-bottom: 0;
+
+					.image {
+						height: 100px;
+						width: 100px;
+						margin-right: $padding-sm;
+
+						img {
+							border-radius: 50%;
+							height: 100px;
+							width: 100px;
+						}
+					}
+
+					.text {
+						.name {
+							font-weight: 700;
+							padding-bottom: 6px;
+						}
+
+						.organization {
+							font-size: $font-size-sm;
+						}
+					}
 				}
 			}
 
@@ -332,6 +361,7 @@ main {
 					height: 100px;
 					width: 100px;
 					margin-right: $padding-sm;
+					flex: 0 0 auto;
 
 					img {
 						border-radius: 50%;
@@ -341,6 +371,8 @@ main {
 				}
 
 				.text {
+					flex: 1 1 auto;
+
 					.name {
 						font-weight: 700;
 						padding-bottom: 6px;
@@ -353,7 +385,6 @@ main {
 			}
 		}
 	}
-
 }
 
 .join-cta {
@@ -416,7 +447,9 @@ main {
   }
 
   .topic-title {
-    color: $gray-darker;
+  	a {
+			color: $gray-darker;
+  	}
   }
 
   .users {
@@ -481,6 +514,54 @@ main {
 						}
 					}
 				}
+			}
+		}
+
+		#preview {
+			.preview-container {
+				flex-direction: column;
+			}
+		}
+
+		#testimonials {
+			.slide {
+				width: 95vw;
+
+				.testimonial-card {
+					padding: 10px;
+
+					.attribution {
+						flex-direction: column;
+						text-align: center;
+
+						.image {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+
+		section#about {
+			.columns {
+				display: block;
+			}
+		}
+
+		section#partners-and-funders {
+			.funders {
+				padding: $padding-sm;
+				.funder {
+					img {
+						max-width: 160px;
+					}
+				}
+			}
+		}
+
+		.discourse-topics {
+			.topic-title {
+				min-width: 180px;
 			}
 		}
 	}
