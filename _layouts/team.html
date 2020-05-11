@@ -87,41 +87,44 @@ bundles:
           </div>
           {% endif %}
 
+          {% if team.facilitators %}
           <div class="col-lg-6 d-none d-lg-block">
             <div class="circle-1 rellax" data-rellax-speed="0" data-rellax-desktop-speed="-3"></div>
 
             <div class="profile-container">
               <div class="slide-container">
 
-              {% assign facilitators = team.facilitators | sort: 'image_url' | reverse %}
-              {% for facilitator in facilitators %}
 
-                  <div class="pos-relative card-outer">
-                    <div class="pos-relative card-upper">
-                      <div class="circle-2"></div>
-                      {% if facilitator.avatar_url %}
-                      <img class="img-fluid card-img" src="{{ facilitator.avatar_url }}" alt="Facilitator image">
-                      {% else %}
-                      <img class="img-fluid card-img" src="{{ site.baseurl }}/assets/images/avatars/p2pu_avatar_{{ page.theme_color }}.png" />
-                      {% endif %}
-                    </div>
+                {% assign facilitators = team.facilitators | sort: 'image_url' | reverse %}
+                {% for facilitator in facilitators %}
 
-                    <div class="card card-lower">
-                      <div class="card-body">
-                        <div class="profile-info text-center">
-                          <h4 class="my-1">{{ facilitator.first_name }}</h4>
-                          <p class="minicaps text-center mb-0 text-muted">{{ facilitator.role }}</p>
+                    <div class="pos-relative card-outer">
+                      <div class="pos-relative card-upper">
+                        <div class="circle-2"></div>
+                        {% if facilitator.avatar_url %}
+                        <img class="img-fluid card-img" src="{{ facilitator.avatar_url }}" alt="Facilitator image">
+                        {% else %}
+                        <img class="img-fluid card-img" src="{{ site.baseurl }}/assets/images/avatars/p2pu_avatar_{{ page.theme_color }}.png" />
+                        {% endif %}
+                      </div>
+
+                      <div class="card card-lower">
+                        <div class="card-body">
+                          <div class="profile-info text-center">
+                            <h4 class="my-1">{{ facilitator.first_name }}</h4>
+                            <p class="minicaps text-center mb-0 text-muted">{{ facilitator.role }}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-              {% endfor %}
+                {% endfor %}
               </div>
               <div class="arrows pos-relative d-flex justify-content-center"></div>
             </div>
 
 
           </div>
+          {% endif %}
         </div>
       </div>
     </div>
