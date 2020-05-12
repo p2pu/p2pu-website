@@ -15,14 +15,14 @@ theme_colors = [
     'green',
     'yellow',
     'orange',
-    'blue'
+    'blue',
 ]
 
 teams = filter(lambda t: t['page_slug'] not in dedicated_team_page_slugs, teams)
 
 for i,d in enumerate(teams):
     if d['id'] == 3:
-        break
+        continue
     filename = '_teams/{}.md'.format(d['page_slug'])
     with open(filename, 'w') as f:
         colorId = i % 4
