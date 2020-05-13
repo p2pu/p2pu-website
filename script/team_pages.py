@@ -22,10 +22,11 @@ teams = filter(lambda t: t['page_slug'] not in dedicated_team_page_slugs, teams)
 
 for i,d in enumerate(teams):
     if d['id'] == 3:
-        break
+        continue
     filename = '_teams/{}.md'.format(d['page_slug'])
+    title = d['name']
     with open(filename, 'w') as f:
         colorId = i % 4
         theme_color = theme_colors[colorId]
-        f.write('---\ntheme_color: {}\n---\n'.format(theme_color))
+        f.write('---\ntitle: {}\ntheme_color: {}\n---\n'.format(title, theme_color))
 

@@ -95,7 +95,7 @@ bundles:
               <div class="slide-container">
 
 
-                {% assign facilitators = team.facilitators | sort: 'image_url' | reverse %}
+                {% assign facilitators = team.facilitators | sort: 'avatar_url' | reverse %}
                 {% for facilitator in facilitators %}
 
                     <div class="pos-relative card-outer">
@@ -136,7 +136,7 @@ bundles:
         <div class="col-12">
           <h2 class="mb-3">Find a learning circle near you</h2>
           <div id="search-subtitle">
-            <p class="d-flex align-items-center">For more information, check the
+            <p class="d-flex align-items-center">For more information, check out the
               <button type="button" class="btn p2pu-btn light with-outline ml-2" data-toggle="modal" data-target="#faqModal">
                 Frequently Asked Questions
               </button>
