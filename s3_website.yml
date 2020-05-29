@@ -98,7 +98,7 @@ routing_rules:
       key_prefix_equals: sq1mcpl
     redirect:
       host_name: www.p2pu.org
-      replace_key_with: en/learning-circles/?team_id=24&team=Mid-Continent Public Library
+      replace_key_with: Sq1MCPL
       http_redirect_code: 302
 
 # Lernanta EN redirects

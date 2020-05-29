@@ -9,6 +9,7 @@ dedicated_team_page_slugs = [
     'koeln',
     'opintopiirit',
     'sppl',
+    'pittsburgh',
 ]
 
 theme_colors = [

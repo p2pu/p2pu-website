@@ -19,8 +19,6 @@ after_success:
 - echo "Deploying commit $TRAVIS_COMMIT"
 - ./script/en_redirects.sh > _data/page_redirects.txt
 - cat _data/page_redirects.txt
-- cat _data/teams.json | python3 script/team_redirects.py >> _data/team_redirects.txt
-- cat _data/team_redirects.txt
 - bundle exec s3_website cfg apply --headless
 - docker build -t utils/s3_website s3_website/
 - docker run --rm 
@@ -32,7 +30,6 @@ after_success:
     -e TRAVIS_BRANCH
     utils/s3_website
     s3_website push
-#- bundle exec s3_website push
 env:
   global:
   - secure: aCvpyjljg3FDHvwgNKHzGLS4m9JKEZ2fBdTc2SO+iVEb7q/hvmOCb9M3xyhzug0dIXjCnrjCsAF3MnQ/BQLQVjCnL9+2IH0rxRcx7fIAAsuZ6FCgL/ohzPGZVK2qqdXhujMDu3t3O+auA8T3vN3siG1ophXKHcqe9/spve/WmwU=
