@@ -54,7 +54,7 @@ describe('on the learning circles page', function () {
     expect(summary).to.equal('Showing 21 of 41 results');
   });
 
-  // TODO: we should probably be testing this in the p2pu-search-cards package,
+  // TODO: we should test this in the p2pu-search-cards package,
   // and here just test that the Search component is rendering with the right props
   it('there should be 21 learning circles in the search result', async function () {
     let courses = await page.$$('.search-results .result-item');
