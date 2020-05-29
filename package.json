@@ -43,7 +43,6 @@
     "query-string": "^5.1.1",
     "rc-time-picker": "^3.3.1",
     "react": "^16.8.0",
-    "react-collapsible": "^2.7.0",
     "react-dom": "^16.8.0",
     "react-masonry-component": "^5.0.7",
     "react-rangeslider": "^2.1.0",
