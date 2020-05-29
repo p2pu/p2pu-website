@@ -9,9 +9,13 @@ staff:
  - name: Nico Koenig
    image: nico.jpg
    role: Town Crier
-   bio: "Nico takes a community-first approach in coordinating and expanding P2PU's Learning Circle program. From education through sport programs in Zambia, to community festivals in the Northwest Territories, to free schools in the storefronts of Toronto, Nico promotes learning just about anywhere. That is, anywhere but the lecture hall. Nico can usually be found biking around Ottawa, Canada."
+   bio: "Nico takes a community-first approach in coordinating and expanding P2PU's Learning Circle program. From education through sport programs in Zambia to free schools in the storefronts of Toronto, Nico promotes learning just about anywhere. That is, anywhere but the lecture hall. Nico can usually be found biking around Kingston, Canada."
    twitter: nicokoenig
-   url: "http://nicokoenig.com"
+
+ - name: Becky Margraf
+   image: becky.png
+   role: Data Distributer
+   bio: "Becky is a designer and toymaker motivated by learning about learning. She makes sure there’s interesting data coming in from the community and going back out into the world in all ways possible. She currently lives in Portland, OR and Berlin, Germany."
 
  - name: Dirk Uys
    image: dirk_uys.jpg

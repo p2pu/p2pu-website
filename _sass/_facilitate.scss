@@ -302,7 +302,9 @@ section#discourse-community {
     }
 
     .topic-title {
-      color: $gray-darker;
+      a {
+        color: $gray-darker;
+      }
     }
 
     .users {
@@ -362,11 +364,6 @@ section#lets-do-it {
   }
 }
 
-.row {
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
-
 @media (max-width: 768px) {
   section#facilitator-landing, section#facilitator-resources, section#discourse-community {
     padding: 10px;
@@ -379,6 +376,14 @@ section#lets-do-it {
 
     .welcome-text {
       margin: 10px 0;
+    }
+  }
+
+  section#discourse-community {
+    .topics {
+      .topic-title {
+        min-width: 180px;
+      }
     }
   }
 

@@ -31,7 +31,7 @@ const reactBuild = {
     loaders: [
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
+        loaders: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.css$/,
@@ -41,6 +41,14 @@ const reactBuild = {
         test: /\.(jsx|js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader?presets[]=env&presets[]=react&presets[]=stage-2'
+      },
+      {
+        test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.png$|\.gif$/,
+        use: [
+          {
+            loader: 'file-loader',
+          }
+        ]
       },
     ],
   },

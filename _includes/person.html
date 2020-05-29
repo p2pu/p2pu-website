@@ -1,13 +1,13 @@
-<div class="col-12 col-sm-6 col-md-4">
+<div class="col-12 col-md-6 col-lg-4">
 	<div class="card border-0">
 		<div class="card-body px-0">
 			<img class="rounded-circle float-right people-img" src=
 					"{{ "/assets/images/people/" |append: person.image |prepend: site.baseurl }}"
 			     alt="{{ person.name }} Image">
 
-			<h3>{{ person.name }}<br>
+			<h4>{{ person.name }}<br>
 				<small class="text-muted">{{ person.role }}</small>
-			</h3>
+			</h4>
 			<p>{{ person.bio }}</p>
 			{% if person.twitter %}
 				<span><a href="https://twitter.com/{{ person.twitter }}" target="_blank"><i

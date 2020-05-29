@@ -36,7 +36,6 @@ redirects:
 routing_rules:
 
 # Learning circle team URL redirects
-<%= File.read('_data/team_redirects.txt') %>
   - condition:
       key_prefix_equals: berlin
     redirect:
@@ -45,10 +44,61 @@ routing_rules:
       protocol: https
       http_redirect_code: 302
   - condition:
+      key_prefix_equals: sppl
+    redirect:
+      host_name: sppl.p2pu.org
+      replace_key_prefix_with: ''
+      protocol: https
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: blcs
+    redirect:
+      host_name: blcs.p2pu.org
+      replace_key_prefix_with: ''
+      protocol: https
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: cerculdeinvatare
+    redirect:
+      host_name: cerculdeinvatare.p2pu.org
+      replace_key_prefix_with: ''
+      protocol: https
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: klubywiedzy
+    redirect:
+      host_name: klubywiedzy.p2pu.org
+      replace_key_prefix_with: ''
+      protocol: https
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: koeln
+    redirect:
+      host_name: koeln.p2pu.org
+      replace_key_prefix_with: ''
+      protocol: https
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: opintopiirit
+    redirect:
+      host_name: opintopiirit.p2pu.org
+      replace_key_prefix_with: ''
+      protocol: https
+      http_redirect_code: 302
+  - condition:
+      key_prefix_equals: pittsburgh
+    redirect:
+      host_name: welearnpgh.p2pu.org
+      replace_key_prefix_with: ''
+      protocol: https
+      http_redirect_code: 302
+
+
+  - condition:
       key_prefix_equals: sq1mcpl
     redirect:
       host_name: www.p2pu.org
-      replace_key_with: en/learning-circles/?team_id=24&team=Mid-Continent Public Library
+      replace_key_with: Sq1MCPL
       http_redirect_code: 302
 
 # Lernanta EN redirects

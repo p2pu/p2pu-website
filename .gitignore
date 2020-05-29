@@ -6,5 +6,9 @@ node_modules/
 # Development configuration
 _config-dev.yml
 *.swp
+_teams/*.md
 assets/bundles/
 _data/bundles.json
+_data/team_redirects.txt
+_data/teams.json
+.jekyll-metadata

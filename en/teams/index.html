@@ -49,6 +49,7 @@ extra_js:
           {% for team in site.data.teams.items %}
           {% if team.id == 3 %}
           {% else %}
+            {% assign organizers = team.facilitators | where:"role","ORGANIZER" %}
             <div class="card mb-4 pos-relative" id="{{team.page_slug}}">
               {% if team.image_url %}
                 <div class="card-image">
@@ -82,12 +83,12 @@ extra_js:
                       <p class="mb-0">Established: <span class="bold">{{ team.date_established }}</span></p>
                     </div>
 
-                    {% if team.organizers %}
+                    {% if organizers %}
                     <div class="text-xs d-flex d-lg-none align-items-center mb-2">
                       <i class="material-icons pr-2">face</i>
                       <p class="mb-0">Organizers: <span class="bold">
-                        {% for organizer in team.organizers %}
-                          {% if organizer == team.organizers.last %}
+                        {% for organizer in organizers %}
+                          {% if organizer == organizers.last %}
                           {{ organizer.first_name }}
                           {% else %}
                           {{ organizer.first_name | append: ", " }}
@@ -102,9 +103,9 @@ extra_js:
                 </div>
               </div>
 
-              {% if team.organizers.size > 0 %}
+              {% if organizers.size > 0 %}
               <div class="pos-absolute profile mx-4 p-0 col-sm-5 d-none d-lg-flex align-items-center">
-              <div class="card">
+                <div class="card">
                   <div class="card-header bg-secondary">
                     <p class="minicaps text-right mb-0 text-muted">Organizer</p>
                   </div>
@@ -114,8 +115,8 @@ extra_js:
                     <div class="slide-container">
 
 
-                    {% assign organizers = team.organizers | sort: 'bio' | reverse %}
-                    {% for organizer in organizers %}
+                    {% assign sorted_organizers = organizers | sort: 'bio' | reverse %}
+                    {% for organizer in sorted_organizers %}
 
                       <div class="slide">
                         <div class="d-flex align-items-center">
@@ -124,7 +125,7 @@ extra_js:
                               {% if organizer.avatar_url %}
                               <img class="" src="{{ organizer.avatar_url }}" />
                               {% else %}
-                              <img class="" src="{{ site.baseurl }}/assets/images/default_avatar.png" />
+                              <img class="" src="{{ site.baseurl }}/assets/images/avatars/default_avatar.svg" />
                               {% endif %}
                             </div>
                           </div>

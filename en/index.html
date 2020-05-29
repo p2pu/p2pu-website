@@ -36,6 +36,7 @@ bundles:
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<!-- Custom CSS -->
+	<link rel="stylesheet" href="{{ "/assets/css/p2pu-custom.css" | prepend: site.baseurl }}">
 	<link rel="stylesheet" href="{{ "/assets/css/p2pu-index.css" | prepend: site.baseurl }}">
 	<link rel="shortcut icon" href="{{ "/assets/images/favicon.ico" | prepend: site.baseurl }}">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
@@ -99,16 +100,18 @@ bundles:
 	</section>
 
   <section>
-			<div class="row justify-content-end">
-			  <div class="col-12" data-aos="fade-up" data-aos-offset="100">
+  	<div class="container">
+			<div class="row justify-content-end" data-aos="fade-up" data-aos-offset="100">
+			  <div class="col-12">
 	      	<h5 class="mt-0 mb-2">Upcoming meetings</h5>
-	        <div id="meetings-feed"></div>
 				</div>
+        <div id="meetings-feed"></div>
 			</div>
+		</div>
   </section>
 
 
-	<section id="join" class="bg-secondary py-5 cta-section">
+	<section id="join" class="bg-pattern-gray py-5 cta-section">
 		<div class="container">
 
 	  	<div class="row">
@@ -118,7 +121,11 @@ bundles:
 			  </div>
 
 	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
-			    <div class="p2pu-slide-container">
+			    {% if site.data.testimonials.learners.size > 1 %}
+				    <div class="p2pu-slide-container slick-init">
+		    	{% else %}
+				    <div class="p2pu-slide-container">
+		    	{% endif %}
 						{% for testimonial in site.data.testimonials.learners %}
 							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
@@ -139,7 +146,7 @@ bundles:
 	</section>
 
 
-	<section id="facilitate" class="bg-blue py-5 cta-section">
+	<section id="facilitate" class="bg-pattern-blue py-5 cta-section text-white">
 		<div class="container">
 
 	  	<div class="row">
@@ -150,7 +157,11 @@ bundles:
 
 
 	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
-			    <div class="p2pu-slide-container">
+			    {% if site.data.testimonials.facilitators.size > 1 %}
+				    <div class="p2pu-slide-container slick-init">
+		    	{% else %}
+				    <div class="p2pu-slide-container">
+		    	{% endif %}
 						{% for testimonial in site.data.testimonials.facilitators %}
 							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
@@ -162,7 +173,7 @@ bundles:
 				<div class="col-12" data-aos="zoom-in" data-aos-offset="200">
 					<div class="cta-button text-center">
 						<a href="/en/facilitate/" class="btn p2pu-btn light">Facilitate a learning circle</a>
-						<div class="line"></div>
+						<div class="line light"></div>
 					</div>
 				</div>
 		  </div>
@@ -170,7 +181,7 @@ bundles:
 	  </div>
 	</section>
 
-	<section id="course" class="bg-secondary py-5 cta-section">
+	<section id="course" class="bg-pattern-gray py-5 cta-section">
 		<div class="container">
 
 	  	<div class="row">
@@ -180,7 +191,11 @@ bundles:
 			  </div>
 
         <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
-			    <div class="p2pu-slide-container">
+			    {% if site.data.testimonials.network.size > 1 %}
+				    <div class="p2pu-slide-container slick-init">
+		    	{% else %}
+				    <div class="p2pu-slide-container">
+		    	{% endif %}
 						{% for testimonial in site.data.testimonials.network %}
 							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
@@ -193,7 +208,7 @@ bundles:
 				<div class="col-12">
 					<div class="cta-button text-center">
 						<a href="https://howto.p2pu.org" class="btn p2pu-btn blue" data-aos="zoom-in" data-aos-offset="200">Create or remix a course</a>
-						<div class="line light"></div>
+						<div class="line"></div>
 					</div>
 				</div>
 		  </div>
@@ -202,7 +217,7 @@ bundles:
 	</section>
 
 
-	<section id="organize" class="bg-blue py-5 cta-section">
+	<section id="organize" class="bg-pattern-blue py-5 cta-section text-white">
 		<div class="container">
 
 	  	<div class="row">
@@ -212,7 +227,11 @@ bundles:
 			  </div>
 
 	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
-			    <div class="p2pu-slide-container">
+	      	{% if site.data.testimonials.organizers.size > 1 %}
+				    <div class="p2pu-slide-container slick-init">
+		    	{% else %}
+				    <div class="p2pu-slide-container">
+		    	{% endif %}
 						{% for testimonial in site.data.testimonials.organizers %}
 							{% include testimonial.html testimonial=testimonial %}
 						{% endfor %}
@@ -224,7 +243,7 @@ bundles:
 				<div class="col-12" data-aos="zoom-in" data-aos-offset="200">
 					<div class="cta-button text-center">
 						<a href="/en/work-with-us/" class="btn p2pu-btn light">Work with us</a>
-						<div class="line"></div>
+						<div class="line light"></div>
 					</div>
 				</div>
 		  </div>
