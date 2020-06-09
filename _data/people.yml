@@ -10,7 +10,7 @@ staff:
    bio: "Dirk makes sure that just the right amount of tech is developed at P2PU. After travelling through South and Central America, he is now back home in South Africa and based in Cape Town. When he is not writing code, he is most likely hiking Table mountain, surfing the Atlantic or tinkering with a Raspberry Pi."
    twitter: riskycud
    url: "http://thebacklog.net"
-   
+
  - name: Grif Peterson
    image: grif_peterson.jpeg
    role: Executive Director
@@ -48,18 +48,18 @@ board:
    role: Executive Director, Aspiration
    bio: "It is not without reason that Gunner is our workshop facilitator of choice. He is Executive Director at Aspiration, where he helps NGOs, activists, foundations and software developers make more effective use of technology for social change."
    twitter: allengunn
-  
+
  - name: Carl Ruppin
    image: carl_ruppin.jpg
    role: Assistant Vice President, MetLife
    bio: "Carl joined P2PU as a team member soon after the organization was founded, providing incredible operational, legal, and project management support. He transitioned to the Board soon after he left the team and additionally serves as the Board Secretary."
-  
+
  - name: Catherine Penkert
    image: catherine_penkert.jpg
    role: Library Director, Saint Paul Public Library
    bio: "Catherine serves as the Library Director at Saint Paul Public Library in Minnesota, where she oversees programs, serves, and community contributions across a 13 branch system. She brings an invaluable perspective to the work of P2PU."
    twitter: CPStP
-   
+
  - name: Delia Browne
    image: delia_browne.jpg
    role: National Copyright Director, NSW Department of Education and Training; Board Director, Creative Commons
@@ -71,16 +71,16 @@ board:
    bio: "June is a learning sciences and human-computer interaction researcher at UC Irvine. He bravely collaborated with P2PU on past research projects and now serves on the board to help think about strategic new directions for peer learning."
    twitter: ahnjune
    url: "http://ahnjune.com"
-   
+
  - name: Philipp Schmidt
    image: philipp_schmidt.jpg
    role: Director of Learning Innovation, MIT Media Lab (P2PU Board Chair)
    bio: "Philipp co-founded P2PU in 2008 with support from a Shuttleworth Grant. Years later he is still cooking up learning experiences (and mustard) at the MIT Media Lab, and nurturing partnerships for future P2PU projects."
    twitter: schmidtphi
    url: "http://philippschmidt.org/"
-   
+
  - name: Sidsel Bech-Petersen
-   image: sidsel_bech-petersen.jpg
+   image: sidsel_bech_peterson.jpg
    role: Head of Innovation and User Involvement, Aarhus Public Libraries, Denmark
    bio: "Sidsel is a longtime friend of P2PU. We met her as she was leading the process of transforming the Main Library in Aarhus into Dokk1, the largest public library in Scandinavia. In her current role, she supports user involvement and special projects across Aarhus Public Libraries."
 
@@ -112,7 +112,7 @@ collaborators:
    bio: "Mark loves all things open, including wine bars in San Francisco that are still open at 2am. As Mozilla Foundation ED he is leading an army of webmakers to keep the web open. As board member of P2PU he helps Philipp get more done."
    twitter: msurman
    url: "http://commonspace.wordpress.com"
-   
+
  - name: Mark Andersen
    image: mark_andersen.jpg
    role: Learning Circle Extraordinaire
