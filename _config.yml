@@ -1,7 +1,7 @@
 # Site settings
 title: P2PU
 email: admin@p2pu.org
-description: "Taking online courses together, in libraries, for free."
+description: "Learning by the people, for the people."
 baseurl:
 url: "https://www.p2pu.org"
 languages: ['en']
