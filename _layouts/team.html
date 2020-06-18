@@ -63,11 +63,16 @@ bundles:
         </div>
 
         <div class="row mt-5 justify-content-center">
-          {% if team.intro_text.size > 0 %}
           <div class="col-lg-6 col-md-12 text-white">
             <div class="rellax" data-rellax-speed="0" data-rellax-desktop-speed="-1">
               <h2 class="mb-3">About Us</h2>
+              {% if team.intro_text.size > 0 %}
               <p class='card-text text-white'>{{ team.intro_text}}</p>
+              {% else %}
+              <p>
+                {{ team.name }} is proud to partner with P2PU to bring learning circles to our community. Join your neighbors and peers as we gather to learn something together. Interested in creating your own learning circle? Check out our facilitation resources at <a href="https://www.p2pu.org/en/facilitate/">www.p2pu.org/en/facilitate</a> to learn more.
+              </p>
+              {% endif %}
               <div class='info'>
                 {% if team.email_address.size > 0 %}
                 <div class="text-xs d-flex align-items-center mb-2 text-white">
@@ -85,7 +90,6 @@ bundles:
               </div>
             </div>
           </div>
-          {% endif %}
 
           {% if team.facilitators %}
           <div class="col-lg-6 d-none d-lg-block">
