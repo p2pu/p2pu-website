@@ -67,7 +67,7 @@ bundles:
             <div class="rellax" data-rellax-speed="0" data-rellax-desktop-speed="-1">
               <h2 class="mb-3">About Us</h2>
               {% if team.intro_text.size > 0 %}
-              <p class='card-text text-white'>{{ team.intro_text}}</p>
+              {{ team.intro_text }}
               {% else %}
               <p>
                 {{ team.name }} is proud to partner with P2PU to bring learning circles to our community. Join your neighbors and peers as we gather to learn something together. Interested in creating your own learning circle? Check out our facilitation resources at <a href="https://www.p2pu.org/en/facilitate/">www.p2pu.org/en/facilitate</a> to learn more.

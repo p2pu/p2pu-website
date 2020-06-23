@@ -31,15 +31,15 @@ section {
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 15px;
     box-shadow: -4px 4px 15px rgba(0,0,0,0.15);
     background: white;
     width: 180px;
     height: 180px;
+    border-radius: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
+    overflow: hidden;
 
     img {
       object-fit: contain;
