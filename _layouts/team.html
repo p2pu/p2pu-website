@@ -25,18 +25,18 @@ bundles:
               <div class="header-image pos-relative mt-5 mt-md-3 mt-lg-0">
                 {% if team.image_url %}
                   <div class="img-circle rellax" data-rellax-speed="0" data-rellax-desktop-speed="4">
-                    <img src="{{ team.image_url }}" class="img-fluid" />
+                    <img id="team-image" src="{{ team.image_url }}" class="img-fluid" />
                   </div>
                 {% else if team.coordinates %}
                   <div class="img-circle rellax mt-5 mt-lg-0" data-rellax-speed="0" data-rellax-desktop-speed="4">
-                    <img class="img-fluid" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/450x450?access_token={{ site.mapbox_access_token }}&logo=false" />
+                    <img id="team-image" class="img-fluid" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/450x450?access_token={{ site.mapbox_access_token }}&logo=false" />
                   </div>
                 {% endif %}
 
                 {% if team.logo_url %}
                 <div class="team-logo rellax" data-rellax-speed="4" data-rellax-desktop-speed="8">
                   <a href="mailto:{{team.email_address}}" target="_blank" rel="noopener noreferrer">
-                    <img src="{{ team.logo_url }}" alt="{{ team.name }} logo" class="img-fluid">
+                    <img id="team-logo" src="{{ team.logo_url }}" alt="{{ team.name }} logo" class="img-fluid">
                   </a>
                 </div>
                 {% endif %}
@@ -50,8 +50,8 @@ bundles:
                   <div class="minicaps text-left text-white bold">
                     Learning circles hosted by
                   </div>
-                  <h1 class='mb-3 text-white'>{{ team.name }}</h1>
-                  {% if team.location %}
+                  <h1 id="team-name" class='mb-3 text-white'>{{ team.name }}</h1>
+                  {% if team.location.size > 0 %}
                   <p class='card-text text-white'>Join your neighbors at the library to learn something together. Learning circles meet weekly at a variety of locations across {{ team.location }} for 6-8 weeks, and are free to join.</p>
                   {% else %}
                   <p class='card-text text-white'>Join your neighbors at the library to learn something together. Learning circles meet weekly in person for 6-8 weeks, and are free to join.</p>
@@ -66,25 +66,27 @@ bundles:
           <div class="col-lg-6 col-md-12 text-white">
             <div class="rellax" data-rellax-speed="0" data-rellax-desktop-speed="-1">
               <h2 class="mb-3">About Us</h2>
-              {% if team.intro_text.size > 0 %}
-              {{ team.intro_text }}
-              {% else %}
-              <p>
-                {{ team.name }} is proud to partner with P2PU to bring learning circles to our community. Join your neighbors and peers as we gather to learn something together. Interested in creating your own learning circle? Check out our facilitation resources at <a href="https://www.p2pu.org/en/facilitate/">www.p2pu.org/en/facilitate</a> to learn more.
-              </p>
-              {% endif %}
+              <div id="team-intro-text">
+                {% if team.intro_text.size > 0 %}
+                {{ team.intro_text }}
+                {% else %}
+                <p>
+                  {{ team.name }} is proud to partner with P2PU to bring learning circles to our community. Join your neighbors and peers as we gather to learn something together. Interested in creating your own learning circle? Check out our facilitation resources at <a href="https://www.p2pu.org/en/facilitate/">www.p2pu.org/en/facilitate</a> to learn more.
+                </p>
+                {% endif %}
+              </div>
               <div class='info'>
                 {% if team.email_address.size > 0 %}
                 <div class="text-xs d-flex align-items-center mb-2 text-white">
                   <i class="material-icons pr-2">email</i>
-                  <p class="mb-0"><a href="mailto:{{team.email_address}}" class="text-white">{{team.email_address}}</a></p>
+                  <p class="mb-0"><a id="team-email" href="mailto:{{team.email_address}}" class="text-white">{{team.email_address}}</a></p>
                 </div>
                 {% endif %}
 
                 {% if team.website.size > 0 %}
                 <div class="text-xs d-flex align-items-center mb-2 text-white">
                   <i class="material-icons pr-2">launch</i>
-                  <p class="mb-0"><a target="_blank" rel="noopener noreferrer" href="{{team.website}}" class="text-white">{{team.website}}</a></p>
+                  <p class="mb-0"><a id="team-website" target="_blank" rel="noopener noreferrer" href="{{team.website}}" class="text-white">{{team.website}}</a></p>
                 </div>
                 {% endif %}
               </div>
@@ -108,7 +110,7 @@ bundles:
                         {% if facilitator.avatar_url %}
                         <img class="img-fluid card-img" src="{{ facilitator.avatar_url }}" alt="Facilitator image">
                         {% else %}
-                        <img class="img-fluid card-img" src="{{ site.baseurl }}/assets/images/avatars/p2pu_avatar_{{ page.theme_color }}.png" />
+                        <img class="img-fluid card-img default-avatar" src="{{ site.baseurl }}/assets/images/avatars/p2pu_avatar_{{ page.theme_color }}.png" />
                         {% endif %}
                       </div>
 
@@ -191,3 +193,4 @@ bundles:
   </div>
 </div>
 
+{% include team_page_script.html team=team %}
