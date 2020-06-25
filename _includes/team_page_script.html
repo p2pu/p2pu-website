@@ -26,6 +26,15 @@
       }
     }
 
+    function updateEmail(id, value) {
+      var el = document.getElementById(id)
+      var mailtoHref = 'mailto:' + value
+      if (el && el.href !== mailtoHref) {
+        el.href = mailtoHref
+        el.innerHTML = value
+      }
+    }
+
     var baseUrl = 'https://learningcircles.p2pu.org'
     {% if site.env == 'dev' %}
       baseUrl = 'http://localhost:8000'
@@ -48,7 +57,7 @@
 
         updateHtml('team-name', team.name)
         updateHtml('team-intro-text', team.intro_text)
-        updateLink('team-email', 'mailto:' + team.email_address)
+        updateEmail('team-email', team.email_address)
         updateLink('team-website', team.website)
         updateImage('team-image', team.image_url)
         updateImage('team-logo', team.logo_url)
