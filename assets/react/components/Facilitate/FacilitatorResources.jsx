@@ -70,7 +70,7 @@ export default class FacilitatorResources extends Component {
                 <div className="col-12">
                   <p className="large bold">Are you looking for the online course?</p>
                   <p>If you’re in a group, you can access these resources in the format of an open online course. This way, you get to explore learning circles while experiencing what it’s like to participate in a learning circle.</p>
-                  <p><a href="https://p2pu.github.io/facilitate-course/">Click here to access the online course</a></p>
+                  <p><a href="https://p2pu.github.io/learning-about-learning-circles/">Click here to access the online course</a></p>
                 </div>
               </div>
 
