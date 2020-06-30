@@ -45,13 +45,6 @@ routing_rules:
       protocol: https
       http_redirect_code: 302
   - condition:
-      key_prefix_equals: sppl
-    redirect:
-      host_name: sppl.p2pu.org
-      replace_key_prefix_with: ''
-      protocol: https
-      http_redirect_code: 302
-  - condition:
       key_prefix_equals: blcs
     redirect:
       host_name: blcs.p2pu.org
