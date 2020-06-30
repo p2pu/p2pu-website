@@ -8,7 +8,6 @@ dedicated_team_page_slugs = [
     'klubywiedzy',
     'koeln',
     'opintopiirit',
-    'sppl',
     'pittsburgh',
 ]
 
