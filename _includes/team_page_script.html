@@ -5,6 +5,7 @@
     // update data from API
 
     function updateHtml(id, value) {
+      if (!value) return;
       var el = document.getElementById(id)
       if (el && el.innerHTML !== value) {
         el.innerHTML = value
@@ -12,26 +13,39 @@
     }
 
     function updateImage(id, value) {
+      if (!value) return;
+
       var el = document.getElementById(id)
-      if (el &&  el.src !== value) {
-        el.src = value
+      var img = el.querySelector('img')
+
+      if (img &&  img.src !== value) {
+        img.src = value
+        el.classList.remove('hide-empty')
       }
     }
 
     function updateLink(id, value) {
+      if (!value) return;
       var el = document.getElementById(id)
-      if (el && el.href !== value) {
-        el.href = value
-        el.innerHTML = value
+      var a = el.querySelector('a')
+
+      if (a && a.href !== value) {
+        a.href = value
+        a.innerHTML = value
+        el.classList.remove('hide-empty')
       }
     }
 
     function updateEmail(id, value) {
+      if (!value) return;
       var el = document.getElementById(id)
+      var a = el.querySelector('a')
       var mailtoHref = 'mailto:' + value
-      if (el && el.href !== mailtoHref) {
-        el.href = mailtoHref
-        el.innerHTML = value
+
+      if (a && a.href !== mailtoHref) {
+        a.href = mailtoHref
+        a.innerHTML = value
+        el.classList.remove('hide-empty')
       }
     }
 
