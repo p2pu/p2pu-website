@@ -34,11 +34,11 @@ bundles:
                 {% endif %}
 
                 {% if team.logo_url %}
-                <div class="team-logo rellax" data-rellax-speed="4" data-rellax-desktop-speed="8">
                   <a href="mailto:{{team.email_address}}" target="_blank" rel="noopener noreferrer">
-                    <img id="team-logo" src="{{ team.logo_url }}" alt="{{ team.name }} logo" class="img-fluid">
+                    <div class="team-logo rellax" data-rellax-speed="4" data-rellax-desktop-speed="8">
+                      <img id="team-logo" src="{{ team.logo_url }}" alt="{{ team.name }} logo" class="img-fluid">
+                    </div>
                   </a>
-                </div>
                 {% endif %}
 
               </div>
