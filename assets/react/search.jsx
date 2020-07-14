@@ -6,7 +6,6 @@ import { Search, BrowseLearningCircles } from 'p2pu-search-cards';
 import 'p2pu-search-cards/dist/build.css';
 
 let elem = document.getElementById('search-lc-component');
-
 let initialState = {}
 if (elem.dataset.teamId) {
   initialState["team_id"] = elem.dataset.teamId
