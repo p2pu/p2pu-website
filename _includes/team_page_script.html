@@ -1,0 +1,85 @@
+<script type="text/javascript">
+
+  (function() {
+
+    // update data from API
+
+    function updateHtml(id, value) {
+      if (!value) return;
+      var el = document.getElementById(id)
+      if (el && el.innerHTML !== value) {
+        el.innerHTML = value
+      }
+    }
+
+    function updateImage(id, value) {
+      if (!value) return;
+
+      var el = document.getElementById(id)
+      var img = el.querySelector('img')
+
+      if (img &&  img.src !== value) {
+        img.src = value
+        el.classList.remove('hide-empty')
+      }
+    }
+
+    function updateLink(id, value) {
+      if (!value) return;
+      var el = document.getElementById(id)
+      var a = el.querySelector('a')
+
+      if (a && a.href !== value) {
+        a.href = value
+        a.innerHTML = value
+        el.classList.remove('hide-empty')
+      }
+    }
+
+    function updateEmail(id, value) {
+      if (!value) return;
+      var el = document.getElementById(id)
+      var a = el.querySelector('a')
+      var mailtoHref = 'mailto:' + value
+
+      if (a && a.href !== mailtoHref) {
+        a.href = mailtoHref
+        a.innerHTML = value
+        el.classList.remove('hide-empty')
+      }
+    }
+
+    var baseUrl = 'https://learningcircles.p2pu.org'
+    {% if site.env == 'dev' %}
+      baseUrl = 'http://localhost:8000'
+    {% endif %}
+
+    var apiUrl = baseUrl + '/api/teams/' + {{ team.id }};
+
+    var request = new XMLHttpRequest();
+
+    request.onload = function() {
+      if (this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        var team = data.item
+
+        if (!team) {
+          return
+        }
+
+        document.title = team.name;
+
+        updateHtml('team-name', team.name)
+        updateHtml('team-intro-text', team.intro_text)
+        updateEmail('team-email', team.email_address)
+        updateLink('team-website', team.website)
+        updateImage('team-image', team.image_url)
+        updateImage('team-logo', team.logo_url)
+      }
+    };
+    request.open("GET", apiUrl, true);
+    request.responseType = 'text';
+    request.send();
+
+  })()
+</script>

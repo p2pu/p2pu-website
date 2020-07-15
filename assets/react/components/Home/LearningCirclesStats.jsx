@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ApiHelper from '../../helpers/ApiHelper'
-import NumberWithLabel from 'p2pu-input-fields/dist/NumberWithLabel'
+import NumberWithLabel from './NumberWithLabel'
 
 export default class LearningCirclesStats extends Component {
 
