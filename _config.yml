@@ -1,7 +1,7 @@
 # Site settings
 title: P2PU
 email: admin@p2pu.org
-description: "Learning by the people, for the people."
+description: "Grassroots community supporting equitable, empowering peer learning in public spaces worldwide. Learning for the people, by the people!"
 baseurl:
 url: "https://www.p2pu.org"
 languages: ['en']
