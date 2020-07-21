@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import queryString from 'query-string';
 
 import CommunityCalendar from './components/CommunityCalendar';
 

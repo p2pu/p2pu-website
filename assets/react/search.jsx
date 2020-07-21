@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import queryString from 'query-string';
 import { Search, BrowseLearningCircles } from 'p2pu-components';
 
 import 'p2pu-components/dist/build.css';
