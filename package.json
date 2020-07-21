@@ -28,7 +28,7 @@
     "moment": "^2.22.1",
     "moment-timezone": "^0.5.16",
     "node-sass": "^4.14.1",
-    "p2pu-components": "^1.4.2",
+    "p2pu-components": "^1.4.3",
     "p2pu-theme": "^1.1.5",
     "prop-types": "^15.7.2",
     "query-string": "^5.1.1",

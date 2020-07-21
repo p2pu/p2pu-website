@@ -27,6 +27,7 @@ const reactBuild = {
     filename: "[name]-[hash].js",
     publicPath: '/assets/bundles/',
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
