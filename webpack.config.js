@@ -58,6 +58,18 @@ const reactBuild = {
     jquery: 'jQuery',
     $: 'jQuery'
   },
+  optimization: {
+    //runtimeChunk: "single", // enable "runtime" chunk
+    splitChunks: {
+      cacheGroups: {
+        common: {
+          name: 'common',
+          chunks: 'initial',
+          minChunks: 3
+        }
+      }
+    }
+  },
   plugins: [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new AssetsPlugin({
