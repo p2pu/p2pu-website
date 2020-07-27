@@ -27,20 +27,23 @@ const reactBuild = {
     filename: "[name]-[hash].js",
     publicPath: '/assets/bundles/',
   },
+  devtool: 'source-map',
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader'],
-      },
-      {
-        test: /\.css$/,
-        loaders: ['style-loader', 'css-loader']
+        test: /\.(css|sass|scss)$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' }
+        ]
       },
       {
         test: /\.(jsx|js)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader?presets[]=env&presets[]=react&presets[]=stage-2'
+        use: [
+          { loader: 'babel-loader' }
+        ]
       },
       {
         test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.png$|\.gif$/,
@@ -56,15 +59,23 @@ const reactBuild = {
     jquery: 'jQuery',
     $: 'jQuery'
   },
+  optimization: {
+    //runtimeChunk: "single", // enable "runtime" chunk
+    splitChunks: {
+      cacheGroups: {
+        common: {
+          name: 'common',
+          chunks: 'initial',
+          minChunks: 3
+        }
+      }
+    }
+  },
   plugins: [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new AssetsPlugin({
       filename: 'bundles.json',
       path: path.resolve('./_data'),
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'common',
-      minChunks: 3,
     })
   ],
   resolve: {
