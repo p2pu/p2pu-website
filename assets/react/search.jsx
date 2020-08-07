@@ -15,6 +15,8 @@ ReactDOM.render(
     initialState={initialState}
     searchSubject={'learningCircles'}
     Browse={BrowseLearningCircles}
+    origin={'http://localhost:8000'}
+    contact={ elem.dataset.teamContact ? elem.dataset.teamContact : null }
   />, document.getElementById('search-lc-component')
 );
 

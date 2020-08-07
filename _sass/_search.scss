@@ -95,6 +95,10 @@ section.page-title {
   }
 }
 
+.modal-dialog {
+  max-width: 900px;
+}
+
 @media (max-width: map-get($grid-breakpoints, "sm")) {
   section.page-title {
     header {
