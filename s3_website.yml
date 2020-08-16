@@ -20,6 +20,7 @@ redirects:
 <%= File.read('_data/page_redirects.txt') %>
     index.html: /en/
     courses/index.html: /en/courses/
+    en/connect/index.html: /en/contact/
     en/community/index.html: https://community.p2pu.org/
     en/facilitate/background/index.html: /en/handbook/background/
     en/facilitate/starting/index.html: /en/handbook/starting/
