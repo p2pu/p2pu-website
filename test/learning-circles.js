@@ -51,7 +51,7 @@ describe('on the learning circles page', function () {
 
   it('Result tab header should indicate there are 10 learning circle open for signup', async function () {
     let tabHeader = await page.$eval('#react-tabs-0 > span', elem => elem.textContent);
-    expect(tabHeader).to.equal('Signup Open (10)');
+    expect(tabHeader).to.equal('Signup open (10)');
   });
 
   // TODO: we should test this in the p2pu-search-cards package,
