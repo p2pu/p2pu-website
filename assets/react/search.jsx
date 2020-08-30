@@ -15,6 +15,7 @@ ReactDOM.render(
     initialState={initialState}
     searchSubject={'learningCircles'}
     Browse={BrowseLearningCircles}
+    contact={ elem.dataset.teamContact ? elem.dataset.teamContact : null }
   />, document.getElementById('search-lc-component')
 );
 
