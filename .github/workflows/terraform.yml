@@ -68,12 +68,19 @@ jobs:
       - uses: actions/checkout@v2
       - name: build docker image
         run: docker build . -t local/p2pu-website
-      - run: echo "mapbox_access_token: '${{MAPBOX_ACCESS_TOKEN}}'" > ./_production.yml
-      - run: docker run --rm -it --volume `pwd`:/opt/app --workdir /opt/app node:12-buster-slim /bin/sh -c "npm install && npm run build"
-      - run: curl https://learningcircles.p2pu.org/api/teams/ -o ./_data/teams.json
-      - run: cat ./_data/teams.json | python3 script/team_pages.py
+      - name: setup config
+        run: echo "mapbox_access_token: '${{MAPBOX_ACCESS_TOKEN}}'" > ./_production.yml
+      - name: build frontend
+        run: docker run --rm -it --volume `pwd`:/opt/app --workdir /opt/app node:12-buster-slim /bin/sh -c "npm install && npm run build"
+      - name: get live data for teams
+        run: curl https://learningcircles.p2pu.org/api/teams/ -o ./_data/teams.json
+      - name: process live data for teams
+        run: cat ./_data/teams.json | python3 script/team_pages.py
       - name: build jekyll site
         run: docker run -v `pwd`:/opt/app -v `pwd`/_site:/opt/app/_site local/p2pu-website jekyll build --future --config _config.yml,_production.yml
-      - run: docker run --name=site -d --volume `pwd`/_site:/var/www node:12-buster-slim /bin/sh -c "npm i serve && npx serve /var/www"
-      - run: docker run --rm -it --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
-      - run: ./script/en_redirects.sh > _data/page_redirects.txt
+      - name: test setup
+        run: docker run --name=site -d --volume `pwd`/_site:/var/www node:12-buster-slim /bin/sh -c "npm i serve && npx serve /var/www"
+      - name: run test
+        run: docker run --rm -it --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
+      - name: generate redirects
+        run: ./script/en_redirects.sh > _data/page_redirects.txt
