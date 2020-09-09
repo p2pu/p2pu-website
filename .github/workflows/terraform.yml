@@ -56,8 +56,6 @@ jobs:
 
       - uses: actions/github-script@0.9.0
         if: github.event_name == 'pull_request'
-        env:
-          APPLY: "terraform\n${{ steps.apply.outputs.stdout }}"
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -96,3 +94,16 @@ jobs:
         run: docker run --rm --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
       - name: generate redirects
         run: ./script/en_redirects.sh > _data/page_redirects.txt
+      - run: docker build -t p2pu/s3_website s3_website/
+      - run: docker run --rm --name s3_website -v `pwd`:/app -e S3_BUCKET=$S3_BUCKET -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY p2pu/s3_website s3_website cfg apply --headless
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          S3_BUCKET: ${{ needs.terraform.outputs.s3_bucket }}
+      - run: docker run --rm --name s3_website -v `pwd`:/app -e S3_BUCKET=$S3_BUCKET -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY p2pu/s3_website s3_website push
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          S3_BUCKET: ${{ needs.terraform.outputs.s3_bucket }}
+
+

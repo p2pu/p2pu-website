@@ -6,7 +6,7 @@ cloudfront_invalidate_root: true
 cloudfront_wildcard_invalidation: true
 s3_bucket: 'p2pu-website'
 <% else %>
-s3_bucket: 'p2pu-staging'
+s3_bucket: <%= ENV['S3_BUCKET'] %>
 <% end %>
 s3_reduced_redundancy: true
 
