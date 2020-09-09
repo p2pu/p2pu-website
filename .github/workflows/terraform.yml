@@ -5,17 +5,9 @@ on:
     branches:
       - master
   pull_request:
+    types: [created]
 
 jobs:
-  #jekyll:
-  #  name: "Terraform"
-  #  runs-on: ubuntu-latest
-  #    - name: Build the site in the jekyll/builder container
-  #      run: |
-  #        docker run \
-  #        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-  #        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
-
   terraform:
     name: "Terraform"
     runs-on: ubuntu-latest
@@ -37,10 +29,6 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-      #- name: Terraform Format
-      #  id: fmt
-      #  run: terraform fmt -check
 
       - name: Terraform apply
         id: apply
@@ -65,13 +53,27 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const output = `**Site URL**: [${{ steps.site_url.outputs.stdout }}](${{ steps.site_url.outputs.stdout }})`;
+            const output = `**Site URL**: [${{ steps.site_url.outputs.stdout }}](https://${{ steps.site_url.outputs.stdout }})`;
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: output
             })
-#      - name: Terraform Plan Status
-#        if: steps.apply.outcome == 'failure'
-#        run: exit 1
+
+  jekyll:
+    name: "Jekyll"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build docker image
+        run: docker build . -t local/p2pu-website
+      - run: echo "mapbox_access_token: '${{MAPBOX_ACCESS_TOKEN}}'" > ./_production.yml
+      - run: docker run --rm -it --volume `pwd`:/opt/app --workdir /opt/app node:12-buster-slim /bin/sh -c "npm install && npm run build"
+      - run: curl https://learningcircles.p2pu.org/api/teams/ -o ./_data/teams.json
+      - run: cat ./_data/teams.json | python3 script/team_pages.py
+      - name: build jekyll site
+        run: docker run -v `pwd`:/opt/app -v `pwd`/_site:/opt/app/_site local/p2pu-website jekyll build --future --config _config.yml,_production.yml
+      - run: docker run --name=site -d --volume `pwd`/_site:/var/www node:12-buster-slim /bin/sh -c "npm i serve && npx serve /var/www"
+      - run: docker run --rm -it --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
+      - run: ./script/en_redirects.sh > _data/page_redirects.txt
