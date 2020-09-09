@@ -10,6 +10,8 @@ jobs:
   terraform:
     name: "Terraform"
     runs-on: ubuntu-latest
+    outputs:
+      s3_bucket: ${{ steps.s3_bucket.outputs.stdout }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -45,6 +47,13 @@ jobs:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
+      - name: Get s3 bucket name
+        id: s3_bucket
+        run: terraform output bucket
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
       - uses: actions/github-script@0.9.0
         if: github.event_name == 'pull_request'
         env:
@@ -63,6 +72,7 @@ jobs:
   jekyll:
     name: "Jekyll"
     runs-on: ubuntu-latest
+    needs: terraform
     steps:
       - uses: actions/checkout@v2
       - name: build docker image
@@ -73,7 +83,7 @@ jobs:
         env:
           MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_ACCESS_TOKEN}}
       - name: build frontend
-        run: docker run --rm -it --volume `pwd`:/opt/app --workdir /opt/app node:12-buster-slim /bin/sh -c "npm install && npm run build"
+        run: docker run --rm --volume `pwd`:/opt/app --workdir /opt/app node:12-buster-slim /bin/sh -c "npm install && npm run build"
       - name: get live data for teams
         run: curl https://learningcircles.p2pu.org/api/teams/ -o ./_data/teams.json
       - name: process live data for teams
@@ -83,6 +93,6 @@ jobs:
       - name: test setup
         run: docker run --name=site -d --volume `pwd`/_site:/var/www node:12-buster-slim /bin/sh -c "npm i serve && npx serve /var/www"
       - name: run test
-        run: docker run --rm -it --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
+        run: docker run --rm --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
       - name: generate redirects
         run: ./script/en_redirects.sh > _data/page_redirects.txt
