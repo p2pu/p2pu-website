@@ -54,12 +54,15 @@ jobs:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
+      - run: terraform destroy -auto-approve
+        if: github.event.pull_request.closed == true
+
       - uses: actions/github-script@0.9.0
-        if: github.event_name == 'pull_request'
+        if: github.event.pull_request.created == true
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const output = `**Site URL**: [${{ steps.site_url.outputs.stdout }}](https://${{ steps.site_url.outputs.stdout }})`;
+            const output = `**Deploying site to**: [${{ steps.site_url.outputs.stdout }}](http://${{ steps.site_url.outputs.stdout }})`;
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
