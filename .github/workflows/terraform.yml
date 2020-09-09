@@ -69,7 +69,10 @@ jobs:
       - name: build docker image
         run: docker build . -t local/p2pu-website
       - name: setup config
-        run: echo "$(echo mapbox_access_token: '${{ MAPBOX_ACCESS_TOKEN }}' > ./_production.yml)"
+        run: 'echo mapbox_access_token: "$MAPBOX_ACCESS_TOKEN" > ./_production.yml'
+        shell: bash
+        env:
+          MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_ACCESS_TOKEN}}
       - name: build frontend
         run: docker run --rm -it --volume `pwd`:/opt/app --workdir /opt/app node:12-buster-slim /bin/sh -c "npm install && npm run build"
       - name: get live data for teams
