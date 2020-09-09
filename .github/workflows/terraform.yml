@@ -65,15 +65,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const output = `#### Site URL ${{ steps.site_url.outputs.stdout }}
-            #### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
-            #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
-            #### Terraform Apply 📖\`${{ steps.apply.outcome }}\`
-            <details><summary>Show Plan</summary>
-            \`\`\`${process.env.APPLY}\`\`\`
-            </details>
-            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`*`;
-              
+            const output = `**Site URL**: [${{ steps.site_url.outputs.stdout }}](${{ steps.site_url.outputs.stdout }})`;
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
