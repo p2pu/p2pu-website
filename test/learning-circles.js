@@ -49,16 +49,16 @@ describe('on the learning circles page', function () {
     expect(placeholder).to.equal("Keyword, organization, facilitator, etc...");
   });
 
-  it('search summary should indicate only 21 of 41 courses are shown', async function () {
-    let summary = await page.$eval('.results-summary', elem => elem.textContent);
-    expect(summary).to.equal('Showing 21 of 41 results');
+  it('Result tab header should indicate there are 10 learning circle open for signup', async function () {
+    let tabHeader = await page.$eval('#react-tabs-0 > span', elem => elem.textContent);
+    expect(tabHeader).to.equal('Open (10)');
   });
 
   // TODO: we should test this in the p2pu-search-cards package,
   // and here just test that the Search component is rendering with the right props
   it('there should be 21 learning circles in the search result', async function () {
     let courses = await page.$$('.search-results .result-item');
-    expect(courses.length).to.equal(21);
+    expect(courses.length).to.equal(10);
   });
 
 });
