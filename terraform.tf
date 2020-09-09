@@ -1,7 +1,3 @@
-variable "branch_name" {
-  type = string
-}
-
 terraform {
   backend "s3" {
     bucket = "sysadmin"
