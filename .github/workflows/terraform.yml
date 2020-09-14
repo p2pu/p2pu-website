@@ -1,10 +1,6 @@
 name: "Terraform"
 
 on:
-  push:
-    branches-ignore:
-      - master
-      - release
   pull_request:
       types: [opened, reopened, updated]
 
