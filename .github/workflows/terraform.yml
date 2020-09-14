@@ -2,6 +2,7 @@ name: "Terraform"
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, closed]
 
 jobs:
   terraform:
@@ -55,7 +56,7 @@ jobs:
         if: github.event.pull_request.closed == true
 
       - uses: actions/github-script@0.9.0
-        if: ${{ github.event.pull_request.opened == true || github.event.pull_request.reopened }}
+        if: ${{ github.event.pull_request.opened == true || github.event.pull_request.reopened == true }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
