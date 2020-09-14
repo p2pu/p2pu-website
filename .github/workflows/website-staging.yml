@@ -52,6 +52,9 @@ jobs:
 
       - run: terraform destroy -auto-approve
         if: github.event.action == 'closed'
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - uses: actions/github-script@0.9.0
         if: ${{ github.event.action.opened == 'opened' || github.event.action == 'reopened' }}
