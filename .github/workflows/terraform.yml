@@ -55,7 +55,7 @@ jobs:
         if: github.event.pull_request.closed == true
 
       - uses: actions/github-script@0.9.0
-        #if: github.event.pull_request.created == true
+        if: ${{ github.event.pull_request.opened == true || github.event.pull_request.reopened }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
