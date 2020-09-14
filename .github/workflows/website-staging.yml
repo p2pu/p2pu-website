@@ -9,7 +9,7 @@ jobs:
     name: "Terraform"
     runs-on: ubuntu-latest
     outputs:
-      s3_bucket: ${{ steps.s3_bucket.outputs.stdout }}
+      s3_bucket: ${{ steps.s3_bucket_name.outputs.stdout }}
     steps:
       - uses: actions/checkout@v2
 
@@ -39,8 +39,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Get s3 bucket name
-        id: s3_bucket
-        run: terraform output bucket | xargs echo
+        id: s3_bucket_name
+        run: terraform output bucket | tr '\n' ' '
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -70,6 +70,7 @@ jobs:
     if: ${{ !(github.event.action == 'closed') }}
     needs: terraform
     steps:
+      - run: echo ${{ needs.terraform.outputs.s3_bucket }}
       - uses: actions/checkout@v2
       - name: build docker image for building jekyll site
         run: docker build . -t local/p2pu-website
