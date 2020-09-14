@@ -97,15 +97,18 @@ jobs:
         run: docker run --rm --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
       - name: generate redirects
         run: ./script/en_redirects.sh > _data/page_redirects.txt
-      - run: docker build -t p2pu/s3_website s3_website/
-      #- run: aws s3 sync ./_site/ s3://${{ needs.terraform.outputs.s3_bucket }}/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read
-      - run: docker run --rm --name s3_website -v `pwd`:/app -e S3_BUCKET=$S3_BUCKET -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY p2pu/s3_website s3_website push
+      #- run: docker build -t p2pu/s3_website s3_website/
+      - run: aws s3 sync ./_site/ s3://${{ needs.terraform.outputs.s3_bucket }}/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - run: ./script/s3_redirects.sh
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           S3_BUCKET: ${{ needs.terraform.outputs.s3_bucket }}
-      - run: docker run --rm --name s3_website -v `pwd`:/app -e S3_BUCKET=$S3_BUCKET -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY p2pu/s3_website s3_website cfg apply --headless
-        env:
-          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          S3_BUCKET: ${{ needs.terraform.outputs.s3_bucket }}
+      #- run: docker run --rm --name s3_website -v `pwd`:/app -e S3_BUCKET=$S3_BUCKET -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY p2pu/s3_website s3_website cfg apply --headless
+      #  env:
+      #    AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #    AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #    S3_BUCKET: ${{ needs.terraform.outputs.s3_bucket }}

@@ -39,9 +39,12 @@ exclude:
   - Guardfile
   - Gemfile
   - Gemfile.lock
+  - Dockerfile
   - README
   - s3_website.yml
   - node_modules
+  - package.json
+  - package-lock.json
 
 prose:
   media: assets/images
