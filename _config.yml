@@ -6,7 +6,7 @@ baseurl:
 url: "https://www.p2pu.org"
 languages: ['en']
 default_language: 'en'
-default_image_path: /assets/images/learning-circle.jpg
+default_image_path: /assets/images/p2pu-ogimg-default.jpg
 
 # Build settings
 markdown: CommonMark
