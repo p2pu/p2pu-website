@@ -9,10 +9,9 @@ jobs:
     name: "Terraform"
     runs-on: ubuntu-latest
     outputs:
-      s3_bucket: ${{ steps.s3_bucket.outputs.stdout }}
+      s3_bucket: ${{ steps.s3_bucket.outputs.bucket }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       - name: Extract branch name
         shell: bash
@@ -22,16 +21,12 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
 
-      - name: Terraform Init
-        id: init
-        run: terraform init --backend-config="key=tfstate/p2pu-website/${{ steps.extract_branch.outputs.branch }}"
+      - run: terraform init --backend-config="key=tfstate/p2pu-website/${{ steps.extract_branch.outputs.branch }}"
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-      - name: Terraform apply
-        id: apply
-        run: terraform apply -auto-approve
+      - run: terraform apply -auto-approve
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -45,7 +40,7 @@ jobs:
 
       - name: Get s3 bucket name
         id: s3_bucket
-        run: terraform output bucket
+        run: echo "::set-output name=bucket::$(terraform output bucket | xargs echo)"
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
