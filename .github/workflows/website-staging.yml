@@ -1,4 +1,4 @@
-name: "Terraform"
+name: "Website staging"
 
 on:
   pull_request:
@@ -31,9 +31,7 @@ jobs:
 
       - name: Terraform apply
         id: apply
-        if: github.event_name == 'pull_request'
         run: terraform apply -auto-approve
-        #continue-on-error: true
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -53,10 +51,10 @@ jobs:
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - run: terraform destroy -auto-approve
-        if: github.event.pull_request.closed == true
+        if: github.event.action == 'closed'
 
       - uses: actions/github-script@0.9.0
-        if: ${{ github.event.pull_request.opened == true || github.event.pull_request.reopened == true }}
+        if: ${{ github.event.action.opened == 'opened' || github.event.action == 'reopened' }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -71,6 +69,7 @@ jobs:
   jekyll:
     name: "Jekyll"
     runs-on: ubuntu-latest
+    if: ${{ !(github.event.action == 'closed') }}
     needs: terraform
     steps:
       - uses: actions/checkout@v2
