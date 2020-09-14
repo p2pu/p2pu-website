@@ -3,7 +3,7 @@ on:
     types: [closed]
 
 jobs:
-  terraform:
+  terraform-cleanup:
     name: "Terraform"
     runs-on: ubuntu-latest
     outputs:
