@@ -94,7 +94,7 @@ jobs:
       - name: generate redirects
         run: ./script/en_redirects.sh > _data/page_redirects.txt
       #- run: docker build -t p2pu/s3_website s3_website/
-      - run: aws s3 sync ./_site/ s3://${{ needs.terraform.outputs.s3_bucket }}/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read
+      - run: aws s3 sync ./_site/ s3://$(echo ${{ needs.terraform.outputs.s3_bucket }}| xargs echo)/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
