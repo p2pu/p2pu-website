@@ -14,6 +14,7 @@ resource "random_pet" "bucket" {}
 resource "aws_s3_bucket" "website" {
   bucket = "p2pu-website-${random_pet.bucket.id}"
   acl    = "public-read"
+  force_destroy = true
 
   website {
     index_document = "index.html"
