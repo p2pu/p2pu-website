@@ -21,12 +21,12 @@ jobs:
       - name: PR number
         shell: bash
         id: pr
-        run: echo ::set-output name=NUMBER::$(echo $GITHUB_REF | cut -f3 -d/))
+        run: echo ::set-output name=NUMBER::$(echo $GITHUB_REF | cut -f3 -d/)
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
 
-      - run: terraform init --backend-config="key=tfstate/p2pu-website/${{ steps.extract_branch.outputs.branch }}"
+      - run: terraform init --backend-config="key=tfstate/p2pu-website/${{ github.ref }}"
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
