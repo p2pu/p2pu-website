@@ -1,0 +1,198 @@
+{
+    "ErrorDocument": {
+        "Key": "error.html"
+    },
+    "IndexDocument": {
+        "Suffix": "index.html"
+    },
+    "RoutingRules": [
+        {
+            "Condition": {
+                "KeyPrefixEquals": "berlin"
+            },
+            "Redirect": {
+                "HostName": "berlin.p2pu.org",
+                "ReplaceKeyPrefixWith": "",
+                "Protocol": "https",
+                "HttpRedirectCode": 302
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "blcs"
+            },
+            "Redirect": {
+                "HostName": "blcs.p2pu.org",
+                "ReplaceKeyPrefixWith": "",
+                "Protocol": "https",
+                "HttpRedirectCode": 302
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "cerculdeinvatare"
+            },
+            "Redirect": {
+                "HostName": "cerculdeinvatare.p2pu.org",
+                "ReplaceKeyPrefixWith": "",
+                "Protocol": "https",
+                "HttpRedirectCode": 302
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "klubywiedzy"
+            },
+            "Redirect": {
+                "HostName": "klubywiedzy.p2pu.org",
+                "ReplaceKeyPrefixWith": "",
+                "Protocol": "https",
+                "HttpRedirectCode": 302
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "koeln"
+            },
+            "Redirect": {
+                "HostName": "koeln.p2pu.org",
+                "ReplaceKeyPrefixWith": "",
+                "Protocol": "https",
+                "HttpRedirectCode": 302
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "opintopiirit"
+            },
+            "Redirect": {
+                "HostName": "opintopiirit.p2pu.org",
+                "ReplaceKeyPrefixWith": "",
+                "Protocol": "https",
+                "HttpRedirectCode": 302
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "pittsburgh"
+            },
+            "Redirect": {
+                "HostName": "welearnpgh.p2pu.org",
+                "ReplaceKeyPrefixWith": "",
+                "Protocol": "https",
+                "HttpRedirectCode": 302
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "sq1mcpl"
+            },
+            "Redirect": {
+                "HostName": "www.p2pu.org",
+                "ReplaceKeyWith": "Sq1MCPL",
+                "HttpRedirectCode": 302
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "en/courses/",
+                "HttpErrorCodeReturnedEquals": "404"
+            },
+            "Redirect": {
+                "HostName": "courses.p2pu.org",
+                "Protocol": "https",
+                "HttpRedirectCode": 301
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "en/groups/"
+            },
+            "Redirect": {
+                "HostName": "courses.p2pu.org",
+                "Protocol": "https",
+                "HttpRedirectCode": 301
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "en/schools/"
+            },
+            "Redirect": {
+                "HostName": "courses.p2pu.org",
+                "Protocol": "https",
+                "HttpRedirectCode": 301
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "en/badges/"
+            },
+            "Redirect": {
+                "HostName": "courses.p2pu.org",
+                "Protocol": "https",
+                "HttpRedirectCode": 301
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "en/people/"
+            },
+            "Redirect": {
+                "HostName": "courses.p2pu.org",
+                "Protocol": "https",
+                "HttpRedirectCode": 301
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "es/courses/"
+            },
+            "Redirect": {
+                "HostName": "courses.p2pu.org",
+                "Protocol": "https",
+                "HttpRedirectCode": 301
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "es/groups/"
+            },
+            "Redirect": {
+                "HostName": "courses.p2pu.org",
+                "Protocol": "https",
+                "HttpRedirectCode": 301
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "es/schools/"
+            },
+            "Redirect": {
+                "HostName": "courses.p2pu.org",
+                "Protocol": "https",
+                "HttpRedirectCode": 301
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "es/badges/"
+            },
+            "Redirect": {
+                "HostName": "courses.p2pu.org",
+                "Protocol": "https",
+                "HttpRedirectCode": 301
+            }
+        },
+        {
+            "Condition": {
+                "KeyPrefixEquals": "es/people/"
+            },
+            "Redirect": {
+                "HostName": "courses.p2pu.org",
+                "Protocol": "https",
+                "HttpRedirectCode": 301
+            }
+        }
+    ]
+}

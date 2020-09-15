@@ -114,8 +114,9 @@ jobs:
 
       - run: |
           ./script/s3_redirects.sh
-          aws s3 website s3://$S3_BUCKET/ --index-document index.html --error-document error.html
+          aws s3cli put-bucket-website --bucket $S3_BUCKET/ --website-configuration ./s3_website_config.json
         shell: bash
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_PAGER: ""
