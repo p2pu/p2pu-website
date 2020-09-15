@@ -24,7 +24,7 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
 
-      - run: terraform init --backend-config="key=tfstate/p2pu-website/pr/${{ steps.pr.pull_number }}"
+      - run: terraform init --backend-config="key=tfstate/p2pu-website/pr/${{ steps.pr.outputs.pull_number }}"
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
