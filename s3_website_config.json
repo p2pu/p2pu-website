@@ -14,7 +14,7 @@
                 "HostName": "berlin.p2pu.org",
                 "ReplaceKeyPrefixWith": "",
                 "Protocol": "https",
-                "HttpRedirectCode": 302
+                "HttpRedirectCode": "302"
             }
         },
         {
@@ -25,7 +25,7 @@
                 "HostName": "blcs.p2pu.org",
                 "ReplaceKeyPrefixWith": "",
                 "Protocol": "https",
-                "HttpRedirectCode": 302
+                "HttpRedirectCode": "302"
             }
         },
         {
@@ -36,7 +36,7 @@
                 "HostName": "cerculdeinvatare.p2pu.org",
                 "ReplaceKeyPrefixWith": "",
                 "Protocol": "https",
-                "HttpRedirectCode": 302
+                "HttpRedirectCode": "302"
             }
         },
         {
@@ -47,7 +47,7 @@
                 "HostName": "klubywiedzy.p2pu.org",
                 "ReplaceKeyPrefixWith": "",
                 "Protocol": "https",
-                "HttpRedirectCode": 302
+                "HttpRedirectCode": "302"
             }
         },
         {
@@ -58,7 +58,7 @@
                 "HostName": "koeln.p2pu.org",
                 "ReplaceKeyPrefixWith": "",
                 "Protocol": "https",
-                "HttpRedirectCode": 302
+                "HttpRedirectCode": "302"
             }
         },
         {
@@ -69,7 +69,7 @@
                 "HostName": "opintopiirit.p2pu.org",
                 "ReplaceKeyPrefixWith": "",
                 "Protocol": "https",
-                "HttpRedirectCode": 302
+                "HttpRedirectCode": "302"
             }
         },
         {
@@ -80,7 +80,7 @@
                 "HostName": "welearnpgh.p2pu.org",
                 "ReplaceKeyPrefixWith": "",
                 "Protocol": "https",
-                "HttpRedirectCode": 302
+                "HttpRedirectCode": "302"
             }
         },
         {
@@ -90,7 +90,7 @@
             "Redirect": {
                 "HostName": "www.p2pu.org",
                 "ReplaceKeyWith": "Sq1MCPL",
-                "HttpRedirectCode": 302
+                "HttpRedirectCode": "302"
             }
         },
         {
@@ -101,7 +101,7 @@
             "Redirect": {
                 "HostName": "courses.p2pu.org",
                 "Protocol": "https",
-                "HttpRedirectCode": 301
+                "HttpRedirectCode": "301"
             }
         },
         {
@@ -111,7 +111,7 @@
             "Redirect": {
                 "HostName": "courses.p2pu.org",
                 "Protocol": "https",
-                "HttpRedirectCode": 301
+                "HttpRedirectCode": "301"
             }
         },
         {
@@ -121,7 +121,7 @@
             "Redirect": {
                 "HostName": "courses.p2pu.org",
                 "Protocol": "https",
-                "HttpRedirectCode": 301
+                "HttpRedirectCode": "301"
             }
         },
         {
@@ -131,7 +131,7 @@
             "Redirect": {
                 "HostName": "courses.p2pu.org",
                 "Protocol": "https",
-                "HttpRedirectCode": 301
+                "HttpRedirectCode": "301"
             }
         },
         {
@@ -141,7 +141,7 @@
             "Redirect": {
                 "HostName": "courses.p2pu.org",
                 "Protocol": "https",
-                "HttpRedirectCode": 301
+                "HttpRedirectCode": "301"
             }
         },
         {
@@ -151,7 +151,7 @@
             "Redirect": {
                 "HostName": "courses.p2pu.org",
                 "Protocol": "https",
-                "HttpRedirectCode": 301
+                "HttpRedirectCode": "301"
             }
         },
         {
@@ -161,7 +161,7 @@
             "Redirect": {
                 "HostName": "courses.p2pu.org",
                 "Protocol": "https",
-                "HttpRedirectCode": 301
+                "HttpRedirectCode": "301"
             }
         },
         {
@@ -171,7 +171,7 @@
             "Redirect": {
                 "HostName": "courses.p2pu.org",
                 "Protocol": "https",
-                "HttpRedirectCode": 301
+                "HttpRedirectCode": "301"
             }
         },
         {
@@ -181,7 +181,7 @@
             "Redirect": {
                 "HostName": "courses.p2pu.org",
                 "Protocol": "https",
-                "HttpRedirectCode": 301
+                "HttpRedirectCode": "301"
             }
         },
         {
@@ -191,7 +191,7 @@
             "Redirect": {
                 "HostName": "courses.p2pu.org",
                 "Protocol": "https",
-                "HttpRedirectCode": 301
+                "HttpRedirectCode": "301"
             }
         }
     ]
