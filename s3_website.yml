@@ -1,12 +1,12 @@
-s3_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
-s3_secret: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+s3_id: <%= ENV['AWS_ACCESS_KEY'] %>
+s3_secret: <%= ENV['AWS_SECRET_KEY'] %>
 <% if (ENV['TRAVIS_BRANCH'] == 'release') %>
 cloudfront_distribution_id: E1UDG3TDNIQGGC
 cloudfront_invalidate_root: true
 cloudfront_wildcard_invalidation: true
 s3_bucket: 'p2pu-website'
 <% else %>
-s3_bucket: <%= ENV['S3_BUCKET'] %>
+s3_bucket: 'p2pu-staging'
 <% end %>
 s3_reduced_redundancy: true
 
