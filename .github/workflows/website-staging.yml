@@ -18,6 +18,11 @@ jobs:
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         id: extract_branch
 
+      - name: PR number
+        shell: bash
+        id: pr
+        run: echo ::set-output name=NUMBER::$(echo $GITHUB_REF | cut -f3 -d/))
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
 
@@ -56,13 +61,18 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const output = `**Deploying site to**: [${{ steps.site_url.outputs.stdout }}](http://${{ steps.site_url.outputs.stdout }})`;
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: output
-            })
+            const output = `\n**Deploying site to**: [${{ steps.site_url.outputs.stdout }}](http://${{ steps.site_url.outputs.stdout }})`;
+            const pull = await github.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: ${{steps.pr.outputs.number}},
+            });
+            github.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: ${{steps.pr.outputs.number}},
+                body: pull.body + output,
+            });
 
   jekyll:
     name: "Jekyll"
