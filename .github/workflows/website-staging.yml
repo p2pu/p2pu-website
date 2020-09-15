@@ -70,42 +70,52 @@ jobs:
     if: ${{ !(github.event.action == 'closed') }}
     needs: terraform
     steps:
-      - run: echo ${{ needs.terraform.outputs.s3_bucket }}
       - uses: actions/checkout@v2
+
+      - run: echo ::set-env name=S3_BUCKET::${{ needs.terraform.outputs.s3_bucket }}
+
+      - run: echo $S3_BUCKET
+
       - name: build docker image for building jekyll site
         run: docker build . -t local/p2pu-website
+
       - name: setup config
         run: 'echo mapbox_access_token: "$MAPBOX_ACCESS_TOKEN" > ./_production.yml'
         shell: bash
         env:
           MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_ACCESS_TOKEN}}
-      - name: build frontend
-        run: docker run --rm --volume `pwd`:/opt/app --workdir /opt/app node:12-buster-slim /bin/sh -c "npm install && npm run build"
+
       - name: get live data for teams
         run: curl https://learningcircles.p2pu.org/api/teams/ -o ./_data/teams.json
+
       - name: process live data for teams
         run: cat ./_data/teams.json | python3 script/team_pages.py
+
+      - name: build frontend
+        run: docker run --rm --volume `pwd`:/opt/app --workdir /opt/app node:12-buster-slim /bin/sh -c "npm install && npm run build"
+
       - name: build jekyll site
         run: docker run -v `pwd`:/opt/app -v `pwd`/_site:/opt/app/_site local/p2pu-website jekyll build --future --config _config.yml,_production.yml
+
       - name: test setup
         run: docker run --name=site -d --volume `pwd`/_site:/var/www node:12-buster-slim /bin/sh -c "npm i serve && npx serve /var/www"
+
       - name: run test
         run: docker run --rm --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
+
       - name: generate redirects
         run: ./script/en_redirects.sh > _data/page_redirects.txt
-      #- run: docker build -t p2pu/s3_website s3_website/
+
       - run: 'aws s3 sync ./_site/ s3://$(echo "${{ needs.terraform.outputs.s3_bucket }}" | xargs echo)/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read'
         shell: bash
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: ./script/s3_redirects.sh
+
+      - run: |
+          ./script/s3_redirects.sh
+          aws s3 website s3://$S3_BUCKET/ --index-document index.html --error-document error.html
+        shell: bash
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          S3_BUCKET: ${{ needs.terraform.outputs.s3_bucket }}
-      #- run: docker run --rm --name s3_website -v `pwd`:/app -e S3_BUCKET=$S3_BUCKET -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY p2pu/s3_website s3_website cfg apply --headless
-      #  env:
-      #    AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #    AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #    S3_BUCKET: ${{ needs.terraform.outputs.s3_bucket }}
