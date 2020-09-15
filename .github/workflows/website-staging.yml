@@ -13,20 +13,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Extract branch name
+      - run: echo "$GITHUB_EVENT_PATH"
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
 
       - name: PR number
         shell: bash
         id: pr
-        run: echo ::set-output name=NUMBER::$(echo $GITHUB_REF | cut -f3 -d/)
+        run: echo ::set-output name=pull_number::$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
 
-      - run: terraform init --backend-config="key=tfstate/p2pu-website/${{ github.ref }}"
+      - run: terraform init --backend-config="key=tfstate/p2pu-website/pr/${{ steps.pr.outputs.pull_number }}"
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -57,7 +55,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - uses: actions/github-script@0.9.0
-        if: ${{ github.event.action.opened == 'opened' || github.event.action == 'reopened' }}
+        if: ${{ github.event.action == 'opened' || github.event.action == 'reopened' }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -65,13 +63,13 @@ jobs:
             const pull = await github.pulls.get({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                pull_number: ${{steps.pr.outputs.number}},
+                pull_number: ${{steps.pr.outputs.pull_number}},
             });
             github.pulls.update({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                pull_number: ${{steps.pr.outputs.number}},
-                body: pull.body + output,
+                pull_number: ${{steps.pr.outputs.pull_number}},
+                body: (pull.body || '') + output,
             });
 
   jekyll:
