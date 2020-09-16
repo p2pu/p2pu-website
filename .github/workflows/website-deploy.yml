@@ -2,7 +2,7 @@ name: "Website Deploy"
 
 on:
   push:
-    branches: ['master']
+    branches: ['master', 'release']
 
 jobs:
   jekyll:
@@ -11,8 +11,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-        # TODO set bucket for master / release
-      - run: echo ::set-env name=S3_BUCKET::p2pu-staging
+      - name: Set S3 bucket
+        shell: bash
+        run: |
+            if [[ "$GITHUB_REF" == "refs/heads/master" ]]
+            then
+                echo ::set-env name=S3_BUCKET::p2pu-staging
+            elif [[ "$GITHUB_REF" == "refs/heads/release" ]]
+                echo ::set-env name=S3_BUCKET::p2pu-website
+            fi
 
       - run: echo $S3_BUCKET
 
@@ -65,4 +72,10 @@ jobs:
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_PAGER: ""
 
-      # TODO invalidate cloudfront distribution for production
+      - run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /
+        if: env.S3_BUCKET == 'p2pu-website'
+        env:
+          CLOUDFRONT_DISTRIBUTION_ID: ${{secrets.CLOUDFRONT_DISTRIBUTION_ID}}
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_PAGER: ""
