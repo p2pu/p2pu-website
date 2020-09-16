@@ -9,11 +9,13 @@ let initialState = {}
 if (elem.dataset.teamId) {
   initialState["team_id"] = elem.dataset.teamId
 }
+let origin = elem.dataset.apiOrigin;
 
 ReactDOM.render(
   <Search
     initialState={initialState}
     searchSubject={'learningCircles'}
+    origin={origin}
     Browse={BrowseLearningCircles}
     contact={ elem.dataset.teamContact ? elem.dataset.teamContact : null }
   />, document.getElementById('search-lc-component')

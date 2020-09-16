@@ -49,11 +49,7 @@
       }
     }
 
-    var baseUrl = 'https://learningcircles.p2pu.org'
-    {% if site.env == 'dev' %}
-      baseUrl = 'http://localhost:8000'
-    {% endif %}
-
+    var baseUrl = '{{site.default_base_api_endpoint}}';
     var apiUrl = baseUrl + '/api/teams/' + {{ team.id }};
 
     var request = new XMLHttpRequest();
