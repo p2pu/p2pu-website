@@ -18,6 +18,7 @@ jobs:
             then
                 echo ::set-env name=S3_BUCKET::p2pu-staging
             elif [[ "$GITHUB_REF" == "refs/heads/release" ]]
+            then
                 echo ::set-env name=S3_BUCKET::p2pu-website
             fi
 
