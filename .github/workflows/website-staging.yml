@@ -97,7 +97,7 @@ jobs:
         run: curl https://learningcircles.p2pu.org/api/teams/ -o ./_data/teams.json
 
       - name: process live data for teams
-        run: cat ./_data/teams.json | python3 script/team_pages.py
+        run: cat ./_data/teams.json | python3 _deploy/team_pages.py
 
       - name: build frontend
         run: docker run --rm --volume `pwd`:/opt/app --workdir /opt/app node:12-buster-slim /bin/sh -c "npm install && npm run build"
@@ -112,7 +112,7 @@ jobs:
         run: docker run --rm --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
 
       - name: generate redirects
-        run: ./script/en_redirects.sh > _data/page_redirects.txt
+        run: ./_deploy/en_redirects.sh > _data/page_redirects.txt
 
       - run: 'aws s3 sync ./_site/ s3://$(echo "${{ needs.terraform.outputs.s3_bucket }}" | xargs echo)/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read'
         shell: bash
@@ -120,13 +120,13 @@ jobs:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-      - run: ./script/s3_redirects.sh
+      - run: ./_deploy/s3_redirects.sh
         shell: bash
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-      - run: aws s3api put-bucket-website --bucket $S3_BUCKET --website-configuration file://s3_website_config.json
+      - run: aws s3api put-bucket-website --bucket $S3_BUCKET --website-configuration file://_deploy/s3_website_config.json
         shell: bash
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
