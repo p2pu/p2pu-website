@@ -73,7 +73,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_PAGER: ""
 
-      - run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /
+      - run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
         if: env.S3_BUCKET == 'p2pu-website'
         env:
           CLOUDFRONT_DISTRIBUTION_ID: ${{secrets.CLOUDFRONT_DISTRIBUTION_ID}}
