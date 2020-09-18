@@ -16,4 +16,4 @@ do
     val=`echo $line | cut -f2- -d: | xargs echo`
     echo Setting up redirect from $key to $val
     aws s3api put-object --output text --bucket $S3_BUCKET --key $key --website-redirect-location=$val --acl public-read --storage-class REDUCED_REDUNDANCY
-done < simple_redirects.txt
+done < _data/simple_redirects.txt
