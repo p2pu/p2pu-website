@@ -63,7 +63,7 @@ jobs:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-      - run: aws s3api put-bucket-website --bucket $S3_BUCKET --website-configuration file://s3_website_config.json
+      - run: aws s3api put-bucket-website --bucket $S3_BUCKET --website-configuration file://_deploy/s3_website_config.json
         shell: bash
         env:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
