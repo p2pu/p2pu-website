@@ -40,9 +40,14 @@ exclude:
   - Guardfile
   - Gemfile
   - Gemfile.lock
-  - README
-  - s3_website.yml
+  - Dockerfile
+  - README.md
   - node_modules
+  - package.json
+  - package-lock.json
+  - test
+  - terraform.tf
+  - webpack.config.js
 
 prose:
   media: assets/images

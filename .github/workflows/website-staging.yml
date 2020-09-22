@@ -1,0 +1,131 @@
+name: "Website staging"
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+jobs:
+  terraform:
+    name: "Terraform"
+    runs-on: ubuntu-latest
+    outputs:
+      s3_bucket: ${{ steps.s3_bucket_name.outputs.stdout }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: echo "$GITHUB_EVENT_PATH"
+        shell: bash
+
+      - name: PR number
+        shell: bash
+        id: pr
+        run: echo ::set-output name=pull_number::$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - run: terraform init --backend-config="key=tfstate/p2pu-website/pr/${{ steps.pr.outputs.pull_number }}"
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - run: terraform apply -auto-approve
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Terraform var
+        id: site_url
+        run: terraform output site_url
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Get s3 bucket name
+        id: s3_bucket_name
+        run: terraform output bucket
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - run: terraform destroy -auto-approve
+        if: github.event.action == 'closed'
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - uses: actions/github-script@0.9.0
+        if: ${{ github.event.action == 'opened' || github.event.action == 'reopened' }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const output = `\n**Deploying site to**: [${{ steps.site_url.outputs.stdout }}](http://${{ steps.site_url.outputs.stdout }})`;
+            const pull = await github.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: ${{steps.pr.outputs.pull_number}},
+            });
+            github.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: ${{steps.pr.outputs.pull_number}},
+                body: (pull.body || '') + output,
+            });
+
+  jekyll:
+    name: "Jekyll"
+    runs-on: ubuntu-latest
+    if: ${{ !(github.event.action == 'closed') }}
+    needs: terraform
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: echo ::set-env name=S3_BUCKET::${{ needs.terraform.outputs.s3_bucket }}
+
+      - run: echo $S3_BUCKET
+
+      - name: build docker image for building jekyll site
+        run: docker build . -t local/p2pu-website
+
+      - name: setup config
+        run: 'echo mapbox_access_token: "$MAPBOX_ACCESS_TOKEN" > ./_production.yml'
+        shell: bash
+        env:
+          MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_ACCESS_TOKEN}}
+
+      - name: get live data for teams
+        run: curl https://learningcircles.p2pu.org/api/teams/ -o ./_data/teams.json
+
+      - name: process live data for teams
+        run: cat ./_data/teams.json | python3 _deploy/team_pages.py
+
+      - name: build frontend
+        run: docker run --rm --volume `pwd`:/opt/app --workdir /opt/app node:12-buster-slim /bin/sh -c "npm install && npm run build"
+
+      - name: build jekyll site
+        run: docker run -v `pwd`:/opt/app -v `pwd`/_site:/opt/app/_site local/p2pu-website jekyll build --future --config _config.yml,_production.yml
+
+      - name: test setup
+        run: docker run --name=site -d --volume `pwd`/_site:/var/www node:12-buster-slim /bin/sh -c "npm i serve && npx serve /var/www"
+
+      - name: run test
+        run: docker run --rm --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
+
+      - run: 'aws s3 sync ./_site/ s3://$(echo "${{ needs.terraform.outputs.s3_bucket }}" | xargs echo)/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read'
+        shell: bash
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - run: ./_deploy/s3_redirects.sh
+        shell: bash
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - run: aws s3api put-bucket-website --bucket $S3_BUCKET --website-configuration file://_deploy/s3_website_config.json
+        shell: bash
+        env:
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_PAGER: ""

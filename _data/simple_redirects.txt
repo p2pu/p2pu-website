@@ -1,0 +1,17 @@
+index.html: /en/
+courses/index.html: /en/courses/
+en/connect/index.html: /en/contact/
+en/community/index.html: https://community.p2pu.org/
+en/facilitate/background/index.html: /en/handbook/background/
+en/facilitate/starting/index.html: /en/handbook/starting/
+en/facilitate/running/index.html: /en/handbook/running/
+en/facilitate/downloads/index.html: /en/handbook/downloads/
+en/workwithus/index.html: /en/work-with-us/
+About-P2PU: /en/about/
+webcraft/index.html: https://courses.p2pu.org/webcraft/
+school-of-ed: https://courses.p2pu.org/school-of-ed
+en/Janepark/index.html: https://courses.p2pu.org/en/Janepark/
+course/list: https://learningcircles.p2pu.org/en/courses/
+sosi: https://courses.p2pu.org/sosi
+virtual-handbook: https://docs.google.com/document/d/1l5Y96YTPbXay1iDgKiFoD-uA2AixvJNt3a380L0yOWc/edit
+course-creation-guide: https://docs.google.com/document/d/116fJM3GS7XDzilUOL_ynMZ0yTncUD6aVUbcQKsTra6U/edit
