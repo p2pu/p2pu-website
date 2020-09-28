@@ -24,7 +24,11 @@ The number of facilitator profiles available in the rotation should be updated i
 
 ## Development
 
+All development should happen on a branch forked from master.
+
 ### Overview
+
+This is a static website that uses a few different APIs to provide user interaction with live data.
 
 - Jekyll static site
 - Uses [p2pu-theme](https://github.com/p2pu/p2pu-theme) based on bootstrap 4 for styling
@@ -34,10 +38,10 @@ The number of facilitator profiles available in the rotation should be updated i
 - GitHub action to build and deploy site
 - Hosted on AWS S3, behind a CloudFront CDN
 
-## Dynamic staging environments
+### Dynamic staging environments
 
 - To setup a dynamic staging environment, create a new branch off master and submit a PR to master. There is a GitHub Action that will create a temporary staging environment. Once the environment is set up, the action will add the URL to the description of the PR.
 
-## Deploying changes to production
+### Deploying changes to production
 
 - To deploy changes to production, create a PR from the master branch to the release branch. Once all checks passed, you can merge the PR and a GitHub Action will deploy the site.
