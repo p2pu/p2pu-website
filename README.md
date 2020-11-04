@@ -1,13 +1,16 @@
 # P2PU Website
 
-This is the P2PU website, life at [www.p2pu.org](https://www.p2pu.org/en/). The master branch is a persistent staging environment and deployed to [http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/](http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/)
+This is the code for the home of P2PU, you can see it in action at [www.p2pu.org](https://www.p2pu.org/en/). The master branch is deployed to a persistent staging environment at [http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/](http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/).
 
-To make any changes, 
+## Updating content
+
+Small changes are probably safe to do directly on the master branch, ex. updating the copy for a bio. But for most changes, you should
+
 1. create a branch of master, 
 1. make your changes in that branch and then 
 1. submit a PR to merge your branch into master. 
 
-## Updating content
+This will setup a dynamic staging environment where you can preview your changes.
 
 ### Site Data
 The following content items are stored in YML files in the `_data` directory: FAQs, facilitator profiles, facilitator resources, funders, partners, people, presentations, projects, and the navigation items.
@@ -21,18 +24,24 @@ The number of facilitator profiles available in the rotation should be updated i
 
 ## Development
 
+All development should happen on a branch forked from master.
+
 ### Overview
 
-- Jekyll static site
-- CSS generated from customized bootstrap SCSS files
-- React components for user interaction
-- Live data pulled from API: learningcircles.p2pu.org
-- Data also pulled from API during static website build
+This is a static website that uses a few different APIs to provide user interaction with live data.
 
-## Dynamic staging environments
+- Jekyll static site
+- Uses [p2pu-theme](https://github.com/p2pu/p2pu-theme) based on bootstrap 4 for styling
+- Live users interaction using [p2pu-components](https://github.com/p2pu/p2pu-components/) for finding learning circles and courses.
+- Live data pulled from API: https://learningcircles.p2pu.org
+- Data also pulled from API during static website build
+- GitHub action to build and deploy site
+- Hosted on AWS S3, behind a CloudFront CDN
+
+### Dynamic staging environments
 
 - To setup a dynamic staging environment, create a new branch off master and submit a PR to master. There is a GitHub Action that will create a temporary staging environment. Once the environment is set up, the action will add the URL to the description of the PR.
 
-## Deploying changes to production
+### Deploying changes to production
 
 - To deploy changes to production, create a PR from the master branch to the release branch. Once all checks passed, you can merge the PR and a GitHub Action will deploy the site.

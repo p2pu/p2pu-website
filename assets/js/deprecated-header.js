@@ -40,7 +40,7 @@ function deprecatedHeader(){
     <div id="deprecated-site-alert" aria-hidden="true">
       <div role="alert" tabindex="1">
         <div>
-          Thanks for visiting P2PU. This domain is no longer being updated. Head to <a href="https://www.p2pu.org">www.p2pu.org</a> for the latest information. If you’re looking to create an open online courses, we now support <a href="https://howto.p2pu.org">howto.p2pu.org</a>
+          Thanks for visiting P2PU. This domain is no longer being updated. Head to <a href="https://www.p2pu.org">www.p2pu.org</a> for the latest information. If you’re looking to create an open online courses, we now support <a href="https://course-in-a-box.p2pu.org/">Course-in-a-box</a>
         </div>
         <div>
           <button id="deprecated-alert-close" aria-label="Close">&times;</button>

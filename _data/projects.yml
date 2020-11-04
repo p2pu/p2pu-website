@@ -2,13 +2,13 @@ past:
   - title: Learning Circles
     image: learning_circles.jpg
     short-description: "Study groups for people who want to take online courses together, in person. Developed in partnership with Chicago Public Library."
-    url: http://learningcircles.p2pu.org/
+    url: https://learningcircles.p2pu.org/
     
   - title: Course in a Box
     image: Course_in_a_Box.jpg
     short-description: "Develop your own online course using the methodologies we use at P2PU to build
     our own web learning communities."
-    url: http://howto.p2pu.org/
+    url: https://course-in-a-box.p2pu.org/
 
   - title: Mechanical MOOC
     image: mooc_e.jpg
@@ -23,7 +23,7 @@ past:
   - title: Badges
     image: badges.png
     short-description: "Badges spark feedback between experts and learners about their learning projects. Create and share badges to symbolize these conversations."
-    url: http://badges.p2pu.org
+    url: https://badges.p2pu.org
     
   - title: Learning Creative Learning
     image: lclmooc.png
