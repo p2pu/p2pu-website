@@ -52,10 +52,10 @@ bundles:
                     Learning circles hosted by
                   </div>
                   <h1 id="team-name" class='mb-3 text-white'>{{ team.name }}</h1>
-                  {% if team.location.size > 0 %}
-                  <p class='card-text text-white'>Join your neighbors at the library to learn something together. Learning circles meet weekly at a variety of locations across {{ team.location }} for 6-8 weeks, and are free to join.</p>
+                  {% if team.subtitle %}
+                  <p id="team-subtitle" class='card-text text-white'>{{team.subtitle}}</p>
                   {% else %}
-                  <p class='card-text text-white'>Join your neighbors at the library to learn something together. Learning circles meet weekly in person for 6-8 weeks, and are free to join.</p>
+                  <p id="team-subtitle" class='card-text text-white'>Join your neighbors to learn something together. Learning circles meet weekly for 6-8 weeks, and are free to join.</p>
                   {% endif %}
                   <a href="#search" class="btn p2pu-btn light my-2">Browse learning circles</a>
                 </div>
