@@ -80,7 +80,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo ::set-env name=S3_BUCKET::${{ needs.terraform.outputs.s3_bucket }}
+      - run: echo "S3_BUCKET=${{ needs.terraform.outputs.s3_bucket }}" >> $GITHUB_ENV
 
       - run: echo $S3_BUCKET
 
