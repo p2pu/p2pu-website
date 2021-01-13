@@ -82,39 +82,6 @@ board:
 
 
 collaborators:
- - name: Nico Koenig
-   image: nico.jpg
-   role: Community Lead
-   bio: "Nico is a facilitator and designer of participatory in-person and online workshops, and an organizer of adult learning initiatives. He trained, developed and facilitated many workshops for P2PU and 'coconut' and Canadian handshake will stay with us for a long time."
-   twitter: nicokoenig
-   url: https://nicokoenig.com/
- 
- - name: Sharon Kennedy
-   image: sharon.jpg
-   role: Web developer
-   bio: "Sharon is a web developer and designer based in Toronto, Canada. She's working on making the this website a beautiful and useful resource for the P2PU community. When she's not fused to her laptop, she leads wilderness camping and hiking tours."
-   twitter: codeandcanoes
-   url: "https://www.followthewhitesquirrel.ca"
-
- - name: Neeru Paharia
-   image: neeru_paharia.jpg
-   role: Co-founder, Assistant Professor, Georgetown University
-   bio: "As original gang-star par excellence, Neeru didn’t think it was enough to theorize about starting a peer learning platform so she co-founded P2PU and created and organized the‘Behavioral Economics’ pilot course. Neeru has been at the root of P2PU’s success in many ways and now employs her vast experience on the board."
-
- - name: Nadeem Shabir
-   image: nadeem_shabir.jpg
-   role: Technical Lead at Talis
-   bio: "When Nadeem is not eloquently luring people at P2PU workshops into letting their emotions about peer learning run freely, he uses his vast experience in programming adds technical perspective to the board."
-   twitter: kiyanwang
-   url: "http://www.virtualchaos.co.uk/blog/"
-
- - name: Mark Surman
-   image: mark_surman.jpg
-   role: Executive Director Mozilla Foundation
-   bio: "Mark loves all things open, including wine bars in San Francisco that are still open at 2am. As Mozilla Foundation ED he is leading an army of webmakers to keep the web open. As board member of P2PU he helps Philipp get more done."
-   twitter: msurman
-   url: "http://commonspace.wordpress.com"
-
  - name: Mark Andersen
    image: mark_andersen.jpg
    role: Learning Circle Extraordinaire
@@ -205,7 +172,7 @@ collaborators:
    bio: "Recently hailed as one of the ‘Fantastic 5′ in open education where he was portrayed as Ben Grimm, Stian has been destroying old institutional structures as a rock solid board member since P2PU’s inception."
    twitter: houshuang
    url: "http://reganmian.net/blog/"
-
+   
  - name: Laura Hilliger
    image: laura_hilliger.jpg
    role: Webmaker, Troublemaker
@@ -213,17 +180,24 @@ collaborators:
    twitter: epilepticrabbit
    url: "http://about.me/laurahilliger"
 
- - name: Alexander Kehayias
-   image: alexander_kehayias.jpg
-   role: Founder of the P2PU Mentor Program
-   bio: "Alex has been working on a mentorship platform for people to connect with knowledgeable mentors to guide them through learning a topic. He is also applying his vast real-life experience in coming up with great opening lines to create an ice-breaker functionality to butter up online interaction."
-   twitter: alexkehayias
-
  - name: Rebecca Kahn
    image: rebecca_kahn.jpg
    role: Happiness Officer
    bio: "For a long time Bekka made the trains at P2PU run on time (or as close to it as possible). A London-dweller by day but a South African in spirit, Bekka is currently finishing up her PhD in Digital Humanities at King's College, and serves as the Coordinator for the Open Coalition"
    twitter: rebamex
+
+ - name: Alexander Kehayias
+   image: alexander_kehayias.jpg
+   role: Founder of the P2PU Mentor Program
+   bio: "Alex has been working on a mentorship platform for people to connect with knowledgeable mentors to guide them through learning a topic. He is also applying his vast real-life experience in coming up with great opening lines to create an ice-breaker functionality to butter up online interaction."
+   twitter: alexkehayias
+   
+ - name: Sharon Kennedy
+   image: sharon.jpg
+   role: Web developer
+   bio: "Sharon is a web developer and designer based in Toronto, Canada. She's working on making the this website a beautiful and useful resource for the P2PU community. When she's not fused to her laptop, she leads wilderness camping and hiking tours."
+   twitter: codeandcanoes
+   url: "https://www.followthewhitesquirrel.ca"
 
  - name: Molly Kleinman
    image: molly_kleinman.jpg
@@ -235,6 +209,13 @@ collaborators:
    role: Destroyer, Builder
    bio: "Piet has been quietly learning about learning for several years, many of them while working with the University of Michigan’s Open. Michigan initiative. He is a founding volunteer with the School of Open, but also contributes to P2PU’s work on mentorship, interface design, the Open Masters project, and pretty much any place people are thinking about the intersections of learning, identity, and information."
    twitter: bagabot
+    
+ - name: Nico Koenig
+   image: nico.jpg
+   role: Community Lead
+   bio: "Nico is a facilitator and designer of participatory in-person and online workshops, and an organizer of adult learning initiatives. He trained, developed and facilitated many workshops for P2PU and 'coconut' and Canadian handshake will stay with us for a long time."
+   twitter: nicokoenig
+   url: https://nicokoenig.com/
 
  - name: Kate Lapinski
    image: kate_lapinski.jpg
@@ -271,13 +252,18 @@ collaborators:
    role: Edupunk Technical Overlord
    bio: "Paul loves open software and the crew over at P2PU. We used his tasty Mozilla drumbeat.org code for eons, and now he helps us out when we need some technical TLC. He's the Director of Platform Engineering at 500px in his native Toronto."
    twitter: paulosman
-
+   
+ - name: Neeru Paharia
+   image: neeru_paharia.jpg
+   role: Co-founder, Assistant Professor, Georgetown University
+   bio: "As original gang-star par excellence, Neeru didn’t think it was enough to theorize about starting a peer learning platform so she co-founded P2PU and created and organized the‘Behavioral Economics’ pilot course. Neeru has been at the root of P2PU’s success in many ways and now employs her vast experience on the board."
+   
  - name: Jane Park
    image: jane_park.jpg
    role: Project Manager, Creative Commons
    bio: "Another founding volunteer who loves P2PU so much she made it her day job — almost. Jane works for Creative Commons and devotes 60% of her time to co-creating the ‘School of Open’ with open advocates from around the world."
    twitter: janedaily
-
+   
  - name: Beck Pitt
    image: beck_pitt.jpg
    role: Researcher, Existentialist
@@ -315,6 +301,13 @@ collaborators:
    bio: "Jessy is P2PU’s resident Superwoman–brains, brawn and badassery. Jessy is passionate about the ways that openness and collaboration can advance science and research."
    twitter: jessykate
    url: "http://www.jessykate.com"
+   
+ - name: Nadeem Shabir
+   image: nadeem_shabir.jpg
+   role: Technical Lead at Talis
+   bio: "When Nadeem is not eloquently luring people at P2PU workshops into letting their emotions about peer learning run freely, he uses his vast experience in programming adds technical perspective to the board."
+   twitter: kiyanwang
+   url: "http://www.virtualchaos.co.uk/blog/"
 
  - name: Niels Sprong
    image: niels_sprong.jpg
@@ -325,6 +318,13 @@ collaborators:
    image: aleksander_stachurka.jpg
    role: Designer
    bio: "Aleksander has done a great job in translating the ideas of the the community into P2PU’s visual identity. Aleks now runs his own photography and design studio in Warsaw, Poland."
+   
+ - name: Mark Surman
+   image: mark_surman.jpg
+   role: Executive Director Mozilla Foundation
+   bio: "Mark loves all things open, including wine bars in San Francisco that are still open at 2am. As Mozilla Foundation ED he is leading an army of webmakers to keep the web open. As board member of P2PU he helps Philipp get more done."
+   twitter: msurman
+   url: "http://commonspace.wordpress.com"
 
  - name: Joel Thierstein
    image: joel_thierstein.jpg
