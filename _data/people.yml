@@ -17,13 +17,7 @@ staff:
    bio: "Grif joined P2PU in early 2015 to start learning circles with Chicago Public Library. Since then, his role has grown with the program, and he does his best to make sure that folks around the world have the opportunity to keep on learning things they care about, for free. Once he presented about learning circles in a bank vault to 2 people. He lives in Cambridge, Massachusetts."
    twitter: grifpeterson
    url: "http://grifpeterson.com"
-
- - name: Nico Koenig
-   image: nico.jpg
-   role: Community Lead
-   bio: "Nico takes a community-first approach in coordinating and expanding P2PU's Learning Circle program. From education through sport programs in Zambia to free schools in the storefronts of Toronto, Nico promotes learning just about anywhere. That is, anywhere but the lecture hall. Nico can usually be found biking around Kingston, Canada."
-   twitter: nicokoenig
-   
+ 
  - name: Qumisha Goss
    image: q.jpg
    role: Librarian in Residence
@@ -87,11 +81,14 @@ board:
 
 
 
-
-
-
 collaborators:
-
+ - name: Nico Koenig
+   image: nico.jpg
+   role: Community Lead
+   bio: "Nico is a facilitator and designer of participatory in-person and online workshops, and an organizer of adult learning initiatives. He trained, developed and facilitated many workshops for P2PU and 'coconut' and Canadian handshake will stay with us for a long time."
+   twitter: nicokoenig
+   url: https://nicokoenig.com/
+ 
  - name: Sharon Kennedy
    image: sharon.jpg
    role: Web developer
