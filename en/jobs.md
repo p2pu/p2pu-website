@@ -8,4 +8,4 @@ As an open source project, we invite contribution and collaboration from many an
 
 # Current Opportunities
 
-<p>None at the moment.</p>
+- [p2pu.org Website Redesign Project](./website-redesign/)
