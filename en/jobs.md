@@ -8,4 +8,4 @@ As an open source project, we invite contribution and collaboration from many an
 
 # Current Opportunities
 
-- [Website redesign contract](./website-redesign/)
+- [p2pu.org Website Redesign Project](./website-redesign/)
