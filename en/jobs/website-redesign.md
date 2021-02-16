@@ -2,7 +2,7 @@
 layout: naked-page
 title: p2pu.org Website Redesign Project
 ---
-Peer 2 Peer University (P2PU) is a grassroots non-profit organization that supports peer-learning communities in public spaces like libraries around the world. We focus on a pedagogical model we call **learning circles** : lightly-facilitated study groups that meet regularly to work through open-access learning resources. These groups have traditionally been held face-to-face in public spaces like libraries but have expanded to meeting online during the pandemic.
+Peer 2 Peer University (P2PU) is a grassroots non-profit organization that supports peer-learning communities in public spaces like libraries around the world. We focus on a pedagogical model we call **learning circles**: lightly-facilitated study groups that meet regularly to work through open-access learning resources. These groups have traditionally been held face-to-face in public spaces like libraries but have expanded to meeting online during the pandemic.
 
 Our organization has relied on grant and project funding to grow our offerings and global community. In 2021, we are transitioning our financial model towards a mix of consulting work and library memberships in order to focus our attention on building a robust and widely-accessible pedagogy.
 
@@ -12,7 +12,7 @@ To that end, P2PU is pursuing a full refresh of our marketing website—distinct
 
 We’re looking to hire an individual or small group who can support a full design process from strategy to wireframing to implementation. While our focus is on the immediate project, we’re also open to building a long-term working relationship with the right candidate.
 
-We aim to launch the updated website by May 2021. 
+You can be based anywhere in the world so long as you can meet between 12:00-15:00 UTC. We hope to start this project in early March and launch the updated website by May 2021.  Your primary contact will be the Production Lead, with input from the rest of our 4-person team.
 
 ## Deliverables
 
@@ -45,8 +45,6 @@ Ideal candidates should be able to demonstrate:
 - Experience working with Bootstrap or similar CSS frameworks
 - Familiarity with GitHub for version control
 
-
-Your primary contact will be the Production Lead, with input from the rest of our 4-person team.
 
 To apply, please reach out to [thepeople@p2pu.org](mailto:thepeople@p2pu.org) with “P2PU.org Redesign Project” in the subject line. We’re interested in your relevant experience, work examples, your pricing structure/rates, and any other information you can share about why you’re the right fit for this project. 
 
