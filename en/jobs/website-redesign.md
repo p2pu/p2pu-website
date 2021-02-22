@@ -6,7 +6,7 @@ Peer 2 Peer University (P2PU) is a grassroots non-profit organization that suppo
 
 Our organization has relied on grant and project funding to grow our offerings and global community. In 2021, we are transitioning our financial model towards a mix of consulting work and library memberships in order to focus our attention on building a robust and widely-accessible pedagogy.
 
-# What we’re looking for
+## What we’re looking for
 
 To that end, P2PU is pursuing a full refresh of our marketing website—distinct from our authenticated software tools—that can present a clear definition of learning circles, our organization’s services, and pipelines for different stakeholders to engage with our systems. We’re happy with our current [branding](https://github.com/p2pu/design/blob/master/brand-book/brandbook-v2.0.pdf) and [tone](https://github.com/p2pu/design/blob/master/README.md) and are looking to design/develop within those constraints, though we’re open to feedback or evolutions!
 
@@ -34,7 +34,7 @@ You can be based anywhere in the world so long as you can meet between 12:00-15:
 
 Our team has been deeply focused on this work for years which we know can make it hard to see it with fresh eyes. While we have lots of opinions and thoughts to share, we’re ultimately interested in your strategic input, both of the above process and effective outcomes. We’d love to hear how you’d tackle this project! 
 
-# Who we’re looking for
+## Who we’re looking for
 
 Ideal candidates should be able to demonstrate:
 - Reliable project management experience and skills
@@ -45,6 +45,6 @@ Ideal candidates should be able to demonstrate:
 - Experience working with Bootstrap or similar CSS frameworks
 - Familiarity with GitHub for version control
 
-
-To apply, please reach out to [thepeople@p2pu.org](mailto:thepeople@p2pu.org) with “P2PU.org Redesign Project” in the subject line. We’re interested in your relevant experience, work examples, your pricing structure/rates, and any other information you can share about why you’re the right fit for this project. 
+## To apply
+Please reach out to [thepeople@p2pu.org](mailto:thepeople@p2pu.org) with “P2PU.org Redesign Project” in the subject line. We’re interested in your relevant experience, work examples, your pricing structure/rates, and any other information you can share about why you’re the right fit for this project. 
 
