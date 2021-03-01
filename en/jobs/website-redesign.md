@@ -48,5 +48,5 @@ Ideal candidates should be able to demonstrate:
 - Familiarity with GitHub for version control
 
 ## To apply
-Please reach out to [thepeople@p2pu.org](mailto:jobs@p2pu.org) with “P2PU.org Redesign Project” in the subject line. We’re interested in your relevant experience, work examples, your pricing structure/rates, and any other information you can share about why you’re the right fit for this project. Applications will be accepted on a rolling basis until filled.
+Please reach out to [jobs@p2pu.org](mailto:jobs@p2pu.org) with “P2PU.org Redesign Project” in the subject line. We’re interested in your relevant experience, work examples, your pricing structure/rates, and any other information you can share about why you’re the right fit for this project. Applications will be accepted on a rolling basis until filled.
 
