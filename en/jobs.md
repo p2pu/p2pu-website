@@ -8,4 +8,4 @@ As an open source project, we invite contribution and collaboration from many an
 
 # Current Opportunities
 
-- [p2pu.org Website Redesign Project](./website-redesign/)
+- [p2pu.org Website Redesign Project](./website-redesign/) (Posted March 1, 2021)
