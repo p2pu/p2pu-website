@@ -7,7 +7,7 @@ on:
 jobs:
   terraform:
     name: "Terraform"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     outputs:
       s3_bucket: ${{ steps.s3_bucket_name.outputs.stdout }}
     steps:
