@@ -26,29 +26,33 @@ The number of facilitator profiles available in the rotation should be updated i
 
 All development should happen on a branch forked from master.
 
-### Requirements
-
-For development on your local workstation, you will need to setup Docker and Ruby. We recommend to either use  rbenv to manage Ruby versions.
+For development on your local workstation, you need Docker and docker-compose.
 
 ### Building the site
 
-Build the interactive components using webpack:
-
-```
-docker run --rm -it --volume `pwd`:/opt/app --workdir /opt/app node:lts-slim /bin/sh -c "npm install && npm run build"
-```
-
-Once this is done, run the following command to get the needed data from the site:
-
+Run the following command to get the needed data from the site:
 ```
 curl https://learningcircles.p2pu.org/api/teams/ -o ./_data/teams.json
 cat ./_data/teams.json | python3 script/team_pages.py
 ```
 
-Finally, build the jekyll site using:
+Install node deps:
+
 ```
-bundle install
-bundle exec jekyll server --watch --config _config.yml,_config.dev.yml
+docker-compose run --rm node npm i
+```
+
+Install ruby deps:
+
+```
+mkdir .bundler
+chown 1000:1000 .bundler
+docker-compose run --rm jekyll bundle install
+```
+
+Start the server and webpack
+```
+docker-compose up
 ```
 
 ### Overview
