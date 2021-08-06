@@ -26,14 +26,14 @@ The number of facilitator profiles available in the rotation should be updated i
 
 All development should happen on a branch forked from master.
 
-For development on your local workstation, you need Docker and docker-compose.
+For development on your local workstation, you need [Docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/)
 
 ### Building the site
 
 Run the following command to get the needed data from the site:
 ```
 curl https://learningcircles.p2pu.org/api/teams/ -o ./_data/teams.json
-cat ./_data/teams.json | python3 script/team_pages.py
+cat _data/teams.json | docker run -i --rm -v `pwd`:/opt/app -w /opt/app python:3-slim python3 _deploy/team_pages.py
 ```
 
 Install node deps:
