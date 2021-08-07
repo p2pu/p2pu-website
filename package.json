@@ -24,6 +24,7 @@
     "@babel/runtime": "^7.9.2",
     "assets-webpack-plugin": "^3.5.1",
     "axios": "^0.19.1",
+    "bootstrap": "^5.1.0",
     "jsonp": "^0.2.1",
     "moment": "^2.22.1",
     "moment-timezone": "^0.5.16",
