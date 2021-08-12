@@ -29,7 +29,7 @@
     "moment-timezone": "^0.5.16",
     "node-sass": "^4.14.1",
     "p2pu-components": "1.6.18",
-    "p2pu-theme": "^1.1.5",
+    "p2pu-theme": "file:p2pu-theme",
     "prop-types": "^15.7.2",
     "query-string": "^5.1.1",
     "rc-time-picker": "^3.3.1",
