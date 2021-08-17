@@ -195,7 +195,7 @@ bundles:
 		<div class="container px-4 py-md-5">
 			<div class="row align-items-center g-5 py-4 position-relative flex-lg-row-reverse">
 			
-				<h1 class="display-5 lh-sm mb-3">Join as a Team</h1>
+				<h1 class="display-5 lh-sm mb-3 col-md-7">Join as a Team</h1>
 				
 				<div class="col-md-5">
 					<img src="{{ site.baseurl }}/assets/images/dev/team.png" class="d-block img-fluid" alt="Team" loading="lazy">
@@ -220,159 +220,128 @@ bundles:
 	</section>
 
 
-
-
-
-
-
-
-
-
-	<section id="join" class="bg-pattern-gray py-5 cta-section">
-		<div class="container">
-
-	  	<div class="row">
-	      <div class="col-12 col-md-6" data-aos="fade-up">
-					<h2>Join a learning circle near you</h2>
-					<p class="large my-5">Learn things that matter to you with your neighbors. Learning circles generally meet for 2 hours a week for 6-8 weeks, and are free to attend.</p>
-			  </div>
-
-	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
-			    {% if site.data.testimonials.learners.size > 1 %}
-				    <div class="p2pu-slide-container slick-init">
-		    	{% else %}
-				    <div class="p2pu-slide-container">
-		    	{% endif %}
-						{% for testimonial in site.data.testimonials.learners %}
-							{% include testimonial.html testimonial=testimonial %}
-						{% endfor %}
-					</div>
-			  </div>
-		  </div>
-
-			<div class="row">
-				<div class="col-12" data-aos="zoom-in" data-aos-offset="200">
-					<div class="cta-button text-center">
-						<a href="/en/learning-circles/" class="btn p2pu-btn blue">Explore learning circles</a>
-						<div class="line"></div>
-					</div>
+	<section id="about" class="bg-cream">
+		<div class="container px-4 py-md-5 position-relative">
+			<div class="row align-items-center g-5 py-4">
+			
+				<h1 class="display-5 lh-sm mb-3 col-md-7">About P2PU</h1>
+	
+				<div class="col-md-10">
+					<p>Born out of the 2008 Cape Town Open Education Declaration, P2PU is a US-based non-profit organization that cultivates peer-learning communities in public spaces around the world. Since 2015, we have worked with libraries worldwide to realize our mission and vision through a methodology called learning circles.</p>
 				</div>
-		  </div>
-
-	  </div>
-	</section>
-
-
-	<section id="facilitate" class="bg-pattern-blue py-5 cta-section text-white">
-		<div class="container">
-
-	  	<div class="row">
-	      <div class="col-12 col-md-6" data-aos="fade-up">
-					<h2>Anybody can start their own learning circle</h2>
-					<p class="large my-5">We maintain software tools, facilitation resources, and a global community forum to help you succeed.</p>
-			  </div>
-
-
-	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
-			    {% if site.data.testimonials.facilitators.size > 1 %}
-				    <div class="p2pu-slide-container slick-init">
-		    	{% else %}
-				    <div class="p2pu-slide-container">
-		    	{% endif %}
-						{% for testimonial in site.data.testimonials.facilitators %}
-							{% include testimonial.html testimonial=testimonial %}
-						{% endfor %}
-					</div>
-			  </div>
-		  </div>
-
-			<div class="row">
-				<div class="col-12" data-aos="zoom-in" data-aos-offset="200">
-					<div class="cta-button text-center">
-						<a href="/en/facilitate/" class="btn p2pu-btn light">Facilitate a learning circle</a>
-						<div class="line light"></div>
-					</div>
+				
+				
+				
+				
+				  
+				<div class="col-12" data-aos="fade-up" data-aos-offset="200">
+					<div class="p2pu-slide-container slick-init">
+						  
+						<article class="slide">
+							<div class="testimonial-card">
+								<div class="quote">
+									<i class="fas fa-quote-left"></i>
+									<p class="">"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</p>
+									<i class="fas fa-quote-right"></i>
+								</div>
+								<div class="attribution">
+									<div class="image">
+									  <img src="/assets/images/testimonials/ramune.png" alt="Ramune">
+									</div>
+									<div class="text">
+									  <div class="name">Ramune</div>
+									  <div class="organization">Manager of Public Libraries Innovation Programme</div>
+									  <div class="organization">EIFL</div>
+									</div>
+								</div>
+							</div>
+							  
+						</article>
+						
+						<article class="slide">
+							<div class="testimonial-card">
+								<div class="quote">
+									<i class="fas fa-quote-left"></i>
+									<p class="">"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</p>
+									<i class="fas fa-quote-right"></i>
+								</div>
+								<div class="attribution">
+									<div class="image">
+									  <img src="/assets/images/testimonials/ramune.png" alt="Ramune">
+									</div>
+									<div class="text">
+									  <div class="name">Ramune</div>
+									  <div class="organization">Manager of Public Libraries Innovation Programme</div>
+									  <div class="organization">EIFL</div>
+									</div>
+								</div>
+							</div>
+							  
+						</article>
+						
+						<article class="slide">
+							<div class="testimonial-card">
+								<div class="quote">
+									<i class="fas fa-quote-left"></i>
+									<p class="">"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</p>
+									<i class="fas fa-quote-right"></i>
+								</div>
+								<div class="attribution">
+									<div class="image">
+									  <img src="/assets/images/testimonials/ramune.png" alt="Ramune">
+									</div>
+									<div class="text">
+									  <div class="name">Ramune</div>
+									  <div class="organization">Manager of Public Libraries Innovation Programme</div>
+									  <div class="organization">EIFL</div>
+									</div>
+								</div>
+							</div>
+							  
+						</article>
+						
+						<article class="slide">
+							<div class="testimonial-card">
+								<div class="quote">
+									<i class="fas fa-quote-left"></i>
+									<p class="">"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</p>
+									<i class="fas fa-quote-right"></i>
+								</div>
+								<div class="attribution">
+									<div class="image">
+									  <img src="/assets/images/testimonials/ramune.png" alt="Ramune">
+									</div>
+									<div class="text">
+									  <div class="name">Ramune</div>
+									  <div class="organization">Manager of Public Libraries Innovation Programme</div>
+									  <div class="organization">EIFL</div>
+									</div>
+								</div>
+							</div>
+							  
+						</article>
+				  
+				  	</div>
 				</div>
-		  </div>
-
-	  </div>
-	</section>
-
-	<section id="course" class="bg-pattern-gray py-5 cta-section">
-		<div class="container">
-
-	  	<div class="row">
-	      <div class="col-12 col-md-6" data-aos="fade-up">
-					<h2>Create a learning circle course</h2>
-					<p class="large my-5">We can help you adapt your expertise into learning circle materials, providing pathways for new communities to engage with topics that matter to you.</p>
-			  </div>
-
-        <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
-			    {% if site.data.testimonials.network.size > 1 %}
-				    <div class="p2pu-slide-container slick-init">
-		    	{% else %}
-				    <div class="p2pu-slide-container">
-		    	{% endif %}
-						{% for testimonial in site.data.testimonials.network %}
-							{% include testimonial.html testimonial=testimonial %}
-						{% endfor %}
-					</div>
-			  </div>
-		  </div>
-
-
-			<div class="row">
-				<div class="col-12">
-					<div class="cta-button text-center">
-						<a href="https://course-in-a-box.p2pu.org/" class="btn p2pu-btn blue" data-aos="zoom-in" data-aos-offset="200">Create or remix a course</a>
-						<div class="line"></div>
-					</div>
-				</div>
-		  </div>
-
-	  </div>
-	</section>
-
-
-	<section id="organize" class="bg-pattern-blue py-5 cta-section text-white">
-		<div class="container">
-
-	  	<div class="row">
-	      <div class="col-12 col-md-6" data-aos="fade-up">
-					<h2>Mobilize community-based learning</h2>
-					<p class="large my-5">We offer a variety of services to help you develop equitable, social learning experiences in your city or town.</p>
-			  </div>
-
-	      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-offset="200">
-	      	{% if site.data.testimonials.organizers.size > 1 %}
-				    <div class="p2pu-slide-container slick-init">
-		    	{% else %}
-				    <div class="p2pu-slide-container">
-		    	{% endif %}
-						{% for testimonial in site.data.testimonials.organizers %}
-							{% include testimonial.html testimonial=testimonial %}
-						{% endfor %}
-					</div>
-			  </div>
-		  </div>
-
-			<div class="row">
-				<div class="col-12" data-aos="zoom-in" data-aos-offset="200">
-					<div class="cta-button text-center">
-						<a href="/en/work-with-us/" class="btn p2pu-btn light">Work with us</a>
-						<div class="line light"></div>
-					</div>
-				</div>
-		  </div>
-
-	  </div>
-	</section>
-
-	<section id="community" data-aos="fade-up">
-		<div class="container">
-			<h2 className="bold">We are all teachers and learners</h2>
-			<p class="large my-4">Come join us on our <a href="https://community.p2pu.org/">community forum</a>.</p>
-			<div id="discourse-community"></div>
+				  
+				  
+				  
+	
+				<!--div class="col-12" data-aos="fade-up" data-aos-offset="200">
+					{% if site.data.testimonials.learners.size > 1 %}
+						<div class="p2pu-slide-container slick-init">
+					{% else %}
+						<div class="p2pu-slide-container">
+					{% endif %}
+							{% for testimonial in site.data.testimonials.learners %}
+								{% include testimonial.html testimonial=testimonial %}
+							{% endfor %}
+						</div>
+				  </div>
+			  </div-->
+				
+				
+			</div>
 		</div>
 	</section>
 
