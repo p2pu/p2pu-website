@@ -68,76 +68,164 @@ bundles:
 
 <main class="page-content">
 	
-	<section id="landing" style="background: url('{{ site.baseurl }}/assets/images/index/splash.jpg'); 	background-size: cover;">
-		<div class="container col-xxl-8 px-4 py-5">
-		<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-		  <div class="col-10 col-sm-8 col-lg-5">
-			<!--img src="{{ site.baseurl }}/assets/images/p2pu-logo.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"-->
-		  </div>
-		  <div class="col-lg-7">
-			<h1 class="display-3 fw-bold lh-sm mb-3 text-white">Welcome to <br>Peer 2 Peer University</h1>
-			<p class="text-white">Peer 2 Peer University is a grassroots network of people who believe that knowledge should be freely shared and learning is best done with others. Powered by a global community of dozens of libraries, thousands of volunteers, and a small core team, we build this vision with learning circles.</p>
-		  </div>
-		</div>
-		</div>
-	  </section>
-	
-	
-	
-	
-	<!--section id="landing">
-		<div class="header-text">
-			<div id="header-text-carousel">
-				<h1 className="bold centered">Master public speaking <br> in your neighbourhood, for free.</h1>
+	<section id="landing" class="bg-blue" style="background: url('{{ site.baseurl }}/assets/images/dev/splash.jpg'); background-size: cover;">
+		<div class="container px-4 py-md-5">
+			<div class="row align-items-center g-5 py-4">
+			
+				<div class="col-md-7">
+					<h1 class="display-3 fw-bold lh-sm mb-3 text-white">Welcome to <br>Peer 2 Peer University</h1>
+					<p class="text-white">Peer 2 Peer University is a global community of people who believe that knowledge should be freely shared and learning is best done with others. </p>
+				</div>
+				
+				<div class="col-md-5">
+					<!--img src="{{ site.baseurl }}/assets/images/p2pu-logo.png" class="d-block mx-md-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"-->
+				</div>
+				
 			</div>
-			<a data-scroll href="#learning-circles">
-				<button class="btn p2pu-btn dark">Learn more</button>
-			</a>
 		</div>
+	</section>
 
-		<div class="image-container">
-			<div class="lines">
-				<div class="bg-line blue"></div>
-				<div class="bg-line green"></div>
-				<div class="bg-line yellow"></div>
-				<div class="bg-line orange"></div>
-			</div>
-			<div class="video">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/bQqmIS7WQa8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-		</div>
-	</section-->
-
-	<section id="learning-circles">
+	<section id="learning-circles" class="bg-cream">
 		<div class="container">
 			<div class="header-text">
-				<h1 class="bold centered">Learning circles are free study groups for people who want to take online classes together and in-person.</h1>
+				<h1 class="bold centered">Learning circles are free facilitated study groups for people who want to learn with others.</h1>
 			</div>
 
 			<div class="overview">
 				<div class="container">
-					<div id="stats"></div>
+					<div class="stacked-numbers row">
+						<div class="col-6 col-md-3 card border-0">
+							<div class="icon">
+								<img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+							</div>
+							<h3>No expert required</h3>
+							<p>Facilitators support participants learning together, answering questions and sharing one another's' goals.</p>
+						</div>
+						
+						<div class="col-6 col-md-3 card border-0">
+							<div class="icon">
+								<img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+							</div>
+							<h3>Explore any topic.</h3>
+							<p>From job skills to civic action to passion projects: [use courses found freely on the internet, explore [the community;our guides], or create your own course.]</p>
+						</div>
+						
+						<div class="col-6 col-md-3 card border-0">
+							<div class="icon">
+								<img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+							</div>
+							<h3>Learn better together.</h3>
+							<p>Learning with others deepens understanding and builds relationships rooted in shared interests.</p>
+						</div>
+						
+						<div class="col-6 col-md-3 card border-0">
+							<div class="icon">
+								<img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+							</div>
+							<h3>Access for all.</h3>
+							<p>Bringing high-quality learning to public spaces like libraries lowers the barriers of education and creates space for more voices to share what they know.</p>
+						</div>
+					
+					<!--div id="stats"></div-->
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="map-section">
-	  <div class="container">
-	    <div id="global-map"></div>
-	  </div>
+	<section id="map-section" class="bg-cream-dark">
+		
+		<div id="global-map"></div>
+		<!--div class="map">
+			<img src="{{ site.baseurl }}/assets/images/dev/map.jpg" />
+		</div-->
+		
+		<div class="container">
+			<div class="px-4 py-5 my-5 text-center">
+				<h1 class="display-5 fw-bold">Join a Learning Circle</h1>
+				<div class="col-md-6 mx-auto">
+					<p class="lead mb-4">65 learning circles happening worldwide this week</p>
+					<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+			  	  		<button type="button" class="btn btn-primary btn-md px-4 gap-3">Explore Now</button>
+					</div>
+				</div>
+			</div>
+	    </div>
 	</section>
 
-  <section>
-  	<div class="container">
+	<!--section>
+		<div class="container">
 			<div class="row justify-content-end" data-aos="fade-up" data-aos-offset="100">
 			  <div class="col-12">
 	      	<h5 class="mt-0 mb-2">Upcoming meetings</h5>
 				</div>
-        <div id="meetings-feed"></div>
+	    <div id="meetings-feed"></div>
 			</div>
 		</div>
-  </section>
+	</section-->
+	
+	<section id="community" class="bg-cream">
+		<div class="container px-4 py-md-5 position-relative">
+			<div class="row align-items-center g-5 py-4">
+			
+				<h1 class="display-5 lh-sm mb-3 col-md-7">Join the Community</h1>
+
+				<div class="col-md-5">
+					<img src="{{ site.baseurl }}/assets/images/dev/community.png" class="d-block img-fluid" alt="Community" loading="lazy">
+				</div>
+
+				<div class="col-md-7">
+					<p>Anybody can use P2PU’s free resources to facilitate learning circles and contribute to a global community of individuals who seek to create an equitable, empowering, and liberating alternative to mainstream higher education. All you need is an account. </p>
+					<h3>Make a new account to:</h3>
+					<ul>
+						<li>Create learning circles	</li>
+						<li>Join P2PU-led public events</li>
+						<li>Participate in the community forum</li>
+						<li>Develop and contribute courses</li>
+						<li>Access facilitator resources and guides </li>
+					</ul>
+					<button type="button" class="d-flex btn btn-sm secondary p2pu-btn dark"">Create a Free Account</button>
+				</div>
+				
+				
+			</div>
+		</div>
+	</section>
+	
+	<section id="team" class="bg-cream-dark">
+		<div class="container px-4 py-md-5">
+			<div class="row align-items-center g-5 py-4 position-relative flex-lg-row-reverse">
+			
+				<h1 class="display-5 lh-sm mb-3">Join as a Team</h1>
+				
+				<div class="col-md-5">
+					<img src="{{ site.baseurl }}/assets/images/dev/team.png" class="d-block img-fluid" alt="Team" loading="lazy">
+				</div>
+				
+				<div class="col-md-7">
+					<p>Peer 2 Peer University is a global community of people who believe that knowledge should be freely shared and learning is best done with others. </p>
+					<p>Organizations interested in comprehensive learning circle support from P2PU can become a P2PU Team. As a team, you’ll get:</p>
+					<ul>
+						<li>Staff Professional Development</li>
+						<li>1:1 Support</li>
+						<li>Community-Powered OER Library</li>
+						<li>Software for Teams</li>
+						<li>Community of Practice</li>
+						<li>Discounted Additional Service</li>
+					</ul>
+					<button type="button" class="d-flex btn btn-sm secondary p2pu-btn dark"">Learn More</button>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
 
 
 	<section id="join" class="bg-pattern-gray py-5 cta-section">

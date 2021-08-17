@@ -1,3 +1,112 @@
+
+section#learning-circles {
+	.card{
+		.icon{
+			position: relative;
+			&:before{
+				content: "";
+				background-color: $p2pu-blue;
+				position: absolute;
+				width: 100%;	
+				height: 100%;
+			}
+			@at-root &:nth-of-type(2){
+				&:before{
+					background-color: $p2pu-green;
+				}
+			}
+			img{
+				position: relative;
+				max-height: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+section#map-section {
+	padding-top: 0;
+	position: relative;
+	
+	#global-map{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 0;
+	}
+	.container {
+		position: relative;
+		margin-bottom: $padding-sm;
+		
+	}
+}
+
+section#community{
+	@include media-breakpoint-up(md) {
+		.col-md-5{
+			position: absolute;
+			right: 0;
+		}
+	}
+}
+
+section#team {
+@include media-breakpoint-up(md) {
+	.col-md-5{
+			position: absolute;
+			left: 0;
+		}
+	}
+}
+
+
+
+
+
+
+/*
+#global-map {
+  height: 500px;
+  max-height: calc(100vh - 52px);
+}
+
+.marker {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $p2pu-blue;
+  cursor: pointer;
+}
+
+.marker-cluster {
+  &.marker-cluster-small {
+		background-color: transparentize($p2pu-green, 0.4);
+		> div {
+			background-color: transparentize($p2pu-green, 0.4);
+		}
+  }
+
+  &.marker-cluster-medium {
+		background-color: transparentize($p2pu-yellow, 0.4);
+		> div {
+			background-color: transparentize($p2pu-yellow, 0.4);
+		}
+  }
+
+  &.marker-cluster-large {
+		background-color: transparentize($p2pu-orange, 0.4);
+		> div {
+			background-color: transparentize($p2pu-orange, 0.4);
+		}
+  }
+}
+*/
+
+
+
+
 /*main {
 	background-color: $white;
 
