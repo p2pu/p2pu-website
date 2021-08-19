@@ -1,3 +1,5 @@
+<!-- TODO: get nav variables from YAML file -->
+
 <header class="fixed-top bg-light">
     <div class="container-lg">
       <div class="d-flex flex-wrap align-items-center">
@@ -12,7 +14,7 @@
             <button type="button" class="d-flex btn btn-sm secondary p2pu-btn orange">Create an Account</button>
           </div>
         </nav>
-        <!--button type="button" class="d-flex btn btn-sm secondary p2pu-btn dark" id="nav-account"></button> PULLS IN LOGIN LINK, ETC.) -->
+        <!--button type="button" class="d-flex btn btn-sm secondary p2pu-btn dark" id="nav-account"></button> TODO: PULLS IN LOGIN LINK, ETC. - do we ditch this or modify it somewhere?) -->
         
         <nav class="navbar mobile-styles">
           <button type="button" class="d-flex btn btn-sm secondary p2pu-btn dark"">Log In</button>
@@ -30,15 +32,14 @@
     <div class="container-lg d-flex flex-wrap justify-content-center">
       <nav class="col-12 col-md-auto py-0 ms-md-auto justify-content-center text-small navbar navbar-expand-md">
       
-        <div class="collapse navbar-nav navbar-collapse navbarNavDropdown">
+        <div class="collapse navbar-nav navbar-collapse navbarNavDropdown fs-4">
           <div class="dropdown nav-item">
             <a href="#" class="nav-link d-flex align-items-center mb-2 mb-md-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Explore Learning Circles</a>
-            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownNavLink" style="">
-              <li><a class="dropdown-item active" href="#" aria-current="page">Overview</a></li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
+              <li><a class="dropdown-item active" href="#" aria-current="page">Overview</a></li> <!-- TODO: automagically get active classes? -->
               <li><a class="dropdown-item" href="#">Inventory</a></li>
               <li><a class="dropdown-item" href="#">Customers</a></li>
               <li><a class="dropdown-item" href="#">Products</a></li>
-              <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Reports</a></li>
               <li><a class="dropdown-item" href="#">Analytics</a></li>
             </ul>
@@ -46,12 +47,10 @@
           
           <div class="dropdown nav-item">
             <a href="#" class="nav-link d-flex align-items-center mb-2 mb-md-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Knowledge Base</a>
-            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownNavLink" style="">
-              <li><a class="dropdown-item active" href="#" aria-current="page">Overview</a></li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
               <li><a class="dropdown-item" href="#">Inventory</a></li>
               <li><a class="dropdown-item" href="#">Customers</a></li>
               <li><a class="dropdown-item" href="#">Products</a></li>
-              <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Reports</a></li>
               <li><a class="dropdown-item" href="#">Analytics</a></li>
             </ul>
@@ -59,12 +58,10 @@
           
           <div class="dropdown nav-item">
             <a href="#" class="nav-link d-flex align-items-center mb-2 mb-md-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Community</a>
-            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownNavLink" style="">
-              <li><a class="dropdown-item active" href="#" aria-current="page">Overview</a></li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
               <li><a class="dropdown-item" href="#">Inventory</a></li>
               <li><a class="dropdown-item" href="#">Customers</a></li>
               <li><a class="dropdown-item" href="#">Products</a></li>
-              <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Reports</a></li>
               <li><a class="dropdown-item" href="#">Analytics</a></li>
             </ul>
@@ -72,12 +69,11 @@
           
           <div class="dropdown nav-item">
             <a href="#" class="nav-link d-flex align-items-center mb-2 mb-md-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownNavLink" style="">
+            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
               <li><a class="dropdown-item" href="learning-circles/">learning circles</a></li>
               <li><a class="dropdown-item" href="#">Inventory</a></li>
               <li><a class="dropdown-item" href="#">Customers</a></li>
               <li><a class="dropdown-item" href="#">Products</a></li>
-              <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Reports</a></li>
               <li><a class="dropdown-item" href="#">Analytics</a></li>
             </ul>
@@ -85,12 +81,10 @@
           
           <div class="dropdown nav-item">
             <a href="#" class="nav-link d-flex align-items-center mb-2 mb-md-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Help</a>
-            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownNavLink" style="">
-              <li><a class="dropdown-item active" href="#" aria-current="page">Overview</a></li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
               <li><a class="dropdown-item" href="#">Inventory</a></li>
               <li><a class="dropdown-item" href="#">Customers</a></li>
               <li><a class="dropdown-item" href="#">Products</a></li>
-              <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Reports</a></li>
               <li><a class="dropdown-item" href="#">Analytics</a></li>
             </ul>
@@ -101,7 +95,8 @@
     </div>
 </header>
 
-<!--header>
+<!-- TODO: keeping for reference - delete when done 
+header>
   <div class="px-3 py-2">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
