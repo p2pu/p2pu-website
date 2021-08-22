@@ -1,37 +1,41 @@
 
 section#learning-circles {
-	.card{
-		.icon{
-			position: relative;
-			&:before{
-				content: "";
-				background-color: $p2pu-blue;
-				position: absolute;
-				width: 80%;	
-				height: 80%;
-				top: 10%;
-				left: 10%;
-				border-radius: 50%;
-			}
-			img{
-				position: relative;
-				max-height: 100%;
-				max-width: 100%;
-			}
-		}
-		&:nth-of-type(2){
-			:before{
-				background-color: $p2pu-green;
-			}
-		}
-		&:nth-of-type(3){
-			:before{
-				background-color: $p2pu-yellow;
-			}
-		}
-		&:nth-of-type(4){
-			:before{
-				background-color: $p2pu-orange;
+	.container{
+		>.row{
+			>div{
+				.icon{
+					position: relative;
+					&:before{
+						content: "";
+						background-color: $p2pu-blue;
+						position: absolute;
+						width: 80%;	
+						height: 80%;
+						top: 10%;
+						left: 10%;
+						border-radius: 50%;
+					}
+					img{
+						position: relative;
+						max-height: 100%;
+						max-width: 100%;
+					}
+				}
+				&:nth-of-type(2){
+					:before{
+						background-color: $p2pu-green;
+					}
+				}
+				&:nth-of-type(3){
+					:before{
+						background-color: $p2pu-yellow;
+					}
+				}
+				&:nth-of-type(4){
+					:before{
+						background-color: $p2pu-orange;
+					}
+				}
 			}
 		}
 	}
@@ -79,86 +83,6 @@ section#about{
 		cursor: pointer;
 	}
 
-	.testimonial-card {
-		transition: all 0.4s ease-in-out;
-		display: flex;
-		flex-direction: column;
-		padding-top: $padding-sm;
-
-		.quote {
-			position: relative;
-
-			i {
-				font-size: 4em;
-				position: absolute;
-				opacity: 0.15;
-
-				&.fa-quote-right {
-					right: 0;
-					bottom: 0;
-				}
-			}
-
-			p {
-				padding: $padding-sm;
-
-				.image {
-					height: 100px;
-					width: 100px;
-					margin-right: $padding-sm;
-
-					img {
-						border-radius: 50%;
-						height: 100px;
-						width: 100px;
-					}
-				}
-
-				.text {
-					.name {
-						font-weight: 700;
-						padding-bottom: 6px;
-					}
-
-					.organization {
-						font-size: $font-size-sm;
-					}
-				}
-			}
-		}
-
-		.attribution {
-			display: flex;
-			align-items: center;
-			padding: $padding-sm;
-
-			.image {
-				height: 100px;
-				width: 100px;
-				margin-right: $padding-sm;
-				flex: 0 0 auto;
-
-				img {
-					border-radius: 50%;
-					height: 100%;
-					width: 100%;
-				}
-			}
-
-			.text {
-				flex: 1 1 auto;
-
-				.name {
-					font-weight: 700;
-					padding-bottom: 6px;
-				}
-
-				.organization {
-					font-size: $font-size-sm;
-				}
-			}
-		}
-	}
 }
 
 

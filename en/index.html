@@ -16,7 +16,7 @@ bundles:
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
 	rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	
@@ -71,71 +71,66 @@ bundles:
 
 <main class="page-content">
 	
-	<section id="landing" class="bg-blue" style="background: url('{{ site.baseurl }}/assets/images/dev/splash.jpg'); background-size: cover;">
+	<section id="landing" class="bg-blue d-flex" style="background: url('{{ site.baseurl }}/assets/images/dev/splash.jpg'); background-size: cover;">
 		<div class="container px-4 py-md-5">
 			<div class="row align-items-center g-5 py-4">
 			
 				<div class="col-md-7">
-					<h1 class="display-3 fw-bold lh-sm mb-3 text-white">Welcome to <br>Peer 2 Peer University</h1>
-					<p class="text-white">Peer 2 Peer University is a global community of people who believe that knowledge should be freely shared and learning is best done with others. </p>
+					<h1 class="display-4 fw-bold lh-base mb-3 text-white">Welcome to Peer 2 Peer University</h1>
+					<p class="text-white large">Peer 2 Peer University is a global community of people who believe that knowledge should be freely shared and learning is best done with others. </p>
 				</div>
 				
-				<div class="col-md-5">
-					<!--img src="{{ site.baseurl }}/assets/images/p2pu-logo.png" class="d-block mx-md-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"-->
-				</div>
+				<!--div class="col-md-5">
+					<img src="{{ site.baseurl }}/assets/images/p2pu-logo.png" class="d-block mx-md-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+				</div-->
 				
 			</div>
 		</div>
 	</section>
 
-	<section id="learning-circles" class="bg-cream">
-		<div class="container">
+	<section id="learning-circles" class="bg-cream d-flex">
+		<div class="container mb-5">
 			<div class="header-text">
-				<h1 class="display-5 centered">Learning circles are free facilitated study groups for people who want to learn with others.</h1>
+				<h2 class="lh-base mt-4">Learning circles are free facilitated study groups for people who want to learn with others.</h1>
 			</div>
-
-			<div class="overview">
-				<div class="container">
-					<div class="stacked-numbers row">
-						<div class="col-6 col-md-3 card border-0">
-							<div class="icon">
-								<img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
-							</div>
-							<h3>No expert required</h3>
-							<p>Facilitators support participants learning together, answering questions and sharing one another's' goals.</p>
-						</div>
-						
-						<div class="col-6 col-md-3 card border-0">
-							<div class="icon">
-								<img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
-							</div>
-							<h3>Explore any topic.</h3>
-							<p>From job skills to civic action to passion projects: [use courses found freely on the internet, explore [the community;our guides], or create your own course.]</p>
-						</div>
-						
-						<div class="col-6 col-md-3 card border-0">
-							<div class="icon">
-								<img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
-							</div>
-							<h3>Learn better together.</h3>
-							<p>Learning with others deepens understanding and builds relationships rooted in shared interests.</p>
-						</div>
-						
-						<div class="col-6 col-md-3 card border-0">
-							<div class="icon">
-								<img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
-							</div>
-							<h3>Access for all.</h3>
-							<p>Bringing high-quality learning to public spaces like libraries lowers the barriers of education and creates space for more voices to share what they know.</p>
-						</div>
-					
-					<!--div id="stats"></div-->
+			<div class="row text-center text-md-start">
+				<div class="col-12 col-md-3">
+					<div class="icon col-8 col-md-12 mx-auto">
+						<img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+					</div>
+					<h3 class="fs-4">No expert required</h3>
+					<p>Facilitators support participants learning together, answering questions and sharing one another's' goals.</p>
 				</div>
-			</div>
+				
+				<div class="col-12 col-md-3">
+					<div class="icon col-8 col-md-12 mx-auto">
+						<img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+					</div>
+					<h3 class="fs-4">Explore any topic.</h3>
+					<p>From job skills to civic action to passion projects: [use courses found freely on the internet, explore [the community;our guides], or create your own course.]</p>
+				</div>
+				
+				<div class="col-12 col-md-3">
+					<div class="icon col-8 col-md-12 mx-auto">
+						<img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+					</div>
+					<h3>Learn better together.</h3>
+					<p>Learning with others deepens understanding and builds relationships rooted in shared interests.</p>
+				</div>
+				
+				<div class="col-12 col-md-3">
+					<div class="icon col-8 col-md-12 mx-auto">
+						<img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+					</div>
+					<h3>Access for all.</h3>
+					<p>Bringing high-quality learning to public spaces like libraries lowers the barriers of education and creates space for more voices to share what they know.</p>
+				</div>
+			</div>	
+				<!--div id="stats"></div-->
 		</div>
 	</section>
 
-	<section id="map-section" class="bg-cream-dark">
+	<section id="map-section" class="bg-cream-dark d-flex">
 		
 		<div id="global-map"></div>
 		<!--div class="map">
@@ -148,7 +143,7 @@ bundles:
 				<div class="col-md-6 mx-auto">
 					<p class="lead mb-4">65 learning circles happening worldwide this week</p>
 					<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-			  	  		<button type="button" class="btn btn-primary btn-md px-4 gap-3">Explore Now</button>
+			  	  		<button type="button" class="d-flex my-5 mx-auto mx-md-0 btn p2pu-btn orange">Explore Now</button>
 					</div>
 				</div>
 			</div>
@@ -166,19 +161,19 @@ bundles:
 		</div>
 	</section-->
 	
-	<section id="community" class="bg-cream">
+	<section id="community" class="bg-cream d-flex">
 		<div class="container px-4 py-md-5 position-relative">
-			<div class="row align-items-center g-5 py-4">
+			<div class="row align-items-center mt-3 py-md-4">
 			
-				<h1 class="display-5 lh-sm mb-3 col-md-7">Join the Community</h1>
+				<h1 class="display-5 lh-sm mt-4 mb-0 mtcol-md-7">Join the Community</h1>
 
-				<div class="col-md-5">
+				<div class="col-md-5 mt-4 mb-0">
 					<img src="{{ site.baseurl }}/assets/images/dev/community.png" class="d-block img-fluid" alt="Community" loading="lazy">
 				</div>
 
-				<div class="col-md-7">
+				<div class="col-md-7 mt-4 mb-0 large">
 					<p>Anybody can use P2PU’s free resources to facilitate learning circles and contribute to a global community of individuals who seek to create an equitable, empowering, and liberating alternative to mainstream higher education. All you need is an account. </p>
-					<h3>Make a new account to:</h3>
+					<p class="bold pt-3">Make a new account to:</p>
 					<ul>
 						<li>Create learning circles	</li>
 						<li>Join P2PU-led public events</li>
@@ -186,7 +181,7 @@ bundles:
 						<li>Develop and contribute courses</li>
 						<li>Access facilitator resources and guides </li>
 					</ul>
-					<button type="button" class="d-flex btn btn-sm secondary p2pu-btn dark"">Create a Free Account</button>
+					<button type="button" class="d-flex my-5 mx-auto mx-md-0 btn p2pu-btn orange">Create a Free Account</button>
 				</div>
 				
 				
@@ -194,17 +189,18 @@ bundles:
 		</div>
 	</section>
 	
-	<section id="team" class="bg-cream-dark">
-		<div class="container px-4 py-md-5">
-			<div class="row align-items-center g-5 py-4 position-relative flex-lg-row-reverse">
+	
+	<section id="team" class="bg-cream-dark d-flex">
+		<div class="container px-4 py-md-5 position-relative">
+			<div class="row align-items-center mt-3 py-md-4 flex-lg-row-reverse">
 			
-				<h1 class="display-5 lh-sm mb-3 col-md-7">Join as a Team</h1>
+				<h1 class="display-5 lh-sm mt-4 mb-0 mtcol-md-7">Join as a Team</h1>
 				
-				<div class="col-md-5">
+				<div class="col-md-5 mt-4 mb-0">
 					<img src="{{ site.baseurl }}/assets/images/dev/team.png" class="d-block img-fluid" alt="Team" loading="lazy">
 				</div>
 				
-				<div class="col-md-7">
+				<div class="col-md-7 mt-4 mb-0 large">
 					<p>Peer 2 Peer University is a global community of people who believe that knowledge should be freely shared and learning is best done with others. </p>
 					<p>Organizations interested in comprehensive learning circle support from P2PU can become a P2PU Team. As a team, you’ll get:</p>
 					<ul>
@@ -215,17 +211,16 @@ bundles:
 						<li>Community of Practice</li>
 						<li>Discounted Additional Service</li>
 					</ul>
-					<button type="button" class="d-flex btn btn-sm secondary p2pu-btn dark"">Learn More</button>
+					<button type="button" class="d-flex my-5 mx-auto mx-md-0 btn p2pu-btn orange">Learn More</button>
 				</div>
 				
 			</div>
 		</div>
 	</section>
 
-
-	<section id="about" class="bg-cream">
+	<section id="about" class="bg-cream d-flex">
 		<div class="container px-4 py-md-5 position-relative">
-			<div class="row align-items-center g-5 py-4">
+			<div class="row align-items-center mt-3 py-md-4">
 			
 				<h1 class="display-5 lh-sm mb-3 col-md-7">About P2PU</h1>
 	
@@ -241,20 +236,20 @@ bundles:
 					<div class="p2pu-slide-container slick-init">
 						  
 						<article class="slide">
-							<div class="testimonial-card">
-								<div class="quote">
+							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
+								<div class="quote col-12 mb-md-5">
 									<i class="fas fa-quote-left"></i>
-									<p class="">"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</p>
+									<q>"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</q>
 									<i class="fas fa-quote-right"></i>
 								</div>
-								<div class="attribution">
-									<div class="image">
-									  <img src="/assets/images/testimonials/ramune.png" alt="Ramune">
+								<div class="attribution row mt-3">
+									<div class="image col-12 col-md-4 pe-md-0">
+									  <img class="mx-auto mx-md-0 px-md-0" src="/assets/images/testimonials/ramune.png" alt="Ramune">
 									</div>
-									<div class="text">
-									  <div class="name">Ramune</div>
-									  <div class="organization">Manager of Public Libraries Innovation Programme</div>
-									  <div class="organization">EIFL</div>
+									<div class="text col-12 col-md-8 text-center text-md-start">
+									  <span class="name bold">Ramune</span>
+									  <span class="position fst-italic small">Manager of Public Libraries Innovation Programme</span>
+									  <span class="organization small">EIFL</span>
 									</div>
 								</div>
 							</div>
@@ -262,20 +257,20 @@ bundles:
 						</article>
 						
 						<article class="slide">
-							<div class="testimonial-card">
-								<div class="quote">
+							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
+								<div class="quote col-12 mb-md-5">
 									<i class="fas fa-quote-left"></i>
-									<p class="">"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</p>
+									<q>"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</q>
 									<i class="fas fa-quote-right"></i>
 								</div>
-								<div class="attribution">
-									<div class="image">
-									  <img src="/assets/images/testimonials/ramune.png" alt="Ramune">
+								<div class="attribution row mt-3">
+									<div class="image col-12 col-md-4 pe-md-0">
+									  <img class="mx-auto mx-md-0 px-md-0" src="/assets/images/testimonials/ramune.png" alt="Ramune">
 									</div>
-									<div class="text">
-									  <div class="name">Ramune</div>
-									  <div class="organization">Manager of Public Libraries Innovation Programme</div>
-									  <div class="organization">EIFL</div>
+									<div class="text col-12 col-md-8 text-center text-md-start">
+									  <span class="name bold">Ramune</span>
+									  <span class="position fst-italic small">Manager of Public Libraries Innovation Programme</span>
+									  <span class="organization small">EIFL</span>
 									</div>
 								</div>
 							</div>
@@ -283,20 +278,20 @@ bundles:
 						</article>
 						
 						<article class="slide">
-							<div class="testimonial-card">
-								<div class="quote">
+							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
+								<div class="quote col-12 mb-md-5">
 									<i class="fas fa-quote-left"></i>
-									<p class="">"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</p>
+									<q>"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</q>
 									<i class="fas fa-quote-right"></i>
 								</div>
-								<div class="attribution">
-									<div class="image">
-									  <img src="/assets/images/testimonials/ramune.png" alt="Ramune">
+								<div class="attribution row mt-3">
+									<div class="image col-12 col-md-4 pe-md-0">
+									  <img class="mx-auto mx-md-0 px-md-0" src="/assets/images/testimonials/ramune.png" alt="Ramune">
 									</div>
-									<div class="text">
-									  <div class="name">Ramune</div>
-									  <div class="organization">Manager of Public Libraries Innovation Programme</div>
-									  <div class="organization">EIFL</div>
+									<div class="text col-12 col-md-8 text-center text-md-start">
+									  <span class="name bold">Ramune</span>
+									  <span class="position fst-italic small">Manager of Public Libraries Innovation Programme</span>
+									  <span class="organization small">EIFL</span>
 									</div>
 								</div>
 							</div>
@@ -304,20 +299,83 @@ bundles:
 						</article>
 						
 						<article class="slide">
-							<div class="testimonial-card">
-								<div class="quote">
+							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
+								<div class="quote col-12 mb-md-5">
 									<i class="fas fa-quote-left"></i>
-									<p class="">"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</p>
+									<q>"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</q>
 									<i class="fas fa-quote-right"></i>
 								</div>
-								<div class="attribution">
-									<div class="image">
-									  <img src="/assets/images/testimonials/ramune.png" alt="Ramune">
+								<div class="attribution row mt-3">
+									<div class="image col-12 col-md-4 pe-md-0">
+									  <img class="mx-auto mx-md-0 px-md-0" src="/assets/images/testimonials/ramune.png" alt="Ramune">
 									</div>
-									<div class="text">
-									  <div class="name">Ramune</div>
-									  <div class="organization">Manager of Public Libraries Innovation Programme</div>
-									  <div class="organization">EIFL</div>
+									<div class="text col-12 col-md-8 text-center text-md-start">
+									  <span class="name bold">Ramune</span>
+									  <span class="position fst-italic small">Manager of Public Libraries Innovation Programme</span>
+									  <span class="organization small">EIFL</span>
+									</div>
+								</div>
+							</div>
+							  
+						</article>
+						
+						<article class="slide">
+							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
+								<div class="quote col-12 mb-md-5">
+									<i class="fas fa-quote-left"></i>
+									<q>"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</q>
+									<i class="fas fa-quote-right"></i>
+								</div>
+								<div class="attribution row mt-3">
+									<div class="image col-12 col-md-4 pe-md-0">
+									  <img class="mx-auto mx-md-0 px-md-0" src="/assets/images/testimonials/ramune.png" alt="Ramune">
+									</div>
+									<div class="text col-12 col-md-8 text-center text-md-start">
+									  <span class="name bold">Ramune</span>
+									  <span class="position fst-italic small">Manager of Public Libraries Innovation Programme</span>
+									  <span class="organization small">EIFL</span>
+									</div>
+								</div>
+							</div>
+							  
+						</article>
+						
+						<article class="slide">
+							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
+								<div class="quote col-12 mb-md-5">
+									<i class="fas fa-quote-left"></i>
+									<q>"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</q>
+									<i class="fas fa-quote-right"></i>
+								</div>
+								<div class="attribution row mt-3">
+									<div class="image col-12 col-md-4 pe-md-0">
+									  <img class="mx-auto mx-md-0 px-md-0" src="/assets/images/testimonials/ramune.png" alt="Ramune">
+									</div>
+									<div class="text col-12 col-md-8 text-center text-md-start">
+									  <span class="name bold">Ramune</span>
+									  <span class="position fst-italic small">Manager of Public Libraries Innovation Programme</span>
+									  <span class="organization small">EIFL</span>
+									</div>
+								</div>
+							</div>
+							  
+						</article>
+						
+						<article class="slide">
+							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
+								<div class="quote col-12 mb-md-5">
+									<i class="fas fa-quote-left"></i>
+									<q>"Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."</q>
+									<i class="fas fa-quote-right"></i>
+								</div>
+								<div class="attribution row mt-3">
+									<div class="image col-12 col-md-4 pe-md-0">
+									  <img class="mx-auto mx-md-0 px-md-0" src="/assets/images/testimonials/ramune.png" alt="Ramune">
+									</div>
+									<div class="text col-12 col-md-8 text-center text-md-start">
+									  <span class="name bold">Ramune</span>
+									  <span class="position fst-italic small">Manager of Public Libraries Innovation Programme</span>
+									  <span class="organization small">EIFL</span>
 									</div>
 								</div>
 							</div>

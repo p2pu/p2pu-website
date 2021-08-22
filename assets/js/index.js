@@ -8,21 +8,29 @@
     var slider = $(this);
 
     slider.slick({
-      autoplay: true,
-      autoplaySpeed: 4000,
+      autoplay: false,
+      dots: true,
       pauseOnHover: true,
       swipe: true,
       focusOnSelect: true,
       infinite: true,
       slidesToShow: 3,
-      slidesToScroll: 1,
+      slidesToScroll: 3,
       nextArrow: '<span class="material-icons material-icons-outlined text-gray display-5">arrow_back_ios</span>',
       prevArrow: '<span class="material-icons material-icons-outlined text-gray display-5">arrow_forward_ios</span>',
       responsive: [
         {
-          breakpoint: 480,
+          breakpoint: 992,
           settings: {
-            pauseOnHover: false
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
           }
         },
       ]
