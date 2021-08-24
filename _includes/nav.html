@@ -1,17 +1,17 @@
 <!-- TODO: get nav variables from YAML file -->
 
-<header class="fixed-top bg-light">
-    <div class="container-lg">
+<header class="fixed-top bg-white shadow-sm border-bottom">
+    <div class="header-top container-lg">
       <div class="d-flex flex-wrap align-items-center">
         
-        <a class="order-1 d-flex align-items-center my-2 my-md-0 me-md-auto text-white text-decoration-none" href="{{ site.baseurl }}/{{ language }}/">
-          <img class="bi me-2 logo" src="{{ site.baseurl }}/assets/images/p2pu-logo.png" alt="P2PU logo">
+        <a class="order-1 d-flex align-items-center py-3 me-md-auto text-white text-decoration-none" href="{{ site.baseurl }}/{{ language }}/">
+          <img class="logo bi me-2 logo" src="{{ site.baseurl }}/assets/images/dev/logo.png" alt="P2PU logo">
         </a>
 
         <nav class="order-4 order-md-2 text-end navbar navbar-expand-md col-12 col-md">
           <div class="collapse navbar-collapse navbarNavDropdown justify-content-end">
-            <button type="button" class="d-flex btn btn-sm secondary p2pu-btn blue">Start a Team</button>
-            <button type="button" class="d-flex btn btn-sm secondary p2pu-btn orange">Create an Account</button>
+            <button type="button" class="d-flex btn btn-sm secondary p2pu-btn p2pu-btn-md blue">Start a Team</button>
+            <button type="button" class="d-flex btn btn-sm secondary p2pu-btn p2pu-btn-md orange">Create an Account</button>
           </div>
         </nav>
         <!--button type="button" class="d-flex btn btn-sm secondary p2pu-btn dark" id="nav-account"></button> TODO: PULLS IN LOGIN LINK, ETC. - do we ditch this or modify it somewhere?) -->
@@ -49,66 +49,41 @@
       </div>
     </div>
   </div>
-  <div class="px-3 border-bottom bg-cream">
+  <div class="header-bottom px-3 py-2 bg-cream">
     <div class="container-lg d-flex flex-wrap justify-content-center">
-      <nav class="col-12 col-md-auto py-0 ms-md-auto justify-content-center text-small navbar navbar-expand-md">
+      <nav class="col-12 col-md-auto py-0 ms-md-auto justify-content-center text-small navbar navbar-expand-md px-0 px-md-3">
       
-        <div class="collapse navbar-nav navbar-collapse navbarNavDropdown">
+        <div class="collapse navbar-nav navbar-collapse navbarNavDropdown align-items-stretch align-items-md-center">
           <div class="dropdown nav-item">
-            <a href="#" class="nav-link d-flex align-items-center mb-2 mb-md-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Explore Learning Circles</a>
+            <a href="#" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Explore Learning Circles</a>
+          </div>
+          
+          <div class="dropdown nav-item">
+            <a href="#" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Knowledge Base</a>
+          </div>
+          
+          <div class="dropdown nav-item">
+            <a href="#" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Community</a>
             <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
-              <li><a class="dropdown-item active" href="#" aria-current="page">Overview</a></li> <!-- TODO: automagically get active classes? -->
-              <li><a class="dropdown-item" href="#">Inventory</a></li>
-              <li><a class="dropdown-item" href="#">Customers</a></li>
-              <li><a class="dropdown-item" href="#">Products</a></li>
-              <li><a class="dropdown-item" href="#">Reports</a></li>
-              <li><a class="dropdown-item" href="#">Analytics</a></li>
+              <li><a class="dropdown-item" href="#">Learning Resources</a></li>
+              <li><a class="dropdown-item" href="#">Forums</a></li>
+              <li><a class="dropdown-item" href="#">Events</a></li>
             </ul>
           </div>
           
           <div class="dropdown nav-item">
-            <a href="#" class="nav-link d-flex align-items-center mb-2 mb-md-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Knowledge Base</a>
+            <a href="#" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">About</a>
             <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
-              <li><a class="dropdown-item" href="#">Inventory</a></li>
-              <li><a class="dropdown-item" href="#">Customers</a></li>
-              <li><a class="dropdown-item" href="#">Products</a></li>
-              <li><a class="dropdown-item" href="#">Reports</a></li>
-              <li><a class="dropdown-item" href="#">Analytics</a></li>
+              <li><a class="dropdown-item" href="#">About</a></li>
+              <li><a class="dropdown-item" href="#">Services</a></li>
+              <li><a class="dropdown-item" href="#">Jobs</a></li>
+              <li><a class="dropdown-item" href="#">Blog</a></li>
+              <li><a class="dropdown-item" href="#">Donate</a></li>
             </ul>
           </div>
           
           <div class="dropdown nav-item">
-            <a href="#" class="nav-link d-flex align-items-center mb-2 mb-md-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Community</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
-              <li><a class="dropdown-item" href="#">Inventory</a></li>
-              <li><a class="dropdown-item" href="#">Customers</a></li>
-              <li><a class="dropdown-item" href="#">Products</a></li>
-              <li><a class="dropdown-item" href="#">Reports</a></li>
-              <li><a class="dropdown-item" href="#">Analytics</a></li>
-            </ul>
-          </div>
-          
-          <div class="dropdown nav-item">
-            <a href="#" class="nav-link d-flex align-items-center mb-2 mb-md-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
-              <li><a class="dropdown-item" href="learning-circles/">learning circles</a></li>
-              <li><a class="dropdown-item" href="#">Inventory</a></li>
-              <li><a class="dropdown-item" href="#">Customers</a></li>
-              <li><a class="dropdown-item" href="#">Products</a></li>
-              <li><a class="dropdown-item" href="#">Reports</a></li>
-              <li><a class="dropdown-item" href="#">Analytics</a></li>
-            </ul>
-          </div>
-          
-          <div class="dropdown nav-item">
-            <a href="#" class="nav-link d-flex align-items-center mb-2 mb-md-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Help</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
-              <li><a class="dropdown-item" href="#">Inventory</a></li>
-              <li><a class="dropdown-item" href="#">Customers</a></li>
-              <li><a class="dropdown-item" href="#">Products</a></li>
-              <li><a class="dropdown-item" href="#">Reports</a></li>
-              <li><a class="dropdown-item" href="#">Analytics</a></li>
-            </ul>
+            <a href="#" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Help</a>
           </div>
         </div>
         
