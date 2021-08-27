@@ -12,11 +12,11 @@ extra_css:
 <div class="container line-height-small">
 	<div class="row justify-content-around align-items-start">
 		<div class="primary col-9">
-			<h2 class="border-bottom border-2">Foundation</h2>
-			<div class="col-lg-12 sg-section">
-				<div class="sg-display">
-					<h3 id="colors" class="mx-auto text-center text-uppercase"><u>colors</u></h3>
-					<section>
+			<section id="foundation">
+				<h2 class="border-bottom border-2">Foundation</h2>
+				<div id="colors">
+					<h3 class="text-uppercase">colors</h3>
+					<section class="row" id="brand-colors">
 						<h4>Brand Colors</h4>
 						<div class="sg-color sg-lg">
 							<span class="sg-color-swatch bg-yellow">
@@ -58,10 +58,10 @@ extra_css:
 								</span>
 							</span>
 						</div>
-					</section>
+					</section><!--/.brand-colors-->
 					
 
-					<section>
+					<section class="row" id="neutral-colors">
 						<h4>Neutral Colors</h4>
 						<div class="sg-color sg-lg">
 							<span class="sg-color-swatch bg-black">
@@ -143,10 +143,9 @@ extra_css:
 								</span>
 							</span>
 						</div>
-					</section>
+					</section><!--/.neutral-colors-->
 					
-
-					<section>
+					<section class="row" id="alert-colors">
 						<h4>Alert Colors</h4>
 						<div class="sg-color sg-lg">
 							<span class="sg-color-swatch bg-red-error">
@@ -168,49 +167,97 @@ extra_css:
 								</span>
 							</span>
 						</div>
+					</section><!--/.alert-colors-->
+					
+				</div><!--/#colors-->
+			
+			
+			
+				<div id="fonts">
+					<h3 class="text-uppercase">Fonts</h3>	
+					<section class="row" id="font-stacks">
+						<h4 class="text-uppercase">Font Stacks</h4>
+						<p class="display-6 sans-serif">"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;</p>
+						<p class="display-6 serif">"Merriweather", Georgia, Times, "Times New Roman", serif;</p>
+					</section><!--/.font-stacks-->
+
+				</div><!--/#fonts-->
+				
+			</section><!--/#foundation-->
+			
+			
+			
+			
+			<section id="base-styles">
+				<h2>Base Styles</h2>
+				
+				<div id="buttons">
+					<section>
+						<h4>buttons</h4>
+						<div>
+							<button type="button" class="btn p2pu-btn orange">Button Text</button>
+							<button type="button" class="btn p2pu-btn blue">Button Text</button>
+							<button type="button" class="btn p2pu-btn green">Button Text</button>
+							<button type="button" class="btn p2pu-btn gray">Button Text</button>
+						</div>
+						<div>
+							<button type="button" class="btn p2pu-btn secondary orange">Button Text</button>
+							<button type="button" class="btn p2pu-btn secondary blue">Button Text</button>
+							<button type="button" class="btn p2pu-btn secondary green">Button Text</button>
+							<button type="button" class="btn p2pu-btn secondary gray">Button Text</button>
+						</div>
+						<div>
+							<button type="button" class="btn p2pu-btn btn-sm orange">Button Text</button>
+							<button type="button" class="btn p2pu-btn btn-sm blue">Button Text</button>
+							<button type="button" class="btn p2pu-btn btn-sm green">Button Text</button>
+							<button type="button" class="btn p2pu-btn btn-sm gray">Button Text</button>
+						</div>
+						<div>
+							<button type="button" class="btn p2pu-btn btn-sm secondary orange">Button Text</button>
+							<button type="button" class="btn p2pu-btn btn-sm secondary blue">Button Text</button>
+							<button type="button" class="btn p2pu-btn btn-sm secondary green">Button Text</button>
+							<button type="button" class="btn p2pu-btn btn-sm secondary gray">Button Text</button>
+						</div>
 					</section>
-				</div><!--/.sg-display-->
-			</div><!--/.sg-section-->
-			
-			
-			<div class="col-lg-12 sg-section">
-				<div class="sg-display">
+				</div><!--/#buttons-->
+								
+				<div id="typography">
 					<h3 id="typography">typography</h3>
 					<span>for more options, go to <a href="https://getbootstrap.com/docs/5.1/content/typography/">
 						https://getbootstrap.com/docs/5.1/content/typography/</a>
 					</span>
-					<section>
-						<h4>Font Stacks</h4>
-						<p class="sg-font sans-serif">"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;</p>
-						<p class="sg-font serif">"Merriweather", Georgia, Times, "Times New Roman", serif;</p>
-					</section>
-					<section>
+
+					<section class="row" id="headings">
 						<h4>Headings</h4>
 						<span>.h1 through .h6 classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</span>
-						<h1>h1. Bootstrap heading</h1>
-						<h2>h2. Bootstrap heading</h2>
-						<h3>h3. Bootstrap heading</h3>
-						<h4>h4. Bootstrap heading</h4>
-						<h5>h5. Bootstrap heading</h5>
-						<h6>h6. Bootstrap heading</h6>
-					</section>
-					<section>
-						<h4>Display</h4>
-						<h1 class="display-1">Display 1</h1>
-						<h1 class="display-2">Display 2</h1>
-						<h1 class="display-3">Display 3</h1>
-						<h1 class="display-4">Display 4</h1>
-						<h1 class="display-5">Display 5</h1>
-						<h1 class="display-6">Display 6</h1>
-					</section>
-					<section>
+						<h1>H1 - Splash Header Title</h1>
+						<h1>H1 - Extra Large Title</h1>
+						<h1>H1 - Interior Page Title</h1>
+						<h2>H2 - Subtitle</h2>
+						<h3>h3 — Subtitle / Card Title</h3>
+						<h4>Form Label</h4>
+						<h4>FORM LABEL ALL CAPS / HANDBOOK TOC HEADER</h4>
+					</section><!--/#headings-->
+					
+					<section class="row" id="body-text">
+						<h4>Body Text</h4>
+						<p class="large col-12 col-md-4"><strong>Large Body Text </strong><br>
+						<a href="#">Text Link</a>, consectetur adipiscing elit. Cras dapibus vulputate diam eu pretium. Mauris elit orci, ultricies id fermentum vel, porta et eros. Vestibulum condimentum lectus in convallis feugiat. Sed vulputate fringilla felis. Aliquam ut arcu et dui feugiat scelerisque eu quis diam. Mauris placerat congue dui sit amet blandit. Phasellus condimentum libero vel velit auctor, sit amet tincidunt velit varius.</p>
+						<p class="col-12 col-md-4"><strong>Body Text </strong><br>
+						<a href="#">Text Link</a>, consectetur adipiscing elit. Cras dapibus vulputate diam eu pretium. Mauris elit orci, ultricies id fermentum vel, porta et eros. Vestibulum condimentum lectus in convallis feugiat. Sed vulputate fringilla felis. Aliquam ut arcu et dui feugiat scelerisque eu quis diam. Mauris placerat congue dui sit amet blandit. Phasellus condimentum libero vel velit auctor, sit amet tincidunt velit varius.</p>
+						<p class="small col-12 col-md-4"><strong>Small Body Text </strong><br>
+						<a href="#">Text Link</a>, consectetur adipiscing elit. Cras dapibus vulputate diam eu pretium. Mauris elit orci, ultricies id fermentum vel, porta et eros. Vestibulum condimentum lectus in convallis feugiat. Sed vulputate fringilla felis. Aliquam ut arcu et dui feugiat scelerisque eu quis diam. Mauris placerat congue dui sit amet blandit. Phasellus condimentum libero vel velit auctor, sit amet tincidunt velit varius.</p>
+					</section><!--#body-text-->
+					
+					<section class="row" id="lead">
 						<h4>Lead</h4>
 						<span>Make a paragraph stand out by adding .lead.</span>
 						<p class="lead">
 							  This is a lead paragraph. It stands out from regular paragraphs.
 							</p>
-					</section>
-					<section>
+					</section><!--/#lead-->
+					
+					<section class="row" id="inline-elements">
 						<h4>Inline text elements</h4>
 						<p>You can use the mark tag to <mark>highlight</mark> text.</p>
 						<p><del>This line of text is meant to be treated as deleted text.</del></p>
@@ -220,31 +267,13 @@ extra_css:
 						<p><small>This line of text is meant to be treated as fine print.</small></p>
 						<p><strong>This line rendered as bold text.</strong></p>
 						<p><em>This line rendered as italicized text.</em></p>
-					</section>
-				</div><!--/.sg-display-->
-			</div><!--/.sg-section-->
-			<h2>Base Styles</h2>
-			<div class="col-lg-12 sg-section">
-				<div class="sg-display">
-					<h3 id="buttons">buttons</h3>
-					<section>
-						<button type="button" class="btn btn-default">Default</button>
-						<button type="button" class="btn btn-primary">Primary</button>
-						<button type="button" class="btn btn-success">Success</button>
-						<button type="button" class="btn btn-info">Info</button>
-						<button type="button" class="btn btn-warning">Warning</button>
-						<button type="button" class="btn btn-danger">Danger</button>
-						<button type="button" class="btn btn-link">Link</button>
-					</section>
-				</div>
-			</div>
-		
-		
-		
-		
-		
-		
-		
+					</section><!--/#inline-elements-->
+
+					
+					
+				</div><!--/.sg-section typography-->
+			
+			</section><!--/#base-styles-->
 		
 		</div><!--/.primary-->
 			
@@ -258,66 +287,51 @@ extra_css:
 			
 			
 			
-			<!-- SIDEBAR -->
-			<div class="sidebar secondary order-first sticky-top flex-shrink-0 p-3 bg-white col-3">
-				<a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-				  <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-				  <span class="fs-5 fw-semibold">Collapsible</span>
-				</a>
-				<ul class="list-unstyled ps-0">
-				  <li class="mb-1">
-					<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-					  Foundation
-					</button>
-					<div class="collapse show" id="home-collapse" style="">
-					  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-						<li><a href="#colors" class="link-dark rounded">Colors</a></li>
-						<li><a href="#typography" class="link-dark rounded">Typography</a></li>
-					  </ul>
-					</div>
-				  </li>
-				  <li class="mb-1">
-					<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-					  Base STyles
-					</button>
-					<div class="collapse" id="dashboard-collapse">
-					  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-						<li><a href="#buttons" class="link-dark rounded">Buttons</a></li>
-						<li><a href="#" class="link-dark rounded">Weekly</a></li>
-						<li><a href="#" class="link-dark rounded">Monthly</a></li>
-						<li><a href="#" class="link-dark rounded">Annually</a></li>
-					  </ul>
-					</div>
-				  </li>
-				  <li class="mb-1">
-					<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-					  Orders
-					</button>
-					<div class="collapse" id="orders-collapse">
-					  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-						<li><a href="#" class="link-dark rounded">New</a></li>
-						<li><a href="#" class="link-dark rounded">Processed</a></li>
-						<li><a href="#" class="link-dark rounded">Shipped</a></li>
-						<li><a href="#" class="link-dark rounded">Returned</a></li>
-					  </ul>
-					</div>
-				  </li>
-				  <li class="border-top my-3"></li>
-				  <li class="mb-1">
-					<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-					  Account
-					</button>
-					<div class="collapse" id="account-collapse">
-					  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-						<li><a href="#" class="link-dark rounded">New...</a></li>
-						<li><a href="#" class="link-dark rounded">Profile</a></li>
-						<li><a href="#" class="link-dark rounded">Settings</a></li>
-						<li><a href="#" class="link-dark rounded">Sign out</a></li>
-					  </ul>
-					</div>
-				  </li>
-				</ul>
-			  </div>
+		<!-- SIDEBAR -->
+		<div class="sidebar secondary order-first sticky-top flex-shrink-0 p-3 bg-white col-3">
+			<a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+			  <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+			  <span class="fs-5 fw-semibold">Collapsible</span>
+			</a>
+			<ul class="list-unstyled ps-0">
+			  <li class="mb-1">
+				<span data-bs-toggle="collapse" data-bs-target="#foundation-collapse" aria-expanded="true">
+					<strong>Foundation</strong>
+				</span>
+				<div class="collapse show" id="foundation-collapse" style="">
+				  <ul class="btn-toggle-nav fw-normal pb-1 small">
+					<li><a href="#colors" class="link-dark rounded">Colors</a>
+						<ul>
+							<li><a href="#brand-colors">Brand Colors</a></li>
+							<li><a href="#brand-colors">Neutral Colors</a></li>
+							<li><a href="#brand-colors">Alert Colors</a></li>
+						</ul>
+					</li>
+					<li><a href="#fonts" class="link-dark rounded">Fonts</a></li>
+				  </ul>
+				</div>
+			  </li>
+			  <li class="mb-1">
+				<span data-bs-toggle="collapse" data-bs-target="#base-collapse" aria-expanded="false">
+					<strong>Base Styles</strong>
+				</span>
+				<div class="collapse" id="base-collapse">
+				  <ul class="btn-toggle-nav fw-normal pb-1 small">
+					<li><a href="#buttons" class="link-dark rounded">Buttons</a></li>
+					<li><a href="#typography" class="link-dark rounded">Typography</a>
+						<ul>
+							<li><a href="#headings">Headings</a></li>
+							<li><a href="#body-text">Body Text</a></li>
+							<li><a href="#lead">Lead</a></li>
+							<li><a href="#inline-elements">Inline Text Elements</a></li>
+						</ul>
+					</li>
+				  </ul>
+				</div>
+			  </li>
 			  
-		</div>
+			</ul>
+		  </div>
+		  
+	</div>
 </div>
