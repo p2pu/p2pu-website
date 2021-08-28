@@ -4,54 +4,62 @@ description: Learning circles are free in-person study groups for people who wan
 layout: search
 bundles:
   - search
+  
+extra_css:
+  - styles.css
 ---
 <section class="subheader">
   
   
-<div class="overview">
-  <div class="container">
-    <div class="stacked-numbers row p-md-5">
-      
-      <div class="col-6 col-md-3 card border-0 p-5">
+<div class="container">
+  <div class="row">
+    <div class="stacked-numbers col-12 col-lg-8 row">
+      <div class="col-6 col-md-3 card border-0 p-2">
         <div class="icon">
           <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
         </div>
-        <h3>Hosted by a facilitator</h3>
+        <h4 class="text-large">Hosted by a facilitator</h4>
         <p>(not a content expert)</p>
       </div>
       
-      <div class="col-6 col-md-3 card border-0 p-5">
+      <div class="col-6 col-md-3 card border-0 p-2">
         <div class="icon">
           <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
         </div>
-        <h3>Learn as a group</h3>
+        <h4 class="text-large">Learn as a group</h4>
         <p>(typically 4–12 people)</p>
       </div>
       
-      <div class="col-6 col-md-3 card border-0 p-5">
+      <div class="col-6 col-md-3 card border-0 p-2">
         <div class="icon">
           <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
         </div>
-        <h3>Meet regularly</h3>
+        <h4 class="text-large">Meet regularly</h4>
         <p>(in person or online)</p>
       </div>
       
-      <div class="col-6 col-md-3 card border-0 p-5">
+      <div class="col-6 col-md-3 card border-0 p-2">
         <div class="icon">
           <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
         </div>
-        <h3>Use dedicated learning materials</h3>
+        <h4 class="text-large">Use dedicated learning materials</h4>
         <p>(like an online course)</p>
       </div>
-
+      
   </div>
-</div>
-  
-  
-    <button type="button" class="btn p2pu-btn light with-outline ml-2" data-toggle="modal" data-target="#faqModal">
+  <div class="col-12 col-lg-4">
+    <button type="button" class="btn p2pu-btn orange ml-2" data-toggle="modal" data-target="#faqModal">
       Frequently Asked Questions
     </button>
-  </p>
+    <button type="link" class="btn p2pu-btn orange ml-2" href="#">
+      Start a Learning Circle
+    </button>
+
+  </div>
+  
+  
+    
+
   <div class="modal fade" id="faqModal" tabindex="-1" role="dialog" aria-labelledby="faqModalTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -89,5 +97,161 @@ bundles:
   </div>
 </section>
 <section class="search px-4">
+  
+  <!--TODO: for dev purposes only - kill before golive -->
+  <div class="search-results">
+    <div class="card-group row-cols-1 row-cols-md-2 row-cols-lg-3">
+      
+      <div class="col result-item">
+        <div class="card learning-circle">
+          <div class="card-image">
+            <img src="https://learningcircles.p2pu.org/media/workinggroup.2020-05-06-19_20_51.gif" alt="P2PU Monthly Facilitator Call" class="card-img-top">
+          </div>
+          <div class="card-body">
+            <p class="text-bold text-xsmall">Started June 9, 2021</p>
+            <h3 class="card-title">P2PU Monthly Facilitator Call</h3>
+            <p class="schedule">
+              <i class="material-icons">schedule</i>12:00 PM to 1:00 PM (EDT)
+            </p>
+            <p class="duration">
+              <i class="material-icons">today</i>
+              <span class="capitalize">13 meetings starting June 9, 2021</span>
+            </p>
+            <p class="city-country">
+              <i class="material-icons">place</i>Detroit
+            </p>
+            <p class="facilitator">
+              <i class="material-icons">face</i>Facilitated by Qumisha
+            </p>
+            <p class="location">
+              <i class="material-icons">store</i>Meeting at Online
+            </p>
+          </div>
+          <div class="card-footer">
+            <div class="actions">
+              <div class="primary-cta">
+                <button class="btn p2pu-btn btn-sm gray">Sign up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col result-item">
+        <div class="card learning-circle">
+          <div class="card-image">
+            <img src="https://learningcircles.p2pu.org/media/F0D1396A-7A3F-47E9-8CA6-F8BAAA0A9092.jpeg" class="card-img-top" alt="9 Conversations: A 9-week programme to help refugees planning to start a business in their new location">
+          </div>
+          <div class="card-body">
+            <p class="text-bold text-xsmall">Started June 9, 2021</p>
+            <h3 class="card-title">P2PU Monthly Facilitator Call</h3>
+            <p class="schedule">
+              <i class="material-icons">schedule</i>12:00 PM to 1:00 PM (EDT)
+            </p>
+            <p class="duration">
+              <i class="material-icons">today</i>
+              <span class="capitalize">13 meetings starting June 9, 2021</span>
+            </p>
+            <p class="city-country">
+              <i class="material-icons">place</i>Detroit
+            </p>
+            <p class="facilitator">
+              <i class="material-icons">face</i>Facilitated by Qumisha
+            </p>
+            <p class="location">
+              <i class="material-icons">store</i>Meeting at Online
+            </p>
+          </div>
+          <div class="card-footer">
+            <div class="actions">
+              <div class="primary-cta">
+                <button class="btn p2pu-btn btn-sm gray">Sign up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col result-item">
+        <div class="card learning-circle">
+          <div class="card-image">
+            <img src="https://learningcircles.p2pu.org/media/EmbroideryKit_nFnAQhV.jpg" class="card-img-top" alt="Embroidery 101">
+          </div>
+          <div class="card-body">
+            <p class="text-bold text-xsmall">Started June 9, 2021</p>
+            <h3 class="card-title">P2PU Monthly Facilitator Call</h3>
+            <p class="schedule">
+              <i class="material-icons">schedule</i>12:00 PM to 1:00 PM (EDT)
+            </p>
+            <p class="duration">
+              <i class="material-icons">today</i>
+              <span class="capitalize">13 meetings starting June 9, 2021</span>
+            </p>
+            <p class="city-country">
+              <i class="material-icons">place</i>Detroit
+            </p>
+            <p class="facilitator">
+              <i class="material-icons">face</i>Facilitated by Qumisha
+            </p>
+            <p class="location">
+              <i class="material-icons">store</i>Meeting at Online
+            </p>
+          </div>
+          <div class="card-footer">
+            <div class="actions">
+              <div class="primary-cta">
+                <button class="btn p2pu-btn btn-sm gray">Sign up</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="search-results row grid">
+  <div class="result-item grid-item p2pu-green col-md-4 col-md-4 my-3">
+    <div class="card" role="button" tabindex="0">
+      <div class="status-tag minicaps bold">In progress</div>
+      <div class="card-title mb-0">
+        <h4 class="title">P2PU Monthly Facilitator Call</h4>
+      </div>
+      <div class="card-body">
+        <p class="start-date bold m-0">Started June 9, 2021</p>
+      </div>
+      <div class="card-body">
+        <div class="image-container mb-2">
+          <div class="square"></div>
+          <div class="circle"></div>
+          <div class="image">
+            <img src="https://learningcircles.p2pu.org/media/workinggroup.2020-05-06-19_20_51.gif" alt="P2PU Monthly Facilitator Call">
+          </div>
+        </div>
+        <p class="schedule">
+          <i class="material-icons">schedule</i>12:00 PM to 1:00 PM (EDT)
+        </p>
+        <p class="duration">
+          <i class="material-icons">today</i>
+          <span class="capitalize">13 meetings starting June 9, 2021</span>
+        </p>
+        <p class="city-country">
+          <i class="material-icons">place</i>Detroit
+        </p>
+        <p class="facilitator">
+          <i class="material-icons">face</i>Facilitated by Qumisha
+        </p>
+        <p class="location">
+          <i class="material-icons">store</i>Meeting at Online
+        </p>
+        <div class="actions">
+          <div class="primary-cta">
+            <button class="btn p2pu-btn transparent">Sign up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
   <div id="search-lc-component" data-api-origin="{{site.default_base_api_endpoint}}"></div>
 </section>
