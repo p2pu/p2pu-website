@@ -1,0 +1,60 @@
+.card.learning-circle{
+	padding: 0 !important;
+	border-top: 6px solid $gray!important;
+	.status-tag {
+		position: absolute;
+		right: 0px!important;
+		top: 0px!important;
+		background: $gray;
+		padding: 0px 10px 4px !important;
+		letter-spacing: .5px;
+		border: 0 !important;
+		font-size: $font-size-sm;
+		font-size: 12px;
+		font-size: $small-font-size;
+		font-size: $xsmall-font-size;
+	}
+	&.p2pu-orange{
+		border-top: 6px solid $p2pu-orange!important;
+		.status-tag {
+			background: $p2pu-orange;
+		}
+	}
+	&.p2pu-blue{
+		border-top: 6px solid $p2pu-blue!important;
+		.status-tag {
+			background: $p2pu-blue;
+		}
+	}
+	&.p2pu-green{
+		border-top: 6px solid $p2pu-green!important;
+		.status-tag {
+			background: $p2pu-green;
+		}
+	}
+	.card-image{
+		width: 100%;
+		height: 145px;
+		overflow: hidden;
+		img{
+			object-fit: cover;
+			height: 100%;	
+			width: 100%;
+		}
+	}
+	.card-body{
+		padding: 20px;
+		.card-title {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.card-footer {
+		padding: 20px;
+		background-color: transparent;
+		border-top: none;
+		.actions .primary-cta .p2pu-btn.btn-sm{
+			align-items: center;
+		}
+	}
+}

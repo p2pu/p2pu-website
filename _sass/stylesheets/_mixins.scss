@@ -1,0 +1,18 @@
+@mixin flex-column-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin circle-cta {
+  @include flex-column-centered;
+  height: 200px;
+  width: 200px;
+  background: $p2pu-light-blue;
+  border-radius: 50%;
+  text-align: center;
+  padding: $padding-sm;
+  color: $gray-darker;
+}
+
