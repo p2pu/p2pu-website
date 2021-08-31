@@ -101,8 +101,13 @@ bundles:
     
     
     <div class="col-12 col-md-5">
-      <label for="search-input" class="form-label">Search</label>
-      <input type="search" class="form-control search-input" id="search-input" placeholder="Keyword, organization, facilitator, etc..." value="">
+      
+      <div class="input-group">
+        <label for="search-input" class="form-label">Search</label>
+        <input id="search-input" type="search" class="form-control search-input" placeholder="Keyword, organization, facilitator, etc..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <span class="input-group-text" id="basic-addon2"><i class="material-icons">search</i></span>
+      </div>
+      
     </div>
 
     <div class="col-12 col-md-7 filters-container">
