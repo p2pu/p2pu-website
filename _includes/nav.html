@@ -52,8 +52,27 @@
   <div class="header-bottom px-3 py-2 bg-cream-dark">
     <div class="container-lg d-flex flex-wrap justify-content-center">
       <nav class="col-12 col-md-auto py-0 ms-md-auto justify-content-center text-small navbar navbar-expand-md px-0 px-md-3">
-      
         <div class="collapse navbar-nav navbar-collapse navbarNavDropdown align-items-stretch align-items-md-center">
+{% for link in site.data.navigation.top_level %}
+          <div class="dropdown nav-item">
+            <a href="{{ link.url }}" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" {% if link.external %}  target="_blank" {% endif %} > {{ link.text }}</a>
+{% if link.submenu %}
+            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">      
+{% endif %}
+
+{% for sub_link in link.submenu %}
+              <li><a class="dropdown-item" href="{{ sub_link.url }}" {% if link.external %}  target="_blank" {% endif %}>{{ sub_link.text }}</a></li>
+{% endfor %}
+{% if link.submenu %}
+            </ul>    
+{% endif %}
+        </div>
+{% endfor %}        
+        
+        
+        
+        
+      <!-- 
           <div class="dropdown nav-item">
             <a href="#" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Explore Learning Circles</a>
           </div>
@@ -85,42 +104,9 @@
           <div class="dropdown nav-item">
             <a href="#" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Help</a>
           </div>
-        </div>
-        
+ --> 
+        </div>       
       </nav>
     </div>
 </header>
 
-<!-- TODO: keeping for reference for pulling in YAML values - delete when done 
-        <!--
-        {% for link in site.data.navigation.top_level %}
-        {% if link.external %}
-        <a class="nav-link" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
-        {% else %}
-        <a class="nav-link" href="{{ link.url }}">
-        {% endif %}
-          <div class="menu-item">
-            <span class="text">{{ link.text }}
-              {% if link.external %}
-                <i class="material-icons ml-1" style="font-size: inherit; line-height: inherit; vertical-align: top;">open_in_new</i>
-              {% endif %}
-            </span>
-          </div>
-        </a>
-        {% for sub_link in link.submenu %}
-        {% if link.external %}
-        <a href="{{ sub_link.url }}" class="class="nav-link"" target="_blank" rel="noopener noreferrer">
-        {% else %}
-        <a href="{{ sub_link.url }}" class="class="nav-link"">
-        {% endif %}
-          <div class="menu-item submenu">
-            <span class="text">{{ sub_link.text }}
-              {% if sub_link.external %}
-                <i class="material-icons ml-1" style="font-size: inherit; line-height: inherit; vertical-align: top;">open_in_new</i>
-              {% endif %}
-            </span>
-          </div>
-        </a>
-      {% endfor %}
-      {% endfor %}
-      -->
