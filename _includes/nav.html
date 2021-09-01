@@ -55,21 +55,20 @@
         <div class="collapse navbar-nav navbar-collapse navbarNavDropdown align-items-stretch align-items-md-center">
 {% for link in site.data.navigation.top_level %}
           <div class="dropdown nav-item">
-            <a href="{{ link.url }}" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" {% if link.external %}  target="_blank" {% endif %} > {{ link.text }}</a>
+            <a href="{{ link.url }}" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle {% if link.external %} external {% endif %}" {% if link.submenu %} data-bs-toggle="dropdown" {% endif %} aria-expanded="false" {% if link.external %}  target="_blank" {% endif %} > {{ link.text }}</a>
 {% if link.submenu %}
             <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">      
 {% endif %}
 
 {% for sub_link in link.submenu %}
-              <li><a class="dropdown-item" href="{{ sub_link.url }}" {% if link.external %}  target="_blank" {% endif %}>{{ sub_link.text }}</a></li>
+              <li><a class="dropdown-item {% if link.external %} external {% endif %}" href="{{ sub_link.url }}" {% if link.external %}  target="_blank" {% endif %}>{{ sub_link.text }}</a></li>
 {% endfor %}
 {% if link.submenu %}
             </ul>    
 {% endif %}
         </div>
 {% endfor %}        
-        
-        
+                
            
       <!-- 
           <div class="dropdown nav-item">
