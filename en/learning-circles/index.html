@@ -8,90 +8,89 @@ bundles:
 <section class="subheader">
   
   
-<div class="container">
-  <div class="row">
-    <div class="stacked-numbers col-12 col-lg-8 row">
-      <div class="col-6 col-md-3 card bg-transparent border-0 p-2">
-        <div class="icon">
-          <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
-        </div>
-        <h4 class="text-large">Hosted by a facilitator</h4>
-        <p>(not a content expert)</p>
-      </div>
+  <div class="container">
+    <div class="row">
       
-      <div class="col-6 col-md-3 card bg-transparent border-0 p-2">
-        <div class="icon">
-          <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+      <div class="row text-center text-md-start dot-quad g-4 col-12 col-lg-8">
+        
+        <div class="col-12 col-md-3">
+          <div class="icon col-8 col-md-12 mx-auto">
+            <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+          </div>
+          <h4>Hosted by a facilitator</h4>
+          <p>(not a content expert)</p>
         </div>
-        <h4 class="text-large">Learn as a group</h4>
-        <p>(typically 4–12 people)</p>
-      </div>
-      
-      <div class="col-6 col-md-3 card bg-transparent border-0 p-2">
-        <div class="icon">
-          <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
-        </div>
-        <h4 class="text-large">Meet regularly</h4>
-        <p>(in person or online)</p>
-      </div>
-      
-      <div class="col-6 col-md-3 card bg-transparent border-0 p-2">
-        <div class="icon">
-          <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
-        </div>
-        <h4 class="text-large">Use dedicated learning materials</h4>
-        <p>(like an online course)</p>
-      </div>
-      
-  </div>
   
-  <div class="col-12 col-lg-4">
-    <button type="button" class="btn p2pu-btn orange ml-2" data-bs-toggle="modal" data-bs-target="#faqModal">
-      FAQ
-    </button>
-    <button type="link" class="btn p2pu-btn orange ml-2" href="#">
-      Start a Learning Circle
-    </button>
-
+        <div class="col-12 col-md-3">
+          <div class="icon col-8 col-md-12 mx-auto">
+            <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+          </div>
+          <h4 class="">Learn as a group</h4>
+          <p>(typically 4–12 people)</p>
+        </div>
+      
+        <div class="col-12 col-md-3">
+          <div class="icon col-8 col-md-12 mx-auto">
+            <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+          </div>
+          <h4 class="">Meet regularly</h4>
+          <p>(in person or online)</p>
+        </div>
+        
+        <div class="col-12 col-md-3">
+          <div class="icon col-8 col-md-12 mx-auto">
+            <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+          </div>
+          <h4 class="">Use dedicated learning materials</h4>
+          <p>(like an online course)</p>
+        </div>
+  
+      </div>
+  
+      <div class="col-12 col-lg-4">
+        <button type="button" class="btn p2pu-btn orange ml-2" data-bs-toggle="modal" data-bs-target="#faqModal">FAQ</button>
+        <button type="link" class="btn p2pu-btn orange ml-2" href="#">Start a Learning Circle</button>
+  
+      </div>
+    </div>
   </div>
 
   <div class="modal fade" id="faqModal" tabindex="-1" role="dialog" aria-labelledby="faqModalTitle" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header px-4">
-            <h3 class="modal-title" id="faqModalTitle">Learning Circles FAQ</h3>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body px-4">
-            <div class="row">
-              <div class="col-12">
-                <div class="accordion">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header px-4">
+          <h3 class="modal-title" id="faqModalTitle">Learning Circles FAQ</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body px-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="accordion">
                 {% for item in site.data.learning_circles_faq %}
-                    <div class="accordion-item">
-                      <div class="heading">
-                        <label id="section-{{forloop.index}}" class="text-bold text-large mb-2">{{ item.question }}</label>
-                        <a class="show-content"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                        <a class="hide-content"><i class="fa fa-minus" aria-hidden="true"></i></a>
-                      </div>
-                      <div class="content" aria-labelledby="section-{{forloop.index}}">
-                      {{ item.answer }}
-                      </div>
-                    </div>
-                {% endfor %}
+                <div class="accordion-item">
+                  <div class="heading">
+                    <label id="section-{{forloop.index}}" class="text-bold text-large mb-2">{{ item.question }}</label>
+                    <a class="show-content"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    <a class="hide-content"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                  </div>
+                  <div class="content" aria-labelledby="section-{{forloop.index}}">
+                  {{ item.answer }}
                 </div>
               </div>
+              {% endfor %}
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn p2pu-btn dark" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn p2pu-btn dark" data-bs-dismiss="modal">Close</button>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
   
   
-  <section class="search container">
+<section class="search container">
   
 
         
@@ -114,7 +113,7 @@ bundles:
         <div class="bg-white shadow col-12 col-md-7">
           <form class="p-4 mb-3 filter">
             <label for="search-input" class="form-label">Filter</label>
-            <div class="input-group">
+            <div class="input-group-md">
               <span>Within</span>
               <select class="form-select" aria-label="Default select example">
                 <option selected>1</option>
