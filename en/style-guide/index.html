@@ -289,43 +289,49 @@ extra_css:
 				
 				<section id="inputs">
 					<h3>Inputs</h3>
-					<div class="input-group">
-						<label for="search-input" class="form-label col-12">Search</label>
-						<input id="search-input" type="search" class="form-control search-input" placeholder="Keyword, organization, facilitator, etc..." aria-label="Recipient's username" aria-describedby="basic-addon2">
-						<span class="input-group-text" id="basic-addon2"><i class="material-icons">search</i></span>
-					</div>
-					<input type="text" class="form-control" placeholder="Text input">
-					<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+					<form class="bg-white p-4 mb-3">
+						<label for="search-input" class="form-label">Search</label>
+						<div class="input-group">
+							<input id="search-input" type="search" class="form-control search-input" placeholder="Keyword, organization, facilitator, etc..." aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+							<span class="input-group-text" id="basic-addon2"><i class="material-icons">search</i></span>
+						</div>
+					</form>
+					<form class="bg-white p-4 mb-3">
+						<input type="text" class="form-control" placeholder="Text input">
+					</form>
+					<form class="search-form bg-white p-4 mb-3">
+						<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+					</form>
+					<!--
 					<input class="form-control input-lg" type="text" placeholder=".input-lg">
 					<input class="form-control" type="text" placeholder="Default input">
 					<input class="form-control input-sm" type="text" placeholder=".input-sm">
-					<div class="row">
-					  <div class="col-xs-2">
-						<input type="text" class="form-control" placeholder=".col-xs-2">
-					  </div>
-					  <div class="col-xs-3">
-						<input type="text" class="form-control" placeholder=".col-xs-3">
-					  </div>
-					  <div class="col-xs-4">
-						<input type="text" class="form-control" placeholder=".col-xs-4">
-					  </div>
-					</div>
-					<div class="form-group has-success has-feedback">
-					  <label class="control-label" for="inputSuccess2">Input with success</label>
-					  <input type="text" class="form-control" id="inputSuccess2">
-					  <span class="glyphicon glyphicon-ok form-control-feedback"></span>
-					</div>
-					<div class="form-group has-warning has-feedback">
-					  <label class="control-label" for="inputWarning2">Input with warning</label>
-					  <input type="text" class="form-control" id="inputWarning2">
-					  <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
-					</div>
-					<div class="form-group has-error has-feedback">
-					  <label class="control-label" for="inputError2">Input with error</label>
-					  <input type="text" class="form-control" id="inputError2">
-					  <span class="glyphicon glyphicon-remove form-control-feedback"></span>
-					</div>
-					<textarea class="form-control" rows="3"></textarea>
+				
+					<form class="bg-white p-4 mb-3">
+						<div class="form-group has-success has-feedback">
+						  <label class="control-label" for="inputSuccess2">Input with success</label>
+						  <input type="text" class="form-control" id="inputSuccess2">
+						  <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+						</div>
+					</form>
+					<form class="bg-white p-4 mb-3">
+						<div class="form-group has-warning has-feedback">
+						  <label class="control-label" for="inputWarning2">Input with warning</label>
+						  <input type="text" class="form-control" id="inputWarning2">
+						  <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+						</div>
+					</form>
+					<form class="bg-white p-4 mb-3">
+						<div class="form-group has-error has-feedback">
+						  <label class="control-label" for="inputError2">Input with error</label>
+						  <input type="text" class="form-control" id="inputError2">
+						  <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+						</div>
+					</form>
+					-->
+					<form class="bg-white p-4 mb-3">
+						<textarea class="form-control" rows="3" placeholder="text area"></textarea>
+					</form>
 				</section>
 				<section id="checkboxes">
 					<h3>Checkboxes</h3>
