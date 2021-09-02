@@ -74,7 +74,7 @@ text: |
   		},
   		{
           	"@type": "Country",
-    		"sameAs": "https://www.wikidata.org/wiki/Q19464773",
+    		"sameAs": "https://www.wikidata.org/wiki/Q258",
           	"name": "South Africa"
   		}
 
