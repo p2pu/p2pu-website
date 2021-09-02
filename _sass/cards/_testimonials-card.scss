@@ -1,0 +1,21 @@
+.card-testimonial{
+	border-top: 10px solid;
+	transition: all 0.4s ease-in-out;
+	.quote {
+		position: relative;
+	}
+	.attribution {
+		.image {
+			img {
+				border-radius: 50%;
+				max-height: 100px;
+				max-width: 100px;
+				height: auto;
+				width: 100%;
+			}
+		}
+		span{
+			display: block;
+		}
+	}
+}	

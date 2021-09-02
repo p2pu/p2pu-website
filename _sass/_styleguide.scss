@@ -9,6 +9,14 @@
 /* -------------------------------------------------------------------------
  Layout
 ---------------------------------------------------------------------------- */
+.container{
+  margin-left: 0;
+  max-width: 93%;
+  @media (min-width: map-get($grid-breakpoints, "xxl")) {
+    max-width: calc(1180px - 8%);
+  }
+}
+
 .sidebar{
 	top: $navbar-height;
 }
