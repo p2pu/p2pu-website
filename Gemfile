@@ -4,7 +4,6 @@
 
 source 'https://rubygems.org'
 
-gem 's3_website'
 gem "liquid-c"
 
 group :jekyll_plugins do
