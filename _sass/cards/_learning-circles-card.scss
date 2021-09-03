@@ -24,19 +24,19 @@
 			padding: 0;
 			border: 0;
 		}
-		.card-body{
-			padding: 0;
-			color: inherit;
+		.card-header{
 			.card-title{
 				padding-left: 0;
 				padding-right: 0;
 			}
 		}
-	}
-	
-	// end
-	
-	.card.learning-circle{
+		.card-body{
+			padding: 0;
+			color: inherit;
+			padding: $padding-md;
+			padding-top: 0;
+			color: $gray;
+		}
 		border-top: 6px solid $gray;
 		transition: all 0.3s ease;
 		box-shadow: $box-shadow;
@@ -90,6 +90,15 @@
 				}
 			}
 		}
+	}
+	
+	// end
+	
+	
+	@import "card-base";
+	
+	.card.learning-circle{
+		
 		.card-image{
 			width: 100%;
 			height: 145px;
@@ -100,20 +109,7 @@
 				width: 100%;
 			}
 		}
-		.card-body{
-			padding: $padding-md;
-			color: $gray;
-			>:not(.card-title){
-				font-size: $font-size-xsm;
-			}
-			.eyebrow{
-				font-weight: bold;
-			}
-			.card-title {
-				padding-left: 0;
-				padding-right: 0;
-			}
-		}
+		
 		.card-footer {
 			padding: $padding-md;
 			padding-top: 0;

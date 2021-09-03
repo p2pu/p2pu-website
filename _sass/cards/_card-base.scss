@@ -1,0 +1,134 @@
+.card{
+	border-top: 6px solid $gray;
+	transition: all 0.3s ease;
+	box-shadow: $box-shadow;
+	margin-bottom: $grid-gutter-width;
+	margin-top: $grid-gutter-width;
+	.status-tag {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		background: $gray;
+		padding: 0px 10px 4px 10px;
+		letter-spacing: .5px;
+		border: 0;
+		font-size: $xsmall-font-size;
+		font-size: $font-size-xxsm;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $white;
+	}
+	&.p2pu-orange, &.in-progress{
+		border-top: 6px solid $p2pu-orange;
+		.status-tag {
+			background: $p2pu-orange;
+		}
+	}
+	&.p2pu-blue, &.starting-soon{
+		border-top: 6px solid $p2pu-blue;
+		.status-tag {
+			background: $p2pu-blue;
+		}
+	}
+	&.p2pu-green, &.closed{
+		border-top: 6px solid $p2pu-green;
+		.status-tag {
+			background: $p2pu-green;
+		}
+		.card-footer {
+			button{
+				visibility: hidden;
+			}
+		}
+	}
+	&.p2pu-yellow, &.signup-closed{
+		border-top: 6px solid $p2pu-yellow;
+		.status-tag {
+			background: $p2pu-yellow;
+		}
+		.card-footer {
+			button{
+				visibility: hidden;
+			}
+		}
+	}
+	.card-header{
+		margin-bottom: 0;
+		background-color: transparent;
+		border-bottom: 0;
+		padding: $padding-md;
+		padding-bottom: 0;
+		color: $gray;
+		.eyebrow{
+			font-weight: bold;
+			font-size: $font-size-xsm;
+			margin-bottom: $spacer * .3;
+		}
+		.lowbrow{
+			text-transform: uppercase;
+		}
+		.card-title {
+			padding-left: 0;
+			padding-right: 0;
+			margin-bottom: $spacer;
+		}
+		
+	}
+	.card-body{
+		padding: $padding-md;
+		padding-top: 0;
+		color: $gray;
+		>span{
+			display: block;
+			font-size: $font-size-xsm;
+			margin-bottom: $spacer * .5;
+			i.material-icons{
+				font-size: $font-size-lg;
+				vertical-align: middle;
+				margin-right: $spacer * .3;
+			}
+		}
+	}
+	.card-footer {
+		padding: $padding-md;
+		padding-top: 0;
+		background-color: transparent;
+		border-top: none;
+		button{
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+	table{
+		font-size: $font-size-xsm;
+		margin-top: $padding-md;
+		th{
+			text-align: right;
+			font-weight: normal;
+		}
+		tr{
+			&:first-of-type{
+				border-top-width: 1px;
+			}
+			&:last-of-type{
+				border-bottom: transparent;
+			}
+			a{
+				color: inherit;
+				text-decoration: underline;
+			}
+			> * {
+				padding: .15rem .5rem;
+			}
+		}
+	}
+	&.horizontal{
+		@media (min-width: map-get($grid-breakpoints, "md")) {
+			.card-footer {
+				padding: $padding-md;
+				padding-left: 0;
+			}
+		}
+	}
+	
+}
