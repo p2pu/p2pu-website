@@ -1,122 +1,50 @@
-//TODO: nix?
-
-/*
-section.page-title {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  padding: 20px;
-
-  header {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    text-transform: uppercase;
-    text-align: center;
+.search-fields{
+  .form-select{
+    max-width: 74px;
+    display: inline-block;
   }
-
-  #search-subtitle {
-    margin: 0 auto;
-
-    p.centered.large {
-      padding-bottom: 0;
-    }
+  .search-input{
+    line-height: 2.2rem;
   }
-
-  p.centered.large {
-    padding-left: $padding-sm;
-    padding-right: $padding-sm;
-    padding-bottom: $padding-sm;
-  }
-}
-
-#team-title {
-  margin-bottom: $padding-sm;
-
-  p.centered.large {
-    margin-bottom: 0;
-
-    span.team-name {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-family: $headings-font-family;
-      color: $p2pu-orange;
-    }
-  }
-
-  p.centered.small {
-    a {
-      color: $gray;
-
-      &:hover {
-        color: $p2pu-orange;
+  form.filter{
+    span{
+      padding: 0 $padding-sm;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
       }
     }
   }
 }
-
-.alternate-cta {
-  background: $p2pu-light-blue;
-  padding: $padding-md;
-  margin-top: $padding-sm;
-
-  .divider {
-    border-bottom: 1px dashed $gray-dark;
-    margin-top: $padding-sm;
-    margin-bottom: $padding-sm;
-  }
-
-  .add-course, .create-course {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
-    p {
-      margin-bottom: 0;
-      margin-right: $padding-xs;
-    }
-
-    a {
-      margin: $padding-xs 0;
-
-      &:hover {
-        text-decoration: none;
+#search{
+  .react-tabs__tab-list {
+    border-bottom: 1px solid $gray-dark;
+    margin: 0 0 10px;
+    padding: 0;
+    .react-tabs__tab {
+      padding: 5px 0;
+      margin-right: 25px;
+      display: inline-block;
+      border: 0;
+      border-bottom: none;
+      bottom: 0;
+      position: relative;
+      cursor: pointer;
+      span{
+        font-weight: $font-weight-semibold;
+        font-size: $font-size-xsm;
+        color: $gray-dark;
+        text-transform: uppercase;
       }
     }
-
-    .p2pu-btn {
-      font-size: 0.8em;
-      display: flex;
-
-      i.material-icons {
-        font-size: 18px;
-        padding-right: $padding-xs;
-      }
+    .react-tabs__tab--selected {
+      border: none;
+      border-radius: 0;
+      border-bottom: 5px solid $p2pu-orange;
+      color: inherit;
+      background: transparent;
     }
   }
 }
-
-.modal-dialog {
-  max-width: 900px;
-}
-
-@media (max-width: map-get($grid-breakpoints, "sm")) {
-  section.page-title {
-    header {
-      h1 {
-        font-size: 2em;
-      }
-    }
-  }
-
-  .alternate-cta {
-    padding: $padding-sm;
-  }
-
-  .hidden-on-mobile {
-    display: none !important;
-  }
-}
-*/
