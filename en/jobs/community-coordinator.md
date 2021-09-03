@@ -3,7 +3,7 @@ layout: naked-page
 title: Community Coordinator (Remote Contractor)
 text: |
     ## Background
-    Peer 2 Peer University (P2PU) is a U.S.-based non-profit organization that supports peer learning around the world through a model we call learning circles: study groups that meet in public spaces to work through free educational materials together.
+    Peer 2 Peer University (P2PU) is a U.S.-based non-profit organization that supports peer learning around the world through a model we call learning circles: study groups that meet in public spaces to work through free educational materials together. We are a small team with staff in Berlin, Cape Town, Detroit, and Phoenix.
 
     Our role supporting learning circles is multifaceted: we build open source software for managing meetings, we train groups to facilitate learning circles, we maintain an online community for facilitators, and we develop and curate open educational resources. In late 2021, we’re launching two exciting new initiatives: an institutional membership program for library systems (“Teams”) and a pilot for [credit-bearing learning circles](https://info.p2pu.org/2021/07/21/bringing-college-credits-to-libraries-with-peer-led-learning-circles/) in partnership with College Unbound. 
 
