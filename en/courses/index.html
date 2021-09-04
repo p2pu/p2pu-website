@@ -1,5 +1,6 @@
 ---
 title: Courses
+heading: Courses
 description: A searchable directory of the open online courses that the P2PU community uses to facilitate learning circles.
 subtitle: These are free, online courses that the P2PU community uses to facilitate learning circles. If you can’t find what you’re looking for, you can <a href='https://learningcircles.p2pu.org/en/course/create/'>add an online course</a> to the database or <a href='https://course-in-a-box.p2pu.org/'>create your own</a>
 layout: search
@@ -13,7 +14,74 @@ extra_css:
   
   <!--TODO: for dev purposes only - kill before golive -->
   <div class="page">
-    <div class="search-results row grid">
+    
+    
+    
+    
+    
+    <div class="search-fields row g-0">
+  
+      <div class="bg-white shadow col-12 col-md me-md-2">
+        <form class="search">
+          <label for="search-input" class="form-label">Search</label>
+          <div class="input-group">
+            <input id="search-input" type="search" class="form-control search-input" placeholder="Keyword, organization, etc." aria-label="search terms" aria-describedby="search-icon">
+            <span class="input-group-text" id="search-icon"><i class="material-icons">search</i></span>
+          </div>
+        </form>
+      </div>
+  
+      <div class="bg-white shadow col-12 col-md-7">
+        <form class="filter">
+          <label for="search-input" class="form-label">Location</label>
+          <div class="input-group-md">
+            <span>Within</span>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>1</option>
+              <option value="1">5</option>
+              <option value="2">10</option>
+              <option value="3">25</option>
+              <option value="4">50</option>
+              <option value="5">100</option>
+            </select>
+            <span>miles of</span>
+            <input id="location-search-input" type="search" class="form-control search-input my-2 my-md-0" placeholder="City, state, etc." aria-label="search terms">
+            <span>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="online">
+                <label class="form-check-label" for="online">online</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="in-person">
+                <label class="form-check-label" for="in-person">in person</label>
+              </div>
+            
+            </span>
+          </div>
+        </form>
+      </div>
+  </div>
+
+    
+  <div class="react-tabs mt-5" data-tabs="true">
+    <ul class="react-tabs__tab-list" role="tablist">
+      <li class="react-tabs__tab react-tabs__tab--selected" role="tab" id="react-tabs-0" aria-selected="true" aria-disabled="false" aria-controls="react-tabs-1" tabindex="0">
+        <span class="minicaps bold text-xs">Open (25)</span>
+      </li>
+      <li class="react-tabs__tab" role="tab" id="react-tabs-2" aria-selected="false" aria-disabled="false" aria-controls="react-tabs-3">
+        <span class="minicaps bold text-xs">Closed and completed (1072)</span>
+      </li>
+    </ul>
+    
+    
+    <div class="react-tabs__tab-panel react-tabs__tab-panel--selected" role="tabpanel" id="react-tabs-1" aria-labelledby="react-tabs-0">
+    
+      <div class="search-results row g-0 grid">
+        
+        
+        
+        
+        
       
       <div class="card course horizontal in-progress">
         <div class="status-tag">in progress</div>
@@ -133,6 +201,7 @@ extra_css:
                       <a class="topic" href="">discrimination</a>
                     </td>
                   </tr>
+                  
                   <tr class="keywords">
                     <th scope="row">Keywords</th>
                     <td class="keywords-list">
@@ -215,7 +284,7 @@ extra_css:
                   </tr>
                   <tr class="keywords">
                     <th scope="row">Keywords</th>
-                    <td class="keywords-list">
+                      <td class="keywords-list">
                       <span class="term">antiracism</span>,
                       <span class="term">social justice</span>,
                       <span class="term">discrimination</span> 
@@ -332,7 +401,11 @@ extra_css:
           </footer>
         </div>
       </div>
-
+      </div>
+    </div>
+      <div class="react-tabs__tab-panel" role="tabpanel" id="react-tabs-3" aria-labelledby="react-tabs-2"></div>
+    </div>
+  </div>
 
 
 

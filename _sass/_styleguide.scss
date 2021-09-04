@@ -9,7 +9,7 @@
 /* -------------------------------------------------------------------------
  Layout
 ---------------------------------------------------------------------------- */
-.container{
+.primary .container{
   margin-left: 0;
   max-width: 93%;
   @media (min-width: map-get($grid-breakpoints, "xxl")) {

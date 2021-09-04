@@ -1,19 +1,42 @@
 .search-fields{
-  .form-select{
-    max-width: 74px;
-    display: inline-block;
-  }
-  .search-input{
-    line-height: 2.2rem;
-  }
-  form.filter{
-    span{
-      padding: 0 $padding-sm;
-      &:first-child {
-        padding-left: 0;
+  form{
+    padding: 1rem 1.5rem 1.5rem !important;
+    .form-select{
+      max-width: 74px;
+      display: inline-block;
+    }
+    .search-input{
+      line-height: 2.2rem;
+    }
+    .current-location{
+      margin-bottom: 1.5rem;
+      display: inline-block;
+      vertical-align: middle;
+      @media (min-width: map-get($grid-breakpoints, "md")) {
+        position: absolute;
+        left: 200px;
+        top: 100%;
+        margin-top: .5rem;
+        margin-bottom: 0;
       }
-      &:last-child {
-        padding-right: 0;
+      span{
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    &.filter{
+      margin-bottom: 1.5rem;
+      .input-group-md{
+        position: relative;
+        >span{
+          padding: 0 $padding-sm;
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+        }
       }
     }
   }
