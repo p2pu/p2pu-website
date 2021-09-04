@@ -31,11 +31,32 @@
           </div>
         </nav>
         
-        <nav id="log-in" class="order-2 order-md-4 me-0">
-          <button type="button" class="btn btn-sm d-flex align-items-center secondary p2pu-btn gray mx-0 ms-auto">
-            <span class="material-icons material-icons-outlined me-1">account_circle</span>
+        
+        <nav id="log-in" class="order-2 order-md-4 me-0 dropdown">
+          <button type="button" class="btn btn-sm d-flex align-items-center secondary p2pu-btn gray mx-0 ms-auto dropdown-toggle" id="loginDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <!-- <span class="material-icons material-icons-outlined me-1">account_circle</span> -->
             Log In
           </button>
+          <div class="dropdown-menu dropdown-menu-end login-dropdown shadow" aria-labelledby="loginDropdown">
+            <form action="" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="csrfmiddlewaretoken" value="">
+              <div class="alert alert-block alert-danger"> <ul> <li>Please enter a correct username and password. Note that both fields may be case-sensitive.</li> </ul> </div>
+              
+              <div id="div_id_username" class="form-group"> <label for="id_username" class="col-form-label  requiredField">
+              Username<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="username" autofocus="" class="textinput textInput form-control" required="" id="id_username"> </div> </div> 
+              
+              <div id="div_id_password" class="form-group"> <label for="id_password" class="col-form-label  requiredField">
+              Password<span class="asteriskField">*</span> </label> <div class=""> <input type="password" name="password" class="textinput textInput form-control is-invalid" required="" id="id_password"> </div> </div>
+              <div class="row align-items-center justify-content-between" id="div_id_submit" >
+                 <div class="col-7">
+                   <a href="https://learningcircles.p2pu.org/en/accounts/password_reset/" target="_blank" class="text-small">forgot password?</a>
+                </div>               
+                  <div class="col-5">
+                      <button type="submit" class="btn p2pu-btn btn-sm orange">Login</button>
+                  </div>
+              </div>
+            </form>
+          </div>
         </nav>
         
         <nav class="order-3 navbar-expand-md">
@@ -50,7 +71,7 @@
     </div>
   </div>
   <div class="header-bottom px-3 py-2 bg-cream-dark">
-    <div class="container-lg d-flex flex-wrap justify-content-center">
+    <div class="container d-flex flex-wrap justify-content-center">
       <nav class="col-12 col-md-auto py-0 ms-md-auto justify-content-center text-small navbar navbar-expand-md px-0 px-md-3">
         <div class="collapse navbar-nav navbar-collapse navbarNavDropdown align-items-stretch align-items-md-center">
 {% for link in site.data.navigation.top_level %}
