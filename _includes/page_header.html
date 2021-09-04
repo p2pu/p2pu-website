@@ -1,23 +1,32 @@
 {% assign handle = {{include.type }} %} {% case handle %} {% when
 "page-header-2" %}
 <header class="container page-header">
-  <h1>{{ page.title }} page header 2</h1>
-  {% if page.subtitle %}
-  <p class="subtitle">{{ page.subtitle }}</p>
-  {% endif %}
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}
+      <p class="subtitle">{{ page.description }}</p>
+      {% endif %}
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="row">
+        {{ page.markup }}
+      </div>
+    </div>
+  </div>
 </header>
 {% when "page-header-3", "another-page-header" %}
 <header class="container page-header">
   <h1>{{ page.title }} page header 3</h1>
-  {% if page.subtitle %}
-  <p class="subtitle">{{ page.subtitle }}</p>
+  {% if page.description %}
+  <p class="subtitle">{{ page.description }}</p>
   {% endif %}
 </header>
 {% else %}
 <header class="container page-header">
   <h1>{{ page.title }} default page header</h1>
-  {% if page.subtitle %}
-  <p class="subtitle">{{ page.subtitle }}</p>
+  {% if page.description %}
+  <p class="subtitle">{{ page.description }}</p>
   {% endif %}
 </header>
 

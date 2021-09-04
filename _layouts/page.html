@@ -6,12 +6,5 @@ layout: base
   {% capture header-type %}{{page.header}}{% endcapture %} {% include
   page_header.html type=header-type %}
 
-  <header class="container page-header">
-    <h1>{{ page.title }}</h1>
-    {% if page.subtitle %}
-    <p class="subtitle">{{ page.subtitle }}</p>
-    {% endif %}
-  </header>
-
   <article class="post-content">{{ content }}</article>
 </div>
