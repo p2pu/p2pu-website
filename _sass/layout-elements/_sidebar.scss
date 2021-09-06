@@ -1,0 +1,7 @@
+.sidebar.sticky-top {
+	top: $navbar-height-sm;
+	@media (min-width: map-get($grid-breakpoints, "md")) {
+	  top: $navbar-height;
+	}
+	border-right: 1px solid $gray-light;
+  }

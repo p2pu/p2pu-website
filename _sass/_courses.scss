@@ -1,3 +1,20 @@
 @import "cards/course-card";
 @import "cards/topic-card";
-@import "layout-elements/dot-quad";
+@import "layout-elements/sidebar";
+
+.sidebar{
+	.filter-fields{
+		>.col-12{
+			padding-top: $padding-sm * 2;
+			padding-bottom: $padding-sm * 2;
+			border-top: 1px solid $gray-light;
+			&:first-of-type{
+				border-top: none;
+				padding-top: 0;
+			}
+			form:not(:first-of-type){
+				padding-top: 1rem;
+			}
+		}
+	}
+}
