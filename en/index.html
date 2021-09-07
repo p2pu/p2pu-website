@@ -234,8 +234,31 @@ bundles:
 				  
 				<div class="col-12" data-aos="fade-up" data-aos-offset="200">
 					<div class="p2pu-slide-container slick-init">
+											
+						{% for testimonial in site.data.testimonials.testimonials %}						
+						<article class="slide">
+							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
+								<div class="quote col-12 mb-md-5">
+									<i class="fas fa-quote-left"></i>
+									<q>{{ testimonial.quote }}</q>
+									<i class="fas fa-quote-right"></i>
+								</div>
+								<div class="attribution row mt-3">
+									<div class="image col-12 col-md-4 pe-md-0">
+									  <img class="mx-auto mx-md-0 px-md-0" src="/assets/images/testimonials/{{ testimonial.img }}" alt="Ramune">
+									</div>
+									<div class="text col-12 col-md-8 text-center text-md-start">
+									  <span class="name bold">{{ testimonial.name }}</span>
+									  <span class="position fst-italic small">{{ testimonial.role }}</span>
+									  <span class="organization small">{{ testimonial.organization }}</span>
+									</div>
+								</div>
+							</div>
+							  
+						</article>
+						{% endfor %}
 						  
-						<article class="slide">
+						<!-- <article class="slide">
 							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
 								<div class="quote col-12 mb-md-5">
 									<i class="fas fa-quote-left"></i>
@@ -255,6 +278,7 @@ bundles:
 							</div>
 							  
 						</article>
+						
 						
 						<article class="slide">
 							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
@@ -380,7 +404,7 @@ bundles:
 								</div>
 							</div>
 							  
-						</article>
+						</article> -->
 				  
 				  	</div>
 				</div>
