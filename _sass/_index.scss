@@ -1,12 +1,17 @@
 
 section#landing {
-	@media (min-width: map-get($grid-breakpoints, "md")) {
-	    background-position:bottom;
-		height:calc(100vh - 100px);
-		p.large {
-			max-width:800px;
-			margin:0 auto;
-		}
+	p.large {
+		max-width:800px;
+		margin:0 auto;
+	}
+	> .container > .row {		
+		margin-bottom: 8em;
+		@media (min-width: map-get($grid-breakpoints, "sm")) {
+				margin-bottom: 10em;	
+			}	
+		@media (min-width: map-get($grid-breakpoints, "lg")) {
+			margin-bottom: 12em;	
+		}	
 	}
 }
 
