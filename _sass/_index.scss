@@ -1,4 +1,15 @@
 
+section#landing {
+	@media (min-width: map-get($grid-breakpoints, "md")) {
+	    background-position:bottom;
+		height:calc(100vh - 100px);
+		p.large {
+			max-width:800px;
+			margin:0 auto;
+		}
+	}
+}
+
 section#learning-circles {
 	.container{
 		

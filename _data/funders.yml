@@ -2,22 +2,34 @@
   logo: /assets/images/index/funders/dollar-general.png
   url: http://www2.dollargeneral.com/dgliteracy/Pages/index.aspx
 
-- name: Knight Foundation
-  logo: /assets/images/index/funders/knight.png
-  url: https://knightfoundation.org/
+- name: EU Erasmus+
+  logo: /assets/images/index/funders/erasmus-plus.jpg
+  url: https://ec.europa.eu/programmes/erasmus-plus/node_en  
 
+- name: Hewlett Foundation
+  logo: /assets/images/index/funders/hewlett.svg
+  url: https://hewlett.org/
+  
 - name: Institute of Museum and Library Services
   logo: /assets/images/index/funders/imls.png
   url: https://www.imls.gov/
+
+- name: Knight Foundation
+  logo: /assets/images/index/funders/knight.png
+  url: https://knightfoundation.org/
 
 - name: Open Society Foundations
   logo: /assets/images/index/funders/osf.png
   url: https://www.opensocietyfoundations.org/
 
+- name: SHuttleworth Foundation
+  logo: /assets/images/index/funders/shuttleworth.svg
+  url: https://shuttleworthfoundation.org/
+  
 - name: Siegel Family Endowment
   logo: /assets/images/index/funders/sfe.jpg
   url: http://www.siegelendowment.org/
 
-- name: EU Erasmus+
-  logo: /assets/images/index/funders/erasmus-plus.jpg
-  url: https://ec.europa.eu/programmes/erasmus-plus/node_en
+- name: Walmart Foundation
+  logo: /assets/images/index/funders/walmart.png
+  url: https://walmart.org/
