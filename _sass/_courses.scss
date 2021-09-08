@@ -3,7 +3,27 @@
 @import "layout-elements/sidebar";
 
 .sidebar{
+	.navbar-toggler{
+		.material-icons{
+			display: flex;
+			&:after{
+				content: "FILTERS";
+				font-size: $font-size-sm;
+				font-weight: $font-weight-bold;
+				font-family: $font-family-sans-serif;
+				display: inline-flex;
+				align-self: center;
+				padding-left: .5rem;
+				border-bottom: 1px solid $gray-light;
+			}
+		}
+	}
+	h3.offcanvas-title{
+		border-bottom: 1px solid $gray-light;
+	}
 	.filter-fields{
+		max-height: calc(100vh - 130px);
+		overflow: scroll;
 		>.col-12{
 			padding-top: $padding-sm * 2;
 			padding-bottom: $padding-sm * 2;
@@ -13,8 +33,9 @@
 				padding-top: 0;
 			}
 			form:not(:first-of-type){
-				padding-top: 1rem;
+				padding-top: $padding-sm * 2;
 			}
+			
 		}
 	}
 }

@@ -1,0 +1,13 @@
+@import "cards/dash-card";
+@import "layout-elements/dot-block";
+
+#dashboard{
+	.subheader{
+		.alerts{
+			.alert:last-of-type{
+				margin-bottom: $padding-lg;
+			}
+		}
+	}
+}
+

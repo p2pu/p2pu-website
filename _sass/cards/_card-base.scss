@@ -80,6 +80,7 @@
 			padding-left: 0;
 			padding-right: 0;
 			margin-bottom: $spacer;
+			font-family: $font-family-sans-serif;
 		}
 		
 	}
@@ -111,23 +112,25 @@
 	table{
 		font-size: $font-size-xsm;
 		margin-top: $padding-md;
-		th{
-			text-align: right;
-			font-weight: normal;
-		}
-		tr{
-			&:first-of-type{
-				border-top-width: 1px;
-			}
-			&:last-of-type{
-				border-bottom: transparent;
-			}
-			a{
-				color: inherit;
-				text-decoration: underline;
-			}
-			> * {
-				padding: .15rem .5rem;
+		tbody{
+			tr{
+				&:first-of-type{
+					border-top-width: 1px;
+				}
+				&:last-of-type{
+					border-bottom: transparent;
+				}
+				a:not(.btn){
+					color: inherit;
+					text-decoration: underline;
+				}
+				> * {
+					padding: .15rem .5rem;
+				}
+				th{
+					text-align: right;
+					font-weight: normal;
+				}
 			}
 		}
 	}
