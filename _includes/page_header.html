@@ -44,12 +44,21 @@
 </header>
 
 {% when "page-header-3", "another-page-header" %}
-<header class="container page-header">
-  <h1>{{ page.title }} page header 3</h1>
-  {% if page.description %}
-  <p class="subtitle">{{ page.description }}</p>
-  {% endif %}
-</header>
+<div class="header-wrap">
+  <header class="container page-header">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="subtitle">{{ page.description }}</p>
+        {% endif %}
+      </div>
+      {% if page.header-image %}
+      <div class="col-12 col-md-4" style="background: url({{ page.header-image }}) no-repeat center center; background-size: cover;"></div>
+      {% endif %}
+    </div>
+  </header>
+</div>
 
 {% else %}
 <header class="container page-header">
