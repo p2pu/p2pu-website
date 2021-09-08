@@ -7,7 +7,7 @@ top_level:
     url:
     submenu:
       - text: Learning Resources
-        url: /en/cources/
+        url: /en/learning-resources/
       - text: Forums
         url: https\://community.p2pu.org/
         external: true

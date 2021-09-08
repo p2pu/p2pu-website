@@ -3,8 +3,6 @@ title: Learning Resources
 layout: page
 header: page-header-2
 id: courses
-layout: page
-header: page-header-2
 description: Browse guides to popular learning circle topics and pick a course for your learning circle from our library of free learning resources, tested and curated by the P2PU community. 
 markup: 
   <div class="py-3 px-sm-3 col-12 col-md-6 col-xl-12 d-flex align-items-center">Don’t see what you’re looking for?</div>
@@ -15,92 +13,29 @@ markup:
     <a href='https://course-in-a-box.p2pu.org/' class="col-12 btn btn-sm p2pu-btn orange">Create a Course</a>
   </div>
 bundles:
-  - courses
+  - learning-resources
 extra_css:
 - /assets/css/p2pu-search.css
 - /assets/css/p2pu-courses.css
 ---
 
-
-
-
-
 <section class="subheader container">
   <h4>Topic Guides</h4>
   <div class="row grid">
-    
+    {% for topic in site.topics %}
     <div class="grid-item col-md-6 col-lg-4">
       <div class="card topic cover-link">
-      <a href="http://google.com" target="_blank"></a>
+      <a href="{{ topic.url }}" target="_blank"></a>
       <div class="card-image">
-        <img src="{{ site.baseurl }}/assets/images/p2pu-ogimg-default.jpg" alt="Arts & Creativity" class="card-img-top">
+        <img src="{{ site.baseurl }}/assets/images/topics/{{ topic.img }}" alt="{{ topic.title }}" class="card-img-top">
       </div>
       <div class="card-header">
-        <h4 class="card-title">Arts & Creativity</h4>
+        <h4 class="card-title">{{ topic.title }}</h4>
       </div>
       </div>
     </div>
-    
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card topic cover-link">
-      <a href="http://google.com" target="_blank"></a>
-      <div class="card-image">
-        <img src="{{ site.baseurl }}/assets/images/p2pu-ogimg-default.jpg" alt="Arts & Creativity" class="card-img-top">
-      </div>
-      <div class="card-header">
-        <h4 class="card-title">Arts & Creativity</h4>
-      </div>
-      </div>
-    </div>
-    
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card topic cover-link">
-      <a href="http://google.com" target="_blank"></a>
-      <div class="card-image">
-        <img src="{{ site.baseurl }}/assets/images/p2pu-ogimg-default.jpg" alt="Arts & Creativity" class="card-img-top">
-      </div>
-      <div class="card-header">
-        <h4 class="card-title">Arts & Creativity</h4>
-      </div>
-      </div>
-    </div>
-    
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card topic cover-link">
-      <a href="http://google.com" target="_blank"></a>
-      <div class="card-image">
-        <img src="{{ site.baseurl }}/assets/images/p2pu-ogimg-default.jpg" alt="Arts & Creativity" class="card-img-top">
-      </div>
-      <div class="card-header">
-        <h4 class="card-title">Arts & Creativity</h4>
-      </div>
-      </div>
-    </div>
-    
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card topic cover-link">
-      <a href="http://google.com" target="_blank"></a>
-      <div class="card-image">
-        <img src="{{ site.baseurl }}/assets/images/p2pu-ogimg-default.jpg" alt="Arts & Creativity" class="card-img-top">
-      </div>
-      <div class="card-header">
-        <h4 class="card-title">Arts & Creativity</h4>
-      </div>
-      </div>
-    </div>
-    
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card topic cover-link">
-      <a href="http://google.com" target="_blank"></a>
-      <div class="card-image">
-        <img src="{{ site.baseurl }}/assets/images/p2pu-ogimg-default.jpg" alt="Arts & Creativity" class="card-img-top">
-      </div>
-      <div class="card-header">
-        <h4 class="card-title">Arts & Creativity</h4>
-      </div>
-      </div>
-    </div>
-    
+    {% endfor %}
+  
   </div>
 </section>
 <section class="search container">
