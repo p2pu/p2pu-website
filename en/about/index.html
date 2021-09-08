@@ -3,7 +3,7 @@ title: About P2PU
 layout: page
 header: page-header-3
 header-image: /assets/images/about/p2pu_lego.jpg
-id: about
+slug: about
 description: We believe people learn better together. We envision a global network of grassroots learning communities—powered by freely-shared knowledge and people-first organizations—where personal growth and collective transformation is freed from institutional walls. We champion education as a lifelong act of co-construction, with plentiful opportunities for work, study, and play for any willing learner.
 image_path: /assets/images/about/p2pu_lego.jpg
 extra_css:
@@ -25,17 +25,12 @@ extra_css:
       </p>
     </div>
   </section>
-  <section class="about-us" data-aos="fade-up">
-    <div class="container">
-      
-    </div>
-  </section>
   
   <section class="values" data-aos="fade-up">
     <div class="container">
   
       <h2>Our Values</h2>
-      <div class="row g-0 text-center text-md-start dot-quad g-4">
+      <div class="row text-center text-md-start dot-quad">
         <div class="col-12 col-sm-6 col-md-3">
           <div class="icon col-8 col-md-12 mx-auto">
             <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
@@ -76,15 +71,34 @@ extra_css:
       <h2>P2PU Staff</h2>
       <p>P2PU is led by a small, distributed staff who maintain the community, develop software tools, and create courses and resources that reinforce the learning circle methodology, all of which is made available to the public for free. </p>
       <div class="row grid">
+        
+        <div class="grid-item col-md-6 col-lg-4">
+          <div class="card staff">
+            <div class="card-image">
+              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
+            </div>
+           <div class="card-header">
+             <h3>Becky Margraf</h3>
+             <p>Production Lead</p>
+           </div>
+            <div class="card-body">
+              <p>Becky is a designer and toymaker motivated by learning about learning. She makes sure there’s interesting data coming in from the community and going back out into the world in all ways possible. She currently lives in Portland, OR and Berlin, Germany.</p>
+            </div>
+            <div class="card-footer">
+              <span><a href="https://twitter.com/code27_" target="_blank"><i class="fab fa-twitter"></i> code27_</a></span>|
+              <span><a href="https://www.thebacklog.net" target="_blank">www.thebacklog.net</a></span>
+            </div>
+          </div>
+        </div>
+          
         <div class="grid-item col-md-6 col-lg-4">
           <div class="card staff">
             <div class="card-image">
               <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
             </div>
             <div class="card-header">
-              <h4>Becky Margraf<br>
-                <small class="text-muted">Production Lead</small>
-              </h4>
+              <h3>Becky Margraf</h3>
+              <p>Production Lead</p>
             </div>
             <div class="card-body">
               <p>Becky is a designer and toymaker motivated by learning about learning. She makes sure there’s interesting data coming in from the community and going back out into the world in all ways possible. She currently lives in Portland, OR and Berlin, Germany.</p>
@@ -102,29 +116,8 @@ extra_css:
               <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
             </div>
             <div class="card-header">
-              <h4>Becky Margraf<br>
-                <small class="text-muted">Production Lead</small>
-              </h4>
-            </div>
-            <div class="card-body">
-              <p>Becky is a designer and toymaker motivated by learning about learning. She makes sure there’s interesting data coming in from the community and going back out into the world in all ways possible. She currently lives in Portland, OR and Berlin, Germany.</p>
-            </div>
-            <div class="card-footer">
-              <span><a href="https://twitter.com/code27_" target="_blank"><i class="fab fa-twitter"></i> code27_</a></span>|
-              <span><a href="https://www.thebacklog.net" target="_blank">www.thebacklog.net</a></span>
-            </div>
-          </div>
-        </div>
-          
-        <div class="grid-item col-md-6 col-lg-4">
-          <div class="card staff2">
-            <div class="card-image">
-              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
-            </div>
-            <div class="card-header">
-              <h4>Becky Margraf<br>
-                <small class="text-muted">Production Lead</small>
-              </h4>
+              <h3>Becky Margraf</h3>
+              <p>Production Lead</p>
             </div>
             <div class="card-body">
               <p>Becky is a designer and toymaker motivated by learning about learning. She makes sure there’s interesting data coming in from the community and going back out into the world in all ways possible. She currently lives in Portland, OR and Berlin, Germany.</p>
@@ -143,6 +136,151 @@ extra_css:
     </div>
   </section>
   
+  <section class="teams" data-aos="fade-up">
+    <div class="container">
+      <h2>P2PU Teams</h2>
+      <p>Teams are organized learning circle communities, typically affiliated with library systems and community-based organizations. <a href="#">Start a team.</a></p>
+      <div class="row grid">
+        
+        <div class="grid-item col-md-6 col-lg-4">
+          <div class="card teams">
+            <div class="card-image">
+              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
+            </div>
+            <div class="card-header">
+              <h3>Team Name</h3>
+            </div>
+            <div class="card-body">
+              <span>City, State, Country</span>
+              <span>Organized by [organizer first names, up to 3]</span>
+              <span>Established: [Month Year]</span>
+            </div>
+            <div class="card-footer">
+              <a type="button" class="btn p2pu-btn btn-sm gray col-sm-auto m-2">See Team Page</a>
+            </div>
+          </div>
+        </div>
+          
+        <div class="grid-item col-md-6 col-lg-4">
+          <div class="card teams">
+            <div class="card-image">
+              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
+            </div>
+            <div class="card-header">
+              <h3>Team Name</h3>
+            </div>
+            <div class="card-body">
+              <span>City, State, Country</span>
+              <span>Organized by [organizer first names, up to 3]</span>
+              <span>Established: [Month Year]</span>
+            </div>
+            <div class="card-footer">
+              <a type="button" class="btn p2pu-btn btn-sm gray col-sm-auto m-2">See Team Page</a>
+            </div>
+          </div>
+        </div>
+          
+        <div class="grid-item col-md-6 col-lg-4">
+          <div class="card teams">
+            <div class="card-image">
+              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
+            </div>
+            <div class="card-header">
+            <h3>Team Name</h3>
+            </div>
+            <div class="card-body">
+              <span>City, State, Country</span>
+              <span>Organized by [organizer first names, up to 3]</span>
+              <span>Established: [Month Year]</span>
+            </div>
+            <div class="card-footer">
+              <a type="button" class="btn p2pu-btn btn-sm gray col-sm-auto m-2">See Team Page</a>
+            </div>
+          </div>
+        </div>
+          
+          
+        
+        
+      </div>
+    </div>
+  </section>
+  
+  <section class="board" data-aos="fade-up">
+    <div class="container">
+      <h2>P2PU Board</h2>
+      <p>P2PU is led by a small, distributed staff who maintain the community, develop software tools, and create courses and resources that reinforce the learning circle methodology, all of which is made available to the public for free. </p>
+      <div class="row grid">
+        
+        <div class="grid-item col-md-6 col-lg-4">
+          <div class="card board">
+            <div class="card-image">
+              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
+            </div>
+            <div class="card-header">
+              <h4>Ahrash Bissell<br>
+                <small class="text-muted">President, Monterey Institute for Technology and Education</small>
+              </h4>
+            </div>
+          </div>
+        </div>
+          
+        <div class="grid-item col-md-6 col-lg-4">
+          <div class="card board">
+            <div class="card-image">
+              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
+            </div>
+            <div class="card-header">
+              <h4>Ahrash Bissell<br>
+                <small class="text-muted">President, Monterey Institute for Technology and Education</small>
+              </h4>
+            </div>
+          </div>
+        </div>
+          
+        <div class="grid-item col-md-6 col-lg-4">
+          <div class="card board">
+            <div class="card-image">
+              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
+            </div>
+            <div class="card-header">
+              <h4>Ahrash Bissell<br>
+                <small class="text-muted">President, Monterey Institute for Technology and Education</small>
+              </h4>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <section class="funders" data-aos="fade-up">
+    <div class="container">
+      <h2>Supported by</h2>
+      <p>Many people have made P2PU what it is today. A special thanks to: Adam Bush, Alan Webb, Aleksander Stachurka, Alex Ruthmann, Alexander Kehayias, Alison Jean Cole, Andrew Rens, Beck Pitt, Carl Ruppin, Cathy Casserly, Chloe Varelidi, Chris Ewald, Dany Javier Bautista Montaña, Erika Pogorelc, Gary Matkin, Jane Park, Jessy Kate Schingler, João Menezes, Joel Thierstein, John Britton, Jose Flores, Juliana Muchai, Karen Fasimpaur, Karen Gabriels, Kate Lapinski, Katherine McConachie, Larry Cooperman, Laura Hilliger, Lila Bailey, Maria Droujkova, Mark Andersen, Mark Surman, Molly Kleinman, Nadeem Shabir, Neeru Paharia, Nico Koenig, Niels Sprong, Paul Osman, Pieter Kleymeer, Pippa Buchanan, Rebecca Kahn, Sharon Kennedy, Steve Carson, Stian Haklev, Vanessa Gennarelli, and Zuzel Vera.</p>
+      <p>We’d also like to thank these sponsors for their generous support:</p>
+      <div class="row grid">
+        
+        <div class="grid-item funder col-md-6 col-lg-4 col-12">
+          <a href="https://knightfoundation.org/">
+            <img src="/assets/images/index/funders/knight.png" alt="Knight Foundation">
+          </a>
+        </div>
+        <div class="grid-item funder col-md-6 col-lg-4 col-12">
+          <a href="https://knightfoundation.org/">
+            <img src="/assets/images/index/funders/knight.png" alt="Knight Foundation">
+          </a>
+        </div>
+        <div class="grid-item funder col-md-6 col-lg-4 col-12">
+          <a href="https://knightfoundation.org/">
+            <img src="/assets/images/index/funders/knight.png" alt="Knight Foundation">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
   
   
   
@@ -156,7 +294,10 @@ extra_css:
   
   
   
-
+  
+  
+  
+<!--
       <header>
         <div class="subtitle centered mb-4">
           <div class="underline">
@@ -348,4 +489,4 @@ extra_css:
       </div>
     </div>
   </section>
-</div>
+</div>-->
