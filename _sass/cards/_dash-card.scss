@@ -1,0 +1,116 @@
+@import "card-base";
+
+.card.dashboard.horizontal{
+	&:first-of-type{
+		margin-top: 0;
+	}
+	&.p2pu-orange, &.learning-circles{
+		border-top: 10px solid $p2pu-orange;
+		.status-tag {
+			background: $p2pu-orange;
+		}
+	}
+	&.p2pu-blue, &.courses{
+		border-top: 10px solid $p2pu-blue;
+		.status-tag {
+			background: $p2pu-blue;
+		}
+	}
+	&.p2pu-green, &.team{
+		border-top: 10px solid $p2pu-green;
+		.status-tag {
+			background: $p2pu-green;
+		}
+	}
+	&.p2pu-yellow, &.events{
+		border-top: 10px solid $p2pu-yellow;
+		.status-tag {
+			background: $p2pu-yellow;
+		}
+	}
+	table{
+		font-size: $font-size-base;
+		margin-top: 0;
+		vertical-align: middle;
+		@media (min-width: map-get($grid-breakpoints, "md")) {
+			margin-top: $padding-md;
+		}
+		thead{
+			border-bottom: 1px solid;
+		}
+		tbody{
+			tr{
+				border-bottom: 1px solid;
+				padding: $padding-sm 0;
+				@media (min-width: map-get($grid-breakpoints, "md")) {
+					padding: 0;
+					border-bottom: none;
+					>*:first-of-type{
+						padding-left: 0;
+					}
+					>*:last-of-type{
+						padding-right: 0;
+					}
+				}
+				td{
+					.material-icons{
+						display: none;
+					}
+					&.manage{
+						@media (min-width: map-get($grid-breakpoints, "md")) {
+							width: 0;
+						}
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: map-get($grid-breakpoints, "md")) {
+	.card.dashboard.horizontal{
+		>.row{
+			>* {
+				padding: 10px 0;
+				&.card-body{
+					padding-bottom: 0;
+				}
+			}
+			.card-footer{
+				padding: 0;
+				padding-bottom: 25px;
+			}
+		}
+		table{
+			width:100%;
+			thead{
+				display: none;
+			}
+			tbody{
+				tr{
+					display:block;
+					margin-bottom:$padding-sm;
+					td{
+						display:block;
+						width:100%;
+						padding-left: 0;
+						padding-right: 0;
+						&.name{
+							font-weight: $font-weight-bold;
+						}
+						&:not(.name){
+							font-size: $font-size-sm;
+						}
+						.material-icons{
+							vertical-align: middle;
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+}

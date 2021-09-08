@@ -48,7 +48,7 @@
               Password<span class="asteriskField">*</span> </label> <div class=""> <input type="password" name="password" class="textinput textInput form-control" required="" id="id_password"> </div> </div>
               <div class="row align-items-center justify-content-between" id="div_id_submit" >
                  <div class="col-7">
-                   <a href="https://learningcircles.p2pu.org/en/accounts/password_reset/" target="_blank" class="text-small">forgot password?</a>
+                   <a href="https://learningcircles.p2pu.org/en/accounts/password_reset/" target="_blank" class="text-sm">forgot password?</a>
                 </div>               
                   <div class="col-5">
                       <button type="submit" class="btn p2pu-btn btn-sm orange">Login</button>
@@ -71,60 +71,24 @@
   </div>
   <div class="header-bottom px-3 py-2 bg-cream-dark">
     <div class="container d-flex flex-wrap justify-content-center">
-      <nav class="col-12 col-md-auto py-0 ms-md-auto justify-content-center text-small navbar navbar-expand-md px-0 px-md-3">
+      <nav class="col-12 col-md-auto py-0 ms-md-auto justify-content-center text-sm navbar navbar-expand-md px-0 px-md-3">
         <div class="collapse navbar-nav navbar-collapse navbarNavDropdown align-items-stretch align-items-md-center">
-{% for link in site.data.navigation.top_level %}
+        {% for link in site.data.navigation.top_level %}
           <div class="dropdown nav-item">
             <a href="{{ link.url }}" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle {% if link.external %} external {% endif %}" {% if link.submenu %} data-bs-toggle="dropdown" {% endif %} aria-expanded="false" {% if link.external %}  target="_blank" {% endif %} > {{ link.text }}</a>
-{% if link.submenu %}
+            {% if link.submenu %}
             <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">      
-{% endif %}
-
-{% for sub_link in link.submenu %}
+            {% endif %}
+            {% for sub_link in link.submenu %}
               <li><a class="dropdown-item {% if link.external %} external {% endif %}" href="{{ sub_link.url }}" {% if link.external %}  target="_blank" {% endif %}>{{ sub_link.text }}</a></li>
-{% endfor %}
-{% if link.submenu %}
+              {% endfor %}
+              {% if link.submenu %}
             </ul>    
-{% endif %}
+            {% endif %}
         </div>
-{% endfor %}        
-                
-           
-      <!-- 
-          <div class="dropdown nav-item">
-            <a href="#" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Explore Learning Circles</a>
-          </div>
-          
-          <div class="dropdown nav-item">
-            <a href="#" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Knowledge Base</a>
-          </div>
-          
-          <div class="dropdown nav-item">
-            <a href="#" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Community</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
-              <li><a class="dropdown-item" href="#">Learning Resources</a></li>
-              <li><a class="dropdown-item" href="#">Forums</a></li>
-              <li><a class="dropdown-item" href="#">Events</a></li>
-            </ul>
-          </div>
-          
-          <div class="dropdown nav-item">
-            <a href="#" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
-              <li><a class="dropdown-item" href="#">About</a></li>
-              <li><a class="dropdown-item" href="#">Services</a></li>
-              <li><a class="dropdown-item" href="#">Jobs</a></li>
-              <li><a class="dropdown-item" href="#">Blog</a></li>
-              <li><a class="dropdown-item" href="#">Donate</a></li>
-            </ul>
-          </div>
-          
-          <div class="dropdown nav-item">
-            <a href="#" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Help</a>
-          </div>
- --> 
-        </div>       
-      </nav>
-    </div>
+        {% endfor %}        
+      </div>       
+    </nav>
+  </div>
 </header>
 

@@ -1,0 +1,393 @@
+---
+title: Learning Circles Dashboard
+layout: page
+header: page-header-1
+id: dashboard
+description: Organizer at Los Angeles Public Library
+button: <a href="#" class="btn p2pu-btn orange btn-sm">Manage Account</a>
+bundles:
+  - courses
+extra_css:
+- /assets/css/p2pu-dashboard.css
+---
+
+<section class="subheader container">
+  
+  <div class="alerts">
+    <div class="alert alert-info alert-dismissible" role="alert" id="liveAlert">
+      <strong>Welcome to your dashboard!</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="alert alert-warning alert-dismissible" role="alert" id="liveAlert">
+      Dismissible alert
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+  
+  <div class="row g-0 text-center text-md-start dot-sextet g-4">
+    <div class="col-12 col-md-6 col-lg-4 d-flex">
+      <div class="icon">
+        <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+      </div>
+      <h3>Getting started</h3>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-4 d-flex">
+      <div class="icon">
+        <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+      </div>
+      <h3>Knowledge Base</h3>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-4 d-flex">
+      <div class="icon">
+        <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+      </div>
+      <h3>Learning Resources</h3>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-4 d-flex">
+      <div class="icon">
+        <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+      </div>
+      <h3>Blog</h3>
+    </div>
+  
+    <div class="col-12 col-md-6 col-lg-4 d-flex">
+      <div class="icon">
+        <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+      </div>
+      <h3>Community Forum</h3>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-4 d-flex">
+      <div class="icon">
+        <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+      </div>
+      <h3>Support</h3>
+    </div>
+    	
+  </div>
+  
+</section>
+<section class="container">
+  
+ 
+  
+  <!--TODO: for dev purposes only - kill before golive -->
+  <div class="row">
+    
+    <div class="col-12">
+      
+        <div class="row grid ps-lg-2">
+          
+        
+          <div class="card px-4 dashboard horizontal events">
+            <div class="row">
+              <div class="card-header col-12 col-md-6 order-md-1">
+                <h2 class="card-title">Community Events</h2>
+              </div>
+
+                <div class="card-body col-12 order-md-3">
+                  <div class="table-responsive px-0">
+                    <table class="table table-borderless">
+                      <thead>
+                        <tr>
+                          <th scope="col">Event Title</th>
+                          <th scope="col">Location</th>
+                          <th scope="col"></th>
+                          <th scope="col">Next Meeting</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="learning-circle">
+                          <td class="name">Monthly Facilitator Call</td>
+                          <td class="venue"><span class="material-icons">place</span>google.meet/whatever</td>
+                          <td></td>
+                          <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
+                          <td class="manage">
+                            <a href="" class="btn p2pu-btn btn-sm gray col-sm-auto m-2">Sign Up</a>
+                          </td>
+                        </tr>
+                        <tr class="learning-circle">
+                          <td class="name">Monthly Facilitator Call</td>
+                          <td class="venue"><span class="material-icons">place</span>google.meet/whatever</td>
+                          <td></td>
+                          <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
+                          <td class="manage">
+                            <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Registered</a>
+                          </td>
+                        </tr>
+                        <tr class="learning-circle">
+                          <td class="name">Monthly Facilitator Call</td>
+                          <td class="venue"><span class="material-icons">place</span>google.meet/whatever</td>
+                          <td></td>
+                          <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
+                          <td class="manage">
+                            <a href="" class="btn p2pu-btn btn-sm gray col-sm-auto m-2">Sign Up</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>	
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card px-4 dashboard horizontal learning-circles">
+            <div class="row">
+
+                  
+              <div class="card-header col-12 col-md-6 order-md-1">
+                <h2 class="card-title">My Learning Circles</h2>
+              </div>
+              <div class="card-body col-12 order-md-3">
+                <div class="table-responsive px-0">
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Learning Circle</th>
+                        <th scope="col">Venue</th>
+                        <th scope="col">Signups</th>
+                        <th scope="col">Next Meeting</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="learning-circle">
+                        <td class="name">Shamanism for Fun and Profit</td>
+                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                        <td class="signups"><span class="material-icons">group</span>0</td>
+                        <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                        </td>
+                      </tr>
+                      <tr class="learning-circle">
+                        <td class="name">Home Trepanation for Beginners</td>
+                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                        <td class="signups"><span class="material-icons">group</span>0</td>
+                        <td class="next-meeting"><span class="material-icons">event</span>Sept 15, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                        </td>
+                      </tr>
+                      <tr class="learning-circle">
+                        <td class="name">Intermediate Interrogation Techniques</td>
+                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                        <td class="signups"><span class="material-icons">group</span>0</td>
+                        <td class="next-meeting"><span class="material-icons">event</span>Nov 1, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>	
+              </div>
+              <div class="card-footer col-12 col-md-6 order-md-2">
+                <a type="button" class="btn p2pu-btn green col-sm-auto m-2">Start a Learning Circle</a>
+              </div>
+                  
+                
+            </div>
+          </div>
+          
+          <div class="card px-4 dashboard horizontal courses">
+            <div class="row">
+              <div class="card-header col-12 col-md-6 order-md-1">
+                <h2 class="card-title">Courses I've Added</h2>
+              </div>
+
+              <div class="card-body col-12 order-md-3">
+                <div class="table-responsive px-0">
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Learning Circle</th>
+                        <th scope="col">Venue</th>
+                        <th scope="col">Signups</th>
+                        <th scope="col">Next Meeting</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="learning-circle">
+                        <td class="name">Shamanism for Fun and Profit</td>
+                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                        <td class="signups"><span class="material-icons">group</span>0</td>
+                        <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                        </td>
+                      </tr>
+                      <tr class="learning-circle">
+                        <td class="name">Home Trepanation for Beginners</td>
+                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                        <td class="signups"><span class="material-icons">group</span>0</td>
+                        <td class="next-meeting"><span class="material-icons">event</span>Sept 15, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                        </td>
+                      </tr>
+                      <tr class="learning-circle">
+                        <td class="name">Intermediate Interrogation Techniques</td>
+                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                        <td class="signups"><span class="material-icons">group</span>0</td>
+                        <td class="next-meeting"><span class="material-icons">event</span>Nov 1, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>	
+              </div>
+              <div class="card-footer col-12 col-md-6 order-md-2">
+                <a type="button" class="btn p2pu-btn green col-sm-auto m-2">Add a Course</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card px-4 dashboard horizontal team">
+            <div class="row">
+              <div class="card-header col-12 col-md-6 order-md-1">
+                <h2 class="card-title">My Teams's Learning Circles</h2>
+              </div>
+              <div class="card-body col-12 order-md-3">
+                <div class="table-responsive px-0">
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Learning Circle</th>
+                        <th scope="col">Venue</th>
+                        <th scope="col">Signups</th>
+                        <th scope="col">Next Meeting</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="learning-circle">
+                        <td class="name">Shamanism for Fun and Profit</td>
+                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                        <td class="signups"><span class="material-icons">group</span>0</td>
+                        <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                        </td>
+                      </tr>
+                      <tr class="learning-circle">
+                        <td class="name">Home Trepanation for Beginners</td>
+                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                        <td class="signups"><span class="material-icons">group</span>0</td>
+                        <td class="next-meeting"><span class="material-icons">event</span>Sept 15, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                        </td>
+                      </tr>
+                      <tr class="learning-circle">
+                        <td class="name">Intermediate Interrogation Techniques</td>
+                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                        <td class="signups"><span class="material-icons">group</span>0</td>
+                        <td class="next-meeting"><span class="material-icons">event</span>Nov 1, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>	
+              </div>
+              <div class="card-footer col-12 col-md-6 order-md-2">
+                <a type="button" class="btn p2pu-btn green col-sm-auto m-2">View Team Page</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card px-4 dashboard horizontal team">
+            <div class="row">
+              <div class="card-header col-12 col-md-6 order-md-1">
+                <h2 class="card-title">Team Management</h2>
+              </div>
+              
+              <div class="card-body col-12 order-md-3">
+                <div class="table-responsive px-0">
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Learning Circle</th>
+                        <th scope="col">Venue</th>
+                        <th scope="col">Signups</th>
+                        <th scope="col">Next Meeting</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="learning-circle">
+                        <td class="name">Shamanism for Fun and Profit</td>
+                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                        <td class="signups"><span class="material-icons">group</span>0</td>
+                        <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                        </td>
+                      </tr>
+                      <tr class="learning-circle">
+                        <td class="name">Home Trepanation for Beginners</td>
+                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                        <td class="signups"><span class="material-icons">group</span>0</td>
+                        <td class="next-meeting"><span class="material-icons">event</span>Sept 15, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                        </td>
+                      </tr>
+                      <tr class="learning-circle">
+                        <td class="name">Intermediate Interrogation Techniques</td>
+                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                        <td class="signups"><span class="material-icons">group</span>0</td>
+                        <td class="next-meeting"><span class="material-icons">event</span>Nov 1, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>	
+              </div>
+              <div class="card-footer col-12 col-md-6 order-md-2">
+                <a type="button" class="btn p2pu-btn green col-sm-auto m-2">Edit Team Information</a>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- /dev-->
+<!--
+  <div id="search-courses-component" data-api-origin="{{site.default_base_api_endpoint}}"></div>
+</section>
+
+<section class="alternate-cta">
+  <div class="add-course">
+    <p class="large">Have something else in mind?</p>
+    <a href="https://learningcircles.p2pu.org/en/course/create/">
+      <button class="btn p2pu-btn dark"><i class="material-icons">exit_to_app</i>Add an online course</button>
+    </a>
+  </div>
+  <div class="divider"></div>
+  <div class="create-course">
+    <p class="large">Still can't find what you're looking for?</p>
+    <a href="https://course-in-a-box.p2pu.org/">
+      <button class="btn p2pu-btn dark"><i class="material-icons">exit_to_app</i>Create a course</button>
+    </a>
+  </div>
+</section>-->

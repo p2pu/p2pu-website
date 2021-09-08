@@ -4,14 +4,9 @@ layout: page
 header: page-header-2
 id: courses
 description: Browse guides to popular learning circle topics and pick a course for your learning circle from our library of free learning resources, tested and curated by the P2PU community. 
-markup: 
-  <div class="py-3 px-sm-3 col-12 col-md-6 col-xl-12 d-flex align-items-center">Don’t see what you’re looking for?</div>
-  <div class="py-3 px-sm-3 col-12 col-md-6 col-xl-12 d-flex align-items-center">
-    <a href="https://learningcircles.p2pu.org/en/course/create/" class="col-12 btn btn-sm p2pu-btn secondary orange">Add a Course</a>
-  </div>
-  <div class="py-3 px-sm-3 col-12 col-md-6 col-xl-12 d-flex align-items-start">
-    <a href='https://course-in-a-box.p2pu.org/' class="col-12 btn btn-sm p2pu-btn orange">Create a Course</a>
-  </div>
+text: Don’t see what you’re looking for?
+button1: <a href="https://learningcircles.p2pu.org/en/course/create/" class="col-12 btn p2pu-btn secondary orange btn-sm-sm btn-base-xl">Add a Course</a>
+button2: <a href='https://course-in-a-box.p2pu.org/' class="col-12 btn p2pu-btn orange btn-sm-sm btn-base-xl">Create a Course</a>
 bundles:
   - learning-resources
 extra_css:
@@ -20,7 +15,7 @@ extra_css:
 ---
 
 <section class="subheader container">
-  <h4>Topic Guides</h4>
+  <h2 class="sans-serif">Topic Guides</h2>
   <div class="row grid">
     {% for topic in site.topics %}
     <div class="grid-item col-md-6 col-lg-4">
@@ -46,9 +41,9 @@ extra_css:
   <div class="row justify-content-around align-items-start">
     
     
-    <div class="filter-sidebar sidebar sticky-top col-0 col-lg-4 col-xl-3 pe-lg-3 pe-xl-4">
+    <div class="filter-sidebar sidebar sticky-top col-0 col-lg-4 col-xl-3">
     
-      <nav class="navbar-expand-lg row">
+      <nav class="navbar-expand-lg">
         
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#course-filters" aria-controls="course-filters">
             <span class="material-icons">
@@ -57,14 +52,14 @@ extra_css:
         </button>
         
         
-        <div class="offcanvas offcanvas-start filters" tabindex="-1" id="course-filters" aria-labelledby="filters-label">
+        <div class="offcanvas offcanvas-start filters wrap pe-lg-3 pe-xl-4" tabindex="-1" id="course-filters" aria-labelledby="filters-label">
           
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="filters-label">Filter Courses</h5>
+            <h3 class="offcanvas-title" id="filters-label">Filter Courses</h3>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           
-          <div class="filter-fields row g-0">
+          <div class="filter-fields row g-0 offcanvas-body">
          
             <div class="col-12">
               
@@ -92,70 +87,61 @@ extra_css:
             <div class="col-12">
               
               <form class="search">
-                <label for="search-input" class="form-label">Search</label>
-                <div class="input-group">
-                  <input id="search-input" type="search" class="form-control search-input" placeholder="Keyword, organization, etc." aria-label="search terms" aria-describedby="search-icon">
+                <label for="search-input" class="form-label">Topics</label>
+                <div class="badges popular-topics">
+                  <span class="font-weight-bold text-xxsm text-uppercase">Popular Topics:</span>
+                  <span class="badge topic">Business</span>
+                  <span class="badge topic">Bowling</span>
+                  <span class="badge topic">Racial</span>
+                </div>
+                <div class="input-group pt-4">
+                  <input id="search-input" type="search" class="form-control search-input" placeholder="start typing a topic" aria-label="search terms" aria-describedby="search-icon">
+                </div>
+                <div class="badges selected pt-4">
+                  <span class="badge topic-selected topic"><span class="material-icons dismiss">close</span>Animal Husbandry</span>
+                  <span class="badge topic-selected topic"><span class="material-icons dismiss">close</span>Crochet</span>
+                  <span class="badge topic-selected topic"><span class="material-icons dismiss">close</span>Cryptozoology</span>
                 </div>
               </form>
 
-              <form class="filter">
-                 <label for="order-input" class="form-label">Order By</label>
-                 <div class="input-group">
-                   <select class="form-select form-control" aria-label="Default select example" placeholder="Order by popularity, rating, etc." required>
-                     <option value="" disabled selected hidden>Order by popularity, rating</option>
-                     <option value="1">popularity</option>
-                     <option value="2">rating</option>
-                     <option value="3">etc.</option>
-                   </select>
-                 </div>
-              </form>
-              
             </div>
             
             <div class="col-12">
               
               <form class="search">
-                <label for="search-input" class="form-label">Search</label>
-                <div class="input-group">
-                  <input id="search-input" type="search" class="form-control search-input" placeholder="Keyword, organization, etc." aria-label="search terms" aria-describedby="search-icon">
+                <label for="search-input" class="form-label">Languages</label>
+                <div class="input-group pt-4">
+                  <input id="search-input" type="search" class="form-control search-input" placeholder="select a language" aria-label="search terms" aria-describedby="search-icon">
+                </div>
+                <div class="badges selected pt-4">
+                  <span class="badge topic-selected topic"><span class="material-icons dismiss">close</span>English</span>
+                  <span class="badge topic-selected topic"><span class="material-icons dismiss">close</span>Chinese</span>
+                  <span class="badge topic-selected topic"><span class="material-icons dismiss">close</span>Spanish</span>
                 </div>
               </form>
 
-              <form class="filter">
-                 <label for="order-input" class="form-label">Order By</label>
-                 <div class="input-group">
-                   <select class="form-select form-control" aria-label="Default select example" placeholder="Order by popularity, rating, etc." required>
-                     <option value="" disabled selected hidden>Order by popularity, rating</option>
-                     <option value="1">popularity</option>
-                     <option value="2">rating</option>
-                     <option value="3">etc.</option>
-                   </select>
-                 </div>
-              </form>
-              
             </div>
             
             <div class="col-12">
               
               <form class="search">
-                <label for="search-input" class="form-label">Search</label>
+                <label for="search-input" class="form-label">FACILITATOR GUIDES</label>
                 <div class="input-group">
-                  <input id="search-input" type="search" class="form-control search-input" placeholder="Keyword, organization, etc." aria-label="search terms" aria-describedby="search-icon">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="online">
+                    <label class="form-check-label" for="online">Courses with facilitator guides</label>
+                  </div>
                 </div>
               </form>
-
-              <form class="filter">
-                 <label for="order-input" class="form-label">Order By</label>
-                 <div class="input-group">
-                   <select class="form-select form-control" aria-label="Default select example" placeholder="Order by popularity, rating, etc." required>
-                     <option value="" disabled selected hidden>Order by popularity, rating</option>
-                     <option value="1">popularity</option>
-                     <option value="2">rating</option>
-                     <option value="3">etc.</option>
-                   </select>
-                 </div>
+              <form class="search">
+                <label for="search-input" class="form-label">OER Mode</label>
+                <div class="input-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="online">
+                    <label class="form-check-label" for="online">Only show open educational resources (OER)</label>
+                  </div>
+                </div>
               </form>
-              
             </div>
            
           </div>
