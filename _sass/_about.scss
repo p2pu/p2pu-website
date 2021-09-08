@@ -13,7 +13,8 @@
   }
   section{
     >.container{
-      padding: $padding-lg 0;
+      padding-top: $padding-lg;
+      padding-bottom: $padding-lg;
       border-top: 12px solid $gray-snow;
       @media (min-width: map-get($grid-breakpoints, "md")) {
         padding-bottom: $padding-lg * 2;
