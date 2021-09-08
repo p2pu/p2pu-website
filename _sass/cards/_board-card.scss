@@ -1,27 +1,24 @@
 @import "card-base";
 
-.card.staff{
+
+.card.board{
 	box-shadow: none;
 	background: transparent;
 	border: 0;
 	.card-image{
 		height: 0;
-		padding-top: 100%;
 		position: relative;
+		width: 80%;
+		padding-top: 80%;
+		margin-left: 10%;
 		img{
 			position: absolute;
 			top: 0;
 		}
 	}
-	.card-header, .card-body, .card-footer {
+	.card-header {
 		padding-left: 0;
 		padding-right: 0;
-	}
-	.card-header{
-		h3+p{
-			font-size: $font-size-lg;
-			font-weight: $font-weight-bold;
-			color: $text-muted;
-		}
+		text-align: center;
 	}
 }
