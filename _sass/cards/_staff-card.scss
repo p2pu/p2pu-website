@@ -1,0 +1,31 @@
+@import "card-base";
+
+.card.staff{
+	.card-image{
+		height: 0;
+		padding-top: 100%;
+		position: relative;
+		img{
+			position: absolute;
+			top: 0;
+		}
+	}
+}
+.card.staff2{
+	box-shadow: none;
+	background: transparent;
+	border: 0;
+	.card-image{
+		height: 0;
+		padding-top: 100%;
+		position: relative;
+		img{
+			position: absolute;
+			top: 0;
+		}
+	}
+	.card-header, .card-body, .card-footer {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
