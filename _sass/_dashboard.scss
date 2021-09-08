@@ -9,5 +9,13 @@
 			}
 		}
 	}
+	.dashboard-cards{
+		>row{
+			border-top: 1px solid;
+			@media (min-width: map-get($grid-breakpoints, "md")) {
+				border-top: 0;
+			}
+		}
+	}
 }
 

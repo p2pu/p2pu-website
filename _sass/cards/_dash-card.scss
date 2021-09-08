@@ -37,6 +37,17 @@
 		}
 		thead{
 			border-bottom: 1px solid;
+			tr{
+				th{
+					font-size: $font-size-sm;
+					@media (min-width: map-get($grid-breakpoints, "lg")) {
+						font-size: $font-size-base;
+					}
+					&:first-of-type{
+						padding-left: 0;
+					}
+				}
+			}
 		}
 		tbody{
 			tr{
@@ -53,6 +64,11 @@
 					}
 				}
 				td{
+					font-size: $font-size-sm;
+					@media (min-width: map-get($grid-breakpoints, "xl")) {
+						font-size: $font-size-base;
+						
+					}
 					.material-icons{
 						display: none;
 					}
@@ -70,6 +86,7 @@
 
 @media (max-width: map-get($grid-breakpoints, "md")) {
 	.card.dashboard.horizontal{
+		padding-bottom: $padding-sm;
 		>.row{
 			>* {
 				padding: 10px 0;
@@ -77,20 +94,37 @@
 					padding-bottom: 0;
 				}
 			}
+			.card-header{
+				.card-title{
+					margin-bottom: 0;
+				}
+			}
 			.card-footer{
 				padding: 0;
-				padding-bottom: 25px;
+				padding-bottom:$padding-sm;
+				margin-top:$padding-sm;
+				padding-top:$padding-sm * 2;
+				border-top: 1px solid;
+				.btn {
+					margin-right: 0;
+					margin-top: 0;
+				}
 			}
 		}
 		table{
 			width:100%;
+			margin-bottom: 0;
 			thead{
 				display: none;
 			}
 			tbody{
 				tr{
 					display:block;
-					margin-bottom:$padding-sm;
+					&:last-of-type{
+						margin-bottom: 0;
+						padding-bottom: 0;
+						border-bottom: none;
+					}
 					td{
 						display:block;
 						width:100%;
@@ -98,13 +132,16 @@
 						padding-right: 0;
 						&.name{
 							font-weight: $font-weight-bold;
+							padding-bottom: $padding-xs;
+							font-size: $font-size-sm;
 						}
 						&:not(.name){
-							font-size: $font-size-sm;
+							font-size: $font-size-xsm;
 						}
 						.material-icons{
 							vertical-align: middle;
 							display: inline-block;
+							margin-right: $padding-sm;
 						}
 					}
 				}

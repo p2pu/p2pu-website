@@ -1,3 +1,15 @@
+#about{
+  .header-wrap{
+    background-color: $p2pu-light-blue;
+    overflow: hidden;
+    .subtitle{
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+
+/*
 .people-img {
   width: 150px;
   height: 150px;
@@ -28,4 +40,4 @@
       filter: grayscale(1);
     }
   }
-}
+}*/

@@ -24,7 +24,7 @@ extra_css:
     </div>
   </div>
   
-  <div class="row g-0 text-center text-md-start dot-sextet g-4">
+  <div class="row g-0 text-start dot-sextet g-4">
     <div class="col-12 col-md-6 col-lg-4 d-flex">
       <div class="icon">
         <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
@@ -70,16 +70,16 @@ extra_css:
   </div>
   
 </section>
-<section class="container">
+<section class="container dashboard-cards">
   
  
   
   <!--TODO: for dev purposes only - kill before golive -->
-  <div class="row">
+  <div class="row mt-4 mt-md-5 pt-4 pt-md-5">
     
     <div class="col-12">
       
-        <div class="row grid ps-lg-2">
+        <div class="row grid g-0 ps-lg-2">
           
         
           <div class="card px-4 dashboard horizontal events">
@@ -87,120 +87,131 @@ extra_css:
               <div class="card-header col-12 col-md-6 order-md-1">
                 <h2 class="card-title">Community Events</h2>
               </div>
-
-                <div class="card-body col-12 order-md-3">
-                  <div class="table-responsive px-0">
-                    <table class="table table-borderless">
-                      <thead>
-                        <tr>
-                          <th scope="col">Event Title</th>
-                          <th scope="col">Location</th>
-                          <th scope="col"></th>
-                          <th scope="col">Next Meeting</th>
-                          <th scope="col"></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr class="learning-circle">
-                          <td class="name">Monthly Facilitator Call</td>
-                          <td class="venue"><span class="material-icons">place</span>google.meet/whatever</td>
-                          <td></td>
-                          <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
-                          <td class="manage">
-                            <a href="" class="btn p2pu-btn btn-sm gray col-sm-auto m-2">Sign Up</a>
-                          </td>
-                        </tr>
-                        <tr class="learning-circle">
-                          <td class="name">Monthly Facilitator Call</td>
-                          <td class="venue"><span class="material-icons">place</span>google.meet/whatever</td>
-                          <td></td>
-                          <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
-                          <td class="manage">
-                            <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Registered</a>
-                          </td>
-                        </tr>
-                        <tr class="learning-circle">
-                          <td class="name">Monthly Facilitator Call</td>
-                          <td class="venue"><span class="material-icons">place</span>google.meet/whatever</td>
-                          <td></td>
-                          <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
-                          <td class="manage">
-                            <a href="" class="btn p2pu-btn btn-sm gray col-sm-auto m-2">Sign Up</a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>	
-                </div>
+              <div class="card-body col-12 order-md-3">
+                <div class="table-responsive px-0">
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Event Title</th>
+                        <th scope="col">Location</th>
+                        <th scope="col"></th>
+                       <th colspan="2" scope="col">Next Meeting</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="learning-circle">
+                        <td class="name">Monthly Facilitator Call</td>
+                        <td class="venue"><span class="material-icons">place</span>google.meet/whatever</td>
+                        <td></td>
+                        <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm gray col-sm-auto m-md-2">Sign Up</a>
+                        </td>
+                      </tr>
+                      <tr class="learning-circle">
+                        <td class="name">Monthly Facilitator Call</td>
+                        <td class="venue"><span class="material-icons">place</span>google.meet/whatever</td>
+                        <td></td>
+                        <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Registered</a>
+                        </td>
+                      </tr>
+                      <tr class="learning-circle">
+                        <td class="name">Monthly Facilitator Call</td>
+                        <td class="venue"><span class="material-icons">place</span>google.meet/whatever</td>
+                        <td></td>
+                        <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
+                        <td class="manage">
+                          <a href="" class="btn p2pu-btn btn-sm gray col-sm-auto m-md-2">Sign Up</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>	
               </div>
             </div>
           </div>
           
           <div class="card px-4 dashboard horizontal learning-circles">
             <div class="row">
-
-                  
               <div class="card-header col-12 col-md-6 order-md-1">
                 <h2 class="card-title">My Learning Circles</h2>
               </div>
-              <div class="card-body col-12 order-md-3">
-                <div class="table-responsive px-0">
-                  <table class="table table-borderless">
-                    <thead>
-                      <tr>
-                        <th scope="col">Learning Circle</th>
-                        <th scope="col">Venue</th>
-                        <th scope="col">Signups</th>
-                        <th scope="col">Next Meeting</th>
-                        <th scope="col"></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="learning-circle">
-                        <td class="name">Shamanism for Fun and Profit</td>
-                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
-                        <td class="signups"><span class="material-icons">group</span>0</td>
-                        <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
-                        <td class="manage">
-                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
-                        </td>
-                      </tr>
-                      <tr class="learning-circle">
-                        <td class="name">Home Trepanation for Beginners</td>
-                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
-                        <td class="signups"><span class="material-icons">group</span>0</td>
-                        <td class="next-meeting"><span class="material-icons">event</span>Sept 15, 2021</td>
-                        <td class="manage">
-                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
-                        </td>
-                      </tr>
-                      <tr class="learning-circle">
-                        <td class="name">Intermediate Interrogation Techniques</td>
-                        <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
-                        <td class="signups"><span class="material-icons">group</span>0</td>
-                        <td class="next-meeting"><span class="material-icons">event</span>Nov 1, 2021</td>
-                        <td class="manage">
-                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>	
-              </div>
-              <div class="card-footer col-12 col-md-6 order-md-2">
-                <a type="button" class="btn p2pu-btn green col-sm-auto m-2">Start a Learning Circle</a>
-              </div>
+              
+              
+              
+              <div class="dashboard-cards col-12 order-md-3">
+                <nav class="px-3">
+                  <div class="nav nav-tabs" id="learning-circles-nav-tabs" role="tablist">
+                    <button class="ps-0 nav-link active" id="active-learning-circles-tab" data-bs-toggle="tab" data-bs-target="#active-learning-circles" type="button" role="tab" aria-controls="active-learning-circles" aria-selected="true">Active & Upcoming</button>
+                    <button class="nav-link" id="completed-learning-circles-tab" data-bs-toggle="tab" data-bs-target="#completed-learning-circles" type="button" role="tab" aria-controls="completed-learning-circles" aria-selected="false">Completed</button>
+                  </div>
+                </nav>
+                <div class="tab-content" id="learning-circles-nav-tabsContent">
                   
-                
+                  <div class="tab-pane fade show active row" id="active-learning-circles" role="tabpanel" aria-labelledby="active-learning-circles-tab">
+                            
+                    <div class="card-body col-12 order-md-3">
+                      <div class="table-responsive px-0">
+                        <table class="table table-borderless">
+                          <thead>
+                            <tr>
+                              <th scope="col">Learning Circle</th>
+                              <th scope="col">Venue</th>
+                              <th scope="col">Signups</th>
+                             <th colspan="2" scope="col">Next Meeting</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="learning-circle">
+                              <td class="name">Shamanism for Fun and Profit</td>
+                              <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                              <td class="signups"><span class="material-icons">group</span>0</td>
+                              <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
+                              <td class="manage">
+                                <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Manage</a>
+                              </td>
+                            </tr>
+                            <tr class="learning-circle">
+                              <td class="name">Home Trepanation for Beginners</td>
+                              <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                              <td class="signups"><span class="material-icons">group</span>0</td>
+                              <td class="next-meeting"><span class="material-icons">event</span>Sept 15, 2021</td>
+                              <td class="manage">
+                                <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Manage</a>
+                              </td>
+                            </tr>
+                            <tr class="learning-circle">
+                              <td class="name">Intermediate Interrogation Techniques</td>
+                              <td class="venue"><span class="material-icons">place</span>Minneapolis Public Library</td>
+                              <td class="signups"><span class="material-icons">group</span>0</td>
+                              <td class="next-meeting"><span class="material-icons">event</span>Nov 1, 2021</td>
+                              <td class="manage">
+                                <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Manage</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>	
+                    </div>
+                  </div>
+                  <div class="tab-pane fade row" id="completed-learning-circles" role="tabpanel" aria-labelledby="completed-learning-circles-tab">...</div>
+                </div>
+              </div>
+                    
+              <div class="card-footer text-center text-md-end col-12 col-md-6 order-md-2">
+                <a type="button" class="btn p2pu-btn orange col-sm-auto m-md-2">Start a Learning Circle</a>
+              </div>
             </div>
           </div>
+
           
           <div class="card px-4 dashboard horizontal courses">
             <div class="row">
               <div class="card-header col-12 col-md-6 order-md-1">
                 <h2 class="card-title">Courses I've Added</h2>
               </div>
-
               <div class="card-body col-12 order-md-3">
                 <div class="table-responsive px-0">
                   <table class="table table-borderless">
@@ -209,8 +220,7 @@ extra_css:
                         <th scope="col">Learning Circle</th>
                         <th scope="col">Venue</th>
                         <th scope="col">Signups</th>
-                        <th scope="col">Next Meeting</th>
-                        <th scope="col"></th>
+                       <th colspan="2" scope="col">Next Meeting</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -220,7 +230,7 @@ extra_css:
                         <td class="signups"><span class="material-icons">group</span>0</td>
                         <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
                         <td class="manage">
-                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Manage</a>
                         </td>
                       </tr>
                       <tr class="learning-circle">
@@ -229,7 +239,7 @@ extra_css:
                         <td class="signups"><span class="material-icons">group</span>0</td>
                         <td class="next-meeting"><span class="material-icons">event</span>Sept 15, 2021</td>
                         <td class="manage">
-                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Manage</a>
                         </td>
                       </tr>
                       <tr class="learning-circle">
@@ -238,15 +248,15 @@ extra_css:
                         <td class="signups"><span class="material-icons">group</span>0</td>
                         <td class="next-meeting"><span class="material-icons">event</span>Nov 1, 2021</td>
                         <td class="manage">
-                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Manage</a>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>	
               </div>
-              <div class="card-footer col-12 col-md-6 order-md-2">
-                <a type="button" class="btn p2pu-btn green col-sm-auto m-2">Add a Course</a>
+              <div class="card-footer text-center text-md-end col-12 col-md-6 order-md-2">
+                <a type="button" class="btn p2pu-btn blue col-sm-auto m-md-2">Add a Course</a>
               </div>
             </div>
           </div>
@@ -264,8 +274,7 @@ extra_css:
                         <th scope="col">Learning Circle</th>
                         <th scope="col">Venue</th>
                         <th scope="col">Signups</th>
-                        <th scope="col">Next Meeting</th>
-                        <th scope="col"></th>
+                       <th colspan="2" scope="col">Next Meeting</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -275,7 +284,7 @@ extra_css:
                         <td class="signups"><span class="material-icons">group</span>0</td>
                         <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
                         <td class="manage">
-                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Manage</a>
                         </td>
                       </tr>
                       <tr class="learning-circle">
@@ -284,7 +293,7 @@ extra_css:
                         <td class="signups"><span class="material-icons">group</span>0</td>
                         <td class="next-meeting"><span class="material-icons">event</span>Sept 15, 2021</td>
                         <td class="manage">
-                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Manage</a>
                         </td>
                       </tr>
                       <tr class="learning-circle">
@@ -293,15 +302,15 @@ extra_css:
                         <td class="signups"><span class="material-icons">group</span>0</td>
                         <td class="next-meeting"><span class="material-icons">event</span>Nov 1, 2021</td>
                         <td class="manage">
-                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Manage</a>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>	
               </div>
-              <div class="card-footer col-12 col-md-6 order-md-2">
-                <a type="button" class="btn p2pu-btn green col-sm-auto m-2">View Team Page</a>
+              <div class="card-footer text-center text-md-end col-12 col-md-6 order-md-2">
+                <a type="button" class="btn p2pu-btn green col-sm-auto m-md-2">View Team Page</a>
               </div>
             </div>
           </div>
@@ -311,7 +320,6 @@ extra_css:
               <div class="card-header col-12 col-md-6 order-md-1">
                 <h2 class="card-title">Team Management</h2>
               </div>
-              
               <div class="card-body col-12 order-md-3">
                 <div class="table-responsive px-0">
                   <table class="table table-borderless">
@@ -320,8 +328,7 @@ extra_css:
                         <th scope="col">Learning Circle</th>
                         <th scope="col">Venue</th>
                         <th scope="col">Signups</th>
-                        <th scope="col">Next Meeting</th>
-                        <th scope="col"></th>
+                       <th colspan="2" scope="col">Next Meeting</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -331,7 +338,7 @@ extra_css:
                         <td class="signups"><span class="material-icons">group</span>0</td>
                         <td class="next-meeting"><span class="material-icons">event</span>July 21, 2021</td>
                         <td class="manage">
-                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Manage</a>
                         </td>
                       </tr>
                       <tr class="learning-circle">
@@ -340,7 +347,7 @@ extra_css:
                         <td class="signups"><span class="material-icons">group</span>0</td>
                         <td class="next-meeting"><span class="material-icons">event</span>Sept 15, 2021</td>
                         <td class="manage">
-                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Manage</a>
                         </td>
                       </tr>
                       <tr class="learning-circle">
@@ -349,19 +356,18 @@ extra_css:
                         <td class="signups"><span class="material-icons">group</span>0</td>
                         <td class="next-meeting"><span class="material-icons">event</span>Nov 1, 2021</td>
                         <td class="manage">
-                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">Manage</a>
+                          <a href="" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-md-2">Manage</a>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>	
               </div>
-              <div class="card-footer col-12 col-md-6 order-md-2">
-                <a type="button" class="btn p2pu-btn green col-sm-auto m-2">Edit Team Information</a>
+              <div class="card-footer text-center text-md-end col-12 col-md-6 order-md-2">
+                <a type="button" class="btn p2pu-btn green col-sm-auto m-md-2">Edit Team Information</a>
               </div>
             </div>
           </div>
-          
           
         </div>
       </div>
