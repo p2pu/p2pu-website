@@ -71,67 +71,9 @@ extra_css:
       <h2>P2PU Staff</h2>
       <p>P2PU is led by a small, distributed staff who maintain the community, develop software tools, and create courses and resources that reinforce the learning circle methodology, all of which is made available to the public for free. </p>
       <div class="row grid">
-        
-        <div class="grid-item col-md-6 col-lg-4">
-          <div class="card staff">
-            <div class="card-image">
-              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
-            </div>
-           <div class="card-header">
-             <h3>Becky Margraf</h3>
-             <p>Production Lead</p>
-           </div>
-            <div class="card-body">
-              <p>Becky is a designer and toymaker motivated by learning about learning. She makes sure there’s interesting data coming in from the community and going back out into the world in all ways possible. She currently lives in Portland, OR and Berlin, Germany.</p>
-            </div>
-            <div class="card-footer">
-              <span><a href="https://twitter.com/code27_" target="_blank"><i class="fab fa-twitter"></i> code27_</a></span>|
-              <span><a href="https://www.thebacklog.net" target="_blank">www.thebacklog.net</a></span>
-            </div>
-          </div>
-        </div>
-          
-        <div class="grid-item col-md-6 col-lg-4">
-          <div class="card staff">
-            <div class="card-image">
-              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
-            </div>
-            <div class="card-header">
-              <h3>Becky Margraf</h3>
-              <p>Production Lead</p>
-            </div>
-            <div class="card-body">
-              <p>Becky is a designer and toymaker motivated by learning about learning. She makes sure there’s interesting data coming in from the community and going back out into the world in all ways possible. She currently lives in Portland, OR and Berlin, Germany.</p>
-            </div>
-            <div class="card-footer">
-              <span><a href="https://twitter.com/code27_" target="_blank"><i class="fab fa-twitter"></i> code27_</a></span>|
-              <span><a href="https://www.thebacklog.net" target="_blank">www.thebacklog.net</a></span>
-            </div>
-          </div>
-        </div>
-          
-        <div class="grid-item col-md-6 col-lg-4">
-          <div class="card staff">
-            <div class="card-image">
-              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
-            </div>
-            <div class="card-header">
-              <h3>Becky Margraf</h3>
-              <p>Production Lead</p>
-            </div>
-            <div class="card-body">
-              <p>Becky is a designer and toymaker motivated by learning about learning. She makes sure there’s interesting data coming in from the community and going back out into the world in all ways possible. She currently lives in Portland, OR and Berlin, Germany.</p>
-            </div>
-            <div class="card-footer">
-              <span><a href="https://twitter.com/code27_" target="_blank"><i class="fab fa-twitter"></i> code27_</a></span>|
-              <span><a href="https://www.thebacklog.net" target="_blank">www.thebacklog.net</a></span>
-            </div>
-          </div>
-        </div>
-          
-          
-        
-        
+        {% for person in site.data.people.staff %}
+            {% include person.html %}
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -142,66 +84,45 @@ extra_css:
       <p>Teams are organized learning circle communities, typically affiliated with library systems and community-based organizations. <a href="#">Start a team.</a></p>
       <div class="row grid">
         
-        <div class="grid-item col-md-6 col-lg-4">
-          <div class="card teams">
-            <div class="card-image">
-              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
-            </div>
-            <div class="card-header">
-              <h3>Team Name</h3>
-            </div>
-            <div class="card-body">
-              <span>City, State, Country</span>
-              <span>Organized by [organizer first names, up to 3]</span>
-              <span>Established: [Month Year]</span>
-            </div>
-            <div class="card-footer">
-              <a type="button" class="btn p2pu-btn btn-sm gray col-sm-auto m-2">See Team Page</a>
-            </div>
-          </div>
-        </div>
-          
-        <div class="grid-item col-md-6 col-lg-4">
-          <div class="card teams">
-            <div class="card-image">
-              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
-            </div>
-            <div class="card-header">
-              <h3>Team Name</h3>
-            </div>
-            <div class="card-body">
-              <span>City, State, Country</span>
-              <span>Organized by [organizer first names, up to 3]</span>
-              <span>Established: [Month Year]</span>
-            </div>
-            <div class="card-footer">
-              <a type="button" class="btn p2pu-btn btn-sm gray col-sm-auto m-2">See Team Page</a>
-            </div>
-          </div>
-        </div>
-          
-        <div class="grid-item col-md-6 col-lg-4">
-          <div class="card teams">
-            <div class="card-image">
-              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
-            </div>
-            <div class="card-header">
-            <h3>Team Name</h3>
-            </div>
-            <div class="card-body">
-              <span>City, State, Country</span>
-              <span>Organized by [organizer first names, up to 3]</span>
-              <span>Established: [Month Year]</span>
-            </div>
-            <div class="card-footer">
-              <a type="button" class="btn p2pu-btn btn-sm gray col-sm-auto m-2">See Team Page</a>
-            </div>
-          </div>
-        </div>
-          
-          
-        
-        
+        {% for team in site.data.teams.items %}
+        {% assign organizers = team.facilitators | where:"role","ORGANIZER" %}
+           <div class="grid-item col-md-6 col-lg-4">
+             <div class="card teams">
+               <div class="card-image">
+                {% if team.image_url %}
+                  <img class="card-img-top" src="{{team.image_url}}" />
+                {% else if team.coordinates %}
+                  <img class="card-img-top" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
+                {% endif %}
+               </div>
+               
+               <div class="card-header">
+                 <h3>{{ team.name }}</h3>
+               </div>
+               <div class="card-body">
+                 {% if organizers %}
+                  <span>{{ organizers.first.city }}</span>
+                 
+                 <span>Organized by
+                   {% for organizer in organizers limit:3 %}
+                   {% if organizer == organizers.last %}
+                   {{ organizer.first_name }}
+                   {% else %}
+                   {{ organizer.first_name | append: ", " }}
+                   {% endif %}
+                 {% endfor %}
+                   
+                 </span>
+                 {% endif %}
+                 <span>Established: {{ team.date_established }}</span>
+               </div>
+               <div class="card-footer">
+                 <a type="button" class="btn p2pu-btn btn-sm gray col-sm-auto m-2"  href="/{{ team.page_slug }}">See Team Page</a>
+               </div>
+             </div>
+           </div>       
+        {% endfor %}
+
       </div>
     </div>
   </section>
@@ -212,45 +133,10 @@ extra_css:
       <p>P2PU is led by a small, distributed staff who maintain the community, develop software tools, and create courses and resources that reinforce the learning circle methodology, all of which is made available to the public for free. </p>
       <div class="row grid">
         
-        <div class="grid-item col-md-6 col-lg-4">
-          <div class="card board">
-            <div class="card-image">
-              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
-            </div>
-            <div class="card-header">
-              <h4>Ahrash Bissell<br>
-                <small class="text-muted">President, Monterey Institute for Technology and Education</small>
-              </h4>
-            </div>
-          </div>
-        </div>
-          
-        <div class="grid-item col-md-6 col-lg-4">
-          <div class="card board">
-            <div class="card-image">
-              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
-            </div>
-            <div class="card-header">
-              <h4>Ahrash Bissell<br>
-                <small class="text-muted">President, Monterey Institute for Technology and Education</small>
-              </h4>
-            </div>
-          </div>
-        </div>
-          
-        <div class="grid-item col-md-6 col-lg-4">
-          <div class="card board">
-            <div class="card-image">
-              <img src="/assets/images/people/becky.png" alt="Becky Margraf Image" class="card-img-top">
-            </div>
-            <div class="card-header">
-              <h4>Ahrash Bissell<br>
-                <small class="text-muted">President, Monterey Institute for Technology and Education</small>
-              </h4>
-            </div>
-          </div>
-        </div>
-        
+        {% for person in site.data.people.board %}
+          {% include person.html %}
+        {% endfor %}
+  
       </div>
     </div>
   </section>
@@ -258,226 +144,20 @@ extra_css:
   <section class="funders" data-aos="fade-up">
     <div class="container">
       <h2>Supported by</h2>
-      <p>Many people have made P2PU what it is today. A special thanks to: Adam Bush, Alan Webb, Aleksander Stachurka, Alex Ruthmann, Alexander Kehayias, Alison Jean Cole, Andrew Rens, Beck Pitt, Carl Ruppin, Cathy Casserly, Chloe Varelidi, Chris Ewald, Dany Javier Bautista Montaña, Erika Pogorelc, Gary Matkin, Jane Park, Jessy Kate Schingler, João Menezes, Joel Thierstein, John Britton, Jose Flores, Juliana Muchai, Karen Fasimpaur, Karen Gabriels, Kate Lapinski, Katherine McConachie, Larry Cooperman, Laura Hilliger, Lila Bailey, Maria Droujkova, Mark Andersen, Mark Surman, Molly Kleinman, Nadeem Shabir, Neeru Paharia, Nico Koenig, Niels Sprong, Paul Osman, Pieter Kleymeer, Pippa Buchanan, Rebecca Kahn, Sharon Kennedy, Steve Carson, Stian Haklev, Vanessa Gennarelli, and Zuzel Vera.</p>
+      <p>Many people have made P2PU what it is today. A special thanks to: 
+        {% assign collaborators = site.data.people.collaborators | sort: "name" %}
+        {% for person in collaborators %}
+          {% if person == collaborators.last %}
+            {{ person.name }}
+          {% else %}
+            {{ person.name | append: ", " }}
+          {% endif %} 
+      {% endfor %}
+      </p>
       <p>We’d also like to thank these sponsors for their generous support:</p>
       <div class="row grid">
-        
-        <div class="grid-item funder col-md-6 col-lg-4 col-12">
-          <a href="https://knightfoundation.org/">
-            <img src="/assets/images/index/funders/knight.png" alt="Knight Foundation">
-          </a>
-        </div>
-        <div class="grid-item funder col-md-6 col-lg-4 col-12">
-          <a href="https://knightfoundation.org/">
-            <img src="/assets/images/index/funders/knight.png" alt="Knight Foundation">
-          </a>
-        </div>
-        <div class="grid-item funder col-md-6 col-lg-4 col-12">
-          <a href="https://knightfoundation.org/">
-            <img src="/assets/images/index/funders/knight.png" alt="Knight Foundation">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<!--
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h2>History</h2></div>
-          </div>
-        </div>
-      </header>
-      <p>
-        P2PU was born out of the
-        <a href="http://www.capetowndeclaration.org/"
-          >2007 Cape Town Open Education Declaration</a
-        >
-        and has been active in the field of open education ever since. Founded
-        by Philipp Schmidt, Delia Browne, Neeru Paharia, Stian Haklev, and Joel
-        Thierstein, P2PU was originally driven by the belief that with adequate
-        social support, anyone can learn almost anything online for free. This
-        strategy reached tens of thousands of learners in more than 50 countries
-        across a number of projects and collaborations, including The
-        <a href="https://courses.p2pu.org/en/schools/school-of-webcraft/"
-          >School of Webcraft</a
-        >
-        (with Mozilla),
-        <a href="http://schoolofopen.p2pu.org/">School of Open</a> (with
-        Creative Commons),
-        <a href="http://mechanicalmooc.org/">Mechanical MOOC</a> (with MIT), and
-        <a href="http://www.playwithyourmusic.org/index.html"
-          >Play With Your Music</a
-        >
-        (with NYU and Peter Gabriel). P2PU also pioneered early massive open
-        online courses through it’s
-        <a href="https://courses.p2pu.org/en/groups/list/community/"
-          >courses platform</a
-        >
-        and developed some of the first open badge prototypes in collaboration
-        with Mozilla.
-      </p>
-
-      <p>
-        In 2014, P2PU made a strategic decision to stop working exclusively
-        online because we were not reaching people who stand to benefit the most
-        from the promise of free and open online education. In hopes of reaching
-        new audiences, we partnered with Chicago Public Library to run in-person
-        study groups for library patrons who wanted to learn together. This
-        project became known as learning circles, and over the course of 18
-        months, P2PU and CPL managed to dramatically increase completion rates
-        and reach new audiences who were new to both online learning and
-        postsecondary education. Learning circles also formed strong social
-        bonds for citizens from diverse backgrounds who shared common goals, and
-        helped to highlight the library as a hub for community learning
-        experiences
-      </p>
-
-      <p>
-        Given the success in Chicago, P2PU created an open source learning
-        circle toolkit that is now being used by library systems and community
-        centers around the world. Through learning circles, we have maintained
-        our vision of providing viable alternatives to mainstream higher
-        education with a deeper commitment to equity, access, and empowerment.
-        All of our learning circle materials and community tools are
-        openly-licensed and free to use.
-        <a href="https://www.p2pu.org/en/facilitate/"
-          >You can get started with learning circles today</a
-        >.
-      </p>
-
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h2>Values</h2></div>
-          </div>
-        </div>
-      </header>
-
-      <p>P2PU is driven by three core values:</p>
-
-      <p><strong>Peer learning</strong></p>
-
-      <p>
-        Underlying our work is the conviction that learning is a social
-        activity. We believe that every person develops expertise through their
-        own life experiences, that people learn when they share and connect with
-        others, and that feedback is necessary in order to improve.
-      </p>
-
-      <p><strong>Community</strong></p>
-
-      <p>
-        P2PU is a community-centered project, which is reflected across our
-        organization from learning circles to our governance model. We involve
-        learners and collaborators in all stages of the design and delivery of
-        our work, and believe that sustained learning communities are created
-        through grassroots collaboration, not hierarchical mandates.
-      </p>
-
-      <p><strong>Equity</strong></p>
-      <p>
-        Equity in learning is only possible when we recognize education as a
-        social good rather than a commodity. A prerequisite to this value is a
-        commitment to working openly, leaving the commons better off than we
-        found it. However, creating space for access is not enough. Systemic
-        injustice means that access does not equal equity, and we must actively
-        design for inclusion and accessibility at every step along the way.
-      </p>
-
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h2>People</h2></div>
-          </div>
-        </div>
-      </header>
-      <h3>Our Staff</h3>
-
-      <div class="tiles">
-        {% for person in site.data.people.staff %} {% assign
-        multi_three=forloop.index0|modulo:3 %} {% if multi_three == 0 %}
-        <div class="row">
-          {% endif %} {% include person.html %} {% if multi_three == 2 or
-          forloop.last %}
-        </div>
-        {% endif %} {% endfor %}
-      </div>
-      <hr class="my-4" />
-
-      <h3>Our Board</h3>
-      <div class="tiles">
-        {% for person in site.data.people.board %} {% assign
-        multi_three=forloop.index0|modulo:3 %} {% if multi_three == 0 %}
-        <div class="row">
-          {% endif %} {% include person.html %} {% if multi_three == 2 or
-          forloop.last %}
-        </div>
-        {% endif %} {% endfor %}
-      </div>
-      <hr class="my-4" />
-
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h3>Community Recognition</h3></div>
-          </div>
-        </div>
-      </header>
-      <p>
-        P2PU is only as successful as people behind the scenes making things
-        happen. A special thanks goes out to some thoughtful and energetic
-        people who helped us get to where we are today:{% for person in
-        site.data.people.collaborators %} {{person.name}}{% if forloop.last %}{%
-        else %},{% endif %}{% endfor %}.
-      </p>
-    </div>
-  </section>
-
-  <section id="partners-and-funders" data-aos="fade-up">
-    <div class="container">
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h3>Partners</h3></div>
-          </div>
-        </div>
-      </header>
-      <div class="partners row">
-        {% for partner in site.data.partners %}
-        <div class="col-md-6 col-lg-4 col-12">
-          <a href="{{ partner.url }}" class="dark">{{ partner.name }}</a>
-        </div>
-        {% endfor %}
-      </div>
-
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h3>Funders</h3></div>
-          </div>
-        </div>
-      </header>
-      <div class="funders row">
         {% for funder in site.data.funders %}
-        <div class="funder col-md-6 col-lg-4 col-12">
+        <div class="grid-item funder col-md-6 col-lg-4 col-12">
           <a href="{{ funder.url }}">
             <img
               src="{{ site.baseurl }}{{ funder.logo }}"
@@ -489,4 +169,4 @@ extra_css:
       </div>
     </div>
   </section>
-</div>-->
+</div>
