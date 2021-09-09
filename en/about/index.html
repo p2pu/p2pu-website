@@ -1,6 +1,6 @@
 ---
 title: About P2PU
-layout: page
+layout: base
 header: page-header-3
 header-image: /assets/images/about/p2pu_lego.jpg
 slug: about
@@ -157,7 +157,7 @@ extra_css:
       <p>We’d also like to thank these sponsors for their generous support:</p>
       <div class="row grid">
         {% for funder in site.data.funders %}
-        <div class="grid-item funder col-md-6 col-lg-4 col-12">
+        <div class="funder col-md-6 col-lg-4 col-12">
           <a href="{{ funder.url }}">
             <img
               src="{{ site.baseurl }}{{ funder.logo }}"

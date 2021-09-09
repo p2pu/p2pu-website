@@ -1,0 +1,17 @@
+section.contact{
+	background-color: $p2pu-light-blue;
+	@media (min-width: map-get($grid-breakpoints, "md")) {
+		background-color: transparent;
+	}
+	.container{
+		.contact-form{
+			background-color: transparent;
+			@media (min-width: map-get($grid-breakpoints, "md")) {
+				background-color: $p2pu-light-blue;
+			}
+			input, textarea{
+				border: 1px solid $p2pu-light-blue; 
+			}
+		}
+	}
+}
