@@ -1,41 +1,72 @@
 @import "cards/course-card";
-@import "cards/topic-card";
-@import "layout-elements/sidebar";
+@import "cards/generic-card";
 
-.sidebar{
-	.navbar-toggler{
-		.material-icons{
-			display: flex;
-			&:after{
-				content: "FILTERS";
-				font-size: $font-size-sm;
-				font-weight: $font-weight-bold;
-				font-family: $font-family-sans-serif;
-				display: inline-flex;
-				align-self: center;
-				padding-left: .5rem;
-				border-bottom: 1px solid $gray-light;
+.header-wrap{
+	@media (min-width: map-get($grid-breakpoints, "md")) {
+		background: url(/assets/images/topics/topic-detail-bg.png) no-repeat center right $p2pu-light-yellow;
+		background-size: contain !important;
+		background-position: 50vw center;
+	}
+	@media (min-width: map-get($grid-breakpoints, "lg")) {
+		background-position: center right;
+	}
+	.page-header{
+		margin-top: 0;
+		margin-bottom: 0;
+		>.row{
+			.col-12{
+				h1{
+					margin-top: 0;
+				}
+				.eyebrow{
+					display: block;
+					font-size: $font-size-xl;
+					text-transform: uppercase;
+					font-weight: $font-weight-bold;
+					padding-top: $padding-lg;
+				}
+				.btn{
+					background-color: rgba(0,0,0,.1);
+					text-transform: none;
+					$enable-caret: true;
+					span::before {
+						display: inline-block;
+						margin-right: .5rem;
+						vertical-align: -.15em;
+						content: "";
+						border-right: .5em solid;
+						border-top: .5em solid transparent;
+						border-left: 0;
+						border-bottom: .5em solid transparent;
+					}
+				}
+				&:last-of-type{
+					height: 40vw;
+					@media (min-width: map-get($grid-breakpoints, "md")) {
+						height: auto;
+						img{
+							border-radius: 100%;
+							transform: translateY(10%, -5%);
+						}
+					}
+				}
 			}
 		}
 	}
-	h3.offcanvas-title{
-		border-bottom: 1px solid $gray-light;
+}
+
+.card.course.horizontal{
+	&:first-of-type{
+		margin-top: 0;
 	}
-	.filter-fields{
-		max-height: calc(100vh - 130px);
-		overflow: scroll;
-		>.col-12{
-			padding-top: $padding-sm * 2;
-			padding-bottom: $padding-sm * 2;
-			border-top: 1px solid $gray-light;
-			&:first-of-type{
-				border-top: none;
-				padding-top: 0;
-			}
-			form:not(:first-of-type){
-				padding-top: $padding-sm * 2;
-			}
-			
+	.card-footer{
+		@media (min-width: map-get($grid-breakpoints, "md")) {
+			padding-top: 0;
+			padding-left: $padding-md;
+		}
+		@media (min-width: map-get($grid-breakpoints, "lg")) {
+			padding-top: $padding-md;
+			padding-left: 0;
 		}
 	}
 }

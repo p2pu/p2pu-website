@@ -8,6 +8,11 @@
     {% include nav.html %}
 
     <main>
+      {% if page.header %}
+        {% capture header-type %}{{page.header}}{% endcapture %} 
+        {% include page_header.html type=header-type %}
+      {% endif %}
+      
       {{ content }}
     </main>
 
