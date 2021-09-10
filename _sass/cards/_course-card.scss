@@ -1,0 +1,17 @@
+@import "card-base";
+
+.card.course.horizontal{
+	&:first-of-type{
+		margin-top: 0;
+	}
+	.card-footer{
+		@media (min-width: map-get($grid-breakpoints, "lg")) {
+			padding-top: 0;
+			padding-left: $padding-md;
+		}
+		@media (min-width: map-get($grid-breakpoints, "xl")) {
+			padding-top: $padding-md;
+			padding-left: 0;
+		}
+	}
+}

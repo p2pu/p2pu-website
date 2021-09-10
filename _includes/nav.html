@@ -1,62 +1,94 @@
-<nav class="nav-collapsed">
-	<div class="logo dark">
-		<a href="{{ site.baseurl }}/{{ language }}/">
-			<img src="{{ site.baseurl }}/assets/images/p2pu-logo.png" alt="P2PU logo">
-		</a>
-	</div>
 
-  <div class="nav-items">
-    <div class="account nav-item" id="nav-account"></div>
+<header class="fixed-top bg-white shadow-sm border-bottom">
+    <div class="header-top container">
+      <div class="d-flex flex-wrap align-items-center">
+        
+        <a class="order-1 d-flex align-items-center py-3 me-md-auto text-white text-decoration-none" href="{{ site.baseurl }}/{{ language }}/">
+          <img class="logo bi me-2 logo" src="{{ site.baseurl }}/assets/images/dev/logo.png" alt="P2PU logo">
+        </a>
 
-    <button class="menu nav-item" role="button">
-      <i class="fa fa-bars" aria-hidden="true"></i>
-      <span class="uppercase hidden-xs">Menu</span>
-    </button>
-  </div>
-
-<div id="full-page-menu" class="collapsed" aria-hidden="true" role="navigation">
-  <button id="close-menu" role="button" aria-label="Close"><i class="fa fa-times"></i></button>
-  <div class="content-container row">
-    <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-      <div class="content">
-        {% for link in site.data.navigation.top_level %}
-          <div class="menu-section top-level">
-            <div class="nav-container">
-              {% if link.external %}
-                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
-              {% else %}
-                <a href="{{ link.url }}">
-              {% endif %}
-                <div class="menu-item">
-                  <span class="bullet"></span>
-                  <span class="text">{{ link.text }}
-                    {% if link.external %}
-                      <i class="material-icons ml-1" style="font-size: inherit; line-height: inherit; vertical-align: top;">open_in_new</i>
-                    {% endif %}
-                  </span>
-                </div>
-              </a>
-              {% for sub_link in link.submenu %}
-                {% if link.external %}
-                  <a href="{{ sub_link.url }}" class="dark" target="_blank" rel="noopener noreferrer">
-                {% else %}
-                  <a href="{{ sub_link.url }}" class="dark">
-                {% endif %}
-                  <div class="menu-item submenu">
-                    <span class="bullet"></span>
-                    <span class="text">{{ sub_link.text }}
-                      {% if sub_link.external %}
-                        <i class="material-icons ml-1" style="font-size: inherit; line-height: inherit; vertical-align: top;">open_in_new</i>
-                      {% endif %}
-                    </span>
-                  </div>
-                </a>
-              {% endfor %}
-            </div>
+        <nav class="order-4 order-md-2 text-end navbar navbar-expand-md col-12 col-md pe-0">
+          <div class="collapse navbar-collapse navbarNavDropdown justify-content-end">
+            <button type="button" class="d-flex btn btn-sm secondary p2pu-btn blue">Start a Team</button>
+            <button type="button" class="d-flex btn btn-sm secondary p2pu-btn orange">Create an Account</button>
           </div>
-        {% endfor %}
+        </nav>
+        <!--button type="button" class="d-flex btn btn-sm secondary p2pu-btn dark" id="nav-account"></button> TODO: PULLS IN LOGIN LINK, ETC. - do we ditch this or modify it somewhere?) -->
+        <nav id="account-info" class="order-2 order-md-4 m3-0 ms-auto">
+          <div class="dropdown nav-item">
+            <a href="#" class="nav-link d-flex align-items-center mb-2 mb-md-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="material-icons">account_circle</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
+              <li><a class="dropdown-item active" href="#" aria-current="page">Overview</a></li> <!-- TODO: automagically get active classes? -->
+              <li><a class="dropdown-item" href="#">Inventory</a></li>
+              <li><a class="dropdown-item" href="#">Customers</a></li>
+              <li><a class="dropdown-item" href="#">Products</a></li>
+              <li><a class="dropdown-item" href="#">Reports</a></li>
+              <li><a class="dropdown-item" href="#">Analytics</a></li>
+            </ul>
+          </div>
+        </nav>
+        
+        
+        <nav id="log-in" class="order-2 order-md-4 me-0 dropdown">
+          <button type="button" class="btn btn-sm d-flex align-items-center secondary p2pu-btn gray mx-0 ms-auto dropdown-toggle" id="loginDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <!-- <span class="material-icons material-icons-outlined me-1">account_circle</span> -->
+            Log In
+          </button>
+          <div class="dropdown-menu dropdown-menu-end login-dropdown shadow" aria-labelledby="loginDropdown">
+            <form action="" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="csrfmiddlewaretoken" value="">
+              <!-- <div class="alert alert-block alert-danger"> <ul> <li>Please enter a correct username and password. Note that both fields may be case-sensitive.</li> </ul> </div> -->
+              
+              <div id="div_id_username" class="form-group"> <label for="id_username" class="col-form-label  requiredField">
+              Username<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="username" autofocus="" class="textinput textInput form-control" required="" id="id_username"> </div> </div> 
+              
+              <div id="div_id_password" class="form-group"> <label for="id_password" class="col-form-label  requiredField">
+              Password<span class="asteriskField">*</span> </label> <div class=""> <input type="password" name="password" class="textinput textInput form-control" required="" id="id_password"> </div> </div>
+              <div class="row align-items-center justify-content-between" id="div_id_submit" >
+                 <div class="col-7">
+                   <a href="https://learningcircles.p2pu.org/en/accounts/password_reset/" target="_blank" class="text-sm">forgot password?</a>
+                </div>               
+                  <div class="col-5">
+                      <button type="submit" class="btn p2pu-btn btn-sm orange">Login</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+        </nav>
+        
+        <nav class="order-3 navbar-expand-md">
+          <button class="navbar-toggler hamburger mx-0 align-items-center" type="button" data-bs-toggle="collapse" data-bs-target=".navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </button>
+        </nav>
+        
       </div>
     </div>
   </div>
-</div>
-</nav>
+  <div class="header-bottom px-3 py-2 bg-cream-dark">
+    <div class="container d-flex flex-wrap justify-content-center">
+      <nav class="col-12 col-md-auto py-0 ms-md-auto justify-content-center text-sm navbar navbar-expand-md px-0 px-md-3">
+        <div class="collapse navbar-nav navbar-collapse navbarNavDropdown align-items-stretch align-items-md-center">
+        {% for link in site.data.navigation.top_level %}
+          <div class="dropdown nav-item">
+            <a href="{{ link.url }}" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle {% if link.external %} external {% endif %}" {% if link.submenu %} data-bs-toggle="dropdown" {% endif %} aria-expanded="false" {% if link.external %}  target="_blank" {% endif %} > {{ link.text }}</a>
+            {% if link.submenu %}
+            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">      
+            {% endif %}
+            {% for sub_link in link.submenu %}
+              <li><a class="dropdown-item {% if link.external %} external {% endif %}" href="{{ sub_link.url }}" {% if link.external %}  target="_blank" {% endif %}>{{ sub_link.text }}</a></li>
+              {% endfor %}
+              {% if link.submenu %}
+            </ul>    
+            {% endif %}
+        </div>
+        {% endfor %}        
+      </div>       
+    </nav>
+  </div>
+</header>
+

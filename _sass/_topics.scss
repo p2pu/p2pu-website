@@ -1,0 +1,79 @@
+@import "cards/course-card";
+@import "cards/generic-card";
+
+.header-wrap{
+	@media (min-width: map-get($grid-breakpoints, "md")) {
+		background: url(/assets/images/topics/topic-detail-bg.png) no-repeat center right $p2pu-light-yellow;
+		background-size: contain !important;
+		background-position: 50vw center;
+	}
+	@media (min-width: map-get($grid-breakpoints, "lg")) {
+		background-position: center right;
+	}
+	.page-header{
+		margin-top: 0;
+		margin-bottom: 0;
+		>.row{
+			.col-12{
+				h1{
+					margin-top: 0;
+				}
+				.eyebrow{
+					display: block;
+					font-size: $font-size-xl;
+					text-transform: uppercase;
+					font-weight: $font-weight-bold;
+					padding-top: $padding-lg;
+				}
+				.btn{
+					background-color: rgba(0,0,0,.1);
+					text-transform: none;
+					$enable-caret: true;
+					span::before {
+						display: inline-block;
+						margin-right: .5rem;
+						vertical-align: -.15em;
+						content: "";
+						border-right: .5em solid;
+						border-top: .5em solid transparent;
+						border-left: 0;
+						border-bottom: .5em solid transparent;
+					}
+				}
+				&:last-of-type{
+					height: 40vw;
+					@media (min-width: map-get($grid-breakpoints, "md")) {
+						height: auto;
+						img{
+							border-radius: 100%;
+							transform: translateY(10%, -5%);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+section{
+	.container{
+		h2~p{
+			font-size: $font-size-lg;
+			font-weight: $font-weight-bold;
+		  }
+		.card.course.horizontal{
+			&:first-of-type{
+				margin-top: 0;
+			}
+			.card-footer{
+				@media (min-width: map-get($grid-breakpoints, "md")) {
+					padding-top: 0;
+					padding-left: $padding-md;
+				}
+				@media (min-width: map-get($grid-breakpoints, "lg")) {
+					padding-top: $padding-md;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}

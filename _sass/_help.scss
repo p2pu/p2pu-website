@@ -1,0 +1,70 @@
+@import "cards/_generic-card";
+
+#about{
+  .header-wrap{
+    background-color: $p2pu-light-blue;
+    overflow: hidden;
+    .subtitle{
+      font-size: $font-size-xl;
+    }
+  }
+  section{
+    >.container{
+      border-top: 12px solid $gray-snow;
+    }
+  }
+  .about-us{
+    font-size: $font-size-lg;
+    >.container{
+      border-top: 0;
+      @media (min-width: map-get($grid-breakpoints, "md")) {
+        padding-top: $padding-lg * 2;
+      }
+    }
+  }
+  .values{
+    h3{
+      font-size: 1.25rem;
+    }
+  }
+  .funders .funder img {
+    max-width: 200px;
+    filter: grayscale(1);
+  }
+  
+}
+
+
+
+/*
+.people-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  > div {
+    text-align: center;
+    margin-bottom: $padding-sm;
+  }
+}
+
+.funders {
+  padding: $padding-md;
+
+  .funder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 200px;
+      filter: grayscale(1);
+    }
+  }
+}*/

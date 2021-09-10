@@ -9,7 +9,7 @@
     align-items: center;
 
     a {
-      color: $gray-darker;
+      color: $gray-dark;
       text-align: left;
       transition: all 0.25s ease-in-out;
       padding: 10px 15px;
@@ -71,7 +71,7 @@
   .card-image {
     height: 200px;
     width: 100%;
-    background: $gray-lighter;
+    background: $gray-light;
 
     img {
       height: 100%;

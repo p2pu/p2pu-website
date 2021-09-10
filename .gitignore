@@ -1,7 +1,7 @@
 _site
 .sass-cache
 .idea/
-node_modules/
+node_modules/*
 .DS_Store
 # Development configuration
 _config-dev.yml
@@ -12,3 +12,4 @@ _data/bundles.json
 _data/team_redirects.txt
 _data/teams.json
 .jekyll-metadata
+.nova

@@ -1,22 +1,23 @@
-<div class="col-12 col-md-6 col-lg-4">
-	<div class="card border-0">
-		<div class="card-body px-0">
-			<img class="rounded-circle float-right people-img" src=
-					"{{ "/assets/images/people/" |append: person.image |prepend: site.baseurl }}"
-			     alt="{{ person.name }} Image">
 
-			<h4>{{ person.name }}<br>
-				<small class="text-muted">{{ person.role }}</small>
-			</h4>
-			<p>{{ person.bio }}</p>
-			{% if person.twitter %}
-				<span><a href="https://twitter.com/{{ person.twitter }}" target="_blank"><i
-						class="fab fa-twitter"></i> {{ person.twitter }}</a></span>
-			{% endif %}
-			{% if person.url %} |
-				<span><a href="{{ person.url }}" target="_blank">{{ person.url | remove: 'https://' | remove: 'http://' }}</a></span>
-			{% endif %}
+<div class="grid-item col-md-6 col-lg-4">
+	  <div class="card staff">
+		<div class="card-image">
+		  <img src="{{ "/assets/images/people/" |append: person.image |prepend: site.baseurl }}" alt={{ person.name }} Margraf Image" class="card-img-top">
 		</div>
+	   <div class="card-header">
+		 <h3>{{ person.name }}</h3>
+		 <p>{{ person.role }}</p>
+	   </div>
+		<div class="card-body">
+		  <p>{{ person.bio }}</p>
+		</div>
+		<div class="card-footer">
+			{% if person.twitter %}
+		  <span><a href="https://twitter.com/{{ person.twitter }}" target="_blank"><i class="fab fa-twitter"></i> {{ person.twitter }}</a></span>
+		  {% endif %}
+		  {% if person.url %} |
+		  <span><a href="{{ person.url }}" target="_blank">{{ person.url | remove: 'https://' | remove: 'http://' }}</a></span>
+		  {% endif %}
+		</div>
+	  </div>
 	</div>
-</div>
-

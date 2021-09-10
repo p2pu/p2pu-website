@@ -2,53 +2,54 @@
   var url = "{{ site.default_base_api_endpoint }}/api/learning-circles-map/"
 
   var accessToken = "{{ site.mapbox_access_token }}"
-  var tileLayer = "https://api.mapbox.com/styles/v1/sharon-nomadic-labs/cjokl5im306372rnzp5rsykzw/tiles/256/{z}/{x}/{y}@2x?access_token=" + accessToken;
+  var tileLayer = "https://api.mapbox.com/styles/v1/coderodeo/cktce92zd0a8r17npn7siwfhw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY29kZXJvZGVvIiwiYSI6ImNrdGM5M3N5eDIzcGsyb211anVhMGV2bXcifQ.25mHUrP-d-GnMFk22B65IQ";
 
   var mymap = L.map('global-map', {
     scrollWheelZoom: false,
-  }).setView([20, 10], 2.2);
+    zoomControl: false
+  }).setView([13.931400, 177.047173], 2.3);
 
   L.tileLayer(tileLayer, {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
       id: 'mapbox.streets',
-      accessToken: accessToken,
+      accessToken: 'pk.eyJ1IjoiY29kZXJvZGVvIiwiYSI6ImNrdGM5M3N5eDIzcGsyb211anVhMGV2bXcifQ.25mHUrP-d-GnMFk22B65IQ',
   }).addTo(mymap);
 
-  var markerClusters = L.markerClusterGroup();
-
-  $.ajax({
-    url,
-    dataType: 'JSONP',
-    type: 'GET',
-    success: (res) => {
-      $.each(res.items, function(index, item) {
-        if (item.latitude && item.longitude) {
-          var markerIcon = L.divIcon({className: "marker"});
-          var m = L.marker( [item.latitude, item.longitude], { icon: markerIcon } )
-
-          var popupContent = "";
-          var title = "<div><strong>" + item.title + "</strong></div>";
-          var year = "<div>" + item.city + ", " + item.start_date.substring(0,4) + "</div>";
-
-          popupContent += title
-          popupContent += year
-
-          if (item.url) {
-            var link = "<div><a href='" + item.url + "' target='_blank'>Signup page</a></div>"
-            popupContent += link
-          }
-
-          if (item.report_url) {
-            var link = "<div><a href='" + item.report_url + "' target='_blank'>Final report</a></div>"
-            popupContent += link
-          }
-
-          m.bindPopup(popupContent)
-          markerClusters.addLayer( m );
-        }
-      })
-      mymap.addLayer( markerClusters );
-    }
-  });
+//   var markerClusters = L.markerClusterGroup();
+// 
+//   $.ajax({
+//     url,
+//     dataType: 'JSONP',
+//     type: 'GET',
+//     success: (res) => {
+//       $.each(res.items, function(index, item) {
+//         if (item.latitude && item.longitude) {
+//           var markerIcon = L.divIcon({className: "marker"});
+//           var m = L.marker( [item.latitude, item.longitude], { icon: markerIcon } )
+// 
+//           var popupContent = "";
+//           var title = "<div><strong>" + item.title + "</strong></div>";
+//           var year = "<div>" + item.city + ", " + item.start_date.substring(0,4) + "</div>";
+// 
+//           popupContent += title
+//           popupContent += year
+// 
+//           if (item.url) {
+//             var link = "<div><a href='" + item.url + "' target='_blank'>Signup page</a></div>"
+//             popupContent += link
+//           }
+// 
+//           if (item.report_url) {
+//             var link = "<div><a href='" + item.report_url + "' target='_blank'>Final report</a></div>"
+//             popupContent += link
+//           }
+// 
+//           m.bindPopup(popupContent)
+//           markerClusters.addLayer( m );
+//         }
+//       })
+//       mymap.addLayer( markerClusters );
+//     }
+//   });
 </script>

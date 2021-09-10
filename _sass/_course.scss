@@ -1,0 +1,86 @@
+@import "cards/learning-circles-card";
+@import "cards/generic-card";
+
+.header-wrap{
+
+	.page-header{
+		margin-top: 0;
+		margin-bottom: 0;
+		>.row{
+			.col-12{
+				h1{
+					margin-top: 0;
+				}
+				.eyebrow{
+					display: block;
+					font-size: $font-size-xl;
+					text-transform: uppercase;
+					font-weight: $font-weight-bold;
+					padding-top: $padding-lg;
+				}
+				.btn.back{
+					background-color: rgba(0,0,0,.1);
+					text-transform: none;
+					$enable-caret: true;
+					span::before {
+						display: inline-block;
+						margin-right: .5rem;
+						vertical-align: -.15em;
+						content: "";
+						border-right: .5em solid;
+						border-top: .5em solid transparent;
+						border-left: 0;
+						border-bottom: .5em solid transparent;
+					}
+				}
+			}
+		}
+	}
+}
+section{
+	.container{
+		.table-responsive{
+			table{
+				table-layout: fixed;
+				width: 100%;
+				tbody tr:first-of-type {
+					border-top-width: 1px;
+				}
+				th{
+					font-weight: $font-weight-semibold;
+					text-transform: uppercase;
+					padding-left: 0;
+					width: 120px;
+				}
+			}
+			
+		}
+		.feedback{
+			.grid-item{
+				>.row{
+					border-top: 1px solid;
+				}
+			}
+		}
+		
+		h2~p{
+			font-size: $font-size-lg;
+			font-weight: $font-weight-bold;
+		  }
+		.card.course.horizontal{
+			&:first-of-type{
+				margin-top: 0;
+			}
+			.card-footer{
+				@media (min-width: map-get($grid-breakpoints, "md")) {
+					padding-top: 0;
+					padding-left: $padding-md;
+				}
+				@media (min-width: map-get($grid-breakpoints, "lg")) {
+					padding-top: $padding-md;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}

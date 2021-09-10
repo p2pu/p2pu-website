@@ -1,0 +1,32 @@
+.sidebar.sticky-top{
+	top: $navbar-height-sm;
+	@media (min-width: map-get($grid-breakpoints, "lg")) {
+	  top: $navbar-height;
+	  padding-top: $padding-sm * 2;
+	  border-right: 1px solid $gray-light;
+	  border-bottom: 1px solid $gray-light;
+	  margin-bottom: 35px;
+	}
+	.navbar-toggler{
+		@media (max-width: map-get($grid-breakpoints, "lg")) {
+			width: 100%;
+			display: block;
+			align-items: start;
+			text-align: left;
+			background-color: $cream-dark;
+			color: $gray;
+			border-radius: 0;
+		}
+	}
+	.wrap{
+		@media (max-width: map-get($grid-breakpoints, "lg")) {
+			top: $navbar-height;
+		}
+		@media (max-width: map-get($grid-breakpoints, "md")) {
+			top: $navbar-height-sm;
+		}
+		.offcanvas-header{
+			background-color: $cream-dark;
+		}
+	}
+  }

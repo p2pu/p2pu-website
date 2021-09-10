@@ -1,0 +1,21 @@
+
+@import "card-base";
+
+.card.generic{
+
+	.card-header{
+		margin-bottom: 0;
+		background-color: transparent;
+		border-bottom: 0;
+		padding: 1rem;
+		color: $gray;
+		.card-title {
+			padding:0;
+			margin:0;
+			font-size: $font-size-lg;
+			line-height: $line-height-base;
+			font-weight: $font-weight-bold;
+		}
+		
+	}
+}
