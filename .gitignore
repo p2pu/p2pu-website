@@ -2,7 +2,6 @@ _site
 .sass-cache
 .idea/
 node_modules/*
-!node_modules/p2pu-theme/
 .DS_Store
 # Development configuration
 _config-dev.yml

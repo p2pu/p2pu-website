@@ -58,6 +58,8 @@ exclude:
   - test
   - terraform.tf
   - webpack.config.js
+  - p2pu-theme
+  - p2pu-components
 
 prose:
   media: assets/images
