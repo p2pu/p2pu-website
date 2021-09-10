@@ -1,8 +1,14 @@
+.grid-item{
+	align-items: stretch;
+	display: flex;
+}
+
 .card{
 	transition: all 0.3s ease;
 	box-shadow: $box-shadow;
 	margin-bottom: $grid-gutter-width;
 	margin-top: $grid-gutter-width;
+	width: 100%;
 	.status-tag {
 		position: absolute;
 		right: 0px;
