@@ -252,24 +252,21 @@ bundles:
 								</div>
 							</div>
 							{% else %}
-							
-							<div class="row grid">
-								<div class="grid-item col-md-6 col-lg-4">
-								  <div class="card generic cover-link">
-									  <a href="{{ card.url }}" target="_blank"></a>
-									<div class="card-image">
-									  {% if card.img contains 'http'  %}	
-									  <img src="{{ card.img }}" alt="{{ card.title }}" class="card-img-top" />
-									  {% else %}
-									  <img src="{{ site.baseurl }}/assets/images/case-studies/{{ card.img }}" alt="{{ card.title }}" class="card-img-top" />
-									  {% endif %}
-									</div>
-									<div class="card-header">
-									  <h4 class="card-title">{{ card.title }}</h4>
-									</div>
-								  </div>
-								</div>
+	
+						  <div class="card card-testimonial cover-link card-case-study m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
+							  <a href="{{ card.url }}" target="_blank"></a>
+							<div class="card-image">
+							  {% if card.img contains 'http'  %}	
+							  <img src="{{ card.img }}" alt="{{ card.title }}" class="card-img-top" />
+							  {% else %}
+							  <img src="{{ site.baseurl }}/assets/images/case-studies/{{ card.img }}" alt="{{ card.title }}" class="card-img-top" />
+							  {% endif %}
 							</div>
+							<div class="card-header">
+							  <h4 class="card-title">{{ card.title }}</h4>
+							</div>
+						  </div>
+
 							{% endif %}							
 						</article>
 
