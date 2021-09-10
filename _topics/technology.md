@@ -5,11 +5,11 @@ excerpt: Technology a feugiat dui. Orci varius natoque penatibus et magnis dis p
 links:
   - title: Google
     description: Learn How to Paint For Free
-    img: arts-creativity/google.png
+    img: google.png
     url: https\://google.com
   - title: Bob Ross
     description: Paint with Bob Ross
-    img: arts-creativity/bobross.png
+    img: bobross.png
     url: https\://bobross.com
 ---
 ## Facilitator's Prep

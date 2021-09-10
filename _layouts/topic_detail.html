@@ -3,22 +3,19 @@ layout: base
 extra_css:
   - /assets/css/p2pu-topics.css
 ---
-
-{% assign topic = site.data.teams.items | where: "page_slug", page.slug | first %}
-
 <div class="header-wrap">
   <header class="container page-header">
 	<div class="row">
 	  <div class="col-12 col-md-6 col-lg-7 my-4 my-lg-5">
-		<a href="#" class="btn p2pu-btn btn secondary gray mt-md-4">
+		<a href=""{{ site.baseurl }}/learning-resources" class="btn p2pu-btn btn secondary gray mt-md-4">
 			<span>Back to Learning Resources</span>
 		</a>
 		<span class="eyebrow">topic:</span>
-		<h1>Arts & Creativity</h1>
-		<p class="subtitle mb-md-5">Creativity is a phenomenon whereby something somehow new and somehow valuable is formed. The created item may be intangible (such as an idea, a scientific theory, a musical composition, or a joke) or a physical object (such as an invention, a printed literary work, or a painting).</p>
+		<h1>{{ page.title }}</h1>
+		<p class="subtitle mb-md-5">{{ page.excerpt }}</p>
 	  </div>
 	  <div class="col-12 col-md-5 offset-md-1 col-lg-5 offset-lg-0">
-		  <img src="/assets/images/topics/arts-creativity.png" />
+		  <img src="/assets/images/topics/{{ page.img }}" />
 	  </div>
 	</div>
   </header>
@@ -26,69 +23,31 @@ extra_css:
 
 <section>
 	<div class="container">
-		<h2>Facilitator Prep</h2>
-		<p class="pt-3">Organizations’ Strategies for Action: </p>
-		<ul>
-			<li>Pursuing staff training: de-escalation to limit need to limit state authority presence in facilities, trauma-informed service, exploring how implicit bias has affected regulations/rules and patron use, removing latent racism, classicism (Miami)</li>
-			<li>Pushing to bring social workers into the library including having a local field instructor run learning circles (Miami)</li>
-			<li>Anti-Racism book discussion group for library staff (Los Angeles)</li>
-			<li>Human Libraries 2: patrons can book a 20min conversation with individuals/volunteers who have stories to share and are comfortable speaking/answering questions about their experiences (Ottawa)</li>
-			<li>Responding to long wait times and book hold lists by boosting awareness of always-available digital titles (Ottawa) and seeking more licenses for e/audio books (Los Angeles)</li>
-			<li>Develop facilitator support for facilitating anti-racist curriculum (Multnomah)</li>
-			<li>Think about supporting better community engagement with civic processes (such as navigating community action around setting police budget) (Charlotte)</li>
-			<li>Manage transition from looking after self, to colleagues, to community (St. Paul)</li>
-			<li>Ensuring the mental health of colleagues; running internal programming to help colleagues feel better prepared/supported (Los Angeles)</li>
-			<li>Investigate library names and statues and rename/tear down that which needs to be removed (UK)</li>
-			<li>Supporting conversations about current events in learning circles across a variety of topics (Charlotte)</li> 
-		</ul>
+		<article>{{ content }}</article>
 
 		<p class="text-xl pt-4 font-weight-bold">Additional Reading</p>
 		<div class="row grid">
-			
+			{% for link in page.links %}
 			<div class="grid-item col-md-6 col-lg-4">
 			    <div class="card generic cover-link">
-				    <a href="http://google.com" target="_blank"></a>
+				    <a href="{{link.url}}" target="_blank"></a>
 					<div class="card-image">
-					  <img src="{{ site.baseurl }}/assets/images/p2pu-ogimg-default.jpg" alt="P2PU Monthly Facilitator Call" class="card-img-top">
+					  <img src="{{ site.baseurl }}/assets/images/topics/{{page.slug}}/{{ link.img}}" alt="{{ link.title }}" class="card-img-top">
 					</div>
 					<div class="card-header">
-					  <h4 class="card-title">google</h4>
-					  <span>Learn how to paint for free online</span>
+					  <h4 class="card-title">{{ link.title }}</h4>
+					  <span>{{ link.description }}</span>
 					</div>
 			    </div>
 			</div>
+			{% endfor %}
 				
-			<div class="grid-item col-md-6 col-lg-4">
-				<div class="card generic cover-link">
-					<a href="http://google.com" target="_blank"></a>
-					<div class="card-image">
-					  <img src="{{ site.baseurl }}/assets/images/p2pu-ogimg-default.jpg" alt="P2PU Monthly Facilitator Call" class="card-img-top">
-					</div>
-					<div class="card-header">
-					  <h4 class="card-title">google</h4>
-					  <span>Learn how to paint for free online</span>
-					</div>
-				</div>
-			</div>
-			
-			<div class="grid-item col-md-6 col-lg-4">
-				<div class="card generic cover-link">
-					<a href="http://google.com" target="_blank"></a>
-					<div class="card-image">
-					  <img src="{{ site.baseurl }}/assets/images/p2pu-ogimg-default.jpg" alt="P2PU Monthly Facilitator Call" class="card-img-top">
-					</div>
-					<div class="card-header">
-					  <h4 class="card-title">google</h4>
-					  <span>Learn how to paint for free online</span>
-					</div>
-				</div>
-			</div>
-					
 		</div>
 	</div>
 </section>
 
 <section>
+	<!-- THIS SECTION NEEDS INTEGRATION TO PULL IN COURSE CARDS-->	
 	<div class="container">
 		<h2>Courses</h2>
 		<div class="row grid">
