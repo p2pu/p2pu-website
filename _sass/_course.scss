@@ -39,29 +39,47 @@
 }
 section{
 	.container{
-		.table-responsive{
-			table{
-				table-layout: fixed;
-				width: 100%;
-				tbody tr:first-of-type {
-					border-top-width: 1px;
+		.col-12{
+			.table-responsive{
+				table{
+					table-layout: fixed;
+					width: 100%;
+					tbody tr:first-of-type {
+						border-top-width: 1px;
+					}
+					th{
+						font-weight: $font-weight-semibold;
+						text-transform: uppercase;
+						padding-left: 0;
+						width: 120px;
+					}
 				}
-				th{
-					font-weight: $font-weight-semibold;
-					text-transform: uppercase;
-					padding-left: 0;
-					width: 120px;
+				
+			}
+			.feedback{
+				.grid-item{
+					>.row{
+						border-top: 1px solid;
+					}
 				}
 			}
-			
+			&:last-of-type .table-responsive table tbody tr:first-of-type{
+				@media (max-width: map-get($grid-breakpoints, "md")) {
+					border-top-width: 0;
+				}
+			}
 		}
 		.feedback{
 			.grid-item{
-				>.row{
+				.row{
 					border-top: 1px solid;
 				}
 			}
 		}
+		
+		
+		
+		
 		
 		h2~p{
 			font-size: $font-size-lg;
