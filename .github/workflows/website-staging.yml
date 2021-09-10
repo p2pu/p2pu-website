@@ -12,6 +12,8 @@ jobs:
       s3_bucket: ${{ steps.s3_bucket_name.outputs.stdout }}
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
 
       - run: echo "$GITHUB_EVENT_PATH"
         shell: bash
@@ -79,6 +81,8 @@ jobs:
     needs: terraform
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
 
       - run: echo "S3_BUCKET=${{ needs.terraform.outputs.s3_bucket }}" >> $GITHUB_ENV
 
