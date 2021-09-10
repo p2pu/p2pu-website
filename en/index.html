@@ -231,27 +231,48 @@ bundles:
 				<div class="col-12" data-aos="fade-up" data-aos-offset="200">
 					<div class="p2pu-slide-container slick-init">
 											
-						{% for testimonial in site.data.testimonials.testimonials %}						
+						{% for card in site.data.landing-page-cards.cards %}						
 						<article class="slide">
+							{% if card.cardtype == 'testimonial'  %}	
 							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
 								<div class="quote col-12 mb-md-5">
 									<i class="fas fa-quote-left"></i>
-									<q>{{ testimonial.quote }}</q>
+									<q>{{ card.quote }}</q>
 									<i class="fas fa-quote-right"></i>
 								</div>
 								<div class="attribution row mt-3">
 									<div class="image col-12 col-md-4 pe-md-0">
-									  <img class="mx-auto mx-md-0 px-md-0" src="/assets/images/testimonials/{{ testimonial.img }}" alt="Ramune">
+									  <img class="mx-auto mx-md-0 px-md-0" src="/assets/images/testimonials/{{ card.img }}" alt="Ramune">
 									</div>
 									<div class="text col-12 col-md-8 text-center text-md-start">
-									  <span class="name bold">{{ testimonial.name }}</span>
-									  <span class="position fst-italic small">{{ testimonial.role }}</span>
-									  <span class="organization small">{{ testimonial.organization }}</span>
+									  <span class="name bold">{{ card.name }}</span>
+									  <span class="position fst-italic small">{{ card.role }}</span>
+									  <span class="organization small">{{ card.organization }}</span>
 									</div>
 								</div>
 							</div>
-							  
+							{% else %}
+							
+							<div class="row grid">
+								<div class="grid-item col-md-6 col-lg-4">
+								  <div class="card generic cover-link">
+									  <a href="{{ card.url }}" target="_blank"></a>
+									<div class="card-image">
+									  {% if card.img contains 'http'  %}	
+									  <img src="{{ card.img }}" alt="{{ card.title }}" class="card-img-top" />
+									  {% else %}
+									  <img src="{{ site.baseurl }}/assets/images/case-studies/{{ card.img }}" alt="{{ card.title }}" class="card-img-top" />
+									  {% endif %}
+									</div>
+									<div class="card-header">
+									  <h4 class="card-title">{{ card.title }}</h4>
+									</div>
+								  </div>
+								</div>
+							</div>
+							{% endif %}							
 						</article>
+
 						{% endfor %}						  						
 				  	</div>
 				</div>
