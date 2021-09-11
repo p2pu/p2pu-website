@@ -232,9 +232,9 @@ bundles:
 					<div class="p2pu-slide-container slick-init">
 											
 						{% for card in site.data.landing-page-cards.cards %}						
-						<article class="slide">
+						<article class="slide ">
 							{% if card.cardtype == 'testimonial'  %}	
-							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5">
+							<div class="card-testimonial card m-md-2 p-3 p-lg-4 pt-xl-5 ps-xl-5 {{ card.type }}">
 								<div class="quote col-12 mb-md-5">
 									<i class="fas fa-quote-left"></i>
 									<q>{{ card.quote }}</q>
