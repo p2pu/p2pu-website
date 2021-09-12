@@ -1,0 +1,18 @@
+.slick-slider.slick-dotted{
+	.slick-dots li button:before{
+		font-size: 2rem;
+		font-family: $font-family-base;
+	}
+}
+
+.slick-track
+{
+	display: flex !important;
+}
+
+.slick-slide
+{
+	height: inherit !important;
+	align-items: stretch;
+	display: flex !important;
+}
