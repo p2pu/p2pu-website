@@ -24,7 +24,8 @@ section#learning-circles {
 section#map-section {
 	padding-top: 0;
 	position: relative;
-	
+	height: 45vw;
+	max-height: 750px;
 	#global-map{
 		position: absolute;
 		top: 0;
@@ -38,6 +39,26 @@ section#map-section {
 		margin-bottom: $padding-sm;
 		
 	}
+	
+	.leaflet-popup-content-wrapper {
+		border:3px solid #05C7B4;
+		border-radius: 80px;
+		padding: 10px 18px;
+		font-size:14px;
+		color:#646462;
+		font-family: 'Open Sans', sans-serif;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+	}
+	 
+	.leaflet-popup-content {
+	  margin:0;
+	}
+	
+	.leaflet-popup-tip {
+		background: #05C7B4;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+	}	
+		
 }
 
 section#community{

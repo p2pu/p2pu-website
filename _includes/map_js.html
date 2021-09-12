@@ -1,55 +1,92 @@
 <script type="text/javascript">
-  var url = "{{ site.default_base_api_endpoint }}/api/learning-circles-map/"
+//TODO:Move data into external file
+var data = {
+    "pois": [
+      {
+        "latitude": 15.341006,
+        "longitude": 44.202889,
+        "location": "Sana'a, Yemen",
+        "title": "Let's Speak English"
+      },
+      {
+        "latitude": 19.237273,
+        "longitude": 72.787587,
+        "location": "Gorai, India",
+        "title": "Cheap Web Hosting"
+      },
+      {
+        "latitude": 41.817587,
+        "longitude": -87.694739,
+        "location": "Chicago, IL, USA",
+        "title": "Art of Storytelling"
+      },
+      {
+        "latitude": 0.02896583659494138,
+        "longitude": 37.62162219117033,
+        "location": "Meru, Kenya",
+        "title": "Data Detox"
+      },
+      {
+        "latitude": 47.004173737910584,
+        "longitude": 21.97320051982301,
+        "location": "Sânmartin, Romania",
+        "title": "Utilizarea tehnologiei in biblioteca școlară"
+      },
+      {
+        "latitude": 37.684385128154204,
+        "longitude": -97.33780224546243,
+        "location": "Wichita, Kansas",
+        "title": "Fiction Writing for Teens"
+      }
+    ]
+  };
 
-  var accessToken = "{{ site.mapbox_access_token }}"
-  var tileLayer = "https://api.mapbox.com/styles/v1/coderodeo/cktce92zd0a8r17npn7siwfhw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY29kZXJvZGVvIiwiYSI6ImNrdGM5M3N5eDIzcGsyb211anVhMGV2bXcifQ.25mHUrP-d-GnMFk22B65IQ";
-
-  var mymap = L.map('global-map', {
-    scrollWheelZoom: false,
+var map = L.map('global-map', {
+    center: [43.347797, -22.680511],
+    zoomSnap: .1,
+    zoom: 2.3,
+    //scrollWheelZoom: false,
+    //dragging: false,
     zoomControl: false
-  }).setView([13.931400, 177.047173], 2.3);
+});
+
+  var tileLayer = "https://api.mapbox.com/styles/v1/coderodeo/ckteuybia2okk17qtl1uyuxof/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY29kZXJvZGVvIiwiYSI6ImNrdGM5M3N5eDIzcGsyb211anVhMGV2bXcifQ.25mHUrP-d-GnMFk22B65IQ";
 
   L.tileLayer(tileLayer, {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
       id: 'mapbox.streets',
       accessToken: 'pk.eyJ1IjoiY29kZXJvZGVvIiwiYSI6ImNrdGM5M3N5eDIzcGsyb211anVhMGV2bXcifQ.25mHUrP-d-GnMFk22B65IQ',
-  }).addTo(mymap);
+  }).addTo(map);
 
-//   var markerClusters = L.markerClusterGroup();
-// 
-//   $.ajax({
-//     url,
-//     dataType: 'JSONP',
-//     type: 'GET',
-//     success: (res) => {
-//       $.each(res.items, function(index, item) {
-//         if (item.latitude && item.longitude) {
-//           var markerIcon = L.divIcon({className: "marker"});
-//           var m = L.marker( [item.latitude, item.longitude], { icon: markerIcon } )
-// 
-//           var popupContent = "";
-//           var title = "<div><strong>" + item.title + "</strong></div>";
-//           var year = "<div>" + item.city + ", " + item.start_date.substring(0,4) + "</div>";
-// 
-//           popupContent += title
-//           popupContent += year
-// 
-//           if (item.url) {
-//             var link = "<div><a href='" + item.url + "' target='_blank'>Signup page</a></div>"
-//             popupContent += link
-//           }
-// 
-//           if (item.report_url) {
-//             var link = "<div><a href='" + item.report_url + "' target='_blank'>Final report</a></div>"
-//             popupContent += link
-//           }
-// 
-//           m.bindPopup(popupContent)
-//           markerClusters.addLayer( m );
-//         }
-//       })
-//       mymap.addLayer( markerClusters );
-//     }
-//   });
+  var bounds = L.latLngBounds(L.latLng(78.955515, 150.938439), L.latLng(-35.055113, -196.29946));
+  map.fitBounds(bounds);
+  // map.on('resize', function(e){ map.fitBounds(bounds);})
+
+var customIcon = L.icon({
+    iconUrl: 'https://assets.codepen.io/257087/marker.png',
+    iconSize: [15, 20],
+    iconAnchor: [7, 20],
+    popupAnchor: [0,-24]
+});
+ 
+var markers = [];
+$.each(data.pois, function(index, item) {
+  if (item.latitude && item.longitude) {
+    var m = L.marker( [item.latitude, item.longitude], { icon: customIcon } );
+
+    var popup = L.popup({ closeButton:false })
+      .setContent("<strong>" + item.title + "</strong><br />" + item.location);
+
+    m.bindPopup(popup);
+    m.addTo(map);
+    markers.push(m);
+  }
+});
+
+setInterval(e => {
+  var randomNumber = Math.floor(Math.random() * markers.length);
+  markers[randomNumber].openPopup();
+}, 1500);
+
+
 </script>
