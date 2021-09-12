@@ -1,174 +1,153 @@
 ---
 title: Teams
-description: Teams are regional networks of learning circles led by a local organizer and supported by P2PU.
 layout: base
+slug: teams
+description: Teams are regional networks of learning circles led by a local organizer and supported by P2PU.
 extra_css:
-- /assets/css/vendor/slick.css
-- /assets/css/vendor/slick-theme.css
-- /assets/css/p2pu-teams.css
+  - /assets/css/vendor/slick.css
+  - /assets/css/vendor/slick-theme.css
+  - /assets/css/p2pu-teams.css
 extra_js:
-- js/vendor/slick.min.js
-- js/vendor/smooth-scroll.min.js
-- js/teams.js
+   - js/vendor/slick.min.js
+   - js/teams.js
 ---
 
-<div class="bg-light" id="top">
-  <section class="page-title mb-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <header class="pt-4 pb-3">
-            <h1 class="text-center">{{ page.title }}</h1>
-          </header>
-          <p class="centered large">
-            Teams are regional networks of learning circles led by a local organizer and supported by P2PU. You can apply to join an existing team through <a href="https://learningcircles.p2pu.org/en/">your dashboard</a>. If you’d like to launch a new team in your area, you can start by reviewing <a href="/en/organize/">our organizer materials</a>.
-          </p>
+<div class="header-wrap">
+    <header class="container page-header header-3">
+    <div class="row">
+        <div class="col-12 col-md-7">
+        <h1>Start a Team</h1>		
+        <p>Teams are organized learning circle communities, typically affiliated with library systems and community-based organizations. While anyone can facilitate a learning circle for free, organizations that wish to build a thriving network of learning circles often benefit from additional support and tools. </p>
+        <p>Team membership is designed to provide comprehensive guidance via:</p>
+        <ul>
+          <li>Staff Professional Development</li>
+          <li>1:1 Support</li>
+          <li>Community-Powered OER Library</li>
+          <li>Software for Teams</li>
+          <li>Community of Practice</li>
+          <li>Discounted Additional Services</li>
+        </ul>
+        <p>Team membership is offered on a sliding scale between $2,000 - $10,000 per year, calculated based on your organization's annual operating budget.</p>
+        <a href="#" class="btn btn-lg p2pu-btn orange">Get Started Now</a>
         </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3">
-          <nav id="team-menu" class="nav nav-stacked">
-            <ul class="sidebar-nav">
-            {% for team in site.data.teams.items %}
-              {% if team.id == 3 %}
-              {% else %}
-                <li class="nav-item">
-                  <span class="bullet"></span>
-                  <a data-scroll href="#{{ team.page_slug }}" class="minicaps">{{ team.name }}</a>
-                </li>
-              {% endif %}
-            {% endfor %}
-            </ul>
-          </nav>
-        </div>
-
-        <div class="col-sm-9">
-          {% for team in site.data.teams.items %}
-          {% if team.id == 3 %}
-          {% else %}
-            {% assign organizers = team.facilitators | where:"role","ORGANIZER" %}
-            <div class="card mb-4 pos-relative" id="{{team.page_slug}}">
-              {% if team.image_url %}
-                <div class="card-image">
-                  <img class="card-img-top" src="{{team.image_url}}" />
-                </div>
-              {% else if team.coordinates %}
-                <div class="card-image">
-                  <img class="card-img-top" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
-                </div>
-              {% endif %}
-
-              <div class="card-body">
-                <div class="col-lg-6">
-                  <a href="/{{ team.page_slug }}">
-                    <h2 class="mb-3">{{ team.name }}</h2>
-                  </a>
-
-                  <div class="mb-3">
-                    <div class="text-xs d-flex align-items-center mb-2">
-                      <i class="material-icons pr-2">group</i>
-                      <p class="mb-0">Team members: <span class="bold">{{ team.member_count }}</span></p>
-                    </div>
-
-                    <div class="text-xs d-flex align-items-center mb-2">
-                      <i class="material-icons pr-2">list</i>
-                      <p class="mb-0">Total learning circles: <span class="bold">{{ team.studygroup_count }}</span></p>
-                    </div>
-
-                    <div class="text-xs d-flex align-items-center mb-2">
-                      <i class="material-icons pr-2">event</i>
-                      <p class="mb-0">Established: <span class="bold">{{ team.date_established }}</span></p>
-                    </div>
-
-                    {% if organizers %}
-                    <div class="text-xs d-flex d-lg-none align-items-center mb-2">
-                      <i class="material-icons pr-2">face</i>
-                      <p class="mb-0">Organizers: <span class="bold">
-                        {% for organizer in organizers %}
-                          {% if organizer == organizers.last %}
-                          {{ organizer.first_name }}
-                          {% else %}
-                          {{ organizer.first_name | append: ", " }}
-                          {% endif %}
-                        {% endfor %}
-                      </span></p>
-                    </div>
-                    {% endif %}
+      
+      <div class="col-12 col-md-5">
+        <div class="p2pu-slide-container slick-init row">
+          
+          <article class="slide">
+            <div class="card-testimonial basic card row g-0 p-2 p-lg-3">
+              <div class="card-body col-12">
+                <p>
+                  <strong>What is the most compelling thing about working with P2PU as an ongoing service at your library?</strong>
+                </p>
+                <q>For SPPL, the [facilitator] training plus ongoing practical support is unique—I am sure we aren't the only library stretching staff and materials budgets very thinly, so support at the right moments really matters for us.</q>
+              </div>
+              <div class="card-footer attribution col-12">
+                <div class="row">
+                  <div class="image col-12 col-md-4">
+                    <img class="mx-auto mx-md-0" src="/assets/images/testimonials/dr-lloyd.jpg" alt="Ramune">
                   </div>
-
-                  <a class="btn p2pu-btn blue btn-small" href="/{{ team.page_slug }}">Go to team page</a>
+                  <div class="text col-12 col-md-8 text-center text-md-start">
+                    <span class="name bold">Lloyd</span>
+                    <span class="organization small">Organizer, Saint Paul Public Library</span>
+                  </div>
                 </div>
               </div>
-
-              {% if organizers.size > 0 %}
-              <div class="pos-absolute profile mx-4 p-0 col-sm-5 d-none d-lg-flex align-items-center">
-                <div class="card">
-                  <div class="card-header bg-secondary">
-                    <p class="minicaps text-right mb-0 text-muted">Organizer</p>
-                  </div>
-
-
-                  <div class="card-body">
-                    <div class="slide-container">
-
-
-                    {% assign sorted_organizers = organizers | sort: 'bio' | reverse %}
-                    {% for organizer in sorted_organizers %}
-
-                      <div class="slide">
-                        <div class="d-flex align-items-center">
-                          <div class="profile-image mr-2">
-                            <div class="img-container">
-                              {% if organizer.avatar_url %}
-                              <img class="" src="{{ organizer.avatar_url }}" />
-                              {% else %}
-                              <img class="default-avatar" src="{{ site.baseurl }}/assets/images/avatars/default_avatar.svg" />
-                              {% endif %}
-                            </div>
-                          </div>
-                          <div class="profile-info">
-                            <h4 class="mt-0 mb-2">{{ organizer.first_name }}</h4>
-
-                            {% if organizer.city.size > 0%}
-                            <p class="minicaps text-left mb-1">{{ organizer.city }}</p>
-                            {% endif %}
-
-                            {% if organizer.contact_url.size > 0 %}
-                            <p class="minicaps text-left mb-1">
-                              <a href="{{ organizer.contact_url }}">Contact page</a>
-                            </p>
-                            {% endif %}
-                          </div>
-                        </div>
-
-                        {% if organizer.bio %}
-                        <p class="small mb-0 mt-3">{{ organizer.bio }}</p>
-                        {% endif %}
-
-                      </div>
-                    {% endfor %}
-
-                    </div>
-                    <div class="arrows pos-relative d-flex justify-content-center"></div>
-                  </div>
-
-                </div>
-              </div>
-              {% endif %}
-
             </div>
-          {% endif %}
-          {% endfor %}
+          </article>
+          
+          <article class="slide">
+            <div class="card-testimonial basic card row g-0 p-2 p-lg-3">
+              <div class="card-body col-12">
+                <p>
+                  <strong>What is the most compelling thing about working with P2PU as an ongoing service at your library?</strong>
+                </p>
+                <q>For SPPL, the [facilitator] training plus ongoing practical support is unique—I am sure we aren't the only library stretching staff and materials budgets very thinly, so support at the right moments really matters for us.</q>
+              </div>
+              <div class="card-footer attribution col-12">
+                <div class="row">
+                  <div class="image col-12 col-md-4">
+                    <img class="mx-auto mx-md-0" src="/assets/images/testimonials/dr-lloyd.jpg" alt="Ramune">
+                  </div>
+                  <div class="text col-12 col-md-8 text-center text-md-start">
+                    <span class="name bold">Lloyd</span>
+                    <span class="organization small">Organizer, Saint Paul Public Library</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+                    
+          <article class="slide">
+            <div class="card-testimonial basic card row g-0 p-2 p-lg-3">
+              <div class="card-body col-12">
+                <p>
+                  <strong>What is the most compelling thing about working with P2PU as an ongoing service at your library?</strong>
+                </p>
+                <q>For SPPL, the [facilitator] training plus ongoing practical support is unique—I am sure we aren't the only library stretching staff and materials budgets very thinly, so support at the right moments really matters for us.</q>
+              </div>
+              <div class="card-footer attribution col-12">
+                <div class="row">
+                  <div class="image col-12 col-md-4">
+                    <img class="mx-auto mx-md-0" src="/assets/images/testimonials/dr-lloyd.jpg" alt="Ramune">
+                  </div>
+                  <div class="text col-12 col-md-8 text-center text-md-start">
+                    <span class="name bold">Lloyd</span>
+                    <span class="organization small">Organizer, Saint Paul Public Library</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          <article class="slide">
+            <div class="card-testimonial basic card row g-0 p-2 p-lg-3">
+              <div class="card-body col-12">
+                <p>
+                  <strong>What is the most compelling thing about working with P2PU as an ongoing service at your library?</strong>
+                </p>
+                <q>For SPPL, the [facilitator] training plus ongoing practical support is unique—I am sure we aren't the only library stretching staff and materials budgets very thinly, so support at the right moments really matters for us.</q>
+              </div>
+              <div class="card-footer attribution col-12">
+                <div class="row">
+                  <div class="image col-12 col-md-4">
+                    <img class="mx-auto mx-md-0" src="/assets/images/testimonials/dr-lloyd.jpg" alt="Ramune">
+                  </div>
+                  <div class="text col-12 col-md-8 text-center text-md-start">
+                    <span class="name bold">Lloyd</span>
+                    <span class="organization small">Organizer, Saint Paul Public Library</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          
+          <article class="slide">
+            <div class="card-testimonial basic card row g-0 p-2 p-lg-3">
+              <div class="card-body col-12">
+                <p>
+                  <strong>What is the most compelling thing about working with P2PU as an ongoing service at your library?</strong>
+                </p>
+                <q>For SPPL, the [facilitator] training plus ongoing practical support is unique—I am sure we aren't the only library stretching staff and materials budgets very thinly, so support at the right moments really matters for us.</q>
+              </div>
+              <div class="card-footer attribution col-12">
+                <div class="row">
+                  <div class="image col-12 col-md-4">
+                    <img class="mx-auto mx-md-0" src="/assets/images/testimonials/dr-lloyd.jpg" alt="Ramune">
+                  </div>
+                  <div class="text col-12 col-md-8 text-center text-md-start">
+                    <span class="name bold">Lloyd</span>
+                    <span class="organization small">Organizer, Saint Paul Public Library</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          
         </div>
       </div>
-    </div>
-  </section>
+      
+      </div>
+    </header>
 </div>
-<a href="#top" id="scroll-to-top">
-  <i class="material-icons">keyboard_arrow_up</i>
-</a>
-

@@ -1,37 +1,23 @@
-
 (function($) {
 
-  // Initialize slick on organizer slides
-  $('.slide-container').each(function() {
+  // Initialize slick on testimonial slides
+
+  $('.slick-init').each(function() {
 
     var slider = $(this);
 
     slider.slick({
-      arrows: true,
-      appendArrows: slider.parent().find(".arrows"),
       autoplay: false,
-      autoplaySpeed: 4000,
+      dots: true,
       pauseOnHover: true,
+      swipe: true,
       focusOnSelect: true,
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 480,
-          settings: {
-            pauseOnHover: false,
-            swipe: true,
-          }
-        },
-      ]
+      arrows: false,
+      adaptiveHeight: false,
     })
   })
-
-  // Initialize SmoothScroll
-
-   var scroll = new SmoothScroll('a[href*="#"]', {
-    offset: 60
-  });
 
 })(jQuery)
