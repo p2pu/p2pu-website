@@ -4,12 +4,16 @@
 	&:not(.basic){
 		border-top: 10px solid;
 	}
-	.quote {
+	.quote, .blockquote {
 		position: relative;
+		font-size: $font-size-base;
 		q{
 			&:before, &:after{
 				font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 			}
+		}
+		footer{
+			padding-top: $padding-sm;
 		}
 	}
 	.attribution {

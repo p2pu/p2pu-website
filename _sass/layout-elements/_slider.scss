@@ -1,6 +1,6 @@
 .slick-slider.slick-dotted{
 	.slick-dots li button:before{
-		font-size: 2rem;
+		font-size: 3rem;
 		font-family: $font-family-base;
 	}
 }
@@ -15,4 +15,22 @@
 	height: inherit !important;
 	align-items: stretch;
 	display: flex !important;
+}
+.slick-arrow{
+	position: absolute;
+	right: 100%;
+	width: fit-content;
+	min-width: 2rem;
+	cursor: pointer;
+	height: 100%;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&.prev-arrow{
+		right: 100%;
+	}
+	&.next-arrow{
+		left: 100%;
+	}
 }
