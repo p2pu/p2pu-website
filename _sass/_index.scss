@@ -22,10 +22,13 @@ section#learning-circles {
 }
 
 section#map-section {
-	padding-top: 0;
 	position: relative;
 	height: 45vw;
+	min-height: 500px;
 	max-height: 750px;
+	border: 5px solid $p2pu-blue;
+	border-width: 5px 0;
+	
 	#global-map{
 		position: absolute;
 		top: 0;
@@ -34,29 +37,54 @@ section#map-section {
 		right: 0;
 		z-index: 0;
 	}
+	
 	.container {
 		position: relative;
-		margin-bottom: $padding-sm;
+		@media (max-width: map-get($grid-breakpoints, "sm")) {
+            padding-top: 1em !important;			
+			.col-md-6 {
+				position: absolute;
+				bottom: 10px;
+				left: 3%;
+				width: 94%;
+				button {
+					margin-top: 0 !important;
+					margin-bottom: 0 !important;
+				}
+			}
+		}
+	}
 		
+	.marker {
+	  background-image: url('../images/marker.png');
+	  background-size: cover;
+	  width: 24px;
+	  height: 32px;
 	}
 	
-	.leaflet-popup-content-wrapper {
+	.mapboxgl-popup-content  {
 		border:3px solid #05C7B4;
 		border-radius: 80px;
-		padding: 10px 18px;
+		padding: 5px 18px;
 		font-size:14px;
 		color:#646462;
 		font-family: 'Open Sans', sans-serif;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
-	}
-	 
-	.leaflet-popup-content {
-	  margin:0;
+		box-shadow: 0 2px 4px rgba(0 ,0, 0, .2);
+		margin:0;
 	}
 	
-	.leaflet-popup-tip {
-		background: #05C7B4;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+	.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+	  border-bottom-color: #05C7B4;	
+	}
+	
+	.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+	  border-top-color:#05C7B4;
+	}
+	.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+		border-right-color:#05C7B4;
+	}
+	.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+		border-left-color:#05C7B4;
 	}	
 		
 }

@@ -37,13 +37,16 @@ bundles:
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="canonical"href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-	<!-- Leaflet -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-   crossorigin=""/>
+	<!-- Leaflet TODO: Delete Leaflet -->
+	<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+	integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+	crossorigin=""/>
+	
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" /> -->
 
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css"/>
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -129,12 +132,10 @@ bundles:
 	<section id="map-section" class="bg-cream-dark d-flex">
 		
 		<div id="global-map"></div>
-		<!--div class="map">
-			<img src="{{ site.baseurl }}/assets/images/dev/map.jpg" />
-		</div-->
+
 		
-		<div class="container">
-			<div class="px-4 text-center">
+		<div class="container py-md-5">
+			<div class="text-center">
 				<h1 class="display-4 fw-bold">Join a Learning Circle</h1>
 				<div class="col-md-6 mx-auto">
 					<p class="lead mb-4 fw-bold">65 learning circles happening worldwide this week</p>
@@ -146,16 +147,7 @@ bundles:
 	    </div>
 	</section>
 
-	<!--section>
-		<div class="container">
-			<div class="row justify-content-end" data-aos="fade-up" data-aos-offset="100">
-			  <div class="col-12">
-	      	<h5 class="mt-0 mb-2">Upcoming meetings</h5>
-				</div>
-	    <div id="meetings-feed"></div>
-			</div>
-		</div>
-	</section-->
+
 	
 	<section id="community" class="bg-cream d-flex">
 		<div class="container px-4 py-md-5 position-relative">
@@ -288,10 +280,7 @@ bundles:
 <script src="{{ site.baseurl }}/assets/js/vendor/scroll-magic.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/index.js"></script>
 
-<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-  crossorigin=""></script>
-<script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
 
 {% include map_js.html %}
 

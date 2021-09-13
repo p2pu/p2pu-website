@@ -41,52 +41,46 @@ var data = {
     ]
   };
 
-var map = L.map('global-map', {
-    center: [43.347797, -22.680511],
-    zoomSnap: .1,
-    zoom: 2.3,
-    //scrollWheelZoom: false,
-    //dragging: false,
-    zoomControl: false
+var accessToken = 'pk.eyJ1IjoiY29kZXJvZGVvIiwiYSI6ImNrdGM5M3N5eDIzcGsyb211anVhMGV2bXcifQ.25mHUrP-d-GnMFk22B65IQ';
+var style = 'mapbox://styles/coderodeo/ckti45pap5uxr17p37qyp8j4y';
+
+mapboxgl.accessToken = accessToken;
+var map = new mapboxgl.Map({
+  container: 'global-map',
+  style: style,
+  center:[154.31966822757704, 26.775160622365817],
+  zoom: 1.5
 });
 
-  var tileLayer = "https://api.mapbox.com/styles/v1/coderodeo/ckteuybia2okk17qtl1uyuxof/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY29kZXJvZGVvIiwiYSI6ImNrdGM5M3N5eDIzcGsyb211anVhMGV2bXcifQ.25mHUrP-d-GnMFk22B65IQ";
+//make sure whole map is showing
+var bounds = [-22.08105693027528,-36.31799750813751,331.71425801660695, 76.42933790942402];
+map.fitBounds(bounds);
+map.on('resize', function(e){ map.fitBounds(bounds);})
 
-  L.tileLayer(tileLayer, {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      id: 'mapbox.streets',
-      accessToken: 'pk.eyJ1IjoiY29kZXJvZGVvIiwiYSI6ImNrdGM5M3N5eDIzcGsyb211anVhMGV2bXcifQ.25mHUrP-d-GnMFk22B65IQ',
-  }).addTo(map);
-
-  var bounds = L.latLngBounds(L.latLng(78.955515, 150.938439), L.latLng(-35.055113, -196.29946));
-  map.fitBounds(bounds);
-  // map.on('resize', function(e){ map.fitBounds(bounds);})
-
-var customIcon = L.icon({
-    iconUrl: 'https://assets.codepen.io/257087/marker.png',
-    iconSize: [15, 20],
-    iconAnchor: [7, 20],
-    popupAnchor: [0,-24]
-});
- 
+//set markers & popups
 var markers = [];
+var popups = [];
 $.each(data.pois, function(index, item) {
-  if (item.latitude && item.longitude) {
-    var m = L.marker( [item.latitude, item.longitude], { icon: customIcon } );
-
-    var popup = L.popup({ closeButton:false })
-      .setContent("<strong>" + item.title + "</strong><br />" + item.location);
-
-    m.bindPopup(popup);
-    m.addTo(map);
-    markers.push(m);
-  }
-});
-
-setInterval(e => {
-  var randomNumber = Math.floor(Math.random() * markers.length);
-  markers[randomNumber].openPopup();
+   const popup = new mapboxgl
+   .Popup({ offset:25, closeButton:false, closeOnClick:true})
+   .setHTML( "<strong>" + item.title + "</strong><br />" + item.location);
+  
+   const el = document.createElement('div');
+   el.className = 'marker';  
+   var m = new mapboxgl.Marker(el)
+   .setLngLat([item.longitude, item.latitude])
+   .setPopup(popup) // sets a popup on this marker
+   .addTo(map);
+   
+   popups.push(popup);
+   markers.push(m);
+});  
+var i = 0;
+setInterval(e => {    
+  for (var n = 0; n < popups.length; n++) { popups[n].remove();}
+  markers[i].togglePopup();
+  i++;
+  if(i == markers.length){ i = 0;} 
 }, 1500);
-
 
 </script>
