@@ -12,9 +12,12 @@
 		.card-title {
 			padding:0;
 			margin:0;
-			font-size: $font-size-lg;
 			line-height: $line-height-base;
 			font-weight: $font-weight-bold;
+			
+		}
+		h4.card-title{
+			font-size: $font-size-lg;
 		}
 		
 	}

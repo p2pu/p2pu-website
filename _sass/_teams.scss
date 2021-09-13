@@ -1,7 +1,21 @@
 //@import 'organizer_profile';
+@import "cards/generic-card";
 @import "cards/testimonials-card";
 @import "layout-elements/slider";
 
+#teams{
+
+  .header-wrap{
+    background-color: $p2pu-light-blue;
+    overflow: hidden;
+  } 
+  .card.generic.plain{
+    .card-image{
+      height: 250px;
+    }
+  } 
+
+}
 
 /*
 .sidebar-nav {

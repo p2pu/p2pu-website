@@ -158,4 +158,13 @@
 			bottom: 0;
 		}
 	}
+	&.plain{
+		box-shadow: none;
+		background: transparent;
+		border: 0;
+		.card-header, .card-body, .card-footer {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
 }
