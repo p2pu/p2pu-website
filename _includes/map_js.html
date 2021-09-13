@@ -1,6 +1,6 @@
 <script type="text/javascript">
 
-var data = {{ site.data.map }};
+var data = {% include map_data.json %};
 var accessToken = 'pk.eyJ1IjoiY29kZXJvZGVvIiwiYSI6ImNrdGM5M3N5eDIzcGsyb211anVhMGV2bXcifQ.25mHUrP-d-GnMFk22B65IQ';
 var style = 'mapbox://styles/coderodeo/ckti45pap5uxr17p37qyp8j4y';
 
@@ -20,6 +20,7 @@ map.on('resize', function(e){ map.fitBounds(bounds);})
 //set markers & popups
 var markers = [];
 var popups = [];
+
 $.each(data.pois, function(index, item) {
    const popup = new mapboxgl
    .Popup({ offset:25, closeButton:false, closeOnClick:true})
@@ -34,9 +35,10 @@ $.each(data.pois, function(index, item) {
    
    popups.push(popup);
    markers.push(m);
-});  
+});
+  
 var i = 0;
-setInterval(e => {    
+setInterval(function(e){    
   for (var n = 0; n < popups.length; n++) { popups[n].remove();}
   markers[i].togglePopup();
   i++;
