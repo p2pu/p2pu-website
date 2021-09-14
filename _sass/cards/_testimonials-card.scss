@@ -2,7 +2,7 @@
 
 .card-testimonial{
 	&:not(.basic){
-		border-top: 10px solid;
+		border-top-width: 10px;
 	}
 	.quote, .blockquote {
 		position: relative;

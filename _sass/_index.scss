@@ -1,4 +1,5 @@
 @import "cards/testimonials-card";
+@import "cards/case-study-card";
 @import "layout-elements/dot-block";
 @import "layout-elements/slider";
 
@@ -6,7 +7,7 @@
 	h2{
 		font-family: $font-family-serif;
 	}
-	section#landing {
+	section.landing {
 		p.large {
 			max-width:800px;
 			margin:0 auto;
@@ -22,9 +23,13 @@
 		}
 	}
 	
-	section#learning-circles {
+	section.learning-circles {
 		.container{
-			
+			.dot-quad{
+				p{
+					font-size: $font-size-lg;
+				}
+			}
 		}
 	}
 	
@@ -96,7 +101,7 @@
 			
 	}
 	
-	section#community{
+	section.community{
 		@media (min-width: map-get($grid-breakpoints, "md")) {
 			.col-md-5{
 				position: absolute;
@@ -105,7 +110,7 @@
 		}
 	}
 	
-	section#team {
+	section.team {
 		@media (min-width: map-get($grid-breakpoints, "md")) {
 			.col-md-5{
 				position: absolute;
@@ -114,9 +119,28 @@
 		}
 	}
 	
-	section#about{
-		.slick-slide:not(.slick-current) {
+	section.about{
+		.slick-slide {
 			cursor: pointer;
+			q{
+				&:before, &:after{
+					font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+					font-size: 4.5rem;
+					line-height: 0;
+					height: 0;
+					box-sizing: content-box;
+					max-height: 0;
+					display: inline-block;
+					width: 0;
+					position: absolute;
+				}
+				&:before{
+					transform: translate(-35px, 25px);
+				}
+				&:after{
+					transform: translate(5px, 35px);
+				}
+			}
 		}
 	
 	}

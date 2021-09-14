@@ -23,19 +23,29 @@
 		font-weight: bold;
 		color: $white;
 	}
-	&.p2pu-orange, &.in-progress{
+	&.p2pu-orange, &.in-progress, &.learner{
 		border-top: 6px solid $p2pu-orange;
 		.status-tag {
 			background: $p2pu-orange;
 		}
+		q{
+			&:before, &:after{
+				color: $p2pu-orange;
+			}
+		}
 	}
-	&.p2pu-blue, &.starting-soon{
+	&.p2pu-blue, &.starting-soon, &.card-case-study{
 		border-top: 6px solid $p2pu-blue;
 		.status-tag {
 			background: $p2pu-blue;
 		}
+		q{
+			&:before, &:after{
+				color: $p2pu-blue;
+			}
+		}
 	}
-	&.p2pu-green, &.closed{
+	&.p2pu-green, &.closed, &.facilitator{
 		border-top: 6px solid $p2pu-green;
 		.status-tag {
 			background: $p2pu-green;
@@ -45,8 +55,13 @@
 				visibility: hidden;
 			}
 		}
+		q{
+			&:before, &:after{
+				color: $p2pu-green;
+			}
+		}
 	}
-	&.p2pu-yellow, &.signup-closed{
+	&.p2pu-yellow, &.signup-closed, &.network{
 		border-top: 6px solid $p2pu-yellow;
 		.status-tag {
 			background: $p2pu-yellow;
@@ -54,6 +69,11 @@
 		.card-footer {
 			button{
 				visibility: hidden;
+			}
+		}
+		q{
+			&:before, &:after{
+				color: $p2pu-yellow;
 			}
 		}
 	}
@@ -113,6 +133,11 @@
 		button{
 			margin-top: 0;
 			margin-bottom: 0;
+		}
+		.text{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 		}
 	}
 	table{

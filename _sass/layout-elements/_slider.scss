@@ -22,15 +22,28 @@
 	width: fit-content;
 	min-width: 2rem;
 	cursor: pointer;
-	height: 100%;
-	top: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	top: 100%;
 	&.prev-arrow{
 		right: 100%;
+		transform: translate(100%, 50%);
 	}
 	&.next-arrow{
 		left: 100%;
+		transform: translate(-100%, 50%);
+	}
+	@media (min-width: map-get($grid-breakpoints, "md")) {
+		height: 100%;
+		top: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&.prev-arrow{
+			right: 100%;
+			transform: translate(0px, 0px);
+		}
+		&.next-arrow{
+			left: 100%;
+			transform: translate(0px, 0px);
+		}
 	}
 }
