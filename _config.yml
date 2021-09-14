@@ -34,14 +34,14 @@ defaults:
       type: "topics"
     values:
       layout: "topic_detail"
-      permalink: "topic/:title/"
+      permalink: "/topic/:title/"
   -
     scope:
       path: ""
       type: "jobs"
     values:
-      layout: "base"
-      permalink: "jobs/:title/"
+      layout: "page"
+      permalink: "/jobs/:title/"
 
 #SASS settings
 sass:

@@ -14,29 +14,18 @@ extra_css:
     <div class="container">
         <h2>Open Positions</h2>
         <div class="row grid g-4 pt-4">
-          
+          {% for job in site.jobs %}
             <div class="grid-item col-12 p-2 bg-light">
                 <div class="row d-flex p-1">
                     <div class="text-end order-md-2 col-12 col-md-0 justify-content-start align-items-end">
-                        <em>Posted: March 04/2021</em>
+                        <em>Posted: {{ job.date-posted }}</em>
                     </div>
                     <h3 class="py-3 order-md-0 col-12 col-md justify-content-start align-items-center">
-                        <a href="#" class="p-2 mx-2">Job Posting Title</a>
+                        <a href="{{ job.url }}" class="p-2 mx-2">{{ job.title }}</a>
                     </h3>
                 </div>
             </div>
-            
-            <div class="grid-item col-12 p-2 bg-light">
-                <div class="row d-flex p-1">
-                    <div class="text-end order-md-2 col-12 col-md-0 justify-content-start align-items-end">
-                        <em>Posted: March 04/2021</em>
-                    </div>
-                    <h3 class="py-3 order-md-0 col-12 col-md justify-content-start align-items-center">
-                        <a href="#" class="p-2 mx-2">Job Posting Title</a>
-                    </h3>
-                </div>
-            </div>
-            
+            {% endfor %}          
         </div>
     </div>
 </section>
