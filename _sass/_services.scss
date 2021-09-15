@@ -1,0 +1,15 @@
+@import "layout-elements/contact-form.scss";
+
+#services{
+	section.content{
+		@media (min-width: map-get($grid-breakpoints, "lg")) {
+			.col-lg-5{
+				position: absolute;
+				left: 0;
+			}
+		}
+		>.container{
+			padding-bottom: $padding-lg;
+		}
+	}
+}

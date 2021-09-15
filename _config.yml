@@ -18,6 +18,8 @@ collections:
     output: true
   topics:
     output: true
+  jobs:
+    output: true
 defaults:
   -
     scope:
@@ -32,7 +34,14 @@ defaults:
       type: "topics"
     values:
       layout: "topic_detail"
-      permalink: "topic/:title/"
+      permalink: "/topic/:title/"
+  -
+    scope:
+      path: ""
+      type: "jobs"
+    values:
+      layout: "page"
+      permalink: "/jobs/:title/"
 
 #SASS settings
 sass:

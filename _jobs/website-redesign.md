@@ -1,9 +1,8 @@
 ---
-layout: naked-page
+layout: job-listing
 title: p2pu.org Website Redesign Project
+date-posted: March 04/2021
 ---
-Posted: March 1, 2021
-
 Peer 2 Peer University (P2PU) is a grassroots non-profit organization that supports peer-learning communities in public spaces like libraries around the world. We focus on a pedagogical model we call **learning circles**: lightly-facilitated study groups that meet regularly to work through open-access learning resources. These groups have traditionally been held face-to-face in public spaces like libraries but have expanded to meeting online during the pandemic.
 
 Our organization has relied on grant and project funding to grow our offerings and global community. In 2021, we are transitioning our financial model towards a mix of consulting work and library memberships in order to focus our attention on building a robust and widely-accessible pedagogy.

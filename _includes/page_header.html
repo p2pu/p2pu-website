@@ -3,7 +3,9 @@
   <div class="row">
     <div class="col-12">
       <h1>{{ page.title }}</h1>
-      {% if page.description %}
+      {% if page.subheading %}
+      <p class="subtitle">{{ page.subheading }}</p>
+      {% elsif page.description %}
       <p class="subtitle">{{ page.description }}</p>
       {% endif %}
       {% if page.text %}
@@ -21,7 +23,9 @@
   <div class="row">
     <div class="col-12 col-md-8 col-lg-9 pe-lg-5 pe-xl-6">
       <h1>{{ page.title }}</h1>
-      {% if page.description %}
+      {% if page.subheading %}
+      <p class="subtitle">{{ page.subheading }}</p>
+      {% elsif page.description %}
       <p class="subtitle">{{ page.description }}</p>
       {% endif %}
     </div>
@@ -29,7 +33,7 @@
       <div class="row">
         
         {% if page.text %}
-        <div class="py-3 px-sm-3 col-12 d-flex align-items-center font-weight-bold">{{ page.text }}</div>
+        <div class="py-3 px-sm-3 col-12 d-flex align-items-centerfw-bold">{{ page.text }}</div>
         {% endif %}
         {% if page.button1 %}
         <div class="py-3 pt-md-1 px-sm-3 col-12 col-sm-6 col-md-12 d-flex align-items-center">{{ page.button1 }}</div>
@@ -49,7 +53,9 @@
     <div class="row">
       <div class="col-12 col-md-8">
         <h1>{{ page.title }}</h1>
-        {% if page.description %}
+        {% if page.subheading %}
+        <p class="subtitle">{{ page.subheading }}</p>
+        {% elsif page.description %}
         <p class="subtitle">{{ page.description }}</p>
         {% endif %}
       </div>
@@ -62,7 +68,9 @@
 {% when "page-header-default", "another-page-header" %}
 <header class="container page-header header-default mb-0">
   <h1>{{ page.title }}</h1>
-  {% if page.description %}
+  {% if page.subheading %}
+  <p class="subtitle">{{ page.subheading }}</p>
+  {% elsif page.description %}
   <p class="subtitle">{{ page.description }}</p>
   {% endif %}
 </header>
@@ -70,7 +78,9 @@
 {% else %}
 <header class="container page-header">
   <h1>{{ page.title }}</h1>
-  {% if page.description %}
+  {% if page.subheading %}
+  <p class="subtitle">{{ page.subheading }}</p>
+  {% elsif page.description %}
   <p class="subtitle">{{ page.description }}</p>
   {% endif %}
 </header>

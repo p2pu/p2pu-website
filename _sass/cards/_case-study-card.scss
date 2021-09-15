@@ -1,0 +1,42 @@
+@import "card-base";
+
+
+.card.card-case-study{
+	border-top-width: 10px !important;
+	.card-image{
+		height: 0;
+		position: relative;
+		padding-top: 60%;
+		@media (min-width: map-get($grid-breakpoints, "sm")) {
+			padding-top: 40%;
+		}
+		@media (min-width: map-get($grid-breakpoints, "md")) {
+			padding-top: 60%;
+		}
+		@media (min-width: map-get($grid-breakpoints, "lg")) {
+			padding-top: 40%;
+		}
+		@media (min-width: map-get($grid-breakpoints, "xl")) {
+			padding-top: 60%;
+		}
+		img{
+			position: absolute;
+			top: 0;
+		}
+	}
+	.card-header {
+		padding-bottom: $padding-md;
+		.eyebrow{
+			color: $p2pu-blue;
+			font-size: $font-size-sm;
+			text-transform: uppercase;
+			font-weight: $font-weight-normal;
+			letter-spacing: .03em;
+		}
+	}
+}
+.slick-slide{
+	.card.card-case-study{
+		margin: $padding-sm;
+	}
+}	
