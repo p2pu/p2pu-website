@@ -1,0 +1,38 @@
+---
+layout: page
+title: Presentations and Talks
+---
+<div class="container">
+	<div class="home">
+		<div class="row">
+			<p>
+				We speak widely on learning technology, communities and openness.
+				Here's a selection of our recent presentations. We love sharing what we're up to at
+				P2PU--if you have any questions, please ask us!
+			</p>
+			<a class="btn btn-success" href="https://community.p2pu.org">
+				Let's Talk About...
+			</a>
+		</div>
+		<hr />
+		{% for talk in site.data.presentations %}
+			{% assign multi_three=forloop.index0|modulo:4 %}
+			{% if multi_three == 0 %}<div class="row">{% endif %}
+			<a class="col-md-3 talk fa-play-circle" href="{{ talk.url }}" target="_blank"
+			   style="background-image:url('{{ site.baseurl }}/assets/images/talks/{{ talk.image }}') ">
+				<div class="talk-overlay">
+					<div class="talk-presenter">
+						<h5>
+							{% for presenter in talk.presenters %}
+								{{ presenter }}
+							{% endfor %}
+						</h5>
+					</div>
+					<h4 class="event">{{ talk.event }}<br /></h4>
+					<small>{{ talk.date| date: "%B %Y" }}</small>
+				</div>
+			</a>
+			{% if multi_three == 3 or forloop.last %}</div>{% endif %}
+		{% endfor %}
+	</div>
+</div>

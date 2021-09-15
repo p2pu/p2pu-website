@@ -102,8 +102,8 @@
 	}
 	
 	section.community{
-		@media (min-width: map-get($grid-breakpoints, "md")) {
-			.col-md-5{
+		@media (min-width: map-get($grid-breakpoints, "lg")) {
+			.col-lg-5{
 				position: absolute;
 				right: 0;
 			}
@@ -111,8 +111,8 @@
 	}
 	
 	section.team {
-		@media (min-width: map-get($grid-breakpoints, "md")) {
-			.col-md-5{
+		@media (min-width: map-get($grid-breakpoints, "lg")) {
+			.col-lg-5{
 				position: absolute;
 				left: 0;
 			}

@@ -1,0 +1,46 @@
+---
+layout: page
+title: Meet the People of P2PU
+category: people
+extra_css:
+ - /assets/css/p2pu-about.css
+---
+<div class="container" id="people">
+	<h4>Our Staff</h4>
+
+	<div class="tiles">
+		{% for person in site.data.people.staff %}
+			{% assign multi_three=forloop.index0|modulo:3 %}
+			{% if multi_three == 0 %}
+				<div class="row">{% endif %}
+          {% include person.html %}
+			{% if multi_three == 2 or forloop.last %}</div>{% endif %}
+		{% endfor %}
+	</div>
+	<hr />
+
+	<h4>Our Board</h4>
+	<div class="tiles">
+		{% for person in site.data.people.board %}
+			{% assign multi_three=forloop.index0|modulo:3 %}
+			{% if multi_three == 0 %}
+				<div class="row">{% endif %}
+          {% include person.html %}
+			{% if multi_three == 2 or forloop.last %}</div>{% endif %}
+		{% endfor %}
+	</div>
+	<hr />
+
+	<h4>Our Extended Family</h4>
+
+	<div class="tiles">
+		{% for person in site.data.people.collaborators %}
+			{% assign multiply=forloop.index0|modulo:3 %}
+			{% if multiply == 0 %}
+				<div class="row">{% endif %}
+          {% include person.html %}
+			{% if multiply == 2 or forloop.last %}</div>{% endif %}
+		{% endfor %}
+	</div>
+</div>
+<figure class="strech-banner people"></figure>

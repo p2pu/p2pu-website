@@ -6,6 +6,9 @@ section.contact{
 	.container{
 		.contact-form{
 			background-color: transparent;
+			@media (max-width: map-get($grid-breakpoints, "md")) {
+				box-shadow: none !important;
+			}
 			@media (min-width: map-get($grid-breakpoints, "md")) {
 				background-color: $p2pu-light-blue;
 			}
