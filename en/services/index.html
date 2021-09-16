@@ -88,11 +88,11 @@ extra_js:
 				<h2>Reach Out About Services</h2>
 				<p>Fill out this form or email us directly at <a target="_blank" href="mailto:thepeople@p2pu.org">thepeople@p2pu.org</a></p>
 				
-				<form class="row g-3 pt-3 needs-validation" novalidate>
-				
+				<form class="row g-3 pt-3 needs-validation" action="https://staging-learningcircles.p2pu.org/api/contact/" method="POST" novalidate>
+					<input type="hidden" name="source" value="www.p2pu.org/services"/>
 					<div class="col-12">
 						<label for="email" class="form-label">Email Address *</label>
-						<input type="text" class="form-control" id="email" placeholder="Email Address" required>
+						<input type="text" class="form-control" id="email" name="email" placeholder="Email Address" required>
 						<div class="invalid-feedback">
 							Please provide a valid email address.
 						</div>
@@ -102,7 +102,7 @@ extra_js:
 					</div>
 					<div class="col-12">
 						<label for="name" class="form-label">Name *</label>
-						<input type="text" class="form-control" id="name" placeholder="Name" required>
+						<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
 						<div class="invalid-feedback">
 							Please provide your name.
 						</div>
@@ -112,7 +112,7 @@ extra_js:
 					</div>
 					<div class="col-12">
 						<label for="organization" class="form-label">Organization *</label>
-						<input type="text" class="form-control" id="organization" placeholder="Your Organization" required>
+						<input type="text" class="form-control" id="organization" name="organization" placeholder="Your Organization" required>
 						<div class="invalid-feedback">
 							Please provide your organization.
 						</div>
@@ -122,7 +122,7 @@ extra_js:
 					</div>
 					<div class="col-12">
 						<label for="message" class="form-label">How can we help you? *</label>
-						<textarea type="textarea" class="form-control" id="message" placeholder="Message" style="height: 10rem;" required></textarea>
+						<textarea type="textarea" class="form-control" id="message" name="content" placeholder="Message" style="height: 10rem;" required></textarea>
 						<div class="invalid-feedback">
 							Please include a message.
 						</div>
