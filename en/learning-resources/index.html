@@ -9,6 +9,7 @@ slug: courses
 description: Browse guides to popular learning circle topics and pick a course for your learning circle from our library of free learning resources, tested and curated by the P2PU community. 
 bundles:
   - learning-resources
+  - courses
 extra_css:
 - /assets/css/p2pu-courses.css
 ---
@@ -37,8 +38,8 @@ extra_css:
 
 <section class="search">
   <div class="container">
-  
  
+    <div id="search-courses-component" data-api-origin="{{site.default_base_api_endpoint}}"></div>
   
   <!--TODO: for dev purposes only - kill before golive -->
     <div class="row justify-content-around align-items-start">
