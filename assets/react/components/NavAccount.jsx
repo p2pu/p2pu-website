@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import  { API_BASE_URL, LOGIN_REDIRECT_URL } from '../constants';
+//import  { API_BASE_URL } from '../constants';
 import UserLogin from './UserLogin';
 import UserDropdown from './UserDropdown';
 
-const loginUrl = `${API_BASE_URL}/en/accounts/fe/login/`
+
+const API_BASE_URL = 'https://staging-learningcircles.p2pu.org';
+const loginUrl = `${API_BASE_URL}/en/accounts/fe/login/`;
 
 export default class NavAccount extends Component {
   constructor(props) {
