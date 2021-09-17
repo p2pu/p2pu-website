@@ -2,17 +2,17 @@ top_level:
   - text: Explore Learning Circles
     url: /en/learning-circles/
   - text: Knowledge Base
-    url: /en/handbook/
+    url: https://handbook.p2pu.org/
   - text: Community
     url:
     submenu:
       - text: Learning Resources
         url: /en/learning-resources/
       - text: Forums
-        url: https\://community.p2pu.org/
+        url: https://community.p2pu.org/
         external: true
       - text: Events
-        url: https\://community.p2pu.org/c/community-events/57
+        url: https://community.p2pu.org/c/community-events/57
         external: true
   - text: About
     url:
@@ -24,7 +24,7 @@ top_level:
       - text: Jobs
         url: /en/jobs/
       - text: Blog
-        url: https\://info.p2pu.org/
+        url: https://info.p2pu.org/
         external: true
       - text: Donate
         url: /en/donate/
