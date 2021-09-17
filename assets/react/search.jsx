@@ -18,6 +18,7 @@ ReactDOM.render(
     origin={origin}
     Browse={BrowseLearningCircles}
     contact={ elem.dataset.teamContact ? elem.dataset.teamContact : null }
+    defaultImageUrl="/assets/images/p2pu-ogimg-default.jpg"
   />, document.getElementById('search-lc-component')
 );
 
