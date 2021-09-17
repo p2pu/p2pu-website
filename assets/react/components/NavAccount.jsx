@@ -1,63 +1,76 @@
 import React, { Component } from 'react';
-import ApiHelper from '../helpers/ApiHelper';
 import  { API_BASE_URL, LOGIN_REDIRECT_URL } from '../constants';
+import UserLogin from './UserLogin';
+import UserDropdown from './UserDropdown';
+
+const loginUrl = `${API_BASE_URL}/en/accounts/fe/login/`
 
 export default class NavAccount extends Component {
   constructor(props) {
     super(props)
     this.state = {}
-    this.getUserData = () => this._getUserData();
   }
 
   componentDidMount() {
     this.getUserData();
   }
 
-  _getUserData() {
-    const api = new ApiHelper('whoami');
-    const onSuccess = (data) => {
-      if (data.user && data.user !== 'anonymous') {
-        this.setState({ user: data.user, links: data.links })
+  getUserData = () => {
+    const url = `${API_BASE_URL}/en/accounts/fe/whoami/`
+    fetch(url, {
+      method: 'GET',
+      mode: 'cors',
+      credentials: 'include',
+    }).then(response => {
+      return response.json();
+    }).then(jsonBody => {
+      console.log(jsonBody);
+      if (jsonBody.user && jsonBody.user !== 'anonymous') {
+        this.setState({ user: jsonBody.user, links: jsonBody.links })
       }
-    }
+    });
+  }
 
-    api.fetchResource({ callback: onSuccess })
+  onUserLogin = (username, password) => {
+    // POST username + password to login API, if successful, call whoami
+    fetch(loginUrl, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      credentials: 'include', // or 'same-origin'
+      body: JSON.stringify({
+        email: username,
+        password
+      })
+    }).then(response => {
+      return response.json();
+    }).then(jsonBody => {
+      if (jsonBody.errors){
+        this.setState({errors: jsonBody.errors});
+      } else {
+        // GET user data if login is successful
+        this.setState({errors: null});
+        this.getUserData();
+      }
+    });
   }
 
   render() {
     if (this.state.user) {
-      return(
-        <div className="dropdown">
-          <div className="dropdown-toggle" id="account-menu-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            <button className="nav-item">
-              <i className="fa fa-user" aria-hidden="true"></i>
-              <span className="uppercase hidden-xs">{this.state.user}</span>
-            </button>
-          </div>
-          <ul className="dropdown-menu dropdown-menu-right" aria-labelledby="account-menu-dropdown">
-            {
-              this.state.links.map((link, index) => {
-                return (
-                  <li key={index}>
-                    <a href={`${API_BASE_URL}${link.url}`}>
-                      <span className="bullet" />
-                      <span className="text">{link.text}</span>
-                    </a>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </div>
-      )
+      return <UserDropdown user={this.state.user} links={this.state.links} />;
     } else {
       return (
-        <div>
-          <a className="nav-item" href={LOGIN_REDIRECT_URL}>
-            <i className="fa fa-user" aria-hidden="true"></i>
-            <span className="uppercase hidden-xs">Log in</span>
-          </a>
-        </div>
+        <>
+          <nav className="order-4 order-md-2 text-end navbar navbar-expand-md col-12 col-md pe-0">
+            <div className="collapse navbar-collapse navbarNavDropdown justify-content-end">
+              <a href="/en/teams/" className="d-flex btn btn-sm secondary p2pu-btn blue">Start a Team</a>
+              <button href="#" className="d-flex btn btn-sm secondary p2pu-btn orange">Create an Account</button>
+            </div>
+          </nav>
+          <UserLogin onSubmit={this.onUserLogin} errors={this.state.errors}/>
+        </>
       )
     }
   }
