@@ -9,6 +9,13 @@
 		font-size: $font-size-base;
 		color: $text-muted;
 	}
+	&.dark{
+		color: $white;
+		background-color: $gray;
+		&::placeholder, &select:invalid {
+			color: rgba(255,255,255,0.5);
+		}
+	}
 }
 select:invalid.form-control {
 	font-style: italic;
