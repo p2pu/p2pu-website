@@ -13,10 +13,16 @@
 				}
 				.eyebrow{
 					display: block;
-					font-size: $font-size-xl;
 					text-transform: uppercase;
 					font-weight: $font-weight-bold;
 					padding-top: $padding-lg;
+					font-size: $font-size-sm;
+					@media (min-width: map-get($grid-breakpoints, "md")) {
+					  font-size: $font-size-base;
+					}
+					@media (min-width: map-get($grid-breakpoints, "lg")) {
+						  font-size: $font-size-lg;
+						}
 				}
 				.btn.back{
 					background-color: rgba(0,0,0,.1);
@@ -56,26 +62,88 @@ section{
 				}
 				
 			}
-			.feedback{
-				.grid-item{
-					>.row{
-						border-top: 1px solid;
+		}
+		.feedback{
+			.text-center{
+				@media (min-width: map-get($grid-breakpoints, "md")) {
+					padding-right: 8%;
+				}
+				@media (min-width: map-get($grid-breakpoints, "xxl")) {
+					padding-right: 5rem;
+				}
+				.display-3{
+					span{
+						font-size: 2em;
 					}
 				}
 			}
-			&:last-of-type .table-responsive table tbody tr:first-of-type{
-				@media (max-width: map-get($grid-breakpoints, "md")) {
-					border-top-width: 0;
+			.ratings{
+				>div{
+					&:nth-of-type(2){
+						.stars{
+							i:first-of-type{
+								opacity: 0;
+							}
+						}
+					}
+
+					&:nth-of-type(3){
+						.stars{
+							i{
+								&:first-of-type, &:nth-of-type(2){
+									opacity: 0;
+								}
+							}
+						}
+					}
+					
+					&:nth-of-type(4){
+						.stars{
+							i{
+								&:first-of-type, &:nth-of-type(2), &:nth-of-type(3){
+									opacity: 0;
+								}
+							}
+						}
+					}
+					
+					&:nth-of-type(5){
+						.stars{
+							i{
+								&:first-of-type, &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4){
+									opacity: 0;
+								}
+							}
+						}
+					}
+				
+					.stars{
+						>span{
+							padding: 0 1rem 0 .5rem;
+						}
+					}
+				}
+				
+				.bar{
+					>span{
+						padding: 0 1rem;
+					}
 				}
 			}
 		}
-		.feedback{
+		.reviews{
 			.grid-item{
-				.row{
+				>.row{
 					border-top: 1px solid;
 				}
 			}
 		}
+		&:last-of-type .table-responsive table tbody tr:first-of-type{
+			@media (max-width: map-get($grid-breakpoints, "md")) {
+				border-top-width: 0;
+			}
+		}
+	
 		
 		
 		
