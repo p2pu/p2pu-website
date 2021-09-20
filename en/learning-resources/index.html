@@ -19,6 +19,7 @@ extra_css:
     <h2 class="sans-serif">Topic Guides</h2>
     <div class="row grid">
       {% for topic in site.topics %}
+      {% if topic.featured %}
       <div class="grid-item col-md-6 col-lg-4">
         <div class="card topic cover-link">
         <a href="{{ topic.url }}" target="_blank"></a>
@@ -30,6 +31,7 @@ extra_css:
         </div>
         </div>
       </div>
+      {% endif %}
       {% endfor %}
     
     </div>
@@ -39,10 +41,9 @@ extra_css:
 <section class="search">
   <div class="container">
  
-    <div id="search-courses-component" data-api-origin="{{site.default_base_api_endpoint}}"></div>
   
+    <!--TODO: for dev purposes only - kill before golive -->
     {% comment %}
-  <!--TODO: for dev purposes only - kill before golive -->
     <div class="row justify-content-around align-items-start">
       
       
@@ -94,7 +95,7 @@ extra_css:
                 <form class="search">
                   <label for="search-input" class="form-label">Topics</label>
                   <div class="badges popular-topics">
-                    <span class=fw-bold text-xxsm text-uppercase">Popular Topics:</span>
+                    <span class="fw-bold text-xxsm text-uppercase">Popular Topics:</span>
                     <span class="badge topic">Business</span>
                     <span class="badge topic">Bowling</span>
                     <span class="badge topic">Racial</span>
@@ -485,8 +486,8 @@ extra_css:
           </div>
         </div>
       </div>
-
-    {% endcomment %}
+      {% endcomment %}
+      <div id="search-courses-component" data-api-origin="{{site.default_base_api_endpoint}}"></div>
     </div>
   </section>
 
