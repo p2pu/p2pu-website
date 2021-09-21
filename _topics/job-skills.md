@@ -12,6 +12,7 @@ links:
     img: bobross.png
     url: https\://bobross.com
 featured: true
+course_data: job_skills
 ---
 ## Facilitator's Prep
 ### Job Skills 

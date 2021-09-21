@@ -1,5 +1,7 @@
 ---
 layout: base
+bundles:
+  - topic-guide
 extra_css:
   - /assets/css/p2pu-topics.css
 ---
@@ -46,6 +48,22 @@ extra_css:
 	</div>
 </section>
 
+<section>
+	<div class="container">
+		<h2>Courses</h2>
+		<div class="row grid">
+      <div id="topic-courses" ></div>
+
+    </div>
+  </div>
+</section>
+
+<script id="topic-course-data" type="application/json">
+{ "courses": {{site.data.topic_courses[page.course_data] | jsonify }} }
+</script>
+
+
+{% comment %}
 <section>
 	<!-- THIS SECTION NEEDS INTEGRATION TO PULL IN COURSE CARDS-->	
 	<div class="container">
@@ -219,3 +237,4 @@ extra_css:
 		</div>
 	</div>
 </section>
+{% endcomment %}
