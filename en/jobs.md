@@ -6,5 +6,6 @@ description: New job openings are posted here and announced through our mailing 
 
 As an open source project, we invite contribution and collaboration from many angles. New job openings are announced through our mailing list and added below.
 
-# Current Opportunities
- - [Community Coordinator (Remote Contractor)]({{site.baseurl}}/en/jobs/community-coordinator/) (Posted Sept 2, 2021)
+# There are no current opportunities
+
+Sign up to the newsletter in the footer if you would like to hear about future opportunities.
