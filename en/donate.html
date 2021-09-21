@@ -3,10 +3,13 @@ layout: base
 title: Donate to P2PU
 description: P2PU is a 501(c)3 nonprofit organization funded through a mix of grants, contract work, institutional membership, and charitable giving.
 slug: donate
+bundles:
+  - donate
 extra_css:
   - /assets/css/p2pu-donate.css
 ---
 
+<script src="https://www.paypal.com/sdk/js?client-id=AQu0Ki0-F9GxVt4pizLHsKcR5bq20ZE4hhk5dINwAfrYy7_6JBq74wfQzhlUEex9Yjk_1VBwEt_16nDH"></script>
 <div class="container">
 	<div class="row">
 		<header class="col-12 col-lg-7 text-lg page-header">
@@ -16,6 +19,8 @@ extra_css:
 		</header>
 		<div class="col-12 col-lg-5 mt-lg-4">
 			<div class="container bg-light-blue">
+        <div id="donation-form-react"></div>
+        {% comment %}
 				<form class="row g-3">
 					<h3>Choose an amount to give:</h3>
 					<div class="col-6 col-md-4 col-lg-6 col-xl-4">
@@ -40,6 +45,7 @@ extra_css:
 						<button class="mt-3 btn bg-gray text-white col-12" type="submit">DONATE</button>
 					</div>
 				</form>
+        {% endcomment %}
 			</div>
 		</div>
 	</div>
