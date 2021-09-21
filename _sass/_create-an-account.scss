@@ -1,0 +1,62 @@
+@import "layout-elements/contact-form.scss";
+
+#create-an-account{
+  main{
+    position: relative;
+    span.material-icons-outlined{
+      font-size: 3em;
+      padding-right: 1.5rem;
+    }
+    >.container{
+      >.row{
+        
+        @media (max-width: map-get($grid-breakpoints, "lg")) {
+          padding-bottom: 60%;
+          .flex-column{
+            >div:last-child{
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 100%;
+              max-width: 86.5%;
+              padding-right: var(--bs-gutter-x, 30px);
+              padding-left: var(--bs-gutter-x, 30px);
+              margin-right: auto;
+              margin-left: auto;
+              img{
+                width: 100%;
+              }
+            }
+          }
+        }
+        @media (max-width: map-get($grid-breakpoints, "sm")) {
+          .flex-column{
+            >div:last-child{
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .create{
+    .container{
+      max-width: 100%;
+      margin-top: 0;
+      margin-bottom: $spacer * 3;
+      padding-top: 0;
+      padding-bottom: $grid-gutter-width;
+      @media (min-width: map-get($grid-breakpoints, "lg")) {
+        margin-top: $spacer * 4;
+        padding-top: $grid-gutter-width;
+      }
+      .create-form{
+        input, textarea{
+          border: 1px solid transparentize($p2pu-blue, 0.5);; 
+        }
+      }
+    }
+  }
+}
