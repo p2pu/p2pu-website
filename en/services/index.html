@@ -4,10 +4,11 @@ title: Services
 slug: services
 header: page-header-default
 description: "P2PU offers a number of services designed to tailor learning circles to your community. All services are priced on a sliding scale, and we are available to help write our services into grant proposals.</p><p class='subtitle'>You can also support our work by making a <a href='#'>tax-exempt donation</a> or <a href='#'>purchasing some P2PU gear</a>."
+contact: Reach Out About Services
 extra_css:
 - /assets/css/p2pu-services.css
 extra_js:
-- js/contact-form-validation.js
+- js/form-validation.js
 ---
 <section class="bg-blue mt-5">
 	<div class="container py-4">
@@ -75,65 +76,6 @@ extra_js:
 					<li><strong>White Labeling:</strong> Run a version of the learning circle software, and get complete creative control over how people experience learning circles in your community.</li>
 					<li><strong>Translation:</strong> Translate the software into a new language (currently available in English, German, Polish, Romanian, Portuguese, and Finnish).</li>
 				</ul>
-			</div>
-		</div>
-	</div>
-	
-</section>
-
-<section class="contact">
-	<div class="container">
-		<div class="contact-form shadow col-12 col-lg-10 offset-lg-1 py-md-5">
-			<div class="form-wrap col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-				<h2>Reach Out About Services</h2>
-				<p>Fill out this form or email us directly at <a target="_blank" href="mailto:thepeople@p2pu.org">thepeople@p2pu.org</a></p>
-				
-				<form class="row g-3 pt-3 needs-validation" action="https://staging-learningcircles.p2pu.org/api/contact/" method="POST" novalidate>
-					<input type="hidden" name="source" value="www.p2pu.org/services"/>
-					<div class="col-12">
-						<label for="email" class="form-label">Email Address *</label>
-						<input type="text" class="form-control" id="email" name="email" placeholder="Email Address" required>
-						<div class="invalid-feedback">
-							Please provide a valid email address.
-						</div>
-						<div class="valid-feedback">
-						  Looks good!
-						</div>
-					</div>
-					<div class="col-12">
-						<label for="name" class="form-label">Name *</label>
-						<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
-						<div class="invalid-feedback">
-							Please provide your name.
-						</div>
-						<div class="valid-feedback">
-						  Looks good!
-						</div>
-					</div>
-					<div class="col-12">
-						<label for="organization" class="form-label">Organization *</label>
-						<input type="text" class="form-control" id="organization" name="organization" placeholder="Your Organization" required>
-						<div class="invalid-feedback">
-							Please provide your organization.
-						</div>
-						<div class="valid-feedback">
-						  Looks good!
-						</div>
-					</div>
-					<div class="col-12">
-						<label for="message" class="form-label">How can we help you? *</label>
-						<textarea type="textarea" class="form-control" id="message" name="content" placeholder="Message" style="height: 10rem;" required></textarea>
-						<div class="invalid-feedback">
-							Please include a message.
-						</div>
-						<div class="valid-feedback">
-							Looks good!
-						</div>
-					</div>
-					<div class="col-12 text-center mt-4">
-						<button class="btn p2pu-btn blue" type="submit">Submit form</button>
-					  </div>
-				</form>
 			</div>
 		</div>
 	</div>

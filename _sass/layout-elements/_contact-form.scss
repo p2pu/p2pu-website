@@ -13,7 +13,7 @@ section.contact{
 				background-color: $p2pu-light-blue;
 			}
 			input, textarea{
-				border: 1px solid $p2pu-light-blue; 
+				border: 1px solid transparentize($p2pu-blue, 0.5);; 
 			}
 		}
 	}
