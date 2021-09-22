@@ -9,7 +9,7 @@
 		}
 		else
 		{
-			$( 'main' ).remove( '<div class="modal-backdrop fade show" style="z-index: 1;"></div>' );
+			$('.modal-backdrop').remove();
 			$('body').removeAttr('style');
 			toggle = true;
 		}
