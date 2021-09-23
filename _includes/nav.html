@@ -6,30 +6,30 @@
         <a class="order-1 d-flex align-items-center py-3 me-md-auto text-white text-decoration-none" href="{{ site.baseurl }}/{{ language }}/">
           <img class="logo bi me-2 logo" src="{{ site.baseurl }}/assets/images/dev/logo.png" alt="P2PU logo">
         </a>
-
+        
+        {% if page.slug != "dashboard" %}
         <nav class="logged-out order-4 order-md-2 text-end navbar navbar-expand-md col-12 col-md pe-0">
           <div class="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
             <button href="#" class="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</button>
             <button href="#" class="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn orange">Create an Account</button>
           </div>
         </nav>
-
-        <!--nav id="account-info" class="order-2 order-md-4 m3-0 ms-auto">
-          <div class="dropdown nav-item">
-            <a href="#" class="nav-link d-flex align-items-center mb-2 mb-md-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="material-icons">account_circle</span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">
-              <li><a class="dropdown-item" href="#" aria-current="page">Overview</a></li>
-              <li><a class="dropdown-item" href="#">Inventory</a></li>
-              <li><a class="dropdown-item" href="#">Customers</a></li>
-              <li><a class="dropdown-item" href="#">Products</a></li>
-              <li><a class="dropdown-item" href="#">Reports</a></li>
-              <li><a class="dropdown-item" href="#">Analytics</a></li>
-            </ul>
-          </div>
-        </nav-->
+        {% endif %}
         
+        {% if page.slug == "dashboard" %}
+        <nav id="account-info" class="bg-cream align-self-stretch align-self-md-center d-flex align-items-stretch order-2 order-md-4 dropdown ms-auto me-0">
+          <button type="button" class="btn btn-sm d-flex align-items-center secondary p2pu-btn gray mx-0 ms-auto dropdown-toggle" id="loggedInDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="material-icons material-icons-outlined me-1">account_circle</span>
+            Username
+          </button>
+          <ul class="dropdown-menu py-0 dropdown-menu-end loggedin-dropdown shadow" aria-labelledby="loggedInDropdown">
+            <li><a class="dropdown-item" href="#">Dashboard</a></li>
+            <li><a class="dropdown-item" href="#">Account</a></li>
+            <li><a class="dropdown-item" href="#">Log Out</a></li>
+          </ul>
+        </nav>
+        
+        {% else %}
         
         <nav id="log-in" class="align-self-stretch align-self-md-center d-flex align-items-stretch order-2 order-md-4 dropdown ms-auto me-0">
           <button type="button" class="btn btn-sm d-flex align-items-center secondary p2pu-btn gray mx-0 ms-auto dropdown-toggle" id="loginDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,6 +57,7 @@
             </form>
           </div>
         </nav>
+        {% endif %}
         
         <nav class="order-3 navbar-expand-md">
           <button class="navbar-toggler hamburger mx-0 align-items-center" type="button" data-bs-toggle="collapse" data-bs-target=".navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +72,7 @@
   </div>
   <div class="header-bottom px-3 py-md-2 bg-cream-dark">
     <div class="container d-flex flex-wrap justify-content-center">
-      <nav class="col-12 col-md-auto py-0 ms-lg-auto justify-content-center text-sm navbar navbar-expand-md px-0">
+      <nav class="main-nav col-12 col-md-auto py-0 ms-lg-auto justify-content-center text-sm navbar navbar-expand-md px-0">
         <div class="collapse navbar-nav navbar-collapse navbarNavDropdown align-items-stretch align-items-md-center pt-3 pb-5 py-md-0">
         {% for link in site.data.navigation.top_level %}
           <div class="dropdown nav-item">
