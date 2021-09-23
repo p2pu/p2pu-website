@@ -32,7 +32,7 @@ select:invalid.form-control {
 form{
 	&.filter{
 		.input-group-md{
-			@media (min-width: map-get($grid-breakpoints, "md")) {
+			@include media-breakpoint-up(md) {
 				position: relative;
 				display: flex;
 				flex-wrap: wrap;

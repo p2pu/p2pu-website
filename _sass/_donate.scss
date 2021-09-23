@@ -1,3 +1,5 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 #donate{
   .container.bg-light-blue{
     max-width: 100%;
@@ -5,7 +7,7 @@
     margin-bottom: $spacer * 3;
     padding-top: 0;
     padding-bottom: $grid-gutter-width;
-    @media (min-width: map-get($grid-breakpoints, "lg")) {
+    @include media-breakpoint-up(lg) {
       margin-top: $spacer * 4;
       padding-top: $grid-gutter-width;
     }

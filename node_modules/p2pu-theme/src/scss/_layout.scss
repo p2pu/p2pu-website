@@ -11,14 +11,14 @@ body {
     flex: 1 0 auto;
     padding-top: $navbar-height-sm;
     background-color: $cream;
-    @media (min-width: map-get($grid-breakpoints, "md")) {
+    @include media-breakpoint-up(md) {
       padding-top: $navbar-height;
     }
     section{
       >.container{
         padding-top: $padding-lg;
         padding-bottom: $padding-lg;
-        @media (min-width: map-get($grid-breakpoints, "lg")) {
+        @include media-breakpoint-up(lg) {
           padding-bottom: $padding-lg * 2;
         }
       }
@@ -27,7 +27,7 @@ body {
   .page-header {
     margin-top: $spacer * 2;
     margin-bottom: $spacer * 3;
-    @media (min-width: map-get($grid-breakpoints, "md")) {
+    @include media-breakpoint-up(md) {
       margin-top: $spacer * 4;
     }
     .subtitle{

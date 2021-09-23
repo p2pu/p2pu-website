@@ -1,3 +1,5 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 .row {
 	&[class*=" dot-"] {	  
 		>div{

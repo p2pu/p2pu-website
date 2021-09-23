@@ -37,25 +37,25 @@
       padding: 3px 19px;
     }
     &-sm-sm{
-      @media (min-width: map-get($grid-breakpoints, "sm")) {
+      @include media-breakpoint-up(sm) {
         font-size: $font-size-sm;
         padding: 3px 19px;
       }
     }
     &-md-sm{
-      @media (min-width: map-get($grid-breakpoints, "md")) {
+      @include media-breakpoint-up(md) {
         font-size: $font-size-sm;
         padding: 3px 19px;
       }
     }
     &-lg-sm{
-      @media (min-width: map-get($grid-breakpoints, "lg")) {
+      @include media-breakpoint-up(lg) {
         font-size: $font-size-sm;
         padding: 3px 19px;
       }
     }
     &-xl-sm{
-      @media (min-width: map-get($grid-breakpoints, "xl")) {
+      @include media-breakpoint-up(xl) {
         font-size: $font-size-sm;
         padding: 3px 19px;
       }
@@ -68,25 +68,25 @@
       font-size: $font-size-base * 1.2;
     }
     &-sm-base{
-      @media (min-width: map-get($grid-breakpoints, "sm")) {
+      @include media-breakpoint-up(sm) {
         padding: 7px 31px;
         font-size: $font-size-base * 1.2;
       }
     }
     &-md-base{
-      @media (min-width: map-get($grid-breakpoints, "md")) {
+      @include media-breakpoint-up(md) {
         padding: 7px 31px;
         font-size: $font-size-base * 1.2;
       }
     }
     &-lg-base{
-      @media (min-width: map-get($grid-breakpoints, "lg")) {
+      @include media-breakpoint-up(lg) {
         padding: 7px 31px;
         font-size: $font-size-base * 1.2;
       }
     }
     &-xl-base{
-      @media (min-width: map-get($grid-breakpoints, "xl")) {
+      @include media-breakpoint-up(xl) {
         padding: 7px 31px;
         font-size: $font-size-base * 1.2;
       }

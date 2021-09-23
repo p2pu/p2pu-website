@@ -1,3 +1,4 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
 @import "card-base";
 
 .card.course.horizontal{
@@ -5,11 +6,11 @@
 		margin-top: 0;
 	}
 	.card-footer{
-		@media (min-width: map-get($grid-breakpoints, "lg")) {
+		@include media-breakpoint-up(lg) {
 			padding-top: 0;
 			padding-left: $padding-md;
 		}
-		@media (min-width: map-get($grid-breakpoints, "xl")) {
+		@include media-breakpoint-up(xl) {
 			padding-top: $padding-md;
 			padding-left: 0;
 		}

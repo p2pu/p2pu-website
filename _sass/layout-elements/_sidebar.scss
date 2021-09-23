@@ -1,6 +1,8 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 .sidebar.sticky-top{
 	top: $navbar-height-sm;
-	@media (min-width: map-get($grid-breakpoints, "lg")) {
+	@include media-breakpoint-up(lg) {
 	  top: $navbar-height;
 	  padding-top: $padding-sm * 2;
 	  border-right: 1px solid $gray-light;
@@ -8,7 +10,7 @@
 	  margin-bottom: 35px;
 	}
 	.navbar-toggler{
-		@media (max-width: map-get($grid-breakpoints, "lg")) {
+		@include media-breakpoint-down(lg) {
 			width: 100%;
 			display: block;
 			align-items: start;
@@ -19,10 +21,10 @@
 		}
 	}
 	.wrap{
-		@media (max-width: map-get($grid-breakpoints, "lg")) {
+		@include media-breakpoint-down(lg) {
 			top: $navbar-height;
 		}
-		@media (max-width: map-get($grid-breakpoints, "md")) {
+		@include media-breakpoint-down(md) {
 			top: $navbar-height-sm;
 		}
 		.offcanvas-header{

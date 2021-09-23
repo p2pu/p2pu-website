@@ -1,3 +1,5 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 /* -------------------------------------------------------------------------
 
  Style Guide Boilerplate Bootstrap Edition v2.0.1
@@ -12,7 +14,7 @@
 .primary .container{
   margin-left: 0;
   max-width: 93%;
-  @media (min-width: map-get($grid-breakpoints, "xxl")) {
+  @include media-breakpoint-up(xxl) {
     max-width: calc(1180px - 8%);
   }
 }

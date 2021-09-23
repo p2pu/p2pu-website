@@ -140,35 +140,35 @@
 // stop column styles at breakpoint
 
 .col{
-  @media (min-width: map-get($grid-breakpoints, "sm")) {
+  @include media-breakpoint-up(sm) {
     &-sm-0{
       display: inherit !important;
       flex-direction: column;
       width: auto;
     }
   }
-  @media (min-width: map-get($grid-breakpoints, "md")) {
+  @include media-breakpoint-up(md) {
     &-md-0{
       display: inherit !important;
       flex-direction: column;
       width: auto;
     }
   }
-  @media (min-width: map-get($grid-breakpoints, "lg")) {
+  @include media-breakpoint-up(lg) {
     &-lg-0{
       display: inherit !important;
       flex-direction: column;
       width: auto;
     }
   }
-  @media (min-width: map-get($grid-breakpoints, "xl")) {
+  @include media-breakpoint-up(xl) {
     &-xl-0{
       display: inherit !important;
       flex-direction: column;
       width: auto;
     }
   }
-  @media (min-width: map-get($grid-breakpoints, "xxl")) {
+  @include media-breakpoint-up(xxl) {
     &-xxl-0{
       display: inherit !important;
       flex-direction: column;

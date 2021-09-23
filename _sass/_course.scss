@@ -1,3 +1,5 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 @import "cards/learning-circles-card";
 @import "cards/generic-card";
 
@@ -17,10 +19,10 @@
 					font-weight: $font-weight-bold;
 					padding-top: $padding-lg;
 					font-size: $font-size-sm;
-					@media (min-width: map-get($grid-breakpoints, "md")) {
+					@include media-breakpoint-up(md) {
 					  font-size: $font-size-base;
 					}
-					@media (min-width: map-get($grid-breakpoints, "lg")) {
+					@include media-breakpoint-up(lg) {
 						  font-size: $font-size-lg;
 						}
 				}
@@ -65,10 +67,10 @@ section{
 		}
 		.feedback{
 			.text-center{
-				@media (min-width: map-get($grid-breakpoints, "md")) {
+				@include media-breakpoint-up(md) {
 					padding-right: 8%;
 				}
-				@media (min-width: map-get($grid-breakpoints, "xxl")) {
+				@include media-breakpoint-up(xxl) {
 					padding-right: 5rem;
 				}
 				.display-3{
@@ -139,7 +141,7 @@ section{
 			}
 		}
 		&:last-of-type .table-responsive table tbody tr:first-of-type{
-			@media (max-width: map-get($grid-breakpoints, "md")) {
+			@include media-breakpoint-down(md) {
 				border-top-width: 0;
 			}
 		}
@@ -158,11 +160,11 @@ section{
 				margin-top: 0;
 			}
 			.card-footer{
-				@media (min-width: map-get($grid-breakpoints, "md")) {
+				@include media-breakpoint-up(md) {
 					padding-top: 0;
 					padding-left: $padding-md;
 				}
-				@media (min-width: map-get($grid-breakpoints, "lg")) {
+				@include media-breakpoint-up(lg) {
 					padding-top: $padding-md;
 					padding-left: 0;
 				}
