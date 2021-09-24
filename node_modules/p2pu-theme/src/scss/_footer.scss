@@ -1,7 +1,5 @@
 footer#footer{
   .nav-heading{
-    padding-top: $spacer;
-    padding-bottom: $spacer * .5;
     font-weight: bold;
     letter-spacing: .03em;
     text-transform: uppercase;
@@ -12,6 +10,7 @@ footer#footer{
       margin-bottom: 0;
     }
     .nav-item{
+      margin-bottom: .25rem;
       a{
         color: $white;
         font-weight: lighter;
@@ -21,6 +20,26 @@ footer#footer{
   .donate{
     span{
       padding-bottom: 2px;
+    }
+  }
+  #mc_embed_signup_scroll{
+    input.email{
+      border-radius: 2em;
+      border: 2px solid $cream;
+      color: $cream;
+      background: transparentize($cream, 0.75);
+      &::placeholder{
+        color: $cream;
+      }
+    }
+  }
+  .social-link{
+    a{
+      color: $cream;
+      font-size: $h4-font-size;
+      &:hover{
+        color: transparentize($cream, 0.15);
+      }
     }
   }
 }

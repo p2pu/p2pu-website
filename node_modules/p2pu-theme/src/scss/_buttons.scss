@@ -222,6 +222,29 @@
       }
     }
   }
+  
+  &.cream {
+    background: $cream;
+    border: 2px solid $cream;
+    color: $white;
+
+    &:before {
+      background: lighten($cream, 1%);
+    }
+
+    &.secondary {
+      background: transparent;
+      color: $cream;
+      border: 2px solid $cream;
+      &:before {
+        background: transparentize($cream, 0.95);
+      }
+
+      &:hover {
+        color: $cream;
+      }
+    }
+  }
 
   &:focus {
     outline: none;
