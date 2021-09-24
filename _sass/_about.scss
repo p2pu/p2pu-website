@@ -1,3 +1,5 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 @import "cards/staff-card";
 @import "cards/teams-card";
 @import "cards/board-card";
@@ -20,7 +22,7 @@
     font-size: $font-size-lg;
     >.container{
       border-top: 0;
-      @media (min-width: map-get($grid-breakpoints, "md")) {
+      @include media-breakpoint-up(md){
         padding-top: $padding-lg * 2;
       }
     }
@@ -36,38 +38,3 @@
   }
   
 }
-
-
-
-/*
-.people-img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-}
-
-.partners {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  > div {
-    text-align: center;
-    margin-bottom: $padding-sm;
-  }
-}
-
-.funders {
-  padding: $padding-md;
-
-  .funder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      max-width: 200px;
-      filter: grayscale(1);
-    }
-  }
-}*/

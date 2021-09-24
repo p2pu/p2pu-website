@@ -6,9 +6,58 @@
         <a class="order-1 d-flex align-items-center py-3 me-md-auto text-white text-decoration-none" href="{{ site.baseurl }}/{{ language }}/">
           <img class="logo bi me-2 logo" src="{{ site.baseurl }}/assets/images/dev/logo.png" alt="P2PU logo">
         </a>
-
-        <div id="nav-account" class="order-4 order-md-2 text-end navbar navbar-expand-md">
-        </div>
+        
+        {% if page.slug != "dashboard" %}
+        <nav class="logged-out order-4 order-md-2 text-end navbar navbar-expand-md col-12 col-md pe-0">
+          <div class="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
+            <button href="#" class="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</button>
+            <button href="#" class="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn orange">Create an Account</button>
+          </div>
+        </nav>
+        {% endif %}
+        
+        {% if page.slug == "dashboard" %}
+        <nav id="account-info" class="bg-cream align-self-stretch align-self-md-center d-flex align-items-stretch order-2 order-md-4 dropdown ms-auto me-0">
+          <button type="button" class="btn btn-sm d-flex align-items-center secondary p2pu-btn gray mx-0 ms-auto dropdown-toggle" id="loggedInDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="material-icons material-icons-outlined me-1">account_circle</span>
+            Username
+          </button>
+          <ul class="dropdown-menu py-0 dropdown-menu-end loggedin-dropdown shadow" aria-labelledby="loggedInDropdown">
+            <li><a class="dropdown-item" href="#">Dashboard</a></li>
+            <li><a class="dropdown-item" href="#">Account</a></li>
+            <li><a class="dropdown-item" href="#">Log Out</a></li>
+          </ul>
+        </nav>
+        
+        {% else %}
+        
+        <nav id="log-in" class="align-self-stretch align-self-md-center d-flex align-items-stretch order-2 order-md-4 dropdown ms-auto me-0">
+          <button type="button" class="btn btn-sm d-flex align-items-center secondary p2pu-btn gray mx-0 ms-auto dropdown-toggle" id="loginDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="material-icons material-icons-outlined me-1 d-md-none">account_circle</span>
+            Log In
+          </button>
+          <div class="dropdown-menu dropdown-menu-end login-dropdown shadow" aria-labelledby="loginDropdown">
+            <form action="" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="csrfmiddlewaretoken" value="">
+              <!-- <div class="alert alert-block alert-danger"> <ul> <li>Please enter a correct username and password. Note that both fields may be case-sensitive.</li> </ul> </div> -->
+              
+              <div id="div_id_username" class="form-group"> <label for="id_username" class="col-form-label  requiredField">
+              Username<span class="asteriskField">*</span> </label> <div class=""> <input type="text" name="username" autofocus="" class="textinput textInput form-control" required="" id="id_username"> </div> </div> 
+              
+              <div id="div_id_password" class="form-group"> <label for="id_password" class="col-form-label  requiredField">
+              Password<span class="asteriskField">*</span> </label> <div class=""> <input type="password" name="password" class="textinput textInput form-control" required="" id="id_password"> </div> </div>
+              <div class="row align-items-center justify-content-between" id="div_id_submit" >
+                 <div class="col-7">
+                   <a href="https://learningcircles.p2pu.org/en/accounts/password_reset/" target="_blank" class="text-sm">forgot password?</a>
+                </div>               
+                  <div class="col-5">
+                      <button type="submit" class="btn p2pu-btn btn-sm orange">Login</button>
+                  </div>
+              </div>
+            </form>
+          </div>
+        </nav>
+        {% endif %}
         
         <nav class="order-3 navbar-expand-md">
           <button class="navbar-toggler hamburger mx-0 align-items-center" type="button" data-bs-toggle="collapse" data-bs-target=".navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,15 +70,15 @@
       </div>
     </div>
   </div>
-  <div class="header-bottom px-3 py-2 bg-cream-dark">
+  <div class="header-bottom px-3 py-md-2 bg-cream-dark">
     <div class="container d-flex flex-wrap justify-content-center">
-      <nav class="col-12 col-md-auto py-0 ms-md-auto justify-content-center text-sm navbar navbar-expand-md px-0 px-md-3">
-        <div class="collapse navbar-nav navbar-collapse navbarNavDropdown align-items-stretch align-items-md-center">
+      <nav class="main-nav col-12 col-md-auto py-0 ms-lg-auto justify-content-center text-sm navbar navbar-expand-md px-0">
+        <div class="collapse navbar-nav navbar-collapse navbarNavDropdown align-items-stretch align-items-md-center pt-3 pb-5 py-md-0">
         {% for link in site.data.navigation.top_level %}
           <div class="dropdown nav-item">
             <a href="{{ link.url }}" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle {% if link.external %} external {% endif %}" {% if link.submenu %} data-bs-toggle="dropdown" {% endif %} aria-expanded="false" {% if link.external %}  target="_blank" {% endif %} > {{ link.text }}</a>
             {% if link.submenu %}
-            <ul class="dropdown-menu" aria-labelledby="dropdownNavLink" style="">      
+            <ul class="dropdown-menu shadow py-md-0" aria-labelledby="dropdownNavLink" style="">      
             {% endif %}
             {% for sub_link in link.submenu %}
               <li><a class="dropdown-item {% if link.external %} external {% endif %}" href="{{ sub_link.url }}" {% if link.external %}  target="_blank" {% endif %}>{{ sub_link.text }}</a></li>

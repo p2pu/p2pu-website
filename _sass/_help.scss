@@ -1,3 +1,5 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 @import "cards/_generic-card";
 @import "layout-elements/contact-form.scss";
 
@@ -18,7 +20,7 @@
     font-size: $font-size-lg;
     >.container{
       border-top: 0;
-      @media (min-width: map-get($grid-breakpoints, "md")) {
+      @include media-breakpoint-up(md) {
         padding-top: $padding-lg * 2;
       }
     }

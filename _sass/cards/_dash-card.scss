@@ -1,3 +1,4 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
 @import "card-base";
 
 .card.dashboard.horizontal{
@@ -32,7 +33,7 @@
 		font-size: $font-size-base;
 		margin-top: 0;
 		vertical-align: middle;
-		@media (min-width: map-get($grid-breakpoints, "md")) {
+		@include media-breakpoint-up(md) {
 			margin-top: $padding-md;
 		}
 		thead{
@@ -40,7 +41,7 @@
 			tr{
 				th{
 					font-size: $font-size-sm;
-					@media (min-width: map-get($grid-breakpoints, "lg")) {
+					@include media-breakpoint-up(lg) {
 						font-size: $font-size-base;
 					}
 					&:first-of-type{
@@ -53,7 +54,7 @@
 			tr{
 				border-bottom: 1px solid;
 				padding: $padding-sm 0;
-				@media (min-width: map-get($grid-breakpoints, "md")) {
+				@include media-breakpoint-up(md) {
 					padding: 0;
 					border-bottom: none;
 					>*:first-of-type{
@@ -65,7 +66,7 @@
 				}
 				td{
 					font-size: $font-size-sm;
-					@media (min-width: map-get($grid-breakpoints, "xl")) {
+					@include media-breakpoint-up(xl) {
 						font-size: $font-size-base;
 						
 					}
@@ -73,7 +74,7 @@
 						display: none;
 					}
 					&.manage{
-						@media (min-width: map-get($grid-breakpoints, "md")) {
+						@include media-breakpoint-up(md) {
 							width: 0;
 						}
 						text-align: right;
@@ -84,7 +85,7 @@
 	}
 }
 
-@media (max-width: map-get($grid-breakpoints, "md")) {
+@include media-breakpoint-down(md) {
 	.card.dashboard.horizontal{
 		padding-bottom: $padding-sm;
 		>.row{
