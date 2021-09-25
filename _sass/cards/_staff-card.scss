@@ -17,6 +17,7 @@
 	.card-header, .card-body, .card-footer {
 		padding-left: 0;
 		padding-right: 0;
+		padding-bottom: $padding-sm;
 	}
 	.card-header{
 		h3+p{

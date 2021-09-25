@@ -5,9 +5,9 @@
 #services{
 	section.content{
 		@include media-breakpoint-up(lg) {
-			.col-lg-5{
+			h2.col-lg-7{
 				position: absolute;
-				left: 0;
+				right: 0;
 			}
 		}
 		>.container{
