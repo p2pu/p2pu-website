@@ -23,9 +23,9 @@ extra_css:
 
 <section>
 	<div class="container">
-		<article>{{ content }}</article>
+		<article class="col-lg-11 col-xl-10">{{ content }}</article>
 
-		<p class="text-xl pt-4fw-bold">Additional Reading</p>
+		<p class="text-xl pt-4 fw-bold">Additional Reading</p>
 		<div class="row grid">
 			{% for link in page.links %}
 			<div class="grid-item col-md-6 col-lg-4">
@@ -46,7 +46,7 @@ extra_css:
 	</div>
 </section>
 
-<section>
+<section class="composition">
 	<!-- THIS SECTION NEEDS INTEGRATION TO PULL IN COURSE CARDS-->	
 	<div class="container">
 		<h2>Courses</h2>
