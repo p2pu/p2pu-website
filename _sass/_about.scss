@@ -1,8 +1,8 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 
-@import "cards/staff-card";
-@import "cards/teams-card";
-@import "cards/board-card";
+@import "p2pu-theme/src/scss/cards/staff-card";
+@import "p2pu-theme/src/scss/cards/teams-card";
+@import "p2pu-theme/src/scss/cards/board-card";
 @import "layout-elements/dot-block";
 
 #about{
