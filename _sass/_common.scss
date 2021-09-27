@@ -7,3 +7,10 @@ section.landing, header.page-header, main > section{
 .stars i.material-icons{
 	font-size: $font-size-lg;
 }
+.composition{
+	background: url("/assets/images/bg-composition.png") repeat;
+}
+.img-fluid{
+	height: auto;
+	width: 100%;
+}

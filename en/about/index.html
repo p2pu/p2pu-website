@@ -154,9 +154,9 @@ extra_css:
         <p>We’d also like to thank these sponsors for their generous support:</p>
         <div class="row grid">
             {% for funder in site.data.funders %}
-            <div class="funder col-md-6 col-lg-4 col-12">
+            <div class="funder col-sm-6 col-md-3 col-lg-4 col-12 g-4">
                 <a href="{{ funder.url }}">
-                    <img src="{{ site.baseurl }}{{ funder.logo }}" alt="{{ funder.name }}" />
+                    <img class="w-100 img-fluid" src="{{ site.baseurl }}{{ funder.logo }}" alt="{{ funder.name }}" />
                 </a>
             </div>
             {% endfor %}

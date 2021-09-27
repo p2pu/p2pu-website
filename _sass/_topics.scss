@@ -1,7 +1,7 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 
-@import "cards/course-card";
-@import "cards/generic-card";
+@import "p2pu-theme/src/scss/cards/course-card";
+@import "p2pu-theme/src/scss/cards/generic-card";
 
 .header-wrap{
 	@include media-breakpoint-up(md) {
@@ -44,11 +44,16 @@
 				}
 				&:last-of-type{
 					height: 40vw;
+					img{
+						height: 100%;
+						width: 100%;
+						object-fit: cover;
+					}
 					@include media-breakpoint-up(md) {
 						height: auto;
 						img{
 							border-radius: 100%;
-							transform: translateY(10%, -5%);
+							transform: translate(10%, -5%);
 						}
 					}
 				}

@@ -4,14 +4,14 @@
       <div class="d-flex flex-wrap align-items-center">
         
         <a class="order-1 d-flex align-items-center py-3 me-md-auto text-white text-decoration-none" href="{{ site.baseurl }}/{{ language }}/">
-          <img class="logo bi me-2 logo" src="{{ site.baseurl }}/assets/images/dev/logo.png" alt="P2PU logo">
+          <img class="logo my-md-1 me-2" src="{{ site.baseurl }}/assets/images/dev/logo.png" alt="P2PU logo">
         </a>
         
         {% if page.slug != "dashboard" %}
         <nav class="logged-out order-4 order-md-2 text-end navbar navbar-expand-md col-12 col-md pe-0">
           <div class="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
-            <button href="#" class="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</button>
-            <button href="#" class="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn orange">Create an Account</button>
+            <button href="{{ site.baseurl }}/en/teams" class="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</button>
+            <button href="{{ site.baseurl }}/en/create-an-account" class="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn orange">Create an Account</button>
           </div>
         </nav>
         {% endif %}
@@ -70,7 +70,7 @@
       </div>
     </div>
   </div>
-  <div class="header-bottom px-3 py-md-2 bg-cream-dark">
+  <div class="header-bottom px-3 py-md-1 bg-cream-dark">
     <div class="container d-flex flex-wrap justify-content-center">
       <nav class="main-nav col-12 col-md-auto py-0 ms-lg-auto justify-content-center text-sm navbar navbar-expand-md px-0">
         <div class="collapse navbar-nav navbar-collapse navbarNavDropdown align-items-stretch align-items-md-center pt-3 pb-5 py-md-0">
