@@ -1,13 +1,15 @@
-@import "cards/course-card";
-@import "cards/generic-card";
+@import 'bootstrap/scss/mixins/_breakpoints';
+
+@import "p2pu-theme/src/scss/cards/course-card";
+@import "p2pu-theme/src/scss/cards/generic-card";
 
 .header-wrap{
-	@media (min-width: map-get($grid-breakpoints, "md")) {
+	@include media-breakpoint-up(md) {
 		background: url(/assets/images/topics/topic-detail-bg.png) no-repeat center right $p2pu-light-yellow;
 		background-size: contain !important;
 		background-position: 50vw center;
 	}
-	@media (min-width: map-get($grid-breakpoints, "lg")) {
+	@include media-breakpoint-up(lg) {
 		background-position: center right;
 	}
 	.page-header{
@@ -42,11 +44,16 @@
 				}
 				&:last-of-type{
 					height: 40vw;
-					@media (min-width: map-get($grid-breakpoints, "md")) {
+					img{
+						height: 100%;
+						width: 100%;
+						object-fit: cover;
+					}
+					@include media-breakpoint-up(md) {
 						height: auto;
 						img{
 							border-radius: 100%;
-							transform: translateY(10%, -5%);
+							transform: translate(10%, -5%);
 						}
 					}
 				}
@@ -65,11 +72,11 @@ section{
 				margin-top: 0;
 			}
 			.card-footer{
-				@media (min-width: map-get($grid-breakpoints, "md")) {
+				@include media-breakpoint-up(md) {
 					padding-top: 0;
 					padding-left: $padding-md;
 				}
-				@media (min-width: map-get($grid-breakpoints, "lg")) {
+				@include media-breakpoint-up(lg) {
 					padding-top: $padding-md;
 					padding-left: 0;
 				}

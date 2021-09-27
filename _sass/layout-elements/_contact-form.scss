@@ -1,15 +1,17 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 section.contact{
 	background-color: $p2pu-light-blue;
-	@media (min-width: map-get($grid-breakpoints, "md")) {
+	@include media-breakpoint-up(md) {
 		background-color: transparent;
 	}
 	.container{
 		.contact-form{
 			background-color: transparent;
-			@media (max-width: map-get($grid-breakpoints, "md")) {
+			@include media-breakpoint-down(md) {
 				box-shadow: none !important;
 			}
-			@media (min-width: map-get($grid-breakpoints, "md")) {
+			@include media-breakpoint-up(md) {
 				background-color: $p2pu-light-blue;
 			}
 			input, textarea{

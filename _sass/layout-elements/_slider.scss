@@ -1,3 +1,5 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 .slick-slider.slick-dotted{
 	.slick-dots li button:before{
 		font-size: 3rem;
@@ -31,7 +33,7 @@
 		left: 100%;
 		transform: translate(-100%, 50%);
 	}
-	@media (min-width: map-get($grid-breakpoints, "md")) {
+	@include media-breakpoint-up(md) {
 		height: 100%;
 		top: 0;
 		display: flex;

@@ -1,4 +1,6 @@
-@import "cards/dash-card";
+@import 'bootstrap/scss/mixins/_breakpoints';
+
+@import "p2pu-theme/src/scss/cards/dash-card";
 @import "layout-elements/dot-block";
 
 #dashboard{
@@ -12,7 +14,7 @@
 	.dashboard-cards{
 		>row{
 			border-top: 1px solid;
-			@media (min-width: map-get($grid-breakpoints, "md")) {
+			@include media-breakpoint-up(md) {
 				border-top: 0;
 			}
 		}

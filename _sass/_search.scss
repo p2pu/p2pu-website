@@ -1,3 +1,5 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 .search-fields{
   form{
     padding: 1rem 1.5rem 1.5rem !important;
@@ -12,7 +14,7 @@
       margin-bottom: 1.5rem;
       display: inline-block;
       vertical-align: middle;
-      @media (min-width: map-get($grid-breakpoints, "md")) {
+      @include media-breakpoint-up(md) {
         position: absolute;
         left: 200px;
         top: 100%;
@@ -41,7 +43,7 @@
     }
   }
 }
-#search{
+.search{
   .react-tabs__tab-list {
     border-bottom: 1px solid $gray-dark;
     margin: 0 0 10px;

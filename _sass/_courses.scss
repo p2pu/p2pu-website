@@ -1,5 +1,7 @@
-@import "cards/course-card";
-@import "cards/topic-card";
+@import 'bootstrap/scss/mixins/_breakpoints';
+
+@import "p2pu-theme/src/scss/cards/course-card";
+@import "p2pu-theme/src/scss/cards/topic-card";
 @import "layout-elements/sidebar";
 
 .sidebar{

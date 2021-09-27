@@ -61,7 +61,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const url = "${{ steps.site_url.outputs.stdout }}"
+            const url = `${{ steps.site_url.outputs.stdout }}`;
             const output = `\n**Deploying site to**: http://${url.replace(/\"/g, '') }`;
             const pull = await github.pulls.get({
                 owner: context.repo.owner,
