@@ -28,6 +28,8 @@ All development should happen on a branch forked from master.
 
 For development on your local workstation, you need [Docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/)
 
+Be sure to check out all git submodules
+
 ### Building the site
 
 Run the following command to get the needed data from the site:
