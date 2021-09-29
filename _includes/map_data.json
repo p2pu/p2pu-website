@@ -1,0 +1,40 @@
+{
+"pois": [
+  {
+	"latitude": 15.341006,
+	"longitude": 44.202889,
+	"location": "Sana'a, Yemen",
+	"title": "Let's Speak English"
+  },
+  {
+	"latitude": 19.237273,
+	"longitude": 72.787587,
+	"location": "Gorai, India",
+	"title": "Cheap Web Hosting"
+  },
+  {
+	"latitude": 41.817587,
+	"longitude": -87.694739,
+	"location": "Chicago, IL, USA",
+	"title": "Art of Storytelling"
+  },
+  {
+	"latitude": 0.02896583659494138,
+	"longitude": 37.62162219117033,
+	"location": "Meru, Kenya",
+	"title": "Data Detox"
+  },
+  {
+	"latitude": 47.004173737910584,
+	"longitude": 21.97320051982301,
+	"location": "Sânmartin, Romania",
+	"title": "Utilizarea tehnologiei in biblioteca școlară"
+  },
+  {
+	"latitude": 37.684385128154204,
+	"longitude": -97.33780224546243,
+	"location": "Wichita, Kansas",
+	"title": "Fiction Writing for Teens"
+  }
+]
+}

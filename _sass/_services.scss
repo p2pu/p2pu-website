@@ -1,0 +1,17 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
+@import "layout-elements/contact-form.scss";
+
+#services{
+	section.content{
+		@include media-breakpoint-up(lg) {
+			h2.col-lg-7{
+				position: absolute;
+				right: 0;
+			}
+		}
+		>.container{
+			padding-bottom: $padding-lg;
+		}
+	}
+}

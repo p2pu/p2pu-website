@@ -77,3 +77,11 @@ jobs:
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_PAGER: ""
+
+      - run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID_STAGING --paths "/*"
+        if: endsWith(github.ref, '/master')
+        env:
+          CLOUDFRONT_DISTRIBUTION_ID_STAGING: ${{secrets.CLOUDFRONT_DISTRIBUTION_ID_STAGING}}
+          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_PAGER: ""

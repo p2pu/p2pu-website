@@ -1,0 +1,87 @@
+# for the testimonial images, place them in the /assets/images/testimonials folder
+# make sure the images are square (otherwise they will look distorted)
+# roles should be one of: Learning Circle Facilitator, Learning Circle Participant, or Grantmaker
+# For case study images, link to external URL or place in /assets/images/case-studies directory
+
+cards:
+  - quote: "I joined a learning circle so I could be in an environment where everyone is vested in the work and progress. Also, being able to share and receive feedback under the guidance of an engaged instructor-leader was a blessing!"
+    img: dr-lloyd.jpg
+    name: Lloyd
+    role: Learning Circle Participant
+    organization: Boston Public Library
+    type: learner
+    cardtype: testimonial    
+    
+  - title: Bringing College Credit to Libraries with Peer-Led Learning Circles
+    url: https://info.p2pu.org/2021/07/21/bringing-college-credits-to-libraries-with-peer-led-learning-circles/
+    img: https://info.p2pu.org/wp-content/uploads/2021/07/blog-CU-press-release-04-300x200.png
+    cardtype: case-study
+    
+  - quote: "To have such a program here in Detroit is a valuable resource for us to participate in...if it was not for Peer 2 Peer University I would probably still be working on finishing my book."
+    img: melvin.jpg
+    name: Melvin
+    role: Learning Circle Participant
+    organization: Detroit Public Library
+    type: learner
+    cardtype: testimonial
+    
+  - title: Bringing College Credit to Libraries with Peer-Led Learning Circles
+    url: https://info.p2pu.org/2020/07/29/celebrating-three-years-of-community-based-online-learning-with-imls/
+    img: 42203421574_e94be869ea_z.jpg
+    cardtype: case-study 
+          
+  - quote: "The very act of making education accessible, free, and learner-driven is the heart of democracy. Here in Chicago, an incredibly segregated city, I've seen learning circles be agents of social justice: they have brought people of all races, ages, and social classes, and helped them form bonds they might otherwise not have the opportunity to form."
+    img: shelley.jpg
+    name: Shelley
+    role: Learning Circle Facilitator
+    organization: Chicago Public Library
+    type: facilitator
+    cardtype: testimonial
+    
+  - quote: "For me, learning circles and peer learning means that every opinion counts and is valid. We are only humans, and challenges make us strong."
+    img: kaltuma-sama.png
+    name: Kaltuma
+    role: Learning Circle Facilitator
+    organization: Kenya National Library Service (Buru Buru Branch)
+    type: facilitator
+    cardtype: testimonial
+    
+  - quote: "I realized that learning as a group is easier than learning alone. I never thought it would be so interesting."
+    img: joan.jpg
+    name: Joan
+    role: Learning Circle Facilitator
+    organization: Kenya National Library Service (Meru Branch)
+    type: facilitator
+    cardtype: testimonial
+    
+  - quote: "As an immigrant myself I seek opportunities to help families learn English much like my family was helped when we arrived here. Perhaps one day someone I helped will pay it forward and help someone else."
+    img: manny-reynoso.jpg
+    name: Manny
+    role: Learning Circle Facilitator
+    organization: Notre Dame Education Center (Boston)
+    type: facilitator
+    cardtype: testimonial
+    
+  - quote: "People want to learn how to use computers but they haven't had success sitting in a class listening to an \"expert\" tell them how. Learning circles have been a great way to attract digital literacy learners by offering something new and peer-centered."
+    img: wendy-pearson.jpg
+    name: Wendy
+    role: Learning Circle Organizer
+    organization: Kansas City Public Library
+    type: facilitator
+    cardtype: testimonial
+
+  - quote: "P2PU neatly connects open educational resources to career pathways in an equitable and empowering way that few other organizations are even considering."
+    img: laura.png
+    name: Laura
+    role: Grantmaker
+    organization: Siegel Family Endowment
+    type: network
+    cardtype: testimonial
+
+  - quote: "Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."
+    img: ramune.png
+    name: Ramune
+    role: Manager of Public Libraries Innovation Programme
+    organization: EIFL
+    type: network
+    cardtype: testimonial

@@ -1,0 +1,240 @@
+---
+layout: base
+bundles:
+  - topic-guide
+extra_css:
+  - /assets/css/p2pu-topics.css
+---
+<div class="header-wrap">
+  <header class="container page-header">
+	<div class="row">
+	  <div class="col-12 col-md-6 col-lg-7 my-4 my-lg-5">
+		<a href="{{ site.baseurl }}/en/learning-resources" class="btn p2pu-btn btn secondary gray mt-md-4">
+			<span>Back to Learning Resources</span>
+		</a>
+		<span class="eyebrow">topic:</span>
+		<h1>{{ page.title }}</h1>
+		<p class="subtitle mb-md-5">{{ page.excerpt }}</p>
+	  </div>
+	  <div class="col-12 col-md-5 offset-md-1 col-lg-5 offset-lg-0">
+		  <img src="/assets/images/topics/{{ page.img }}" />
+	  </div>
+	</div>
+  </header>
+</div>
+
+<section>
+	<div class="container">
+		<article class="col-lg-11 col-xl-10">{{ content }}</article>
+
+		<p class="text-xl pt-4 fw-bold">Additional Reading</p>
+		<div class="row grid">
+			{% for link in page.links %}
+			<div class="grid-item col-md-6 col-lg-4">
+			    <div class="card generic cover-link">
+				    <a href="{{link.url}}" target="_blank"></a>
+					<div class="card-image">
+					  <img src="{{ site.baseurl }}/assets/images/topics/{{page.slug}}/{{ link.img}}" alt="{{ link.title }}" class="card-img-top">
+					</div>
+					<div class="card-header">
+					  <h4 class="card-title">{{ link.title }}</h4>
+					  <span>{{ link.description }}</span>
+					</div>
+			    </div>
+			</div>
+			{% endfor %}
+				
+		</div>
+	</div>
+</section>
+
+<section class="composition">
+	<div class="container">
+		<h2>Courses</h2>
+		<div class="row grid">
+      <div id="topic-courses" ></div>
+
+    </div>
+  </div>
+</section>
+
+<script id="topic-course-data" type="application/json">
+{ "courses": {{site.data.topic_courses[page.course_data] | jsonify }} }
+</script>
+
+
+{% comment %}
+<section class="composition">
+	<!-- THIS SECTION NEEDS INTEGRATION TO PULL IN COURSE CARDS-->	
+	<div class="container">
+		<h2>Courses</h2>
+		<div class="row grid">
+			
+			<div class="grid-item col-12 pt-2">
+				<div class="card col-12 course horizontal in-progress">
+					<div class="status-tag">in progress</div>
+					<div class="row g-0">
+					  
+					  <div class="col-12 col-lg-7">
+						
+						<div class="card-header">
+						  <h3 class="card-title">Course Title</h3>
+						  <div class="lowbrow row">
+							<div class="stars mb-2 pe-md-0 d-flex col-12 col-md-auto">
+							  <i class="material-icons">star</i>
+							  <i class="material-icons">star</i>
+							  <i class="material-icons">star</i>
+							  <i class="material-icons">star</i>
+							  <i class="material-icons">star_half</i>
+							</div>
+							<div class="col-12 col-md-auto mb-2">21 ratings | Used in 14 learning circles</div>
+						  </div>
+						</div>
+						
+						<div class="card-body">
+						  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor fringilla mollis. Vestibulum ornare tellus vitae ligula iaculis sodales. Maecenas ut malesuada elit, a dignissim augue. Morbi hendrerit lectus vel quam porttitor, eu finibus turpis bibendum. </p>
+						</div>
+					  </div>
+				
+					  <footer class="card-footer col-12 col-lg-5">
+						<div class="table-responsive">
+						  <table class="table">
+				
+							<tbody>
+							  <tr class="topics">
+								<th scope="row">Topics</th>
+								<td class="topics-list">
+								  <a class="topic" href="">antiracism</a>, 
+								  <a class="topic" href="">social justice</a>,
+								  <a class="topic" href="">discrimination</a>
+								</td>
+							  </tr>
+							  <tr class="keywords">
+								<th scope="row">Keywords</th>
+								<td class="keywords-list">
+								  <span class="term">antiracism</span>,
+								  <span class="term">social justice</span>,
+								  <span class="term">discrimination</span> 
+								</td>
+							  </tr>
+							  <tr class="provider">
+								<th scope="row">Provider</th>
+								<td>Inkscape</td>
+							  </tr>
+							  <tr class="platform">
+								<th scope="row">Platform</th>
+								<td colspan="2">
+								  <a href="http://youtube.com" target="_blank">YouTube</a>
+								</td>
+							  </tr>
+							  <tr class="website">
+							   <th scope="row">Website</th>
+								<td colspan="2">
+								  <a href="http://google.com" target="_blank">Google</a>
+								</td>
+							  </tr>
+							  <tr class="platform">
+								<th scope="row">Access</th>
+								<td colspan="2">always available</td>
+							  </tr>
+							</tbody>
+						  </table>
+						</div>	
+				
+						<div class="row justify-content-center justify-content-md-end">
+						  <a target="_blank" href="https://learningcircles.p2pu.org/en/course/893/" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">More details</a>
+						  <a href="#" class="btn p2pu-btn btn-sm gray col-sm-auto m-2">Use this course</a>
+						</div>
+				
+					  </footer>
+					</div>
+				</div>
+			</div>
+			  
+			<div class="grid-item col-12"> 
+				<div class="card course horizontal starting-soon">
+					<div class="status-tag">starting soon</div>
+					<div class="row g-0">
+					  
+					    <div class="col-12 col-lg-7">
+						
+							<div class="card-header">
+							    <h3 class="card-title">Course Title</h3>
+							    <div class="lowbrow row">
+								    <div class="stars mb-2 false col-12 col-md-auto">
+										<i class="material-icons">star</i>
+										<i class="material-icons">star</i>
+										<i class="material-icons">star</i>
+										<i class="material-icons">star</i>
+										<i class="material-icons">star_half</i>
+									</div>
+									<div class="col-12 col-md-auto">21 ratings | Used in 14 learning circles</div>
+							  	</div>
+							</div>
+						
+							<div class="card-body">
+							  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor fringilla mollis. Vestibulum ornare tellus vitae ligula iaculis sodales. Maecenas ut malesuada elit, a dignissim augue. Morbi hendrerit lectus vel quam porttitor, eu finibus turpis bibendum. </p>
+							</div>
+					    </div>
+				
+						<footer class="card-footer col-12 col-lg-5">
+							<div class="table-responsive">
+							  <table class="table">
+					
+								<tbody>
+								  <tr class="topics">
+									<th scope="row">Topics</th>
+									<td class="topics-list">
+									  <a class="topic" href="">antiracism</a>, 
+									  <a class="topic" href="">social justice</a>,
+									  <a class="topic" href="">discrimination</a>
+									</td>
+								  </tr>
+								  
+								  <tr class="keywords">
+									<th scope="row">Keywords</th>
+									<td class="keywords-list">
+									  <span class="term">antiracism</span>,
+									  <span class="term">social justice</span>,
+									  <span class="term">discrimination</span> 
+									</td>
+								  </tr>
+								  <tr class="provider">
+									<th scope="row">Provider</th>
+									<td>Inkscape</td>
+								  </tr>
+								  <tr class="platform">
+									<th scope="row">Platform</th>
+									<td colspan="2">
+									  <a href="http://youtube.com" target="_blank">YouTube</a>
+									</td>
+								  </tr>
+								  <tr class="website">
+								   <th scope="row">Website</th>
+									<td colspan="2">
+									  <a href="http://google.com" target="_blank">Google</a>
+									</td>
+								  </tr>
+								  <tr class="platform">
+									<th scope="row">Access</th>
+									<td colspan="2">always available</td>
+								  </tr>
+								</tbody>
+							  </table>
+							</div>	
+					
+							<div class="row justify-content-center justify-content-md-end">
+							  <a target="_blank" href="https://learningcircles.p2pu.org/en/course/893/" class="btn p2pu-btn btn-sm secondary gray col-sm-auto m-2">More details</a>
+							  <a href="#" class="btn p2pu-btn btn-sm gray col-sm-auto m-2">Use this course</a>
+							</div>
+					
+						</footer>
+				    </div>
+			    </div>
+			</div>	
+			
+				
+		</div>
+	</div>
+</section>
+{% endcomment %}

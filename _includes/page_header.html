@@ -1,0 +1,88 @@
+{% assign handle = {{include.type }} %} {% case handle %} {% when "page-header-1" %}
+<header class="container page-header header-1">
+  <div class="row">
+    <div class="col-12">
+      <h1>{{ page.title }}</h1>
+      {% if page.subheading %}
+      <p class="subtitle">{{ page.subheading }}</p>
+      {% elsif page.description %}
+      <p class="subtitle">{{ page.description }}</p>
+      {% endif %}
+      {% if page.text %}
+      <p class="subtitle">{{ page.text }}</p>
+      {% endif %}
+      {% if page.button %}
+      <div class="py-3">{{ page.button }}</div>
+      {% endif %}
+    </div>
+  </div>
+</header>
+
+{% when "page-header-2", "another-page-header" %}
+<header class="container page-header header-2">
+  <div class="row">
+    <div class="col-12 col-md-8 col-lg-9 pe-lg-5 pe-xl-6">
+      <h1>{{ page.title }}</h1>
+      {% if page.subheading %}
+      <p class="subtitle">{{ page.subheading }}</p>
+      {% elsif page.description %}
+      <p class="subtitle">{{ page.description }}</p>
+      {% endif %}
+    </div>
+    <div class="col-12 col-md-4 col-lg-3 ps-lg-0">
+      <div class="row">
+        
+        {% if page.text %}
+        <div class="py-3 px-sm-3 col-12 d-flex align-items-centerfw-bold">{{ page.text }}</div>
+        {% endif %}
+        {% if page.button1 %}
+        <div class="py-3 pt-md-1 px-sm-3 col-12 col-sm-6 col-md-12 d-flex align-items-center">{{ page.button1 }}</div>
+        {% endif %}
+        {% if page.button2 %}
+        <div class="py-3 pt-md-1 px-sm-3 col-12 col-sm-6 col-md-12 d-flex align-items-start">{{ page.button2 }}</div>
+        {% endif %}
+                
+      </div>
+    </div>
+  </div>
+</header>
+
+{% when "page-header-3", "another-page-header" %}
+<div class="header-wrap">
+  <header class="container page-header header-3">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <h1>{{ page.title }}</h1>
+        {% if page.subheading %}
+        <p class="subtitle">{{ page.subheading }}</p>
+        {% elsif page.description %}
+        <p class="subtitle">{{ page.description }}</p>
+        {% endif %}
+      </div>
+      {% if page.header-image %}
+      <div class="col-12 col-md-4" style="background: url({{ page.header-image }}) no-repeat center center; background-size: cover;"></div>
+      {% endif %}
+    </div>
+  </header>
+</div>
+{% when "page-header-default", "another-page-header" %}
+<header class="container page-header header-default mb-0">
+  <h1>{{ page.title }}</h1>
+  {% if page.subheading %}
+  <p class="subtitle">{{ page.subheading }}</p>
+  {% elsif page.description %}
+  <p class="subtitle">{{ page.description }}</p>
+  {% endif %}
+</header>
+
+{% else %}
+<header class="container page-header">
+  <h1>{{ page.title }}</h1>
+  {% if page.subheading %}
+  <p class="subtitle">{{ page.subheading }}</p>
+  {% elsif page.description %}
+  <p class="subtitle">{{ page.description }}</p>
+  {% endif %}
+</header>
+
+{% endcase %}

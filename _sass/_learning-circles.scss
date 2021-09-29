@@ -1,0 +1,11 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
+@import "p2pu-theme/src/scss/cards/learning-circles-card";
+@import "layout-elements/dot-block";
+
+.dot-quad{
+	h4{
+		margin-bottom: 0;
+	}
+}
+

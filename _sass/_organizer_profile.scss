@@ -1,3 +1,5 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 .profile {
   right: 0;
   top: 0;
@@ -13,7 +15,7 @@
       width: 90px;
 
       .img-container {
-        background: $gray-darker;
+        background: $gray-dark;
         border-radius: 50%;
         display: flex;
         flex-shrink: 0;

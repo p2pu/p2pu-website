@@ -12,9 +12,8 @@ jobs:
       s3_bucket: ${{ steps.s3_bucket_name.outputs.stdout }}
     steps:
       - uses: actions/checkout@v2
-
-      - run: echo "$GITHUB_EVENT_PATH"
-        shell: bash
+        with:
+          submodules: true
 
       - name: PR number
         shell: bash
@@ -59,7 +58,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const output = `\n**Deploying site to**: [${{ steps.site_url.outputs.stdout }}](http://${{ steps.site_url.outputs.stdout }})`;
+            const url = `${{ steps.site_url.outputs.stdout }}`;
+            const output = `\n**Deploying site to**: http://${url.replace(/\"/g, '') }`;
             const pull = await github.pulls.get({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -79,6 +79,8 @@ jobs:
     needs: terraform
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
 
       - run: echo "S3_BUCKET=${{ needs.terraform.outputs.s3_bucket }}" >> $GITHUB_ENV
 
@@ -110,6 +112,7 @@ jobs:
 
       - name: run test
         run: docker run --rm --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
+        continue-on-error: true
 
       - run: aws s3 sync ./_site/ s3://$S3_BUCKET/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read
         shell: bash

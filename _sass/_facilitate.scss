@@ -1,3 +1,5 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 main {
   position: relative;
 
@@ -100,7 +102,7 @@ section#facilitator-landing {
 }
 
 section#facilitator-resources {
-  background: $gray-lighter;
+  background: $gray-light;
   padding-top: 40px;
   padding-bottom: 40px;
   margin-bottom: 0;
@@ -131,7 +133,7 @@ section#facilitator-resources {
         align-items: center;
 
         a {
-          color: $gray-darker;
+          color: $gray-dark;
           text-align: left;
           transition: all 0.25s ease-in-out;
           padding: 10px 15px;
@@ -224,7 +226,7 @@ section#facilitator-resources {
         }
 
         a {
-          color: $gray-darker;
+          color: $gray-dark;
         }
       }
 
@@ -248,7 +250,7 @@ section#facilitator-resources {
 
           button {
             margin-left: 6px;
-            background: $gray-darker;
+            background: $gray-dark;
             color: $white;
             border: none;
             height: 24px;
@@ -257,7 +259,7 @@ section#facilitator-resources {
           }
 
           .topic-type {
-            background: $gray-darker;
+            background: $gray-dark;
             color: $white;
             height: 24px;
             padding-left: 4px;
@@ -275,7 +277,7 @@ section#facilitator-resources {
         font-family: $font-family-sans-serif;
 
         a {
-          color: $gray-darker;
+          color: $gray-dark;
         }
       }
     }
@@ -303,7 +305,7 @@ section#discourse-community {
 
     .topic-title {
       a {
-        color: $gray-darker;
+        color: $gray-dark;
       }
     }
 
@@ -312,7 +314,7 @@ section#discourse-community {
     }
 
     .category-name {
-      color: $gray-darker;
+      color: $gray-dark;
       font-weight: $font-weight-bold;
       font-family: $font-family-sans-serif;
       font-size: 0.8em;

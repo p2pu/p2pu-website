@@ -1,8 +1,9 @@
 # Site settings
+
 title: P2PU
 email: admin@p2pu.org
 description: "Grassroots community supporting equitable, empowering peer learning in public spaces worldwide. Learning for the people, by the people!"
-baseurl:
+baseurl: 
 url: "https://www.p2pu.org"
 languages: ['en']
 default_language: 'en'
@@ -15,6 +16,10 @@ permalink: pretty
 collections:
   teams:
     output: true
+  topics:
+    output: true
+  jobs:
+    output: true
 defaults:
   -
     scope:
@@ -23,6 +28,20 @@ defaults:
     values:
       layout: "team"
       permalink: "/:title/"
+  -
+    scope:
+      path: ""
+      type: "topics"
+    values:
+      layout: "topic_detail"
+      permalink: "/topic/:title/"
+  -
+    scope:
+      path: ""
+      type: "jobs"
+    values:
+      layout: "page"
+      permalink: "/jobs/:title/"
 
 #SASS settings
 sass:
@@ -48,6 +67,9 @@ exclude:
   - test
   - terraform.tf
   - webpack.config.js
+  - p2pu-theme
+  - p2pu-components
+  - assets/react/
 
 prose:
   media: assets/images

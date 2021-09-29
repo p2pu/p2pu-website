@@ -1,54 +1,48 @@
 <script type="text/javascript">
-  var url = "{{ site.default_base_api_endpoint }}/api/learning-circles-map/"
 
-  var accessToken = "{{ site.mapbox_access_token }}"
-  var tileLayer = "https://api.mapbox.com/styles/v1/sharon-nomadic-labs/cjokl5im306372rnzp5rsykzw/tiles/256/{z}/{x}/{y}@2x?access_token=" + accessToken;
+var data = {% include map_data.json %};
+var accessToken = 'pk.eyJ1IjoiY29kZXJvZGVvIiwiYSI6ImNrdGM5M3N5eDIzcGsyb211anVhMGV2bXcifQ.25mHUrP-d-GnMFk22B65IQ';
+var style = 'mapbox://styles/coderodeo/ckti45pap5uxr17p37qyp8j4y';
 
-  var mymap = L.map('global-map', {
-    scrollWheelZoom: false,
-  }).setView([20, 10], 2.2);
+mapboxgl.accessToken = accessToken;
+var map = new mapboxgl.Map({
+  container: 'global-map',
+  style: style,
+  center:[154.31966822757704, 26.775160622365817],
+  zoom: 1.5
+});
 
-  L.tileLayer(tileLayer, {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
-      id: 'mapbox.streets',
-      accessToken: accessToken,
-  }).addTo(mymap);
+//make sure whole map is showing
+var bounds = [-22.08105693027528,-36.31799750813751,331.71425801660695, 76.42933790942402];
+map.fitBounds(bounds);
+map.on('resize', function(e){ map.fitBounds(bounds);})
 
-  var markerClusters = L.markerClusterGroup();
+//set markers & popups
+var markers = [];
+var popups = [];
 
-  $.ajax({
-    url,
-    dataType: 'JSONP',
-    type: 'GET',
-    success: (res) => {
-      $.each(res.items, function(index, item) {
-        if (item.latitude && item.longitude) {
-          var markerIcon = L.divIcon({className: "marker"});
-          var m = L.marker( [item.latitude, item.longitude], { icon: markerIcon } )
+$.each(data.pois, function(index, item) {
+   const popup = new mapboxgl
+   .Popup({ offset:25, closeButton:false, closeOnClick:true})
+   .setHTML( "<strong>" + item.title + "</strong><br />" + item.location);
+  
+   const el = document.createElement('div');
+   el.className = 'marker';  
+   var m = new mapboxgl.Marker(el)
+   .setLngLat([item.longitude, item.latitude])
+   .setPopup(popup) // sets a popup on this marker
+   .addTo(map);
+   
+   popups.push(popup);
+   markers.push(m);
+});
+  
+var i = 0;
+setInterval(function(e){    
+  for (var n = 0; n < popups.length; n++) { popups[n].remove();}
+  markers[i].togglePopup();
+  i++;
+  if(i == markers.length){ i = 0;} 
+}, 1500);
 
-          var popupContent = "";
-          var title = "<div><strong>" + item.title + "</strong></div>";
-          var year = "<div>" + item.city + ", " + item.start_date.substring(0,4) + "</div>";
-
-          popupContent += title
-          popupContent += year
-
-          if (item.url) {
-            var link = "<div><a href='" + item.url + "' target='_blank'>Signup page</a></div>"
-            popupContent += link
-          }
-
-          if (item.report_url) {
-            var link = "<div><a href='" + item.report_url + "' target='_blank'>Final report</a></div>"
-            popupContent += link
-          }
-
-          m.bindPopup(popupContent)
-          markerClusters.addLayer( m );
-        }
-      })
-      mymap.addLayer( markerClusters );
-    }
-  });
 </script>

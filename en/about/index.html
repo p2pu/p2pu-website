@@ -1,139 +1,165 @@
 ---
-layout: page
 title: About P2PU
-description: Peer 2 Peer University (we usually just say P2PU) is a grassroots network of individuals who seek to create an equitable, empowering, and liberating alternative to mainstream higher education.
+layout: base
+header: page-header-3
+header-image: /assets/images/about/p2pu_lego.jpg
+slug: about
+description: "We believe people learn better together. We envision a global network of grassroots learning communities—powered by freely-shared knowledge and people-first organizations—where personal growth and collective transformation is freed from institutional walls. We champion education as a lifelong act of co-construction, with plentiful opportunities for work, study, and play for any willing learner."
 image_path: /assets/images/about/p2pu_lego.jpg
 extra_css:
- - /assets/css/p2pu-about.css
+  - /assets/css/p2pu-about.css
 ---
-<div class="post">
-  <section id="about-us" data-aos="fade-up">
-  	<div class="container">
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h2>What is P2PU?</h2></div>
-          </div>
-        </div>
-      </header>
-  		<p>Peer 2 Peer University (we usually just say P2PU) is a grassroots network of individuals who seek to create an equitable, empowering, and liberating alternative to mainstream higher education.</p>
-
-  		<p>We work towards this vision by creating and sustaining learning communities in public spaces around the world. As librarians and community organizers, we bring neighborhoods together to learn with one another. As educators, we train facilitators to organize their own networks and we develop/curate open educational resources. As developers and designers, we build open source software tools that support flourishing learning communities. And as learners, we work together to improve upon and disseminate methods and practices for peer learning to flourish.</p>
-
-      <p>P2PU is a distributed organization, incorporated as a 501(c)3 in the United States. Our network stretches the globe, with our heaviest concentration of work currently happening in Canada, Kenya, South Africa, and the United States. </p>
-
-      <p>We strive to model our educational values in our organizational structure; as such, we set goals and make decisions collectively as a community. We invite you to join our <a href="https://community.p2pu.org/">virtual community</a> and view our governance guidelines, annual goals, and policies (as well as all source code) on <a href="https://github.com/p2pu">Github</a>.</p>
-
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h2>History</h2></div>
-          </div>
-        </div>
-      </header>
-      <p>P2PU was born out of the <a href="http://www.capetowndeclaration.org/">2007 Cape Town Open Education Declaration</a> and has been active in the field of open education ever since. Founded by Philipp Schmidt, Delia Browne, Neeru Paharia, Stian Haklev, and Joel Thierstein, P2PU was originally driven by the belief that with adequate social support, anyone can learn almost anything online for free. This strategy reached tens of thousands of learners in more than 50 countries across a number of projects and collaborations, including The <a href="https://courses.p2pu.org/en/schools/school-of-webcraft/">School of Webcraft</a> (with Mozilla), <a href="http://schoolofopen.p2pu.org/">School of Open</a> (with Creative Commons), <a href="http://mechanicalmooc.org/">Mechanical MOOC</a> (with MIT),  and <a href="http://www.playwithyourmusic.org/index.html">Play With Your Music</a> (with NYU and Peter Gabriel). P2PU also pioneered early massive open online courses through it’s <a href="https://courses.p2pu.org/en/groups/list/community/">courses platform</a> and developed some of the first open badge prototypes in collaboration with Mozilla.</p>
-
-  		<p>In 2014, P2PU made a strategic decision to stop working exclusively online because we were not reaching people who stand to benefit the most from the promise of free and open online education. In hopes of reaching new audiences, we partnered with Chicago Public Library to run in-person study groups for library patrons who wanted to learn together.  This project became known as learning circles, and over the course of 18 months, P2PU and CPL managed to dramatically increase completion rates and reach new audiences who were new to both online learning and postsecondary education. Learning circles also formed strong social bonds for citizens from diverse backgrounds who shared common goals, and helped to highlight the library as a hub for community learning experiences</p>
-
-  		<p>Given the success in Chicago, P2PU created an open source learning circle toolkit that is now being used by library systems and community centers around the world. Through learning circles, we have maintained our vision of providing viable alternatives to mainstream higher education with a deeper commitment to equity, access, and empowerment. All of our learning circle materials and community tools are openly-licensed and free to use. <a href="https://www.p2pu.org/en/facilitate/">You can get started with learning circles today</a>.</p>
-
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h2>Values</h2></div>
-          </div>
-        </div>
-      </header>
-
-  		<p>P2PU is driven by three core values:</p>
-
-      <p><strong>Peer learning</strong></p>
-
-      <p>Underlying our work is the conviction that learning is a social activity. We believe that every person develops expertise through their own life experiences, that people learn when they share and connect with others, and that feedback is necessary in order to improve.</p>
-
-      <p><strong>Community</strong></p>
-
-      <p>P2PU is a community-centered project, which is reflected across our organization from learning circles to our governance model. We involve learners and collaborators in all stages of the design and delivery of our work, and believe that sustained learning communities are created through grassroots collaboration, not hierarchical mandates.</p>
-
-      <p><strong>Equity</strong></p>
-      <p>Equity in learning is only possible when we recognize education as a social good rather than a commodity. A prerequisite to this value is a commitment to working openly, leaving the commons better off than we found it. However, creating space for access is not enough. Systemic injustice means that access does not equal equity, and we must actively design for inclusion and accessibility at every step along the way.</p>
 
 
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h2>People</h2></div>
-          </div>
-        </div>
-      </header>
-      <h3>Our Staff</h3>
-
-      <div class="tiles">
-        {% for person in site.data.people.staff %}
-        {% assign multi_three=forloop.index0|modulo:3 %}
-        {% if multi_three == 0 %}
-        <div class="row">{% endif %}
-          {% include person.html %}
-          {% if multi_three == 2 or forloop.last %}</div>{% endif %}
-        {% endfor %}
-      </div>
-      <hr class="my-4" />
-
-      <h3>Our Board</h3>
-      <div class="tiles">
-        {% for person in site.data.people.board %}
-        {% assign multi_three=forloop.index0|modulo:3 %}
-        {% if multi_three == 0 %}
-        <div class="row">{% endif %}
-          {% include person.html %}
-          {% if multi_three == 2 or forloop.last %}</div>{% endif %}
-        {% endfor %}
-      </div>
-      <hr class="my-4" />
-
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h3>Community Recognition</h3></div>
-          </div>
-        </div>
-      </header>
-      <p>P2PU is only as successful as people behind the scenes making things happen. A special thanks goes out to some thoughtful and energetic people who helped us get to where we are today:{% for person in site.data.people.collaborators %} {{person.name}}{% if forloop.last %}{% else %},{% endif %}{% endfor %}.</p>
-    </div>
-  </section>
-
-  <section id="partners-and-funders" data-aos="fade-up">
+<section class="about-us">
     <div class="container">
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h3>Partners</h3></div>
-          </div>
-        </div>
-      </header>
-      <div class="partners row">
-        {% for partner in site.data.partners %}
-          <div class="col-md-6 col-lg-4 col-12"><a href="{{ partner.url }}" class="dark">{{ partner.name }}</a></div>
-        {% endfor %}
-      </div>
-
-      <header>
-        <div class="subtitle centered mb-4">
-          <div class="underline">
-            <div class="text"><h3>Funders</h3></div>
-          </div>
-        </div>
-      </header>
-      <div class="funders row">
-        {% for funder in site.data.funders %}
-        <div class="funder col-md-6 col-lg-4 col-12">
-          <a href="{{ funder.url }}">
-            <img src="{{ site.baseurl }}{{ funder.logo }}" alt="{{ funder.name }}">
-          </a>
-        </div>
-        {% endfor %}
-      </div>
+        <p>
+          Peer 2 Peer University (P2PU) is a 501(c)3 non-profit organization on a mission to cultivate peer learning communities in public spaces around the world. 
+        </p>
+        <p>
+          Born out of the 2008 Cape Town Open Education Declaration, P2PU has remained active at the forefront of open education ever since, establishing the first open badging standard with Mozilla, developing the tools that supported some of the first Massive Open Online Courses (MOOCs), and nurturing experimental online learning communities with a variety of audiences around the globe. 
+        </p>
+        <p>
+          Since 2015, P2PU has worked with libraries and community-based organizations worldwide to realize our mission and vision through a methodology called learning circles: free, facilitated study groups for people who want to learn something together. 
+        </p>
     </div>
-  </section>
-
-</div>
+</section>
+  
+<section class="values">
+    <div class="container">
+        <h2>Our Values</h2>
+        <div class="row text-center text-md-start dot-quad">
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="icon col-8 col-md-12 mx-auto">
+                    <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+                </div>
+                <h3>Peer learning</h3>
+                <p>We believe people learn better together. Underlying our work is the conviction that people develop expertise through their own life experiences, that learning happens whenever people share and connect with others, and that feedback is necessary in order to improve.</p>
+            </div>
+          
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="icon col-8 col-md-12 mx-auto">
+                    <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+                </div>
+                <h3>Community</h3>
+                <p>P2PU is a community-centered project, reflected in both what we do and how we do it. We believe that sustained learning communities are best created through grassroots collaboration, not hierarchical mandates.</p>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="icon col-8 col-md-12 mx-auto">
+                    <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+                </div>
+                <h3>Open</h3>
+                <p>Our commitment to open is predicated on the belief that we create value not by gatekeeping but by working together, sharing resources, and lowering barriers to entry. P2PU is built on open source technology, and everything we create is free to share, remix, and redistribute. </p>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="icon col-8 col-md-12 mx-auto">
+                    <img src="{{ site.baseurl }}/assets/images/dev/whipley.png" />
+                </div>
+                <h3>Equity</h3>
+                <p>Equity is only possible when we recognize education as a social good rather than a commodity. Furthermore, systemic injustice means that providing access alone is insufficient, and we must actively design for inclusion at every step of the way.</p>
+            </div>
+        </div>
+    </div>
+</section>
+  
+<section class="staff">
+    <div class="container">
+        <h2>P2PU Staff</h2>
+        <p>P2PU is led by a small, distributed staff who maintain the community, develop software tools, and create courses and resources that reinforce the learning circle methodology, all of which is made available to the public for free. </p>
+        <div class="row grid">
+            {% for person in site.data.people.staff %}
+                {% include person.html %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+  
+<section class="teams">
+    <div class="container">
+        <h2>P2PU Teams</h2>
+        <p>Teams are organized learning circle communities, typically affiliated with library systems and community-based organizations. <a href="#">Start a team.</a></p>
+        <div class="row grid">
+          
+            {% for team in site.data.teams.items %}
+            {% assign organizers = team.facilitators | where:"role","ORGANIZER" %}
+            <div class="grid-item col-md-6 col-lg-4">
+                <div class="card teams">
+                    <div class="card-image">
+                        {% if team.image_url %}
+                        <img class="card-img-top" src="{{team.image_url}}" />
+                        {% else if team.coordinates %}
+                        <img class="card-img-top" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
+                        {% endif %}
+                    </div>
+             
+                    <div class="card-header">
+                        <h3>{{ team.name }}</h3>
+                    </div>
+                    <div class="card-body">
+                        {% if organizers %}
+                        <span>{{ organizers.first.city }}</span>
+                 
+                        <span>Organized by
+                            {% for organizer in organizers limit:3 %}
+                                {% if organizer == organizers.last %}
+                                    {{ organizer.first_name }}
+                                {% else %}
+                                    {{ organizer.first_name | append: ", " }}
+                                {% endif %}
+                            {% endfor %}
+                        </span>
+                        {% endif %}
+                        <span>Established: {{ team.date_established }}</span>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn p2pu-btn btn-sm gray col-sm-auto m-2"  href="/{{ team.page_slug }}">See Team Page</a>
+                    </div>
+                </div>
+            </div>       
+            {% endfor %}
+  
+        </div>
+    </div>
+</section>
+  
+<section class="board">
+    <div class="container">
+        <h2>P2PU Board</h2>
+        <p>P2PU is led by a small, distributed staff who maintain the community, develop software tools, and create courses and resources that reinforce the learning circle methodology, all of which is made available to the public for free. </p>
+        <div class="row grid">
+          
+            {% for person in site.data.people.board %}
+                {% include person.html %}
+            {% endfor %}
+    
+        </div>
+    </div>
+</section>
+  
+<section class="funders">
+    <div class="container">
+        <h2>Supported by</h2>
+        <p>Many people have made P2PU what it is today. A special thanks to: 
+            {% assign collaborators = site.data.people.collaborators | sort: "name" %}
+            {% for person in collaborators %}
+                {% if person == collaborators.last %}
+                    {{ person.name }}
+                {% else %}
+                    {{ person.name | append: ", " }}
+                {% endif %} 
+            {% endfor %}
+        </p>
+        <p>We’d also like to thank these sponsors for their generous support:</p>
+        <div class="row grid">
+            {% for funder in site.data.funders %}
+            <div class="funder col-sm-6 col-md-3 col-lg-4 col-12 g-4">
+                <a href="{{ funder.url }}">
+                    <img class="w-100 img-fluid" src="{{ site.baseurl }}{{ funder.logo }}" alt="{{ funder.name }}" />
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -28,7 +28,7 @@ export default class ApiHelper {
   fetchResource(opts) {
     const url = this.generateUrl(opts.params)
 
-   $.ajax({
+    $.ajax({
       url,
       dataType: 'JSONP',
       type: 'GET',
