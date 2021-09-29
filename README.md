@@ -1,6 +1,6 @@
 # P2PU Website
 
-This is the code for the home of P2PU, you can see it in action at [www.p2pu.org](https://www.p2pu.org/en/). The master branch is deployed to a persistent staging environment at [http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/](http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/).
+This is the code for the home of P2PU, you can see it in action at [www.p2pu.org](https://www.p2pu.org/en/). The master branch is deployed to a persistent staging environment at [https://www-staging.p2pu.org/en/](https://www-staging.p2pu.org/en/).
 
 ## Updating content
 
