@@ -15,9 +15,6 @@ jobs:
         with:
           submodules: true
 
-      - run: echo "$GITHUB_EVENT_PATH"
-        shell: bash
-
       - name: PR number
         shell: bash
         id: pr
