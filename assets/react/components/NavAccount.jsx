@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import UserLogin from './UserLogin';
 import UserDropdown from './UserDropdown';
 
-// TODO
+// TODO pass URLs via props rather than hardcoding them in ../constants.js
 const API_BASE_URL = 'https://staging-learningcircles.p2pu.org';
 //const API_BASE_URL = 'http://localhost:8000';
 const loginUrl = `${API_BASE_URL}/en/accounts/fe/login/`;
@@ -63,27 +63,18 @@ export default class NavAccount extends Component {
   render() {
     if (this.state.user) {
       return (
-        <>
-         <nav className="logged-out order-4 order-md-2 text-end navbar navbar-expand-md col-12 col-md pe-0">
-            <div className="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
-              <button href="/en/teams/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</button>
-
-              <UserDropdown user={this.state.user} links={this.state.links} />
-            </div>
-         </nav>
-        </>
+        <div className="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
+          <a href="/en/teams/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</a>
+          <UserDropdown user={this.state.user} links={this.state.links} />
+        </div>
       );
     } else {
       return (
-        <>
-          <nav className="logged-out order-4 order-md-2 text-end navbar navbar-expand-md col-12 col-md pe-0">
-            <div className="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
-              <button href="/en/teams/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</button>
-              <button href="#" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn orange">Create an Account</button>
-              <UserLogin onSubmit={this.onUserLogin} errors={this.state.errors}/>
-            </div>
-          </nav>
-        </>
+        <div className="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
+          <a href="/en/teams/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</a>
+          <a href="https://learningcircles.p2pu.org/en/accounts/register/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn orange">Create an Account</a>
+          <UserLogin onSubmit={this.onUserLogin} errors={this.state.errors}/>
+        </div>
       )
     }
   }
