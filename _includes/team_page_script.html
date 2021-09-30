@@ -49,7 +49,7 @@
       }
     }
 
-    var baseUrl = '{{site.default_base_api_endpoint}}';
+    var baseUrl = '{{site.api_origin}}';
     var apiUrl = baseUrl + '/api/teams/' + {{ team.id }};
 
     var request = new XMLHttpRequest();

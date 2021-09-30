@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-//import  { API_BASE_URL } from '../constants';
 import UserLogin from './UserLogin';
 import UserDropdown from './UserDropdown';
 
-// TODO pass URLs via props rather than hardcoding them in ../constants.js
-const API_BASE_URL = 'https://staging-learningcircles.p2pu.org';
-//const API_BASE_URL = 'http://localhost:8000';
-const loginUrl = `${API_BASE_URL}/en/accounts/fe/login/`;
 
 export default class NavAccount extends Component {
   constructor(props) {
@@ -19,7 +14,7 @@ export default class NavAccount extends Component {
   }
 
   getUserData = () => {
-    const url = `${API_BASE_URL}/en/accounts/fe/whoami/`
+    const url = `${this.props.apiOrigin}/en/accounts/fe/whoami/`
     fetch(url, {
       method: 'GET',
       mode: 'cors',
@@ -35,6 +30,7 @@ export default class NavAccount extends Component {
   }
 
   onUserLogin = (username, password) => {
+    const loginUrl = `${this.props.apiOrigin}/en/accounts/fe/login/`;
     // POST username + password to login API, if successful, call whoami
     fetch(loginUrl, {
       method: 'POST',
@@ -65,7 +61,7 @@ export default class NavAccount extends Component {
       return (
         <div className="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
           <a href="/en/teams/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</a>
-          <UserDropdown user={this.state.user} links={this.state.links} />
+          <UserDropdown user={this.state.user} links={this.state.links} apiOrigin={this.props.apiOrigin} />
         </div>
       );
     } else {
@@ -73,7 +69,7 @@ export default class NavAccount extends Component {
         <div className="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
           <a href="/en/teams/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</a>
           <a href="https://learningcircles.p2pu.org/en/accounts/register/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn orange">Create an Account</a>
-          <UserLogin onSubmit={this.onUserLogin} errors={this.state.errors}/>
+          <UserLogin onSubmit={this.onUserLogin} errors={this.state.errors} apiOrigin={this.props.apiOrigin} />
         </div>
       )
     }

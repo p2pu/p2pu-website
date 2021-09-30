@@ -9,6 +9,11 @@ languages: ['en']
 default_language: 'en'
 default_image_path: /assets/images/p2pu-ogimg-default.jpg
 
+mapbox_access_token: pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ
+
+# URL of API to use for interactive components
+api_origin: 'http://localhost:8000'
+
 # Build settings
 markdown: CommonMark
 permalink: pretty
@@ -51,9 +56,6 @@ sass:
   style: :compressed
 
 env: prod
-
-mapbox_access_token: pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ
-default_base_api_endpoint: 'https://learningcircles.p2pu.org'
 
 exclude:
   - Guardfile
