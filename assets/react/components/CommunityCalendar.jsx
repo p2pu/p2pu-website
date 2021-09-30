@@ -1,6 +1,4 @@
 import React from 'react';
-import { API_BASE_URL } from '../constants'
-
 
 const FeaturedCommunityEvent = ({event}) => {
   const dateObj = new Date(event.local_datetime)
@@ -92,7 +90,7 @@ class CommunityCalendar extends React.Component {
   }
 
   componentDidMount() {
-    let apiUrl = `${API_BASE_URL}/api/community_calendar/events/?format=json`
+    let apiUrl = `${this.props.apiOrigin}/api/community_calendar/events/?format=json`
     fetch(apiUrl).then( resp => resp.json()).then( data => {
       this.setState({events: data.results});
     });
