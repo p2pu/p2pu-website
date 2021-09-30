@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
 
       - name: Set S3 bucket
         shell: bash
@@ -50,6 +52,7 @@ jobs:
 
       - name: run test
         run: docker run --rm --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:5000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
+        continue-on-error: true
 
       - run: 'aws s3 sync ./_site/ s3://$S3_BUCKET/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read'
         shell: bash

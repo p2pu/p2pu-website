@@ -36,7 +36,7 @@ text: |
 {
     "@context" : "https://schema.org/",
     "@type" : "JobPosting",
-    "title" : "Production Lead",
+    "title" : "Community Coordinator",
     "description" : "{{page.text | markdownify | strip_newlines | replace:'"', "'" }}",
     "datePosted" : "2021-09-02",
     "validThrough" : "2021-09-20T00:00",
