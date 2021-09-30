@@ -1,62 +1,53 @@
-{% capture next_url %}http://localhost:4000/en/contact_success/{% endcapture %}
+{% capture next_url %}{{site.api_origin}}/en/contact_success/{% endcapture %}
 
-<section class="contact">
-  <div class="container">
-    <div class="contact-form shadow col-12 col-lg-10 offset-lg-1 py-md-5">
-      <div class="form-wrap col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-        <h2>{{ page.contact }}</h2>
-        <p>Fill out this form or email us directly at <a target="_blank" href="mailto:thepeople@p2pu.org">thepeople@p2pu.org</a></p>
 
-        <form class="row g-3 pt-3 needs-validation" action="https://staging-learningcircles.p2pu.org/api/contact/?next={{next_url | url_encode}}" method="POST" novalidate>
-          <input type="hidden" name="source" value="{{page.url}}"/>
+<form class="row g-3 pt-3 needs-validation" action="{{site.api_origin}}/api/contact/?next={{next_url | url_encode}}" method="POST" novalidate>
+  <input type="hidden" name="source" value="{{page.url}}"/>
 
-          <div class="col-12">
-            <label for="email" class="form-label">Email Address *</label>
-            <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" required>
-            <div class="invalid-feedback">
-              Please provide a valid email address.
-            </div>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
-          <div class="col-12">
-            <label for="name" class="form-label">Name *</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
-            <div class="invalid-feedback">
-              Please provide your name.
-            </div>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
-          {% if page.slug == "services" %}
-          <div class="col-12">
-            <label for="organization" class="form-label">Organization *</label>
-            <input type="text" class="form-control" id="organization" name="organization" placeholder="Your Organization" required>
-            <div class="invalid-feedback">
-              Please provide your organization.
-            </div>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
-          {% endif %}
-          <div class="col-12">
-            <label for="message" class="form-label">How can we help you? *</label>
-            <textarea type="textarea" class="form-control" id="message" name="content" placeholder="Message" style="height: 10rem;" required></textarea>
-            <div class="invalid-feedback">
-              Please include a message.
-            </div>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
-          <div class="col-12 text-center mt-4">
-            <button class="btn p2pu-btn blue" type="submit">Submit form</button>
-          </div>
-        </form>
-      </div>
+  <div class="col-12">
+    <label for="email" class="form-label">Email Address *</label>
+    <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" required>
+    <div class="invalid-feedback">
+      Please provide a valid email address.
+    </div>
+    <div class="valid-feedback">
+      Looks good!
     </div>
   </div>
-</section>
+  <div class="col-12">
+    <label for="name" class="form-label">Name *</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+    <div class="invalid-feedback">
+      Please provide your name.
+    </div>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  {% if page.slug == "services" %}
+  <div class="col-12">
+    <label for="organization" class="form-label">Organization *</label>
+    <input type="text" class="form-control" id="organization" name="organization" placeholder="Your Organization" required>
+    <div class="invalid-feedback">
+      Please provide your organization.
+    </div>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  {% endif %}
+  <div class="col-12">
+    <label for="message" class="form-label">How can we help you? *</label>
+    <textarea type="textarea" class="form-control" id="message" name="content" placeholder="Message" style="height: 10rem;" required></textarea>
+    <div class="invalid-feedback">
+      Please include a message.
+    </div>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-12 text-center mt-4">
+    <button class="btn p2pu-btn blue" type="submit">Submit form</button>
+  </div>
+</form>
+

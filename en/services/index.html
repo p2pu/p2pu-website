@@ -7,8 +7,8 @@ description: "P2PU offers a number of services designed to tailor learning circl
 contact: Reach Out About Services
 extra_css:
 - /assets/css/p2pu-services.css
-extra_js:
-- js/form-validation.js
+bundles:
+- contact
 ---
 <section class="bg-blue mt-5">
 	<div class="container py-4">
@@ -79,4 +79,19 @@ extra_js:
 			</div>
 		</div>
 	</div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <div class="contact-form shadow col-12 col-lg-10 offset-lg-1 py-md-5">
+      <div class="form-wrap col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+        <h2>{{ page.contact }}</h2>
+        <p>Fill out this form or email us directly at <a target="_blank" href="mailto:thepeople@p2pu.org">thepeople@p2pu.org</a></p>
+
+        <div id="contact-form" data-api-origin="{{site.api_origin}}" data-source-url="{{page.url}}">
+          {% include contact_form.html %}
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

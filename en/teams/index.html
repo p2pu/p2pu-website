@@ -9,9 +9,10 @@ extra_css:
   - /assets/css/vendor/slick-theme.css
   - /assets/css/p2pu-teams.css
 extra_js:
-  - js/form-validation.js
   - js/vendor/slick.min.js
   - js/teams.js
+bundles:
+- contact
 ---
 
 <div class="header-wrap">
@@ -348,3 +349,20 @@ extra_js:
       <a href="/assets/documents/P2PUTeams.pdf" class="btn p2pu-btn orange">DOWNLOAD THIS PAGE AS SLIDES</a>
   </div>
 </section>
+
+
+<section class="contact">
+  <div class="container">
+    <div class="contact-form shadow col-12 col-lg-10 offset-lg-1 py-md-5">
+      <div class="form-wrap col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+        <h2>{{ page.contact }}</h2>
+        <p>Fill out this form or email us directly at <a target="_blank" href="mailto:thepeople@p2pu.org">thepeople@p2pu.org</a></p>
+
+        <div id="contact-form" data-api-origin="{{site.api_origin}}" data-source-url="{{page.url}}" data-organization="true">
+          {% include contact_form.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
