@@ -1,0 +1,18 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+@import "card-base";
+
+.card.course.horizontal{
+	&:first-of-type{
+		margin-top: 0;
+	}
+	.card-footer{
+		@include media-breakpoint-up(lg) {
+			padding-top: 0;
+			padding-left: $padding-md;
+		}
+		@include media-breakpoint-up(xl) {
+			padding-top: $padding-md;
+			padding-left: 0;
+		}
+	}
+}
