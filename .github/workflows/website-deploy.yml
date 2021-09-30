@@ -13,27 +13,34 @@ jobs:
         with:
           submodules: true
 
-      - name: Set S3 bucket
-        shell: bash
-        run: |
-            if [[ "$GITHUB_REF" == "refs/heads/master" ]]
-            then
-                echo "S3_BUCKET=p2pu-staging" >> $GITHUB_ENV
-            elif [[ "$GITHUB_REF" == "refs/heads/release" ]]
-            then
-                echo "S3_BUCKET=p2pu-website" >> $GITHUB_ENV
-            fi
-
-      - run: echo $S3_BUCKET
-
       - name: build docker image for building jekyll site
         run: docker build . -t local/p2pu-website
 
-      - name: setup config
-        run: 'echo mapbox_access_token: "$MAPBOX_ACCESS_TOKEN" > ./_production.yml'
+      - name: setup staging config
         shell: bash
+        run: |
+          echo "S3_BUCKET=p2pu-staging" >> $GITHUB_ENV
+          echo "CLOUDFRONT_DISTRIBUTION_ID=$CLOUDFRONT_DISTRIBUTION_ID" >> $GITHUB_ENV
+          echo "mapbox_access_token: $MAPBOX_ACCESS_TOKEN" > ./_production.yml
+          echo "api_origin: https://staging-learningcircles.p2pu.org" >> ./_production.yml
+        if: github.ref == 'refs/head/master'
         env:
           MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_ACCESS_TOKEN}}
+          CLOUDFRONT_DISTRIBUTION_ID: ${{secrets.CLOUDFRONT_DISTRIBUTION_ID_STAGING}}
+
+      - name: setup production config
+        shell: bash
+        run: |
+          echo "S3_BUCKET=p2pu-website" >> $GITHUB_ENV
+          echo "CLOUDFRONT_DISTRIBUTION_ID=$CLOUDFRONT_DISTRIBUTION_ID" >> $GITHUB_ENV
+          echo "mapbox_access_token: $MAPBOX_ACCESS_TOKEN" > ./_production.yml
+          echo "api_origin: https://learningcircles.p2pu.org" >> ./_production.yml
+        if: github.ref == 'refs/head/release'
+        env:
+          MAPBOX_ACCESS_TOKEN: ${{secrets.MAPBOX_ACCESS_TOKEN}}
+          CLOUDFRONT_DISTRIBUTION_ID: ${{secrets.CLOUDFRONT_DISTRIBUTION_ID}}
+
+      - run: echo $S3_BUCKET
 
       - name: get live data for teams
         run: curl https://learningcircles.p2pu.org/api/teams/ -o ./_data/teams.json
@@ -74,17 +81,7 @@ jobs:
           AWS_PAGER: ""
 
       - run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
-        if: env.S3_BUCKET == 'p2pu-website'
         env:
-          CLOUDFRONT_DISTRIBUTION_ID: ${{secrets.CLOUDFRONT_DISTRIBUTION_ID}}
-          AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_PAGER: ""
-
-      - run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID_STAGING --paths "/*"
-        if: endsWith(github.ref, '/master')
-        env:
-          CLOUDFRONT_DISTRIBUTION_ID_STAGING: ${{secrets.CLOUDFRONT_DISTRIBUTION_ID_STAGING}}
           AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_PAGER: ""
