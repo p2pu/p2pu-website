@@ -44,7 +44,7 @@ const Contact = props => {
         <p>Something went wrong. <a onClick={() => {setResult({}); setError(false)}} >Try again</a></p>
       }
       { loading && <div className="spinner">sending</div> }
-      { !loading && !error &&
+      { !loading && !error && result.status != 'sent'
         <ContactForm {...props} onSubmit={onSubmit} />
       }
     </>
