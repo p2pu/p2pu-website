@@ -9,7 +9,8 @@ let initialState = {}
 if (elem.dataset.teamId) {
   initialState["team_id"] = elem.dataset.teamId
 }
-let origin = elem.dataset.apiOrigin;
+//TODO let origin = elem.dataset.apiOrigin;
+let origin = 'https://learningcircles.p2pu.org';
 
 ReactDOM.render(
   <Search
