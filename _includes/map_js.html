@@ -8,6 +8,7 @@ mapboxgl.accessToken = accessToken;
 var map = new mapboxgl.Map({
   container: 'global-map',
   style: style,
+  attributionControl: false,
   center:[154.31966822757704, 26.775160622365817],
   zoom: 1.5
 });
@@ -22,11 +23,11 @@ var markers = [];
 var popups = [];
 
 $.each(data.pois, function(index, item) {
-   const popup = new mapboxgl
+   var popup = new mapboxgl
    .Popup({ offset:25, closeButton:false, closeOnClick:true})
    .setHTML( "<strong>" + item.title + "</strong><br />" + item.location);
   
-   const el = document.createElement('div');
+   var el = document.createElement('div');
    el.className = 'marker';  
    var m = new mapboxgl.Marker(el)
    .setLngLat([item.longitude, item.latitude])
