@@ -1,4 +1,4 @@
-{% capture next_url %}{{site.api_origin}}/en/contact_success/{% endcapture %}
+{% capture next_url %}{{site.url}}/en/contact_success/{% endcapture %}
 
 
 <form class="row g-3 pt-3 needs-validation" action="{{site.api_origin}}/api/contact/?next={{next_url | url_encode}}" method="POST" novalidate>

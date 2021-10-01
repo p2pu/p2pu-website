@@ -20,7 +20,7 @@ const Contact = props => {
       headers: {
           'Content-Type': 'application/json'
       },
-      credentials: 'include',
+      credentials: 'omit',
       body: JSON.stringify(Object.fromEntries(formData))
     }).then(response => {
       setLoading(false);
@@ -29,6 +29,9 @@ const Contact = props => {
     }).then(jsonBody => {
       console.log(jsonBody);
       setResult(jsonBody);
+      if (jsonBody.status != 'sent') {
+        setError(true);
+      }
     });
   }
 
