@@ -19,6 +19,7 @@
   	background: none;
   	border: none;
     border-bottom: 7px solid transparent;
+    display: inline-block;
   	@include border-top-radius($border-radius-sm);
     &:first-of-type{
       margin-left: 0;
