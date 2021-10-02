@@ -41,7 +41,7 @@
   }
   
   &-light {
-    color: $gray-light;
+    color: $gray-light !important;
   }
   
   &-lighter {
@@ -112,7 +112,7 @@
   }
   
   &-light {
-    background-color: $gray-light;
+    background-color: $gray-light !important;
   }
 
   &-lighter {
