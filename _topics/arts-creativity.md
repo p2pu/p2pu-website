@@ -25,7 +25,7 @@ course_data: job_skills
 ## Facilitator's Prep
 ### Organizations’ Strategies for Action: 
 
-Please fix the bold text in the paragraph 
+Please fix the bold text in the paragraph. (It's fixed)
 
 - Pursuing staff training: de-escalation to limit need to limit state authority presence in facilities, trauma-informed service, exploring how implicit bias has affected regulations/rules and patron use, removing latent racism, classicism (Miami)
 - Pushing to bring social workers into the library including having a local field instructor run learning circles (Miami)

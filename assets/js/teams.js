@@ -29,7 +29,7 @@
     
     slider.slick({
       autoplay: false,
-      dots: false,
+      dots: true,
       pauseOnHover: true,
       swipe: true,
       focusOnSelect: true,
@@ -48,6 +48,8 @@
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
+            dots: false,
+            arrows: true,
           }
         },
         {
@@ -55,6 +57,8 @@
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            dots: true,
+            arrows: false,
           }
         },
       ]

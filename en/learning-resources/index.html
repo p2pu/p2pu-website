@@ -12,11 +12,24 @@ bundles:
   - courses
 extra_css:
 - /assets/css/p2pu-courses.css
+extra_js:
+ - /js/learning-resources.js
 ---
 
-<section class="subheader composition">
+
+<div class="nav nav-tabs container" id="learning-resources-nav-tabs" role="tablist">
+    <button class="ps-0 nav-link active" id="topic-guides-tab" data-bs-toggle="tab" data-bs-target="#topic-guides" type="button" role="tab" aria-controls="topic-guides" aria-selected="true">Topic Guides</button>
+    
+    <button class="nav-link" id="course-search-tab" data-bs-toggle="tab" data-bs-target="#course-search" type="button" role="tab" aria-controls="course-search" aria-selected="false">Courses</button>
+</div>
+
+<div class="tab-content" id="learning-resources-nav-tabsContent">
+  
+  <section class="mobile-tabs tab-pane fade show active subheader composition" id="topic-guides" role="tabpanel" aria-labelledby="topic-guides-tab">
+
+<!--section class="subheader composition"-->
   <div class="container">
-    <h2 class="sans-serif">Topic Guides</h2>
+    <h2 class="sans-serif d-none">Topic Guides</h2>
     <div class="row grid">
       {% for topic in site.topics %}
       {% if topic.featured %}
@@ -38,7 +51,11 @@ extra_css:
   </div>
 </section>
 
-<section class="search">
+
+<section class="mobile-tabs tab-pane fade search course-search" id="course-search" role="tabpanel" aria-labelledby="course-search-tab">
+
+
+<!--section class="search"-->
   <div class="container">
  
   
