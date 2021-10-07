@@ -1,6 +1,6 @@
 ---
-title: Arts & Creativity
-img: arts-creativity.png
+title: Creativity
+img: creativity.png
 excerpt: Creativity is a phenomenon whereby something somehow new and somehow valuable is formed. The created item may be intangible (such as an idea, a scientific theory, a musical composition, or a joke) or a physical object (such as an invention, a printed literary work, or a painting). 
 links:
   - title: Google
