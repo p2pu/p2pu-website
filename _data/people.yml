@@ -5,14 +5,14 @@ staff:
    bio: "Becky is a designer and toymaker motivated by learning about learning. She makes sure there’s interesting data coming in from the community and going back out into the world in all ways possible. She is based in Berlin, Germany."
 
  - name: Dirk Uys
-   image: dirk_uys.jpg
+   image: dirk.jpg
    role: Development Lead
    bio: "Dirk makes sure that just the right amount of tech is developed at P2PU. After travelling through South and Central America, he is now back home in South Africa and based in Cape Town. When he is not writing code, he is most likely hiking Table mountain, surfing the Atlantic or tinkering with a Raspberry Pi."
    twitter: code27_
    url: "https://www.thebacklog.net"
 
  - name: Grif Peterson
-   image: grif_peterson.jpeg
+   image: grif.jpg
    role: Executive Director
    bio: "Grif joined P2PU in 2015 to help start the learning circle program. Since then, his role has grown with the project, and he does his best to make sure that folks around the world have the opportunity to keep on learning things they care about for free. A longtime resident of New England, he now lives in Phoenix, Arizona."
    twitter: grifpeterson
@@ -24,18 +24,18 @@ staff:
    bio: "Qumisha or Q, as you may call her, is a Detroit native, librarian, and a plant lady, but also appreciates food, travel and good music not necessarily in that order. Q is a contributor to P2PU’s community assisting with the development of resources, facilitation support and library staff training. Q is passionate about education, community building and demystifying technology."
 
  - name: Ryan George
-   image: ryan_george.jpg
+   image: ryan.jpg
    role: Financial Administrator
    bio: "Ryan oversees Financing and Accounting for P2PU. He is a vibrant and energetic person who has been with P2PU since 2012. He loves culture, innovative ideas, people and numbers. He is based in Cape Town, South Africa."
 
 board:
  - name: Ahrash Bissell
-   image: ahrash_bissell.jpg
+   image: ahrash.jpg
    role: President, Monterey Institute for Technology and Education
    bio: "As a board member, Ahrash takes care of staying true to our original values, while pushing us to be more experimental. He is a wise man."
 
  - name: Allen Gunn
-   image: allen_gunn.jpg
+   image: gunner.jpg
    role: Executive Director, Aspiration
    bio: "It is not without reason that Gunner is our workshop facilitator of choice. He is Executive Director at Aspiration, where he helps NGOs, activists, foundations and software developers make more effective use of technology for social change."
    twitter: allengunn
@@ -57,14 +57,14 @@ board:
    bio: "As a board member, co-founder, and active community member, Delia makes sure things keep running smoothly at P2PU. Next to this she is involved in many of the legal aspects surrounding the organization."
 
  - name: June Ahn
-   image: june_ahn.jpg
+   image: june.jpg
    role: Associate Professor, University of California, Irvine
    bio: "June is a learning sciences and human-computer interaction researcher at UC Irvine. He bravely collaborated with P2PU on past research projects and now serves on the board to help think about strategic new directions for peer learning."
    twitter: ahnjune
    url: "http://ahnjune.com"
 
  - name: Philipp Schmidt
-   image: philipp_schmidt.jpg
+   image: philipp.jpg
    role: Director of Learning Innovation, MIT Media Lab (P2PU Board Chair)
    bio: "Philipp co-founded P2PU in 2008 with support from a Shuttleworth Grant. Years later he is still cooking up learning experiences (and mustard) at the MIT Media Lab, and nurturing partnerships for future P2PU projects."
    twitter: schmidtphi
