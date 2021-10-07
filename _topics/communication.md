@@ -11,7 +11,7 @@ links:
     description: Paint with Bob Ross
     img: bobross.png
     url: https\://bobross.com
-featured: true
+featured: false
 course_data: job_skills
 ---
 ## Facilitator's Prep
