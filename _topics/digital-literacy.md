@@ -5,8 +5,8 @@ excerpt: Almost everybody encounters digital technology on a daily basis. Theref
 links:
   - title: Tips for Helping Someone Learn to Use Technology
     description: A how-to guide with helpful suggestions from our friends at Carnegie Library of Pittsburgh.
-    img: https://www.carnegielibrary.org/wp-content/uploads/2020/03/techassistance.jpg
-    url: techassistance.jpg
+    img: techassistance.jpg
+    url: https://www.carnegielibrary.org/tips-for-helping-someone-learn-to-use-technology/
   - title: 7 Ways to Teach Digital Literacy
     description: A review of various strategies that educators can adopt when teaching digital literacy from Open Colleges in Australia. 
     img: opencolleges-diglit.jpg
