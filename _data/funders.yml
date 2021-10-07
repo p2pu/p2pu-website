@@ -3,11 +3,11 @@
   url: http://www2.dollargeneral.com/dgliteracy/Pages/index.aspx
 
 - name: EU Erasmus+
-  logo: /assets/images/index/funders/erasmus-plus.jpg
+  logo: /assets/images/index/funders/erasmus.svg
   url: https://ec.europa.eu/programmes/erasmus-plus/node_en  
 
 - name: Hewlett Foundation
-  logo: /assets/images/index/funders/hewlett.svg
+  logo: /assets/images/index/funders/hewlett.png
   url: https://hewlett.org/
   
 - name: Institute of Museum and Library Services
@@ -22,12 +22,12 @@
   logo: /assets/images/index/funders/osf.png
   url: https://www.opensocietyfoundations.org/
 
-- name: SHuttleworth Foundation
+- name: Shuttleworth Foundation
   logo: /assets/images/index/funders/shuttleworth.svg
   url: https://shuttleworthfoundation.org/
   
 - name: Siegel Family Endowment
-  logo: /assets/images/index/funders/sfe.jpg
+  logo: /assets/images/index/funders/sfe-logo.png
   url: http://www.siegelendowment.org/
 
 - name: Walmart Foundation
