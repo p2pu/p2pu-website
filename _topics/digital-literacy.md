@@ -6,14 +6,14 @@ links:
   - title: Tips for Helping Someone Learn to Use Technology
     description: A how-to guide with helpful suggestions from our friends at Carnegie Library of Pittsburgh.
     img: https://www.carnegielibrary.org/wp-content/uploads/2020/03/techassistance.jpg
-    url: https://www.carnegielibrary.org/tips-for-helping-someone-learn-to-use-technology/
+    url: techassistance.jpg
   - title: 7 Ways to Teach Digital Literacy
     description: A review of various strategies that educators can adopt when teaching digital literacy from Open Colleges in Australia. 
-    img: 
+    img: opencolleges-diglit.jpg
     url: https://www.opencolleges.edu.au/informed/edtech-integration/7-ways-teach-digital-literacy/
   - title: Digital Readiness Gaps
     description: A comprehensive review on defining and evaluating digital readiness from the Pew Research Center.
-    img: 
+    img: digital-readiness.png
     url: https://www.pewresearch.org/internet/2016/09/20/digital-readiness-gaps/
 featured: true
 course_data: job_skills
