@@ -1,7 +1,8 @@
 ---
 title: Climate Change
 img: climate-change.png
-excerpt: Climate change education is one of the most popular topics for learning circles, and for good reason: there are few (if any) issues experienced as universally as the effects of humankind on the environment. It’s easy to feel overwhelmed or hopeless when taking on this topic, and that’s ok. The trick is to carve out space where people can improve their understanding and take local action, being proud but recognizing that it’s essential but not sufficient. Learning circles embody the “think globally act locally” mantra, drawing on resources and examples from around the world to generate informed, community-based spaces for both thought and action. So many reasons: talking with kids, making better sense of the news, figuring out how to use time/money, and understanding changing weather patterns we experience. 
+excerpt: |
+    Climate change education is one of the most popular topics for learning circles, and for good reason: there are few (if any) issues experienced as universally as the effects of humankind on the environment. It’s easy to feel overwhelmed or hopeless when taking on this topic, and that’s ok. The trick is to carve out space where people can improve their understanding and take local action, being proud but recognizing that it’s essential but not sufficient. Learning circles embody the “think globally act locally” mantra, drawing on resources and examples from around the world to generate informed, community-based spaces for both thought and action. So many reasons: talking with kids, making better sense of the news, figuring out how to use time/money, and understanding changing weather patterns we experience. 
 links:
   - title: 
     description: 
