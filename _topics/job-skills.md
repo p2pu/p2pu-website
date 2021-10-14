@@ -1,29 +1,25 @@
 ---
-title: Job Skills
+title: Job Readiness
 img: job-skills.png
-excerpt: Job Skills a feugiat dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam condimentum lectus leo. Integer quis ipsum magna. 
+excerpt: Also known as “work readiness” or “job preparedness training”, job readiness has varying definitions across institutions. We’re defining it as getting the job: gaining the skills and developing the strategies necessary to effectively search for employment, build a resume, and improve interview skills. More than 25% of learning circle participants globally indicate that they are participating at least in part because they are looking for a new job. Learning circles can approach this from a variety of perspectives, including searching for employment, building a resume, and improving interview skills.  
 links:
-  - title: Google
-    description: Learn How to Paint For Free
+  - title: Remote Job Readiness Resources
+    description: A remote-forward list of strategies for facilitating job search programs during COVID, from Switchboard.
     img: google.png
-    url: https\://google.com
-  - title: Bob Ross
-    description: Paint with Bob Ross
+    url: https://switchboardta.org/blog/using-virtual-job-readiness-resources-tips-and-materials-for-clients-with-online-access/
+  - title: CareerOneStop
+    description: A U.S. Department of Labor resource that offers information to help prepare for or accompany a learning circle. Many resources are [organized](https://www.careeronestop.org/ResourcesFor/resources-for.aspx) by type of job seeker (young adult, getting back to work, etc.)
     img: bobross.png
-    url: https\://bobross.com
+    url: https://www.careeronestop.org/
+  - title: GCFLearnFree Work & Career Resources 
+    description: Free self-paced lessons available in English, Spanish, and Portuguese. GCP covers a wide range of topics including career planning, job searching, and    interviewing, and also supplies [free teacher guides](https://edu.gcfglobal.org/en/gcfteacherguides/career/1/) to support effective use of their content.
+   img: google.png
+   url: https://edu.gcfglobal.org/en/subjects/work/
 featured: true
 course_data: job_skills
 ---
 ## Facilitator's Prep
-### Job Skills 
-Pursuing staff training: de-escalation to limit need to limit state authority presence in facilities, trauma-informed service, exploring how implicit bias has affected regulations/rules and patron use, removing latent racism, classicism (Miami)
-Pushing to bring social workers into the library including having a local field instructor run learning circles (Miami)
-Anti-Racism book discussion group for library staff (Los Angeles)
-Human Libraries 2: patrons can book a 20min conversation with individuals/volunteers who have stories to share and are comfortable speaking/answering questions about their experiences (Ottawa)
-Responding to long wait times and book hold lists by boosting awareness of always-available digital titles (Ottawa) and seeking more licenses for e/audio books (Los Angeles)
-Develop facilitator support for facilitating anti-racist curriculum (Multnomah)
-Think about supporting better community engagement with civic processes (such as navigating community action around setting police budget) (Charlotte)
-Manage transition from looking after self, to colleagues, to community (St. Paul)
-Ensuring the mental health of colleagues; running internal programming to help colleagues feel better prepared/supported (Los Angeles)
-Investigate library names and statues and rename/tear down that which needs to be removed (UK)
-Supporting conversations about current events in learning circles across a variety of topics (Charlotte) 
+- Honor the varying degrees of urgency: while some patrons may be looking to change an existing job, others may not have a job and may feel less patient with the process depending on their situation. A good way to address this is to ensure that there are tangible takeaways from each meeting (e.g. an updated resume, feedback on a cover letter).
+- Job interests and experience will vary with every group of participants. Make sure to allow some time for individuals to briefly share about their personal goals so that they feel connected to the process, and encourage realistic goal setting (and reevaluation) multiple times throughout the course.
+- Connect open access learning materials to local job boards. Many learning circles have paired open access course materials with local resources and job boards, allowing the learning circles to serve as a place to both identify job opportunities and refine application materials.
+
