@@ -22,6 +22,7 @@ jobs:
           echo "S3_BUCKET=p2pu-staging" >> $GITHUB_ENV
           echo "CLOUDFRONT_DISTRIBUTION_ID=$CLOUDFRONT_DISTRIBUTION_ID" >> $GITHUB_ENV
           echo "mapbox_access_token: $MAPBOX_ACCESS_TOKEN" > ./_production.yml
+          echo "url: https://www-staging.p2pu.org" >> ./_production.yml
           echo "api_origin: https://staging-learningcircles.p2pu.org" >> ./_production.yml
         if: github.ref == 'refs/heads/master'
         env:
