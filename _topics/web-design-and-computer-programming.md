@@ -31,6 +31,8 @@ featured: true
 course_data: web-design
 ---
 
+### About This Topic
+
 Learning circles help participants to become creators (not just consumers) of technology. **Coding** is how humans communicate with machines. “Coding” or “programming” refers to the use of various computer programming languages to instruct computers and machines on what actions to perform. These instructions typically exist as software: interactive programs, operating systems, mobile apps, and websites.   Often, people are trying to make websites. This can be done through coding, using HTML and CSS or there are low-code and no code options that are available for websites such as using wix and wordpress. These resources are designed to help you figure out the _what_ and _how_ of Coding and Computer Programming.
 
 ### Practices
