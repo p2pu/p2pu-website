@@ -12,7 +12,7 @@ default_image_path: /assets/images/p2pu-ogimg-default.jpg
 mapbox_access_token: pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ
 
 # URL of API to use for interactive components
-api_origin: 'http://localhost:8000'
+api_origin: 'https://learningcircles.p2pu.org'
 
 # Build settings
 markdown: CommonMark
@@ -39,14 +39,14 @@ defaults:
       type: "topics"
     values:
       layout: "topic_detail"
-      permalink: "/topic/:title/"
+      permalink: "/en/topic/:title/"
   -
     scope:
       path: ""
       type: "jobs"
     values:
       layout: "page"
-      permalink: "/jobs/:title/"
+      permalink: "/en/jobs/:title/"
 
 #SASS settings
 sass:
