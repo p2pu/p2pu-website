@@ -68,8 +68,8 @@ export default class NavAccount extends Component {
       return (
         <div className="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
           <a href="/en/teams/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</a>
-          <a href="https://learningcircles.p2pu.org/en/accounts/register/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn orange">Create an Account</a>
-          <UserLogin onSubmit={this.onUserLogin} errors={this.state.errors} apiOrigin={this.props.apiOrigin} />
+          <a href={`${this.props.apiOrigin}/en/accounts/register/`} className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn orange">Create an Account</a>
+          <a href={`${this.props.apiOrigin}/en/accounts/login/`} className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn gray">Log in</a>
         </div>
       )
     }
