@@ -15,9 +15,11 @@ links:
     description: 
     img: 
     url:     
-featured: false (❗️ change to "true" when ready to publish)
+featured: false
 course_data: topic-guide-string (❗️ change to designated string to search in the course library — double check this with dirk)
 ---
+
+(❗️ change featured: "false" to "true" when ready to publish)
 
 ### Heading of Section
 Main body text.
