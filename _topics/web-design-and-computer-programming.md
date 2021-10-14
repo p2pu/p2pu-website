@@ -28,15 +28,15 @@ links:
     img: makecode.png
     url: https://www.microsoft.com/en-us/makecode
 featured: true
-course_data: web-design
+course_data: computer-progamming
 ---
 
 ### About This Topic
 
-Learning circles help participants to become creators (not just consumers) of technology. **Coding** is how humans communicate with machines. “Coding” or “programming” refers to the use of various computer programming languages to instruct computers and machines on what actions to perform. These instructions typically exist as software: interactive programs, operating systems, mobile apps, and websites. Often, people are trying to make websites. This can be done through coding, using HTML and CSS or there are low-code and no code options that are available for websites such as using wix and wordpress. These resources are designed to help you figure out the _what_ and _how_ of Coding and Computer Programming.
+Broadly speaking, computer programming allows humans to instruct computers and machines to perform certain actions. These instructions typically manifest as software: interactive programs, operating systems, mobile apps, websites, etc. As a format, learning circles help participants to become creators of technology (rather than just consumers), and the resources below will help you figure out the what and how of computer programming for your learning circle.
 
 ### Practices
+* Many learners who express interest in computer programming are primarily interested in web design, and there’s no need to overcomplicate things. If a small business owner wants to make a website for their company, using a low code/no code web building tool like Wordpress might make more sense than helping them learning HTML/CSS.
 * There is no one best coding language. Each language will do different things well and are used for different applications. Since society basically tells us that we should all learn to code, it’s important to help learners articulate a clearer reason for participating.  freeCodeCamp’s [What Programming Language Should I Learn?](https://www.freecodecamp.org/news/what-programming-language-should-i-learn-first-19a33b0a467d/) and Udacity’s [4 Ways to Pick Your First Programming Language](https://www.udacity.com/blog/2015/05/pick-your-first-programming-language.html) are helpful guides for you and participants to decide where to start. 
 * While we try to make learning circles approachable for all learners, there are some basic prerequisites for learning a programming language, including comfort using a computer, access to a computer and the internet, and a clear idea of why they want to learn computer programming: a learner’s end goal will help determine which coding languages are a good fit to support that goal.
 * Programming is one topic where it really makes sense for everyone to have a computer. That said, don’t lose sight of the group aspect. Presenting to the group, programming in pairs, and doing peer debugging are all ways to bring a sense of community to the group.
-* Don’t overcomplicate things: if a small business owner wants to make a website for their company, there is no reason that they need to learn HTML/CSS. There’s no shame in using templates and website builder tools to help learners reach their goal!
