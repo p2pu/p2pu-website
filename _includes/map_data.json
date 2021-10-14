@@ -1,40 +1,95 @@
 {
 "pois": [
   {
-	"latitude": 15.341006,
-	"longitude": 44.202889,
-	"location": "Sana'a, Yemen",
-	"title": "Let's Speak English"
+	"latitude": 42.361145,
+	"longitude": -71.057083,
+	"location": "Boston, USA",
+	"title": "Learn to Write Fiction"
   },
   {
-	"latitude": 19.237273,
-	"longitude": 72.787587,
-	"location": "Gorai, India",
-	"title": "Cheap Web Hosting"
-  },
-  {
-	"latitude": 41.817587,
-	"longitude": -87.694739,
-	"location": "Chicago, IL, USA",
-	"title": "Art of Storytelling"
-  },
-  {
-	"latitude": 0.02896583659494138,
-	"longitude": 37.62162219117033,
+	"latitude": 0.053543,
+	"longitude": 37.648399,
 	"location": "Meru, Kenya",
 	"title": "Data Detox"
   },
   {
-	"latitude": 47.004173737910584,
-	"longitude": 21.97320051982301,
-	"location": "Sânmartin, Romania",
-	"title": "Utilizarea tehnologiei in biblioteca școlară"
+	"latitude": 34.052235,
+	"longitude": -118.243683,
+	"location": "Los Angeles, USA",
+	"title": "The 1619 Project"
   },
   {
-	"latitude": 37.684385128154204,
-	"longitude": -97.33780224546243,
-	"location": "Wichita, Kansas",
-	"title": "Fiction Writing for Teens"
+	"latitude": -33.865143,
+	"longitude": 151.209900,
+	"location": "Sydney, Australia",
+	"title": "Work Smarter, Not Harder"
+  },
+  {
+	"latitude": 41.545448,
+	"longitude": -8.426507,
+	"location": "Braga, Portugal",
+	"title": "Curso de Inglês"
+  },
+  {
+	"latitude": 37.697948,
+	"longitude": -97.314835,
+	"location": "Wichita, USA",
+	"title": "Cryptozoology 101"
+  },
+  {
+	"latitude": 52.520008,
+	"longitude": 13.404954,
+	"location": "Berlin, Germany",
+	"title": "Fake News in Zeiten von Corona"
+  },
+  {
+	"latitude": 0.347596,
+	"longitude": 32.582520,
+	"location": "Kampala, Uganda",
+	"title": "Art of Storytelling"
+  },
+
+  {
+	"latitude": 45.424721,
+	"longitude": -75.695000,
+	"location": "Ottawa, Canada",
+	"title": "Exploring the Mayan World"
+  },
+  {
+	"latitude": 44.954445,
+	"longitude": -93.091301,
+	"location": "St. Paul, USA",
+	"title": "DIY Build a Website"
+  },
+  {
+	"latitude": 46.266667,
+	"longitude": 25.935833,
+	"location": "Sânmartin, Romania",
+	"title": "Utilizarea Tehnologiei in Biblioteca Ṣcolară"
+  },
+  {
+	"latitude": 41.881832,
+	"longitude": -87.623177,
+	"location": "Chicago, IL, USA",
+	"title": "Resume, Networking, and Interview Skills"
+  },
+  {
+	"latitude": 61.49911,
+	"longitude": 23.78712,
+	"location": "Tampere, Finland",
+	"title": "Opintopiirin Ohjaamisen ABC"
+  },
+  {
+	"latitude": 52.083333,
+	"longitude": 17.412346,
+	"location": "Nowe Miasto nad Wartą, Poland",
+	"title": "Klub Ogrodnika"
+  },
+  {
+	"latitude": 47.658779,
+	"longitude": -117.426048,
+	"location": "Spokane, USA",
+	"title": "3D Printing"
   }
 ]
 }
