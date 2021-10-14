@@ -1,7 +1,7 @@
 ---
 title: Web Design & Computer Programming
 img: web-design-and-computer-programming.png
-excerpt: 
+excerpt:  
 links:
   - title: MDN Web Docs
     description: All parts of MDN (docs and the site itself) are created by an open community of developers. This site contains tutorials and resources related to HTML, CSS, and Javascript.
@@ -31,7 +31,9 @@ featured: true
 course_data: web-design
 ---
 
-Learning circles help participants to become creators (not just consumers) of technology. **Coding** is how humans communicate with machines. “Coding” or “programming” refers to the use of various computer programming languages to instruct computers and machines on what actions to perform. These instructions typically exist as software: interactive programs, operating systems, mobile apps, and websites.   Often, people are trying to make websites. This can be done through coding, using HTML and CSS or there are low-code and no code options that are available for websites such as using wix and wordpress. These resources are designed to help you figure out the _what_ and _how_ of Coding and Computer Programming.
+### About This Topic
+
+Learning circles help participants to become creators (not just consumers) of technology. **Coding** is how humans communicate with machines. “Coding” or “programming” refers to the use of various computer programming languages to instruct computers and machines on what actions to perform. These instructions typically exist as software: interactive programs, operating systems, mobile apps, and websites. Often, people are trying to make websites. This can be done through coding, using HTML and CSS or there are low-code and no code options that are available for websites such as using wix and wordpress. These resources are designed to help you figure out the _what_ and _how_ of Coding and Computer Programming.
 
 ### Practices
 * There is no one best coding language. Each language will do different things well and are used for different applications. Since society basically tells us that we should all learn to code, it’s important to help learners articulate a clearer reason for participating.  freeCodeCamp’s [What Programming Language Should I Learn?](https://www.freecodecamp.org/news/what-programming-language-should-i-learn-first-19a33b0a467d/) and Udacity’s [4 Ways to Pick Your First Programming Language](https://www.udacity.com/blog/2015/05/pick-your-first-programming-language.html) are helpful guides for you and participants to decide where to start. 
