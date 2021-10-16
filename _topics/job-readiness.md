@@ -1,7 +1,7 @@
 ---
 title: Job Readiness
 img: job-readiness.jpg
-excerpt: Also known as "work readiness" or "job preparedness training", job readiness has varying definitions across institutions. We’re defining it as getting the job: gaining the skills and developing the strategies necessary to effectively search for employment, build a resume, and improve interview skills. More than 25% of learning circle participants globally indicate that they are participating at least in part because they are looking for a new job. Learning circles can approach this from a variety of perspectives, including searching for employment, building a resume, and improving interview skills.  
+excerpt: |
 links:
   - title: Remote Job Readiness Resources
     description: A remote-forward list of strategies for facilitating job search programs during COVID, from Switchboard.
@@ -18,6 +18,9 @@ links:
 featured: true
 course_data: job_readiness
 ---
+
+### About This Topic
+Also known as "work readiness" or "job preparedness training", job readiness has varying definitions across institutions. We’re defining it as getting the job: gaining the skills and developing the strategies necessary to effectively search for employment, build a resume, and improve interview skills. More than 25% of learning circle participants globally indicate that they are participating at least in part because they are looking for a new job. Learning circles can approach this from a variety of perspectives, including searching for employment, building a resume, and improving interview skills.  
 
 ### Practices
 - Honor the varying degrees of urgency: while some patrons may be looking to change an existing job, others may not have a job and may feel less patient with the process depending on their situation. A good way to address this is to ensure that there are tangible takeaways from each meeting (e.g. an updated resume, feedback on a cover letter).
