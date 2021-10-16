@@ -1,7 +1,7 @@
 ---
 title: Computer Programming
-img: web-design-and-computer-programming.png
-excerpt: <p>
+img: computer-programming.jpg
+excerpt: |
 links:
   - title: MDN Web Docs
     description: All parts of MDN (docs and the site itself) are created by an open community of developers. This site contains tutorials and resources related to HTML, CSS, and Javascript.
