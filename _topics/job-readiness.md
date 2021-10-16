@@ -1,6 +1,6 @@
 ---
 title: Job Readiness
-img: job-skills.png
+img: job-readiness.png
 excerpt:
 Also known as “work readiness” or “job preparedness training”, job readiness has varying definitions across institutions. We’re defining it as getting the job: gaining the skills and developing the strategies necessary to effectively search for employment, build a resume, and improve interview skills. More than 25% of learning circle participants globally indicate that they are participating at least in part because they are looking for a new job. Learning circles can approach this from a variety of perspectives, including searching for employment, building a resume, and improving interview skills.  
 links:
