@@ -1,7 +1,7 @@
 ---
 title: Climate Change
 img: climate-change.jpg
-excerpt: Climate change education is one of the most popular topics for learning circles, and for good reason: there are few (if any) issues experienced as universally as the effects of human development on the environment. While climate change learning circles draw from a vast variety of disciplines (e.g. oceanography, social change), the end goal should align with [UNESCO’s framing](https://unesdoc.unesco.org/ark:/48223/pf0000233083) that climate change education “helps learners understand the causes and consequences of climate change, prepares them to live with the impacts of climate change and empowers learners to take appropriate actions to adopt more sustainable lifestyles.” Learning circles embody the “think globally act locally” mantra, drawing on resources and examples from around the world to generate informed, community-based spaces for both thought and action.  
+excerpt: |
 links:
   - title: En-ROADS climate simulator
     description: A free simulation tool that allows individuals to design their own scenarios to limit future global warming, from Climate Interactive.
@@ -26,6 +26,9 @@ links:
 featured: true
 course_data: climate_change
 ---
+
+### About This Topic
+Climate change education is one of the most popular topics for learning circles, and for good reason: there are few (if any) issues experienced as universally as the effects of human development on the environment. While climate change learning circles draw from a vast variety of disciplines (e.g. oceanography, social change), the end goal should align with [UNESCO’s framing](https://unesdoc.unesco.org/ark:/48223/pf0000233083) that climate change education “helps learners understand the causes and consequences of climate change, prepares them to live with the impacts of climate change and empowers learners to take appropriate actions to adopt more sustainable lifestyles.” Learning circles embody the “think globally act locally” mantra, drawing on resources and examples from around the world to generate informed, community-based spaces for both thought and action.  
 
 ### Practices
 - Climate change can be addressed from a variety of perspectives - science, politics, activism. Find an entry point that seems graspable and creates a shared starting point. All the more important, recognizing that not everyone is starting from the same set of assumptions.
