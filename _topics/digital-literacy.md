@@ -1,6 +1,6 @@
 ---
 title: Digital Literacy
-img: digital-literacy.png
+img: digital-literacy.jpg
 excerpt: Almost everybody encounters digital technology on a daily basis in a wide variety of functions, including connecting with family, reading the news, applying for jobs, and expressing oneself creatively. We believe that a good digital literacy program does more than merely help users consume digital information, which is why we like the [American Library Association’s definition](https://literacy.ala.org/digital-literacy/) of digital literacy as “the ability to use information and communication technologies to find, evaluate, create, and communicate information, requiring both cognitive and technical skills”.
 links:
   - title: Tips for Helping Someone Learn to Use Technology
