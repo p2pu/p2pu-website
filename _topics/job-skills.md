@@ -3,18 +3,18 @@ title: Job Skills
 img: job-readiness.jpg
 excerpt: |
 links:
-  - title: 
+  - title: Remote Job Readiness Resources
+    description: A remote-forward list of strategies for facilitating job search programs during COVID.
+    img: 
+    url: https://switchboardta.org/blog/using-virtual-job-readiness-resources-tips-and-materials-for-clients-with-online-access/
+  - title: CareerOneStop
     description: 
     img: 
-    url: 
-  - title: 
+    url: https://www.careeronestop.org/
+  - title: GCFLearnFree Work & Career Resources
     description: 
     img: 
-    url: 
-  - title: 
-    description: 
-    img: 
-    url:     
+    url: https://edu.gcfglobal.org/en/subjects/work/
 featured: true
 course_data: job-readiness
 ---
