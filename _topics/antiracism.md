@@ -1,6 +1,6 @@
 ---
 title: Antiracism
-img: antiracism.png
+img: antiracism.jpg
 excerpt: P2PU unequivocally condemns racism, police brutality, and white supremacy in the United States and around the world. A commitment to equity exists at the core of our individual and collective work, and we stand in solidarity with the Black Lives Matter movement and international demonstrations for racial justice. These resources for activism and anti-racism learning circles were compiled by a community of facilitators in June 2020. 
 links:
   - title: Racial Equity Toolkit

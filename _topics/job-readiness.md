@@ -1,22 +1,22 @@
 ---
-title: Job Skills
+title: Job Readiness
 img: job-readiness.jpg
 excerpt: |
 links:
   - title: Remote Job Readiness Resources
-    description: A remote-forward list of strategies for facilitating job search programs during COVID.
+    description: A remote-forward list of strategies for facilitating job search programs during COVID, from Switchboard.
     img: switchboard.png
     url: https://switchboardta.org/blog/using-virtual-job-readiness-resources-tips-and-materials-for-clients-with-online-access/
   - title: CareerOneStop
-    description: 
+    description: A U.S. Department of Labor resource that offers information to help prepare for or accompany a learning circle. Many resources are [organized](https://www.careeronestop.org/ResourcesFor/resources-for.aspx) by type of job seeker (young adult, getting back to work, etc.)
     img: onestop.png
     url: https://www.careeronestop.org/
-  - title: GCFLearnFree Work & Career Resources
-    description: 
-    img: gcf.jpg
-    url: https://edu.gcfglobal.org/en/subjects/work/
+  - title: GCFLearnFree Work & Career Resources 
+    description: Free self-paced lessons available in English, Spanish, and Portuguese. GCP covers a wide range of topics including career planning, job searching, and    interviewing, and also supplies [free teacher guides](https://edu.gcfglobal.org/en/gcfteacherguides/career/1/) to support effective use of their content.
+   img: gcf.jpg
+   url: https://edu.gcfglobal.org/en/subjects/work/
 featured: true
-course_data: job-readiness
+course_data: job_readiness
 ---
 
 ### About This Topic
