@@ -28,7 +28,9 @@ links:
     img: makecode.jpg
     url: https://www.microsoft.com/en-us/makecode
 featured: true
-course_data: computer-progamming
+search_topics:
+ - computer-programming
+ - programming
 ---
 
 ### About This Topic
