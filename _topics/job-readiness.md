@@ -16,7 +16,8 @@ links:
     img: gcf.jpg
     url: https://edu.gcfglobal.org/en/subjects/work/
 featured: true
-course_data: job_readiness
+search_topics:
+  - job_readiness
 ---
 
 ### About This Topic
