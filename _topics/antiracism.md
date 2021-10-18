@@ -1,23 +1,50 @@
 ---
 title: Antiracism
 img: antiracism.jpg
-excerpt: P2PU unequivocally condemns racism, police brutality, and white supremacy in the United States and around the world. A commitment to equity exists at the core of our individual and collective work, and we stand in solidarity with the Black Lives Matter movement and international demonstrations for racial justice. These resources for activism and anti-racism learning circles were compiled by a community of facilitators in June 2020. 
+excerpt: |
 links:
-  - title: Racial Equity Toolkit
-    description: Guide published by the Government Alliance on Race and Equity, a national network of government working to achieve racial equity and advance opportunities for all.
-    img: 
-    url: https://www.racialequityalliance.org/wp-content/uploads/2015/10/GARE-Racial_Equity_Toolkit.pdf
+  - title: Everyday Social Justice
+    description: A library of 2-hour, conversation-based lessons all taught from an intersectional feminist perspective. Many of the lessons can be easily adapted to learning circles.
+    img: everydaysocialjustice.jpg
+    url: https://www.everydaysocialjustice.com/home
   - title: Antiracist Allyship Starter Pack
-    description: Extensive list of resources (articles, books, PDFs, podcasts, film/video, resources for teachers, reading guides) for reference or sharing
-    img: 
+    description: Extensive list of resources (articles, books, PDFs, podcasts, film/video, resources for teachers, reading guides) for reference or sharing.
+    img: allyship-starter-pack.jpg
     url: https://docs.google.com/spreadsheets/d/1bUJrgX8vspyy7YttiEC2vD0DawrpPYiZs94V0ov7qZQ/edit#gid=0
   - title: Anti-Racism Learning Circle Resources
     description: A detailed list of learning circle meeting agendas complete with resources, discussion prompts, and follow-up resources, shared publicly by Kitsap Regional Library in Washington.
-    img: 
+    img: antiracism-kitsap.jpg
     url: https://www.krl.org/antiracismresources
+  - title: Racial Equity Tools
+    description: Tools, research, tips, curricula, and ideas for people who want to increase their own understanding and to help those working for racial justice.
+    img: RET.jpg
+    url: https://www.racialequitytools.org/
+  - title: Learning For Justice
+    description: Classroom resources, facilitator guides, and self-guided learning that span the topics of race & ethnicity, religion, ability, class, immigration, gender & sexual identity, bullying & bias, and rights & activism. Learning for Justice is a project of the Southern Poverty Law Center.
+    img: learningforjustice.jpg
+    url: https://www.learningforjustice.org/
+  - title: Curated by Coursera: Race, inequality, and social justice
+    description: A curated list of free Coursera courses that address topics of race, inequality, and social justice.
+    img: coursera.jpg
+    url: https://www.coursera.org/collections/race-inequality-social-justice
+  - title: Facing History and Ourselves
+    description: Educator resources that address both moments in history and current events through a variety of lenses, including immigration, COVID-19, and racial justice. While Facing History’s educator resources are primarily designed for middle school and high school teachers, many of them are easily adaptable to the learning circle model.
+    img: facinghistory.jpg
+    url: https://www.facinghistory.org/educator-resources 
+  - title: Transform Harm
+    description: TransformHarm.org is a resource hub about ending violence that offers an introduction to transformative justice. Created by Mariame Kaba and designed by Lu Design Studio, the site includes selected articles, audio-visual resources, curricula, and more.
+    img: transformharm.jpg
+    url: https://transformharm.org/
+  - title: Introduction to Abolition: The full reading list
+    description: 17 reading lists on policing, abolition, and prisons, each of which is about 6 weeks long and includes facilitator resources.
+    img: abolitionistfutures.jpg
+    url: https://abolitionistfutures.com/full-reading-list
 featured: true
 search_topics: ["antiracism"]
 ---
+
+### About This Topic
+P2PU unequivocally condemns racism, police brutality, and white supremacy in the United States and around the world. A commitment to equity exists at the core of our individual and collective work, and we stand in solidarity with the Black Lives Matter movement and international demonstrations for racial justice. These resources for activism and anti-racism learning circles were compiled by a community of facilitators in June 2020. 
 
 ### Organizations’ Strategies for Action:
 - Pursuing staff training: de-escalation to limit need to limit state authority presence in facilities, trauma-informed service, exploring how implicit bias has affected regulations/rules and patron use, removing latent racism, classicism (Miami)
@@ -32,7 +59,7 @@ search_topics: ["antiracism"]
 - Investigate library names and statues and rename/tear down that which needs to be removed (UK)
 - Supporting conversations about current events in learning circles across a variety of topics (Charlotte)
 
-###Questions for prioritizing equity in digital inclusion:
+### Questions for prioritizing equity in digital inclusion:
 (via the Technology and Innovation Department of the City of Long Beach, CA)
 
 - Burdens and Benefits: Who would benefit or be burdened by this proposal? Would low-income households or communities of color experience a disproportionate burden?
