@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: p2pu/p2pu-website
+  branch: master
+media_folder: assets/images
+collections:
+  - name: "topics" # Used in routes, e.g., /admin/collections/blog
+    label: "Topics" # Used in the UI
+    folder: "_topics" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "img", widget: "image"}
+      - {label: "Excerpt", name: "excerpt", widget: "markdown"}
+      - label: "Links"
+        name: "links"
+        widget: list
+        fields:
+          - { label: "Title", name: 'title', widget: 'string' }
+          - { label: "Description", name: 'description', widget: 'string' }
+          - { label: "URL", name: 'url', widget: 'string' }
+      - {label: "Featured", name: "featured", widget: "boolean"}
+      - {label: "Search topics", name: "search_topics", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
