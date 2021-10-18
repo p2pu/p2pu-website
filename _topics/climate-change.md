@@ -1,26 +1,32 @@
 ---
 title: Climate Change
-img: climate-change.jpg
-excerpt: |
+img: /assets/images/topics/climate-change.jpg
+excerpt: Climate change.
 links:
   - title: En-ROADS climate simulator
-    description: A free simulation tool that allows individuals to design their own scenarios to limit future global warming, from Climate Interactive.
+    description: A free simulation tool that allows individuals to design their own
+      scenarios to limit future global warming, from Climate Interactive.
     img: enroads.png
     url: https://www.climateinteractive.org/tools/en-roads/
   - title: NASA Global Climate Change
-    description: A vast array of articles, galleries, games, and resources that can compliment a learning circle on nearly any learning circle related to climate education. 
+    description: A vast array of articles, galleries, games, and resources that can
+      compliment a learning circle on nearly any learning circle related to
+      climate education.
     img: nasa.jpg
     url: https://climate.nasa.gov/
   - title: OCE Climate Change Education
-    description: The Office for Climate Education’s repository of resources, games, lesson plans, and activities for educators and learners of all ages.
+    description: The Office for Climate Education’s repository of resources, games,
+      lesson plans, and activities for educators and learners of all ages.
     img: oce.png
     url: https://www.oce.global/en
   - title: SDGAcademyX
-    description: A compilation of free, online courses hosted by edX that relate to the United Nations Sustainable Development Goals.
+    description: A compilation of free, online courses hosted by edX that relate to
+      the United Nations Sustainable Development Goals.
     img: sdg.png
     url: https://www.edx.org/school/sdgacademyx
   - title: UN Climate Action
-    description: Definitions, initiatives, reports, and a library of free resources from around the world.
+    description: Definitions, initiatives, reports, and a library of free resources
+      from around the world.
     img: un-climate.png
     url: https://www.un.org/en/climatechange/
 featured: true
