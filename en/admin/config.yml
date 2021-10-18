@@ -3,6 +3,7 @@ backend:
   repo: p2pu/p2pu-website
   branch: master
 media_folder: assets/images
+public_folder: /assets/images
 collections:
   - name: "topics" # Used in routes, e.g., /admin/collections/blog
     label: "Topics" # Used in the UI
