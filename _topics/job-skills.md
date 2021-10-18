@@ -8,11 +8,11 @@ links:
     img: switchboard.png
     url: https://switchboardta.org/blog/using-virtual-job-readiness-resources-tips-and-materials-for-clients-with-online-access/
   - title: CareerOneStop
-    description: 
+    description: A U.S. Department of Labor resource that offers information to help prepare for or accompany a learning circle. Many resources are [organized](https://www.careeronestop.org/ResourcesFor/resources-for.aspx) by type of job seeker (young adult, getting back to work, etc.)
     img: onestop.png
     url: https://www.careeronestop.org/
   - title: GCFLearnFree Work & Career Resources
-    description: 
+    description: Free self-paced lessons available in English, Spanish, and Portuguese. GCP covers a wide range of topics including career planning, job searching, and interviewing, and also supplies [free teacher guides](https://edu.gcfglobal.org/en/gcfteacherguides/career/1/) to support effective use of their content.
     img: gcf.jpg
     url: https://edu.gcfglobal.org/en/subjects/work/
 featured: true
