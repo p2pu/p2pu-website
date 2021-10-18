@@ -16,7 +16,7 @@ links:
     img: 
     url: https://www.krl.org/antiracismresources
 featured: true
-course_data: antiracism
+search_topics: ["antiracism"]
 ---
 
 ### Organizations’ Strategies for Action:
