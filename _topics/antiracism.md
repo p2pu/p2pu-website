@@ -23,7 +23,7 @@ links:
     description: Classroom resources, facilitator guides, and self-guided learning that span the topics of race & ethnicity, religion, ability, class, immigration, gender & sexual identity, bullying & bias, and rights & activism. Learning for Justice is a project of the Southern Poverty Law Center.
     img: learningforjustice.jpg
     url: https://www.learningforjustice.org/
-  - title: Curated by Coursera: Race, inequality, and social justice
+  - title: Curated by Coursera – Race, inequality, and social justice
     description: A curated list of free Coursera courses that address topics of race, inequality, and social justice.
     img: coursera.jpg
     url: https://www.coursera.org/collections/race-inequality-social-justice
@@ -35,7 +35,7 @@ links:
     description: TransformHarm.org is a resource hub about ending violence that offers an introduction to transformative justice. Created by Mariame Kaba and designed by Lu Design Studio, the site includes selected articles, audio-visual resources, curricula, and more.
     img: transformharm.jpg
     url: https://transformharm.org/
-  - title: Introduction to Abolition: The full reading list
+  - title: Introduction to Abolition - The full reading list
     description: 17 reading lists on policing, abolition, and prisons, each of which is about 6 weeks long and includes facilitator resources.
     img: abolitionistfutures.jpg
     url: https://abolitionistfutures.com/full-reading-list
