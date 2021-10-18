@@ -1,6 +1,6 @@
 ---
 title: Computer Programming
-img: computer-programming.jpg
+img: /assets/images/topics/computer-programming.jpg
 excerpt: |
 links:
   - title: MDN Web Docs

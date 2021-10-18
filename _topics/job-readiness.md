@@ -1,6 +1,6 @@
 ---
 title: Job Readiness
-img: job-readiness.jpg
+img: /assets/images/topics/job-readiness.jpg
 excerpt: |
 links:
   - title: Remote Job Readiness Resources
