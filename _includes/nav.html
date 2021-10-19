@@ -35,7 +35,7 @@
         <div class="collapse navbar-nav navbar-collapse navbarNavDropdown align-items-stretch align-items-md-center pt-3 pb-5 py-md-0">
         {% for link in site.data.navigation.top_level %}
           <div class="dropdown nav-item">
-            <a href="{{ link.url }}" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle {% if link.external %} external {% endif %}" {% if link.submenu %} data-bs-toggle="dropdown" {% endif %} aria-expanded="false" {% if link.external %}  target="_blank" {% endif %} > {{ link.text }}</a>
+            <a href="{{ link.url }}" class="nav-link d-flex align-items-center link-dark text-decoration-none dropdown-toggle {% if link.external %} external {% endif %}" {% if link.submenu %} data-bs-toggle="dropdown" {% endif %} aria-expanded="false" {% if link.external %}  target="_blank" {% endif %} >{{ link.text }}{% if link.submenu %}<span class="material-icons">expand_more</span> {% endif %}</a>
             {% if link.submenu %}
             <ul class="dropdown-menu shadow py-md-0" aria-labelledby="dropdownNavLink" style="">      
             {% endif %}
