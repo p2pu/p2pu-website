@@ -1,50 +1,31 @@
 ---
 title: Creativity
 img: /assets/images/topics/creativity.jpg
-excerpt: Creativity is a phenomenon whereby something somehow new and somehow valuable is formed. The created item may be intangible (such as an idea, a scientific theory, a musical composition, or a joke) or a physical object (such as an invention, a printed literary work, or a painting). 
+excerpt: |
 links:
-  - title: Google
-    description: Learn How to Paint For Free
-    img: google.png
-    url: https://google.com
-  - title: Bob Ross
-    description: Paint with Bob Ross
-    img: bob-ross.png
-    url: https://bobross.com
-  - title: Another Link 1
-    description: Lorem ipsum dolor sit amet
-    img: test-image-1.png
-    url:  http://p2pu.org
-  - title: Another Link 2
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend efficitur ex
-    img: test-image-2.png
-    url:  https\://google.com 
+  - title: IDEO’s Design Thinking Defined
+    description: Free courses, videos, and other resources covering all of the
+      basics of design thinking (aka human-centered design and problem solving),
+      provided by renowned design firm IDEO.
+    img: designthinking.jpg
+    url: https://designthinking.ideo.com/
+  - title: How to Talk to People About Their Art
+    img: artofeducation.jpg
+    url: https://theartofeducation.edu/2020/04/20/how-to-talk-to-kids-about-their-art
+    description: When running learning circles where participants will show what
+      they’re making, it can be challenging to know what to say to encourage
+      growth and reflection. Though this resource is focused on kids, the
+      principles apply well to artists of all ages and skill levels.
+  - title: Art Periods – A Detailed Look at the Art History Timeline
+    img: artperiods.jpg
+    url: https://artincontext.org/art-periods/
+    description: Interested in an art history learning circle? There's a lot of it
+      to dig through! This useful overview of the art periods includes
+      timelines, resources, and advice for how to examine different eras.
 featured: true
 course_data: creativity
 ---
 
-### Creativity
+### About This Topic
 
-# H1 
-## H2
-### H3
-#### H4
-##### H5
-
-**bold**
-_italic_
-
-> Block quote. Anti-Racism book discussion group for library staff (Los Angeles)
-
-
-1. Number list item.
-2. Number list item.
-3. Number list item. 
-4. Number list item.
-
-- List item.
-- List item.
-- List item.
-
-![P2PU logo](https://www.p2pu.org/assets/images/p2pu-logo.png)
-
+We approach **creativity** broadly as the ability to imagine and develop new, useful, or innovative solutions to all kinds of problems. Learning circles are a successful format for convening a group around a specific art or craft (e.g. watercoloring, bookbinding, mending). There are also a number of courses that help foster creative thinking skills, which have relevance across all aspects of life, including business, science, and communications.
