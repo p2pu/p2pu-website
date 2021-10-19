@@ -32,9 +32,9 @@ extra_css:
 			{% for link in page.links %}
 			<div class="grid-item col-md-6 col-lg-4">
 			    <div class="card generic cover-link">
-				    <a href="{{link.url}}" target="_blank"></a>
+				    <a href="{{ link.url }}" target="_blank"></a>
 					<div class="card-image">
-					  <img src="{{ site.baseurl }}/assets/images/topics/{{page.slug}}/{{ link.img}}" alt="{{ link.title }}" class="card-img-top">
+					  <img src="{{ site.baseurl }}{{ link.img }}" alt="{{ link.title }}" class="card-img-top">
 					</div>
 					<div class="card-header">
 					  <h4 class="card-title">{{ link.title }}</h4>
