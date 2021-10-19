@@ -15,7 +15,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Image", name: "img", widget: "image"}
-      - {label: "Excerpt", name: "excerpt", widget: "markdown"}
+      - {label: "Excerpt", name: "excerpt", widget: "markdown", required: false}
       - label: "Links"
         name: "links"
         widget: list
