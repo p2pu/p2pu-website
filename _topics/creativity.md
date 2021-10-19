@@ -7,17 +7,17 @@ links:
     description: Free courses, videos, and other resources covering all of the
       basics of design thinking (aka human-centered design and problem solving),
       provided by renowned design firm IDEO.
-    img: designthinking.jpg
+    img: /assets/images/topics/designthinking.jpg
     url: https://designthinking.ideo.com/
   - title: How to Talk to People About Their Art
-    img: artofeducation.jpg
+    img: /assets/images/topics/artofeducation.jpg
     url: https://theartofeducation.edu/2020/04/20/how-to-talk-to-kids-about-their-art
     description: When running learning circles where participants will show what
       they’re making, it can be challenging to know what to say to encourage
       growth and reflection. Though this resource is focused on kids, the
       principles apply well to artists of all ages and skill levels.
   - title: Art Periods – A Detailed Look at the Art History Timeline
-    img: artperiods.jpg
+    img: /assets/images/topics/artperiods.jpg
     url: https://artincontext.org/art-periods/
     description: Interested in an art history learning circle? There's a lot of it
       to dig through! This useful overview of the art periods includes

@@ -5,15 +5,15 @@ excerpt: Almost everybody encounters digital technology on a daily basis in a wi
 links:
   - title: Tips for Helping Someone Learn to Use Technology
     description: A how-to guide with helpful suggestions from our friends at Carnegie Library of Pittsburgh.
-    img: techassistance.jpg
+    img: /assets/images/topics/techassistance.jpg
     url: https://www.carnegielibrary.org/tips-for-helping-someone-learn-to-use-technology/
   - title: 7 Ways to Teach Digital Literacy
     description: A review of various strategies that educators can adopt when teaching digital literacy from Open Colleges in Australia. 
-    img: opencolleges-diglit.jpg
+    img: /assets/images/topics/opencolleges-diglit.jpg
     url: https://www.opencolleges.edu.au/informed/edtech-integration/7-ways-teach-digital-literacy/
   - title: Digital Readiness Gaps
     description: A comprehensive review on defining and evaluating digital readiness from the Pew Research Center.
-    img: digital-readiness.png
+    img: /assets/images/topics/digital-readiness.png
     url: https://www.pewresearch.org/internet/2016/09/20/digital-readiness-gaps/
 featured: true
 course_data: digital-literacy

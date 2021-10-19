@@ -5,27 +5,27 @@ excerpt: |
 links:
   - title: MDN Web Docs
     description: All parts of MDN (docs and the site itself) are created by an open community of developers. This site contains tutorials and resources related to HTML, CSS, and Javascript.
-    img: mdnwebdocs.jpg
+    img: /assets/images/topics/mdnwebdocs.jpg
     url: https://developer.mozilla.org/en-US/docs/Learn
   - title: freeCodeCamp
     description: Free, verified certificates in a wide variety of tech related topics that are constantly being updated. Most courses combine video with console work, and can therefore serve as a great basis for learning circles. 
-    img: freecodecamp.jpg
+    img: /assets/images/topics/freecodecamp.jpg
     url: https://www.freecodecamp.org/
   - title: Codecademy Catalog
     description: High quality, interactive courses on a range of topics. The full catalog of Codecademy courses is the best way to find the courses that they still offer for free (anything not marked ‘PRO’).
-    img: codecademy.jpg
+    img: /assets/images/topics/codecademy.jpg
     url: https://www.codecademy.com/catalog/all
   - title: Scratch
     description: A free block-based visual programming language used to teach coding fundamentals. Users of the site can create projects like interactive interfaces, animations, and games using a building-block-like interface. 
-    img: scratch.jpg
+    img: /assets/images/topics/scratch.jpg
     url: https://scratch.mit.edu/
   - title: Scratch Educator Resources 
     description: Structured resources for bringing Scratch to new learners include a number of tutorials, activities, and guides that can support learning circles.
-    img: scratch-educators.jpg
+    img: /assets/images/topics/scratch-educators.jpg
     url: https://scratch.mit.edu/educators#resources
   - title: Make Code
     description: Microsoft’s interactive project library for learning about both hardware and common programming languages.
-    img: makecode.jpg
+    img: /assets/images/topics/makecode.jpg
     url: https://www.microsoft.com/en-us/makecode
 featured: true
 search_topics:
