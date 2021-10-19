@@ -30,7 +30,8 @@ links:
     img: un-climate.png
     url: https://www.un.org/en/climatechange/
 featured: true
-course_data: climate_change
+search_topics:
+- climate change
 ---
 
 ### About This Topic
