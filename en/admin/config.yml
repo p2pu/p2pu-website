@@ -26,3 +26,20 @@ collections:
       - {label: "Featured", name: "featured", widget: "boolean"}
       - {label: "Search topics", name: "search_topics", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Site data"
+    name: "data"
+    files:
+      - name: "people"
+        label: "People"
+        file: "_data/people.yml"
+        fields:
+          - label: Staff
+            name: staff
+            widget: list
+            fields: 
+            - { label: 'Name', name: 'name', widget: 'string' }
+            - { label: 'Image', name: 'image', widget: 'image' }
+            - { label: 'Role', name: 'role', widget: 'string' }
+            - { label: 'Bio', name: 'bio', widget: 'string' }
+            - { label: 'Twitter', name: 'twitter', widget: 'string', required: false}
+            - { label: 'Website', name: 'url', widget: 'string', required: false }
