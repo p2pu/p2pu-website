@@ -57,7 +57,7 @@
 			z-index: 0;
 		}
 		
-		.container {
+		.container-fluid {
 			position: relative;
 			@include media-breakpoint-down(sm) {
 	            padding-top: 1em !important;			
