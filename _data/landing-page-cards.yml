@@ -5,8 +5,8 @@
 
 cards:
   - title: Virtual Pathways from Training to Practice in Rhode Island
-    url: https://info.p2pu.org/2021/09/09/case-study-rila/
-    img: https://info.p2pu.org/wp-content/uploads/2021/09/2021-09-09-casestudy-rila.png
+    url: "https://info.p2pu.org/2021/09/09/case-study-rila/"
+    img: "https://info.p2pu.org/wp-content/uploads/2021/09/2021-09-09-casestudy-rila.png"
     cardtype: case-study
 
 - quote: "I joined a learning circle so I could be in an environment where everyone is vested in the work and progress. Also, being able to share and receive feedback under the guidance of an engaged instructor-leader was a blessing!"
@@ -26,8 +26,8 @@ cards:
     cardtype: testimonial
 
   - title: Bringing College Credit to Libraries with Peer-Led Learning Circles
-    url: https://info.p2pu.org/2021/07/21/bringing-college-credits-to-libraries-with-peer-led-learning-circles/
-    img: https://info.p2pu.org/wp-content/uploads/2021/07/blog-CU-press-release-04-300x200.png
+    url: "https://info.p2pu.org/2021/07/21/bringing-college-credits-to-libraries-with-peer-led-learning-circles/"
+    img: "https://info.p2pu.org/wp-content/uploads/2021/07/blog-CU-press-release-04-300x200.png"
     cardtype: case-study
     
   - quote: "To have such a program here in Detroit is a valuable resource for us to participate in...if it was not for Peer 2 Peer University I would probably still be working on finishing my book."
@@ -47,8 +47,8 @@ cards:
     cardtype: testimonial
 
   - title: Celebrating three years of community-based online learning with IMLS
-    url: https://info.p2pu.org/2020/07/29/celebrating-three-years-of-community-based-online-learning-with-imls/
-    img: https://info.p2pu.org/wp-content/uploads/2020/07/42203421574_e94be869ea_z.jpg
+    url: "https://info.p2pu.org/2020/07/29/celebrating-three-years-of-community-based-online-learning-with-imls/"
+    img: "https://info.p2pu.org/wp-content/uploads/2020/07/42203421574_e94be869ea_z.jpg"
     cardtype: case-study 
           
   - quote: "As an immigrant myself I seek opportunities to help families learn English much like my family was helped when we arrived here. Perhaps one day someone I helped will pay it forward and help someone else."
@@ -68,8 +68,8 @@ cards:
     cardtype: testimonial
 
   - title: Facilitating my first virtual learning circle
-    url: https://info.p2pu.org/2020/05/22/facilitating-my-first-virtual-learning-circle/
-    img: https://info.p2pu.org/wp-content/uploads/2020/05/Screen-Shot-2020-05-20-at-9.23.29-AM-1024x538.png
+    url: "https://info.p2pu.org/2020/05/22/facilitating-my-first-virtual-learning-circle/"
+    img: "https://info.p2pu.org/wp-content/uploads/2020/05/Screen-Shot-2020-05-20-at-9.23.29-AM-1024x538.png"
     cardtype: case-study 
     
   - quote: "Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."
