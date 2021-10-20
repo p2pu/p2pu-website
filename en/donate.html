@@ -3,50 +3,31 @@ layout: base
 title: Donate to P2PU
 description: P2PU is a 501(c)3 nonprofit organization funded through a mix of grants, contract work, institutional membership, and charitable giving.
 slug: donate
-bundles:
-  - donate
 extra_css:
   - /assets/css/p2pu-donate.css
 ---
 
-<script src="https://www.paypal.com/sdk/js?client-id=AQu0Ki0-F9GxVt4pizLHsKcR5bq20ZE4hhk5dINwAfrYy7_6JBq74wfQzhlUEex9Yjk_1VBwEt_16nDH"></script>
+<script src="https://www.paypal.com/sdk/js?client-id={{site.paypal_client_id}}"></script>
 <div class="container">
-	<div class="row">
-		<header class="col-12 col-lg-7 text-lg page-header">
-			<h1>Donate to P2PU</h1>		
-			<p>P2PU is a 501(c)3 nonprofit organization funded through a mix of grants, <a href="/en/jobs/">contract work</a>, <a href="/en/teams">institutional membership</a>, and charitable giving. </p>
-			<p>Your tax-deductible donation will go towards our learning circle program, ensuring that P2PU can continue to support free, social learning communities in public spaces around the world. Thank you for your support!</p>
-		</header>
-		<div class="col-12 col-lg-5 mt-lg-4">
-			<div class="container bg-light-blue">
-        <div id="donation-form-react"></div>
-        {% comment %}
-				<form class="row g-3">
-					<h3>Choose an amount to give:</h3>
-					<div class="col-6 col-md-4 col-lg-6 col-xl-4">
-						<a href="#" class="btn bg-gray text-white col-12">$25</a>
-					</div>
-					<div class="col-6 col-md-4 col-lg-6 col-xl-4">
-						<a href="#" class="btn bg-gray text-white col-12">$50</a>
-					</div>
-					<div class="col-6 col-md-4 col-lg-6 col-xl-4">
-						<a href="#" class="btn bg-gray text-white col-12">$100</a>
-					</div>
-					<div class="col-6 col-md-4 col-lg-6 col-xl-4">
-						<a href="#" class="btn bg-gray text-white col-12">$200</a>
-					</div>
-					<div class="col-12 col-md-8 col-lg-12 col-xl-8">
-						<div class="btn bg-gray text-white input-group d-flex align-items-center">
-							  <span class="input-group-donation" id="dollar">$</span>
-							  <input type="text" class="form-control dark" placeholder="other amount" aria-label="other amount" aria-describedby="dollar">
-						</div>
-					</div>
-					<div class="col-12">
-						<button class="mt-3 btn bg-gray text-white col-12" type="submit">DONATE</button>
-					</div>
-				</form>
-        {% endcomment %}
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <header class="col-12 col-lg-7 text-lg page-header">
+      <h1>Donate to P2PU</h1>		
+      <p>P2PU is a 501(c)3 nonprofit organization funded through a mix of grants, <a href="/en/jobs/">contract work</a>, <a href="/en/teams">institutional membership</a>, and charitable giving. </p>
+      <p>Your tax-deductible donation will go towards our learning circle program, ensuring that P2PU can continue to support free, social learning communities in public spaces around the world. Thank you for your support!</p>
+    </header>
+    <div class="col-12 col-lg-5 mt-lg-5">
+      <div class="container mt-lg-5">
+        <div id="donation-form-react">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="text-center mt-lg-5">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="NF5YZV9KCF37N">
+            <button type="submit" class="col btn btn-lg p2pu-btn orange donate-button">
+              <i class="fab fa-paypal fa-2x"></i> Donate using paypal
+            </button>
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
