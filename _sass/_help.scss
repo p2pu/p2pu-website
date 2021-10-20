@@ -3,71 +3,13 @@
 @import "p2pu-theme/src/scss/cards/_generic-card";
 @import "layout-elements/contact-form.scss";
 
-#about{
-  .header-wrap{
-    background-color: $p2pu-light-blue;
-    overflow: hidden;
-    .subtitle{
-      font-size: $font-size-xl;
-    }
+body#help {
+  .card img {
+    object-fit: contain;
   }
-  section{
-    >.container{
-      border-top: 12px solid $gray-snow;
-    }
+
+  .card .card-image {
+    padding-top: 1rem;
   }
-  .about-us{
-    font-size: $font-size-lg;
-    >.container{
-      border-top: 0;
-      @include media-breakpoint-up(md) {
-        padding-top: $padding-lg * 2;
-      }
-    }
-  }
-  .values{
-    h3{
-      font-size: 1.25rem;
-    }
-  }
-  .funders .funder img {
-    max-width: 200px;
-    filter: grayscale(1);
-  }
-  
+
 }
-
-
-
-/*
-.people-img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-}
-
-.partners {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  > div {
-    text-align: center;
-    margin-bottom: $padding-sm;
-  }
-}
-
-.funders {
-  padding: $padding-md;
-
-  .funder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      max-width: 200px;
-      filter: grayscale(1);
-    }
-  }
-}*/
