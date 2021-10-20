@@ -9,7 +9,7 @@ cards:
     img: "https://info.p2pu.org/wp-content/uploads/2021/09/2021-09-09-casestudy-rila.png"
     cardtype: case-study
 
-- quote: "I joined a learning circle so I could be in an environment where everyone is vested in the work and progress. Also, being able to share and receive feedback under the guidance of an engaged instructor-leader was a blessing!"
+  - quote: "I joined a learning circle so I could be in an environment where everyone is vested in the work and progress. Also, being able to share and receive feedback under the guidance of an engaged instructor-leader was a blessing!"
     img: dr-lloyd.jpg
     name: Lloyd
     role: Learning Circle Participant
