@@ -5,37 +5,37 @@
 		>div{
 			.icon{
 				position: relative;
-				&:before{
-					content: "";
-					background-color: $p2pu-blue;
-					position: absolute;
-					width: 70%;	
-					height: 70%;
-					top: 15%;
-					left: 15%;
-					border-radius: 50%;
-				}
+			//&:before{
+			//	content: "";
+			//	background-color: $p2pu-blue;
+			//	position: absolute;
+			//	width: 70%;	
+			//	height: 70%;
+			//	top: 15%;
+			//	left: 15%;
+			//	border-radius: 50%;
+			//}
 				img{
 					position: relative;
 					max-height: 100%;
 					max-width: 100%;
 				}
 			}
-			&:nth-of-type(2){
-				:before{
-					background-color: $p2pu-green;
-				}
-			}
-			&:nth-of-type(3){
-				:before{
-					background-color: $p2pu-yellow;
-				}
-			}
-			&:nth-of-type(4){
-				:before{
-					background-color: $p2pu-orange;
-				}
-			}
+		//&:nth-of-type(2){
+		//	:before{
+		//		background-color: $p2pu-green;
+		//	}
+		//}
+		//&:nth-of-type(3){
+		//	:before{
+		//		background-color: $p2pu-yellow;
+		//	}
+		//}
+		//&:nth-of-type(4){
+		//	:before{
+		//		background-color: $p2pu-orange;
+		//	}
+		//}
 		}
 	}
 	&.dot-sextet{
