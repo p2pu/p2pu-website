@@ -19,7 +19,7 @@ links:
     img: /assets/images/topics/digital-readiness.png
     url: https://www.pewresearch.org/internet/2016/09/20/digital-readiness-gaps/
 featured: true
-course_data: digital-literacy
+course_data: digital literacy
 ---
 ### About This Topic
 
