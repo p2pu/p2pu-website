@@ -21,7 +21,7 @@ collections:
         widget: list
         fields:
           - { label: "Title", name: 'title', widget: 'string' }
-          - { label: "Description", name: 'description', widget: 'string' }
+          - { label: "Description", name: 'description', widget: 'markdown' }
           - { label: "URL", name: 'url', widget: 'string' }
           - { label: "Image", name: "img", widget: "image" }
       - {label: "Featured", name: "featured", widget: "boolean"}

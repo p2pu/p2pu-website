@@ -14,7 +14,7 @@ extra_css:
 		</a>
 		<span class="eyebrow">topic:</span>
 		<h1>{{ page.title }}</h1>
-		<p class="subtitle mb-md-5">{{ page.excerpt }}</p>
+		<p class="subtitle mb-md-5">{{ page.excerpt | markdownify }}</p>
 	  </div>
 	  <div class="col-12 col-md-5 offset-md-1 col-lg-5 offset-lg-0">
 		  <img src="{{ page.img }}" />
@@ -38,7 +38,7 @@ extra_css:
 					</div>
 					<div class="card-header">
 					  <h4 class="card-title">{{ link.title }}</h4>
-					  <span>{{ link.description }}</span>
+					  <span>{{ link.description | markdownify }}</span>
 					</div>
 			    </div>
 			</div>
