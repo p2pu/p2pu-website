@@ -10,15 +10,11 @@ extra_css:
 - /assets/css/p2pu-learningcircles.css
 ---
 <section class="subheader pb-5">
-  
   <div class="container">
-
     <div class="row">
-      
       <div class="col-12 col-xl-8">
-      
         <div class="text-center dot-quad row">
-          
+
           <div class="col-12 col-md-6 col-lg-3">
             <div class="icon col-8 col-lg-12 mx-auto">
               <img src="{{ site.baseurl }}/assets/images/learning-circles/explore-lcs-facilitator.svg" />
@@ -26,7 +22,7 @@ extra_css:
             <h4>Hosted by a facilitator</h4>
             <p>(not a content expert)</p>
           </div>
-    
+
           <div class="col-12 col-md-6 col-lg-3">
             <div class="icon col-8 col-lg-12 mx-auto">
               <img src="{{ site.baseurl }}/assets/images/learning-circles/explore-lcs-peer-learning.svg" />
@@ -54,56 +50,23 @@ extra_css:
         </div>
       </div>
       
-
       <div class="col-12 col-xl-4 col-xxl-3 offset-xxl-1 mt-4">
         <div class="row">
           <div class="py-3 px-sm-3 col-12 col-md-6 col-xl-12 d-flex align-items-center">
-            <button type="button" class="col-12 btn btn-sm p2pu-btn secondary orange" data-bs-toggle="modal" data-bs-target="#faqModal">Frequently Asked Questions</button>
+            <a href="https://handbook.p2pu.org/frequently-asked-questions" class="col-12 btn btn-sm p2pu-btn secondary orange" target="_blank">Frequently Asked Questions</a>
           </div>
           <div class="py-3 px-sm-3 col-12 col-md-6 col-xl-12 d-flex align-items-start">
             <a class="col-12 btn btn-sm p2pu-btn orange" href="{{site.api_origin}}/en/studygroup/create/">Start a Learning Circle</a>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="modal fade" id="faqModal" tabindex="-1" role="dialog" aria-labelledby="faqModalTitle" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header px-4">
-          <h2 class="modal-title serif" id="faqModalTitle">Learning Circles FAQ</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body px-4">
-
-          <div class="row">
-            <div class="col-12">
-              <div class="accordion accordion-flush" id="accordionFAQ">
-                {% for item in site.data.learning_circles_faq %}
-                
-                <article class="accordion-item shadow">
-                  <header class="accordion-header" id="q-{{forloop.index}}">
-                    <h4 class="collapsed accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a-{{forloop.index}}" aria-expanded="false" aria-controls="a-{{forloop.index}}">{{ item.question }}</h4>
-                  </header>
-                  <div id="a-{{forloop.index}}" class="accordion-collapse collapse" aria-labelledby="q-{{forloop.index}}" data-bs-parent="#accordionFAQ">
-                    <div class="accordion-body">{{ item.answer }}</div>
-                  </div>
-                </article>
-
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
   
   
 <section class="search container">
-  
-
         
   {% comment %}      
   <!--TODO: for dev purposes only - kill before golive -->
