@@ -56,7 +56,7 @@ bundles:
                   {% else %}
                   <p id="team-subtitle" class='card-text text-white'>Join your neighbors to learn something together. Learning circles meet weekly for 6-8 weeks, and are free to join.</p>
                   {% endif %}
-                  <a href="#search" class="btn p2pu-btn light my-2">Browse learning circles</a>
+                  <a href="#search" class="p2pu-btn light with-outline my-2">Browse learning circles</a>
                 </div>
               </div>
             </div>
@@ -149,9 +149,9 @@ bundles:
           <h2 class="mb-3">Find a learning circle near you</h2>
           <div id="search-subtitle">
             <p class="d-flex align-items-center">For more information, check out the
-              <button type="button" class="btn p2pu-btn light with-outline ml-2" data-toggle="modal" data-target="#faqModal">
+              <a href="https://handbook.p2pu.org/frequently-asked-questions" target="_blank" class="p2pu-btn btn btn-sm gray secondary ms-2">
                 Frequently Asked Questions
-              </button>
+              </a>
             </p>
           </div>
           <div
@@ -164,44 +164,6 @@ bundles:
       </div>
     </div>
   </section>
-
-  <div class="modal fade" id="faqModal" tabindex="-1" role="dialog" aria-labelledby="faqModalTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header px-4">
-          <h3 class="modal-title" id="faqModalTitle">Learning Circles FAQ</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body px-4">
-          <div class="row">
-            <div class="col-12">
-              <div class="accordion">
-
-              {% for item in site.data.learning_circles_faq %}
-                  <div class="accordion-item">
-                    <div class="heading">
-                      <label id="section-{{forloop.index}}" class="bold large">{{ item.question }}</label>
-                      <a class="show-content"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                      <a class="hide-content"><i class="fa fa-minus" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="content" aria-labelledby="section-{{forloop.index}}">
-                    {{ item.answer }}
-                    </div>
-                  </div>
-              {% endfor %}
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn p2pu-btn dark" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
 {% include team_page_script.html team=team %}
