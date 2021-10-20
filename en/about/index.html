@@ -120,6 +120,8 @@ extra_css:
         <div class="row grid">
           
             {% for team in site.data.teams.items %}
+            {% if team.id == 3 or team.id == 41 %}
+            {% else %}
             {% assign organizers = team.facilitators | where:"role","ORGANIZER" %}
             <div class="grid-item col-md-6 col-lg-4">
                 <div class="card teams">
@@ -140,10 +142,10 @@ extra_css:
                  
                         <span>Organized by
                             {% for organizer in organizers limit:3 %}
-                                {% if organizer == organizers.last %}
-                                    {{ organizer.first_name }}
+                                {% if forloop.last %}
+                                  {{ organizer.first_name }}
                                 {% else %}
-                                    {{ organizer.first_name | append: ", " }}
+                                  {{ organizer.first_name|append:", " }}
                                 {% endif %}
                             {% endfor %}
                         </span>
@@ -154,7 +156,8 @@ extra_css:
                         <a class="btn p2pu-btn btn-sm gray col-sm-auto m-2"  href="/{{ team.page_slug }}">See Team Page</a>
                     </div>
                 </div>
-            </div>       
+            </div>
+            {% endif %}
             {% endfor %}
   
         </div>
