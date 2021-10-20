@@ -17,7 +17,7 @@ links:
     url: https://edu.gcfglobal.org/en/subjects/work/
 featured: true
 search_topics:
-  - job_skills
+  - job skills
 ---
 
 ### About This Topic
