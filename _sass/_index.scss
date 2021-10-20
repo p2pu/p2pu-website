@@ -6,6 +6,9 @@
 @import "layout-elements/slider";
 
 #home{
+  .landing h1 {
+    color: $cream;
+  }
 	h2{
 		font-family: $font-family-serif;
 	}
