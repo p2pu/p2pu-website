@@ -15,5 +15,13 @@
       height: 250px;
     }
   } 
-
+  
+  // fix in page anchor
+  [id]::before {
+    content: '';
+    display: block;
+    height: 160px;
+    margin-top: -160px;
+    visibility: hidden;
+  }
 }
