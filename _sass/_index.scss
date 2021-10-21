@@ -36,6 +36,11 @@
 				}
 			}
 		}
+
+    img {
+      clip-path: circle(50% at center);
+    }
+
 	}
 	
 	section#map-section {
