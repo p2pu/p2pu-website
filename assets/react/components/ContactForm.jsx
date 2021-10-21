@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const ContactForm = ({onSubmit, sourceUrl, organization}) => {
+const ContactForm = ({onSubmit, sourceUrl, organization, validationErrors}) => {
   const form = React.createRef();
 
   const handleSubmit = e => {
@@ -18,7 +18,14 @@ const ContactForm = ({onSubmit, sourceUrl, organization}) => {
       <input type="hidden" name="source" value={sourceUrl}/>
       <div className="col-12">
         <label htmlFor="email" className="form-label">Email Address *</label>
-        <input type="text" className="form-control" id="email" name="email" placeholder="Email Address" required />
+        <input 
+          type="text"
+          className={"form-control" + (validationErrors&&validationErrors.email?" is-invalid":"")}
+          id="email"
+          name="email"
+          placeholder="Email Address" 
+          required 
+        />
         <div className="invalid-feedback">
           Please provide a valid email address.
         </div>
