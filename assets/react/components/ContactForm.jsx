@@ -19,7 +19,7 @@ const ContactForm = ({onSubmit, sourceUrl, organization, validationErrors}) => {
       <div className="col-12">
         <label htmlFor="email" className="form-label">Email Address *</label>
         <input 
-          type="text"
+          type="email"
           className={"form-control" + (validationErrors&&validationErrors.email?" is-invalid":"")}
           id="email"
           name="email"
