@@ -9,7 +9,8 @@ let initialState = {}
 if (elem.dataset.teamId) {
   initialState["team_id"] = elem.dataset.teamId
 }
-let origin = elem.dataset.apiOrigin;
+//TODO let origin = elem.dataset.apiOrigin;
+let origin = 'https://learningcircles.p2pu.org';
 
 ReactDOM.render(
   <Search
@@ -18,6 +19,7 @@ ReactDOM.render(
     origin={origin}
     Browse={BrowseLearningCircles}
     contact={ elem.dataset.teamContact ? elem.dataset.teamContact : null }
+    defaultImageUrl="/assets/images/p2pu-ogimg-default.jpg"
   />, document.getElementById('search-lc-component')
 );
 

@@ -1,174 +1,336 @@
 ---
 title: Teams
-description: Teams are regional networks of learning circles led by a local organizer and supported by P2PU.
 layout: base
+slug: teams
+description: Teams are regional networks of learning circles led by a local organizer and supported by P2PU.
+contact: Get Started
 extra_css:
-- /assets/css/vendor/slick.css
-- /assets/css/vendor/slick-theme.css
-- /assets/css/p2pu-teams.css
+  - /assets/css/vendor/slick.css
+  - /assets/css/vendor/slick-theme.css
+  - /assets/css/p2pu-teams.css
 extra_js:
-- js/vendor/slick.min.js
-- js/vendor/smooth-scroll.min.js
-- js/teams.js
+  - js/vendor/slick.min.js
+  - js/teams.js
+bundles:
+- contact
 ---
 
-<div class="bg-light" id="top">
-  <section class="page-title mb-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <header class="pt-4 pb-3">
-            <h1 class="text-center">{{ page.title }}</h1>
-          </header>
-          <p class="centered large">
-            Teams are regional networks of learning circles led by a local organizer and supported by P2PU. You can apply to join an existing team through <a href="https://learningcircles.p2pu.org/en/">your dashboard</a>. If you’d like to launch a new team in your area, you can start by reviewing <a href="/en/organize/">our organizer materials</a>.
-          </p>
+<div class="header-wrap">
+    <header class="container page-header header-3">
+    <div class="row">
+        <div class="col-12 col-md-7 text-lg">
+        <h1>Start a Team</h1>		
+        <p>Teams are organized learning circle communities, typically affiliated with library systems and community-based organizations. While anyone can facilitate a learning circle for free, organizations that wish to build a thriving network of learning circles often benefit from additional support and tools. </p>
+        <p>Team membership is designed to provide comprehensive guidance via:</p>
+        <ul>
+          <li>Staff Professional Development</li>
+          <li>1:1 Support</li>
+          <li>Community-Powered OER Library</li>
+          <li>Software for Teams</li>
+          <li>Community of Practice</li>
+          <li>Discounted Additional Services</li>
+        </ul>
+        <p>Team membership is offered on a sliding scale between $2,000 - $10,000 per year, calculated based on your organization's annual operating budget.</p>
+        <a href="#get-started-now" class="btn btn-lg p2pu-btn orange my-3 d-flex justify-content-center d-sm-inline-block">Get Started Now</a>
         </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3">
-          <nav id="team-menu" class="nav nav-stacked">
-            <ul class="sidebar-nav">
-            {% for team in site.data.teams.items %}
-              {% if team.id == 3 %}
-              {% else %}
-                <li class="nav-item">
-                  <span class="bullet"></span>
-                  <a data-scroll href="#{{ team.page_slug }}" class="minicaps">{{ team.name }}</a>
-                </li>
-              {% endif %}
-            {% endfor %}
-            </ul>
-          </nav>
-        </div>
-
-        <div class="col-sm-9">
-          {% for team in site.data.teams.items %}
-          {% if team.id == 3 %}
-          {% else %}
-            {% assign organizers = team.facilitators | where:"role","ORGANIZER" %}
-            <div class="card mb-4 pos-relative" id="{{team.page_slug}}">
-              {% if team.image_url %}
-                <div class="card-image">
-                  <img class="card-img-top" src="{{team.image_url}}" />
-                </div>
-              {% else if team.coordinates %}
-                <div class="card-image">
-                  <img class="card-img-top" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
-                </div>
-              {% endif %}
-
-              <div class="card-body">
-                <div class="col-lg-6">
-                  <a href="/{{ team.page_slug }}">
-                    <h2 class="mb-3">{{ team.name }}</h2>
-                  </a>
-
-                  <div class="mb-3">
-                    <div class="text-xs d-flex align-items-center mb-2">
-                      <i class="material-icons pr-2">group</i>
-                      <p class="mb-0">Team members: <span class="bold">{{ team.member_count }}</span></p>
-                    </div>
-
-                    <div class="text-xs d-flex align-items-center mb-2">
-                      <i class="material-icons pr-2">list</i>
-                      <p class="mb-0">Total learning circles: <span class="bold">{{ team.studygroup_count }}</span></p>
-                    </div>
-
-                    <div class="text-xs d-flex align-items-center mb-2">
-                      <i class="material-icons pr-2">event</i>
-                      <p class="mb-0">Established: <span class="bold">{{ team.date_established }}</span></p>
-                    </div>
-
-                    {% if organizers %}
-                    <div class="text-xs d-flex d-lg-none align-items-center mb-2">
-                      <i class="material-icons pr-2">face</i>
-                      <p class="mb-0">Organizers: <span class="bold">
-                        {% for organizer in organizers %}
-                          {% if organizer == organizers.last %}
-                          {{ organizer.first_name }}
-                          {% else %}
-                          {{ organizer.first_name | append: ", " }}
-                          {% endif %}
-                        {% endfor %}
-                      </span></p>
-                    </div>
-                    {% endif %}
+      
+      <div class="col-12 col-md-5">
+        <div class="p2pu-slide-container slick-init one-column row">
+          
+          <article class="slide">
+            <div class="card-testimonial basic card row g-0 p-2 p-lg-3">
+              <div class="card-body col-12 text-lg">
+                <p>
+                  <strong>What is the most compelling thing about working with P2PU as an ongoing service at your library?</strong>
+                </p>
+                <q>For SPPL, the [facilitator] training plus ongoing practical support is unique—I am sure we aren't the only library stretching staff and materials budgets very thinly, so support at the right moments really matters for us.</q>
+              </div>
+              <div class="card-footer attribution col-12">
+                <div class="row">
+                  <div class="image col-12 col-md-4">
+                    <img class="mx-auto mx-md-0" src="/assets/images/testimonials/rebecca.jpg" alt="Rebecca">
                   </div>
-
-                  <a class="btn p2pu-btn blue btn-small" href="/{{ team.page_slug }}">Go to team page</a>
+                  <div class="text col-12 col-md-8 text-center text-md-start">
+                    <span class="name bold">Rebecca</span>
+                    <span class="organization small">Organizer, Saint Paul Public Library</span>
+                  </div>
                 </div>
               </div>
-
-              {% if organizers.size > 0 %}
-              <div class="pos-absolute profile mx-4 p-0 col-sm-5 d-none d-lg-flex align-items-center">
-                <div class="card">
-                  <div class="card-header bg-secondary">
-                    <p class="minicaps text-right mb-0 text-muted">Organizer</p>
-                  </div>
-
-
-                  <div class="card-body">
-                    <div class="slide-container">
-
-
-                    {% assign sorted_organizers = organizers | sort: 'bio' | reverse %}
-                    {% for organizer in sorted_organizers %}
-
-                      <div class="slide">
-                        <div class="d-flex align-items-center">
-                          <div class="profile-image mr-2">
-                            <div class="img-container">
-                              {% if organizer.avatar_url %}
-                              <img class="" src="{{ organizer.avatar_url }}" />
-                              {% else %}
-                              <img class="default-avatar" src="{{ site.baseurl }}/assets/images/avatars/default_avatar.svg" />
-                              {% endif %}
-                            </div>
-                          </div>
-                          <div class="profile-info">
-                            <h4 class="mt-0 mb-2">{{ organizer.first_name }}</h4>
-
-                            {% if organizer.city.size > 0%}
-                            <p class="minicaps text-left mb-1">{{ organizer.city }}</p>
-                            {% endif %}
-
-                            {% if organizer.contact_url.size > 0 %}
-                            <p class="minicaps text-left mb-1">
-                              <a href="{{ organizer.contact_url }}">Contact page</a>
-                            </p>
-                            {% endif %}
-                          </div>
-                        </div>
-
-                        {% if organizer.bio %}
-                        <p class="small mb-0 mt-3">{{ organizer.bio }}</p>
-                        {% endif %}
-
-                      </div>
-                    {% endfor %}
-
-                    </div>
-                    <div class="arrows pos-relative d-flex justify-content-center"></div>
-                  </div>
-
-                </div>
-              </div>
-              {% endif %}
-
             </div>
-          {% endif %}
-          {% endfor %}
+          </article>
+          
+          <article class="slide">
+            <div class="card-testimonial basic card row g-0 p-2 p-lg-3">
+              <div class="card-body col-12">
+                <p>
+                  <strong>How does P2PU advance your organization's strategic plan or departmental goals?</strong>
+                </p>
+                <q>[Our] goals include being future-oriented and flexible, as well as welcoming change and new ideas. P2PU helps support this with a very flexible and adaptable model [that] promotes our online databases, supports efforts to promote lifelong learning, increases program variety for adults, and increases the participation factor for patrons.</q>
+              </div>
+              <div class="card-footer attribution col-12">
+                <div class="row">
+                  <div class="image col-12 col-md-4">
+                    <img class="mx-auto mx-md-0" src="/assets/images/testimonials/nicole.jpg" alt="Nicole">
+                  </div>
+                  <div class="text col-12 col-md-8 text-center text-md-start">
+                    <span class="name bold">Nicole</span>
+                    <span class="organization small">Organizer, Stadtbibliothek Köln</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+                    
+          <article class="slide">
+            <div class="card-testimonial basic card row g-0 p-2 p-lg-3">
+              <div class="card-body col-12">
+                <p>
+                  <strong>What is the most compelling thing about working with P2PU as an ongoing service at your library?</strong>
+                </p>
+                <q>Simply being part of an international community to spread easy access to knowledge is very rewarding. P2PU brought us all together and helps to facilitate our learning with each other.</q>
+              </div>
+              <div class="card-footer attribution col-12">
+                <div class="row">
+                  <div class="image col-12 col-md-4">
+                    <img class="mx-auto mx-md-0" src="/assets/images/testimonials/sara.jpg" alt="Sara">
+                  </div>
+                  <div class="text col-12 col-md-8 text-center text-md-start">
+                    <span class="name bold">Sara</span>
+                    <span class="organization small">Organizer, Wichita Public Library</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        
+        </div>
+      </div>
+      
+      </div>
+    </header>
+</div>
+
+<section>
+    <div class="container">
+      <div class="row grid">
+        
+        <div class="grid-item col-md-6">
+          <div class="card generic plain">
+            <div class="card-image">
+              <img src="{{ site.baseurl }}/assets/images/teams/teams-prodev.png" alt="P2PU Monthly Facilitator Call" class="card-img-top">
+            </div>
+            <div class="card-header">
+              <h3 class="card-title">Staff Professional Development</h3>
+            </div>
+            <div class="card-body">
+              <p>Collaborate with the P2PU staff to deliver professional development tailored to your content and community needs:</p>
+              <ul>
+                <li>Staff training focused on effective strategies for facilitating peer learning and the learning circle model</li>
+                <li>Quarterly consultations to set and pursue your organization’s program goals</li>
+                <li>Regular P2PU-facilitated virtual learning circles based on popular topics decided by member libraries</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid-item col-md-6">
+          <div class="card generic plain">
+            <div class="card-image">
+              <img src="{{ site.baseurl }}/assets/images/teams/teams-support.png" alt="P2PU Monthly Facilitator Call" class="card-img-top">
+            </div>
+            <div class="card-header">
+              <h3 class="card-title">1:1 Support</h3>
+            </div>
+            <div class="card-body">
+              <p>Receive comprehensive guidance from the P2PU team to ensure staff feel supported and learning circles run smoothly and effectively:</p>
+              <ul>
+                <li>Dedicated P2PU staff liaison and regular support hours for facilitators</li>
+                <li>Guidance for facilitators developing learning circles in new topics</li>
+                <li>Promotion and publicity for learning circles</li>
+                <li>Community platform for sharing practices from your library with the wider P2PU network</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid-item col-md-6">
+          <div class="card generic plain">
+            <div class="card-image">
+              <img src="{{ site.baseurl }}/assets/images/teams/teams-oer.png" alt="P2PU Monthly Facilitator Call" class="card-img-top">
+            </div>
+            <div class="card-header">
+              <h3 class="card-title">Community-Powered OER Library</h3>
+            </div>
+            <div class="card-body">
+              <p>Work with the P2PU staff to develop Open Educational Resources (OER), guided by your local community’s needs and shared with a global commons of learning circle facilitators:</p>
+              <ul>
+                <li>6+ P2PU facilitation guides each year (topics nominated by members)</li>
+                <li>Curated list of ready-to-use courses that align with your team’s and patrons’ preferences (2022)</li>
+                <li>Early access to new courses designed for learning circles</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid-item col-md-6">
+          <div class="card generic plain">
+            <div class="card-image">
+              <img src="{{ site.baseurl }}/assets/images/teams/teams-tools.gif" alt="P2PU Monthly Facilitator Call" class="card-img-top">
+            </div>
+            <div class="card-header">
+              <h3 class="card-title">Software for Teams</h3>
+            </div>
+            <div class="card-body">
+              <p>Access a suite of tools to help you promote, manage, and evaluate your learning circle program:</p>
+              <ul>
+                <li>Dedicated P2PU team page with active/archived learning circles, facilitator profiles, and info about your organization</li>
+                <li>Customizable participant surveys (2022)</li>
+                <li>Aggregated signup and exit survey data</li>
+                <li>Weekly insights on program activity</li>
+                <li>Collaborate with P2PU staff to shape the features and priorities for the Teams platform</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid-item col-md-6">
+          <div class="card generic plain">
+            <div class="card-image">
+              <img src="{{ site.baseurl }}/assets/images/teams/teams-cop-original.gif" alt="P2PU Monthly Facilitator Call" class="card-img-top">
+            </div>
+            <div class="card-header">
+              <h3 class="card-title">Community of Practice</h3>
+            </div>
+            <div class="card-body">
+              <p>Join a global community of educators committed to P2PU’s innovative peer learning practices:</p>
+              <ul>
+                <li>Two free tickets to our yearly community Gatherings (in-person, pandemic willing!)</li>
+                <li>Co-host a monthly public community call to share your program with the global learning circle community</li>
+                <li>Collaborate and connect with other P2PU Teams on projects of mutual interest, grant opportunities, and governance of the membership program.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid-item col-md-6">
+          <div class="card generic plain">
+            <div class="card-image">
+              <img src="{{ site.baseurl }}/assets/images/teams/teams-services.png" alt="P2PU Monthly Facilitator Call" class="card-img-top">
+            </div>
+            <div class="card-header">
+              <h3 class="card-title">Discounted Additional Services</h3>
+            </div>
+            <div class="card-body">
+              <p>Teams receive a 20% discount on all additional services, including course creation, workshops, and software development. <a href="{{site.baseurl}}/en/services">Read more about our services.</a></p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+</section>
+
+<section class="bg-lighter">
+  <div class="container">
+    
+    <h3 class="pb-4">We asked our library partners what values and practices they feel they are endorsing when they participate in P2PU:</h3>
+    
+    <div class="row">
+      <div class="col-12">
+        <div class="p2pu-slide-container slick-init three-column row">
+          
+          <article class="slide">
+            <div class="card-testimonial basic card p2pu-blue row g-0 p-2 p-lg-3">
+              <div class="card-body col-12 blockquote">
+                
+                <q>Endorsing freedom of information, fostering community support/engagement, and valuing education and curiosity.</q>
+                <footer>– Marsha, San Jose</footer>                
+               
+              </div>
+            </div>
+          </article>
+          
+          <article class="slide">
+            <div class="card-testimonial basic card p2pu-blue row g-0 p-2 p-lg-3">
+              <div class="card-body col-12 blockquote">
+                
+                <q>Noncommercial, collaborative, interest-based social learning that is rooted in social justice and equity.</q>
+                <footer>- Dan, Pittsburgh</footer>                
+               
+              </div>
+            </div>
+          </article>
+          
+          <article class="slide">
+            <div class="card-testimonial basic card p2pu-blue row g-0 p-2 p-lg-3">
+              <div class="card-body col-12 blockquote">
+                
+                <q>Open source content, access to education through an alternative learning format, and building community over the course of each learning circle.</q>
+                <footer>- Wendy, Kansas City</footer>                
+               
+              </div>
+            </div>
+          </article>
+          
+          <article class="slide">
+            <div class="card-testimonial basic card p2pu-blue row g-0 p-2 p-lg-3">
+              <div class="card-body col-12 blockquote">
+                
+                <q>Open access and high quality learning; better persistence with online and distance learning; inclusion.</q>
+                <footer>- Sherry, Providence</footer>                
+               
+              </div>
+            </div>
+          </article>
+          
+          <article class="slide">
+            <div class="card-testimonial basic card p2pu-blue row g-0 p-2 p-lg-3">
+              <div class="card-body col-12 blockquote">
+                
+                <q>Community building, continuing adult education, community dialogue, free programming for underfunded library branches.</q>
+                <footer>- Randall, Los Angeles</footer>                
+               
+              </div>
+            </div>
+          </article>
+
+          <article class="slide">
+            <div class="card-testimonial basic card p2pu-blue row g-0 p-2 p-lg-3">
+              <div class="card-body col-12 blockquote">
+                
+                <q>Learning opportunities are for everyone, and making free online learning accessible makes it more equitable for the communities that we serve.</q>
+                <footer>- Gwendolyn, Spokane</footer>                
+               
+              </div>
+            </div>
+          </article>
+          
         </div>
       </div>
     </div>
-  </section>
-</div>
-<a href="#top" id="scroll-to-top">
-  <i class="material-icons">keyboard_arrow_up</i>
-</a>
+    
+  </div>
+</section>
+    
+<section class="bg-light">
+  <div class="container py-5 text-center mb-5">   
+    <a href="{{site.baseurl}}/assets/documents/P2PUTeams.pdf" class="btn p2pu-btn orange">DOWNLOAD THIS PAGE AS SLIDES</a>
+  </div>
+</section>
+
+
+<section class="contact">
+  <div class="container">
+    <div class="contact-form shadow col-12 col-lg-10 offset-lg-1 py-md-5">
+      <div class="form-wrap col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+        <h2 id="get-started-now">{{ page.contact }}</h2>
+        <p>Fill out this form or email us directly at <a target="_blank" href="mailto:thepeople@p2pu.org">thepeople@p2pu.org</a></p>
+
+        <div id="contact-form" data-api-origin="{{site.api_origin}}" data-source-url="{{page.url}}" data-organization="true">
+          {% include contact_form.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 

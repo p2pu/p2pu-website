@@ -1,0 +1,22 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+
+section.contact{
+	background-color: $p2pu-light-blue;
+	@include media-breakpoint-up(md) {
+		background-color: transparent;
+	}
+	.container{
+		.contact-form{
+			background-color: transparent;
+			@include media-breakpoint-down(md) {
+				box-shadow: none !important;
+			}
+			@include media-breakpoint-up(md) {
+				background-color: $p2pu-light-blue;
+			}
+			input, textarea{
+				border: 1px solid transparentize($p2pu-blue, 0.5);; 
+			}
+		}
+	}
+}

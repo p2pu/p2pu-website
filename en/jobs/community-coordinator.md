@@ -11,7 +11,7 @@ text: |
 
     ## Primary Responsibilities
     - Manage asynchronous support channels (forums, email, social media) to answer questions and orient new community members (approx. 5–10 inquiries/week)
-    - Contribute to ongoing maintenance of P2PU’s [user-facing documentation](https://handbook.p2pu.org/) and [community-curated course library](https://www.p2pu.org/en/courses/)
+    - Contribute to ongoing maintenance of P2PU’s [user-facing documentation](https://docs.p2pu.org/) and [community-curated course library](https://www.p2pu.org/en/courses/)
     - Collaborate with Production Lead to document community stories and insights across public news channels (newsletters, blog posts, social media)
     - Collaborate with team to coordinate and host regular community events (monthly calls, yearly gatherings)
     - Run at least 1 learning circle per year to gain experience with the model, test P2PU’s software tools, and explore new learning materials

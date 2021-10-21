@@ -1,0 +1,64 @@
+---
+layout: base
+bundles:
+  - topic-guide
+extra_css:
+  - /assets/css/p2pu-topics.css
+---
+<div class="header-wrap">
+  <header class="container page-header">
+	<div class="row">
+	  <div class="col-12 col-md-6 col-lg-7 my-4 my-lg-5">
+		<a href="{{ site.baseurl }}/en/learning-resources" class="btn p2pu-btn btn secondary gray mt-md-4">
+			<span>Back to Learning Resources</span>
+		</a>
+		<span class="eyebrow">topic:</span>
+		<h1>{{ page.title }}</h1>
+		<p class="subtitle mb-md-5">{{ page.excerpt | markdownify }}</p>
+	  </div>
+	  <div class="col-12 col-md-5 offset-md-1 col-lg-5 offset-lg-0">
+		  <img src="{{ page.img }}" />
+	  </div>
+	</div>
+  </header>
+</div>
+
+<section>
+	<div class="container">
+		<article class="col-lg-11 col-xl-10">{{ content }}</article>
+
+		<p class="text-xl pt-4 fw-bold">Additional Reading</p>
+		<div class="row grid">
+			{% for link in page.links %}
+			<div class="grid-item col-md-6 col-lg-4">
+			    <div class="card generic cover-link">
+				    <a href="{{ link.url }}" target="_blank"></a>
+					<div class="card-image">
+					  <img src="{{ site.baseurl }}{{ link.img }}" alt="{{ link.title }}" class="card-img-top">
+					</div>
+					<div class="card-header">
+					  <h4 class="card-title">{{ link.title }}</h4>
+					  <span>{{ link.description | markdownify }}</span>
+					</div>
+			    </div>
+			</div>
+			{% endfor %}
+				
+		</div>
+	</div>
+</section>
+
+<section class="composition">
+	<div class="container">
+		<h2>Learning Resources</h2>
+		<div class="row grid">
+      <div id="topic-courses" data-api-origin={{site.api_origin}}></div>
+    </div>
+  </div>
+</section>
+
+<script id="topic-course-data" type="application/json">
+{ 
+  "topics": {{ page.search_topics | jsonify }}
+}
+</script>

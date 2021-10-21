@@ -1,0 +1,53 @@
+{% capture next_url %}{{site.url}}/en/contact-success/{% endcapture %}
+
+
+<form class="row g-3 pt-3 needs-validation" action="{{site.api_origin}}/api/contact/?next={{next_url | url_encode}}" method="POST">
+  <input type="hidden" name="source" value="{{page.url}}"/>
+
+  <div class="col-12">
+    <label for="email" class="form-label">Email Address *</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+    <div class="invalid-feedback">
+      Please provide a valid email address.
+    </div>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-12">
+    <label for="name" class="form-label">Name *</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+    <div class="invalid-feedback">
+      Please provide your name.
+    </div>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  {% if page.slug == "services" %}
+  <div class="col-12">
+    <label for="organization" class="form-label">Organization *</label>
+    <input type="text" class="form-control" id="organization" name="organization" placeholder="Your Organization" required>
+    <div class="invalid-feedback">
+      Please provide your organization.
+    </div>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  {% endif %}
+  <div class="col-12">
+    <label for="message" class="form-label">How can we help you? *</label>
+    <textarea type="textarea" class="form-control" id="message" name="content" placeholder="Message" style="height: 10rem;" required></textarea>
+    <div class="invalid-feedback">
+      Please include a message.
+    </div>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-12 text-center mt-4">
+    <button class="btn p2pu-btn blue" type="submit">Submit form</button>
+  </div>
+</form>
+

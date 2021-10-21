@@ -1,0 +1,75 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+@import "card-base";
+
+.card-testimonial{
+	&:not(.basic){
+		border-top-width: 10px;
+	}
+	.quote, .blockquote {
+		position: relative;
+		font-size: $font-size-base;
+		q{
+			&:before, &:after{
+				font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+			}
+		}
+		footer{
+			padding-top: $padding-sm;
+		}
+	}
+	.attribution {
+		.image {
+			img {
+				border-radius: 50%;
+				max-height: 100px;
+				max-width: 100px;
+				height: auto;
+				width: 100%;
+			}
+		}
+		span{
+			display: block;
+		}
+	}
+}
+
+.slick-slide{
+	.card-testimonial{
+		margin-top: 0;
+		margin-bottom: 0;
+		margin: $padding-sm;
+		.card-body{
+			padding-top: $padding-md;
+		}
+	}
+}	
+
+/*
+.card {
+	border-radius: 0;
+	.quote{
+		q {
+			quotes: "“" "”" "‘" "’";
+			&:before {
+				content: open-quote;
+				font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+				font-size: $display3-size;
+				line-height: 40px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				transform: translateX(-50%);
+			}
+			&:after {
+				content: close-quote;
+				font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+				font-size: $display3-size;
+				height: 35px;
+				position: absolute;
+				transform: translateY(-50%);
+			}
+		}
+			
+			
+	}
+} */

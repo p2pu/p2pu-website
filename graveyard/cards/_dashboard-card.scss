@@ -1,0 +1,6 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+@import "card-base";
+
+.card.dashboard{
+	border-top: 10px solid $p2pu-green;
+}

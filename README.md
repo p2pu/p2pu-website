@@ -1,6 +1,6 @@
 # P2PU Website
 
-This is the code for the home of P2PU, you can see it in action at [www.p2pu.org](https://www.p2pu.org/en/). The master branch is deployed to a persistent staging environment at [http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/](http://p2pu-staging.s3-website-us-east-1.amazonaws.com/en/).
+This is the code for the home of P2PU, you can see it in action at [www.p2pu.org](https://www.p2pu.org/en/). The master branch is deployed to a persistent staging environment at [https://www-staging.p2pu.org/en/](https://www-staging.p2pu.org/en/).
 
 ## Updating content
 
@@ -27,6 +27,8 @@ The number of facilitator profiles available in the rotation should be updated i
 All development should happen on a branch forked from master.
 
 For development on your local workstation, you need [Docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/)
+
+Be sure to check out all git submodules
 
 ### Building the site
 

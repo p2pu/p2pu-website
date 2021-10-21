@@ -1,0 +1,154 @@
+@import 'bootstrap/scss/mixins/_breakpoints';
+@import "card-base";
+
+.card.dashboard.horizontal{
+	&:first-of-type{
+		margin-top: 0;
+	}
+	&.p2pu-orange, &.learning-circles{
+		border-top: 10px solid $p2pu-orange;
+		.status-tag {
+			background: $p2pu-orange;
+		}
+	}
+	&.p2pu-blue, &.courses{
+		border-top: 10px solid $p2pu-blue;
+		.status-tag {
+			background: $p2pu-blue;
+		}
+	}
+	&.p2pu-green, &.team{
+		border-top: 10px solid $p2pu-green;
+		.status-tag {
+			background: $p2pu-green;
+		}
+	}
+	&.p2pu-yellow, &.events{
+		border-top: 10px solid $p2pu-yellow;
+		.status-tag {
+			background: $p2pu-yellow;
+		}
+	}
+	table{
+		font-size: $font-size-base;
+		margin-top: 0;
+		vertical-align: middle;
+		@include media-breakpoint-up(md) {
+			margin-top: $padding-md;
+		}
+		thead{
+			border-bottom: 1px solid;
+			tr{
+				th{
+					font-size: $font-size-sm;
+					@include media-breakpoint-up(lg) {
+						font-size: $font-size-base;
+					}
+					&:first-of-type{
+						padding-left: 0;
+					}
+				}
+			}
+		}
+		tbody{
+			tr{
+				border-bottom: 1px solid;
+				padding: $padding-sm 0;
+				@include media-breakpoint-up(md) {
+					padding: 0;
+					border-bottom: none;
+					>*:first-of-type{
+						padding-left: 0;
+					}
+					>*:last-of-type{
+						padding-right: 0;
+					}
+				}
+				td{
+					font-size: $font-size-sm;
+					@include media-breakpoint-up(xl) {
+						font-size: $font-size-base;
+						
+					}
+					.material-icons{
+						display: none;
+					}
+					&.manage{
+						@include media-breakpoint-up(md) {
+							width: 0;
+						}
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.card.dashboard.horizontal{
+		padding-bottom: $padding-sm;
+		>.row{
+			>* {
+				padding: 10px 0;
+				&.card-body{
+					padding-bottom: 0;
+				}
+			}
+			.card-header{
+				.card-title{
+					margin-bottom: 0;
+				}
+			}
+			.card-footer{
+				padding: 0;
+				padding-bottom:$padding-sm;
+				margin-top:$padding-sm;
+				padding-top:$padding-sm * 2;
+				border-top: 1px solid;
+				.btn {
+					margin-right: 0;
+					margin-top: 0;
+				}
+			}
+		}
+		table{
+			width:100%;
+			margin-bottom: 0;
+			thead{
+				display: none;
+			}
+			tbody{
+				tr{
+					display:block;
+					&:last-of-type{
+						margin-bottom: 0;
+						padding-bottom: 0;
+						border-bottom: none;
+					}
+					td{
+						display:block;
+						width:100%;
+						padding-left: 0;
+						padding-right: 0;
+						&.name{
+							font-weight: $font-weight-bold;
+							padding-bottom: $padding-xs;
+							font-size: $font-size-sm;
+						}
+						&:not(.name){
+							font-size: $font-size-xsm;
+						}
+						.material-icons{
+							vertical-align: middle;
+							display: inline-block;
+							margin-right: $padding-sm;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+}

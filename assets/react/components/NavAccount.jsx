@@ -1,62 +1,75 @@
 import React, { Component } from 'react';
-import ApiHelper from '../helpers/ApiHelper';
-import  { API_BASE_URL, LOGIN_REDIRECT_URL } from '../constants';
+import UserLogin from './UserLogin';
+import UserDropdown from './UserDropdown';
+
 
 export default class NavAccount extends Component {
   constructor(props) {
     super(props)
     this.state = {}
-    this.getUserData = () => this._getUserData();
   }
 
   componentDidMount() {
     this.getUserData();
   }
 
-  _getUserData() {
-    const api = new ApiHelper('whoami');
-    const onSuccess = (data) => {
-      if (data.user && data.user !== 'anonymous') {
-        this.setState({ user: data.user, links: data.links })
+  getUserData = () => {
+    const url = `${this.props.apiOrigin}/en/accounts/fe/whoami/`
+    fetch(url, {
+      method: 'GET',
+      mode: 'cors',
+      credentials: 'include',
+    }).then(response => {
+      return response.json();
+    }).then(jsonBody => {
+      console.log(jsonBody);
+      if (jsonBody.user && jsonBody.user !== 'anonymous') {
+        this.setState({...jsonBody})
       }
-    }
+    });
+  }
 
-    api.fetchResource({ callback: onSuccess })
+  onUserLogin = (username, password) => {
+    const loginUrl = `${this.props.apiOrigin}/en/accounts/fe/login/`;
+    // POST username + password to login API, if successful, call whoami
+    fetch(loginUrl, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      credentials: 'include', // or 'same-origin'
+      body: JSON.stringify({
+        email: username,
+        password
+      })
+    }).then(response => {
+      return response.json();
+    }).then(jsonBody => {
+      if (jsonBody.errors){
+        this.setState({errors: jsonBody.errors});
+      } else {
+        // GET user data if login is successful
+        this.setState({errors: {} });
+        this.getUserData();
+      }
+    });
   }
 
   render() {
     if (this.state.user) {
-      return(
-        <div className="dropdown">
-          <div className="dropdown-toggle" id="account-menu-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            <button className="nav-item">
-              <i className="fa fa-user" aria-hidden="true"></i>
-              <span className="uppercase hidden-xs">{this.state.user}</span>
-            </button>
-          </div>
-          <ul className="dropdown-menu dropdown-menu-right" aria-labelledby="account-menu-dropdown">
-            {
-              this.state.links.map((link, index) => {
-                return (
-                  <li key={index}>
-                    <a href={`${API_BASE_URL}${link.url}`}>
-                      <span className="bullet" />
-                      <span className="text">{link.text}</span>
-                    </a>
-                  </li>
-                )
-              })
-            }
-          </ul>
+      return (
+        <div className="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
+          {!this.state.team && <a href="/en/teams/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</a>}
+          <UserDropdown user={this.state.user} links={this.state.links} apiOrigin={this.props.apiOrigin} />
         </div>
-      )
+      );
     } else {
       return (
-        <div>
-          <a className="nav-item" href={LOGIN_REDIRECT_URL}>
-            <i className="fa fa-user" aria-hidden="true"></i>
-            <span className="uppercase hidden-xs">Log in</span>
-          </a>
+        <div className="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
+          <a href="/en/teams/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</a>
+          <a href={`${this.props.apiOrigin}/en/accounts/register/`} className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn orange">Create an Account</a>
+          <a href={`${this.props.apiOrigin}/en/accounts/login/`} className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn gray">Log in</a>
         </div>
       )
     }

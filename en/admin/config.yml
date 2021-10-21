@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: p2pu/p2pu-website
+  branch: master
+media_folder: assets/images
+public_folder: /assets/images
+collections:
+  - name: "topics" # Used in routes, e.g., /admin/collections/blog
+    label: "Topics" # Used in the UI
+    folder: "_topics" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: /assets/images/topics
+    public_folder: /assets/images/topics
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "img", widget: "image"}
+      - {label: "Excerpt", name: "excerpt", widget: "markdown", required: false}
+      - label: "Links"
+        name: "links"
+        widget: list
+        fields:
+          - { label: "Title", name: 'title', widget: 'string' }
+          - { label: "Description", name: 'description', widget: 'markdown' }
+          - { label: "URL", name: 'url', widget: 'string' }
+          - { label: "Image", name: "img", widget: "image" }
+      - {label: "Featured", name: "featured", widget: "boolean"}
+      - {label: "Search topics", name: "search_topics", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Site data"
+    name: "data"
+    files:
+      - name: "people"
+        label: "People"
+        file: "_data/people.yml"
+        fields:
+          - label: Staff
+            name: staff
+            widget: list
+            fields: 
+            - { label: 'Name', name: 'name', widget: 'string' }
+            - { label: 'Image', name: 'image', widget: 'image' }
+            - { label: 'Role', name: 'role', widget: 'string' }
+            - { label: 'Bio', name: 'bio', widget: 'string' }
+            - { label: 'Twitter', name: 'twitter', widget: 'string', required: false}
+            - { label: 'Website', name: 'url', widget: 'string', required: false }

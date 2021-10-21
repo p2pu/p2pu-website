@@ -1,7 +1,7 @@
 _site
 .sass-cache
 .idea/
-node_modules/
+node_modules/*
 .DS_Store
 # Development configuration
 _config-dev.yml

@@ -1,12 +1,18 @@
 # Site settings
+
 title: P2PU
 email: admin@p2pu.org
 description: "Grassroots community supporting equitable, empowering peer learning in public spaces worldwide. Learning for the people, by the people!"
-baseurl:
+baseurl: 
 url: "https://www.p2pu.org"
 languages: ['en']
 default_language: 'en'
 default_image_path: /assets/images/p2pu-ogimg-default.jpg
+
+mapbox_access_token: pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ
+
+# URL of API to use for interactive components
+api_origin: 'https://learningcircles.p2pu.org'
 
 # Build settings
 markdown: CommonMark
@@ -14,6 +20,10 @@ permalink: pretty
 
 collections:
   teams:
+    output: true
+  topics:
+    output: true
+  jobs:
     output: true
 defaults:
   -
@@ -23,6 +33,20 @@ defaults:
     values:
       layout: "team"
       permalink: "/:title/"
+  -
+    scope:
+      path: ""
+      type: "topics"
+    values:
+      layout: "topic_detail"
+      permalink: "/en/topic/:title/"
+  -
+    scope:
+      path: ""
+      type: "jobs"
+    values:
+      layout: "page"
+      permalink: "/en/jobs/:title/"
 
 #SASS settings
 sass:
@@ -32,9 +56,6 @@ sass:
   style: :compressed
 
 env: prod
-
-mapbox_access_token: pk.eyJ1Ijoic2hhcm9uLW5vbWFkaWMtbGFicyIsImEiOiJjanJtY2xuc2MwaG95NDNtbmUwa3o5bjRpIn0.fZpeaYNgU3Nh5NAcNLW5BQ
-default_base_api_endpoint: 'https://learningcircles.p2pu.org'
 
 exclude:
   - Guardfile
@@ -48,6 +69,9 @@ exclude:
   - test
   - terraform.tf
   - webpack.config.js
+  - p2pu-theme
+  - p2pu-components
+  - assets/react/
 
 prose:
   media: assets/images

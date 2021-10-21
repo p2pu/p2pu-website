@@ -1,0 +1,86 @@
+---
+layout: base
+title: Help
+slug: help
+header: page-header-default
+description: We’re happy to help with issues, connect you with others, or talk about new projects! 
+contact: Contact P2PU
+extra_css:
+- /assets/css/p2pu-help.css
+bundles:
+- contact
+---
+<section>
+	<div class="container pt-0">
+		<div class="row grid">
+			
+			<div class="grid-item col-md-6 col-lg-3">
+			  <div class="card generic cover-link">
+				  <a href="https://community.p2pu.org/" target="_blank"></a>
+				<div class="card-image">
+				  <img src="{{ site.baseurl }}/assets/images/help/help-forum.png" alt="P2PU Forum" class="card-img-top">
+				</div>
+				<div class="card-header">
+				  <h4 class="card-title">Forum</h4>
+				  <span>Ask for help or get ideas from the global community</span>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="grid-item col-md-6 col-lg-3">
+				<div class="card generic cover-link">
+					<a href="https://docs.p2pu.org/" target="_blank"></a>
+					<div class="card-image">
+					  <img src="{{ site.baseurl }}/assets/images/help/help-howto.png" alt="P2PU Knowledge Base" class="card-img-top">
+					</div>
+					<div class="card-header">
+					  <h4 class="card-title">Knowledge Base</h4>
+					  <span>Our home base for learning circle resources, tips, and FAQs</span>
+					</div>
+				</div>
+			</div>
+				
+			<div class="grid-item col-md-6 col-lg-3">
+				<div class="card generic cover-link">
+					<a href="https://community.p2pu.org/c/community-events/57" target="_blank"></a>
+					<div class="card-image">
+					  <img src="{{ site.baseurl }}/assets/images/help/help-community-calls.png" alt="P2PU Community calls" class="card-img-top">
+					</div>
+					<div class="card-header">
+					  <h4 class="card-title">Community Calls</h4>
+					  <span>Monthly conversations with P2PU staff and experienced facilitators</span>
+					</div>
+				</div>
+			</div>
+				
+			<div class="grid-item col-md-6 col-lg-3">
+				<div class="card generic cover-link">
+          <a href="{{ site.baseurl}}/en/services/"></a>
+					<div class="card-image">
+						<img src="{{ site.baseurl }}/assets/images/help/help-hire-us.png" alt="P2PU Services" class="card-img-top">
+					</div>
+					<div class="card-header">
+						<h4 class="card-title">Hire Us</h4>
+						<span>Have a specific collaboration or program in mind?</span>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <div class="contact-form shadow col-12 col-lg-10 offset-lg-1 py-md-5">
+      <div class="form-wrap col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+        <h2>{{ page.contact }}</h2>
+        <p>Fill out this form or email us directly at <a target="_blank" href="mailto:thepeople@p2pu.org">thepeople@p2pu.org</a></p>
+
+        <div id="contact-form" data-api-origin="{{site.api_origin}}" data-source-url="{{page.url}}">
+          {% include contact_form.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
