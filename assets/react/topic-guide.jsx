@@ -38,7 +38,7 @@ const TopicCourses = (props) => {
   const moreLink = topics.map(t=>`topics=${t}`).join('&');
   return <>
     <CourseList {...props} courses={courses} />
-    <a href={`/en/learning-resources/?${moreLink}`}>Search for more courses on this topic</a>
+    <a href={`/en/learning-resources/?${moreLink}`}>See more resources on this topic</a>
   </>
 }
 
