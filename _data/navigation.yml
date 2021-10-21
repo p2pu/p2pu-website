@@ -2,7 +2,7 @@ top_level:
   - text: Explore Learning Circles
     url: /en/learning-circles/
   - text: Knowledge Base
-    url: https://handbook.p2pu.org/
+    url: https://docs.p2pu.org/
   - text: Community
     url:
     submenu:
