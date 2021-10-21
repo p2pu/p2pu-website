@@ -24,7 +24,7 @@ export default class NavAccount extends Component {
     }).then(jsonBody => {
       console.log(jsonBody);
       if (jsonBody.user && jsonBody.user !== 'anonymous') {
-        this.setState({ user: jsonBody.user, links: jsonBody.links })
+        this.setState({...jsonBody})
       }
     });
   }
@@ -60,7 +60,7 @@ export default class NavAccount extends Component {
     if (this.state.user) {
       return (
         <div className="my-2 my-md-0 collapse navbar-collapse navbarNavDropdown justify-content-end">
-          <a href="/en/teams/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</a>
+          {!this.state.team && <a href="/en/teams/" className="d-flex my-1 my-md-0 me-md-2 me-lg-3 btn btn-sm secondary p2pu-btn blue">Start a Team</a>}
           <UserDropdown user={this.state.user} links={this.state.links} apiOrigin={this.props.apiOrigin} />
         </div>
       );
