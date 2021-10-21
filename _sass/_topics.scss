@@ -52,7 +52,7 @@
 					@include media-breakpoint-up(md) {
 						height: auto;
 						img{
-							border-radius: 100%;
+              clip-path: circle();
 							transform: translate(10%, -5%);
 						}
 					}
