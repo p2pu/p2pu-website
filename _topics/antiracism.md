@@ -7,7 +7,7 @@ links:
     description: A library of 2-hour, conversation-based lessons all taught from an
       intersectional feminist perspective. Many of the lessons can be easily
       adapted to learning circles.
-    img: /assets/images/topics/severydaysocialjustice.jpg
+    img: /assets/images/topics/everydaysocialjustice.jpg
     url: https://www.everydaysocialjustice.com/home
   - title: Antiracist Allyship Starter Pack
     description: Extensive list of resources (articles, books, PDFs, podcasts,
@@ -71,7 +71,6 @@ search_topics:
 ### Practices:
 
 * Review the Managing Conversations section of P2PU’s knowledge base for advice on managing difficult discussions in learning circles. We often recommend three tactical tips from [this article and TED Talk by Adar Cohen](https://ideas.ted.com/3-steps-to-having-difficult-but-necessary-conversations/): 
-
   * Move toward—not away from—conflict
   * Act as if you don’t know anything about the situation (even if you do)
   * Keep quiet, especially at the beginning
