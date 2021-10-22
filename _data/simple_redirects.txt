@@ -15,3 +15,4 @@ course/list: https://learningcircles.p2pu.org/en/courses/
 sosi: https://courses.p2pu.org/sosi
 virtual-handbook: https://docs.google.com/document/d/1l5Y96YTPbXay1iDgKiFoD-uA2AixvJNt3a380L0yOWc/edit
 course-creation-guide: https://docs.google.com/document/d/116fJM3GS7XDzilUOL_ynMZ0yTncUD6aVUbcQKsTra6U/edit
+en/courses: /en/learning-resources/
