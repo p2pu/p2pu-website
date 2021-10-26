@@ -1,8 +1,9 @@
 <script type="text/javascript">
 
 var data = {% include map_data.json %};
-var accessToken = 'pk.eyJ1IjoiY29kZXJvZGVvIiwiYSI6ImNrdGM5M3N5eDIzcGsyb211anVhMGV2bXcifQ.25mHUrP-d-GnMFk22B65IQ';
-var style = 'mapbox://styles/coderodeo/ckti45pap5uxr17p37qyp8j4y';
+// TODO read this from config
+var accessToken = 'pk.eyJ1IjoicDJwdSIsImEiOiJjanNhOWNkamswMTI0NDlsbWNodW1uaXUxIn0.q7nOpNgcE-at0WBvX_7rFw'
+var style = 'mapbox://styles/p2pu/ckv6j7ep97nsv14p8ucuuf4hh';
 
 mapboxgl.accessToken = accessToken;
 var map = new mapboxgl.Map({
