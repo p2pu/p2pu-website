@@ -40,7 +40,7 @@ describe('on the learning circles page', function () {
 
   it('should have the correct page title', async function () {
     let title = await page.title();
-    expect(title).to.eql('Learning Circles');
+    expect(title).to.eql('Explore Learning Circles');
   });
 
 
