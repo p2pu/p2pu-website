@@ -6,7 +6,7 @@ describe('when opening the courses page', function () {
 
   before (async function () {
     page = await browser.newPage();
-    let pageUrl = `${TEST_SERVER_URL}/en/courses/`;
+    let pageUrl = `${TEST_SERVER_URL}/en/learning-resources/`;
     await page.setRequestInterception(true);
     let apiUrl = 'https://learningcircles.p2pu.org/api/courses';
     let apiData = fs.readFileSync('./test/fixtures/courses.json');
