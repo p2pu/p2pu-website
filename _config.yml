@@ -72,6 +72,7 @@ exclude:
   - p2pu-theme
   - p2pu-components
   - assets/react/
+  - archived/
 
 prose:
   media: assets/images
