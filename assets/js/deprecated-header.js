@@ -1,3 +1,5 @@
+// NOTE: don't delete this file, it's being used by other sites like courses.p2pu.org
+
 function deprecatedHeader(){
   return `
     <style>
