@@ -61,7 +61,7 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-md-12">
-          <h1 class="display-4 fw-bold mb-3 text-center">Welcome to Peer 2 Peer University,<br/>the home of learning circles</h1>
+          <h1 class="display-4 pt-5 pt-sm-0 fw-bold mb-3 text-center">Welcome to Peer 2 Peer University,<br/>the home of learning circles</h1>
 				</div>
 			</div>
 		</div>
@@ -197,7 +197,7 @@
 				<div class="col-12 mt-5 mb-5 mb-md-0">
 					<div class="p2pu-slide-container slick-init">
 							
-						{% for card in site.data.landing-page-cards.cards %}						
+						{% for card in site.data.landing_page_cards.cards %}						
 						<article class="slide ">
 							{% if card.cardtype == 'testimonial'  %}	
 							<div class="card-testimonial card row g-0 p-3 {{ card.type }}">

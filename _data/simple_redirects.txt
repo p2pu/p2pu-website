@@ -1,8 +1,11 @@
 index.html: /en/
+en/work-with-us/index.html: /en/services/
 en/courses/index.html: /en/learning-resources/
+en/facilitate/index.html: https://docs.p2pu.org/
 courses/index.html: /en/courses/
 en/connect/index.html: /en/contact/
 en/community/index.html: https://community.p2pu.org/
+en/organize/index.html: /en/teams/
 en/facilitate/background/index.html: /en/handbook/background/
 en/facilitate/starting/index.html: /en/handbook/starting/
 en/facilitate/running/index.html: /en/handbook/running/

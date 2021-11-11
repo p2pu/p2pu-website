@@ -6,7 +6,7 @@ describe('when opening the courses page', function () {
 
   before (async function () {
     page = await browser.newPage();
-    let pageUrl = `${TEST_SERVER_URL}/en/courses/`;
+    let pageUrl = `${TEST_SERVER_URL}/en/learning-resources/`;
     await page.setRequestInterception(true);
     let apiUrl = 'https://learningcircles.p2pu.org/api/courses';
     let apiData = fs.readFileSync('./test/fixtures/courses.json');
@@ -37,7 +37,7 @@ describe('when opening the courses page', function () {
 
   it('should have the correct page title', async function () {
     let title = await page.title();
-    expect(title).to.eql('Courses');
+    expect(title).to.eql('Learning Resources');
   });
 
 
@@ -47,7 +47,7 @@ describe('when opening the courses page', function () {
   });
 
   it('there should be 10 courses in the search result', async function () {
-    let courses = await page.$$('.search-results .result-item');
+    let courses = await page.$$('.search-results  > .card');
     expect(courses.length).to.equal(10);
   });
 
