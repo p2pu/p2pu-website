@@ -17,7 +17,7 @@
   } 
   
   // fix in page anchor
-  [id]::before {
+  #get-started-now::before {
     content: '';
     display: block;
     height: 160px;

@@ -7,7 +7,7 @@
     var slider = $(this);
    
     slider.slick({
-      autoplay: false,
+      autoplay: true,
       dots: true,
       pauseOnHover: true,
       swipe: true,
