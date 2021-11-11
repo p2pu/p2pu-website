@@ -1,4 +1,5 @@
 index.html: /en/
+en/work-with-us/index.html: /en/services/
 en/courses/index.html: /en/learning-resources/
 courses/index.html: /en/courses/
 en/connect/index.html: /en/contact/
