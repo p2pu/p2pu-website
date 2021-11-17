@@ -1,10 +1,8 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 
-@import "p2pu-theme/src/scss/cards/generic-card";
-@import "p2pu-theme/src/scss/cards/testimonials-card";
-@import "layout-elements/slider";
-
 #teams{
+
+  @import "layout-elements/slider";
 
   .header-wrap{
     background-color: $p2pu-light-blue;

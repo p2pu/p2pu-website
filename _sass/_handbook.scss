@@ -1,21 +1,22 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 
-.sidebar {
-  .nav > li > a {
-    padding: 0px;
-  }
-  .nav .nav > li > a {
-    padding-left: 30px;
-  }
-}
-
-.sidebar.affix {
-  top: 20px;
-
-}
-
 .handbook {
   /* Helper classes */
+  .sidebar {
+    .nav > li > a {
+      padding: 0px;
+    }
+    .nav .nav > li > a {
+      padding-left: 30px;
+    }
+  }
+
+  .sidebar.affix {
+    top: 20px;
+
+  }
+
+
 
   img {
     max-width: 100%
@@ -67,15 +68,6 @@
 
   * { box-sizing: border-box }
 
-
-  /*Colors
-  GRAPHITE: #515665
-  ORANGE: #fc7100
-  GREEN: #b7d500    #78b60b - adjusted
-  TEAL: #05c6b4     #04b0aa - adjusted
-  YELLOW: #ffbc1a
-   */
-
   .container{
     max-width: 720px;
     padding:0 24px 0 24px;
@@ -91,8 +83,9 @@
   }
 
 
-  p
-  {padding-bottom: 14px;}
+  p {
+    padding-bottom: 14px;
+  }
 
   ul{
     margin: 0 0 0 0;
@@ -117,11 +110,13 @@
   h1{
     font-size: 44px;
     line-height: 1.2;
-  padding: 48px 0 30px 0;}
+    padding: 48px 0 30px 0;
+  }
 
   h2{
     font-size: 32px;
-  padding-top: 28px;}
+    padding-top: 28px;
+  }
 
   h3{
     font-size: 24px;
@@ -134,7 +129,8 @@
     margin: 0;
     padding: 12px 0 0 0;
     text-transform: uppercase;
-  color: #515665;}
+    color: #515665;
+  }
 
   h6 {
     font-family: Arvo, sans-serif;
@@ -157,7 +153,6 @@
   }
 
   a:hover {
-
     background-color: #04b0aa;
     color: #fff
   }
@@ -168,10 +163,12 @@
   }
 
   .bold{
-  font-weight: 700}
+    font-weight: 700
+  }
 
   .caps{
-  text-transform: uppercase;}
+    text-transform: uppercase;
+  }
 
   .list-below{
     margin-bottom: -8px
@@ -192,7 +189,8 @@
   }
 
   .list-below{
-  margin-bottom: -14px}
+    margin-bottom: -14px
+  }
 
   #lc-container {
     max-width: 760px;
@@ -553,5 +551,4 @@
     left:-37px;
     color: #04b0aa;
   }
-
 }

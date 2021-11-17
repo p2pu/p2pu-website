@@ -53,7 +53,7 @@ sass:
   load_paths:
     - _sass
     - node_modules
-  style: :compressed
+  style: compressed
 
 env: prod
 
