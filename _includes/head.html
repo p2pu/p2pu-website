@@ -40,14 +40,14 @@
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="{{ site.title }}" />
-    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:url" content="{{site.url}}{{site.baseurl}}{{ page.url | replace:'index.html',''}}" />
+    <link rel="canonical" href="{{site.url}}{{site.baseurl}}{{ page.url | replace:'index.html',''}}">
 
     {% include tag_manager_head.html %}
 
     <!-- Custom CSS -->
     
-    <link rel="stylesheet" href="{{ "/assets/css/p2pu-custom.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/p2pu-custom.css">
 
     {% if layout.extra_css %}
         {% for css in layout.extra_css %}

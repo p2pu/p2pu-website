@@ -3,9 +3,11 @@
 @import "p2pu-theme/src/scss/cards/testimonials-card";
 @import "p2pu-theme/src/scss/cards/case-study-card";
 @import "layout-elements/dot-block";
-@import "layout-elements/slider";
 
 #home{
+
+  @import "layout-elements/slider";
+
   .landing h1 {
     //color: $cream;
   }

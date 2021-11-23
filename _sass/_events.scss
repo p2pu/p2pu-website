@@ -1,63 +1,65 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 
-.event-card {
-  flex-direction: row;
-
-  .date {
-    border-right: 1px solid $gray-light;
-    display: flex;
-    text-transform: uppercase;
-    align-items: flex-start;
-    flex: 0 0 auto;
-
-    .day {
-      font-size: 80px;
-      line-height: 64px;
-      font-weight: 900;
-      margin-right: 8px;
-    }
-
-    .month {
-      font-weight: 900;
-    }
-
-    .month, .year {
-      font-size: 24px;
-      line-height: 34px;
-    }
-  }
-
-  .info {
-    flex: 1 1 auto;
-  }
-
-  .actions {
-    flex: 0 0 auto;
-  }
-}
-
-.featured-event {
-  .featured-tag {
-    background-color: $p2pu-blue;
-    color: $white;
-    text-transform: uppercase;
-    transform: translateY(-50%);
-
-    > span {
-      margin: 6px;
-    }
-
-    .bold {
-      font-weight: 900;
-      margin-left: 8px;
-    }
-  }
-}
-
-@include media-breakpoint-down(md) {
+#events-page {
   .event-card {
+    flex-direction: row;
+
     .date {
-      border-right: none;
+      border-right: 1px solid $gray-light;
+      display: flex;
+      text-transform: uppercase;
+      align-items: flex-start;
+      flex: 0 0 auto;
+
+      .day {
+        font-size: 80px;
+        line-height: 64px;
+        font-weight: 900;
+        margin-right: 8px;
+      }
+
+      .month {
+        font-weight: 900;
+      }
+
+      .month, .year {
+        font-size: 24px;
+        line-height: 34px;
+      }
+    }
+
+    .info {
+      flex: 1 1 auto;
+    }
+
+    .actions {
+      flex: 0 0 auto;
+    }
+  }
+
+  .featured-event {
+    .featured-tag {
+      background-color: $p2pu-blue;
+      color: $white;
+      text-transform: uppercase;
+      transform: translateY(-50%);
+
+      > span {
+        margin: 6px;
+      }
+
+      .bold {
+        font-weight: 900;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .event-card {
+      .date {
+        border-right: none;
+      }
     }
   }
 }

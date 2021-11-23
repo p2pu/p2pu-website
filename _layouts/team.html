@@ -14,7 +14,7 @@ bundles:
 
 {% assign team = site.data.teams.items | where: "page_slug", page.slug | first %}
 
-<div>
+<div id="team-page">
   <section id="team-intro" class="bg-pattern-dark">
     <div class="pt-lg-5">
       <div class="container">
@@ -100,8 +100,8 @@ bundles:
           </div>
 
           {% if team.facilitators %}
-          <div class="col-lg-6 d-none d-lg-block">
-            <div class="circle-1 rellax" data-rellax-speed="0" data-rellax-desktop-speed="-3"></div>
+          <div class="col-lg-6 d-none d-lg-block position-relative">
+            <div class="circle-1 rellax" data-rellax-speed="0" data-rellax-desktop-speed="-2"></div>
 
             <div class="profile-container">
               <div class="slide-container">

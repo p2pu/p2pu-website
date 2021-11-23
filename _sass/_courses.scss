@@ -4,6 +4,7 @@
 @import "p2pu-theme/src/scss/cards/topic-card";
 @import "layout-elements/sidebar";
 
+#courses-page {
 .sidebar{
 	.navbar-toggler{
 		.material-icons{
@@ -40,4 +41,5 @@
 			
 		}
 	}
+}
 }
