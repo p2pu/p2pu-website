@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import UserLogin from './UserLogin';
 import UserDropdown from './UserDropdown';
 
 
@@ -22,36 +21,8 @@ export default class NavAccount extends Component {
     }).then(response => {
       return response.json();
     }).then(jsonBody => {
-      console.log(jsonBody);
       if (jsonBody.user && jsonBody.user !== 'anonymous') {
         this.setState({...jsonBody})
-      }
-    });
-  }
-
-  onUserLogin = (username, password) => {
-    const loginUrl = `${this.props.apiOrigin}/en/accounts/fe/login/`;
-    // POST username + password to login API, if successful, call whoami
-    fetch(loginUrl, {
-      method: 'POST',
-      mode: 'cors',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      credentials: 'include', // or 'same-origin'
-      body: JSON.stringify({
-        email: username,
-        password
-      })
-    }).then(response => {
-      return response.json();
-    }).then(jsonBody => {
-      if (jsonBody.errors){
-        this.setState({errors: jsonBody.errors});
-      } else {
-        // GET user data if login is successful
-        this.setState({errors: {} });
-        this.getUserData();
       }
     });
   }
