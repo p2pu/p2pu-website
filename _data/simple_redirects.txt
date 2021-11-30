@@ -17,5 +17,10 @@ school-of-ed: https://courses.p2pu.org/school-of-ed
 en/Janepark/index.html: https://courses.p2pu.org/en/Janepark/
 course/list: https://learningcircles.p2pu.org/en/courses/
 sosi: https://courses.p2pu.org/sosi
-virtual-handbook: https://docs.google.com/document/d/1l5Y96YTPbXay1iDgKiFoD-uA2AixvJNt3a380L0yOWc/edit
-course-creation-guide: https://docs.google.com/document/d/116fJM3GS7XDzilUOL_ynMZ0yTncUD6aVUbcQKsTra6U/edit
+en/handbook/index.html: https://docs.p2pu.org/
+en/handbook/background/index.html: https://docs.p2pu.org/
+en/handbook/downloads/index.html: https://docs.p2pu.org/
+en/handbook/running/index.html: https://docs.p2pu.org/
+en/handbook/starting/index.html: https://docs.p2pu.org/
+virtual-handbook: https://docs.p2pu.org/
+course-creation-guide: https://docs.p2pu.org/
