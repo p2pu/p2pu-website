@@ -40,5 +40,12 @@
     max-width: 200px;
     filter: grayscale(1);
   }
-  
+
+  #teams::before {
+    content: '';
+    display: block;
+    height: 160px;
+    margin-top: -160px;
+    visibility: hidden;
+  }
 }
