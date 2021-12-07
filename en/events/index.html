@@ -2,14 +2,12 @@
 layout: base
 title: Events
 slug: events
-header: page-header-default
-description: Follow the calendar below to add events to your schedule or subscribe to our newsletter to hear about new events.
+description: "[Subscribe](https://www.addevent.com/calendar/Bn389115) to the P2PU Community Calendar to add our public events directly to your personal calendar. [Join our newsletter](https://p2pu.us2.list-manage.com/subscribe/post?u=f080ec78070523d59ef613eda&id=dfc5a38968) to get our latest news delivered straight to your inbox (~6 emails/year)."
 ---
-<section>
-	<div class="container pt-0">
-    <div class="ae-emd-cal" data-calendar="Bn389115" data-configure="false"></div><script type="text/javascript">(function(){var e = document.createElement("script");e.type = "text/javascript";e.async = true;e.src = "https://www.addevent.com/js/cal.embed.t1.init.js";e.className = "ae-emd-script";document.getElementsByTagName("body")[0].appendChild(e);})();</script>
-	</div>
-</section>
+<header class="container page-header header-default mb-0">
+  <h1>{{ page.title }}</h1>
+  <p class="subtitle">{{ page.description | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+</header>
 
 <section>
   <div class="container">
