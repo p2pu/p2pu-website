@@ -128,8 +128,7 @@ image_path: /assets/images/about/p2pu_team.jpg
         <div class="row grid">
           
             {% for team in site.data.teams.items %}
-            {% if team.id == 3 or team.id == 41 %}
-            {% else %}
+            {% if team.membership %}
             {% assign organizers = team.facilitators | where:"role","ORGANIZER" %}
             <div class="grid-item col-md-6 col-lg-4">
                 <div class="card teams">
