@@ -14,6 +14,16 @@ top_level:
       - text: Events
         url: /en/events/
         external: true
+  - text: Teams
+    url:
+    submenu:
+      - text: Start a Team
+        url: /en/teams/
+      - text: Knowledge Base
+        url: https://docs.p2pu.org/teams/about-teams
+        external: true
+      - text: Current teams
+        url: /en/about/#teams
   - text: About
     url:
     submenu:
