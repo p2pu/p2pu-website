@@ -22,7 +22,7 @@ top_level:
       - text: Teams Documentation
         url: https://docs.p2pu.org/teams/about-teams
         external: true
-      - text: Current teams
+      - text: Current Teams
         url: /en/about/#teams
   - text: About
     url:
