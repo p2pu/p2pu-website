@@ -19,7 +19,7 @@ top_level:
     submenu:
       - text: Start a Team
         url: /en/teams/
-      - text: Knowledge Base
+      - text: Teams Documentation
         url: https://docs.p2pu.org/teams/about-teams
         external: true
       - text: Current teams
