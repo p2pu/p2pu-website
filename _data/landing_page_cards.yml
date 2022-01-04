@@ -4,6 +4,12 @@
 # For case study images, link to external URL or place in /assets/images/case-studies directory
 
 cards:
+
+  - title: Meet Lydian
+    url: https://info.p2pu.org/2021/12/06/meet-lydian/
+    img: https://info.p2pu.org/wp-content/uploads/2021/12/lydian-225x300.jpg
+    cardtype: case-study
+
   - title: Virtual Pathways from Training to Practice in Rhode Island
     url: "https://info.p2pu.org/2021/09/09/case-study-rila/"
     img: 2021-09-09-casestudy-rila.jpg
