@@ -5,7 +5,12 @@
 
 cards:
 
-  - title: Meet Lydian
+  - title: Making AI Accessible with Learning Circles
+    url: https://info.p2pu.org/2021/12/16/making-ai-accessible-with-learning-circles/
+    img: https://info.p2pu.org/wp-content/uploads/2021/12/We_Are_AI_Cover-logo-1.png
+    cardtype: case-study
+    
+  - title: Meet Lydian, our new Community Coordinator!
     url: https://info.p2pu.org/2021/12/06/meet-lydian/
     img: https://info.p2pu.org/wp-content/uploads/2021/12/lydian-225x300.jpg
     cardtype: case-study
