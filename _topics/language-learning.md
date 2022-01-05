@@ -29,7 +29,7 @@ links:
       <!--StartFragment-->
 
 
-      In addition to educational content for science and social studies, Newsela provides ELA learning texts across different genres  with supplemental learning materials
+      In addition to educational content for science and social studies, Newsela provides ELA learning texts across different genres with supplemental learning materials
 
 
       <!--EndFragment-->
