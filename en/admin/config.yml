@@ -66,8 +66,8 @@ collections:
             - { label: 'Name', name: 'name', widget: 'string' }
             - { label: 'Role', name: 'role', widget: 'string' }
             - { label: 'Organization', name: 'organization', widget: 'string' }
-            - { label: 'Testimonial type', name: 'type', widget: 'select' options: ["learner", "facilitator", "network"] }
-            - { label: 'Card type', name: 'cardtype', widget: 'hidden' default: 'testimonial' }
+            - { label: 'Testimonial type', name: 'type', widget: 'select', options: ["learner", "facilitator", "network"] }
+            - { label: 'Card type', name: 'cardtype', widget: 'hidden', default: 'testimonial' }
             - { label: 'Order', name: 'order', widget: 'number', value_type: 'int' }
 
 
