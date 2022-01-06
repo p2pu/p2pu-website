@@ -1,6 +1,6 @@
 staff:
   - name: Dirk Uys
-    image: dirk.jpg
+    image: /assets/images/people/dirk.jpg
     role: Development Lead
     bio: Dirk makes sure that just the right amount of tech is developed at P2PU.
       After travelling through South and Central America, he is now back home in
@@ -10,7 +10,7 @@ staff:
     twitter: code27_
     url: https://www.thebacklog.net
   - name: Grif Peterson
-    image: grif.jpg
+    image: /assets/images/people/grif.jpg
     role: Executive Director
     bio: Grif joined P2PU in 2015 to help start the learning circle program. Since
       then, his role has grown with the project, and he does his best to make
@@ -20,14 +20,14 @@ staff:
     twitter: grifpeterson
     url: http://grifp.github.io
   - name: Lydian Brambila
-    image: lydian.jpg
+    image: /assets/images/people/lydian.jpg
     role: Community Coordinator
     bio: Lydian (they/them) is a librarian committed to building community on- and
       offline and to making sure that learners and facilitators get their needs
       met. After work, you'll find them playing shows and making zines in
       Athens, Georgia.
   - name: Qumisha Goss
-    image: q.jpg
+    image: /assets/images/people/q.jpg
     role: Partnership Lead
     bio: Qumisha or Q, as you may call her, is a Detroit native, librarian, and a
       plant lady, but also appreciates food, travel and good music not
@@ -36,7 +36,7 @@ staff:
       library staff training. Q is passionate about education, community
       building and demystifying technology.
   - name: Ryan George
-    image: ryan.jpg
+    image: /assets/images/people/ryan.jpg
     role: Financial Administrator
     bio: Ryan oversees Financing and Accounting for P2PU. He is a vibrant and
       energetic person who has been with P2PU since 2012. He loves culture,
@@ -44,12 +44,12 @@ staff:
       Africa.
 board:
   - name: Ahrash Bissell
-    image: ahrash.jpg
+    image: /assets/images/people/ahrash.jpg
     role: President, Monterey Institute for Technology and Education
     bio: As a board member, Ahrash takes care of staying true to our original
       values, while pushing us to be more experimental. He is a wise man.
   - name: Allen Gunn
-    image: gunner.jpg
+    image: /assets/images/people/gunner.jpg
     role: Executive Director, Aspiration
     bio: It is not without reason that Gunner is our workshop facilitator of choice.
       He is Executive Director at Aspiration, where he helps NGOs, activists,
@@ -57,14 +57,14 @@ board:
       for social change.
     twitter: allengunn
   - name: Carl Ruppin
-    image: carl_ruppin.jpg
+    image: /assets/images/people/carl_ruppin.jpg
     role: Assistant Vice President, MetLife
     bio: Carl joined P2PU as a team member soon after the organization was founded,
       providing incredible operational, legal, and project management support.
       He transitioned to the Board soon after he left the team and additionally
       serves as the Board Secretary.
   - name: Catherine Penkert
-    image: catherine_penkert.jpg
+    image: /assets/images/people/catherine_penkert.jpg
     role: Library Director, Saint Paul Public Library
     bio: Catherine serves as the Library Director at Saint Paul Public Library in
       Minnesota, where she oversees programs, serves, and community
@@ -72,14 +72,14 @@ board:
       perspective to the work of P2PU.
     twitter: CPStP
   - name: Delia Browne
-    image: delia_browne.jpg
+    image: /assets/images/people/delia_browne.jpg
     role: National Copyright Director, NSW Department of Education and Training;
       Board Director, Creative Commons
     bio: As a board member, co-founder, and active community member, Delia makes
       sure things keep running smoothly at P2PU. Next to this she is involved in
       many of the legal aspects surrounding the organization.
   - name: June Ahn
-    image: june.jpg
+    image: /assets/images/people/june.jpg
     role: Associate Professor, University of California, Irvine
     bio: June is a learning sciences and human-computer interaction researcher at UC
       Irvine. He bravely collaborated with P2PU on past research projects and
@@ -88,7 +88,7 @@ board:
     twitter: ahnjune
     url: http://ahnjune.com
   - name: Philipp Schmidt
-    image: philipp.jpg
+    image: /assets/images/people/philipp.jpg
     role: Director of Learning Innovation, MIT Media Lab (P2PU Board Chair)
     bio: Philipp co-founded P2PU in 2008 with support from a Shuttleworth Grant.
       Years later he is still cooking up learning experiences (and mustard) at
@@ -96,7 +96,7 @@ board:
     twitter: schmidtphi
     url: http://philippschmidt.org/
   - name: Sidsel Bech-Petersen
-    image: sidsel_bech_peterson.jpg
+    image: /assets/images/people/sidsel_bech_peterson.jpg
     role: Head of Innovation and User Involvement, Aarhus Public Libraries, Denmark
     bio: Sidsel is a longtime friend of P2PU. We met her as she was leading the
       process of transforming the Main Library in Aarhus into Dokk1, the largest
@@ -104,18 +104,18 @@ board:
       involvement and special projects across Aarhus Public Libraries.
 collaborators:
   - name: Mark Andersen
-    image: mark_andersen.jpg
+    image: /assets/images/people/mark_andersen.jpg
     role: Learning Circle Extraordinaire
     bio: Mark is responsible for adult learning and workforce development
       programming at Chicago Public Library. He has been our partner from the
       start getting Learning Circles up and running in the Windy City.
   - name: Lila Bailey
-    image: lila_bailey.jpg
+    image: /assets/images/people/lila_bailey.jpg
     role: Lawyer
     bio: Without Lila P2PU would still be a clandestine operation targeting the
       foundations of institutional academia. Lila made us legit.
   - name: Adam Bush
-    image: adam_bush.jpg
+    image: /assets/images/people/adam_bush.jpg
     role: Community Organizer
     bio: "Adam is the co-founder of College Unbound: a college degree program in
       Providence, RI for first generation college students that values civic
@@ -124,7 +124,7 @@ collaborators:
       sourdough."
     twitter: MrAdamBush
   - name: John Britton
-    image: john_britton.jpg
+    image: /assets/images/people/john_britton.jpg
     role: OG Edupunk
     bio: As an invaluable part of the volunteer community and later as staff, John
       has helped P2PU make large leaps forward. The Mechanical MOOC is his work,
@@ -132,27 +132,27 @@ collaborators:
       endless.
     twitter: johndbritton
   - name: Pippa Buchanan
-    image: pippa_buchanan.jpg
+    image: /assets/images/people/pippa_buchanan.jpg
     role: Webcraft Warrior Emeritus
     bio: Pippa was the original Webcraft Warrior who facilitated the setting up of
       Mozilla School of Webcraft. She is currently living in Austria where she
       makes, sells and sails boats.
     twitter: pipstar
   - name: Steve Carson
-    image: stephen_carson.jpg
+    image: /assets/images/people/stephen_carson.jpg
     role: Grandfather of the Mechanical MOOC
     bio: Steve has been invaluable as an advisor and for his service at MIT
       OpenCourseWare. Pretty good work for someone who is actually not a robot
       himself.
     twitter: SteveECarson
   - name: Cathy Casserly
-    image: cathy_casserly.jpg
+    image: /assets/images/people/cathy_casserly.jpg
     role: Advisory Council Creative Commons
     bio: One of the original pioneers of opening education, Cathy gave P2PU its very
       first grant when she was at the Hewlett Foundation.
   - name: Code Rodeo
   - name: Alison Jean Cole
-    image: alison_jean_cole.jpg
+    image: /assets/images/people/alison_jean_cole.jpg
     role: Community Wrangler Emeritus
     bio: "Alison’s famous catchphrase: Just like, do it--free after a famous
       sportswear company--has stuck with P2PU since the fall of 2009. She just
@@ -160,24 +160,24 @@ collaborators:
       open masters while inspiring others to just keep doing as much as
       possible."
   - name: Larry Cooperman
-    image: larry_cooperman.jpg
+    image: /assets/images/people/larry_cooperman.jpg
     role: Associate Dean for Open Education, University of California Irvine
     bio: Volunteering his experience since P2PU’s inception, Larry continues to
       actively communicate P2PU to the world and innovate learning at his home
       institution UC Irvine.
   - name: Maria Droujkova
-    image: maria_droujkova.jpg
+    image: /assets/images/people/maria_droujkova.jpg
     role: Lead School of Mathematical Future
     bio: Progressive views on education can and should also be tossed into the
       mathematics education equation, must have been what Maria thought several
       years ago when she started the school of the Mathematical Future. She was
       right.
   - name: Chris Ewald
-    image: chris_ewald.jpg
+    image: /assets/images/people/chris_ewald.jpg
     role: MOOCster Emeritus
     bio: Lead developer on P2PU's Mechanical MOOC project.
   - name: Karen Fasimpaur
-    image: karen_fasimpaur.jpg
+    image: /assets/images/people/karen_fasimpaur.jpg
     role: Dean School of Ed
     bio: Karen Fasimpaur is owner and manager of K-12 handhelds, an educational
       technology company focused on mobile learning. She founded the School of
@@ -186,7 +186,7 @@ collaborators:
     twitter: kfasimpaur
     url: http://www.k12opened.com/blog
   - name: Jose Flores
-    image: jose_flores.jpg
+    image: /assets/images/people/jose_flores.jpg
     role: P2PU API Creator
     bio: If there would be one badge for most active community member who has never
       been employed by P2PU, it will be hard to pass Jose on volume and quality.
@@ -194,18 +194,18 @@ collaborators:
       he developed.
     twitter: josmasflores
   - name: Karen Gabriels
-    image: karen_gabriels.jpg
+    image: /assets/images/people/karen_gabriels.jpg
     role: National Treasur(er)
     bio: Keeps our finances tidy. And our monies safe. And us out of jail.
   - name: Vanessa Gennarelli
-    image: vanessa_gennarelli.jpg
+    image: /assets/images/people/vanessa_gennarelli.jpg
     role: Learning Scientist
     bio: Vanessa built many learning communities on the web for P2PU. Much of the
       slang spoken by the team was inspired by her.
     twitter: mozzadrella
     url: http://mozzadrella.me
   - name: Stian Haklev
-    image: stian_haklev.jpg
+    image: /assets/images/people/stian_haklev.jpg
     role: Co-founder
     bio: Recently hailed as one of the ‘Fantastic 5′ in open education where he was
       portrayed as Ben Grimm, Stian has been destroying old institutional
@@ -213,7 +213,7 @@ collaborators:
     twitter: houshuang
     url: http://reganmian.net/blog/
   - name: Laura Hilliger
-    image: laura_hilliger.jpg
+    image: /assets/images/people/laura_hilliger.jpg
     role: Webmaker, Troublemaker
     bio: Laura eats, breathes and sleeps openness. At the Mozilla Foundation she's
       building out a community of mentors on the Webmaker initiative. And
@@ -221,7 +221,7 @@ collaborators:
     twitter: epilepticrabbit
     url: http://about.me/laurahilliger
   - name: Rebecca Kahn
-    image: rebecca_kahn.jpg
+    image: /assets/images/people/rebecca_kahn.jpg
     role: Happiness Officer
     bio: For a long time Bekka made the trains at P2PU run on time (or as close to
       it as possible). A London-dweller by day but a South African in spirit,
@@ -229,7 +229,7 @@ collaborators:
       College, and serves as the Coordinator for the Open Coalition
     twitter: rebamex
   - name: Alexander Kehayias
-    image: alexander_kehayias.jpg
+    image: /assets/images/people/alexander_kehayias.jpg
     role: Founder of the P2PU Mentor Program
     bio: Alex has been working on a mentorship platform for people to connect with
       knowledgeable mentors to guide them through learning a topic. He is also
@@ -238,7 +238,7 @@ collaborators:
       interaction.
     twitter: alexkehayias
   - name: Sharon Kennedy
-    image: sharon.jpg
+    image: /assets/images/people/sharon.jpg
     role: Web developer
     bio: Sharon is a web developer and designer based in Toronto, Canada. She's
       working on making the this website a beautiful and useful resource for the
@@ -247,14 +247,14 @@ collaborators:
     twitter: codeandcanoes
     url: https://www.followthewhitesquirrel.ca
   - name: Molly Kleinman
-    image: molly_kleinman.jpg
+    image: /assets/images/people/molly_kleinman.jpg
     role: VP of OER and Microwave Oven Programming
     bio: Molly takes time out of her busy snacking schedule to drop copyright
       education bombs on the academic world. She’s a strong believer in
       understanding rights when it comes to creating and sharing content,
       especially in the open peer-learning world.
   - name: Pieter Kleymeer
-    image: pieter_kleymeer.jpg
+    image: /assets/images/people/pieter_kleymeer.jpg
     role: Destroyer, Builder
     bio: Piet has been quietly learning about learning for several years, many of
       them while working with the University of Michigan’s Open. Michigan
@@ -264,7 +264,7 @@ collaborators:
       intersections of learning, identity, and information.
     twitter: bagabot
   - name: Nico Koenig
-    image: nico.jpg
+    image: /assets/images/people/nico.jpg
     role: Community Lead
     bio: Nico is a facilitator and designer of participatory in-person and online
       workshops, and an organizer of adult learning initiatives. He trained,
@@ -273,27 +273,27 @@ collaborators:
     twitter: nicokoenig
     url: https://nicokoenig.com/
   - name: Kate Lapinski
-    image: kate_lapinski.jpg
+    image: /assets/images/people/kate_lapinski.jpg
     role: Chicago Public Library Coordinator
     bio: After the first Learning Circle pilot ended, it was Kate who was handed the
       reigns to make sure the program continued to thrive at Chicago Public
       Library. She's faciliated Learning Circles, remixed courses, and ran
       workshops. A real model community member!
   - name: Gary Matkin
-    image: gary_matkin.jpg
+    image: /assets/images/people/gary_matkin.jpg
     role: Dean of the Extension School, University of California Irvine
     bio: He taught Philipp everything he knows about accounting--in 45 min--and
       infused P2PU with an awesome *beg for forgiveness, rather than ask for
       permission* attitude from the start.
   - name: Katherine McConachie
-    image: katherine_mcconachie.jpg
+    image: /assets/images/people/katherine_mcconachie.jpg
     role: Oracle
     bio: Katherine lends her insights and support to P2PU on a daily basis. In fact,
       it was she who coined the term "Learning Circles". By day, she is the
       Learning Initiative Coordinator at the MIT Media Lab, working alongside
       P2PU's co-founder, Philipp Schmidt.
   - name: João Menezes
-    image: joao_menezes.jpg
+    image: /assets/images/people/joao_menezes.jpg
     role: Design Thinker
     bio: João is a user-centered design expert, and the projects he engaged in
       during his UX design course have inspired much of the design of the early
@@ -301,13 +301,13 @@ collaborators:
       build meaningful interactions among peers through the design thinking
       philosophy and tools.
   - name: Dany Javier Bautista Montaña
-    image: dany_javier_bautista_montana.jpg
+    image: /assets/images/people/dany_javier_bautista_montana.jpg
     role: Founder P2PU ambassador program
     bio: Disappointed by the lack of easy access to learning about web design in
       Colombia, Dany gathered a group of people and engaged in learning web
       design through P2PU. He currently leads this P2PU ambassador program.
   - name: Juliana Muchai
-    image: juliana_muchai.jpg
+    image: /assets/images/people/juliana_muchai.jpg
     role: Kenya Coordinator
     bio: Juliana is the Principal Resource Mobilization Officer for the Kenya
       National Library Service, and the point-person for Learning Circles in
@@ -316,7 +316,7 @@ collaborators:
       the Green Belt Movement, a community-based NGO that brough about social
       change through community empowerment and development programmes.
   - name: Paul Osman
-    image: paul_osman.jpg
+    image: /assets/images/people/paul_osman.jpg
     role: Edupunk Technical Overlord
     bio: Paul loves open software and the crew over at P2PU. We used his tasty
       Mozilla drumbeat.org code for eons, and now he helps us out when we need
@@ -324,7 +324,7 @@ collaborators:
       his native Toronto.
     twitter: paulosman
   - name: Neeru Paharia
-    image: neeru_paharia.jpg
+    image: /assets/images/people/neeru_paharia.jpg
     role: Co-founder, Assistant Professor, Georgetown University
     bio: As original gang-star par excellence, Neeru didn’t think it was enough to
       theorize about starting a peer learning platform so she co-founded P2PU
@@ -332,7 +332,7 @@ collaborators:
       has been at the root of P2PU’s success in many ways and now employs her
       vast experience on the board.
   - name: Jane Park
-    image: jane_park.jpg
+    image: /assets/images/people/jane_park.jpg
     role: Project Manager, Creative Commons
     bio: Another founding volunteer who loves P2PU so much she made it her day job —
       almost. Jane works for Creative Commons and devotes 60% of her time to
@@ -340,7 +340,7 @@ collaborators:
       world.
     twitter: janedaily
   - name: Beck Pitt
-    image: beck_pitt.jpg
+    image: /assets/images/people/beck_pitt.jpg
     role: Researcher, Existentialist
     bio: Beck is a researcher on the OER Research Hub (OERRH) project and is based
       at The Open University (UK).  Working with Jane Park, the OERRH conducted
@@ -349,7 +349,7 @@ collaborators:
       course.
     twitter: BeckPitt
   - name: Erika Pogorelc
-    image: erika_pogorelc.jpg
+    image: /assets/images/people/erika_pogorelc.jpg
     role: Pixel Princess
     bio: Though hard work and a little bit of fairy dust, Erika transformed from
       hairdresser to righteous developer. She reports from Ljubljana, Slovenia,
@@ -357,21 +357,21 @@ collaborators:
     twitter: ercchy
     url: http://ercchy.github.io
   - name: Andrew Rens
-    image: andrew_rens.jpg
+    image: /assets/images/people/andrew_rens.jpg
     role: Founding Volunteer
     bio: As a founding volunteer and early course facilitator of Copyright for
       Educators, Andrew was instrumental at arriving to a choice for a specific
       open license and the legalities involved in implementing the license at
       P2PU. He was formerly the legal lead for Creative Commons South Africa.
   - name: Carl Ruppin
-    image: carl_ruppin.jpg
+    image: /assets/images/people/carl_ruppin.jpg
     role: Operations/Dreamer Wrangler
     bio: An Aussie by birth and an attorney by training, Carl has heaps of
       experience in the open community as the National Copyright Manager for the
       New South Wales Department of Education and Training in Sydney.
     twitter: ender_78
   - name: Alex Ruthmann
-    image: alex_ruthmann.jpg
+    image: /assets/images/people/alex_ruthmann.jpg
     role: Associate Professor, New York University
     bio: Alex empowers music teachers to build tools and become entrepreneurs at the
       NYU MusEd Lab, and he's brought that tinkerability over to P2PU. Alex and
@@ -379,7 +379,7 @@ collaborators:
     twitter: alexruthmann
     url: http://about.me/alexruthmann
   - name: Jessy Kate Schingler
-    image: jessy_kate_schingler.jpg
+    image: /assets/images/people/jessy_kate_schingler.jpg
     role: Space Captain
     bio: Jessy is P2PU’s resident Superwoman–brains, brawn and badassery. Jessy is
       passionate about the ways that openness and collaboration can advance
@@ -387,7 +387,7 @@ collaborators:
     twitter: jessykate
     url: http://www.jessykate.com
   - name: Nadeem Shabir
-    image: nadeem_shabir.jpg
+    image: /assets/images/people/nadeem_shabir.jpg
     role: Technical Lead at Talis
     bio: When Nadeem is not eloquently luring people at P2PU workshops into letting
       their emotions about peer learning run freely, he uses his vast experience
@@ -395,7 +395,7 @@ collaborators:
     twitter: kiyanwang
     url: http://www.virtualchaos.co.uk/blog/
   - name: Niels Sprong
-    image: niels_sprong.jpg
+    image: /assets/images/people/niels_sprong.jpg
     role: Chief Chef
     bio: Niels is a man of many talents. He’ll beat you hands down playing cards,
       but then he’ll make you dinner afterwards. A founding volunteer at P2PU,
@@ -403,13 +403,13 @@ collaborators:
       Gastronomy, and keeps asking us difficult questions, which is why we like
       to keep him around.
   - name: Aleksander Stachurka
-    image: aleksander_stachurka.jpg
+    image: /assets/images/people/aleksander_stachurka.jpg
     role: Designer
     bio: Aleksander has done a great job in translating the ideas of the the
       community into P2PU’s visual identity. Aleks now runs his own photography
       and design studio in Warsaw, Poland.
   - name: Mark Surman
-    image: mark_surman.jpg
+    image: /assets/images/people/mark_surman.jpg
     role: Executive Director Mozilla Foundation
     bio: Mark loves all things open, including wine bars in San Francisco that are
       still open at 2am. As Mozilla Foundation ED he is leading an army of
@@ -418,7 +418,7 @@ collaborators:
     twitter: msurman
     url: http://commonspace.wordpress.com
   - name: Joel Thierstein
-    image: joel_thierstein.jpg
+    image: /assets/images/people/joel_thierstein.jpg
     role: Co-founder, Vice President for Academic Affairs/Provost at Kentucky State
       University
     bio: Possibly the hippest provost in the history of US academia, P2PU co-founder
@@ -426,19 +426,19 @@ collaborators:
       co-founder. He currently sits on the board of P2PU and works the US
       Department of Education as a senior adviser and counsel.
   - name: Chloe Varelidi
-    image: chloe_varelidi.jpg
+    image: /assets/images/people/chloe_varelidi.jpg
     role: Head of Games
     bio: Chloe designed the basic way in which you can now structure courses into
       meaningful and challenging chunks, creating a better learning experience
       for everyone.
     twitter: varelidi
   - name: Zuzel Vera
-    image: zuzel_vera.jpg
+    image: /assets/images/people/zuzel_vera.jpg
     role: Very First Tech Lead
     bio: Zuzel will probably rank high in any top list of most productive developers
       ever. P2PU would have been called 'about:blank' if it weren’t for her.
   - name: Alan Webb
-    image: alan_webb.jpg
+    image: /assets/images/people/alan_webb.jpg
     role: Projectician
     bio: "Alan supports those who wish to move passionately in the direction of
       their dreams through creating projects and learning together as peers. He
