@@ -195,8 +195,9 @@
 				  
 				<div class="col-12 mt-5 mb-5 mb-md-0">
 					<div class="p2pu-slide-container slick-init">
-							
-						{% for card in site.data.landing_page_cards.cards %}						
+            {% assign cards = site.data.landing_page_cards.cards | concat: site.data.landing_page_cards.testimonials | sort: "order" | reverse %}
+
+						{% for card in cards %}						
 						<article class="slide ">
 							{% if card.cardtype == 'testimonial'  %}	
 							<div class="card-testimonial card row g-0 p-3 {{ card.type }}">
@@ -206,7 +207,7 @@
 								<div class="card-footer attribution col-12">
 									<div class="row">
 										<div class="image col-12 col-md-4 pe-md-0">
-										  <img class="mx-auto mx-md-0" src="/assets/images/testimonials/{{ card.img }}" alt="{{ card.name }}">
+										  <img class="mx-auto mx-md-0" src="{{ card.img }}" alt="{{ card.name }}">
 										</div>
 										<div class="text col-12 col-md-8 text-center text-md-start">
 										  <span class="name fw-bold">{{ card.name }}</span>
@@ -228,7 +229,7 @@
 									{% endif %}
 								</div>
 								<div class="card-header">
-									<span class="eyebrow">Case Study</span>
+                  <span class="eyebrow">{{ card.cardtype }}</span>
 									<h3 class="card-title">{{ card.title }}</h3>
 								</div>
 							</div>

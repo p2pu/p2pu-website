@@ -44,3 +44,30 @@ collections:
             - { label: 'Bio', name: 'bio', widget: 'string' }
             - { label: 'Twitter', name: 'twitter', widget: 'string', required: false}
             - { label: 'Website', name: 'url', widget: 'string', required: false }
+      - name: "landing page"
+        label: "Landing page"
+        file: "_data/landing_page_cards.yml"
+        fields:
+          - label: Cards
+            name: cards
+            widget: list
+            fields:
+            - { label: 'Title', name: 'title', widget: 'string' }
+            - { label: 'Url', name: 'url', widget: 'string' }
+            - { label: 'Image URL', name: 'img', widget: 'string' }
+            - { label: 'Card type', name: 'cardtype', widget: 'string' }
+            - { label: 'Order', name: 'order', widget: 'number', value_type: 'int' }
+          - label: Testimonials
+            name: testimonials
+            widget: list
+            fields:
+            - { label: 'Quote', name: 'quote', widget: 'string' }
+            - { label: 'Image', name: 'img', widget: 'image' }
+            - { label: 'Name', name: 'name', widget: 'string' }
+            - { label: 'Role', name: 'role', widget: 'string' }
+            - { label: 'Organization', name: 'organization', widget: 'string' }
+            - { label: 'Testimonial type', name: 'type', widget: 'select' options: ["learner", "facilitator", "network"] }
+            - { label: 'Card type', name: 'cardtype', widget: 'hidden' default: 'testimonial' }
+            - { label: 'Order', name: 'order', widget: 'number', value_type: 'int' }
+
+
