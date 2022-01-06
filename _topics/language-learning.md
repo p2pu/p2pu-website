@@ -92,6 +92,8 @@ links:
     url: https://esllibrary.com/blog/inclusive-language-2021
     img: /assets/images/topics/inclusive-language-2021.png
 featured: false
+search_topics:
+  - language-learning
 ---
 <!--StartFragment-->
 
