@@ -54,7 +54,7 @@ collections:
             fields:
             - { label: 'Title', name: 'title', widget: 'string' }
             - { label: 'Url', name: 'url', widget: 'string' }
-            - { label: 'Image URL', name: 'img', widget: 'string' }
+            - { label: 'Image', name: 'img', widget: 'image' }
             - { label: 'Card type', name: 'cardtype', widget: 'string' }
             - { label: 'Order', name: 'order', widget: 'number', value_type: 'int' }
           - label: Testimonials

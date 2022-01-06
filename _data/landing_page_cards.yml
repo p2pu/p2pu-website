@@ -19,7 +19,7 @@ cards:
 
   - title: Virtual Pathways from Training to Practice in Rhode Island
     url: "https://info.p2pu.org/2021/09/09/case-study-rila/"
-    img: 2021-09-09-casestudy-rila.jpg
+    img: /assets/images/case-studies/2021-09-09-casestudy-rila.jpg
     cardtype: CASE STUDY
     order: 12
 

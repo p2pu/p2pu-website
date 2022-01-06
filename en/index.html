@@ -207,7 +207,7 @@
 								<div class="card-footer attribution col-12">
 									<div class="row">
 										<div class="image col-12 col-md-4 pe-md-0">
-										  <img class="mx-auto mx-md-0" src="{{ card.img }}" alt="{{ card.name }}">
+										  <img class="mx-auto mx-md-0" src="{{ site.baseurl }}{{ card.img }}" alt="{{ card.name }}">
 										</div>
 										<div class="text col-12 col-md-8 text-center text-md-start">
 										  <span class="name fw-bold">{{ card.name }}</span>
@@ -225,7 +225,7 @@
 									{% if card.img contains 'http'  %}	
 										<img src="{{ card.img }}" alt="{{ card.title }}" class="card-img-top" />
 									{% else %}
-										<img src="{{ site.baseurl }}/assets/images/case-studies/{{ card.img }}" alt="{{ card.title }}" class="card-img-top" />
+										<img src="{{ site.baseurl }}{{ card.img }}" alt="{{ card.title }}" class="card-img-top" />
 									{% endif %}
 								</div>
 								<div class="card-header">
