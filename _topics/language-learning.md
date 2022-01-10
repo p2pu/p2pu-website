@@ -1,6 +1,6 @@
 ---
 title: Language Learning
-img: /assets/images/topics/language-learning.png
+img: /assets/images/topics/✳️-main-image.png
 links:
   - title: Open Culture
     description: >-
