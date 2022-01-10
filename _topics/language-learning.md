@@ -12,7 +12,7 @@ links:
 
       <!--EndFragment-->
     url: https://www.openculture.com/freelanguagelessons
-    img: /assets/images/topics/open-culture.png
+    img: /assets/images/topics/open-culture-min.png
   - title: We Speak NYC
     description: >-
       <!--StartFragment-->
@@ -34,7 +34,7 @@ links:
 
       <!--EndFragment-->
     url: https://newsela.com/about/content/browse-content/
-    img: /assets/images/topics/newsela.png
+    img: /assets/images/topics/newsela-min.png
   - title: Simple English Wikipedia
     description: >-
       <!--StartFragment-->
@@ -45,7 +45,7 @@ links:
 
       <!--EndFragment-->
     url: https://simple.wikipedia.org/wiki/Main_Page
-    img: https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Wikipedia-logo-v2-simple.svg/800px-Wikipedia-logo-v2-simple.svg.png
+    img: /assets/images/topics/800px-wikipedia-logo-v2-simple.svg.png
   - title: English Language Teaching Resources
     description: >-
       <!--StartFragment-->
@@ -56,7 +56,7 @@ links:
 
       <!--EndFragment-->
     url: https://www.englishwsheets.com/index.html
-    img: /assets/images/topics/englishwsheets.png
+    img: /assets/images/topics/englishwsheets-min.png
   - title: 6 Essential Strategies for Teaching English Language Learners (Edutopia)
     url: https://www.edutopia.org/article/6-essential-strategies-teaching-english-language-learners
     description: >-
@@ -69,7 +69,7 @@ links:
 
 
       <!--EndFragment-->
-    img: /assets/images/topics/edutopia.png
+    img: /assets/images/topics/edutopia-min.png
   - url: https://www.cultofpedagogy.com/supporting-esl-students-mainstream-classroom/
     title: "Cult of Pedagogy: “12 Ways to Support English Learners in the Mainstream
       Classroom”"
@@ -81,7 +81,7 @@ links:
 
 
       <!--EndFragment-->
-    img: /assets/images/topics/cult-of-pedagogy.png
+    img: /assets/images/topics/cult-of-pedagogy-min.png
   - title: Inclusive Language 2021 (ESL Library)
     description: |-
       <!--StartFragment-->
@@ -90,7 +90,7 @@ links:
 
       <!--EndFragment-->
     url: https://esllibrary.com/blog/inclusive-language-2021
-    img: /assets/images/topics/inclusive-language-2021.png
+    img: /assets/images/topics/inclusive-language-2021-min.png
 featured: true
 search_topics:
   - language-learning
