@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { SearchProvider, SearchCourses, BrowseCourses } from 'p2pu-components'
+import SearchProvider from 'p2pu-components/dist/Search/SearchProvider'
+import BrowseCourses from 'p2pu-components/dist/Courses/Browse'
+import SearchCourses from 'p2pu-components/dist/Courses/SearchCourses'
 
 import 'p2pu-components/dist/build.css';
 
