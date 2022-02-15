@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { SearchProvider } from 'p2pu-components';
-import { LearningCircleSearch } from 'p2pu-components';
-
+import SearchProvider from 'p2pu-components/dist/Search/SearchProvider';
+import LearningCircleSearch from 'p2pu-components/dist/LearningCircles/LearningCircleSearch';
 import 'p2pu-components/dist/build.css';
+
 
 let elem = document.getElementById('search-lc-component');
 let initialState = {}
