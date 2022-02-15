@@ -22,7 +22,7 @@ jobs:
 
       - uses: hashicorp/setup-terraform@v1
         with:
-            terraform_version: 1.1.3
+            terraform_version: 1.1.5
 
       - run: terraform init --backend-config="key=tfstate/p2pu-website/pr/${{ steps.pr.outputs.pull_number }}"
         env:
