@@ -2,7 +2,7 @@
 <div class="grid-item col-md-6 col-lg-4">
 	  <div class="card staff">
 		<div class="card-image">
-		  <img src="{{ "/assets/images/people/" |append: person.image |prepend: site.baseurl }}" alt={{ person.name }} Margraf Image" class="card-img-top">
+      <img src="{{site.baseurl}}{{ person.image}}" alt="{{ person.name }} Image" class="card-img-top">
 		</div>
 	   <div class="card-header">
 		 <h3>{{ person.name }}</h3>

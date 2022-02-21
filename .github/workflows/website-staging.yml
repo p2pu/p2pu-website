@@ -20,8 +20,9 @@ jobs:
         id: pr
         run: echo ::set-output name=pull_number::$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
 
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v1
+      - uses: hashicorp/setup-terraform@v1
+        with:
+            terraform_version: 1.1.5
 
       - run: terraform init --backend-config="key=tfstate/p2pu-website/pr/${{ steps.pr.outputs.pull_number }}"
         env:

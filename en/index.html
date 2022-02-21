@@ -134,7 +134,7 @@
 				<h1 class="display-5 col-lg-7">Join the Community</h1>
 
 				<div class="col-md-8 offset-md-2 offset-lg-0 col-lg-5 mt-5 mb-0">
-					<img src="{{ site.baseurl }}/assets/images/dev/community.png" class="d-block img-fluid" alt="Community" loading="lazy">
+					<img src="{{ site.baseurl }}/assets/images/community.webp" class="d-block img-fluid" alt="Community" loading="lazy">
 				</div>
 
 				<div class="col-lg-7 mt-5 mt-lg-0 mb-0 text-lg">
@@ -161,7 +161,7 @@
 				<h1 class="display-5 col-lg-7">Join as a Team</h1>
 				
 				<div class="col-md-8 offset-md-2 offset-lg-0 col-lg-5 mt-5 mb-0">
-					<img src="{{ site.baseurl }}/assets/images/dev/team.png" class="d-block img-fluid" alt="Team" loading="lazy">
+					<img src="{{ site.baseurl }}/assets/images/team.webp" class="d-block img-fluid" alt="Team" loading="lazy">
 				</div>
 				
 				<div class="col-lg-7 mt-5 mt-lg-0 mb-0 text-lg">
@@ -195,8 +195,9 @@
 				  
 				<div class="col-12 mt-5 mb-5 mb-md-0">
 					<div class="p2pu-slide-container slick-init">
-							
-						{% for card in site.data.landing_page_cards.cards %}						
+            {% assign cards = site.data.landing_page_cards.cards | concat: site.data.landing_page_cards.testimonials | sort: "order" | reverse %}
+
+						{% for card in cards %}						
 						<article class="slide ">
 							{% if card.cardtype == 'testimonial'  %}	
 							<div class="card-testimonial card row g-0 p-3 {{ card.type }}">
@@ -206,7 +207,7 @@
 								<div class="card-footer attribution col-12">
 									<div class="row">
 										<div class="image col-12 col-md-4 pe-md-0">
-										  <img class="mx-auto mx-md-0" src="/assets/images/testimonials/{{ card.img }}" alt="{{ card.name }}">
+										  <img class="mx-auto mx-md-0" src="{{ site.baseurl }}{{ card.img }}" alt="{{ card.name }}">
 										</div>
 										<div class="text col-12 col-md-8 text-center text-md-start">
 										  <span class="name fw-bold">{{ card.name }}</span>
@@ -224,11 +225,11 @@
 									{% if card.img contains 'http'  %}	
 										<img src="{{ card.img }}" alt="{{ card.title }}" class="card-img-top" />
 									{% else %}
-										<img src="{{ site.baseurl }}/assets/images/case-studies/{{ card.img }}" alt="{{ card.title }}" class="card-img-top" />
+										<img src="{{ site.baseurl }}{{ card.img }}" alt="{{ card.title }}" class="card-img-top" />
 									{% endif %}
 								</div>
 								<div class="card-header">
-									<span class="eyebrow">Case Study</span>
+                  <span class="eyebrow">{{ card.cardtype }}</span>
 									<h3 class="card-title">{{ card.title }}</h3>
 								</div>
 							</div>

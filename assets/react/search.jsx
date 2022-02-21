@@ -10,6 +10,9 @@ let initialState = {}
 if (elem.dataset.teamId) {
   initialState["team_id"] = elem.dataset.teamId
 }
+if (elem.dataset.cuCredit) {
+  initialState["cu_credit"] = true;
+}
 //TODO let origin = elem.dataset.apiOrigin;
 let origin = 'https://learningcircles.p2pu.org';
 
