@@ -39,6 +39,13 @@ links:
       related to HTML, CSS, and Javascript.
     img: /assets/images/topics/mdnwebdocs.jpg
     url: https://developer.mozilla.org/en-US/docs/Learn
+  - description: "A repository of freely available programming resources, including
+      ebooks, cheat sheets, problem sets, podcasts, and other materials. Also
+      available in this easy-to-read website:
+      <https://ebookfoundation.github.io/free-programming-books/>"
+    title: "EbookFoundation: Free Programming Books | GitHub"
+    url: https://github.com/EbookFoundation/free-programming-books
+    img: /assets/images/topics/free-ebook-foundation.png
 featured: true
 search_topics:
   - computer-programming
