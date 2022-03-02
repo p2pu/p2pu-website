@@ -2,7 +2,7 @@
 layout: job-listing
 title: Front End & Web Design Consultant (Remote Contractor)
 date-posted: March 04/2021
-publised: true
+published: true
 ---
 ## Background
 Peer 2 Peer University (P2PU) is a U.S.-based non-profit organization that cultivates peer learning in public spaces around the world through an informal education model that we call learning circles. Our organizations’ role supporting learning circles is multifaceted: we build open source software for managing meetings, we train groups to facilitate learning circles, we maintain an online community for facilitators, and we develop and curate open educational resources. We recently launched two exciting new initiatives: an [institutional membership program](https://www.p2pu.org/en/teams/) for library systems and [credit-bearing learning circles](https://info.p2pu.org/2021/07/21/bringing-college-credits-to-libraries-with-peer-led-learning-circles/) in partnership with College Unbound. 
