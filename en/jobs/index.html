@@ -13,7 +13,7 @@ image_path: /assets/images/about/p2pu_lego.jpg
     <div class="container">
         <h2>Open Positions</h2>
         <div class="row grid g-4 pt-4">
-          {% assign published_jobs = site.jobs | where: "publised", true %}
+          {% assign published_jobs = site.jobs | where: "published", true %}
           {% for job in published_jobs %}
             <div class="grid-item col-12 p-2 bg-lighter">
                 <div class="row d-flex p-1">

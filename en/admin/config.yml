@@ -27,6 +27,17 @@ collections:
       - {label: "Featured", name: "featured", widget: "boolean"}
       - {label: "Search topics", name: "search_topics", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "jobs"
+    label: "Jobs" # Used in the UI
+    folder: "_jobs" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date posted", name: "date-posted", widget: "string"}
+      - {label: "Published", name: "published", widget: "boolean"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - label: "Site data"
     name: "data"
     files:
