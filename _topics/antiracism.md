@@ -60,6 +60,13 @@ links:
       is about 6 weeks long and includes facilitator resources.
     img: /assets/images/topics/abolitionistfutures.jpg
     url: https://abolitionistfutures.com/full-reading-list
+  - description: This resource from Teaching Tolerance, a project of the Southern
+      Poverty Law Center, includes strategies to help facilitators engage with
+      difficult conversations around histories of oppression.
+    title: "Let’s Talk!: Discussing Race, Racism, and Other Difficult Topics with
+      Students"
+    url: https://www.learningforjustice.org/sites/default/files/general/TT%20Difficult%20Conversations%20web.pdf
+    img: /assets/images/topics/teaching-tolerance.png
 featured: true
 search_topics:
   - antiracism
