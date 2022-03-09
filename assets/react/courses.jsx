@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Search, BrowseCourses } from 'p2pu-components';
+import SearchProvider from 'p2pu-components/dist/Search/SearchProvider'
+import SearchCourses from 'p2pu-components/dist/Courses/SearchCourses'
 
 import 'p2pu-components/dist/build.css';
 
@@ -13,11 +14,12 @@ const elem = document.getElementById('search-courses-component');
 let origin = 'https://learningcircles.p2pu.org';
 
 ReactDOM.render(
-  <Search
+  <SearchProvider
     searchSubject={'courses'}
     origin={origin}
-    Browse={BrowseCourses}
     onSelectResult={handleSelectResult}
     initialState={{languages:['en']}}
-  />, document.getElementById('search-courses-component')
+  >
+    <SearchCourses/>
+  </SearchProvider>, document.getElementById('search-courses-component')
 );

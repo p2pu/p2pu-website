@@ -113,6 +113,7 @@ jobs:
 
       - name: run test
         run: docker run --rm --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:3000 p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
+        continue-on-error: true
 
       - run: aws s3 sync ./_site/ s3://$S3_BUCKET/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read
         shell: bash
