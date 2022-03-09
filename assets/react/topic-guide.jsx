@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import jsonp from 'jsonp';
 
-import {CourseCard} from 'p2pu-components';
+import CourseCard from 'p2pu-components/dist/Courses/CourseCard';
 import 'p2pu-components/dist/build.css';
 
 const elem = document.getElementById('topic-courses');
