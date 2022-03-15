@@ -1,6 +1,6 @@
 ---
 title: History
-img: /assets/images/topics/history-topic-guide.png
+img: /assets/images/topics/history-topic-guide-1-.png
 excerpt: ""
 links:
   - title: "The American Yawp: A Massively Collaborative Open U.S. History Textbook"
