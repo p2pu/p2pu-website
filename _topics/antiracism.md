@@ -1,6 +1,6 @@
 ---
 title: Antiracism
-img: /assets/images/topics/antiracism.jpg
+img: /assets/images/topics/antiracism-1-.png
 excerpt: ""
 links:
   - title: Everyday Social Justice
