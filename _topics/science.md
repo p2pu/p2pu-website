@@ -1,6 +1,6 @@
 ---
 title: Science
-img: /assets/images/topics/science-collage-compressed.png
+img: /assets/images/topics/science-collage.png
 excerpt: ""
 links:
   - title: Helping Adult Learners Learn about Science | Informal Science
