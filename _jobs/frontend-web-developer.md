@@ -8,9 +8,7 @@ published: true
 
 Peer 2 Peer University (P2PU) is a U.S.-based non-profit organization that cultivates peer learning in public spaces around the world through an informal education model that we call learning circles. Our organizations’ role supporting learning circles is multifaceted: we build open source software for managing meetings, we train groups to facilitate learning circles, we maintain an online community for facilitators, and we develop and curate open educational resources. We recently launched two exciting new initiatives: an [institutional membership program](https://www.p2pu.org/en/teams/) for library systems and [credit-bearing learning circles](https://info.p2pu.org/2021/07/21/bringing-college-credits-to-libraries-with-peer-led-learning-circles/) in partnership with College Unbound. 
 
-We are now looking for a part-time contractor to support the UI/UX and front-end development of our open source learning circle tools and resources. This initial contract will focus on three distinct software features: supporting learning circles with multiple facilitators, deploying custom surveys on a team-by-team basis, and implementing a notification tool for upcoming learning circles. Upon successful completion of this project, there may be additional projects to follow.
-
-We estimate this work to take approximately 40 days of work, to be completed on a part time basis between May and July 2022 at a rate between $300-$400/day depending on your level of experience. You can be based anywhere in the world so long as you can regularly meet between 8AM–12PM Eastern US time.
+We are looking to build an ongoing relationship with a contractor to support the UI/UX and front-end development of our open source learning circle tools and resources. To begin, we have scoped out a project between May-July 2022 at a rate between $300-$400/day depending on your level of experience. You can be based anywhere in the world so long as you can regularly meet between 8AM–12PM Eastern US time.
 
 ## Responsibilities
 
