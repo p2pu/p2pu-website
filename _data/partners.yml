@@ -25,6 +25,9 @@
 - name: Children's Museum of Pittsburgh
   url: https://pittsburghkids.org/
 
+- name: College Unbound
+  url: https://www.collegeunbound.edu/
+
 - name: Detroit Public Library
   url: http://www.detroitpubliclibrary.org/
 
@@ -108,6 +111,9 @@
 
 - name: Providence Public Library
   url: http://www.provlib.org/
+  
+- name: Queens Public Library
+  url: https://www.queenslibrary.org/
   
 - name: Rhode Island Library Association
   url: https://rilibraries.org/
