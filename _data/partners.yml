@@ -21,6 +21,9 @@
 
 - name: Centre de Recherches Interdisciplinaires
   url: https://cri-paris.org/
+  
+- name: Children's Museum of Pittsburgh
+  url: https://pittsburghkids.org/
 
 - name: Detroit Public Library
   url: http://www.detroitpubliclibrary.org/
@@ -36,6 +39,12 @@
 
 - name: Free Library of Philadelphia
   url: https://www.freelibrary.org/
+  
+- name: Global Voices
+  url: https://globalvoices.org/
+
+- name: Greensboro Public Library
+  url: https://library.greensboro-nc.gov/
 
 - name: Information Society Development Foundation
   url: http://frsi.org.pl/en/
@@ -52,6 +61,9 @@
 - name: Los Angeles Public Library
   url: https://www.lapl.org/
 
+- name: Maendeleo Foundation
+  url: https://maendeleofoundation.org/
+  
 - name: Miami-Dade Public Library System
   url: http://www.mdpls.org/
 
@@ -67,6 +79,9 @@
 - name: Multnomah County Library
   url: https://multcolib.org/
 
+- name: National Library of Uganda
+  url: https://nlu.go.ug/
+ 
 - name: Notre Dame Education Center
   url: http://www.ndecboston.org/
 
@@ -84,21 +99,33 @@
 
 - name: Pierce County Library
   url: https://www.piercecountylibrary.org/
+  
+- name: Prince William Public Libraries
+  url: https://www.pwcva.gov/department/library
 
 - name: Progress Foundation
   url: http://www.progressfoundation.ro/en/
 
-- name: Children's Museum of Pittsburgh
-  url: https://pittsburghkids.org/
-
 - name: Providence Public Library
   url: http://www.provlib.org/
+  
+- name: Rhode Island Library Association
+  url: https://rilibraries.org/
 
 - name: Richland County Library
   url: https://www.richlandlibrary.com/
 
 - name: San Jose Public Library
   url: https://www.sjpl.org/
+
+- name: Saint Louis Public Library
+  url: https://www.slpl.org/
+
+- name: Saint Paul Public Library
+  url: https://sppl.org/
+
+- name: Spokane County Library District
+  url: https://www.scld.org/
 
 - name: Tampa-Hillsborough County Public Library Cooperative
   url: http://www.hcplc.org/
@@ -115,7 +142,7 @@
 - name: Twin Lakes Library System
   url: http://tllsga.org/
 
-- name: West Vancouver Memorial
+- name: West Vancouver Memorial Library
   url: Library https://westvanlibrary.ca/
 
 - name: Wichita Public Library
