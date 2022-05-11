@@ -317,6 +317,54 @@ bundles:
   </div>
 </section>
 
+<section class="teams" id="teams">
+    <div class="container">
+        <h2>Our Founding Teams Include:</h2>
+        <div class="row grid">
+          
+            {% for team in site.data.teams.items %}
+            {% if team.membership %}
+            {% assign organizers = team.facilitators | where:"role","ORGANIZER" %}
+            <div class="grid-item col-md-6 col-lg-4">
+                <div class="card teams">
+                    <div class="card-image">
+                        {% if team.image_url %}
+                        <img class="card-img-top" src="{{team.image_url}}" />
+                        {% else if team.coordinates %}
+                        <img class="card-img-top" src="https://api.mapbox.com/styles/v1/mapbox/light-v9/static/{{ team.coordinates.longitude }},{{ team.coordinates.latitude }},{{ team.zoom }},0,0/800x200?access_token={{ site.mapbox_access_token }}&logo=false" />
+                        {% endif %}
+                    </div>
+             
+                    <div class="card-header">
+                        <h3>{{ team.name }}</h3>
+                    </div>
+                    <div class="card-body">
+                        {% if organizers %}
+                 
+                        <span>Organized by
+                            {% for organizer in organizers limit:3 %}
+                                {% if forloop.last %}
+                                  {{ organizer.first_name }}
+                                {% else %}
+                                  {{ organizer.first_name|append:", " }}
+                                {% endif %}
+                            {% endfor %}
+                        </span>
+                        {% endif %}
+                        <span>Established: {{ team.date_established }}</span>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn p2pu-btn btn-sm gray col-sm-auto m-2"  href="/{{ team.page_slug }}">See Team Page</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+  
+        </div>
+    </div>
+</section>
+
 
 <section class="contact">
   <div class="container">
