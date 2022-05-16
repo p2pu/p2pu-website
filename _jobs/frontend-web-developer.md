@@ -2,7 +2,7 @@
 layout: job-listing
 title: Front End Web Developer (Remote Contract Position)
 date-posted: March 2, 2022
-published: true
+published: false
 ---
 ## Background
 
