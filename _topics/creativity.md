@@ -25,7 +25,7 @@ links:
 featured: true
 course_data: creativity
 search_topics:
-  - creativity
+  - creativity-guide
 ---
 ### About This Topic
 
