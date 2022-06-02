@@ -4,18 +4,24 @@
 # For case study images, link to external URL or place in /assets/images/case-studies directory
 
 cards:
+  
+  - title: Meet Vuyani!
+    url: https://info.p2pu.org/2022/06/02/meet-vuyani/
+    img: https://info.p2pu.org/wp-content/uploads/2022/06/vuyani.png
+    cardtype: BLOG POST
+    order: 15
+  
+  - title: Facilitator Spotlight: Five Questions with Julie Chahal
+    url: https://info.p2pu.org/2022/03/31/facilitator-spotlight-five-questions-with-julie-chahal/
+    img: https://info.p2pu.org/wp-content/uploads/2022/03/blog-post.png
+    cardtype: CASE STUDY
+    order: 13
 
   - title: Making AI Accessible with Learning Circles
     url: https://info.p2pu.org/2021/12/16/making-ai-accessible-with-learning-circles/
     img: https://info.p2pu.org/wp-content/uploads/2021/12/We_Are_AI_Cover-logo-768x288.png
     cardtype: CASE STUDY
     order: 14
-    
-  - title: Meet Lydian, our new Community Coordinator!
-    url: https://info.p2pu.org/2021/12/06/meet-lydian/
-    img: https://info.p2pu.org/wp-content/uploads/2021/12/lydian-225x300.jpg
-    cardtype: BLOG POST
-    order: 13
 
   - title: Virtual Pathways from Training to Practice in Rhode Island
     url: "https://info.p2pu.org/2021/09/09/case-study-rila/"
