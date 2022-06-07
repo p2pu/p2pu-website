@@ -29,4 +29,13 @@
     margin-top: -160px;
     visibility: hidden;
   }
+
+  #current-teams::before {
+    content: '';
+    display: block;
+    height: 160px;
+    margin-top: -160px;
+    visibility: hidden;
+  }
+
 }

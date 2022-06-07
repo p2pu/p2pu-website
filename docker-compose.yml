@@ -6,16 +6,19 @@ services:
     working_dir: /opt/app
     ports:
     - 4000:4000
+    #- 8888:8888
     volumes:
     - .:/opt/app
     - .bundler:/opt/bundler
     environment:
     - BUNDLE_PATH=/opt/bundler
-    command: bundle exec jekyll serve -H 0.0.0.0 --watch
+    command: bundle exec jekyll serve -H 0.0.0.0 --watch --config _config.yml,_config.dev.yml
   node:
-    image: node:12-buster-slim
+    image: node:14
     user: 1000:1000
     working_dir: /opt/app
+    #ports:
+    #- 5555:5555
     volumes:
     - .:/opt/app
     command: npm run watch

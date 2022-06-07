@@ -18,6 +18,11 @@ links:
       from the Pew Research Center.
     img: /assets/images/topics/digital-readiness.png
     url: https://www.pewresearch.org/internet/2016/09/20/digital-readiness-gaps/
+  - url: https://edtech.worlded.org/resource/digital-literacy-self-assessment-tool/
+    title: Digital Literacy Self-Assessment Tool
+    description: Learners can use this skills inventory to let facilitators know
+      their comfort level using different apps and devices.
+    img: /assets/images/topics/edtech-3-10-main-1024x418-2-.png
 featured: true
 search_topics:
   - digital literacy

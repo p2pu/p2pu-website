@@ -23,7 +23,7 @@ top_level:
         url: https://docs.p2pu.org/teams/about-teams
         external: true
       - text: Current Teams
-        url: /en/about/#teams
+        url: /en/teams/#current-teams
   - text: About
     url:
     submenu:
