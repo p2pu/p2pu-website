@@ -10,8 +10,7 @@ const handleSelectResult = course => {
   window.location.href = selectCourse;
 }
 const elem = document.getElementById('search-courses-component');
-//TODO const origin = elem.dataset.apiOrigin;
-let origin = 'https://learningcircles.p2pu.org';
+const origin = elem.dataset.apiOrigin;
 
 ReactDOM.render(
   <SearchProvider
