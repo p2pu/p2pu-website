@@ -16,7 +16,7 @@ This will setup a dynamic staging environment where you can preview your changes
 The following content items are stored in YML files in the `_data` directory: FAQs, facilitator profiles, facilitator resources, funders, partners, people, presentations, projects, and the navigation items.
 
 ### Facilitator profiles
-To change the facilitor profiles, edit the text in the file `/_data/facilitators.yml`.
+To change the facilitator profiles, edit the text in the file `/_data/facilitators.yml`.
 
 The corresponding images are in `assets/images/facilitate`. The images should have a *maximum width of 2160px and a minimum width of 660px*.
 
@@ -31,6 +31,9 @@ For development on your local workstation, you need [Docker](https://docs.docker
 Be sure to check out all git submodules
 
 ### Building the site
+
+Check out the code from GitHub and the submodules
+> 
 
 Run the following command to get the needed data from the site:
 ```
@@ -56,6 +59,8 @@ Start the server and webpack
 ```
 docker-compose up
 ```
+
+   docker-compose run --rm node bash -c "cd p2pu-components && npm run transpile"
 
 ### Overview
 
