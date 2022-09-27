@@ -6,9 +6,11 @@ import jsonp from 'jsonp';
 import CourseCard from 'p2pu-components/dist/Courses/CourseCard';
 import 'p2pu-components/dist/build.css';
 
+import DiscourseTopic from './components/Topic/DiscourseTopic';
+
 const elem = document.getElementById('topic-courses');
-//TODO const origin = elem.dataset.apiOrigin;
-const origin = 'https://learningcircles.p2pu.org';
+const origin = elem.dataset.apiOrigin;
+//const origin = 'https://learningcircles.p2pu.org';
 const props = JSON.parse(document.getElementById('topic-course-data').textContent);
 
 const TopicCourses = (props) => {
@@ -66,4 +68,12 @@ const CourseList = ({courses = []}) => (
   </div>
 );
 
-ReactDOM.render(<TopicCourses  origin={origin} {...props}/>, elem);
+ReactDOM.render(<TopicCourses origin={origin} {...props}/>, elem);
+
+
+const discourseElem = document.getElementById('discourse-topic');
+if (discourseElem){
+  const discourseTopicUrl = discourseElem.dataset.discourseTopicUrl;
+  ReactDOM.render(<DiscourseTopic topicUrl={discourseTopicUrl} />, discourseElem);
+}
+
