@@ -1,5 +1,6 @@
 ---
 title: Antiracism
+topic_slug: antiracism
 img: /assets/images/topics/antiracism-1-.png
 excerpt: ""
 links:
@@ -68,8 +69,6 @@ links:
     url: https://www.learningforjustice.org/sites/default/files/general/TT%20Difficult%20Conversations%20web.pdf
     img: /assets/images/topics/teaching-tolerance.png
 featured: true
-search_topics:
-  - antiracism
 ---
 ### About This Topic
 

@@ -14,6 +14,7 @@ collections:
     public_folder: /assets/images/topics
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Topic Slug", name: "topic_slug", widget: "string"}
       - {label: "Image", name: "img", widget: "image"}
       - {label: "Excerpt", name: "excerpt", widget: "markdown", required: false}
       - {label: "Discourse Topic URL", name: "discourse_topic_url", widget: "string", required: false}
@@ -26,7 +27,6 @@ collections:
           - { label: "URL", name: 'url', widget: 'string' }
           - { label: "Image", name: "img", widget: "image" }
       - {label: "Featured", name: "featured", widget: "boolean"}
-      - {label: "Search topics", name: "search_topics", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "jobs"
     label: "Jobs" # Used in the UI

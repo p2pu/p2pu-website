@@ -1,5 +1,6 @@
 ---
 title: Digital Literacy
+topic_slug: digital literacy
 img: /assets/images/topics/digital-literacy.jpg
 excerpt: ""
 links:
@@ -24,8 +25,6 @@ links:
       their comfort level using different apps and devices.
     img: /assets/images/topics/edtech-3-10-main-1024x418-2-.png
 featured: true
-search_topics:
-  - digital literacy
 ---
 ### About This Topic
 

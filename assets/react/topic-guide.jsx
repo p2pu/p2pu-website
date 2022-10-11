@@ -11,20 +11,19 @@ import DiscourseTopic from './components/Topic/DiscourseTopic';
 const elem = document.getElementById('topic-courses');
 const origin = elem.dataset.apiOrigin;
 //const origin = 'https://learningcircles.p2pu.org';
-const props = JSON.parse(document.getElementById('topic-course-data').textContent);
+const topicSlug = elem.dataset.topicSlug;
 
 const TopicCourses = (props) => {
-  const topics = props.topics || [];
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    if (!props.topics) {
+    if (!props.topicSlug) {
       return; // Don't load courses if no topics are defined
     }
     const searchParams = new URLSearchParams({
       limit: 5,
       languages: 'en',
       order: 'usage',
-      topics: topics.join(','),
+      topics: topicSlug,
     });
     let searchUrl = `${props.origin}/api/courses/?${searchParams.toString()}`;
     jsonp(searchUrl, null, (error, data) => {
@@ -68,7 +67,7 @@ const CourseList = ({courses = []}) => (
   </div>
 );
 
-ReactDOM.render(<TopicCourses origin={origin} {...props}/>, elem);
+ReactDOM.render(<TopicCourses origin={origin} topicSlug={topicSlug}/>, elem);
 
 
 const discourseElem = document.getElementById('discourse-topic');

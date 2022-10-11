@@ -1,5 +1,6 @@
 ---
 title: Communication
+topic_slug:  communication-guide
 img: /assets/images/topics/communication-1-.png
 links:
   - url: https://www.thebalancecareers.com/communication-skills-list-2063779
@@ -45,8 +46,6 @@ links:
     url: http://www.unleashyourwritingpower.com/writing-tips/running-a-writing-group/
     img: /assets/images/topics/judi-goodwin-workshops.png
 featured: true
-search_topics:
-  - communication-guide
 ---
 ## About This Topic
 

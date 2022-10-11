@@ -1,5 +1,6 @@
 ---
 title: Job Readiness
+topic_slug: job skills
 img: /assets/images/topics/job-readiness.jpg
 excerpt: ""
 links:
@@ -30,8 +31,6 @@ links:
     title: "How to Prepare for Job Interviews | Coursera "
     img: /assets/images/topics/coursera-blog.jpg
 featured: true
-search_topics:
-  - job skills
 ---
 
 ### About This Topic
