@@ -1,5 +1,6 @@
 ---
 title: Climate Change
+topic_slug: climate change
 img: /assets/images/topics/climate-change.jpg
 excerpt: Climate change.
 links:
@@ -30,8 +31,6 @@ links:
     img: /assets/images/topics/un-climate.png
     url: https://www.un.org/en/climatechange/
 featured: true
-search_topics:
-- climate change
 ---
 
 ### About This Topic

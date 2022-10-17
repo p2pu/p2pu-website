@@ -1,23 +1,36 @@
 ---
 title: Job Readiness
+topic_slug: job skills
 img: /assets/images/topics/job-readiness.jpg
-excerpt: |
+excerpt: ""
 links:
   - title: Remote Job Readiness Resources
-    description: A remote-forward list of strategies for facilitating job search programs during COVID, from Switchboard.
+    description: A remote-forward list of strategies for facilitating job search
+      programs during COVID, from Switchboard.
     img: /assets/images/topics/switchboard.png
     url: https://switchboardta.org/blog/using-virtual-job-readiness-resources-tips-and-materials-for-clients-with-online-access/
   - title: CareerOneStop
-    description: A U.S. Department of Labor resource that offers information to help prepare for or accompany a learning circle. Many resources are [organized](https://www.careeronestop.org/ResourcesFor/resources-for.aspx) by type of job seeker (young adult, getting back to work, etc.)
+    description: A U.S. Department of Labor resource that offers information to help
+      prepare for or accompany a learning circle. Many resources are
+      [organized](https://www.careeronestop.org/ResourcesFor/resources-for.aspx)
+      by type of job seeker (young adult, getting back to work, etc.)
     img: /assets/images/topics/onestop.png
     url: https://www.careeronestop.org/
-  - title: GCFLearnFree Work & Career Resources 
-    description: Free self-paced lessons available in English, Spanish, and Portuguese. GCP covers a wide range of topics including career planning, job searching, and interviewing, and also supplies [free teacher guides](https://edu.gcfglobal.org/en/gcfteacherguides/career/1/) to support effective use of their content.
+  - title: GCFLearnFree Work & Career Resources
+    description: Free self-paced lessons available in English, Spanish, and
+      Portuguese. GCP covers a wide range of topics including career planning,
+      job searching, and interviewing, and also supplies [free teacher
+      guides](https://edu.gcfglobal.org/en/gcfteacherguides/career/1/) to
+      support effective use of their content.
     img: /assets/images/topics/gcf.jpg
     url: https://edu.gcfglobal.org/en/subjects/work/
+  - url: https://blog.coursera.org/how-to-prepare-for-job-interviews/
+    description: This blog post from Coursera breaks down strategies for preparing
+      professional anecdotes, doing company research, and asking questions
+      during the interview process.
+    title: "How to Prepare for Job Interviews | Coursera "
+    img: /assets/images/topics/coursera-blog.jpg
 featured: true
-search_topics:
-  - job skills
 ---
 
 ### About This Topic

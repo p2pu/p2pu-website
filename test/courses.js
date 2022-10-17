@@ -8,10 +8,10 @@ describe('when opening the courses page', function () {
     page = await browser.newPage();
     let pageUrl = `${TEST_SERVER_URL}/en/learning-resources/`;
     await page.setRequestInterception(true);
-    let apiUrl = 'https://learningcircles.p2pu.org/api/courses';
+    let apiRegex = /http.*\/api\/courses/;
     let apiData = fs.readFileSync('./test/fixtures/courses.json');
     page.on('request', interceptedRequest => {
-      if (interceptedRequest.url().startsWith(apiUrl)) {
+      if (interceptedRequest.url().match(apiRegex)) {
         let requestUrl = new url.URL(interceptedRequest.url());
         let callback = requestUrl.searchParams.get('callback');
         let body = apiData;

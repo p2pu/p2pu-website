@@ -1,5 +1,6 @@
 ---
 title: Business and Entrepreneurship
+topic_slug: "business-and-entrepreneurship"
 img: /assets/images/topics/business-and-entrepreneurship.png
 excerpt: ""
 links:
@@ -44,8 +45,6 @@ links:
       authentic tools and platforms.
     img: /assets/images/topics/thinkcerca.png
 featured: true
-search_topics:
-  - business-and-entrepreneurship
 ---
 ### About This Topic
 

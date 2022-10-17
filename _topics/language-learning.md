@@ -1,5 +1,7 @@
 ---
 title: Language Learning
+topic_slug: language-learning
+
 img: /assets/images/topics/✳️-main-image.png
 links:
   - title: Open Culture
@@ -92,8 +94,6 @@ links:
     url: https://esllibrary.com/blog/inclusive-language-2021
     img: /assets/images/topics/inclusive-language-2021-min.png
 featured: true
-search_topics:
-  - language-learning
 ---
 <!--StartFragment-->
 

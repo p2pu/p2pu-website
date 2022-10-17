@@ -46,14 +46,6 @@ export const API_ENDPOINTS = {
     baseUrl: `${API_BASE_URL}/api/courses/topics/?`,
     searchParams: []
   },
-  stats: {
-    baseUrl: `${API_BASE_URL}/api/landing-page-stats/?`,
-    searchParams: []
-  },
-  landingPage: {
-    baseUrl: `${API_BASE_URL}/api/landing-page-learning-circles/?`,
-    searchParams: []
-  },
   whoami: {
     baseUrl: `${API_BASE_URL}/en/accounts/fe/whoami/`
   },

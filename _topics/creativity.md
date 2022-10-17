@@ -1,5 +1,6 @@
 ---
 title: Creativity
+topic_slug: creativity-guide
 img: /assets/images/topics/creativity.jpg
 excerpt: ""
 links:
@@ -24,8 +25,6 @@ links:
       timelines, resources, and advice for how to examine different eras.
 featured: true
 course_data: creativity
-search_topics:
-  - creativity-guide
 ---
 ### About This Topic
 

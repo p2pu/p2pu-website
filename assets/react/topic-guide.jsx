@@ -6,23 +6,24 @@ import jsonp from 'jsonp';
 import CourseCard from 'p2pu-components/dist/Courses/CourseCard';
 import 'p2pu-components/dist/build.css';
 
+import DiscourseTopic from './components/Topic/DiscourseTopic';
+
 const elem = document.getElementById('topic-courses');
-//TODO const origin = elem.dataset.apiOrigin;
-const origin = 'https://learningcircles.p2pu.org';
-const props = JSON.parse(document.getElementById('topic-course-data').textContent);
+const origin = elem.dataset.apiOrigin;
+//const origin = 'https://learningcircles.p2pu.org';
+const topicSlug = elem.dataset.topicSlug;
 
 const TopicCourses = (props) => {
-  const topics = props.topics || [];
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    if (!props.topics) {
+    if (!props.topicSlug) {
       return; // Don't load courses if no topics are defined
     }
     const searchParams = new URLSearchParams({
       limit: 5,
       languages: 'en',
       order: 'usage',
-      topics: topics.join(','),
+      topics: topicSlug,
     });
     let searchUrl = `${props.origin}/api/courses/?${searchParams.toString()}`;
     jsonp(searchUrl, null, (error, data) => {
@@ -35,10 +36,9 @@ const TopicCourses = (props) => {
     });
   }, []);
 
-  const moreLink = topics.map(t=>`topics=${t}`).join('&');
   return <>
     <CourseList {...props} courses={courses} />
-    <a href={`/en/learning-resources/?${moreLink}`}>See more resources on this topic</a>
+    <a href={`/en/learning-resources/?topics=${topicSlug}`}>See more resources on this topic</a>
   </>
 }
 
@@ -66,4 +66,12 @@ const CourseList = ({courses = []}) => (
   </div>
 );
 
-ReactDOM.render(<TopicCourses  origin={origin} {...props}/>, elem);
+ReactDOM.render(<TopicCourses origin={origin} topicSlug={topicSlug}/>, elem);
+
+
+const discourseElem = document.getElementById('discourse-topic');
+if (discourseElem){
+  const discourseTopicUrl = discourseElem.dataset.discourseTopicUrl;
+  ReactDOM.render(<DiscourseTopic topicUrl={discourseTopicUrl} />, discourseElem);
+}
+

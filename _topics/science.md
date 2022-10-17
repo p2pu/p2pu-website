@@ -1,5 +1,6 @@
 ---
 title: Science
+topic_slug: science-guide
 img: /assets/images/topics/science-collage.png
 excerpt: ""
 links:
@@ -46,8 +47,6 @@ links:
     url: https://www.apa.org/monitor/2022/03
     img: /assets/images/topics/monitor-on-psychology-apa.png
 featured: true
-search_topics:
-  - science-guide
 ---
 Science is a dynamic and ever-evolving process for building our understanding of how the world works, and it helps us describe these systems in meaningful, effective ways. Modern science encompasses the natural sciences (biology, chemistry, and physics), the formal sciences (computer science and mathematics), and the social sciences (sociology, economics, and psychology). Whether motivated by general curiosity or seeking specific answers to pressing questions, learners can [co-learn](https://docs.p2pu.org/facilitation/facilitation-basics) with facilitators to find personally relevant answers, build valuable skills, and ask exciting new questions.
 
