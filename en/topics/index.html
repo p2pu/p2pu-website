@@ -1,22 +1,16 @@
 ---
-title: Learning Resources
+title: Topic guides
 layout: base
-header: page-header-2
-text: Don’t see what you’re looking for?
-button1: <a href="https://learningcircles.p2pu.org/en/course/create/" class="col-12 btn p2pu-btn secondary orange btn-sm-sm btn-xl-base">Add a Resource</a>
-button2: <a href='https://course-in-a-box.p2pu.org/' class="col-12 btn p2pu-btn orange btn-sm-sm btn-xl-base">Create a Resource</a>
-slug: courses
+header: page-header-1
+slug: topics
 description: Browse guides to popular learning circle topics and select materials for your learning circle from our library of free learning resources, tested and curated by the P2PU community. 
-bundles:
-  - courses
 ---
 <div class="tab-content" id="learning-resources-nav-tabsContent">
   <section class="subheader composition" id="topic-guides">
     <div class="container">
       <h2 class="sans-serif">Topic Guides</h2>
       <div class="row grid">
-        {% assign topics = site.topics | slice: 0, 3 %}
-        {% for topic in topics %}
+        {% for topic in site.topics %}
         {% if topic.featured %}
         <div class="grid-item col-md-6 col-lg-4">
           <div class="card topic cover-link">
@@ -32,14 +26,6 @@ bundles:
         {% endif %}
         {% endfor %}
       </div>
-      <div class="text-center"><a href="/en/topics/" class="btn p2pu-btn orange btn-sm-sm btn-xl-base">Browse all guides</a></div>
-    </div>
-  </section>
-
-  <section class="search course-search" id="course-search">
-    <div class="container">
-      <h2 class="sans-serif">Learning Resources</h2>
-      <div id="search-courses-component" data-api-origin="{{site.api_origin}}"></div>
     </div>
   </section>
 
