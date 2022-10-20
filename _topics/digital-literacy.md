@@ -3,6 +3,7 @@ title: Digital Literacy
 topic_slug: digital literacy
 img: /assets/images/topics/digital-literacy.jpg
 excerpt: ""
+discourse_topic_url: https://community.p2pu.org/t/digital-literacy-topic-guide/5765
 links:
   - title: Tips for Helping Someone Learn to Use Technology
     description: A how-to guide with helpful suggestions from our friends at
