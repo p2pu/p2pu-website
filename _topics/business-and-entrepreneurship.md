@@ -1,8 +1,9 @@
 ---
 title: Business and Entrepreneurship
-topic_slug: "business-and-entrepreneurship"
+topic_slug: business-and-entrepreneurship
 img: /assets/images/topics/business-and-entrepreneurship.png
 excerpt: ""
+discourse_topic_url: https://community.p2pu.org/t/business-entrepreneurship-topic-guide/5760
 links:
   - url: "https://www.babson.edu/academics/executive-education/babson-insight/entre\
       preneurship-education/four-approaches-teaching-entrepreneurship-method/# "
