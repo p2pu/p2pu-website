@@ -3,6 +3,9 @@ title: Creativity
 topic_slug: creativity-guide
 img: /assets/images/topics/creativity.jpg
 excerpt: ""
+discourse_topic_url: https://community.p2pu.org/t/computer-programming-topic-guide/5763
+featured: true
+course_data: creativity
 links:
   - title: IDEO’s Design Thinking Defined
     description: Free courses, videos, and other resources covering all of the
@@ -23,8 +26,6 @@ links:
     description: Interested in an art history learning circle? There's a lot of it
       to dig through! This useful overview of the art periods includes
       timelines, resources, and advice for how to examine different eras.
-featured: true
-course_data: creativity
 ---
 ### About This Topic
 
