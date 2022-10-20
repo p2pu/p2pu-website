@@ -1,8 +1,8 @@
 ---
 title: Language Learning
 topic_slug: language-learning
-
 img: /assets/images/topics/✳️-main-image.png
+discourse_topic_url: y.p2pu.org/t/language-learning-topic-guide/5768
 links:
   - title: Open Culture
     description: >-
