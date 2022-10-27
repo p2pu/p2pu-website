@@ -3,7 +3,7 @@ title: Computer Programming
 topic_slug: computer-programming
 img: /assets/images/topics/computer-programming.jpg
 excerpt: ""
-discourse_topic_url: ""
+discourse_topic_url: https://community.p2pu.org/t/computer-programming-topic-guide/5763
 links:
   - title: Scratch
     description: A free block-based visual programming language used to teach coding

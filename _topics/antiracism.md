@@ -3,6 +3,7 @@ title: Antiracism
 topic_slug: antiracism
 img: /assets/images/topics/antiracism-1-.png
 excerpt: ""
+discourse_topic_url: https://community.p2pu.org/t/antiracism-topic-guide/5759
 links:
   - title: Everyday Social Justice
     description: A library of 2-hour, conversation-based lessons all taught from an

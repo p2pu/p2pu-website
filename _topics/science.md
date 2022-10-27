@@ -3,6 +3,7 @@ title: Science
 topic_slug: science-guide
 img: /assets/images/topics/science-collage.png
 excerpt: ""
+discourse_topic_url: https://community.p2pu.org/t/science-topic-guide/5769
 links:
   - title: Helping Adult Learners Learn about Science | Informal Science
     description: This blog post from InformalScience.org shares the practices and

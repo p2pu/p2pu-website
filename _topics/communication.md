@@ -1,7 +1,8 @@
 ---
 title: Communication
-topic_slug:  communication-guide
+topic_slug: communication-guide
 img: /assets/images/topics/communication-1-.png
+discourse_topic_url: https://community.p2pu.org/t/communication-topic-guide/5762
 links:
   - url: https://www.thebalancecareers.com/communication-skills-list-2063779
     title: Communication Skills for Workplace Success

@@ -44,7 +44,7 @@ bundles:
         {% endfor %}
       </div>
  
-      {% if page.discourse_topic_url %}
+      {% if page.discourse_topic_url != nil and page.discourse_topic_url != "" %}
         <p class="text-xl pt-4 fw-bold">Community discussion</p>
         <div class="row grid">
           <div id="discourse-topic" data-discourse-topic-url="{{page.discourse_topic_url}}"></div>
