@@ -4,6 +4,19 @@
 @import "p2pu-theme/src/scss/cards/topic-card";
 @import "layout-elements/sidebar";
 
+#courses {
+  main {
+    // Yeah, would have been nice if blue with transparency wasn't used
+    // over cream color, but lets just put in the blender color so we don't
+    // have 2 different colors for headers.
+    //background-color: $p2pu-light-blue;
+    background-color: #d7f4ec;
+  }
+  .course-search {
+    background-color: $cream;
+  }
+}
+
 #courses-page {
 .sidebar{
 	.navbar-toggler{
