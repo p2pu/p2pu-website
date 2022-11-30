@@ -23,11 +23,11 @@
     {% endif %}
 
     {% if page.description %}
-        <meta name="description" content="{{ page.description }}" />
-        <meta property="og:description" content="{{ page.description }}" />
+        <meta name="description" content="{{ page.description | strip_html }}" />
+        <meta property="og:description" content="{{ page.description | strip_html }}" />
     {% else %}
-        <meta name="description" content="{{ site.description }}" />
-        <meta property="og:description" content="{{ site.description }}" />
+        <meta name="description" content="{{ site.description | strip_html }}" />
+        <meta property="og:description" content="{{ site.description | strip_html }}" />
     {% endif %}
 
     {% if page.image_path %}

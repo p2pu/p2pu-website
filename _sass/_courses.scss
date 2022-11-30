@@ -4,6 +4,17 @@
 @import "p2pu-theme/src/scss/cards/topic-card";
 @import "layout-elements/sidebar";
 
+#courses {
+  .filter-card{
+    background-color: white;
+  }
+  .filter-card.show{
+    background-color: $cream;
+  }
+
+}
+
+
 #courses-page {
 .sidebar{
 	.navbar-toggler{
