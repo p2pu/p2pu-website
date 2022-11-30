@@ -1,0 +1,31 @@
+---
+title: Topic Guides
+layout: base
+header: page-header-1
+description: Practices, resources, courses, and community feedback on the most popular learning circle subjects.
+slug: topics
+---
+<div class="tab-content" id="learning-resources-nav-tabsContent">
+  <section class="subheader composition" id="topic-guides">
+    <div class="container">
+      <div class="row grid">
+        {% for topic in site.topics %}
+        {% if topic.featured %}
+        <div class="grid-item col-md-6 col-lg-4">
+          <div class="card topic cover-link">
+            <a href="{{ topic.url }}"></a>
+            <div class="card-image">
+              <img src="{{ site.baseurl }}{{ topic.img }}" alt="{{ topic.title }}" class="card-img-top">
+            </div>
+            <div class="card-header">
+              <h4 class="card-title">{{ topic.title }}</h4>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+</div>

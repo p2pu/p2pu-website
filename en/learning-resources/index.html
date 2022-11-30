@@ -6,39 +6,13 @@ text: Don’t see what you’re looking for?
 button1: <a href="https://learningcircles.p2pu.org/en/course/create/" class="col-12 btn p2pu-btn secondary orange btn-sm-sm btn-xl-base">Add a Resource</a>
 button2: <a href='https://course-in-a-box.p2pu.org/' class="col-12 btn p2pu-btn orange btn-sm-sm btn-xl-base">Create a Resource</a>
 slug: courses
-description: Browse guides to popular learning circle topics and select materials for your learning circle from our library of free learning resources, tested and curated by the P2PU community. 
+description: Browse our library of free learning resources, tested and curated by the P2PU community. Visit our <a href="/en/topics/">Topic Guides</a> to learn more about popular subjects like <strong>Climate Change</strong>, <strong>Digital Literacy</strong>, and <strong>Language Learning</strong>.
 bundles:
   - courses
 ---
-<div class="tab-content" id="learning-resources-nav-tabsContent">
-  <section class="subheader composition" id="topic-guides">
-    <div class="container">
-      <h2 class="sans-serif">Topic Guides</h2>
-      <div class="row grid">
-        {% for topic in site.topics %}
-        {% if topic.featured %}
-        <div class="grid-item col-md-6 col-lg-4">
-          <div class="card topic cover-link">
-            <a href="{{ topic.url }}"></a>
-            <div class="card-image">
-              <img src="{{ site.baseurl }}{{ topic.img }}" alt="{{ topic.title }}" class="card-img-top">
-            </div>
-            <div class="card-header">
-              <h4 class="card-title">{{ topic.title }}</h4>
-            </div>
-          </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </section>
 
-  <section class="search course-search" id="course-search">
-    <div class="container">
-      <h2 class="sans-serif">Learning Resources</h2>
-      <div id="search-courses-component" data-api-origin="{{site.api_origin}}"></div>
-    </div>
-  </section>
-
-</div>
+<section class="search course-search composition" id="course-search">
+  <div class="container">
+    <div id="search-courses-component" data-api-origin="{{site.api_origin}}"></div>
+  </div>
+</section>

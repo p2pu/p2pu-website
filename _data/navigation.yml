@@ -8,6 +8,8 @@ top_level:
     submenu:
       - text: Learning Resources
         url: /en/learning-resources/
+      - text: Topic Guides
+        url: /en/topics/
       - text: Forum
         url: https://community.p2pu.org/
         external: true
