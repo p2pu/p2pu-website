@@ -1,6 +1,6 @@
 ---
 title: Climate Change
-topic_slug: climate change
+topic_slug: climate-change
 img: /assets/images/topics/climate-change.jpg
 excerpt: Climate change.
 discourse_topic_url: https://community.p2pu.org/t/climate-change-topic-guide/5761
