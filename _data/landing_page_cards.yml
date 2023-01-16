@@ -4,7 +4,32 @@
 # For case study images, link to external URL or place in /assets/images/case-studies directory
 
 cards:
-  
+
+
+  - title: Makerspace Resource Roundup!
+    url: https://info.p2pu.org/2022/12/07/makerspace-resource-roundup/
+    img: https://info.p2pu.org/wp-content/uploads/2022/12/Main-Image-768x768.png
+    cardtype: BLOG POST
+    order: 19
+    
+  - title: New Handicraft Courses in Uganda
+    url: https://info.p2pu.org/2022/09/13/facilitator-spotlight-lutwama-herman-creates-new-handicraft-courses-in-uganda/
+    img: https://info.p2pu.org/wp-content/uploads/2022/09/Mask-group-300x200.png
+    cardtype: BLOG POST
+    order: 18
+    
+  - title: Community Insights on Facilitator Guides
+    url: https://info.p2pu.org/2022/07/05/facilitator-guides-as-living-agendas-community-insights-and-a-party-playlist/
+    img: https://info.p2pu.org/wp-content/uploads/2022/07/Frame-13-300x200.png
+    cardtype: BLOG POST
+    order: 17
+    
+  - title: Anna Kraynak on Digital Literacy
+    url: https://info.p2pu.org/2022/06/09/facilitator-spotlight-anna-kraynak-on-digital-literacy/
+    img: https://www.p2pu.org/assets/images/topics/digital-literacy.jpg
+    cardtype: BLOG POST
+    order: 16
+    
   - title: Meet Vuyani!
     url: https://info.p2pu.org/2022/06/02/meet-vuyani/
     img: https://info.p2pu.org/wp-content/uploads/2022/06/vuyani.png
