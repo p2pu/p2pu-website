@@ -1,6 +1,6 @@
 ---
 title: Job Readiness
-topic_slug: job-skills
+topic_slug: job-readiness
 img: /assets/images/topics/job-readiness.jpg
 excerpt: ""
 discourse_topic_url: https://community.p2pu.org/t/job-readiness-topic-guide/5767
