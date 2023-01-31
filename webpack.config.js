@@ -5,6 +5,8 @@ var AssetsPlugin = require('assets-webpack-plugin');
 
 const reactSrcDir = '/assets/react';
 
+// TODO clean bundles when generating new ones
+
 function getReactChunks(){
   // Add all jsx files in /assets/react as entries
   var files = fs.readdirSync(__dirname + reactSrcDir).filter(function(f){
@@ -47,11 +49,7 @@ const reactBuild = {
       },
       {
         test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.png$|\.gif$/,
-        use: [
-          {
-            loader: 'file-loader',
-          }
-        ]
+        type: 'asset/resource',
       },
     ],
   },
@@ -72,7 +70,10 @@ const reactBuild = {
     }
   },
   plugins: [
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new webpack.IgnorePlugin({
+      resourceRegExp: /^\.\/locale$/,
+      contextRegExp: /moment$/
+    }),
     new AssetsPlugin({
       filename: 'bundles.json',
       path: path.resolve('./_data'),
