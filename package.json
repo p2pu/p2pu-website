@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production --config webpack.config.js",
     "build:dev": "webpack --config webpack.config.js",
-    "watch": "webpack --mode development --config webpack.config.js --watch",
+    "watch": "webpack --mode development --stats-error-details --config webpack.config.js --watch",
     "profile": "webpack --mode production --config webpack.config.profile.js --watch",
     "test": "mocha test/bootstrap.js --timeout 10000 --recursive test"
   },
@@ -23,14 +23,17 @@
   "dependencies": {
     "@babel/runtime": "^7.9.2",
     "@fortawesome/fontawesome-free": "^6.2.1",
-    "assets-webpack-plugin": "^3.5.1",
-    "axios": "^0.19.1",
-    "bootstrap": "^5.1.0",
+    "@popperjs/core": "^2.11.6",
+    "assets-webpack-plugin": "^7.1.1",
+    "axios": "^1.2.6",
+    "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.5.0",
+    "css-minimizer-webpack-plugin": "^4.2.2",
     "jsonp": "^0.2.1",
     "material-icons": "^1.13.1",
-    "moment": "^2.22.1",
-    "moment-timezone": "^0.5.16",
+    "mini-css-extract-plugin": "^2.7.2",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.40",
     "p2pu-components": "file:p2pu-components",
     "p2pu-theme": "file:p2pu-theme",
     "prop-types": "^15.7.2",
@@ -69,14 +72,14 @@
     "chai": "^4.2.0",
     "css-loader": "^6.7.3",
     "file-loader": "^6.0.0",
-    "mocha": "^5.2.0",
+    "mocha": "^10.2.0",
     "puppeteer": "^1.12.2",
     "sass-loader": "^13.2.0",
-    "serve": "^10.1.2",
+    "serve": "^14.2.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
-    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-bundle-analyzer": "^4.7.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^4.11.1"
   }
 }

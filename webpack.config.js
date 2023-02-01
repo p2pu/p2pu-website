@@ -2,6 +2,8 @@ var path = require("path");
 var webpack = require('webpack');
 var fs = require("fs");
 var AssetsPlugin = require('assets-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 const reactSrcDir = '/assets/react';
 
@@ -35,9 +37,14 @@ const reactBuild = {
       {
         test: /\.(css|sass|scss)$/,
         use: [
-          { loader: 'style-loader' },
+          MiniCssExtractPlugin.loader,
           { loader: 'css-loader' },
-          { loader: 'sass-loader' }
+          { 
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            }
+          }
         ]
       },
       {
@@ -67,9 +74,17 @@ const reactBuild = {
           minChunks: 3
         }
       }
-    }
+    },
+    minimizer: [
+      `...`,
+      new CssMinimizerPlugin(),
+    ],
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: "[name]-[hash].css",
+      chunkFilename: "[id].css",
+    }),
     new webpack.IgnorePlugin({
       resourceRegExp: /^\.\/locale$/,
       contextRegExp: /moment$/
@@ -80,7 +95,10 @@ const reactBuild = {
     })
   ],
   resolve: {
-    modules: ['node_modules'],
+    modules: [
+      path.resolve('./assets/react/'),
+      'node_modules'
+    ],
     extensions: ['.js', '.jsx', '.css'],
   }
 };

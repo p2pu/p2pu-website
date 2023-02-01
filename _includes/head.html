@@ -42,7 +42,9 @@
 
     <!-- Custom CSS -->
     
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/p2pu-custom.css">
+    <link rel="stylesheet" href="{{site.data.bundles['p2pu-theme']['css']}}" />
+    <link rel="stylesheet" href="{{site.data.bundles['common']['css']}}" />
+    <link rel="stylesheet" href="{{site.data.bundles['navbar']['css']}}" />
 
     {% if layout.extra_css %}
         {% for css in layout.extra_css %}
@@ -55,6 +57,11 @@
             <link rel="stylesheet" href="{{ site.baseurl }}{{ css }}" />
         {% endfor %}
     {% endif %}
+
+    {% for bundle in layout.bundles %}
+      <link rel="stylesheet" href="{{site.data.bundles[bundle]['css']}}" />
+    {% endfor %}
+
 
     <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/assets/images/favicon.png">
 
