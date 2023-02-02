@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "",
+  "private": true,
   "scripts": {
     "build": "webpack --mode production --config webpack.config.js",
     "build:dev": "webpack --config webpack.config.js",
