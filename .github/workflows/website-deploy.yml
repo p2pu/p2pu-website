@@ -62,7 +62,7 @@ jobs:
         run: docker run --name site --workdir /tmp -d --network test-net --publish 3000:3000 --volume `pwd`/_site:/var/www node:14 /bin/sh -c "npm i serve && npx serve -l 3000 /var/www"
 
       - name: run test
-        run: docker run --rm --network test-net --volume `pwd`:/opt/app --workdir /opt/app --user $UID:$GID -e TEST_SERVER_URL=http://site:3000 ghcr.io/puppeteer/puppeteer:16.1.0 /bin/sh -c "npm install --only=dev && npm run test"
+        run: docker run --rm --network test-net --volume `pwd`:/opt/app --workdir /opt/app --user $UID:$GID -e TEST_SERVER_URL=http://site:3000 ghcr.io/puppeteer/puppeteer::19.7.1 /bin/sh -c "npm install --only=dev && npm run test"
 
       - run: 'aws s3 sync ./_site/ s3://$S3_BUCKET/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read'
         shell: bash
