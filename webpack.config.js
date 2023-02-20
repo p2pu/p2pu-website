@@ -29,7 +29,9 @@ const reactBuild = {
   output: {
     path: path.resolve('./assets/bundles/'),
     filename: "[name]-[hash].js",
+    assetModuleFilename: '[name]-[hash][ext][query]',
     publicPath: '/assets/bundles/',
+    clean: true,
   },
   devtool: 'source-map',
   module: {
@@ -37,8 +39,9 @@ const reactBuild = {
       {
         test: /\.(css|sass|scss)$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          { loader: MiniCssExtractPlugin.loader},
           { loader: 'css-loader' },
+          { loader: 'resolve-url-loader' },
           { 
             loader: 'sass-loader',
             options: {
@@ -75,10 +78,6 @@ const reactBuild = {
         }
       }
     },
-    minimizer: [
-      `...`,
-      new CssMinimizerPlugin(),
-    ],
   },
   plugins: [
     new MiniCssExtractPlugin({

@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack --mode production --config webpack.config.js",
     "build:dev": "webpack --config webpack.config.js",
-    "watch": "webpack --mode development --stats-error-details --config webpack.config.js --watch",
+    "watch": "webpack --mode development --config webpack.config.js --watch",
     "profile": "webpack --mode production --config webpack.config.profile.js --watch",
     "test": "mocha test/bootstrap.js --timeout 10000 --recursive test"
   },
@@ -48,6 +48,7 @@
     "react-tooltip": "^4.2.21",
     "react-typist": "^2.0.5",
     "react-visibility-sensor": "^5.1.1",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.57.1",
     "slick-carousel": "^1.8.1",
     "smooth-scroll": "^12.1.5",
