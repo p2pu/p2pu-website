@@ -69,7 +69,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: run test
-        run: docker run --rm --network test-net --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:3000 ghcr.io/p2pu/puppeteer-docker:master /bin/sh -c "npm install --only=dev && npm run test"
+        run: docker run --rm --network test-net --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:3000 ghcr.io/p2pu/puppeteer-docker /bin/sh -c "npm install --only=dev && npm run test"
 
       - run: 'aws s3 sync ./_site/ s3://$S3_BUCKET/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read'
         shell: bash
