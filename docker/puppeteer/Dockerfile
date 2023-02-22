@@ -17,7 +17,7 @@ RUN apt-get update \
 
 #USER pptruser
 
-WORKDIR /home/pptruser
+#WORKDIR /home/pptruser
 
 #COPY puppeteer-latest.tgz puppeteer-core-latest.tgz ./
 #RUN wget https://github.com/puppeteer/puppeteer/archive/refs/tags/puppeteer-v19.7.1.tar.gz \
@@ -30,6 +30,7 @@ WORKDIR /home/pptruser
 #    && rm ./puppeteer-core-latest.tgz ./puppeteer-latest.tgz \
 #    && (node -e "require('child_process').execSync(require('puppeteer').executablePath() + ' --credits', {stdio: 'inherit'})" > THIRD_PARTY_NOTICES)
 
-RUN npm i puppeteer-core@19.7.1 puppeteer@19.7.1
+#RUN npm i puppeteer-core@19.7.1 puppeteer@19.7.1
+#RUN npm i puppeteer-core@19.7.1
 
 CMD ["google-chrome-stable"]
