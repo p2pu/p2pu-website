@@ -65,7 +65,7 @@ jobs:
         run: docker build ./docker/puppeteer/ -t local/puppeteer
 
       - name: run test
-        run: docker run --rm --network test-net --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:3000 local/puppeteer /bin/sh -c "npm install --only=dev && npm run test"
+        run: docker run --rm --network test-net --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:3000 local/puppeteer /bin/sh -c "npm install --legacy-peer-deps && npm run test"
 
       - run: 'aws s3 sync ./_site/ s3://$S3_BUCKET/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read'
         shell: bash
