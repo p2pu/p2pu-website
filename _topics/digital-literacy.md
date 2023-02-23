@@ -25,6 +25,14 @@ links:
     description: Learners can use this skills inventory to let facilitators know
       their comfort level using different apps and devices.
     img: /assets/images/topics/edtech-3-10-main-1024x418-2-.png
+  - title: DigitalLearn
+    description: DigitalLearn is a web-based resource designed to help users improve
+      their computer skills and digital literacy. These modules contain
+      step-by-step videos and printable instructions. DigitalLearn courses are
+      10-15 minutes total, broken into several short lessons of 2-4 minutes
+      each.
+    url: https://carnegielibrary.digitallearn.org/
+    img: /assets/images/topics/digitallearn.png
 featured: true
 ---
 ### About This Topic
