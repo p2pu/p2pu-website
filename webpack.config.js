@@ -2,8 +2,12 @@ var path = require("path");
 var webpack = require('webpack');
 var fs = require("fs");
 var AssetsPlugin = require('assets-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 const reactSrcDir = '/assets/react';
+
+// TODO clean bundles when generating new ones
 
 function getReactChunks(){
   // Add all jsx files in /assets/react as entries
@@ -25,7 +29,9 @@ const reactBuild = {
   output: {
     path: path.resolve('./assets/bundles/'),
     filename: "[name]-[hash].js",
+    assetModuleFilename: '[name]-[hash][ext][query]',
     publicPath: '/assets/bundles/',
+    clean: true,
   },
   devtool: 'source-map',
   module: {
@@ -33,9 +39,15 @@ const reactBuild = {
       {
         test: /\.(css|sass|scss)$/,
         use: [
-          { loader: 'style-loader' },
+          { loader: MiniCssExtractPlugin.loader},
           { loader: 'css-loader' },
-          { loader: 'sass-loader' }
+          { loader: 'resolve-url-loader' },
+          { 
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            }
+          }
         ]
       },
       {
@@ -47,11 +59,7 @@ const reactBuild = {
       },
       {
         test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.png$|\.gif$/,
-        use: [
-          {
-            loader: 'file-loader',
-          }
-        ]
+        type: 'asset/resource',
       },
     ],
   },
@@ -69,17 +77,27 @@ const reactBuild = {
           minChunks: 3
         }
       }
-    }
+    },
   },
   plugins: [
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new MiniCssExtractPlugin({
+      filename: "[name]-[hash].css",
+      chunkFilename: "[id].css",
+    }),
+    new webpack.IgnorePlugin({
+      resourceRegExp: /^\.\/locale$/,
+      contextRegExp: /moment$/
+    }),
     new AssetsPlugin({
       filename: 'bundles.json',
       path: path.resolve('./_data'),
     })
   ],
   resolve: {
-    modules: ['node_modules'],
+    modules: [
+      path.resolve('./assets/react/'),
+      'node_modules'
+    ],
     extensions: ['.js', '.jsx', '.css'],
   }
 };

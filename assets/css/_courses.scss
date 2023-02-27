@@ -6,7 +6,7 @@
 
 #courses {
   .filter-card{
-    background-color: white;
+    background-color: white !important;
   }
   .filter-card.show{
     background-color: $cream;

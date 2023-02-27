@@ -5,7 +5,7 @@
 #topic {
   .header-wrap{
     @include media-breakpoint-up(md) {
-      background: url(/assets/images/topics/topic-detail-bg.png) no-repeat center right $p2pu-light-yellow;
+      background: url(../images/topics/topic-detail-bg.png) no-repeat center right $p2pu-light-yellow;
       background-size: contain !important;
       background-position: 50vw center;
     }
