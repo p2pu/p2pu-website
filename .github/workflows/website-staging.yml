@@ -111,15 +111,13 @@ jobs:
       - name: test setup
         run: docker run --name=site -d --volume `pwd`/_site:/var/www node:14 /bin/sh -c "npm i serve && npx serve -l 3000 /var/www"
 
-      - name: Log in to the Container registry
-        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: build docker image for building jekyll site
+        run: docker build ./docker/puppeteer/ -t local/puppeteer
+
+
 
       - name: run test
-        run: docker run --rm --link site --volume `pwd`:/opt/app --workdir /opt/app --user 1000:1000 -e TEST_SERVER_URL=http://site:3000 ghcr.io/puppeteer/puppeteer:16.1.0 /bin/sh -c "npm install --only=dev && npm run test"
+        run: docker run --rm --link site --volume `pwd`:/opt/app --workdir /opt/app -e TEST_SERVER_URL=http://site:3000 local/puppeteer /bin/sh -c "npm install --legacy-peer-deps && npm run test"
         continue-on-error: true
 
       - run: aws s3 sync ./_site/ s3://$S3_BUCKET/ --delete --storage-class REDUCED_REDUNDANCY --acl public-read
