@@ -9,23 +9,6 @@ staff:
       a Raspberry Pi.
     twitter: code27_
     url: https://www.thebacklog.net
-  - name: Grif Peterson
-    image: /assets/images/people/grif.jpg
-    role: Executive Director
-    bio: Grif joined P2PU in 2015 to help start the learning circle program. Since
-      then, his role has grown with the project, and he does his best to make
-      sure that folks around the world have the opportunity to keep on learning
-      things they care about for free. A longtime resident of New England, he
-      now lives in Phoenix, Arizona.
-    twitter: grifpeterson
-    url: http://grifp.github.io
-  - name: Lydian Brambila
-    image: /assets/images/people/lydian.jpg
-    role: Community Coordinator
-    bio: Lydian (they/them) is a librarian committed to building community on- and
-      offline and to making sure that learners and facilitators get their needs
-      met. After work, you'll find them playing shows and making zines in
-      Athens, Georgia.
   - name: Qumisha Goss
     image: /assets/images/people/q.jpg
     role: Partnership Lead
@@ -71,13 +54,6 @@ board:
       contributions across a 13 branch system. She brings an invaluable
       perspective to the work of P2PU.
     twitter: CPStP
-  - name: Delia Browne
-    image: /assets/images/people/delia_browne.jpg
-    role: National Copyright Director, NSW Department of Education and Training;
-      Board Director, Creative Commons
-    bio: As a board member, co-founder, and active community member, Delia makes
-      sure things keep running smoothly at P2PU. Next to this she is involved in
-      many of the legal aspects surrounding the organization.
   - name: Philipp Schmidt
     image: /assets/images/people/philipp.jpg
     role: Director of Learning Innovation, MIT Media Lab (P2PU Board Chair)
@@ -114,6 +90,20 @@ collaborators:
     role: Lawyer
     bio: Without Lila P2PU would still be a clandestine operation targeting the
       foundations of institutional academia. Lila made us legit.
+  - name: Lydian Brambila
+    image: /assets/images/people/lydian.jpg
+    role: Ex-Community Coordinator
+    bio: Lydian (they/them) is a librarian committed to building community on- and
+      offline and to making sure that learners and facilitators get their needs
+      met. After work, you'll find them playing shows and making zines in
+      Athens, Georgia.
+  - name: Delia Browne
+    image: /assets/images/people/delia_browne.jpg
+    role: National Copyright Director, NSW Department of Education and Training;
+      Board Director, Creative Commons
+    bio: As a board member, co-founder, and active community member, Delia makes
+      sure things keep running smoothly at P2PU. Next to this she is involved in
+      many of the legal aspects surrounding the organization.
   - name: Adam Bush
     image: /assets/images/people/adam_bush.jpg
     role: Community Organizer
@@ -339,6 +329,16 @@ collaborators:
       co-creating the ‘School of Open’ with open advocates from around the
       world.
     twitter: janedaily
+  - name: Grif Peterson
+    image: /assets/images/people/grif.jpg
+    role: Ex-Executive Director
+    bio: Grif joined P2PU in 2015 to help start the learning circle program. Since
+      then, his role has grown with the project, and he does his best to make
+      sure that folks around the world have the opportunity to keep on learning
+      things they care about for free. A longtime resident of New England, he
+      now lives in Phoenix, Arizona.
+    twitter: grifpeterson
+    url: http://grifp.github.io
   - name: Beck Pitt
     image: /assets/images/people/beck_pitt.jpg
     role: Researcher, Existentialist
