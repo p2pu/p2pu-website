@@ -1,4 +1,13 @@
 staff:
+  - name: Qumisha Goss
+    image: /assets/images/people/q.jpg
+    role: Interim Executive Director
+    bio: Qumisha or Q, as you may call her, is a Detroit native, librarian, and a
+      plant lady, but also appreciates food, travel and good music not
+      necessarily in that order. Q is a contributor to P2PU’s community
+      assisting with the development of resources, facilitation support and
+      library staff training. Q is passionate about education, community
+      building and demystifying technology.
   - name: Dirk Uys
     image: /assets/images/people/dirk.jpg
     role: Development Lead
@@ -9,15 +18,6 @@ staff:
       a Raspberry Pi.
     twitter: code27_
     url: https://www.thebacklog.net
-  - name: Qumisha Goss
-    image: /assets/images/people/q.jpg
-    role: Partnership Lead
-    bio: Qumisha or Q, as you may call her, is a Detroit native, librarian, and a
-      plant lady, but also appreciates food, travel and good music not
-      necessarily in that order. Q is a contributor to P2PU’s community
-      assisting with the development of resources, facilitation support and
-      library staff training. Q is passionate about education, community
-      building and demystifying technology.
   - name: Ryan George
     image: /assets/images/people/ryan.jpg
     role: Financial Administrator
