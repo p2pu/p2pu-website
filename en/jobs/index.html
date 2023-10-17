@@ -1,37 +1,74 @@
 ---
 title: Jobs
 layout: base
-header: page-header-3
-header-image: /assets/images/about/p2pu_lego.jpg
 slug: jobs
-description: Peer 2 Peer University is a global community of libraries and volunteers working together to run learning circles in their neighborhoods.
-subheading: 'Peer 2 Peer University is a global community of libraries and volunteers working together to run learning circles in their neighborhoods. This work is powered by a small core team with staff around the world. <a href="/en/about/">Learn more about us.</a></p><p class="subtitle active">As an open source project, we invite contributions from many angles: please <a href="/en/help/">reach out</a> if you have a specific idea for a collaboration.'
 image_path: /assets/images/about/p2pu_lego.jpg
 ---
 
-<section>
-    <div class="container">
-        <h2>Open Positions</h2>
-        <div class="row grid g-4 pt-4">
-          {% assign published_jobs = site.jobs | where: "published", true %}
-          {% for job in published_jobs %}
-            <div class="grid-item col-12 p-2 bg-lighter">
-                <div class="row d-flex p-1">
-                    <div class="text-end order-md-2 col-12 col-md-0 justify-content-start align-items-end">
-                        <em>Posted: {{ job.date-posted }}</em>
-                    </div>
-                    <h3 class="py-3 order-md-0 col-12 col-md justify-content-start align-items-center">
-                        <a href="{{ job.url }}" class="p-2 mx-2">{{ job.title }}</a>
-                    </h3>
-                </div>
-            </div>
-          {% else %}
-             <div class="grid-item col-12 p-2 bg-lighter">
-                <div class="row d-flex p-1">
-                  <p>There are currently no open positions</p>
-                </div>
-             </div>
-          {% endfor %}          
-        </div>
+<div class="header-wrap">
+  <header class="container page-header header-3">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <h1>{{ page.title }}</h1>
+        <p class="subtitle">Peer 2 Peer University is a global community of libraries and volunteers working together to run learning circles in their neighborhoods. This work is powered by a small core team with staff around the world. <a href="/en/about/">Learn more about us.</a></p>
+        <p>Working for P2PU is an unique opportunity to join a diverse group of people from around the world. You will be expected to take ownership of your work and your contribution will have a big impact on a small organization.</p>
+        <p>Each organization is different. At P2PU we try to be as flat an organization as possible. We work together to set goals, get work done and help each other improve. You can read more about the nuts and bolts of working in our <a href="https://peer-2-peer-university.gitbook.io/p2pu-staff-handbook/">P2PU Staff Handbook</a>.</p>
+        <p>We also work with several contractors on a diverse range of projects. From time to time we’ll list project based opportunities. Join our consultancy roster and be first to know about new projects.</p>
+
+        <p>We’re always open to working together in creative ways, <a href="mailto:thepeople@p2pu.org">reach out</a> if you have a specific idea.</p>
+
+      </div>
+      <div class="col-12 col-md-4" style="background: url(/assets/images/about/p2pu_lego.jpg) no-repeat center center; background-size: cover;"></div>
     </div>
+  </header>
+</div>
+
+
+<section>
+  <div class="container">
+    <h2>Open Positions</h2>
+    <div class="row pt-2">
+      {% assign published_jobs = site.jobs | where: "published", true | where: "type", "contract" %}
+      {% for job in published_jobs %}
+      <div class="col-12 bg-lighter">
+        <div class="row d-flex p-1">
+          <div class="text-end order-md-2 col-12 col-md-0 justify-content-start align-items-end">
+            <em>Posted: {{ job.date-posted }}</em>
+          </div>
+          <h3 class="py-3 order-md-0 col-12 col-md justify-content-start align-items-center">
+            <a href="{{ job.url }}" class="p-2 mx-2">{{ job.title }}</a>
+          </h3>
+        </div>
+      </div>
+      {% else %}
+      <div class="col-12">
+        <div class="d-flex p-3 bg-lighter">
+          <p class="m-0">There are currently no open positions</p>
+        </div>
+      </div>
+      {% endfor %}          
+    </div>
+    <h2 class="mt-5">Current Projects</h2>
+    <div class="row pt-2">
+      {% assign projects = site.jobs | where: "published", true | where: "type", "project" %}
+      {% for job in projects %}
+      <div class="col-12">
+        <div class="p-3 bg-lighter d-md-flex justify-content-between align-items-center">
+          <h3 class="m-0">
+            <a href="{{ job.url }}">{{ job.title }}</a>
+          </h3>
+          <div>
+            <em>Posted: {{ job.date-posted }}</em>
+          </div>
+        </div>
+      </div>
+      {% else %}
+      <div class="grid-item col-12 p-2 bg-lighter">
+        <div class="row d-flex p-1">
+          <p>There are currently no open positions</p>
+        </div>
+      </div>
+      {% endfor %}          
+    </div>
+  </div>
 </section>
