@@ -9,3 +9,11 @@
 	height: auto;
 	width: 100%;
 }
+
+.page-end::before {
+  content: "▼ ▲ ▼";
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 25px;
+}
