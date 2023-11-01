@@ -13,7 +13,7 @@ text: |
 
     P2PU’s role supporting learning circles is multi-faceted: we build open source software to support in-person learning communities, we train individuals to facilitate learning circles and maintain a virtual facilitator community of practice, we develop and curate open educational resources, and we help our partners build new pathways for community-based learning in their towns and cities.
 
-    You will join our small distributed team to work closely alongside librarians, designers, researchers, and educators. Operationally we are a 2-person team, based in Detroit, MI, and Cape Town. This is a part-time (20 hours/week) position with the hope and intent to extend. Compensation is between $20 and $25 per hour. You can be based anywhere. To learn more about P2PU, visit our [website](https://www.p2pu.org/).
+    You will join our small distributed team to work closely alongside librarians, designers, researchers, and educators. Operationally we are a 2-person team, based in Detroit, MI, and Cape Town. This is a part-time (20 hours/week) contract for 3 months with the hope and intent to extend. Compensation is between $20 and $25 per hour. You can be based anywhere. To learn more about P2PU, visit our [website](https://www.p2pu.org/).
 
     ### Key responsibilities
 
