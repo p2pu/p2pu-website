@@ -2,7 +2,7 @@
 layout: job-listing
 title: Graphic Design for our Impact Report
 date-posted: October 17, 2023
-published: true
+published: false
 type: project
 ---
 ## Background
