@@ -30,14 +30,14 @@ image_path: /assets/images/about/p2pu_lego.jpg
     <div class="row pt-2">
       {% assign published_jobs = site.jobs | where: "published", true | where: "type", "contract" %}
       {% for job in published_jobs %}
-      <div class="col-12 bg-lighter">
-        <div class="row d-flex p-1">
-          <div class="text-end order-md-2 col-12 col-md-0 justify-content-start align-items-end">
+      <div class="col-12">
+        <div class="p-3 bg-lighter d-md-flex justify-content-between align-items-center">
+          <h3 class="m-0">
+            <a href="{{ job.url }}">{{ job.title }}</a>
+          </h3>
+          <div>
             <em>Posted: {{ job.date-posted }}</em>
           </div>
-          <h3 class="py-3 order-md-0 col-12 col-md justify-content-start align-items-center">
-            <a href="{{ job.url }}" class="p-2 mx-2">{{ job.title }}</a>
-          </h3>
         </div>
       </div>
       {% else %}
@@ -63,8 +63,8 @@ image_path: /assets/images/about/p2pu_lego.jpg
         </div>
       </div>
       {% else %}
-      <div class="grid-item col-12 p-2 bg-lighter">
-        <div class="row d-flex p-1">
+      <div class="col-12">
+        <div class="p-3 bg-lighter d-md-flex justify-content-between align-items-center">
           <p>There are currently no open positions</p>
         </div>
       </div>
