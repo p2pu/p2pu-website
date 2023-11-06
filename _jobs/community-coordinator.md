@@ -60,7 +60,11 @@ text: |
         "currency": "USD",
         "maxValue": 25.00,
         "minValue": 20.00,
-        "value": 25.00
+        "value": {
+          "@type": "QuantitativeValue",
+          "value": 25.00,
+          "unitText": "HOUR"
+        }
     },
     "jobLocationType": "TELECOMMUTE",
     "applicantLocationRequirements": [
