@@ -2,7 +2,7 @@
 layout: job-listing
 title: Community Coordinator (part-time)
 date-posted: November 1, 2023
-published: true
+published: false
 type: contract
 text: |
     We are looking for a part-time community coordinator to join our small distributed team. You will help us foster and grow our community of partners, facilitators, learners and other members around the world. This is an exciting opportunity to make a big contribution in a small team.
