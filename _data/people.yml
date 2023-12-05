@@ -46,14 +46,6 @@ board:
       providing incredible operational, legal, and project management support.
       He transitioned to the Board soon after he left the team and additionally
       serves as the Board Secretary.
-  - name: Catherine Penkert
-    image: /assets/images/people/catherine_penkert.jpg
-    role: Library Director, Saint Paul Public Library
-    bio: Catherine serves as the Library Director at Saint Paul Public Library in
-      Minnesota, where she oversees programs, serves, and community
-      contributions across a 13 branch system. She brings an invaluable
-      perspective to the work of P2PU.
-    twitter: CPStP
   - name: Philipp Schmidt
     image: /assets/images/people/philipp.jpg
     role: Director of Learning Innovation, MIT Media Lab (P2PU Board Chair)
@@ -329,6 +321,14 @@ collaborators:
       co-creating the ‘School of Open’ with open advocates from around the
       world.
     twitter: janedaily
+  - name: Catherine Penkert
+    image: /assets/images/people/catherine_penkert.jpg
+    role: Library Director, Saint Paul Public Library
+    bio: Catherine serves as the Library Director at Saint Paul Public Library in
+      Minnesota, where she oversees programs, serves, and community
+      contributions across a 13 branch system. She brings an invaluable
+      perspective to the work of P2PU.
+    twitter: CPStP
   - name: Grif Peterson
     image: /assets/images/people/grif.jpg
     role: Ex-Executive Director
