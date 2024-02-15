@@ -28,10 +28,10 @@ const reactBuild = {
   entry: getReactChunks(),
   output: {
     path: path.resolve('./assets/bundles/'),
-    filename: "[name]-[fullhash].js",
-    assetModuleFilename: '[name]-[fullhash][ext][query]',
+    filename: "[name]-[hash].js",
+    assetModuleFilename: '[name]-[hash][ext][query]',
     publicPath: '/assets/bundles/',
-    clean: true,
+    clean: false,
   },
   devtool: 'source-map',
   module: {
@@ -81,7 +81,7 @@ const reactBuild = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name]-[fullhash].css",
+      filename: "[name]-[hash].css",
       chunkFilename: "[id].css",
     }),
     new webpack.IgnorePlugin({
