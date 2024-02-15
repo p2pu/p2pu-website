@@ -31,3 +31,4 @@ en/handbook/starting/index.html: https://docs.p2pu.org/
 virtual-handbook: https://docs.p2pu.org/
 course-creation-guide: https://docs.p2pu.org/
 en/learning-circles-faq/index.html: https://docs.p2pu.org/frequently-asked-questions
+impact-report: https://www.p2pu.org/assets/uploads/P2PU_impact_report_2018_2024.pdf
