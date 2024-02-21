@@ -61,6 +61,10 @@
     {% for bundle in layout.bundles %}
       <link rel="stylesheet" href="{{site.data.bundles[bundle]['css']}}" />
     {% endfor %}
+    {% for bundle in page.bundles %}
+      <link rel="stylesheet" href="{{site.data.bundles[bundle]['css']}}" />
+    {% endfor %}
+
 
 
     <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/assets/images/favicon.png">

@@ -3,7 +3,6 @@ var webpack = require('webpack');
 var fs = require("fs");
 var AssetsPlugin = require('assets-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 const reactSrcDir = '/assets/react';
 
@@ -31,7 +30,7 @@ const reactBuild = {
     filename: "[name]-[hash].js",
     assetModuleFilename: '[name]-[hash][ext][query]',
     publicPath: '/assets/bundles/',
-    clean: true,
+    clean: false,
   },
   devtool: 'source-map',
   module: {
