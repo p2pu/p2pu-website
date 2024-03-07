@@ -2,7 +2,6 @@
 title: Creativity
 topic_slug: creativity-guide
 img: /assets/images/topics/creativity.jpg
-excerpt: ""
 discourse_topic_url: https://community.p2pu.org/t/computer-programming-topic-guide/5763
 featured: true
 course_data: creativity

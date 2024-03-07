@@ -2,7 +2,6 @@
 title: Job Readiness
 topic_slug: job-readiness
 img: /assets/images/topics/job-readiness.jpg
-excerpt: ""
 discourse_topic_url: https://community.p2pu.org/t/job-readiness-topic-guide/5767
 links:
   - title: Remote Job Readiness Resources
