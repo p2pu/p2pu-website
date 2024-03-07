@@ -2,7 +2,7 @@
 title: Climate Change
 topic_slug: climate-change
 img: /assets/images/topics/climate-change.jpg
-excerpt: Climate change.
+excerpt: ''
 discourse_topic_url: https://community.p2pu.org/t/climate-change-topic-guide/5761
 links:
   - title: En-ROADS climate simulator
