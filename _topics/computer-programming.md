@@ -43,11 +43,15 @@ links:
     url: https://developer.mozilla.org/en-US/docs/Learn
   - description: "A repository of freely available programming resources, including
       ebooks, cheat sheets, problem sets, podcasts, and other materials. Also
-      available in this easy-to-read website:
-      <https://ebookfoundation.github.io/free-programming-books/>"
+      available in this easy-to-read [website](https://ebookfoundation.github.io/free-programming-books/)"
     title: "EbookFoundation: Free Programming Books | GitHub"
     url: https://github.com/EbookFoundation/free-programming-books
     img: /assets/images/topics/free-ebook-foundation.png
+  - description: "An open source curriculum for full stack web development. They have a Foundations, Ruby and JavaScript learning path you can follow."
+    title: "The Odin Project"
+    url: https://www.theodinproject.com/
+    img: /assets/images/topics/odin_background.svg
+
 featured: true
 ---
 
