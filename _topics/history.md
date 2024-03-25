@@ -2,7 +2,6 @@
 title: History
 topic_slug: history-topic
 img: /assets/images/topics/history-topic-guide-1-.png
-excerpt: ""
 discourse_topic_url: https://community.p2pu.org/t/history-topic-guide/5766
 links:
   - title: "The American Yawp: A Massively Collaborative Open U.S. History Textbook"

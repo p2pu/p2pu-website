@@ -1,7 +1,6 @@
 ---
 title: Topic Guide Name As You Want It To Appear On The Site
 img: template.png (❗️ upload in root/assets/images/topics)
-excerpt: Topic guide description goes here.
 links:
   - title: 
     description: 
