@@ -16,7 +16,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Topic Slug", name: "topic_slug", widget: "string"}
       - {label: "Image", name: "img", widget: "image"}
-      - {label: "Excerpt", name: "excerpt", widget: "markdown", required: false}
       - {label: "Discourse Topic URL", name: "discourse_topic_url", widget: "string", required: false}
       - label: "Links"
         name: "links"
