@@ -24,6 +24,28 @@ resource "aws_s3_bucket_public_access_block" "public_access_block" {
   restrict_public_buckets = false
 }
 
+resource "aws_s3_bucket_policy" "public_read" {
+  bucket = "p2pu-website-${random_pet.bucket.id}"
+  policy = data.aws_iam_policy_document.allow_public_access.json
+}
+
+data "aws_iam_policy_document" "allow_public_access" {
+  statement {
+    principals {
+      type        = "*"
+      identifiers = ["*"]
+    }
+
+    actions = [
+      "s3:GetObject",
+    ]
+
+    resources = [
+      "${random_pet.bucket.arn}/*",
+    ]
+  }
+}
+
 resource "aws_s3_bucket_website_configuration" "website" {
   bucket = "p2pu-website-${random_pet.bucket.id}"
 
