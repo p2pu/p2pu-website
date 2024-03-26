@@ -16,11 +16,6 @@ resource "aws_s3_bucket" "website_bucket" {
   force_destroy = true
 }
 
-resource "aws_s3_bucket_acl" "website_bucket_acl" {
-  bucket = "p2pu-website-${random_pet.bucket.id}"
-  acl    = "public-read"
-}
-
 resource "aws_s3_bucket_website_configuration" "website" {
   bucket = "p2pu-website-${random_pet.bucket.id}"
 
