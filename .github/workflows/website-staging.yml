@@ -75,7 +75,7 @@ jobs:
 
   jekyll:
     name: "Jekyll"
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     if: ${{ !(github.event.action == 'closed') }}
     needs: terraform
     steps:
