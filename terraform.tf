@@ -41,7 +41,7 @@ data "aws_iam_policy_document" "allow_public_access" {
     ]
 
     resources = [
-      "${random_pet.bucket.arn}/*",
+      "${aws_s3_bucket.website_bucket.arn}/*",
     ]
   }
 }
