@@ -11,7 +11,7 @@ jobs:
     outputs:
       s3_bucket: ${{ steps.s3_bucket_name.outputs.stdout }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           submodules: true
 
@@ -79,7 +79,7 @@ jobs:
     if: ${{ !(github.event.action == 'closed') }}
     needs: terraform
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           submodules: true
 
