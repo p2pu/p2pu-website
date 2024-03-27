@@ -61,7 +61,7 @@ jobs:
       - name: test setup
         run: docker run --name site --workdir /tmp -d --network test-net --publish 3000:3000 --volume `pwd`/_site:/var/www node:14 /bin/sh -c "npm i serve && npx serve -l 3000 /var/www"
 
-      - name: build docker image for building jekyll site
+      - name: build docker image for testing with puppeteer
         run: docker build ./docker/puppeteer/ -t local/puppeteer
 
       - name: run test
