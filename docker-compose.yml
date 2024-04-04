@@ -14,7 +14,7 @@ services:
     - BUNDLE_PATH=/opt/bundler
     command: bundle exec jekyll serve -H 0.0.0.0 --watch --config _config.yml,_config.dev.yml
   node:
-    image: node:14
+    image: node:20
     user: 1000:1000
     working_dir: /opt/app
     #ports:
