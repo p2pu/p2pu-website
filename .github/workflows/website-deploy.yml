@@ -53,7 +53,7 @@ jobs:
         run: docker run --rm --volume `pwd`:/opt/app --workdir /opt/app node:20 /bin/sh -c "npm install && npm run build"
 
       - name: build jekyll site
-        run: docker run -v `pwd`:/opt/app -v `pwd`/_site:/opt/app/_site local/p2pu-website jekyll build --future --config _config.yml,_production.yml
+        run: docker run -v `pwd`:/opt/app -v `pwd`/_site:/opt/app/_site local/p2pu-website bundle exec jekyll build --future --config _config.yml,_production.yml
 
       - name: create docker network for testing
         run: docker network create test-net
