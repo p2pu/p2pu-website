@@ -1,7 +1,7 @@
 ---
 layout: job-listing
 title: Social Media Coordinator (remote, part-time)
-date-posted: July 16, 2024
+date-posted: July 17, 2024
 published: true
 type: project
 text: |
@@ -57,8 +57,8 @@ text: |
     "@type" : "JobPosting",
     "title" : "Social Media Coordinator",
     "description" : "{{page.text | markdownify | strip_newlines | replace:'"', "'" }}",
-    "datePosted" : "2024-07-16",
-    "validThrough" : "2024-07-31T00:00",
+    "datePosted" : "2024-07-17",
+    "validThrough" : "2024-08-15T00:00",
     "employmentType" : "CONTRACTOR",
     "hiringOrganization" : {
         "@type" : "Organization",
