@@ -9,7 +9,7 @@ jobs:
     name: "Jekyll"
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           submodules: true
 
@@ -50,18 +50,18 @@ jobs:
         run: cat ./_data/teams.json | python3 _deploy/team_pages.py
 
       - name: build frontend
-        run: docker run --rm --volume `pwd`:/opt/app --workdir /opt/app node:14 /bin/sh -c "npm install && npm run build"
+        run: docker run --rm --volume `pwd`:/opt/app --workdir /opt/app node:20 /bin/sh -c "npm install && npm run build"
 
       - name: build jekyll site
-        run: docker run -v `pwd`:/opt/app -v `pwd`/_site:/opt/app/_site local/p2pu-website jekyll build --future --config _config.yml,_production.yml
+        run: docker run -v `pwd`:/opt/app -v `pwd`/_site:/opt/app/_site local/p2pu-website bundle exec jekyll build --future --config _config.yml,_production.yml
 
       - name: create docker network for testing
         run: docker network create test-net
 
       - name: test setup
-        run: docker run --name site --workdir /tmp -d --network test-net --publish 3000:3000 --volume `pwd`/_site:/var/www node:14 /bin/sh -c "npm i serve && npx serve -l 3000 /var/www"
+        run: docker run --name site --workdir /tmp -d --network test-net --publish 3000:3000 --volume `pwd`/_site:/var/www node:20 /bin/sh -c "npm i serve && npx serve -l 3000 /var/www"
 
-      - name: build docker image for building jekyll site
+      - name: build docker image for testing with puppeteer
         run: docker build ./docker/puppeteer/ -t local/puppeteer
 
       - name: run test
