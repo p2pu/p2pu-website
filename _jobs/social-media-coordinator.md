@@ -13,7 +13,7 @@ text: |
 
     ## Position Overview:
 
-    P2PU is seeking a motivated and creative Social Media Coordinator to join our team for a 4-month internship. The intern will be responsible for executing our predetermined social media strategy, ensuring our presence on X (formerly Twitter), Facebook, and Instagram is engaging and responsive. This is an excellent opportunity to gain hands-on experience in social media management and digital marketing within a dynamic and mission-driven organization.
+    P2PU is seeking a motivated and creative Social Media Coordinator to join our team for a 4-month contract. The intern will be responsible for executing our predetermined social media strategy, ensuring our presence on X (formerly Twitter), Facebook, and Instagram is engaging and responsive. This is an excellent opportunity to gain hands-on experience in social media management and digital marketing within a dynamic and mission-driven organization.
 
     ### Key Responsibilities:
 
