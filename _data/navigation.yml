@@ -43,9 +43,9 @@ top_level:
   - text: Help
     url: /en/help/
 socials:
-  - text: Medium
-    url: https://medium.com/p2pu
-    icon_class: fab fa-medium-m
+  - text: LinkedIn
+    url: https://www.linkedin.com/company/p2pu/
+    icon_class: fab fa-linkedin
   - text: YouTube
     url: https://www.youtube.com/channel/UCJH3nTAgEAGljjTB5B8PjFw
     icon_class: fab fa-youtube
