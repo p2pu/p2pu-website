@@ -1,11 +1,6 @@
 top_level:
-  - text: Home
-    url: /en/
   - text: Learn
-    url: 
-    submenu:
-      - text: Join a learning circle
-        url: /en/learning-circles/
+    url: /en/learning-circles/
   - text: Facilitate
     url:
     submenu:
