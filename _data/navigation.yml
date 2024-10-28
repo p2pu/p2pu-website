@@ -12,6 +12,9 @@ top_level:
         url: /en/events/
       - text: Knowledge Base
         url: https://docs.p2pu.org/
+      - text: Forum
+        url: https://community.p2pu.org/
+        external: true
   - text: Collaborate
     url:
     submenu:
@@ -31,11 +34,6 @@ top_level:
       - text: Blog
         url: https://info.p2pu.org/
         external: true
-      - text: Forum
-        url: https://community.p2pu.org/
-        external: true
-      - text: Help
-        url: /en/help/
 
 socials:
   - text: LinkedIn
