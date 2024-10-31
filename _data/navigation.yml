@@ -1,47 +1,40 @@
 top_level:
-  - text: Explore Learning Circles
+  - text: Learn
     url: /en/learning-circles/
-  - text: Knowledge Base
-    url: https://docs.p2pu.org/
-  - text: Community
+  - text: Facilitate
     url:
     submenu:
       - text: Learning Resources
         url: /en/learning-resources/
       - text: Topic Guides
         url: /en/topics/
+      - text: Knowledge Base
+        url: https://docs.p2pu.org/
       - text: Forum
         url: https://community.p2pu.org/
         external: true
       - text: Events
         url: /en/events/
-        external: true
-  - text: Teams
+  - text: Collaborate
     url:
     submenu:
-      - text: Start a Team
+      - text: Teams
         url: /en/teams/
-      - text: Teams Documentation
-        url: https://docs.p2pu.org/teams/about-teams
-        external: true
-      - text: Current Teams
-        url: /en/teams/#current-teams
+      - text: Services
+        url: /en/services/
+      - text: Donate
+        url: /en/donate/
   - text: About
     url:
     submenu:
-      - text: About
+      - text: Who we are
         url: /en/about/
-      - text: Services
-        url: /en/services/
       - text: Jobs
         url: /en/jobs/
       - text: Blog
         url: https://info.p2pu.org/
         external: true
-      - text: Donate
-        url: /en/donate/
-  - text: Help
-    url: /en/help/
+
 socials:
   - text: LinkedIn
     url: https://www.linkedin.com/company/p2pu/
