@@ -5,6 +5,11 @@
 
 cards:
 
+  - title: "Peer Learner Meetup"
+    url: https://www.eventbrite.com/e/1042594106037
+    img: /assets/images/events/2024-11-peer-learner-meetup.png
+    cardtype: EVENT
+    order: 21
 
   - title: "Designing Learning Circles to Support Economic Mobility: Our Initial Findings"
     url: https://info.p2pu.org/2023/03/16/designing-for-economic-mobility-part-i/
