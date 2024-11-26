@@ -9,6 +9,18 @@ cards:
     url: https://www.eventbrite.com/e/tools-for-peer-learning-tickets-1067543735049?aff=homepage
     img: /assets/images/events/2024-11-peer-learner-meetup.png
     cardtype: EVENT
+    order: 24
+
+  - title: "Set Your Learning Goal"
+    url: https://p2pu.typeform.com/to/B9L7wYDI
+    img: https://info.p2pu.org/wp-content/uploads/2023/03/Frame-18-768x308.png
+    cardtype: ACTIVITY
+    order: 22
+
+  - title: Making AI Accessible with Learning Circles
+    url: https://info.p2pu.org/2021/12/16/making-ai-accessible-with-learning-circles/
+    img: https://info.p2pu.org/wp-content/uploads/2021/12/We_Are_AI_Cover-logo-768x288.png
+    cardtype: CASE STUDY
     order: 21
 
   - title: "Designing Learning Circles to Support Economic Mobility: Our Initial Findings"
@@ -53,11 +65,6 @@ cards:
     cardtype: CASE STUDY
     order: 13
 
-  - title: Making AI Accessible with Learning Circles
-    url: https://info.p2pu.org/2021/12/16/making-ai-accessible-with-learning-circles/
-    img: https://info.p2pu.org/wp-content/uploads/2021/12/We_Are_AI_Cover-logo-768x288.png
-    cardtype: CASE STUDY
-    order: 14
 
   - title: Virtual Pathways from Training to Practice in Rhode Island
     url: "https://info.p2pu.org/2021/09/09/case-study-rila/"
@@ -93,7 +100,7 @@ testimonials:
     organization: Boston Public Library
     type: learner
     cardtype: testimonial    
-    order: 11
+    order: 23
 
   - quote: "The very act of making education accessible, free, and learner-driven is the heart of democracy. Here in Chicago, an incredibly segregated city, I've seen learning circles be agents of social justice: they have brought people of all races, ages, and social classes, and helped them form bonds they might otherwise not have the opportunity to form."
     img: /assets/images/testimonials/shelley.jpg
@@ -102,7 +109,7 @@ testimonials:
     organization: Chicago Public Library
     type: facilitator
     cardtype: testimonial
-    order: 10
+    order: 20
 
   - quote: "To have such a program here in Detroit is a valuable resource for us to participate in...if it was not for Peer 2 Peer University I would probably still be working on finishing my book."
     img: /assets/images/testimonials/melvin.jpg
@@ -111,7 +118,7 @@ testimonials:
     organization: Detroit Public Library
     type: learner
     cardtype: testimonial
-    order: 8
+    order: 18
  
   - quote: "I realized that learning as a group is easier than learning alone. I never thought it would be so interesting."
     img: /assets/images/testimonials/joan.jpg
@@ -120,7 +127,7 @@ testimonials:
     organization: Kenya National Library Service (Meru Branch)
     type: facilitator
     cardtype: testimonial
-    order: 7
+    order: 17
 
   - quote: "As an immigrant myself I seek opportunities to help families learn English much like my family was helped when we arrived here. Perhaps one day someone I helped will pay it forward and help someone else."
     img: /assets/images/testimonials/manny-reynoso.jpg
@@ -129,7 +136,7 @@ testimonials:
     organization: Notre Dame Education Center (Boston)
     type: facilitator
     cardtype: testimonial
-    order: 5
+    order: 15
     
   - quote: "P2PU neatly connects open educational resources to career pathways in an equitable and empowering way that few other organizations are even considering."
     img: /assets/images/testimonials/laura.jpg
@@ -138,7 +145,7 @@ testimonials:
     organization: Siegel Family Endowment
     type: network
     cardtype: testimonial
-    order: 4
+    order: 21
 
   - quote: "Kenya National Library Service’s success with learning circles demonstrates that online learning and public libraries are a perfect match. P2PU’s resources can help you create coordinated, network-wide learning circles in your own community."
     img: /assets/images/testimonials/ramune.jpg
@@ -147,4 +154,4 @@ testimonials:
     organization: EIFL
     type: network
     cardtype: testimonial
-    order: 1
+    order: 19
