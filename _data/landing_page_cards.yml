@@ -4,9 +4,8 @@
 # For case study images, link to external URL or place in /assets/images/case-studies directory
 
 cards:
-
-  - title: "Tools for Peer Learning"
-    url: https://www.eventbrite.com/e/tools-for-peer-learning-tickets-1067543735049?aff=homepage
+  - title: "Virtual Peer Learning Summit"
+    url: https://www.addevent.com/event/Vu23786153
     img: /assets/images/events/2024-11-peer-learner-meetup.png
     cardtype: EVENT
     order: 24
