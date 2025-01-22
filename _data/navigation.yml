@@ -18,10 +18,12 @@ top_level:
   - text: Collaborate
     url:
     submenu:
-      - text: Teams
-        url: /en/teams/
       - text: Services
         url: /en/services/
+      - text: Community Impact Fellowship
+        url: /en/community-impact-fellowship/
+      - text: Teams
+        url: /en/teams/
       - text: Donate
         url: /en/donate/
   - text: About
