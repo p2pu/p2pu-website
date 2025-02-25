@@ -4,8 +4,8 @@
 # For case study images, link to external URL or place in /assets/images/case-studies directory
 
 cards:
-  - title: "Virtual Peer Learning Summit"
-    url: https://www.addevent.com/event/Vu23786153
+  - title: "Teaching Tech Together: Digital Literacy Facilitation Workshop"
+    url: https://www.eventbrite.com/e/teaching-tech-together-digital-literacy-facilitation-workshop-tickets-1259561104169?aff=homepage
     img: /assets/images/events/2024-11-peer-learner-meetup.png
     cardtype: EVENT
     order: 24
