@@ -24,8 +24,6 @@ top_level:
         url: /en/community-impact-fellowship/
       - text: Teams
         url: /en/teams/
-      - text: Donate
-        url: /en/donate/
   - text: About
     url:
     submenu:
