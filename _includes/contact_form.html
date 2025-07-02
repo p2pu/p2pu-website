@@ -1,7 +1,6 @@
 {% capture next_url %}{{site.url}}/en/contact-success/{% endcapture %}
 
-
-<form class="row g-3 pt-3 needs-validation" action="{{site.api_origin}}/api/contact/?next={{next_url | url_encode}}" method="POST">
+<form id="id-recaptcha" class="row g-3 pt-3 needs-validation" action="{{site.api_origin}}/api/contact/?next={{next_url | url_encode}}" method="POST">
   <input type="hidden" name="source" value="{{page.url}}"/>
 
   <div class="col-12">
@@ -47,7 +46,16 @@
     </div>
   </div>
   <div class="col-12 text-center mt-4">
-    <button class="btn p2pu-btn blue" type="submit">Submit form</button>
+    <button class="g-recaptcha btn p2pu-btn blue" 
+        data-sitekey="6Ldv9W4bAAAAALQcNeonNOrhFU4PhcLKuA2RFK1_" 
+        data-callback="onSubmit" 
+        data-action="submit"
+        type="submit">Submit</button>
   </div>
 </form>
 
+<script>
+  function onSubmit(token) {
+    document.getElementById("id-recaptcha").submit();
+  }
+</script>

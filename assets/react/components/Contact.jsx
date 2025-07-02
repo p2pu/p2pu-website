@@ -15,14 +15,21 @@ const Contact = props => {
     setError(false);
     setValidationErrors(null);
     const url = `${apiOrigin}/api/contact/`
-    fetch(url, {
-      method: 'POST',
-      mode: 'cors',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      credentials: 'omit',
-      body: JSON.stringify(Object.fromEntries(formData))
+    // recaptcha
+    new Promise( (resolve, reject) => {
+      grecaptcha.ready(resolve);
+    }).then( () => {
+      return grecaptcha.execute('6Ldv9W4bAAAAALQcNeonNOrhFU4PhcLKuA2RFK1_', {action: 'submit'})
+    }).then( (token) => {
+      return fetch(url, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        credentials: 'omit',
+        body: JSON.stringify(Object.fromEntries(formData))
+      })
     }).then(response => {
       setLoading(false);
       setError(!response.ok);
