@@ -21,6 +21,7 @@ const Contact = props => {
     }).then( () => {
       return grecaptcha.execute('6Ldv9W4bAAAAALQcNeonNOrhFU4PhcLKuA2RFK1_', {action: 'submit'})
     }).then( (token) => {
+      formData.append('g_recaptcha_response', token);
       return fetch(url, {
         method: 'POST',
         mode: 'cors',
@@ -29,7 +30,7 @@ const Contact = props => {
         },
         credentials: 'omit',
         body: JSON.stringify(Object.fromEntries(formData))
-      })
+      });
     }).then(response => {
       setLoading(false);
       setError(!response.ok);
