@@ -2,7 +2,7 @@
 layout: job-listing
 title: Social Media Coordinator (remote, part-time)
 date-posted: July 17, 2024
-published: true
+published: false
 type: project
 text: |
     ## About P2PU:
